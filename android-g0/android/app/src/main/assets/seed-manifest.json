@@ -1,0 +1,417 @@
+{
+  "format": "wordmaster-android-seed-manifest",
+  "bundle_version": 1,
+  "bundle_sha256": "F5D8C27C3030E759A244987C26AA92CFAA13B61BF147BE10B04ABA903C137327",
+  "source_schema_version": 5,
+  "counts": {
+    "wordbooks": 5,
+    "words": 20374,
+    "progress": 0,
+    "review_log": 0,
+    "cards": 62,
+    "user_cards": 0,
+    "card_draws": 0
+  },
+  "books": [
+    {
+      "book_key": "builtin:zhongkao",
+      "name": "中考核心词汇",
+      "word_count": 1597
+    },
+    {
+      "book_key": "builtin:cet4",
+      "name": "四级核心词汇",
+      "word_count": 796
+    },
+    {
+      "book_key": "builtin:cet6",
+      "name": "六级核心词汇",
+      "word_count": 599
+    },
+    {
+      "book_key": "builtin:npee",
+      "name": "考研大纲词汇",
+      "word_count": 5388
+    },
+    {
+      "book_key": "builtin:tem",
+      "name": "英语专四专八词汇",
+      "word_count": 11994
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "card_key": "builtin-card:silk",
+      "palette": "silk",
+      "asset_path": "cards/original/silk.webp"
+    },
+    {
+      "id": 2,
+      "card_key": "builtin-card:pompeii",
+      "palette": "pompeii",
+      "asset_path": "cards/original/pompeii.webp"
+    },
+    {
+      "id": 3,
+      "card_key": "builtin-card:voyage",
+      "palette": "voyage",
+      "asset_path": "cards/original/voyage.webp"
+    },
+    {
+      "id": 4,
+      "card_key": "builtin-card:movable",
+      "palette": "movable",
+      "asset_path": "cards/original/movable.webp"
+    },
+    {
+      "id": 5,
+      "card_key": "builtin-card:aurora",
+      "palette": "aurora",
+      "asset_path": "cards/original/aurora.webp"
+    },
+    {
+      "id": 6,
+      "card_key": "builtin-card:sahara",
+      "palette": "sahara",
+      "asset_path": "cards/original/sahara.webp"
+    },
+    {
+      "id": 7,
+      "card_key": "builtin-card:liriver",
+      "palette": "liriver",
+      "asset_path": "cards/original/liriver.webp"
+    },
+    {
+      "id": 8,
+      "card_key": "builtin-card:andes",
+      "palette": "andes",
+      "asset_path": "cards/original/andes.webp"
+    },
+    {
+      "id": 9,
+      "card_key": "builtin-card:pixel",
+      "palette": "pixel",
+      "asset_path": "cards/original/pixel.webp"
+    },
+    {
+      "id": 10,
+      "card_key": "builtin-card:savepoint",
+      "palette": "savepoint",
+      "asset_path": "cards/original/savepoint.webp"
+    },
+    {
+      "id": 11,
+      "card_key": "builtin-card:tlou",
+      "palette": "tlou",
+      "asset_path": "cards/original/tlou.webp"
+    },
+    {
+      "id": 12,
+      "card_key": "builtin-card:tetris",
+      "palette": "tetris",
+      "asset_path": "cards/original/tetris.webp"
+    },
+    {
+      "id": 13,
+      "card_key": "builtin-card:moss",
+      "palette": "moss",
+      "asset_path": "cards/original/moss.webp"
+    },
+    {
+      "id": 14,
+      "card_key": "builtin-card:coffee",
+      "palette": "coffee",
+      "asset_path": "cards/original/coffee.webp"
+    },
+    {
+      "id": 15,
+      "card_key": "builtin-card:diner",
+      "palette": "diner",
+      "asset_path": "cards/original/diner.webp"
+    },
+    {
+      "id": 16,
+      "card_key": "builtin-card:library",
+      "palette": "library",
+      "asset_path": "cards/original/library.webp"
+    },
+    {
+      "id": 17,
+      "card_key": "builtin-card:tardigrade",
+      "palette": "tardigrade",
+      "asset_path": "cards/original/tardigrade.webp"
+    },
+    {
+      "id": 18,
+      "card_key": "builtin-card:jellyfish",
+      "palette": "jellyfish",
+      "asset_path": "cards/original/jellyfish.webp"
+    },
+    {
+      "id": 19,
+      "card_key": "builtin-card:ant",
+      "palette": "ant",
+      "asset_path": "cards/original/ant.webp"
+    },
+    {
+      "id": 20,
+      "card_key": "builtin-card:whalefall",
+      "palette": "whalefall",
+      "asset_path": "cards/original/whalefall.webp"
+    },
+    {
+      "id": 21,
+      "card_key": "builtin-card:quantum",
+      "palette": "quantum",
+      "asset_path": "cards/original/quantum.webp"
+    },
+    {
+      "id": 22,
+      "card_key": "builtin-card:gravity",
+      "palette": "gravity",
+      "asset_path": "cards/original/gravity.webp"
+    },
+    {
+      "id": 23,
+      "card_key": "builtin-card:entropy",
+      "palette": "entropy",
+      "asset_path": "cards/original/entropy.webp"
+    },
+    {
+      "id": 24,
+      "card_key": "builtin-card:lightspeed",
+      "palette": "lightspeed",
+      "asset_path": "cards/original/lightspeed.webp"
+    },
+    {
+      "id": 25,
+      "card_key": "builtin-card:zelda",
+      "palette": "zelda",
+      "asset_path": "cards/original/zelda.webp"
+    },
+    {
+      "id": 26,
+      "card_key": "builtin-card:eldenring",
+      "palette": "eldenring",
+      "asset_path": "cards/original/eldenring.webp"
+    },
+    {
+      "id": 27,
+      "card_key": "builtin-card:portal",
+      "palette": "portal",
+      "asset_path": "cards/original/portal.webp"
+    },
+    {
+      "id": 28,
+      "card_key": "builtin-card:monument",
+      "palette": "monument",
+      "asset_path": "cards/original/monument.webp"
+    },
+    {
+      "id": 29,
+      "card_key": "builtin-card:stardew",
+      "palette": "stardew",
+      "asset_path": "cards/original/stardew.webp"
+    },
+    {
+      "id": 30,
+      "card_key": "builtin-card:sekiro",
+      "palette": "sekiro",
+      "asset_path": "cards/original/sekiro.webp"
+    },
+    {
+      "id": 31,
+      "card_key": "builtin-card:hollowknight",
+      "palette": "hollowknight",
+      "asset_path": "cards/original/hollowknight.webp"
+    },
+    {
+      "id": 32,
+      "card_key": "builtin-card:ittakestwo",
+      "palette": "ittakestwo",
+      "asset_path": "cards/original/ittakestwo.webp"
+    },
+    {
+      "id": 33,
+      "card_key": "builtin-card:godofwar",
+      "palette": "godofwar",
+      "asset_path": "cards/original/godofwar.webp"
+    },
+    {
+      "id": 34,
+      "card_key": "builtin-card:bloodborne",
+      "palette": "bloodborne",
+      "asset_path": "cards/original/bloodborne.webp"
+    },
+    {
+      "id": 35,
+      "card_key": "builtin-card:cyberpunk",
+      "palette": "cyberpunk",
+      "asset_path": "cards/original/cyberpunk.webp"
+    },
+    {
+      "id": 36,
+      "card_key": "builtin-card:journey",
+      "palette": "journey",
+      "asset_path": "cards/original/journey.webp"
+    },
+    {
+      "id": 37,
+      "card_key": "builtin-card:deathstranding",
+      "palette": "deathstranding",
+      "asset_path": "cards/original/deathstranding.webp"
+    },
+    {
+      "id": 38,
+      "card_key": "builtin-card:witcher",
+      "palette": "witcher",
+      "asset_path": "cards/original/witcher.webp"
+    },
+    {
+      "id": 39,
+      "card_key": "builtin-card:undertale",
+      "palette": "undertale",
+      "asset_path": "cards/original/undertale.webp"
+    },
+    {
+      "id": 40,
+      "card_key": "builtin-card:theseus",
+      "palette": "theseus",
+      "asset_path": "cards/original/theseus.webp"
+    },
+    {
+      "id": 41,
+      "card_key": "builtin-card:brainvat",
+      "palette": "brainvat",
+      "asset_path": "cards/original/brainvat.webp"
+    },
+    {
+      "id": 42,
+      "card_key": "builtin-card:sisyphus",
+      "palette": "sisyphus",
+      "asset_path": "cards/original/sisyphus.webp"
+    },
+    {
+      "id": 43,
+      "card_key": "builtin-card:butterflydream",
+      "palette": "butterflydream",
+      "asset_path": "cards/original/butterflydream.webp"
+    },
+    {
+      "id": 44,
+      "card_key": "builtin-card:mobius",
+      "palette": "mobius",
+      "asset_path": "cards/original/mobius.webp"
+    },
+    {
+      "id": 45,
+      "card_key": "builtin-card:klein",
+      "palette": "klein",
+      "asset_path": "cards/original/klein.webp"
+    },
+    {
+      "id": 46,
+      "card_key": "builtin-card:godel",
+      "palette": "godel",
+      "asset_path": "cards/original/godel.webp"
+    },
+    {
+      "id": 47,
+      "card_key": "builtin-card:goldenratio",
+      "palette": "goldenratio",
+      "asset_path": "cards/original/goldenratio.webp"
+    },
+    {
+      "id": 48,
+      "card_key": "builtin-card:turing",
+      "palette": "turing",
+      "asset_path": "cards/original/turing.webp"
+    },
+    {
+      "id": 49,
+      "card_key": "builtin-card:fermi",
+      "palette": "fermi",
+      "asset_path": "cards/original/fermi.webp"
+    },
+    {
+      "id": 50,
+      "card_key": "builtin-card:olbers",
+      "palette": "olbers",
+      "asset_path": "cards/original/olbers.webp"
+    },
+    {
+      "id": 51,
+      "card_key": "builtin-card:butterflyfx",
+      "palette": "butterflyfx",
+      "asset_path": "cards/original/butterflyfx.webp"
+    },
+    {
+      "id": 52,
+      "card_key": "builtin-card:dunhuang",
+      "palette": "dunhuang",
+      "asset_path": "cards/original/dunhuang.webp"
+    },
+    {
+      "id": 53,
+      "card_key": "builtin-card:pillars",
+      "palette": "pillars",
+      "asset_path": "cards/original/pillars.webp"
+    },
+    {
+      "id": 54,
+      "card_key": "builtin-card:paleblue",
+      "palette": "paleblue",
+      "asset_path": "cards/original/paleblue.webp"
+    },
+    {
+      "id": 55,
+      "card_key": "builtin-card:moonillusion",
+      "palette": "moonillusion",
+      "asset_path": "cards/original/moonillusion.webp"
+    },
+    {
+      "id": 56,
+      "card_key": "builtin-card:feitian",
+      "palette": "feitian",
+      "asset_path": "cards/original/feitian.webp"
+    },
+    {
+      "id": 57,
+      "card_key": "builtin-card:starrynight",
+      "palette": "starrynight",
+      "asset_path": "cards/original/starrynight.webp"
+    },
+    {
+      "id": 58,
+      "card_key": "builtin-card:greatwave",
+      "palette": "greatwave",
+      "asset_path": "cards/original/greatwave.webp"
+    },
+    {
+      "id": 59,
+      "card_key": "builtin-card:sunflower",
+      "palette": "sunflower",
+      "asset_path": "cards/original/sunflower.webp"
+    },
+    {
+      "id": 60,
+      "card_key": "builtin-card:hawking",
+      "palette": "hawking",
+      "asset_path": "cards/original/hawking.webp"
+    },
+    {
+      "id": 61,
+      "card_key": "builtin-card:qingming",
+      "palette": "qingming",
+      "asset_path": "cards/original/qingming.webp"
+    },
+    {
+      "id": 62,
+      "card_key": "builtin-card:voyager",
+      "palette": "voyager",
+      "asset_path": "cards/original/voyager.webp"
+    }
+  ],
+  "database_sha256": "4ADC89381CD9C3C1F32C054E07F4C69AEF34AD833DF7E950FC03EB35EC6FE71B"
+}

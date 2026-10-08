@@ -1,0 +1,48 @@
+{
+  "judgements": [
+    { "mode": "spelling", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": " MOTHER-IN-LAW ", "expected": true },
+    { "mode": "spelling", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "mother-in-law!", "expected": true },
+    { "mode": "spelling", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "mother in law", "expected": false },
+    { "mode": "meaning", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "岳母；婆婆", "expected": true },
+    { "mode": "meaning", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "岳母", "expected": false },
+    { "mode": "pos", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "v.", "expected": true },
+    { "mode": "pos", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "adj.", "expected": false },
+    { "mode": "learn", "word": "mother-in-law", "meaning": "岳母；婆婆", "pos": "vt./vi.", "submitted": "", "expected": null }
+  ],
+  "outcomes": [
+    { "correct": true, "retry": false, "requested": "first_correct", "expected": "first_correct" },
+    { "correct": true, "retry": true, "requested": "first_correct", "expected": "retry_correct" },
+    { "correct": false, "retry": false, "requested": "wrong", "expected": "wrong" },
+    { "correct": false, "retry": false, "requested": "abandoned", "expected": "abandoned" }
+  ],
+  "review_intervals": [1, 2, 4, 7, 15, 30, 30],
+  "plans": {
+    "remaining_new": 21,
+    "daily_new": 15,
+    "days_left": 7,
+    "active_quota": 3,
+    "inactive_daily_new": 80,
+    "inactive_quota": 50
+  },
+  "queues": {
+    "daily_quota": 3,
+    "new_today": 1,
+    "due": ["due-oldest", "due-later", "due-overflow"],
+    "fresh": ["new-a", "new-b", "new-c"],
+    "expected_due_limit": 200,
+    "expected_new_limit": 2,
+    "expected_review_order": ["due-oldest", "due-later", "due-overflow", "new-a", "new-b"],
+    "all_due_limit": 100,
+    "all_new_limit": 0,
+    "learn_requested_limit": 1,
+    "expected_learn_limit": 1
+  },
+  "card_draw": {
+    "target": 10,
+    "below": 9,
+    "at": 10,
+    "weights": [50, 30, 15, 5],
+    "random_values": [0, 0.5, 0.8, 0.95],
+    "expected_indexes": [0, 1, 2, 3]
+  }
+}

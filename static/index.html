@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+<title>墨词 · WordMaster</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- 背景装饰：漂浮的字母与笔画 -->
+<div class="bg-decor" aria-hidden="true">
+  <span class="float-glyph g1">æ</span>
+  <span class="float-glyph g2">β</span>
+  <span class="float-glyph g3">词</span>
+  <span class="float-glyph g4">qu</span>
+  <span class="float-glyph g5">墨</span>
+  <span class="float-glyph g6">ʃ</span>
+  <svg class="ink-line l1" viewBox="0 0 300 60" preserveAspectRatio="none">
+    <path d="M5,45 C60,10 120,55 180,25 S 280,40 295,15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <svg class="ink-line l2" viewBox="0 0 300 60" preserveAspectRatio="none">
+    <path d="M5,20 C80,50 150,5 220,35 S 280,20 295,45" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="topbar">
+  <a class="brand" href="#/">
+    <span class="brand-mark"><img src="logo.png" alt="墨词"></span>
+    <span class="brand-text">墨词<em>WordMaster</em></span>
+  </a>
+  <nav class="topbar-nav" aria-label="主导航">
+    <a href="#/" data-nav="today">今日</a>
+    <a href="#/books" data-nav="books">词库</a>
+    <a href="#/stats" data-nav="stats">学习数据</a>
+    <a href="#/cards" data-nav="cards">卡牌 <span class="card-dot hidden" id="cardDot"></span></a>
+  </nav>
+  <div class="topbar-stats" id="topStats" aria-label="学习概览"></div>
+</header>
+
+<main id="app">
+  <div id="pageStatus" class="page-status hidden" role="status" aria-live="polite"></div>
+
+  <!-- ============ 视图：今日 / 词库 ============ -->
+  <section id="view-home" class="view">
+    <section id="todaySection" class="today-page" aria-labelledby="todayTitle">
+      <div class="today-heading">
+        <p class="hero-kicker">A SMALL PAGE, A STEADY PRACTICE</p>
+        <h1 class="hero-title" id="todayTitle">今日</h1>
+        <p class="hero-sub">先完成眼前的一小步，温故而知新。</p>
+      </div>
+      <div class="today-panel">
+        <div class="today-task-list" id="todayTaskSummary" aria-live="polite"></div>
+        <div class="today-start">
+          <label class="book-select-label" for="todayBookSelect">今天学习哪本词库</label>
+          <select id="todayBookSelect" aria-describedby="todayNextAction"></select>
+          <p id="todayNextAction" class="today-next-action"></p>
+          <button type="button" class="btn btn-primary today-continue" id="todayContinue">继续学习</button>
+          <p id="todayEmptyMessage" class="today-empty-message hidden"></p>
+        </div>
+      </div>
+      <aside id="firstRunGuide" class="first-run-guide hidden" aria-live="polite">
+        <span class="guide-step">初次学习</span>
+        <div>
+          <h2>从 3 个词开始</h2>
+          <p>先看词卡，再默写 1 个词。今天的小目标完成后，明天再接着学。</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="booksSection" class="books-section hidden" aria-labelledby="booksTitle">
+      <div class="section-heading">
+        <div>
+          <p class="hero-kicker">YOUR WORDSHELF</p>
+          <h1 id="booksTitle">词库</h1>
+          <p>管理学习材料与计划；开始学习请回到「今日」。</p>
+        </div>
+        <button type="button" class="btn btn-primary" id="newBookToggle"><span class="plus">＋</span> 新建词库</button>
+      </div>
+      <form class="new-book-form hidden" id="newBookForm">
+        <input type="text" id="newBookName" placeholder="词库名称，如：我的生词本" maxlength="30" required>
+        <input type="text" id="newBookDesc" placeholder="描述（可选）" maxlength="60">
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">创建</button>
+          <button type="button" class="btn btn-ghost" id="newBookCancel">取消</button>
+        </div>
+      </form>
+      <div class="books-grid" id="booksGrid"></div>
+    </section>
+  </section>
+
+  <!-- ============ 视图：学习页 ============ -->
+  <section id="view-study" class="view hidden">
+    <div class="study-top">
+      <button class="btn btn-ghost" id="studyExit" aria-label="退出学习，返回今日">← 退出</button>
+      <div class="study-progress" role="group" aria-label="本轮学习进度">
+        <div class="study-progress-bar"><div class="study-progress-fill" id="studyProgressFill"></div></div>
+        <span id="studyProgressText" aria-live="polite"></span>
+      </div>
+      <div class="study-mode-tag" id="studyModeTag" aria-live="polite"></div>
+    </div>
+
+    <div class="study-stage" id="studyStage" aria-live="polite"></div>
+
+    <div class="study-done hidden" id="studyDone">
+      <div class="done-seal">成</div>
+      <h2>本轮完成</h2>
+      <p id="doneSummary"></p>
+      <button type="button" class="btn btn-vermilion hidden" id="doneDraw">✦ 领取今日卡牌</button>
+      <div class="form-actions">
+        <button class="btn btn-primary" id="doneAgain">再来一轮</button>
+        <button class="btn btn-ghost" id="doneBack">返回今日</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 视图：词库管理 ============ -->
+  <section id="view-manage" class="view hidden">
+    <div class="manage-top">
+      <button class="btn btn-ghost" id="manageBack">← 返回</button>
+      <h2 id="manageTitle"></h2>
+      <button class="btn" id="importBtn">⇪ 批量导入</button>
+      <button class="btn btn-primary" id="addWordBtn">＋ 添加单词</button>
+    </div>
+    <div class="word-table-wrap">
+      <table class="word-table">
+        <thead><tr><th>单词</th><th>音标</th><th>词性</th><th>释义</th><th>例句</th><th></th></tr></thead>
+        <tbody id="wordTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 视图：错题本 ============ -->
+  <section id="view-mistakes" class="view hidden">
+    <div class="manage-top">
+      <button class="btn btn-ghost" id="mistakesBack">← 返回</button>
+      <h2>错题本 <span class="mistake-total">共 <b id="mistakeCount">0</b> 词待回炉</span></h2>
+      <button class="btn btn-vermilion" id="mistakeStudyBtn">开始回炉</button>
+    </div>
+    <div class="word-table-wrap">
+      <table class="word-table">
+        <thead><tr><th>单词</th><th>词性</th><th>释义</th><th>来自词库</th><th>错误</th><th></th></tr></thead>
+        <tbody id="mistakeBody"></tbody>
+      </table>
+    </div>
+    <p class="mistake-note">连续答对 3 次的单词会自动移出错题本。</p>
+  </section>
+
+  <!-- ============ 视图：学习数据 ============ -->
+  <section id="view-stats" class="view hidden">
+    <div class="stats-today" id="statsToday"></div>
+
+    <div class="stats-panels">
+      <div class="stats-panel">
+        <div class="panel-head">
+          <div>
+            <h3>学习量</h3>
+            <span class="panel-sub" id="chartRangeSummary">柱为当日作答数，金色部分为新词</span>
+          </div>
+          <div class="chart-range" role="group" aria-label="学习量统计范围">
+            <button type="button" class="range-btn" data-days="7" aria-pressed="true">近 7 天</button>
+            <button type="button" class="range-btn" data-days="30" aria-pressed="false">近 30 天</button>
+          </div>
+        </div>
+        <div class="chart-scroll" tabindex="0" aria-label="近 30 天学习量图表，可横向滚动">
+          <div class="chart-bars" id="chartBars"></div>
+        </div>
+        <p class="chart-live" id="chartBarsLive" aria-live="polite"></p>
+      </div>
+      <div class="stats-panel">
+        <div class="panel-head">
+          <h3>学习热力图</h3>
+          <span class="panel-sub">近 12 周</span>
+        </div>
+        <div class="heatmap" id="heatmap"></div>
+        <p class="chart-live" id="heatmapLive" aria-live="polite"></p>
+        <div class="heatmap-legend">
+          <span>少</span><i class="hm0"></i><i class="hm1"></i><i class="hm2"></i><i class="hm3"></i><i class="hm4"></i><span>多</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-panels stats-detail-panels">
+      <div class="stats-panel accuracy-panel">
+        <div class="panel-head"><h3 id="chartLineHeading">学习记录</h3><span class="panel-sub" id="chartLineRange">近 30 天</span></div>
+        <p class="chart-line-summary" id="chartLineSummary"></p>
+        <div class="accuracy-compact hidden" id="chartLineCompact"></div>
+        <svg class="chart-line hidden" id="chartLine" viewBox="0 0 720 300" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="chartLineTitle chartLineDesc">
+          <title id="chartLineTitle">最近 30 天的正确率走势图</title>
+          <desc id="chartLineDesc">学习后会按真实日期显示每天的正确率。</desc>
+          <g id="chartLineContent"></g>
+        </svg>
+        <details class="chart-data-details hidden" id="chartLineDataDetails">
+          <summary>查看逐日数据</summary>
+          <ul class="chart-data-list" id="chartLineData"></ul>
+        </details>
+      </div>
+
+      <div class="stats-panel difficult-panel">
+        <div class="panel-head"><h3>困难词优先</h3><span class="panel-sub">先回看答错较多的词</span></div>
+        <div class="difficult-list" id="difficultWords"></div>
+        <a class="difficult-more" href="#/mistakes">查看错题本 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 视图：卡牌收藏 ============ -->
+  <section id="view-cards" class="view hidden">
+    <div class="cards-hero" id="cardsNormalHero">
+      <div class="cards-hero-copy">
+        <p class="hero-kicker">COLLECTION · 每日完成学习可抽取一张</p>
+        <h2 class="hero-title">墨藏集</h2>
+        <p class="hero-sub" id="cardsProgress"></p>
+      </div>
+      <div class="cards-hero-art" aria-hidden="true">
+        <span class="cards-hero-card cards-hero-card--back"></span>
+        <span class="cards-hero-card cards-hero-card--front"><i>✦</i><b>墨</b><small>TODAY'S DRAW</small></span>
+      </div>
+      <button type="button" class="btn btn-vermilion" id="drawCardBtn"><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m10 2 1.8 5.1L17 9l-5.2 1.9L10 16l-1.8-5.1L3 9l5.2-1.9zM16 13l.8 2.2L19 16l-2.2.8L16 19l-.8-2.2L13 16l2.2-.8z"/></svg>抽取今日卡牌</button>
+    </div>
+    <div class="cards-sample-hero hidden" id="cardsSampleHero">
+      <a class="cards-sample-back" href="#/cards">← 返回卡册</a>
+      <p class="cards-sample-kicker">CARD ART STUDY · C 阶段视觉样卡</p>
+      <h2>让画面先开口</h2>
+      <p>四张现有原画，四种稀有度。点开卡片，再读故事。</p>
+      <div class="cards-sample-legend" aria-label="稀有度样卡顺序">
+        <span data-rarity="N">N <i>普通</i></span><span data-rarity="R">R <i>稀有</i></span>
+        <span data-rarity="SR">SR <i>史诗</i></span><span data-rarity="UR">UR <i>传说</i></span>
+      </div>
+    </div>
+    <div class="cards-grid" id="cardsGrid"></div>
+  </section>
+
+</main>
+
+<nav class="bottom-nav" aria-label="底部导航">
+  <a href="#/" data-nav="today" aria-label="今日">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/><path d="M9 20v-6h6v6"/></svg><span>今日</span>
+  </a>
+  <a href="#/books" data-nav="books" aria-label="词库">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h11.5A2.5 2.5 0 0 1 19 7v13H7a2 2 0 0 1-2-2z"/><path d="M5 17.5A2.5 2.5 0 0 1 7.5 15H19M9 8h6M9 11h6"/></svg><span>词库</span>
+  </a>
+  <a href="#/cards" data-nav="cards" aria-label="卡册">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M8 4V2.5h8V4M9 9h6M9 13h6M9 17h3"/></svg><span>卡册</span><i class="bottom-card-dot hidden" id="bottomCardDot"></i>
+  </a>
+  <a href="#/stats" data-nav="stats" aria-label="我的学习数据">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5h16M6.5 16V10M12 16V5M17.5 16v-3"/><path d="m5 7 5-3 4 4 5-3"/></svg><span>我的</span>
+  </a>
+</nav>
+
+<!-- 抽卡结果弹窗 -->
+<div class="modal-mask hidden" id="cardModal" role="dialog" aria-modal="true" aria-label="卡牌详情">
+  <div class="card-reveal" id="cardReveal"></div>
+</div>
+
+<!-- 单词编辑弹窗 -->
+<div class="modal-mask hidden" id="wordModal">
+  <form class="modal" id="wordForm">
+    <h3 id="wordModalTitle">添加单词</h3>
+    <label>单词<input type="text" id="wfWord" required maxlength="60"></label>
+    <label>音标<input type="text" id="wfPhonetic" placeholder="可选" maxlength="60"></label>
+    <label>词性
+      <select id="wfPos">
+        <option value="">未知</option><option>n.</option><option>v.</option><option>vt.</option><option>vi.</option>
+        <option>adj.</option><option>adv.</option><option>prep.</option><option>conj.</option><option>pron.</option>
+        <option>num.</option><option>art.</option><option>int.</option>
+      </select>
+    </label>
+    <label>释义<input type="text" id="wfMeaning" required maxlength="200"></label>
+    <label>例句<input type="text" id="wfExample" placeholder="可选" maxlength="300"></label>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">保存</button>
+      <button type="button" class="btn btn-ghost" id="wordModalCancel">取消</button>
+    </div>
+  </form>
+</div>
+
+<!-- 批量导入弹窗 -->
+<div class="modal-mask hidden" id="importModal">
+  <form class="modal modal-wide" id="importForm">
+    <h3>批量导入单词</h3>
+    <p class="modal-hint">每行一个词，支持以下格式（可混用）：</p>
+    <pre class="import-sample">apple [ˈæpl] n. 苹果
+run v. 跑；经营
+serene	adj.	宁静的
+lucid,adj.,清晰易懂的
+ambitious 有雄心的</pre>
+    <textarea id="importText" rows="9" placeholder="把单词列表粘贴到这里…" required></textarea>
+    <p class="import-result" id="importResult"></p>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">导入</button>
+      <button type="button" class="btn btn-ghost" id="importCancel">关闭</button>
+    </div>
+  </form>
+</div>
+
+<!-- 学习计划弹窗 -->
+<div class="modal-mask hidden" id="planModal">
+  <form class="modal" id="planForm">
+    <h3>学习计划 · <span id="planName"></span></h3>
+    <input type="hidden" id="planBookId">
+    <div class="plan-current" id="planCurrent"></div>
+    <label>目标学完日期<input type="date" id="planDate" required></label>
+    <div class="plan-preview" id="planPreview"></div>
+    <p class="modal-hint">系统根据「剩余新词 ÷ 剩余天数」自动分配每日新词量；复习按艾宾浩斯遗忘曲线（1→2→4→7→15→30 天）自动安排，到期必复习。完成当天任务后可抽取一张卡牌。</p>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">保存计划</button>
+      <button type="button" class="btn btn-ghost" id="planClear">取消计划</button>
+      <button type="button" class="btn btn-ghost" id="planCancel">关闭</button>
+    </div>
+  </form>
+</div>
+
+<div class="toast hidden" id="toast"></div>
+
+<script src="/shared/domain.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

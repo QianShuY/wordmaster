@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, "Noto Sans CJK SC", sans-serif;
+  color: #24211e;
+  background: #f6f1e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: max(24px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+}
+
+.shell { width: min(100%, 560px); }
+
+header { margin: 0 0 24px; }
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #8d7852;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .14em;
+}
+
+h1 { margin: 0; font-size: clamp(27px, 7vw, 36px); letter-spacing: -.04em; }
+.lead { margin: 8px 0 0; color: #756f65; line-height: 1.6; }
+
+.question {
+  padding: clamp(20px, 6vw, 30px);
+  border: 1px solid #e1d7c5;
+  border-radius: 20px;
+  background: #fffdf9;
+  box-shadow: 0 12px 34px rgb(61 48 27 / 8%);
+}
+
+h2 { margin: 0 0 26px; font-size: clamp(23px, 6vw, 30px); line-height: 1.35; }
+label { display: block; margin: 0 0 9px; color: #756f65; font-size: 14px; }
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 14px;
+  border: 1px solid #b8a886;
+  border-radius: 12px;
+  color: inherit;
+  background: #fbf8f1;
+  font: inherit;
+  font-size: 18px;
+}
+
+input:focus-visible { outline: 3px solid #bc9b5a; outline-offset: 2px; }
+
+button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 12px;
+  color: #fffdf9;
+  background: #29231c;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button:disabled { opacity: .48; }
+.feedback { min-height: 24px; margin: 12px 0 0; color: #5a7040; font-weight: 650; }
+.feedback.error { color: #a13b32; }
+
+.persistence {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #625b50;
+  background: #eee6d8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.disk { color: #718a4b; font-size: 14px; }
+.footnote { margin: 12px 2px 0; color: #8b8376; font-size: 12px; line-height: 1.6; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

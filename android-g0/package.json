@@ -1,0 +1,21 @@
+{
+  "name": "wordmaster-android-g0",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WordMaster Android G0 local SQLite vertical slice",
+  "scripts": {
+    "seed:android": "node scripts/generate-seed.mjs",
+    "build:web": "node scripts/build-web.mjs",
+    "test": "npm run seed:android && node --test",
+    "android:add": "cap add android",
+    "android:sync": "npm run build:web && cap sync android",
+    "android:open": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/core": "8.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/android": "8.5.2",
+    "@capacitor/cli": "8.5.2"
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; connect-src 'none'; img-src 'self' data: blob:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="color-scheme" content="light">
+  <title>墨词 Android 本地版</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./capacitor.js"></script>
+  <script defer src="./domain.js"></script>
+  <script defer src="./request-session.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">ANDROID G1 · LOCAL SQLITE</p>
+      <h1>离线答一题</h1>
+      <p class="lead">本地词条与学习记录，不连接电脑服务。</p>
+    </header>
+
+    <section class="question" aria-labelledby="question-title">
+      <p class="eyebrow">拼写默写</p>
+      <h2 id="question-title">正在读取本地题目…</h2>
+      <label for="answer">根据释义输入英文</label>
+      <input id="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" disabled>
+      <button id="submit" type="button" disabled>提交并保存</button>
+      <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="persistence" aria-live="polite">
+      <span class="disk" aria-hidden="true">●</span>
+      <span id="saved-state">正在读取应用私有 SQLite…</span>
+    </section>
+
+    <p class="footnote">强制关闭并重开后，这里的已保存次数应保持不变。</p>
+  </main>
+</body>
+</html>
