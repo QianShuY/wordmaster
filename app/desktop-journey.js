@@ -58,7 +58,7 @@ function calculateLevel(rawXp) {
   return { xp, level, current: xp - start, required: next - start, nextLevelAt: next };
 }
 
-function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, ownedCards = 0, today = new Date() } = {}) {
+function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, ownedCards = 0, drawnToday = false, today = new Date() } = {}) {
   const streak = streaks(activeDays, today);
   const counts = {
     attempts: Math.max(0, Number(totals.attempts) || 0),
@@ -85,7 +85,7 @@ function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, 
   return {
     level, streak: counts.current, longestStreak: counts.longestStreak,
     attempts: counts.attempts,
-    answeredToday, dailyTarget: 10,
+    answeredToday, dailyTarget: 10, drawnToday: Boolean(drawnToday),
     last7, stamps,
     unlockedCount: stamps.filter(s => s.unlocked).length,
   };
