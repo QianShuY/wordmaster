@@ -609,6 +609,7 @@ const Home = {
 
   async render(section = 'today') {
     this.section = section;
+    $('#todaySection').setAttribute('aria-labelledby', IS_ANDROID_APP ? 'todayTitle' : 'hubHeadingTitle');
     show('home', section === 'books' ? 'books' : 'today');
     $('#todaySection').classList.toggle('hidden', section === 'books');
     $('#booksSection').classList.toggle('hidden', section !== 'books');
