@@ -82,6 +82,8 @@ data/             wordmaster.db（首次启动自动生成）
 | GET | /api/stats | 全局统计 |
 | GET | /api/backup | 仅本机桌面版：下载完整 SQLite 一致性备份 |
 | GET | /api/desktop/journey | 桌面版：只读学习等级、七天记录和成长印记 |
+| GET | /api/desktop/books/:id/words?page=&page_size=&search=&status= | 桌面版：词库分页、英文/中文释义搜索、学习状态筛选 |
+| GET | /api/books/:id/study?mode=&session_limit=20 | 可选短轮次复习（5–50 题）；不传时沿用原模式 |
 | GET | /api/stats/daily?days= | 近 N 天每日学习量 |
 | GET | /api/stats/overview | 连续天数 + 今日任务 + 总览 |
 | GET | /api/cards | 卡牌图鉴与收集状态 |
