@@ -1,6 +1,8 @@
 'use strict';
 const express = require('express');
 const path = require('node:path');
+const fs = require('node:fs');
+const os = require('node:os');
 const { db, seed, parseImportLine } = require('./db');
 const Domain = require('../shared/domain');
 const publicCardCopy = require('../static/cards/card-copy.json');
@@ -345,13 +347,49 @@ app.post('/api/progress', (req, res) => {
 
 // 学词模式：标记单词已学，立即进入默写队列（不计对错）
 app.post('/api/learn', (req, res) => {
-  const { word_id } = req.body || {};
-  if (!word_id) return res.status(400).json({ error: '缺少 word_id' });
+  const wordId = Number((req.body || {}).word_id);
+  if (!Number.isSafeInteger(wordId) || wordId < 1) {
+    return res.status(400).json({ error: '缺少有效的 word_id' });
+  }
+  if (!db.prepare('SELECT 1 FROM words WHERE id = ?').get(wordId)) {
+    return res.status(404).json({ error: '单词不存在' });
+  }
   db.prepare(`
     INSERT INTO progress (word_id, correct, wrong, streak, last_review, next_due, first_studied)
     VALUES (?, 0, 0, 0, datetime('now', 'localtime'), datetime('now', 'localtime'), datetime('now', 'localtime'))
-    ON CONFLICT(word_id) DO NOTHING`).run(word_id);
+    ON CONFLICT(word_id) DO NOTHING`).run(wordId);
   res.json({ ok: true });
+});
+
+// Desktop-only full data backup: SQLite builds a consistent live snapshot without
+// copying a potentially incomplete database file while the server is running.
+app.get('/api/backup', (req, res) => {
+  const remote = req.socket.remoteAddress;
+  if (!['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(remote)) {
+    return res.status(403).json({ error: '学习数据只能在本机备份' });
+  }
+  let tempDir;
+  try {
+    tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'wordmaster-backup-'));
+    const snapshotPath = path.join(tempDir, 'wordmaster.db');
+    db.prepare('VACUUM INTO ?').run(snapshotPath);
+    res.set('Cache-Control', 'no-store');
+    res.download(snapshotPath, `WordMaster-backup-${Domain.localDayKey()}.db`, error => {
+      try { fs.rmSync(tempDir, { recursive: true, force: true }); }
+      catch (cleanupError) { console.error('[backup] 清理临时文件失败:', cleanupError.message); }
+      if (error) {
+        console.error('[backup] 下载未完成:', error.message);
+        if (!res.headersSent) res.status(500).json({ error: '备份下载失败，请重试' });
+      }
+    });
+  } catch (error) {
+    if (tempDir) {
+      try { fs.rmSync(tempDir, { recursive: true, force: true }); }
+      catch (cleanupError) { console.error('[backup] 清理临时文件失败:', cleanupError.message); }
+    }
+    console.error('[backup] 创建快照失败:', error.message);
+    return res.status(500).json({ error: '备份失败，请检查磁盘空间后重试' });
+  }
 });
 
 app.get('/api/stats', (req, res) => res.json(q.stats.get()));
@@ -456,7 +494,8 @@ app.post('/api/cards/draw', (req, res) => {
 if (require.main === module) {
   seed();
   const PORT = process.env.PORT || 3456;
-  app.listen(PORT, () => console.log(`WordMaster 已启动: http://localhost:${PORT}`));
+  const HOST = process.env.WORDMASTER_HOST || '127.0.0.1';
+  app.listen(PORT, HOST, () => console.log(`WordMaster 已启动: http://${HOST}:${PORT}`));
 }
 
 module.exports = { app, db };
