@@ -336,8 +336,7 @@ $('#desktopRoundSize').addEventListener('change', event => {
   const chosen = Number(event.target.value);
   if ([10, 20, 40].includes(chosen)) {
     localStorage.setItem(DESKTOP_ROUND_KEY, String(chosen));
-    if (Home.section === 'today') Home.renderToday(Home.books, { mastered: 0, total_correct: 0, total_wrong: 0 },
-      Number($('#todayQuickMistakes')?.textContent.match(/\d+/)?.[0] || 0));
+    if (Home.section === 'today' && Home.stats) Home.renderToday(Home.books, Home.stats, Home.mistakeCount);
   }
 });
 
@@ -345,6 +344,7 @@ const Home = {
   section: 'today',
   books: [],
   selectedBookId: 0,
+  stats: null, mistakeCount: 0,
 
   async render(section = 'today') {
     this.section = section;
@@ -357,6 +357,8 @@ const Home = {
         api('/api/books'), api('/api/stats'), api('/api/mistakes')]);
       clearPageStatus();
       this.books = books;
+      this.stats = stats;
+      this.mistakeCount = mistakes.length;
       this.renderStats(stats);
       this.renderToday(books, stats, mistakes.length);
       this.renderBooks(books, mistakes.length);
