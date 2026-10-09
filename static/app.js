@@ -643,6 +643,7 @@ const Study = {
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING …</p></div>';
     const params = new URLSearchParams({ mode });
     if (!IS_ANDROID_APP && mode !== 'learn') params.set('session_limit', String(desktopRoundSize()));
+    if (!IS_ANDROID_APP && mode === 'learn' && !options.limit) params.set('limit', String(desktopRoundSize()));
     if (options.limit > 0) params.set('limit', String(Math.min(Math.floor(options.limit), 50)));
     showPageLoading('正在准备这一轮的单词…');
     try {
