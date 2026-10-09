@@ -2019,31 +2019,76 @@ $('#importForm').addEventListener('submit', async (e) => {
    学习数据页
    ============================================================ */
 const Stats = {
+  requestToken: 0,
+  scope: 'all',
+
   async render() {
     show('stats');
+    if (!IS_ANDROID_APP) {
+      showPageLoading('正在加载学习统计范围…');
+      try {
+        const books = await api('/api/books');
+        if (location.hash !== '#/stats') return;
+        const select = $('#desktopStatsBookSelect');
+        const preferred = Home.selectedBookId || Number(localStorage.getItem('wordmaster_selected_book') || 0);
+        select.innerHTML = '<option value="all">全部词库</option>' + books.map(book =>
+          `<option value="${book.id}">${esc(book.name)}</option>`).join('');
+        select.value = books.some(book => book.id === preferred) ? String(preferred) : 'all';
+        this.scope = select.value;
+        select.onchange = () => {
+          this.scope = select.value;
+          void this.loadScoped(books);
+        };
+        await this.loadScoped(books);
+      } catch (error) {
+        showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+      }
+      return;
+    }
+    await this.loadScoped();
+  },
+
+  async loadScoped(books = []) {
+    const token = ++this.requestToken;
+    const chosen = !IS_ANDROID_APP && this.scope !== 'all'
+      ? books.find(book => String(book.id) === this.scope) : null;
+    const query = chosen ? `book_id=${chosen.id}` : 'scope=all';
     showPageLoading('正在汇总学习数据…');
     try {
       const [ov, daily, mistakes] = await Promise.all([
-        api('/api/stats/overview'), api('/api/stats/daily?days=90'), api('/api/mistakes')]);
+        api(`/api/stats/overview?${query}`),
+        api(`/api/stats/daily?days=90&${query}`),
+        api('/api/mistakes'),
+      ]);
+      if (token !== this.requestToken || location.hash !== '#/stats') return;
       clearPageStatus();
+      if (!IS_ANDROID_APP) {
+        $('#desktopStatsScopeNote').textContent = chosen
+          ? `当前范围：${chosen.name}。这里的待复习、新词、正确率和图表都来自这一本词库。`
+          : '当前范围：全部词库。待复习为所有词库总计；不同词库的每日新词目标不直接相加。';
+      }
       this.renderToday(ov);
       this.renderBars(daily);
       this.renderHeatmap(daily);
       this.renderLine(daily);
-      this.renderDifficult(mistakes);
+      this.renderDifficult(chosen ? mistakes.filter(word => word.book_name === chosen.name) : mistakes);
     } catch (error) {
-      showPageError(`学习数据暂时无法加载：${error.message}`, () => this.render());
+      if (token === this.requestToken) showPageError(`学习数据暂时无法加载：${error.message}`, () => this.loadScoped(books));
     }
   },
 
   renderToday(ov) {
     const t = ov.today;
+    const allBooks = !IS_ANDROID_APP && this.scope === 'all';
+    const newText = allBooks
+      ? `<b class="numeric">${t.new_today}</b><span>今日新学词数</span>`
+      : `<b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span>`;
     $('#statsToday').innerHTML = `
       <div class="today-cell"><b class="numeric">${ov.streak}</b><span>连续学习（天）</span></div>
-      <div class="today-cell"><b class="numeric">${t.due_review}</b><span>今日待复习</span></div>
-      <div class="today-cell"><b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span></div>
+      <div class="today-cell"><b class="numeric">${t.due_review}</b><span>待复习单词</span></div>
+      <div class="today-cell">${newText}</div>
       <div class="today-cell"><b class="numeric">${ov.total.today_reviewed}</b><span>今日已作答</span></div>
-      <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>总正确率</span></div>
+      <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>累计作答正确率</span></div>
       <div class="today-cell"><b class="numeric">${ov.total.mastered}</b><span>已掌握单词</span></div>`;
   },
 
