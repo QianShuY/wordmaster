@@ -672,6 +672,7 @@ const Home = {
         $('#todayContinue').onclick = () => { location.hash = '#/books'; };
         $('#todayEmptyMessage').textContent = books.length ? '词库中还没有可学习的单词。' : '创建词库并添加单词后，就可以开始学习。';
         $('#todayEmptyMessage').classList.remove('hidden');
+        DesktopHub.render(books, null, mistakeCount);
         return;
       }
       this.selectedBookId = book.id;
@@ -700,6 +701,7 @@ const Home = {
         if (query) sessionStorage.setItem('wordmaster_onboarding_started', '1');
         location.hash = `#/study/${book.id}/${mode}${query}`;
       };
+      DesktopHub.render(books, book, mistakeCount);
     };
     select.onchange = updateAction;
     updateAction();
