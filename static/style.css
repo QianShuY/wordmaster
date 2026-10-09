@@ -567,6 +567,13 @@ input.spell-input:focus { border: 0; outline: none; box-shadow: none; }
 }
 .study-done h2 { font-family: var(--serif); font-size: 32px; }
 .study-done p { margin: 14px 0 28px; color: var(--ink-soft); }
+.study-done .done-xp {
+  display: inline-block; margin: 0 0 24px; padding: 11px 18px;
+  border: 1px solid rgba(185,138,47,.4);
+  border-radius: 9px 2px 9px 2px; background: rgba(185,138,47,.08);
+  color: #775520; font-size: 13px; line-height: 1.5;
+}
+html.is-android-app .done-xp { display: none !important; }
 .study-done #doneDraw { display: flex; align-items: center; justify-content: center; width: min(100%, 420px); min-height: 54px; margin: 16px auto 12px; font-size: 16px; font-weight: 600; }
 .study-done .form-actions { justify-content: center; }
 
