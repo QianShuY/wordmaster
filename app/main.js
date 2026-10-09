@@ -333,9 +333,21 @@ app.get('/api/books/:id/study', (req, res) => {
   const limits = Domain.calculateStudyQueueLimits({
     mode, dailyQuota: plan.daily_quota, newToday: countNewToday(bookId), wantAll,
   });
-  const due = q.dueWords.all(bookId, limits.due_limit); // 复习词不设每日上限：到期就该复习
-  const fresh = q.newWords.all(bookId, limits.new_limit);
-  const words = Domain.composeStudyQueue(due, fresh, limits);
+  // Desktop may request bite-size sessions (10/20/40 questions). Android and
+  // existing consumers omit this option and retain their original queue sizes.
+  const requestedSessionLimit = req.query.session_limit;
+  let roundLimit = null;
+  if (requestedSessionLimit !== undefined && mode !== 'learn') {
+    const parsed = Number(requestedSessionLimit);
+    if (!Number.isSafeInteger(parsed) || parsed < 5 || parsed > 50) {
+      return res.status(400).json({ error: '每轮练习数量必须为 5–50' });
+    }
+    roundLimit = parsed;
+  }
+  const due = q.dueWords.all(bookId, Math.min(limits.due_limit, roundLimit || limits.due_limit));
+  const remaining = roundLimit === null ? limits.new_limit : Math.min(limits.new_limit, Math.max(0, roundLimit - due.length));
+  const fresh = q.newWords.all(bookId, remaining);
+  const words = Domain.composeStudyQueue(due, fresh, { ...limits, due_limit: due.length, new_limit: remaining });
   if (mode === 'meaning') attachChoices(words);
   res.json(presentWords(words, book));
 });
