@@ -352,6 +352,36 @@ app.get('/api/books/:id/study', (req, res) => {
   res.json(presentWords(words, book));
 });
 
+// The Desktop "Today" experience follows the real plan, not an arbitrary
+// ten/twenty/forty-question limit. Review and new words are separate phases
+// of a single guided task. Existing mobile study endpoints are unchanged.
+app.get('/api/desktop/books/:id/today', (req, res) => {
+  const bookId = Number(req.params.id);
+  if (!Number.isSafeInteger(bookId) || bookId < 1) {
+    return res.status(400).json({ error: '无效的词库 ID' });
+  }
+  const book = db.prepare('SELECT * FROM wordbooks WHERE id = ?').get(bookId);
+  if (!book) return res.status(404).json({ error: '词库不存在' });
+  const plan = planFor(book);
+  const newToday = countNewToday(bookId);
+  const dueTotal = db.prepare(`SELECT COUNT(*) AS total FROM words w JOIN progress p
+    ON p.word_id = w.id WHERE w.book_id = ? AND p.next_due IS NOT NULL
+    AND p.next_due <= datetime('now', 'localtime')`).get(bookId).total;
+  const due = q.dueWords.all(bookId, Math.min(200, dueTotal));
+  const newRemaining = Math.min(plan.remaining_new, Math.max(0, plan.daily_quota - newToday));
+  const fresh = q.newWords.all(bookId, Math.min(200, newRemaining));
+  attachChoices(due);
+  res.set('Cache-Control', 'no-store').json({
+    book_id: bookId,
+    review: presentWords(due, book),
+    learn: presentWords(fresh, book),
+    due_total: dueTotal,
+    new_remaining: newRemaining,
+    review_has_more: dueTotal > due.length,
+    learn_has_more: newRemaining > fresh.length,
+  });
+});
+
 function countNewToday(bookId) {
   return db.prepare(`
     SELECT COUNT(*) AS c FROM progress p JOIN words w ON w.id = p.word_id
