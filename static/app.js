@@ -1759,6 +1759,8 @@ const Mistakes = {
   },
 
   async study(mode) {
+    // Mistake drills are separate from the home daily route.
+    Study.todayFlow = null;
     Study.mode = mode;
     Study.bookId = null;
     show('study');
