@@ -231,6 +231,75 @@ const MODES = [
   { key: 'pos', name: '词性判断' },
 ];
 
+// Desktop-only journey panel, derived from saved work rather than fake rewards.
+// Keep this module out of Android's Capacitor API until its native store is ready.
+const DesktopJourney = {
+  async render() {
+    if (IS_ANDROID_APP) return;
+    const host = $('#desktopJourney');
+    if (!host) return;
+    try {
+      const journey = await api('/api/desktop/journey');
+      if (Home.section !== 'today' || location.hash === '#/books') return;
+      const level = journey.level;
+      const progress = level.required ? Math.round(level.current / level.required * 100) : 0;
+      const last7 = journey.last7 || [];
+      const scale = Math.max(10, ...last7.map(day => day.count));
+      const daysMarkup = last7.map(day => {
+        const size = day.count ? Math.max(10, Math.round(day.count / scale * 100)) : 3;
+        const date = day.day.slice(5);
+        return `<li class="journey-day ${day.isToday ? 'today' : ''}" aria-label="${esc(day.day)}，作答 ${day.count} 次">
+          <span class="journey-bar-frame"><span class="journey-bar" style="height:${size}%"></span></span>
+          <span class="journey-day-label numeric">${esc(date)}</span>
+        </li>`;
+      }).join('');
+      const stampsMarkup = (journey.stamps || []).map(stamp => `<li class="journey-stamp ${stamp.unlocked ? 'unlocked' : 'locked'}"
+        aria-label="${esc(stamp.title)}：${stamp.unlocked ? '已获得' : '尚未获得'}">
+          <span class="journey-stamp-seal" aria-hidden="true">${stamp.unlocked ? '印' : '·'}</span>
+          <span class="journey-stamp-copy"><b>${esc(stamp.title)}</b><small>${esc(stamp.description)}</small></span>
+          <span class="journey-stamp-count numeric">${stamp.unlocked ? '已获得' : `${stamp.progress}/${stamp.target}`}</span>
+        </li>`).join('');
+      const completed = Math.min(journey.answeredToday, journey.dailyTarget);
+      const dailyPercent = Math.min(100, Math.round(completed / journey.dailyTarget * 100));
+      host.innerHTML = `
+        <div class="journey-section-head">
+          <div><p class="hero-kicker">MAKE PROGRESS VISIBLE</p>
+            <h2>学习旅程 <span class="journey-subtitle">一步一印，积少成多</span></h2>
+          </div>
+          <span class="journey-streak">✦ 连续学习 <b class="numeric">${journey.streak}</b> 天</span>
+        </div>
+        <div class="journey-grid">
+          <article class="journey-card journey-level-card" aria-label="学习等级与经验值">
+            <div class="journey-card-head"><span>墨阶 · LEVEL</span><span>累计作答 <b class="numeric">${journey.attempts}</b> 次</span></div>
+            <div class="journey-level-main"><span class="journey-level-number numeric">${level.level}</span>
+              <div><strong>继续积累</strong><p>答对就能获得墨点，回炉答对也算进步。</p></div></div>
+            <div class="journey-track" role="progressbar" aria-label="当前等级墨点进度" aria-valuenow="${level.current}" aria-valuemin="0" aria-valuemax="${level.required}">
+              <span style="width:${progress}%"></span></div>
+            <div class="journey-track-caption"><span class="numeric">${level.xp} 墨点（XP）</span>
+              <span class="numeric">距下一级 ${level.required - level.current} 点</span></div>
+          </article>
+          <article class="journey-card journey-week-card" aria-label="每日作答与最近七天学习记录">
+            <div class="journey-card-head"><span>今日小目标</span><span>最近 7 天</span></div>
+            <div class="journey-quest-main"><strong class="numeric">${completed}<small> / ${journey.dailyTarget}</small></strong>
+              <span>${journey.answeredToday >= journey.dailyTarget ? '今日作答目标达成 ✓' : '完成十次作答，解锁今日抽卡机会'}</span></div>
+            <div class="journey-mini-track" role="progressbar" aria-label="每日作答目标进度" aria-valuenow="${completed}" aria-valuemin="0" aria-valuemax="${journey.dailyTarget}">
+              <span style="width:${dailyPercent}%"></span></div>
+            <ol class="journey-week-chart" aria-label="七日作答柱状图">${daysMarkup}</ol>
+          </article>
+        </div>
+        <div class="journey-collection-head"><h3>成长印记</h3><p>${journey.unlockedCount} / ${journey.stamps.length} 已获得 · 记录你的真实学习进步</p></div>
+        <ul class="journey-stamps">${stampsMarkup}</ul>
+        <p class="journey-disclaimer">墨点和印记仅记录学习过程，不改变单词复习间隔；复习安排仍以到期记录为准。</p>
+      `;
+      host.classList.remove('hidden');
+    } catch (error) {
+      // Learning should never become unusable because a secondary dashboard failed.
+      console.warn('学习旅程暂不可用:', error.message);
+      host.classList.add('hidden');
+    }
+  },
+};
+
 const Home = {
   section: 'today',
   books: [],
@@ -250,6 +319,7 @@ const Home = {
       this.renderStats(stats);
       this.renderToday(books, stats);
       this.renderBooks(books, mistakes.length);
+      if (section === 'today') void DesktopJourney.render();
     } catch (error) {
       showPageError(`今日内容暂时无法加载：${error.message}`, () => this.render(this.section));
     }
