@@ -157,8 +157,33 @@ function choiceMeaningMarkup(choice, word) {
    路由
    ============================================================ */
 const views = { home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards') };
+const DESKTOP_FOCUS_KEY = 'wordmaster_desktop_focus';
+function syncDesktopFocus(viewName) {
+  const enabled = !IS_ANDROID_APP && viewName === 'study' && localStorage.getItem(DESKTOP_FOCUS_KEY) === '1';
+  document.body.classList.toggle('desktop-focus-study', enabled);
+  const toggle = $('#studyFocusToggle');
+  if (toggle) {
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.textContent = enabled ? '◉ 退出专注' : '◉ 专注';
+    toggle.title = enabled ? '退出专注模式（Esc）' : '隐藏导航与装饰，让注意力回到题目';
+  }
+}
+
+$('#studyFocusToggle').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  localStorage.setItem(DESKTOP_FOCUS_KEY, document.body.classList.contains('desktop-focus-study') ? '0' : '1');
+  syncDesktopFocus('study');
+});
+document.addEventListener('keydown', event => {
+  if (IS_ANDROID_APP || event.key !== 'Escape' || !document.body.classList.contains('desktop-focus-study')) return;
+  if (document.querySelector('.modal-mask:not(.hidden)')) return;
+  localStorage.setItem(DESKTOP_FOCUS_KEY, '0');
+  syncDesktopFocus('study');
+});
+
 function show(name, navName = name) {
   clearPageStatus();
+  syncDesktopFocus(name);
   Object.values(views).forEach(v => v.classList.add('hidden'));
   views[name].classList.remove('hidden');
   document.body.classList.toggle('is-studying', name === 'study');
