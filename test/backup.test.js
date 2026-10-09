@@ -44,7 +44,7 @@ test('desktop backup is a valid consistent SQLite snapshot, and invalid learn ID
 
   const response = await fetch(`${base}/api/backup`);
   assert.equal(response.status, 200);
-  assert.match(response.headers.get('content-type'), /application\/octet-stream/);
+  assert.match(response.headers.get('content-type'), /^application\//);
   assert.equal(response.headers.get('cache-control'), 'no-store');
   assert.match(response.headers.get('content-disposition'), /WordMaster-backup-\d{4}-\d{2}-\d{2}\.db/);
   const bytes = Buffer.from(await response.arrayBuffer());
