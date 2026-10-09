@@ -374,7 +374,7 @@ app.get('/api/backup', (req, res) => {
     const snapshotPath = path.join(tempDir, 'wordmaster.db');
     db.prepare('VACUUM INTO ?').run(snapshotPath);
     res.set('Cache-Control', 'no-store');
-    res.download(snapshotPath, `WordMaster-backup-${Domain.localDayKey()}.db`, error => {
+    res.download(snapshotPath, `WordMaster-backup-${Domain.localDayKey()}.db`, { cacheControl: false }, error => {
       try { fs.rmSync(tempDir, { recursive: true, force: true }); }
       catch (cleanupError) { console.error('[backup] 清理临时文件失败:', cleanupError.message); }
       if (error) {
