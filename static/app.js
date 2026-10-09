@@ -1994,6 +1994,7 @@ const Stats = {
     const accuracy = totals.total ? Math.round(totals.correct / totals.total * 100) : 0;
     $('#chartRangeSummary').textContent = `${range} 天 · 作答 ${totals.total} 次 · 正确率 ${accuracy}% · 新词 ${totals.newWords} 个`;
     $('#chartBars').dataset.range = String(range);
+    $('#chartBars').classList.toggle('is-empty', totals.total === 0);
     $('#chartBars').closest('.chart-scroll')?.setAttribute(
       'aria-label',
       `近 ${range} 天学习量图表${range > 7 ? '，可横向滚动' : ''}`,
@@ -2020,9 +2021,11 @@ const Stats = {
         <span class="bar-label">${showLabel ? label : ''}</span>
       </button>`;
     }).join('');
-    $('#chartBarsLive').textContent = range === 7
-      ? '近 7 天按日期顺序排列；点按柱形可读出当天作答与新词数量。'
-      : '近 30 天按日期顺序排列；点按柱形可读出当天作答与新词数量，可横向滑动。';
+    $('#chartBarsLive').textContent = totals.total === 0
+      ? `近 ${range} 天尚无学习作答，开始学习后就会看到你的记录。`
+      : range === 7
+        ? '近 7 天按日期顺序排列；点按柱形可读出当天作答与新词数量。'
+        : '近 30 天按日期顺序排列；点按柱形可读出当天作答与新词数量，可横向滑动。';
     const announceBar = button => {
       $('#chartBarsLive').textContent = `${button.dataset.label}：共作答 ${button.dataset.total} 次，其中新词 ${button.dataset.new} 个。`;
     };
