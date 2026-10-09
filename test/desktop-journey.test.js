@@ -24,12 +24,13 @@ test('XP thresholds, continuous streaks, achievement milestones and calendar gap
 
   const j = Journey.buildJourney({
     totals: { xp: 318, attempts: 55 }, activeDays: days,
-    mastered: 11, ownedCards: 0, today: new Date(2026, 9, 9, 12),
+    mastered: 11, ownedCards: 0, drawnToday: true, today: new Date(2026, 9, 9, 12),
     daily: [{ day: '2026-10-08', total: 7 }, { day: '2026-10-09', total: 10 }],
   });
   assert.equal(j.level.level, 3);
   assert.equal(j.level.current, 18);
   assert.equal(j.answeredToday, 10);
+  assert.equal(j.drawnToday, true);
   assert.equal(j.last7.length, 7);
   assert.equal(j.last7.at(-1).day, '2026-10-09');
   assert.equal(j.last7.at(-1).count, 10);
@@ -79,6 +80,7 @@ test('desktop journey only reflects saved deduplicated answers and never changes
   assert.equal(journey.level.xp, 18, 'first correct = 12, retry correct = 6, wrong = 0');
   assert.equal(journey.attempts, 3, 'repeated request IDs must not create XP');
   assert.equal(journey.answeredToday, 3);
+  assert.equal(journey.drawnToday, false);
   assert.equal(journey.dailyTarget, 10);
   assert.equal(journey.stamps.find(s => s.id === 'first').unlocked, true);
   assert.equal(journey.last7.length, 7);
