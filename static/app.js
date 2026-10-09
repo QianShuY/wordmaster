@@ -2052,12 +2052,12 @@ const Stats = {
     const token = ++this.requestToken;
     const chosen = !IS_ANDROID_APP && this.scope !== 'all'
       ? books.find(book => String(book.id) === this.scope) : null;
-    const query = chosen ? `book_id=${chosen.id}` : 'scope=all';
+    const query = IS_ANDROID_APP ? '' : chosen ? `book_id=${chosen.id}` : 'scope=all';
     showPageLoading('正在汇总学习数据…');
     try {
       const [ov, daily, mistakes] = await Promise.all([
-        api(`/api/stats/overview?${query}`),
-        api(`/api/stats/daily?days=90&${query}`),
+        api(`/api/stats/overview${query ? '?' + query : ''}`),
+        api(`/api/stats/daily?days=90${query ? '&' + query : ''}`),
         api('/api/mistakes'),
       ]);
       if (token !== this.requestToken || location.hash !== '#/stats') return;
