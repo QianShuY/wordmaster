@@ -325,6 +325,22 @@ const DesktopJourney = {
   },
 };
 
+const DESKTOP_ROUND_KEY = 'wordmaster_desktop_round_size';
+function desktopRoundSize() {
+  const stored = Number(localStorage.getItem(DESKTOP_ROUND_KEY) || 20);
+  return [10, 20, 40].includes(stored) ? stored : 20;
+}
+$('#desktopRoundSize').value = String(desktopRoundSize());
+$('#desktopRoundSize').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  const chosen = Number(event.target.value);
+  if ([10, 20, 40].includes(chosen)) {
+    localStorage.setItem(DESKTOP_ROUND_KEY, String(chosen));
+    if (Home.section === 'today') Home.renderToday(Home.books, { mastered: 0, total_correct: 0, total_wrong: 0 },
+      Number($('#todayQuickMistakes')?.textContent.match(/\d+/)?.[0] || 0));
+  }
+});
+
 const Home = {
   section: 'today',
   books: [],
@@ -352,6 +368,7 @@ const Home = {
 
   renderToday(books, stats, mistakeCount = 0) {
     const select = $('#todayBookSelect');
+    if (!IS_ANDROID_APP) $('#desktopRoundSize').value = String(desktopRoundSize());
     const usable = books.filter(book => book.word_count > 0);
     const stored = Number(localStorage.getItem('wordmaster_selected_book') || 0);
     const preferred = usable.find(book => book.id === (this.selectedBookId || stored));
@@ -405,7 +422,9 @@ const Home = {
       $('#todayEmptyMessage').classList.toggle('hidden', hasTask);
       $('#todayEmptyMessage').textContent = hasTask ? '' : '这本词库今天的待复习和新词配额都已完成。';
       if (book.due_review > 0) {
-        $('#todayNextAction').textContent = `先完成 ${book.due_review} 个到期复习；答完会自动接上今日新词。`;
+        $('#todayNextAction').textContent = IS_ANDROID_APP
+          ? `先完成 ${book.due_review} 个到期复习；答完会自动接上今日新词。`
+          : `有 ${book.due_review} 个到期复习，本轮先做最多 ${desktopRoundSize()} 词，完成后可继续下一轮。`;
       } else if (remaining > 0) {
         $('#todayNextAction').textContent = firstRun
           ? '轻量起步：先学 3 个新词，再默写其中 1 个。'
@@ -621,6 +640,7 @@ const Study = {
     $('#studyModeTag').textContent = `${this.guidedRun ? '初次体验 · ' : ''}${MODES.find(m => m.key === mode)?.name || mode}`;
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING …</p></div>';
     const params = new URLSearchParams({ mode });
+    if (!IS_ANDROID_APP && mode !== 'learn') params.set('session_limit', String(desktopRoundSize()));
     if (options.limit > 0) params.set('limit', String(Math.min(Math.floor(options.limit), 50)));
     showPageLoading('正在准备这一轮的单词…');
     try {
