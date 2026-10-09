@@ -439,6 +439,7 @@ app.get('/api/desktop/journey', (req, res) => {
     daily: q.dailyStats.all('-6 days'),
     mastered: q.stats.get().mastered,
     ownedCards: q.myCards.all().length,
+    drawnToday: !!q.todayCard.get(),
   }));
 });
 
