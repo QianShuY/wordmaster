@@ -358,7 +358,6 @@ const DesktopHub = {
 
     const d = new Date();
     $('#desktopHubDate').textContent = `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
-    $('#desktopHubRound').value = String(desktopRoundSize());
     $('#hubEditPlan').disabled = !chosenBook;
 
     if (!chosenBook) {
@@ -372,6 +371,8 @@ const DesktopHub = {
       $('#hubActionSummary').textContent = '词库中有单词后，会显示到期复习和今日新词。';
       $('#hubDueCount').innerHTML = '0 <small>词</small>';
       $('#hubNewProgress').textContent = '0 / 0';
+      $('#hubTotalNumber').innerHTML = '0 <small>词</small>';
+      $('#hubRoutePreview').textContent = '先选择一本有单词的词库，便可开始今日任务。';
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = '去管理词库 <span aria-hidden="true">→</span>';
       $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
@@ -412,9 +413,15 @@ const DesktopHub = {
 
     $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
     $('#hubNewProgress').textContent = `${learned} / ${Math.min(quota, learned + remaining)}`;
+    $('#hubTotalNumber').innerHTML = `${due + upcoming} <small>词</small>`;
+    $('#hubRoutePreview').textContent = due && upcoming
+      ? `复习 ${due} 词 → 学习 ${upcoming} 新词 → 巩固默写`
+      : due ? `完成全部 ${due} 个到期复习词`
+      : upcoming ? `学习 ${upcoming} 个新词 → 巩固默写`
+      : '当前词库的今日任务已全部完成。';
     const hasTask = due > 0 || upcoming > 0;
     $('#hubActionSummary').textContent = due > 0
-      ? `先复习 ${due} 个到期词，再按自己的节奏学习新词。`
+      ? `今天需要复习 ${due} 个到期词${upcoming ? `，并学习 ${upcoming} 个新词` : ''}。按顺序一次走完。`
       : upcoming > 0
         ? `今天还可开始学习 ${upcoming} 个新词，之后由复习系统接力。`
         : '这本词库的今日安排已完成，可以换一本词库或查看学习成果。';
@@ -424,8 +431,9 @@ const DesktopHub = {
       : hasTask
         ? '开始今日学习 <span aria-hidden="true">→</span>'
         : '今日任务已完成 ✓';
-    $('#hubActionHelp').textContent = due > 0
-      ? `本轮最多 ${desktopRoundSize()} 词，完成后可接着学习。`
+    $('#hubActionHelp').textContent = due > 0 && upcoming > 0
+      ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
+      : due > 0 ? '不限制为 10/20 词，今天到期的复习会优先安排。'
       : '先认识新词，再用默写确认是否真正记住。';
     $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
     $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
@@ -560,11 +568,6 @@ $('#hubEditPlan').addEventListener('click', () => {
 });
 $('#hubMistakes').addEventListener('click', () => {
   if (!IS_ANDROID_APP) location.hash = '#/mistakes-study/spelling';
-});
-$('#desktopHubRound').addEventListener('change', event => {
-  if (IS_ANDROID_APP) return;
-  $('#desktopRoundSize').value = event.target.value;
-  $('#desktopRoundSize').dispatchEvent(new Event('change'));
 });
 $('#desktopPlanDate').addEventListener('input', () => DesktopPlan.preview());
 document.querySelectorAll('#desktopPlanModal [data-plan-days]').forEach(button => {
