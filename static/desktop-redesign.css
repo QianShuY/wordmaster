@@ -38,7 +38,7 @@ html:not(.is-android-app) .today-page > .first-run-guide {
   padding: 22px 0 28px;
 }
 .hub-heading .hero-kicker { margin-bottom: 11px; letter-spacing: .25em; }
-.hub-heading h2 {
+.hub-heading h1 {
   font-family: var(--serif);
   font-size: clamp(32px, 3.9vw, 51px);
   font-weight: 620;
@@ -320,7 +320,7 @@ html:not(.is-android-app) #desktopPlanModal:not(.hidden) {
 @media (max-width: 720px) {
   html:not(.is-android-app) .today-page { max-width: 100%; }
   .hub-heading { align-items: flex-start; padding: 0 0 22px; gap: 8px; }
-  .hub-heading h2 { font-size: 32px; }
+  .hub-heading h1 { font-size: 32px; }
   .hub-heading p:last-child { font-size: 12px; }
   .hub-date { display: none; }
   .hub-plan { padding: 23px 20px; border-radius: 14px; }
