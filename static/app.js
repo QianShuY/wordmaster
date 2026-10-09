@@ -1501,7 +1501,7 @@ const Manage = {
     $('#wordTableBody').setAttribute('aria-busy', 'true');
     try {
       const data = await api(`/api/desktop/books/${id}/words?${params}`);
-      if (token !== this.requestToken || this.bookId !== id) return;
+      if (token !== this.requestToken || this.bookId !== id || location.hash.split('?')[0] !== `#/book/${id}`) return;
       this.words = data.items;
       this.page = data.page;
       this.pages = data.pages;
@@ -1510,7 +1510,7 @@ const Manage = {
       this.renderPager();
       clearPageStatus();
     } catch (error) {
-      if (token === this.requestToken && this.bookId === id) {
+      if (token === this.requestToken && this.bookId === id && location.hash.split('?')[0] === `#/book/${id}`) {
         showPageError(`查询词库失败：${error.message}`, () => this.loadPage(page));
       }
     } finally {
@@ -1593,6 +1593,7 @@ $('#manageSearch').addEventListener('input', event => {
   if (IS_ANDROID_APP) return;
   clearTimeout(Manage.searchTimer);
   Manage.query = event.target.value.trim();
+  Manage.requestToken++; // Cancel the logical lifetime of any earlier response.
   Manage.searchTimer = setTimeout(() => void Manage.loadPage(1), 260);
 });
 $('#manageStatus').addEventListener('change', event => {
