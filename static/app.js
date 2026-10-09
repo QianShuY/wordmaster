@@ -468,9 +468,9 @@ const Home = {
         <div class="book-manage-row">
           <span>
             <button class="link-btn" onclick="location.hash='#/book/${b.id}'">管理单词 →</button>
-            <button class="link-btn" onclick="Home.openPlan(${b.id}, '${esc(b.name)}')">学习计划</button>
+            <button type="button" class="link-btn" data-home-action="plan" data-book-id="${b.id}">学习计划</button>
           </span>
-          ${b.is_builtin ? '' : `<button class="link-btn danger" onclick="Home.deleteBook(${b.id}, '${esc(b.name)}')">删除词库</button>`}
+          ${b.is_builtin ? '' : `<button type="button" class="link-btn danger" data-home-action="delete" data-book-id="${b.id}">删除词库</button>`}
         </div>
       </article>`;
     });
@@ -529,6 +529,16 @@ const Home = {
     } catch (e) { toast(e.message); }
   },
 };
+
+// Avoid embedding user-defined book names inside executable inline handlers.
+$('#booksGrid').addEventListener('click', event => {
+  const button = event.target.closest('[data-home-action]');
+  if (!button) return;
+  const book = Home.books.find(item => item.id === Number(button.dataset.bookId));
+  if (!book) return;
+  if (button.dataset.homeAction === 'plan') void Home.openPlan(book.id, book.name);
+  if (button.dataset.homeAction === 'delete') void Home.deleteBook(book.id, book.name);
+});
 
 /* 学习计划表单 */
 $('#planDate').addEventListener('change', () => {
@@ -1349,6 +1359,7 @@ document.addEventListener('click', (e) => {
    错题本
    ============================================================ */
 const Mistakes = {
+  rows: [],
   async render() {
     show('mistakes', 'books');
     showPageLoading('正在加载错题本…');
@@ -1360,6 +1371,7 @@ const Mistakes = {
       showPageError(`错题本暂时无法加载：${error.message}`, () => this.render());
       return;
     }
+    this.rows = list;
     $('#mistakeCount').textContent = list.length;
     $('#mistakeBody').innerHTML = list.map(w => `
       <tr>
@@ -1369,7 +1381,7 @@ const Mistakes = {
         <td class="ex">${esc(w.book_name)}</td>
         <td><span class="wrong-tag">错 ${w.wrong} 次</span></td>
         <td class="ops">
-          <button class="link-btn danger" onclick="Mistakes.remove(${w.id}, '${esc(wordHeadword(w))}')">移出</button>
+          <button type="button" class="link-btn danger" data-mistake-remove="${w.id}">移出</button>
         </td>
       </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">暂无错题，继续保持</td></tr>';
     $('#mistakesBack').onclick = () => { location.hash = '#/'; };
@@ -1395,11 +1407,20 @@ const Mistakes = {
   },
 
   async remove(wordId, word) {
-    await api(`/api/mistakes/${wordId}`, { method: 'DELETE' });
-    toast(`「${word}」已移出错题本`);
-    this.render();
+    try {
+      await api(`/api/mistakes/${wordId}`, { method: 'DELETE' });
+      toast(`「${word}」已移出错题本`);
+      await this.render();
+    } catch (error) { toast(`移出错题失败：${error.message}`); }
   },
 };
+
+$('#mistakeBody').addEventListener('click', event => {
+  const button = event.target.closest('[data-mistake-remove]');
+  if (!button) return;
+  const word = Mistakes.rows.find(row => row.id === Number(button.dataset.mistakeRemove));
+  if (word) void Mistakes.remove(word.id, wordHeadword(word));
+});
 
 /* ============================================================
    词库管理页
