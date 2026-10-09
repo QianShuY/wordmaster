@@ -217,6 +217,55 @@ app.get('/api/books/:id/words', (req, res) => {
   res.json(presentWords(q.words.all(bookId), book));
 });
 
+// Desktop manager: server-side search + pagination keeps large built-in books
+// usable without materializing thousands of table rows in the browser.
+// The original /api/books/:id/words contract is preserved for Android.
+app.get('/api/desktop/books/:id/words', (req, res) => {
+  const bookId = Number(req.params.id);
+  if (!Number.isSafeInteger(bookId) || bookId < 1) {
+    return res.status(400).json({ error: '无效的词库 ID' });
+  }
+  const book = db.prepare('SELECT id, name, is_builtin FROM wordbooks WHERE id = ?').get(bookId);
+  if (!book) return res.status(404).json({ error: '词库不存在' });
+
+  const keyword = String(req.query.search || '').trim();
+  const status = String(req.query.status || 'all');
+  const allowed = new Set(['all', 'new', 'due', 'mistakes', 'mastered']);
+  if (keyword.length > 80) return res.status(400).json({ error: '搜索内容不能超过 80 个字符' });
+  if (!allowed.has(status)) return res.status(400).json({ error: '无效的学习状态筛选' });
+  const requestedPage = Number(req.query.page || 1);
+  if (!Number.isSafeInteger(requestedPage) || requestedPage < 1) {
+    return res.status(400).json({ error: '页码必须是正整数' });
+  }
+  const requestedSize = Number(req.query.page_size || 40);
+  if (!Number.isSafeInteger(requestedSize) || requestedSize < 1 || requestedSize > 100) {
+    return res.status(400).json({ error: '每页数量须在 1–100 之间' });
+  }
+
+  const filters = {
+    all: '',
+    new: ' AND p.word_id IS NULL',
+    due: " AND p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')",
+    mistakes: ' AND p.wrong > 0 AND p.streak < 3',
+    mastered: ' AND p.streak >= 3',
+  };
+  // instr() handles literal percent/underscore without interpreting LIKE wildcards.
+  const matchSql = keyword ? ' AND (instr(lower(w.word), lower(?)) > 0 OR instr(lower(w.meaning), lower(?)) > 0)' : '';
+  const where = 'WHERE w.book_id = ?' + filters[status] + matchSql;
+  const args = keyword ? [bookId, keyword, keyword] : [bookId];
+  const from = 'FROM words w LEFT JOIN progress p ON p.word_id = w.id ';
+  const total = db.prepare('SELECT COUNT(*) AS total ' + from + where).get(...args).total;
+  const pages = Math.max(1, Math.ceil(total / requestedSize));
+  const page = Math.min(requestedPage, pages);
+  const rows = db.prepare(`SELECT w.*, p.streak, p.correct, p.wrong, p.next_due
+    ${from}${where} ORDER BY w.word COLLATE NOCASE, w.id LIMIT ? OFFSET ?`)
+    .all(...args, requestedSize, (page - 1) * requestedSize);
+  res.set('Cache-Control', 'no-store').json({
+    items: presentWords(rows, book), total, page, page_size: requestedSize, pages,
+    search: keyword, status,
+  });
+});
+
 app.post('/api/words', (req, res) => {
   const { book_id, word, phonetic = '', pos = '', meaning, example = '' } = req.body || {};
   if (!book_id || !word || !meaning) return res.status(400).json({ error: '单词和释义必填' });
