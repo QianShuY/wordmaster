@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const { db, seed, parseImportLine } = require('./db');
 const Domain = require('../shared/domain');
+const DesktopJourney = require('./desktop-journey');
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
 
@@ -80,6 +81,16 @@ const q = {
       (SELECT COALESCE(SUM(correct), 0) FROM progress) AS total_correct,
       (SELECT COALESCE(SUM(wrong), 0) FROM progress) AS total_wrong,
       (SELECT COUNT(*) FROM progress WHERE streak >= 3) AS mastered`),
+  // XP is a read-only view of real, deduplicated saved answers.
+  // Legacy rows with no outcome still count if they were correct.
+  journeyTotals: db.prepare(`
+    SELECT COUNT(*) AS attempts,
+      COALESCE(SUM(CASE
+        WHEN outcome = 'retry_correct' THEN 6
+        WHEN outcome = 'first_correct' THEN 12
+        WHEN outcome IS NULL AND correct = 1 THEN 12
+        ELSE 0 END), 0) AS xp
+    FROM review_log`),
   // 近 N 天每日学习量
   dailyStats: db.prepare(`
     SELECT date(ts) AS day,
@@ -418,6 +429,18 @@ app.get('/api/backup', (req, res) => {
 });
 
 app.get('/api/stats', (req, res) => res.json(q.stats.get()));
+
+// Desktop-only read-only achievements and recent learning activity. Android
+// uses an independent SQLite store and does not call this endpoint.
+app.get('/api/desktop/journey', (req, res) => {
+  res.set('Cache-Control', 'no-store').json(DesktopJourney.buildJourney({
+    totals: q.journeyTotals.get(),
+    activeDays: q.activeDays.all(),
+    daily: q.dailyStats.all('-6 days'),
+    mastered: q.stats.get().mastered,
+    ownedCards: q.myCards.all().length,
+  }));
+});
 
 // ---- 学习数据统计 ----
 app.get('/api/stats/daily', (req, res) => {
