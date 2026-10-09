@@ -57,6 +57,14 @@
         <div class="today-start">
           <label class="book-select-label" for="todayBookSelect">今天学习哪本词库</label>
           <select id="todayBookSelect" aria-describedby="todayNextAction"></select>
+          <label class="desktop-round-select" id="desktopRoundControl">
+            <span>单轮练习节奏</span>
+            <select id="desktopRoundSize" aria-label="每轮复习题量">
+              <option value="10">轻量 · 10 词</option>
+              <option value="20">标准 · 20 词</option>
+              <option value="40">强化 · 40 词</option>
+            </select>
+          </label>
           <p id="todayNextAction" class="today-next-action"></p>
           <button type="button" class="btn btn-primary today-continue" id="todayContinue">继续学习</button>
           <button type="button" class="today-quick-mistakes hidden" id="todayQuickMistakes">↗ 针对错题再练一轮</button>
