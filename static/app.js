@@ -1252,6 +1252,15 @@ const Study = {
       : this.mode === 'learn'
         ? `共完成 ${this.total} 个新词 · 回看 ${this.learnAgainIds.size} 个`
         : `共 ${this.total} 个词 · 首次答对 ${this.firstCorrectCount} · 回炉答对 ${this.retryCorrectCount} · 答错 ${this.wrongCount} 次 · 放弃 ${this.abandonedCount} 次`;
+    const xpEarned = this.firstCorrectCount * 12 + this.retryCorrectCount * 6;
+    const doneXp = $('#doneXp');
+    if (IS_ANDROID_APP || !xpEarned) {
+      doneXp.classList.add('hidden');
+      doneXp.textContent = '';
+    } else {
+      doneXp.textContent = `✦ 本轮获得 ${xpEarned} 墨点 · 首次答对 +12，回炉答对 +6`;
+      doneXp.classList.remove('hidden');
+    }
     if (this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
