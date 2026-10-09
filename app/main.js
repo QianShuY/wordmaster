@@ -537,29 +537,63 @@ app.get('/api/desktop/journey', (req, res) => {
 // ---- 学习数据统计 ----
 app.get('/api/stats/daily', (req, res) => {
   const days = Math.min(Number(req.query.days) || 90, 365);
-  res.json(q.dailyStats.all(`-${days} days`));
+  if (req.query.book_id === undefined) return res.json(q.dailyStats.all(`-${days} days`));
+  const bookId = Number(req.query.book_id);
+  if (!Number.isSafeInteger(bookId) || bookId < 1) return res.status(400).json({ error: '无效的词库 ID' });
+  if (!db.prepare('SELECT 1 FROM wordbooks WHERE id = ?').get(bookId)) return res.status(404).json({ error: '词库不存在' });
+  res.json(db.prepare(`
+    SELECT date(l.ts) AS day, COUNT(*) AS total, SUM(l.correct) AS correct,
+           SUM(l.is_new) AS new_words
+    FROM review_log l JOIN words w ON w.id = l.word_id
+    WHERE w.book_id = ? AND date(l.ts) >= date('now', 'localtime', ?)
+    GROUP BY date(l.ts) ORDER BY day`).all(bookId, `-${days} days`));
 });
 
 app.get('/api/stats/overview', (req, res) => {
-  // 连续学习天数：从今天（或昨天）往前数有记录的天数
-  const days = q.activeDays.all().map(r => r.day);
+  // A desktop book_id requests *one* book. No parameter retains the original
+  // global shape consumed by Android. Explicit scope=all avoids presenting the
+  // sum of unrelated daily quotas as one actionable learning target.
+  const scoped = req.query.book_id !== undefined;
+  const bookId = scoped ? Number(req.query.book_id) : null;
+  if (scoped && (!Number.isSafeInteger(bookId) || bookId < 1)) {
+    return res.status(400).json({ error: '无效的词库 ID' });
+  }
+  const books = q.books.all();
+  const book = scoped ? books.find(item => item.id === bookId) : null;
+  if (scoped && !book) return res.status(404).json({ error: '词库不存在' });
+  const days = (scoped ? db.prepare(`SELECT DISTINCT date(l.ts) AS day FROM review_log l
+    JOIN words w ON w.id = l.word_id WHERE w.book_id = ? ORDER BY day DESC`).all(bookId)
+    : q.activeDays.all()).map(row => row.day);
   let streak = 0;
   const cursor = new Date(); cursor.setHours(0, 0, 0, 0);
-  const fmt = Domain.localDayKey;
-  // 今天没学不算断签，从昨天开始也算连续
-  if (!days.includes(fmt(cursor))) cursor.setDate(cursor.getDate() - 1);
-  while (days.includes(fmt(cursor))) { streak++; cursor.setDate(cursor.getDate() - 1); }
+  if (!days.includes(Domain.localDayKey(cursor))) cursor.setDate(cursor.getDate() - 1);
+  while (days.includes(Domain.localDayKey(cursor))) { streak++; cursor.setDate(cursor.getDate() - 1); }
 
-  const books = q.books.all();
-  const today = {
-    due_review: books.reduce((s, b) => s + b.due_review, 0),
-    new_today: books.reduce((s, b) => s + b.new_today, 0),
-    daily_new_quota: books.reduce((s, b) => s + planFor(b).daily_quota, 0),
+  const today = scoped ? {
+    due_review: book.due_review,
+    new_today: book.new_today,
+    daily_new_quota: Math.min(planFor(book).daily_quota, book.new_today + planFor(book).remaining_new),
+  } : {
+    due_review: books.reduce((sum, item) => sum + item.due_review, 0),
+    new_today: books.reduce((sum, item) => sum + item.new_today, 0),
+    daily_new_quota: req.query.scope === 'all' ? null
+      : books.reduce((sum, item) => sum + planFor(item).daily_quota, 0),
   };
-  const total = q.stats.get();
-  const acc = total.total_correct + total.total_wrong > 0
+  const total = scoped ? db.prepare(`
+    SELECT
+      (SELECT COUNT(*) FROM words WHERE book_id = ?) AS total_words,
+      (SELECT COUNT(*) FROM review_log l JOIN words w ON w.id = l.word_id
+        WHERE w.book_id = ? AND date(l.ts) = date('now', 'localtime')) AS today_reviewed,
+      (SELECT COALESCE(SUM(p.correct), 0) FROM progress p JOIN words w ON w.id = p.word_id
+        WHERE w.book_id = ?) AS total_correct,
+      (SELECT COALESCE(SUM(p.wrong), 0) FROM progress p JOIN words w ON w.id = p.word_id
+        WHERE w.book_id = ?) AS total_wrong,
+      (SELECT COUNT(*) FROM progress p JOIN words w ON w.id = p.word_id
+        WHERE w.book_id = ? AND p.streak >= 3) AS mastered`).get(bookId, bookId, bookId, bookId, bookId)
+    : q.stats.get();
+  const accuracy = total.total_correct + total.total_wrong > 0
     ? Math.round(total.total_correct / (total.total_correct + total.total_wrong) * 100) : 0;
-  res.json({ streak, today, total, accuracy: acc });
+  res.set('Cache-Control', 'no-store').json({ streak, today, total, accuracy, scope: scoped ? 'book' : 'all' });
 });
 
 // ---- 卡牌 ----
