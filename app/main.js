@@ -47,7 +47,13 @@ const q = {
     WHERE w.book_id = ? AND p.word_id IS NULL
     ORDER BY RANDOM() LIMIT ?`),
   distractors: db.prepare(`
-    SELECT meaning FROM words WHERE book_id = ? AND id != ? AND meaning != '' ORDER BY RANDOM() LIMIT 3`),
+    SELECT DISTINCT meaning FROM words
+    WHERE book_id = ? AND id != ? AND TRIM(meaning) <> TRIM(?) AND TRIM(meaning) <> ''
+    ORDER BY RANDOM() LIMIT 30`),
+  extraDistractors: db.prepare(`
+    SELECT DISTINCT meaning FROM words
+    WHERE book_id != ? AND TRIM(meaning) <> TRIM(?) AND TRIM(meaning) <> ''
+    ORDER BY RANDOM() LIMIT 30`),
   progress: db.prepare('SELECT streak, first_studied FROM progress WHERE word_id = ?'),
   hasReviewForWord: db.prepare('SELECT 1 AS found FROM review_log WHERE word_id = ? LIMIT 1'),
   lastReviewForSession: db.prepare('SELECT outcome FROM review_log WHERE session_id = ? AND word_id = ? ORDER BY id DESC LIMIT 1'),
@@ -128,10 +134,29 @@ function planFor(book) {
 }
 
 function attachChoices(words) {
-  for (const w of words) {
-    w.choices = q.distractors.all(w.book_id, w.id).map(d => d.meaning);
-    w.choices.push(w.meaning);
-    w.choices.sort(() => Math.random() - 0.5);
+  for (const word of words) {
+    // A self-built vocabulary often has fewer than four distinct definitions.
+    // Never display a duplicate or a second correct answer: top up from other
+    // vocabulary books only when the selected book is too small.
+    const seen = new Set([word.meaning.trim().toLocaleLowerCase()]);
+    const choices = [word.meaning];
+    const addCandidates = rows => {
+      for (const row of rows) {
+        const text = row.meaning.trim();
+        const key = text.toLocaleLowerCase();
+        if (!text || seen.has(key)) continue;
+        choices.push(text);
+        seen.add(key);
+        if (choices.length === 4) break;
+      }
+    };
+    addCandidates(q.distractors.all(word.book_id, word.id, word.meaning));
+    if (choices.length < 4) addCandidates(q.extraDistractors.all(word.book_id, word.meaning));
+    for (let i = choices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [choices[i], choices[j]] = [choices[j], choices[i]];
+    }
+    word.choices = choices;
   }
   return words;
 }
