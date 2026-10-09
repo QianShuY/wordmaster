@@ -106,14 +106,11 @@
                 <strong class="numeric" id="hubNewProgress">0 / 15</strong>
               </div>
             </div>
-            <label class="hub-round-label" for="desktopHubRound">
-              <span>单轮学习量</span>
-              <select id="desktopHubRound">
-                <option value="10">轻量 · 10 词</option>
-                <option value="20">标准 · 20 词</option>
-                <option value="40">强化 · 40 词</option>
-              </select>
-            </label>
+            <div class="hub-daily-total" id="hubDailyTotal" role="status" aria-live="polite">
+              <span>本次今日任务</span>
+              <strong class="numeric" id="hubTotalNumber">0 <small>词</small></strong>
+            </div>
+            <p class="hub-route-preview" id="hubRoutePreview">到期复习 → 新词学习 → 巩固默写</p>
             <button type="button" class="btn btn-primary hub-start" id="hubStart">开始今日学习 <span aria-hidden="true">→</span></button>
             <button type="button" class="hub-mistakes hidden" id="hubMistakes">错题回炉 <span aria-hidden="true">↗</span></button>
             <p class="hub-action-help" id="hubActionHelp">一次只专注眼前这轮，完成后再继续。</p>
@@ -263,6 +260,19 @@
         <p>电脑端可下载完整学习数据库，包含词库、学习进度、错题记录和卡牌收藏。</p>
       </div>
       <a class="btn btn-ghost" href="/api/backup" download>↓ 备份学习数据</a>
+    </div>
+    <div class="desktop-stats-scope" id="desktopStatsScope">
+      <div>
+        <span class="stats-scope-eyebrow">LEARNING REVIEW · 学习复盘</span>
+        <h2>看清自己的进步</h2>
+        <p id="desktopStatsScopeNote">选择词库，查看对应的学习成果。</p>
+      </div>
+      <label for="desktopStatsBookSelect">
+        <span>统计范围</span>
+        <select id="desktopStatsBookSelect">
+          <option value="all">全部词库</option>
+        </select>
+      </label>
     </div>
     <div class="stats-today" id="statsToday"></div>
 
