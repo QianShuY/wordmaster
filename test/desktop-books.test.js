@@ -85,6 +85,20 @@ test('desktop library search and filters paginate large books without breaking o
   assert.equal((await get(99999)).status, 404);
   assert.equal((await get(bookId, '?search=' + 'x'.repeat(81))).status, 400);
 
+  const round = await fetch(`${base}/api/books/${bookId}/study?mode=meaning&session_limit=10`);
+  assert.equal(round.status, 200);
+  const shortRound = await round.json();
+  assert.equal(shortRound.length, 10, 'desktop session is limited to the requested number of questions');
+  assert.equal(shortRound[0].id, due, 'due reviews stay ahead of new words');
+  assert.equal(shortRound.filter(word => word.is_new).length, 9);
+  const oldRound = await fetch(`${base}/api/books/${bookId}/study?mode=meaning`);
+  assert.equal(oldRound.status, 200);
+  assert.ok((await oldRound.json()).length > 10, 'old mobile study queue stays unlimited by desktop setting');
+  for (const invalid of ['0', 'abc', '51']) {
+    const res = await fetch(`${base}/api/books/${bookId}/study?mode=meaning&session_limit=${invalid}`);
+    assert.equal(res.status, 400);
+  }
+
   const legacy = await fetch(`${base}/api/books/${bookId}/words`);
   assert.equal(legacy.status, 200);
   assert.equal((await legacy.json()).length, 125, 'Android still has the legacy full-list endpoint');
