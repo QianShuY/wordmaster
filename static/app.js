@@ -199,11 +199,13 @@ function show(name, navName = name) {
 function route() {
   const hash = location.hash || '#/';
   const studyM = hash.match(/^#\/study\/(\d+)\/(\w+)/);
+  const todayStudyM = !IS_ANDROID_APP && hash.match(/^#\/today-study\/(\d+)$/);
   const guidedM = hash.match(/^#\/guided-spelling\/(\d+)/);
   const manageM = hash.match(/^#\/book\/(\d+)/);
   const mStudy = hash.match(/^#\/mistakes-study\/(\w+)/);
   Study.leave();
-  if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
+  if (todayStudyM) Study.startToday(Number(todayStudyM[1]));
+  else if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
   else if (studyM) {
     const query = new URLSearchParams(hash.split('?')[1] || '');
     Study.start(Number(studyM[1]), studyM[2], {
@@ -546,7 +548,10 @@ $('#desktopTodayBookSelect').addEventListener('change', event => {
   $('#todayBookSelect').dispatchEvent(new Event('change'));
 });
 $('#hubStart').addEventListener('click', () => {
-  if (!IS_ANDROID_APP) $('#todayContinue').click();
+  if (IS_ANDROID_APP) return;
+  const book = Home.books.find(item => item.id === Home.selectedBookId);
+  if (!book || !book.word_count) { location.hash = '#/books'; return; }
+  location.hash = `#/today-study/${book.id}`;
 });
 $('#hubEditPlan').addEventListener('click', () => {
   if (IS_ANDROID_APP) return;
@@ -896,11 +901,13 @@ const Study = {
   correctCount: 0, firstCorrectCount: 0, retryCorrectCount: 0,
   wrongCount: 0, abandonedCount: 0, retryCount: 0,
   sessionId: null,
+  todayFlow: null,
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
   keyHandler: null,
 
   async start(bookId, mode, options = {}) {
+    this.todayFlow = null;
     this.bookId = bookId; this.mode = mode;
     this.guidedRun = Boolean(options.guided && mode === 'learn');
     if (!this.guidedRun) this.guidedSpellWords = null;
@@ -924,7 +931,57 @@ const Study = {
     }
   },
 
+  async startToday(bookId) {
+    if (IS_ANDROID_APP) return;
+    this.todayFlow = null;
+    this.bookId = bookId;
+    this.mode = 'meaning';
+    this.guidedRun = false;
+    show('study');
+    $('#studyDone').classList.add('hidden');
+    $('#studyStage').classList.remove('hidden');
+    $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING TODAY…</p></div>';
+    $('#studyExit').onclick = () => { location.hash = '#/'; };
+    showPageLoading('正在准备完整的今日任务…');
+    try {
+      const payload = await api(`/api/desktop/books/${bookId}/today`);
+      if (location.hash !== `#/today-study/${bookId}`) return;
+      clearPageStatus();
+      this.todayFlow = {
+        bookId,
+        stage: payload.review.length ? 'review' : 'learn',
+        review: payload.review,
+        learn: payload.learn,
+        reviewHasMore: payload.review_has_more,
+        learnHasMore: payload.learn_has_more,
+      };
+      this.mode = payload.review.length ? 'meaning' : 'learn';
+      $('#studyModeTag').textContent = payload.review.length ? '今日任务 · 第一步：到期复习' : '今日任务 · 新词学习';
+      this.begin(payload.review.length ? payload.review : payload.learn);
+    } catch (error) {
+      showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId));
+    }
+  },
+
+  continueToday(stage) {
+    if (!this.todayFlow) return;
+    this.todayFlow.stage = stage;
+    if (stage === 'learn') {
+      this.mode = 'learn';
+      $('#studyModeTag').textContent = '今日任务 · 第二步：学习新词';
+      this.begin(this.todayFlow.learn);
+    } else if (stage === 'spelling') {
+      this.mode = 'spelling';
+      $('#studyModeTag').textContent = '今日任务 · 第三步：巩固默写';
+      this.begin(Domain.spellingWords(this.todayFlow.learn).map(word => ({ ...word, is_new: 0 })));
+    }
+    $('#studyDone').classList.add('hidden');
+    $('#studyStage').classList.remove('hidden');
+    $('#studyStage').classList.toggle('dictionary-stage', stage === 'learn');
+  },
+
   startGuidedSpelling(bookId) {
+    this.todayFlow = null;
     let words = this.guidedSpellWords || [];
     if (!words.length) {
       try {
@@ -1595,7 +1652,25 @@ const Study = {
       doneXp.textContent = `✦ 本轮获得 ${xpEarned} 墨点 · 首次答对 +12，回炉答对 +6`;
       doneXp.classList.remove('hidden');
     }
-    if (this.guidedRun && this.mode === 'learn' && this.bookId) {
+    if (this.todayFlow) {
+      const flow = this.todayFlow;
+      const needsMore = flow.reviewHasMore || flow.learnHasMore;
+      if (flow.stage === 'review' && flow.learn.length) {
+        $('#doneSummary').textContent = `第一步完成：到期复习 ${this.total} 词。接下来学习 ${flow.learn.length} 个今日新词。`;
+        $('#doneAgain').textContent = `继续今日新词 · ${flow.learn.length} 个 →`;
+        $('#doneAgain').onclick = () => this.continueToday('learn');
+      } else if (flow.stage === 'learn' && Domain.spellingWords(flow.learn).length) {
+        $('#doneSummary').textContent = `新词学习完成 ${flow.learn.length} 个。接下来用拼写巩固刚刚认识的词。`;
+        $('#doneAgain').textContent = '继续巩固默写 →';
+        $('#doneAgain').onclick = () => this.continueToday('spelling');
+      } else {
+        $('#doneAgain').textContent = needsMore ? '继续剩余今日任务 →' : '回到今日';
+        $('#doneAgain').onclick = () => {
+          if (needsMore) this.startToday(this.bookId);
+          else location.hash = '#/';
+        };
+      }
+    } else if (this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
       sessionStorage.setItem(GUIDED_SPELLING_KEY, JSON.stringify({ bookId: this.bookId, words: this.guidedSpellWords }));
