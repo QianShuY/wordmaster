@@ -398,7 +398,20 @@ input[type="number"]:focus, textarea:focus {
 textarea { resize: vertical; line-height: 1.8; }
 .form-actions { display: flex; gap: 10px; }
 
-/* ============ 学习页 ============ */
+/* Desktop: one-click focus without altering word scheduling or the Android UI. */
+.study-focus-toggle { flex: none; min-height: 38px; padding: 7px 13px; font-size: 12px; }
+html.is-android-app .study-focus-toggle { display: none !important; }
+body.desktop-focus-study .topbar, body.desktop-focus-study .bg-decor,
+body.desktop-focus-study .grain, body.desktop-focus-study .bottom-nav { display: none !important; }
+body.desktop-focus-study main { max-width: 960px; padding-top: clamp(24px, 5vh, 68px); }
+body.desktop-focus-study .study-stage { max-width: 740px; }
+body.desktop-focus-study .study-progress-fill { transition-duration: .25s; }
+body.desktop-focus-study .study-focus-toggle { border-color: var(--pine); color: var(--pine); background: rgba(47,93,80,.065); }
+@media (max-width: 600px) {
+  .study-focus-toggle { font-size: 11px; padding: 7px 9px; min-height: 36px; }
+}
+
+ /* ============ 学习页 ============ */
 .study-top {
   display: flex; align-items: center; gap: 24px; margin-bottom: 26px;
 }
