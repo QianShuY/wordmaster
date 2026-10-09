@@ -585,6 +585,21 @@ input.spell-input:focus { border: 0; outline: none; box-shadow: none; }
 @keyframes dotPulse { 50% { transform: scale(1.5); opacity: .5; } }
 
 /* ============ 学习数据页 ============ */
+.stats-backup {
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  margin-bottom: 20px; padding: 18px 22px;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 14px 4px 14px 4px;
+}
+.stats-backup strong { display: block; color: var(--ink); font-size: 15px; }
+.stats-backup p { color: var(--ink-soft); line-height: 1.6; font-size: 13px; margin: 5px 0 0; }
+.stats-backup .btn { flex: none; white-space: nowrap; }
+html.is-android-app .stats-backup { display: none; }
+@media (max-width: 600px) {
+  .stats-backup { flex-direction: column; align-items: stretch; gap: 12px; padding: 16px; }
+  .stats-backup .btn { text-align: center; }
+}
+
 .stats-today {
   display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; margin-bottom: 28px;
   border-block: 1px solid var(--line);
