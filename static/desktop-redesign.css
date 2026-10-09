@@ -356,3 +356,40 @@ html:not(.is-android-app) #desktopPlanModal:not(.hidden) {
 @media (prefers-reduced-motion: reduce) {
   .hub-progress-track span, .hub-plan-edit { transition: none; }
 }
+
+/* Word shelf is for collection management; plan editing belongs to the home desk. */
+html:not(.is-android-app) #booksGrid [data-home-action="plan"] { display: none !important; }
+
+/* Dashboard-style stat hierarchy: due reviews are actionable, accuracy is context. */
+@media (min-width: 721px) {
+  html:not(.is-android-app) .stats-today {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px; margin-top: 6px; margin-bottom: 28px; border: 0;
+  }
+  html:not(.is-android-app) .stats-today .today-cell {
+    padding: 19px 15px; border: 1px solid #ded6c8; border-radius: 11px;
+    background: #fffcf6;
+  }
+  html:not(.is-android-app) .stats-today .today-cell b { font-size: 29px; }
+  html:not(.is-android-app) .stats-today .today-cell:nth-child(2) {
+    border-color: #b9ccc0; background: #eaf1e9;
+  }
+  html:not(.is-android-app) .stats-today .today-cell:nth-child(2) b { color: #315a47; font-size: 34px; }
+  html:not(.is-android-app) .stats-panels .stats-panel {
+    border-radius: 14px; padding: 24px 25px;
+    background: #fffdfa; box-shadow: 0 3px 22px rgba(33,29,24,.055);
+  }
+}
+@media (min-width: 721px) and (max-width: 1040px) {
+  html:not(.is-android-app) .stats-today { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+html:not(.is-android-app) .chart-bars.is-empty {
+  position: relative;
+}
+html:not(.is-android-app) .chart-bars.is-empty::after {
+  content: '还没有这一阶段的学习记录，从今天开始写下第一笔。';
+  position: absolute; top: 37%; left: 50%; width: min(90%, 330px);
+  transform: translate(-50%, -50%);
+  color: #8c8070; font-size: 12px; line-height: 1.6; text-align: center;
+  pointer-events: none;
+}
