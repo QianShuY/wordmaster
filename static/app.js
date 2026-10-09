@@ -281,7 +281,7 @@ const DesktopJourney = {
           <article class="journey-card journey-week-card" aria-label="每日作答与最近七天学习记录">
             <div class="journey-card-head"><span>今日小目标</span><span>最近 7 天</span></div>
             <div class="journey-quest-main"><strong class="numeric">${completed}<small> / ${journey.dailyTarget}</small></strong>
-              <span>${journey.answeredToday >= journey.dailyTarget ? '今日作答目标达成 ✓' : '完成十次作答，解锁今日抽卡机会'}</span></div>
+              <span>${journey.drawnToday ? '今日卡牌已领取 ✓' : journey.answeredToday >= journey.dailyTarget ? '今日作答目标达成，可以去卡册抽卡' : '完成十次作答，解锁今日抽卡机会'}</span></div>
             <div class="journey-mini-track" role="progressbar" aria-label="每日作答目标进度" aria-valuenow="${completed}" aria-valuemin="0" aria-valuemax="${journey.dailyTarget}">
               <span style="width:${dailyPercent}%"></span></div>
             <ol class="journey-week-chart" aria-label="七日作答柱状图">${daysMarkup}</ol>
