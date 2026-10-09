@@ -16,9 +16,9 @@ test('desktop study desk has unique named controls and preserves the Android ori
   const essentials = [
     'todayBookSelect', 'todayContinue', 'todayTaskSummary', 'planModal', 'planDate',
     'desktopTodayHub', 'desktopTodayBookSelect', 'hubPlanTitle', 'hubPlanProgress',
-    'hubDueCount', 'hubNewProgress', 'hubStart', 'hubEditPlan', 'desktopHubRound',
+    'hubDueCount', 'hubNewProgress', 'hubStart', 'hubEditPlan', 'hubTotalNumber', 'hubRoutePreview',
     'desktopPlanModal', 'desktopPlanForm', 'desktopPlanDate', 'desktopPlanSave',
-    'desktopPlanRemove', 'desktopPlanAdvice',
+    'desktopPlanRemove', 'desktopPlanAdvice', 'desktopStatsBookSelect', 'desktopStatsScopeNote',
   ];
   for (const id of essentials) {
     assert.ok(ids.includes(id), `missing control #${id}`);
