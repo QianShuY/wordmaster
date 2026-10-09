@@ -1381,24 +1381,38 @@ const Mistakes = {
    ============================================================ */
 const Manage = {
   bookId: null, words: [], editingId: null,
+  page: 1, pages: 1, total: 0, pageSize: 40,
+  query: '', status: 'all', requestToken: 0, searchTimer: null,
 
   async open(bookId) {
     this.bookId = bookId;
+    this.page = 1; this.pages = 1; this.query = ''; this.status = 'all';
+    this.requestToken++;
+    clearTimeout(this.searchTimer);
     show('manage', 'books');
-    showPageLoading('正在加载词库…');
-    let books, words;
+    $('#desktopManageToolbar').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#desktopManageResult').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#desktopManagePages').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#manageSearch').value = '';
+    $('#manageStatus').value = 'all';
+    showPageLoading('正在打开词库…');
     try {
-      [books, words] = await Promise.all([api('/api/books'), api(`/api/books/${bookId}/words`)]);
-      clearPageStatus();
+      const books = await api('/api/books');
+      if (this.bookId !== bookId || (location.hash || '').split('?')[0] !== `#/book/${bookId}`) return;
+      const book = books.find(b => b.id === bookId);
+      if (!book) throw new Error('词库不存在');
+      $('#manageTitle').textContent = book.name;
+      if (IS_ANDROID_APP) {
+        this.words = await api(`/api/books/${bookId}/words`);
+        clearPageStatus();
+        this.renderTable();
+      } else {
+        await this.loadPage(1);
+      }
     } catch (error) {
-      showPageError(`词库暂时无法加载：${error.message}`, () => this.open(bookId));
-      return;
+      if (this.bookId === bookId) showPageError(`词库暂时无法加载：${error.message}`, () => this.open(bookId));
     }
-    const book = books.find(b => b.id === bookId);
-    $('#manageTitle').textContent = book ? book.name : '词库';
-    this.words = words;
-    this.renderTable();
-    $('#manageBack').onclick = () => { location.hash = '#/'; };
+    $('#manageBack').onclick = () => { location.hash = '#/books'; };
     $('#addWordBtn').onclick = () => this.openModal(null);
     $('#importBtn').onclick = () => {
       $('#importText').value = '';
@@ -1408,7 +1422,51 @@ const Manage = {
     };
   },
 
+  async loadPage(page = 1) {
+    if (IS_ANDROID_APP) return;
+    const token = ++this.requestToken;
+    const id = this.bookId;
+    const params = new URLSearchParams({
+      page: String(page), page_size: String(this.pageSize),
+      search: this.query, status: this.status,
+    });
+    $('#wordTableBody').setAttribute('aria-busy', 'true');
+    try {
+      const data = await api(`/api/desktop/books/${id}/words?${params}`);
+      if (token !== this.requestToken || this.bookId !== id) return;
+      this.words = data.items;
+      this.page = data.page;
+      this.pages = data.pages;
+      this.total = data.total;
+      this.renderTable();
+      this.renderPager();
+      clearPageStatus();
+    } catch (error) {
+      if (token === this.requestToken && this.bookId === id) {
+        showPageError(`查询词库失败：${error.message}`, () => this.loadPage(page));
+      }
+    } finally {
+      if (token === this.requestToken) $('#wordTableBody').removeAttribute('aria-busy');
+    }
+  },
+
+  renderPager() {
+    if (IS_ANDROID_APP) return;
+    const first = this.total ? (this.page - 1) * this.pageSize + 1 : 0;
+    const last = Math.min(this.page * this.pageSize, this.total);
+    $('#desktopManageResult').textContent =
+      `共匹配 ${this.total} 词 · 当前显示 ${first}–${last} · 每页 ${this.pageSize} 词`;
+    $('#managePageInfo').textContent = `第 ${this.page} / ${this.pages} 页`;
+    $('#managePrev').disabled = this.page <= 1;
+    $('#manageNext').disabled = this.page >= this.pages;
+  },
+
   renderTable() {
+    const empty = IS_ANDROID_APP
+      ? '词库为空，用右上角「批量导入」或「添加单词」开始录入'
+      : this.query || this.status !== 'all'
+        ? '没有符合条件的单词，可以尝试其他关键词或清除筛选'
+        : '词库为空，点击「添加单词」或「批量导入」开始';
     $('#wordTableBody').innerHTML = this.words.map(w => `
       <tr>
         <td class="w">${esc(wordHeadword(w))}<button class="speak-btn" data-speak="${esc(wordSpeech(w))}" aria-label="播放 ${esc(wordHeadword(w))} 的发音">${speakerIconMarkup}</button>${w.sense_label ? `<small class="word-sense-label">${esc(w.sense_label)}</small>` : ''}</td>
@@ -1417,15 +1475,17 @@ const Manage = {
         <td>${wordMeaningMarkup(w, 'table-word-meaning')}</td>
         <td class="ex">${esc(w.example)}</td>
         <td class="ops">
-          <button class="link-btn" onclick="Manage.openModal(${w.id})">编辑</button>
-          <button class="link-btn danger" onclick="Manage.remove(${w.id}, '${esc(wordHeadword(w))}')">删除</button>
+          <button class="link-btn" data-manage-action="edit" data-word-id="${w.id}">编辑</button>
+          <button class="link-btn danger" data-manage-action="delete" data-word-id="${w.id}">删除</button>
         </td>
-      </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">词库为空，用右上角「批量导入」或「添加单词」开始录入</td></tr>';
+      </tr>`).join('') || `<tr><td colspan="6" class="manage-empty">${esc(empty)}</td></tr>`;
   },
 
   openModal(id) {
+    const word = id ? this.words.find(x => x.id === id) : null;
+    if (id && !word) { toast('未找到当前单词，请刷新列表'); return; }
     this.editingId = id;
-    const w = id ? this.words.find(x => x.id === id) : {};
+    const w = word || {};
     $('#wordModalTitle').textContent = id ? '编辑单词' : '添加单词';
     $('#wfWord').value = w.word || '';
     $('#wfPhonetic').value = w.phonetic || '';
@@ -1437,13 +1497,56 @@ const Manage = {
   },
 
   async remove(id, word) {
-    if (!confirm(`删除单词「${word}」？`)) return;
-    await api(`/api/words/${id}`, { method: 'DELETE' });
-    toast('已删除');
-    this.words = this.words.filter(w => w.id !== id);
-    this.renderTable();
+    if (!confirm(`确定删除单词「${word}」？这会同时删除它的复习进度。`)) return;
+    try {
+      await api(`/api/words/${id}`, { method: 'DELETE' });
+      toast('已删除单词');
+      if (IS_ANDROID_APP) {
+        this.words = this.words.filter(w => w.id !== id);
+        this.renderTable();
+      } else {
+        await this.loadPage(this.page);
+      }
+    } catch (error) { toast(`删除失败：${error.message}`); }
   },
 };
+
+$('#wordTableBody').addEventListener('click', event => {
+  const button = event.target.closest('[data-manage-action]');
+  if (!button) return;
+  const id = Number(button.dataset.wordId);
+  const word = Manage.words.find(item => item.id === id);
+  if (!word) return;
+  if (button.dataset.manageAction === 'edit') Manage.openModal(id);
+  if (button.dataset.manageAction === 'delete') void Manage.remove(id, wordHeadword(word));
+});
+
+$('#manageSearch').addEventListener('input', event => {
+  if (IS_ANDROID_APP) return;
+  clearTimeout(Manage.searchTimer);
+  Manage.query = event.target.value.trim();
+  Manage.searchTimer = setTimeout(() => void Manage.loadPage(1), 260);
+});
+$('#manageStatus').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  Manage.status = event.target.value;
+  clearTimeout(Manage.searchTimer);
+  void Manage.loadPage(1);
+});
+$('#manageReset').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  $('#manageSearch').value = '';
+  $('#manageStatus').value = 'all';
+  Manage.query = ''; Manage.status = 'all';
+  clearTimeout(Manage.searchTimer);
+  void Manage.loadPage(1);
+});
+$('#managePrev').addEventListener('click', () => {
+  if (!IS_ANDROID_APP && Manage.page > 1) void Manage.loadPage(Manage.page - 1);
+});
+$('#manageNext').addEventListener('click', () => {
+  if (!IS_ANDROID_APP && Manage.page < Manage.pages) void Manage.loadPage(Manage.page + 1);
+});
 
 $('#wordModalCancel').addEventListener('click', () => $('#wordModal').classList.add('hidden'));
 $('#wordModal').addEventListener('click', (e) => { if (e.target.id === 'wordModal') $('#wordModal').classList.add('hidden'); });
@@ -1456,15 +1559,18 @@ $('#wordForm').addEventListener('submit', async (e) => {
   try {
     if (Manage.editingId) {
       await api(`/api/words/${Manage.editingId}`, { method: 'PUT', body });
-      Object.assign(Manage.words.find(w => w.id === Manage.editingId), body);
+      if (IS_ANDROID_APP) Object.assign(Manage.words.find(w => w.id === Manage.editingId), body);
     } else {
-      const r = await api('/api/words', { method: 'POST', body: { ...body, book_id: Manage.bookId } });
-      Manage.words.push({ id: r.id, ...body });
-      Manage.words.sort((a, b) => a.word.localeCompare(b.word));
+      const result = await api('/api/words', { method: 'POST', body: { ...body, book_id: Manage.bookId } });
+      if (IS_ANDROID_APP) {
+        Manage.words.push({ id: result.id, ...body });
+        Manage.words.sort((a, b) => a.word.localeCompare(b.word));
+      }
     }
     $('#wordModal').classList.add('hidden');
-    Manage.renderTable();
     toast('已保存');
+    if (IS_ANDROID_APP) Manage.renderTable();
+    else await Manage.loadPage(Manage.page);
   } catch (err) { toast(err.message); }
 });
 
@@ -1482,8 +1588,14 @@ $('#importForm').addEventListener('submit', async (e) => {
     if (r.bad_total) msg += ` · ${r.bad_total} 行无法识别${r.bad.length ? '：' + r.bad.join('；') : ''}`;
     $('#importResult').textContent = msg;
     toast(`导入完成：${r.added} 词`);
-    if (r.added) Manage.words = await api(`/api/books/${Manage.bookId}/words`);
-    Manage.renderTable();
+    if (r.added) {
+      if (IS_ANDROID_APP) {
+        Manage.words = await api(`/api/books/${Manage.bookId}/words`);
+        Manage.renderTable();
+      } else {
+        await Manage.loadPage(1);
+      }
+    }
   } catch (err) { toast(err.message); }
 });
 
