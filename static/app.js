@@ -317,7 +317,7 @@ const Home = {
       clearPageStatus();
       this.books = books;
       this.renderStats(stats);
-      this.renderToday(books, stats);
+      this.renderToday(books, stats, mistakes.length);
       this.renderBooks(books, mistakes.length);
       if (section === 'today') void DesktopJourney.render();
     } catch (error) {
@@ -325,7 +325,7 @@ const Home = {
     }
   },
 
-  renderToday(books, stats) {
+  renderToday(books, stats, mistakeCount = 0) {
     const select = $('#todayBookSelect');
     const usable = books.filter(book => book.word_count > 0);
     const stored = Number(localStorage.getItem('wordmaster_selected_book') || 0);
@@ -344,6 +344,14 @@ const Home = {
     $('#todayTaskSummary').innerHTML = `
       <div class="today-task"><span class="today-task-label">待复习</span><span class="today-task-value"><span class="numeric">${due}</span><small>词</small></span></div>
       <div class="today-task"><span class="today-task-label">今日新词</span><span class="today-task-value"><span class="numeric">${newDone}</span><small class="numeric task-target">/ ${newQuota}</small></span></div>`;
+
+    const quickMistakes = $('#todayQuickMistakes');
+    const showMistakes = !IS_ANDROID_APP && mistakeCount > 0;
+    quickMistakes.classList.toggle('hidden', !showMistakes);
+    if (showMistakes) {
+      quickMistakes.textContent = `↗ 回炉 ${mistakeCount} 个错题`;
+      quickMistakes.onclick = () => { location.hash = '#/mistakes-study/spelling'; };
+    }
 
     const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
       && !sessionStorage.getItem('wordmaster_onboarding_started')
