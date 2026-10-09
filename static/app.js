@@ -340,6 +340,267 @@ $('#desktopRoundSize').addEventListener('change', event => {
   }
 });
 
+/* ============================================================
+   Desktop V1.2: the home is a learning command center, not a
+   second plan menu. Android keeps the existing Today workflow.
+   ============================================================ */
+const DesktopHub = {
+  render(books, chosenBook, mistakeCount) {
+    if (IS_ANDROID_APP) return;
+    const select = $('#desktopTodayBookSelect');
+    select.innerHTML = books.length
+      ? books.map(book => `<option value="${book.id}">${esc(book.name)}${book.word_count ? '' : ' · 空词库'}</option>`).join('')
+      : '<option value="">请先创建词库</option>';
+    select.value = chosenBook ? String(chosenBook.id) : '';
+    select.disabled = books.length === 0;
+
+    const d = new Date();
+    $('#desktopHubDate').textContent = `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+    $('#desktopHubRound').value = String(desktopRoundSize());
+    $('#hubEditPlan').disabled = !chosenBook;
+
+    if (!chosenBook) {
+      $('#hubPlanStatus').textContent = '尚无可学习词库';
+      $('#hubPlanTitle').textContent = '先为自己准备一本词库';
+      $('#hubPlanSubtitle').textContent = '添加单词后就能制定长期计划，并开始当天的学习。';
+      $('#hubRemaining').textContent = '0';
+      $('#hubDays').textContent = '—';
+      $('#hubQuota').textContent = '—';
+      $('#hubPlanFootnote').textContent = '学习计划会跟随所选词库。';
+      $('#hubActionSummary').textContent = '词库中有单词后，会显示到期复习和今日新词。';
+      $('#hubDueCount').innerHTML = '0 <small>词</small>';
+      $('#hubNewProgress').textContent = '0 / 0';
+      $('#hubStart').disabled = false;
+      $('#hubStart').innerHTML = '去管理词库 <span aria-hidden="true">→</span>';
+      $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
+      $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
+      this.progress(0);
+      return;
+    }
+
+    const book = chosenBook;
+    const plan = book.plan || {};
+    const total = Math.max(0, Number(book.word_count) || 0);
+    const remaining = Math.max(0, Number(plan.remaining_new) || 0);
+    const started = Math.max(0, total - remaining);
+    const pct = total ? Math.min(100, Math.round(started / total * 100)) : 0;
+    const due = Math.max(0, Number(book.due_review) || 0);
+    const quota = Math.max(0, Number(plan.daily_quota) || 0);
+    const learned = Math.max(0, Number(book.new_today) || 0);
+    const upcoming = Math.max(0, quota - learned);
+    const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
+      && !sessionStorage.getItem('wordmaster_onboarding_started')
+      && Home.stats && !Home.stats.mastered && !Home.stats.total_correct && !Home.stats.total_wrong;
+
+    $('#hubPlanStatus').textContent = plan.active ? '计划进行中' : '尚未设定目标';
+    $('#hubPlanTitle').textContent = remaining === 0 && total
+      ? '新词已全部开始学习'
+      : plan.active ? `向 ${plan.target_date} 的目标稳步前进` : '给这本词库一个完成日期';
+    $('#hubPlanSubtitle').textContent = remaining === 0 && total
+      ? '词库已完成新词初学，继续通过到期复习巩固掌握。'
+      : plan.active
+        ? `目标日 ${plan.target_date} · 每日新词按剩余任务动态调整，不必一次学完。`
+        : '设定一个目标日期，系统会根据剩余新词自动计算每日安排。';
+    $('#hubRemaining').textContent = String(remaining);
+    $('#hubDays').textContent = plan.active ? String(plan.days_left) : '—';
+    $('#hubQuota').textContent = String(quota);
+    $('#hubPlanFootnote').textContent = `共 ${total} 词 · 已开始学习 ${started} 词 · 已掌握 ${Number(book.mastered) || 0} 词`;
+    $('#hubEditPlan').innerHTML = `${plan.active ? '调整学习计划' : '制定学习计划'} <span aria-hidden="true">↗</span>`;
+    this.progress(pct);
+
+    $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
+    $('#hubNewProgress').textContent = `${learned} / ${quota}`;
+    const hasTask = due > 0 || upcoming > 0;
+    $('#hubActionSummary').textContent = due > 0
+      ? `先复习 ${due} 个到期词，再按自己的节奏学习新词。`
+      : upcoming > 0
+        ? `今天还可开始学习 ${upcoming} 个新词，之后由复习系统接力。`
+        : '这本词库的今日安排已完成，可以换一本词库或查看学习成果。';
+    $('#hubStart').disabled = !hasTask;
+    $('#hubStart').innerHTML = firstRun && hasTask
+      ? '开始 3 词体验 <span aria-hidden="true">→</span>'
+      : hasTask
+        ? '开始今日学习 <span aria-hidden="true">→</span>'
+        : '今日任务已完成 ✓';
+    $('#hubActionHelp').textContent = due > 0
+      ? `本轮最多 ${desktopRoundSize()} 词，完成后可接着学习。`
+      : '先认识新词，再用默写确认是否真正记住。';
+    $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
+    $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
+  },
+
+  progress(pct) {
+    $('#hubPlanPercent').textContent = `${pct}%`;
+    $('#hubPlanProgress').setAttribute('aria-valuenow', String(pct));
+    $('#hubPlanProgressFill').style.width = `${pct}%`;
+  },
+};
+
+const DesktopPlan = {
+  book: null,
+  opener: null,
+  busy: false,
+
+  open(book) {
+    if (IS_ANDROID_APP) return;
+    this.book = book;
+    this.opener = document.activeElement;
+    const plan = book.plan || {};
+    $('#desktopPlanBookName').textContent = book.name;
+    $('#desktopPlanTotal').textContent = String(book.word_count || 0);
+    $('#desktopPlanUnseen').textContent = String(plan.remaining_new || 0);
+    $('#desktopPlanMastered').textContent = String(book.mastered || 0);
+    $('#desktopPlanDate').value = plan.active ? (plan.target_date || '') : '';
+    $('#desktopPlanDate').min = Domain.localDayKey(new Date());
+    $('#desktopPlanRemove').disabled = !plan.active;
+    $('#desktopPlanModal').classList.remove('hidden');
+    this.preview();
+    $('#desktopPlanDate').focus();
+  },
+
+  close() {
+    $('#desktopPlanModal').classList.add('hidden');
+    const previous = this.opener;
+    this.opener = null;
+    this.book = null;
+    previous?.focus?.();
+  },
+
+  preview() {
+    if (!this.book) return;
+    const date = $('#desktopPlanDate').value;
+    const left = Math.max(0, Number(this.book.plan?.remaining_new) || 0);
+    const valid = /^\d{4}-\d{2}-\d{2}$/.test(date) && date >= Domain.localDayKey(new Date());
+    const save = $('#desktopPlanSave');
+    const advice = $('#desktopPlanAdvice');
+    const presetButtons = document.querySelectorAll('#desktopPlanModal [data-plan-days]');
+    presetButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+    if (!valid) {
+      $('#desktopPlanDaily').textContent = '—';
+      $('#desktopPlanDays').textContent = '—';
+      $('#desktopPlanDeadline').textContent = date || '未设置';
+      advice.textContent = date ? '请选择今天或之后的有效日期。' : '选择目标日期，即可预览每日新词安排。';
+      advice.classList.toggle('is-warning', Boolean(date));
+      save.disabled = true;
+      return;
+    }
+    try {
+      const plan = Domain.calculatePlan({ remainingNew: left, planActive: true, targetDate: date });
+      const required = Math.ceil(left / plan.days_left);
+      $('#desktopPlanDaily').textContent = String(plan.daily_quota);
+      $('#desktopPlanDays').textContent = `${plan.days_left} 天`;
+      $('#desktopPlanDeadline').textContent = date;
+      const overload = required > 200;
+      advice.classList.toggle('is-warning', overload);
+      advice.textContent = overload
+        ? `目标过紧：每日需 ${required} 词，超过系统每日 200 词的上限。请延后日期。`
+        : left === 0 ? '新词已完成初学。保留目标也不会影响复习，建议以巩固掌握为主。'
+        : required > 60 ? '挑战强度较高，建议留出额外时间做复习，可考虑延后目标日期。'
+        : required > 25 ? '节奏偏紧凑，建议每天预留时间完成到期复习。'
+        : '学习节奏比较从容，系统仍会优先安排到期复习。';
+      save.disabled = overload || this.busy;
+    } catch (error) {
+      save.disabled = true;
+      advice.classList.add('is-warning');
+      advice.textContent = '日期无效，请重新选择。';
+    }
+  },
+
+  async save() {
+    if (!this.book || this.busy || $('#desktopPlanSave').disabled) return;
+    this.busy = true;
+    $('#desktopPlanSave').disabled = true;
+    try {
+      const res = await api(`/api/books/${this.book.id}/plan`, {
+        method: 'PUT', body: { target_date: $('#desktopPlanDate').value },
+      });
+      this.close();
+      toast(`计划已保存：每天约 ${res.plan.daily_quota} 个新词`);
+      await Home.render(Home.section);
+    } catch (error) {
+      toast(`保存计划失败：${error.message}`);
+    } finally {
+      this.busy = false;
+      if (this.book) this.preview();
+    }
+  },
+
+  async remove() {
+    if (!this.book || this.busy || !this.book.plan?.active) return;
+    if (!confirm('移除这本词库的完成日期？学习记录和复习进度会保留。')) return;
+    this.busy = true;
+    try {
+      await api(`/api/books/${this.book.id}/plan`, { method: 'DELETE' });
+      this.close();
+      toast('已移除目标日期，学习记录仍然保留');
+      await Home.render(Home.section);
+    } catch (error) {
+      toast(`调整学习计划失败：${error.message}`);
+    } finally { this.busy = false; }
+  },
+};
+
+$('#desktopTodayBookSelect').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  $('#todayBookSelect').value = event.target.value;
+  $('#todayBookSelect').dispatchEvent(new Event('change'));
+});
+$('#hubStart').addEventListener('click', () => {
+  if (!IS_ANDROID_APP) $('#todayContinue').click();
+});
+$('#hubEditPlan').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  const book = Home.books.find(item => item.id === Home.selectedBookId);
+  if (book) DesktopPlan.open(book);
+});
+$('#hubMistakes').addEventListener('click', () => {
+  if (!IS_ANDROID_APP) location.hash = '#/mistakes-study/spelling';
+});
+$('#desktopHubRound').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  $('#desktopRoundSize').value = event.target.value;
+  $('#desktopRoundSize').dispatchEvent(new Event('change'));
+});
+$('#desktopPlanDate').addEventListener('input', () => DesktopPlan.preview());
+document.querySelectorAll('#desktopPlanModal [data-plan-days]').forEach(button => {
+  button.addEventListener('click', () => {
+    const days = Number(button.dataset.planDays);
+    const d = new Date();
+    d.setDate(d.getDate() + days - 1);
+    $('#desktopPlanDate').value = Domain.localDayKey(d);
+    document.querySelectorAll('#desktopPlanModal [data-plan-days]').forEach(other =>
+      other.setAttribute('aria-pressed', String(other === button)));
+    DesktopPlan.preview();
+    button.setAttribute('aria-pressed', 'true');
+  });
+});
+$('#desktopPlanForm').addEventListener('submit', event => {
+  event.preventDefault();
+  void DesktopPlan.save();
+});
+$('#desktopPlanRemove').addEventListener('click', () => void DesktopPlan.remove());
+$('#desktopPlanClose').addEventListener('click', () => DesktopPlan.close());
+$('#desktopPlanCancel').addEventListener('click', () => DesktopPlan.close());
+$('#desktopPlanModal').addEventListener('click', event => {
+  if (event.target.id === 'desktopPlanModal') DesktopPlan.close();
+});
+document.addEventListener('keydown', event => {
+  if (IS_ANDROID_APP || $('#desktopPlanModal').classList.contains('hidden')) return;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    DesktopPlan.close();
+  } else if (event.key === 'Tab') {
+    const items = [...$('#desktopPlanModal').querySelectorAll('button:not(:disabled), input:not(:disabled)')];
+    if (!items.length) return;
+    const first = items[0], last = items.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  }
+});
+
 const Home = {
   section: 'today',
   books: [],
