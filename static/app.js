@@ -387,7 +387,7 @@ const DesktopHub = {
     const due = Math.max(0, Number(book.due_review) || 0);
     const quota = Math.max(0, Number(plan.daily_quota) || 0);
     const learned = Math.max(0, Number(book.new_today) || 0);
-    const upcoming = Math.max(0, quota - learned);
+    const upcoming = Math.min(remaining, Math.max(0, quota - learned));
     const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
       && !sessionStorage.getItem('wordmaster_onboarding_started')
       && Home.stats && !Home.stats.mastered && !Home.stats.total_correct && !Home.stats.total_wrong;
@@ -403,13 +403,13 @@ const DesktopHub = {
         : '设定一个目标日期，系统会根据剩余新词自动计算每日安排。';
     $('#hubRemaining').textContent = String(remaining);
     $('#hubDays').textContent = plan.active ? String(plan.days_left) : '—';
-    $('#hubQuota').textContent = String(quota);
+    $('#hubQuota').textContent = String(remaining ? quota : 0);
     $('#hubPlanFootnote').textContent = `共 ${total} 词 · 已开始学习 ${started} 词 · 已掌握 ${Number(book.mastered) || 0} 词`;
     $('#hubEditPlan').innerHTML = `${plan.active ? '调整学习计划' : '制定学习计划'} <span aria-hidden="true">↗</span>`;
     this.progress(pct);
 
     $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
-    $('#hubNewProgress').textContent = `${learned} / ${quota}`;
+    $('#hubNewProgress').textContent = `${learned} / ${Math.min(quota, learned + remaining)}`;
     const hasTask = due > 0 || upcoming > 0;
     $('#hubActionSummary').textContent = due > 0
       ? `先复习 ${due} 个到期词，再按自己的节奏学习新词。`
@@ -678,7 +678,11 @@ const Home = {
       }
       this.selectedBookId = book.id;
       localStorage.setItem('wordmaster_selected_book', String(book.id));
-      const remaining = Math.max(0, Number(book.plan?.daily_quota || 0) - Number(book.new_today || 0));
+      const dailyRemaining = Math.max(0, Number(book.plan?.daily_quota || 0) - Number(book.new_today || 0));
+      // Desktop: a plan can have a default daily quota even after all words
+      // have been introduced. Do not advertise a task with an empty queue.
+      const remaining = IS_ANDROID_APP ? dailyRemaining
+        : Math.min(dailyRemaining, Math.max(0, Number(book.plan?.remaining_new) || 0));
       const mode = book.due_review > 0 ? 'meaning' : 'learn';
       const hasTask = book.due_review > 0 || remaining > 0;
       const button = $('#todayContinue');
