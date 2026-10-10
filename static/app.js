@@ -5,6 +5,7 @@
 
 const $ = (sel) => document.querySelector(sel);
 const Domain = window.WordMasterDomain;
+const DesktopCheckpoint = window.WordMasterDesktopCheckpoint;
 const makeRequestId = () => window.crypto?.randomUUID?.()
   || `attempt-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 const GUIDED_SPELLING_KEY = 'wordmaster_guided_spelling';
@@ -157,8 +158,33 @@ function choiceMeaningMarkup(choice, word) {
    路由
    ============================================================ */
 const views = { home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards') };
+const DESKTOP_FOCUS_KEY = 'wordmaster_desktop_focus';
+function syncDesktopFocus(viewName) {
+  const enabled = !IS_ANDROID_APP && viewName === 'study' && localStorage.getItem(DESKTOP_FOCUS_KEY) === '1';
+  document.body.classList.toggle('desktop-focus-study', enabled);
+  const toggle = $('#studyFocusToggle');
+  if (toggle) {
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.textContent = enabled ? '◉ 退出专注' : '◉ 专注';
+    toggle.title = enabled ? '退出专注模式（Esc）' : '隐藏导航与装饰，让注意力回到题目';
+  }
+}
+
+$('#studyFocusToggle').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  localStorage.setItem(DESKTOP_FOCUS_KEY, document.body.classList.contains('desktop-focus-study') ? '0' : '1');
+  syncDesktopFocus('study');
+});
+document.addEventListener('keydown', event => {
+  if (IS_ANDROID_APP || event.key !== 'Escape' || !document.body.classList.contains('desktop-focus-study')) return;
+  if (document.querySelector('.modal-mask:not(.hidden)')) return;
+  localStorage.setItem(DESKTOP_FOCUS_KEY, '0');
+  syncDesktopFocus('study');
+});
+
 function show(name, navName = name) {
   clearPageStatus();
+  syncDesktopFocus(name);
   Object.values(views).forEach(v => v.classList.add('hidden'));
   views[name].classList.remove('hidden');
   document.body.classList.toggle('is-studying', name === 'study');
@@ -174,11 +200,14 @@ function show(name, navName = name) {
 function route() {
   const hash = location.hash || '#/';
   const studyM = hash.match(/^#\/study\/(\d+)\/(\w+)/);
+  const todayStudyM = !IS_ANDROID_APP && hash.match(/^#\/today-study\/(\d+)$/);
   const guidedM = hash.match(/^#\/guided-spelling\/(\d+)/);
   const manageM = hash.match(/^#\/book\/(\d+)/);
   const mStudy = hash.match(/^#\/mistakes-study\/(\w+)/);
+  Study.runToken++;
   Study.leave();
-  if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
+  if (todayStudyM) Study.startToday(Number(todayStudyM[1]));
+  else if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
   else if (studyM) {
     const query = new URLSearchParams(hash.split('?')[1] || '');
     Study.start(Number(studyM[1]), studyM[2], {
@@ -231,32 +260,419 @@ const MODES = [
   { key: 'pos', name: '词性判断' },
 ];
 
+// Desktop-only journey panel, derived from saved work rather than fake rewards.
+// Keep this module out of Android's Capacitor API until its native store is ready.
+const DesktopJourney = {
+  async render() {
+    if (IS_ANDROID_APP) return;
+    const host = $('#desktopJourney');
+    if (!host) return;
+    try {
+      const journey = await api('/api/desktop/journey');
+      if (Home.section !== 'today' || location.hash === '#/books') return;
+      const level = journey.level;
+      const progress = level.required ? Math.round(level.current / level.required * 100) : 0;
+      const last7 = journey.last7 || [];
+      const scale = Math.max(10, ...last7.map(day => day.count));
+      const daysMarkup = last7.map(day => {
+        const size = day.count ? Math.max(10, Math.round(day.count / scale * 100)) : 3;
+        const date = day.day.slice(5);
+        return `<li class="journey-day ${day.isToday ? 'today' : ''}" aria-label="${esc(day.day)}，作答 ${day.count} 次">
+          <span class="journey-bar-frame"><span class="journey-bar" style="height:${size}%"></span></span>
+          <span class="journey-day-label numeric">${esc(date)}</span>
+        </li>`;
+      }).join('');
+      const stampsMarkup = (journey.stamps || []).map(stamp => `<li class="journey-stamp ${stamp.unlocked ? 'unlocked' : 'locked'}"
+        aria-label="${esc(stamp.title)}：${stamp.unlocked ? '已获得' : '尚未获得'}">
+          <span class="journey-stamp-seal" aria-hidden="true">${stamp.unlocked ? '印' : '·'}</span>
+          <span class="journey-stamp-copy"><b>${esc(stamp.title)}</b><small>${esc(stamp.description)}</small></span>
+          <span class="journey-stamp-count numeric">${stamp.unlocked ? '已获得' : `${stamp.progress}/${stamp.target}`}</span>
+        </li>`).join('');
+      const completed = Math.min(journey.answeredToday, journey.dailyTarget);
+      const dailyPercent = Math.min(100, Math.round(completed / journey.dailyTarget * 100));
+      host.innerHTML = `
+        <div class="journey-section-head">
+          <div><p class="hero-kicker">MAKE PROGRESS VISIBLE</p>
+            <h2>学习旅程 <span class="journey-subtitle">一步一印，积少成多</span></h2>
+          </div>
+          <span class="journey-streak">✦ 连续学习 <b class="numeric">${journey.streak}</b> 天</span>
+        </div>
+        <div class="journey-grid">
+          <article class="journey-card journey-level-card" aria-label="学习等级与经验值">
+            <div class="journey-card-head"><span>墨阶 · LEVEL</span><span>累计作答 <b class="numeric">${journey.attempts}</b> 次</span></div>
+            <div class="journey-level-main"><span class="journey-level-number numeric">${level.level}</span>
+              <div><strong>继续积累</strong><p>答对就能获得墨点，回炉答对也算进步。</p></div></div>
+            <div class="journey-track" role="progressbar" aria-label="当前等级墨点进度" aria-valuenow="${level.current}" aria-valuemin="0" aria-valuemax="${level.required}">
+              <span style="width:${progress}%"></span></div>
+            <div class="journey-track-caption"><span class="numeric">${level.xp} 墨点（XP）</span>
+              <span class="numeric">距下一级 ${level.required - level.current} 点</span></div>
+          </article>
+          <article class="journey-card journey-week-card" aria-label="每日作答与最近七天学习记录">
+            <div class="journey-card-head"><span>今日小目标</span><span>最近 7 天</span></div>
+            <div class="journey-quest-main"><strong class="numeric">${completed}<small> / ${journey.dailyTarget}</small></strong>
+              <span>${journey.drawnToday ? '今日卡牌已领取 ✓' : journey.answeredToday >= journey.dailyTarget ? '今日作答目标达成，可以去卡册抽卡' : '完成十次作答，解锁今日抽卡机会'}</span></div>
+            <div class="journey-mini-track" role="progressbar" aria-label="每日作答目标进度" aria-valuenow="${completed}" aria-valuemin="0" aria-valuemax="${journey.dailyTarget}">
+              <span style="width:${dailyPercent}%"></span></div>
+            <ol class="journey-week-chart" aria-label="七日作答柱状图">${daysMarkup}</ol>
+          </article>
+        </div>
+        <div class="journey-collection-head"><h3>成长印记</h3><p>${journey.unlockedCount} / ${journey.stamps.length} 已获得 · 记录你的真实学习进步</p></div>
+        <ul class="journey-stamps">${stampsMarkup}</ul>
+        <p class="journey-disclaimer">墨点和印记仅记录学习过程，不改变单词复习间隔；复习安排仍以到期记录为准。</p>
+      `;
+      host.classList.remove('hidden');
+    } catch (error) {
+      // Learning should never become unusable because a secondary dashboard failed.
+      console.warn('学习旅程暂不可用:', error.message);
+      host.classList.add('hidden');
+    }
+  },
+};
+
+const DESKTOP_ROUND_KEY = 'wordmaster_desktop_round_size';
+function desktopRoundSize() {
+  const stored = Number(localStorage.getItem(DESKTOP_ROUND_KEY) || 20);
+  return [10, 20, 40].includes(stored) ? stored : 20;
+}
+$('#desktopRoundSize').value = String(desktopRoundSize());
+$('#desktopRoundSize').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  const chosen = Number(event.target.value);
+  if ([10, 20, 40].includes(chosen)) {
+    localStorage.setItem(DESKTOP_ROUND_KEY, String(chosen));
+    if (Home.section === 'today' && Home.stats) Home.renderToday(Home.books, Home.stats, Home.mistakeCount);
+  }
+});
+
+/* ============================================================
+   Desktop V1.2: the home is a learning command center, not a
+   second plan menu. Android keeps the existing Today workflow.
+   ============================================================ */
+const DesktopHub = {
+  render(books, chosenBook, mistakeCount) {
+    if (IS_ANDROID_APP) return;
+    const select = $('#desktopTodayBookSelect');
+    select.innerHTML = books.length
+      ? books.map(book => `<option value="${book.id}">${esc(book.name)}${book.word_count ? '' : ' · 空词库'}</option>`).join('')
+      : '<option value="">请先创建词库</option>';
+    select.value = chosenBook ? String(chosenBook.id) : '';
+    select.disabled = books.length === 0;
+
+    const d = new Date();
+    $('#desktopHubDate').textContent = `${d.getFullYear()} 年 ${d.getMonth() + 1} 月 ${d.getDate()} 日`;
+    $('#hubEditPlan').disabled = !chosenBook;
+
+    if (!chosenBook) {
+      $('#hubPlanStatus').textContent = '尚无可学习词库';
+      $('#hubPlanTitle').textContent = '先为自己准备一本词库';
+      $('#hubPlanSubtitle').textContent = '添加单词后就能制定长期计划，并开始当天的学习。';
+      $('#hubRemaining').textContent = '0';
+      $('#hubDays').textContent = '—';
+      $('#hubQuota').textContent = '—';
+      $('#hubPlanFootnote').textContent = '学习计划会跟随所选词库。';
+      $('#hubActionSummary').textContent = '词库中有单词后，会显示到期复习和今日新词。';
+      $('#hubDueCount').innerHTML = '0 <small>词</small>';
+      $('#hubNewProgress').textContent = '0 / 0';
+      $('#hubTotalNumber').innerHTML = '0 <small>词</small>';
+      $('#hubRoutePreview').textContent = '先选择一本有单词的词库，便可开始今日任务。';
+      $('#hubResumeNote').classList.add('hidden');
+      $('#hubStart').disabled = false;
+      $('#hubStart').innerHTML = '去管理词库 <span aria-hidden="true">→</span>';
+      $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
+      $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
+      this.progress(0);
+      return;
+    }
+
+    const book = chosenBook;
+    const plan = book.plan || {};
+    const total = Math.max(0, Number(book.word_count) || 0);
+    const remaining = Math.max(0, Number(plan.remaining_new) || 0);
+    const started = Math.max(0, total - remaining);
+    const pct = total ? Math.min(100, Math.round(started / total * 100)) : 0;
+    const due = Math.max(0, Number(book.due_review) || 0);
+    const quota = Math.max(0, Number(plan.daily_quota) || 0);
+    const learned = Math.max(0, Number(book.new_today) || 0);
+    const upcoming = Math.min(remaining, Math.max(0, quota - learned));
+    const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
+      && !sessionStorage.getItem('wordmaster_onboarding_started')
+      && Home.stats && !Home.stats.mastered && !Home.stats.total_correct && !Home.stats.total_wrong;
+
+    $('#hubPlanStatus').textContent = plan.active ? '计划进行中' : '尚未设定目标';
+    $('#hubPlanTitle').textContent = remaining === 0 && total
+      ? '新词已全部开始学习'
+      : plan.active ? `向 ${plan.target_date} 的目标稳步前进` : '给这本词库一个完成日期';
+    $('#hubPlanSubtitle').textContent = remaining === 0 && total
+      ? '词库已完成新词初学，继续通过到期复习巩固掌握。'
+      : plan.active
+        ? `目标日 ${plan.target_date} · 每日新词按剩余任务动态调整，不必一次学完。`
+        : '设定一个目标日期，系统会根据剩余新词自动计算每日安排。';
+    $('#hubRemaining').textContent = String(remaining);
+    $('#hubDays').textContent = plan.active ? String(plan.days_left) : '—';
+    $('#hubQuota').textContent = String(remaining ? quota : 0);
+    $('#hubPlanFootnote').textContent = `共 ${total} 词 · 已开始学习 ${started} 词 · 已掌握 ${Number(book.mastered) || 0} 词`;
+    $('#hubEditPlan').innerHTML = `${plan.active ? '调整学习计划' : '制定学习计划'} <span aria-hidden="true">↗</span>`;
+    this.progress(pct);
+
+    $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
+    const effectiveNewTarget = Math.max(learned, Math.min(quota, learned + remaining));
+    $('#hubNewProgress').textContent = `${learned} / ${effectiveNewTarget}`;
+    $('#hubTotalNumber').innerHTML = `${due + upcoming} <small>词</small>`;
+    $('#hubRoutePreview').textContent = due && upcoming
+      ? `复习 ${due} 词 → 学习 ${upcoming} 新词 → 巩固默写`
+      : due ? `完成全部 ${due} 个到期复习词`
+      : upcoming ? `学习 ${upcoming} 个新词 → 巩固默写`
+      : '当前词库的今日任务已全部完成。';
+    const hasTask = due > 0 || upcoming > 0;
+    $('#hubActionSummary').textContent = due > 0
+      ? `今天需要复习 ${due} 个到期词${upcoming ? `，并学习 ${upcoming} 个新词` : ''}。按顺序一次走完。`
+      : upcoming > 0
+        ? `今天还可开始学习 ${upcoming} 个新词，之后由复习系统接力。`
+        : '这本词库的今日安排已完成，可以换一本词库或查看学习成果。';
+    $('#hubStart').disabled = !hasTask;
+    $('#hubStart').innerHTML = firstRun && hasTask
+      ? '开始 3 词体验 <span aria-hidden="true">→</span>'
+      : hasTask
+        ? '开始今日学习 <span aria-hidden="true">→</span>'
+        : '今日任务已完成 ✓';
+    $('#hubActionHelp').textContent = due > 0 && upcoming > 0
+      ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
+      : due > 0 ? '今天到期的复习会全部优先安排。'
+      : '先认识新词，再用默写确认是否真正记住。';
+    const checkpoint = DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey(), Home.instanceId);
+    const resume = $('#hubResumeNote');
+    resume.classList.toggle('hidden', !checkpoint);
+    if (checkpoint) {
+      const progress = DesktopCheckpoint.progress(checkpoint);
+      const stageNames = { review: '到期复习', learn: '新词学习', spelling: '巩固默写' };
+      const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
+      const remainingDue = Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
+      const remainingNew = Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
+      // Live SQLite counts can include newly introduced (now instantly due)
+      // words. While resuming, present the *same* original task manifest.
+      $('#hubDueCount').innerHTML = `${remainingDue} <small>词</small>`;
+      $('#hubNewProgress').textContent = `${checkpoint.flow.learnTotal - remainingNew} / ${checkpoint.flow.learnTotal}`;
+      $('#hubTotalNumber').innerHTML = `${remainingDue + remainingNew} <small>词</small>`;
+      $('#hubRoutePreview').textContent = remainingDue + remainingNew
+        ? `本日任务共 ${progress.expected} 词，已有 ${progress.achieved} 词完成 · 继续 ${stageNames[checkpoint.stage]}`
+        : '新词和复习已做完，继续完成最后的巩固。';
+      // A word that failed and is waiting to be retried stays in the
+      // checkpoint queue even if live "due" counts temporarily differ.
+      $('#hubActionSummary').textContent =
+        `接续上次的任务：还需完成 ${remainingDue} 个复习词（含待回炉词）和 ${remainingNew} 个新词。实时到期数可能与本次队列不同。`;
+      resume.textContent = `✓ 学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
+      $('#hubStart').disabled = false;
+      $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;
+      $('#hubActionHelp').textContent = '退出后仍然保留本次任务和未完成的题目，点击继续即可接上。';
+    }
+    $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
+    $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
+  },
+
+  progress(pct) {
+    $('#hubPlanPercent').textContent = `${pct}%`;
+    $('#hubPlanProgress').setAttribute('aria-valuenow', String(pct));
+    $('#hubPlanProgressFill').style.width = `${pct}%`;
+  },
+};
+
+const DesktopPlan = {
+  book: null,
+  opener: null,
+  busy: false,
+
+  open(book) {
+    if (IS_ANDROID_APP) return;
+    this.book = book;
+    this.opener = document.activeElement;
+    const plan = book.plan || {};
+    $('#desktopPlanBookName').textContent = book.name;
+    $('#desktopPlanTotal').textContent = String(book.word_count || 0);
+    $('#desktopPlanUnseen').textContent = String(plan.remaining_new || 0);
+    $('#desktopPlanMastered').textContent = String(book.mastered || 0);
+    $('#desktopPlanDate').value = plan.active ? (plan.target_date || '') : '';
+    $('#desktopPlanDate').min = Domain.localDayKey(new Date());
+    $('#desktopPlanRemove').disabled = !plan.active;
+    $('#desktopPlanModal').classList.remove('hidden');
+    this.preview();
+    $('#desktopPlanDate').focus();
+  },
+
+  close() {
+    $('#desktopPlanModal').classList.add('hidden');
+    const previous = this.opener;
+    this.opener = null;
+    this.book = null;
+    previous?.focus?.();
+  },
+
+  preview() {
+    if (!this.book) return;
+    const date = $('#desktopPlanDate').value;
+    const left = Math.max(0, Number(this.book.plan?.remaining_new) || 0);
+    const valid = /^\d{4}-\d{2}-\d{2}$/.test(date) && date >= Domain.localDayKey(new Date());
+    const save = $('#desktopPlanSave');
+    const advice = $('#desktopPlanAdvice');
+    const presetButtons = document.querySelectorAll('#desktopPlanModal [data-plan-days]');
+    presetButtons.forEach(button => button.setAttribute('aria-pressed', 'false'));
+    if (!valid) {
+      $('#desktopPlanDaily').textContent = '—';
+      $('#desktopPlanDays').textContent = '—';
+      $('#desktopPlanDeadline').textContent = date || '未设置';
+      advice.textContent = date ? '请选择今天或之后的有效日期。' : '选择目标日期，即可预览每日新词安排。';
+      advice.classList.toggle('is-warning', Boolean(date));
+      save.disabled = true;
+      return;
+    }
+    try {
+      const plan = Domain.calculatePlan({ remainingNew: left, planActive: true, targetDate: date });
+      const required = Math.ceil(left / plan.days_left);
+      $('#desktopPlanDaily').textContent = String(plan.daily_quota);
+      $('#desktopPlanDays').textContent = `${plan.days_left} 天`;
+      $('#desktopPlanDeadline').textContent = date;
+      const overload = required > 200;
+      advice.classList.toggle('is-warning', overload);
+      advice.textContent = overload
+        ? `目标过紧：每日需 ${required} 词，超过系统每日 200 词的上限。请延后日期。`
+        : left === 0 ? '新词已完成初学。保留目标也不会影响复习，建议以巩固掌握为主。'
+        : required > 60 ? '挑战强度较高，建议留出额外时间做复习，可考虑延后目标日期。'
+        : required > 25 ? '节奏偏紧凑，建议每天预留时间完成到期复习。'
+        : '学习节奏比较从容，系统仍会优先安排到期复习。';
+      save.disabled = overload || this.busy;
+    } catch (error) {
+      save.disabled = true;
+      advice.classList.add('is-warning');
+      advice.textContent = '日期无效，请重新选择。';
+    }
+  },
+
+  async save() {
+    if (!this.book || this.busy || $('#desktopPlanSave').disabled) return;
+    this.busy = true;
+    $('#desktopPlanSave').disabled = true;
+    try {
+      const res = await api(`/api/books/${this.book.id}/plan`, {
+        method: 'PUT', body: { target_date: $('#desktopPlanDate').value },
+      });
+      this.close();
+      toast(`计划已保存：每天约 ${res.plan.daily_quota} 个新词`);
+      await Home.render(Home.section);
+    } catch (error) {
+      toast(`保存计划失败：${error.message}`);
+    } finally {
+      this.busy = false;
+      if (this.book) this.preview();
+    }
+  },
+
+  async remove() {
+    if (!this.book || this.busy || !this.book.plan?.active) return;
+    if (!confirm('移除这本词库的完成日期？学习记录和复习进度会保留。')) return;
+    this.busy = true;
+    try {
+      await api(`/api/books/${this.book.id}/plan`, { method: 'DELETE' });
+      this.close();
+      toast('已移除目标日期，学习记录仍然保留');
+      await Home.render(Home.section);
+    } catch (error) {
+      toast(`调整学习计划失败：${error.message}`);
+    } finally { this.busy = false; }
+  },
+};
+
+$('#desktopTodayBookSelect').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  $('#todayBookSelect').value = event.target.value;
+  $('#todayBookSelect').dispatchEvent(new Event('change'));
+});
+$('#hubStart').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  const book = Home.books.find(item => item.id === Home.selectedBookId);
+  if (!book || !book.word_count) { location.hash = '#/books'; return; }
+  location.hash = `#/today-study/${book.id}`;
+});
+$('#hubEditPlan').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  const book = Home.books.find(item => item.id === Home.selectedBookId);
+  if (book) DesktopPlan.open(book);
+});
+$('#hubMistakes').addEventListener('click', () => {
+  if (!IS_ANDROID_APP) location.hash = '#/mistakes-study/spelling';
+});
+$('#desktopPlanDate').addEventListener('input', () => DesktopPlan.preview());
+document.querySelectorAll('#desktopPlanModal [data-plan-days]').forEach(button => {
+  button.addEventListener('click', () => {
+    const days = Number(button.dataset.planDays);
+    const d = new Date();
+    d.setDate(d.getDate() + days - 1);
+    $('#desktopPlanDate').value = Domain.localDayKey(d);
+    document.querySelectorAll('#desktopPlanModal [data-plan-days]').forEach(other =>
+      other.setAttribute('aria-pressed', String(other === button)));
+    DesktopPlan.preview();
+    button.setAttribute('aria-pressed', 'true');
+  });
+});
+$('#desktopPlanForm').addEventListener('submit', event => {
+  event.preventDefault();
+  void DesktopPlan.save();
+});
+$('#desktopPlanRemove').addEventListener('click', () => void DesktopPlan.remove());
+$('#desktopPlanClose').addEventListener('click', () => DesktopPlan.close());
+$('#desktopPlanCancel').addEventListener('click', () => DesktopPlan.close());
+$('#desktopPlanModal').addEventListener('click', event => {
+  if (event.target.id === 'desktopPlanModal') DesktopPlan.close();
+});
+document.addEventListener('keydown', event => {
+  if (IS_ANDROID_APP || $('#desktopPlanModal').classList.contains('hidden')) return;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    DesktopPlan.close();
+  } else if (event.key === 'Tab') {
+    const items = [...$('#desktopPlanModal').querySelectorAll('button:not(:disabled), input:not(:disabled)')];
+    if (!items.length) return;
+    const first = items[0], last = items.at(-1);
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  }
+});
+
 const Home = {
   section: 'today',
   books: [],
   selectedBookId: 0,
+  stats: null, mistakeCount: 0, instanceId: null,
 
   async render(section = 'today') {
     this.section = section;
+    $('#todaySection').setAttribute('aria-labelledby', IS_ANDROID_APP ? 'todayTitle' : 'hubHeadingTitle');
     show('home', section === 'books' ? 'books' : 'today');
     $('#todaySection').classList.toggle('hidden', section === 'books');
     $('#booksSection').classList.toggle('hidden', section !== 'books');
     showPageLoading('正在准备今日学习…');
     try {
-      const [books, stats, mistakes] = await Promise.all([
-        api('/api/books'), api('/api/stats'), api('/api/mistakes')]);
+      const [books, stats, mistakes, identity] = await Promise.all([
+        api('/api/books'), api('/api/stats'), api('/api/mistakes'),
+        IS_ANDROID_APP ? Promise.resolve(null) : api('/api/desktop/identity')]);
       clearPageStatus();
       this.books = books;
+      this.instanceId = identity?.instance_id || null;
+      this.stats = stats;
+      this.mistakeCount = mistakes.length;
       this.renderStats(stats);
-      this.renderToday(books, stats);
+      this.renderToday(books, stats, mistakes.length);
       this.renderBooks(books, mistakes.length);
+      if (section === 'today') void DesktopJourney.render();
     } catch (error) {
       showPageError(`今日内容暂时无法加载：${error.message}`, () => this.render(this.section));
     }
   },
 
-  renderToday(books, stats) {
+  renderToday(books, stats, mistakeCount = 0) {
     const select = $('#todayBookSelect');
+    if (!IS_ANDROID_APP) $('#desktopRoundSize').value = String(desktopRoundSize());
     const usable = books.filter(book => book.word_count > 0);
     const stored = Number(localStorage.getItem('wordmaster_selected_book') || 0);
     const preferred = usable.find(book => book.id === (this.selectedBookId || stored));
@@ -275,6 +691,14 @@ const Home = {
       <div class="today-task"><span class="today-task-label">待复习</span><span class="today-task-value"><span class="numeric">${due}</span><small>词</small></span></div>
       <div class="today-task"><span class="today-task-label">今日新词</span><span class="today-task-value"><span class="numeric">${newDone}</span><small class="numeric task-target">/ ${newQuota}</small></span></div>`;
 
+    const quickMistakes = $('#todayQuickMistakes');
+    const showMistakes = !IS_ANDROID_APP && mistakeCount > 0;
+    quickMistakes.classList.toggle('hidden', !showMistakes);
+    if (showMistakes) {
+      quickMistakes.textContent = `↗ 回炉 ${mistakeCount} 个错题`;
+      quickMistakes.onclick = () => { location.hash = '#/mistakes-study/spelling'; };
+    }
+
     const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
       && !sessionStorage.getItem('wordmaster_onboarding_started')
       && !stats.mastered && !stats.total_correct && !stats.total_wrong;
@@ -289,11 +713,16 @@ const Home = {
         $('#todayContinue').onclick = () => { location.hash = '#/books'; };
         $('#todayEmptyMessage').textContent = books.length ? '词库中还没有可学习的单词。' : '创建词库并添加单词后，就可以开始学习。';
         $('#todayEmptyMessage').classList.remove('hidden');
+        DesktopHub.render(books, null, mistakeCount);
         return;
       }
       this.selectedBookId = book.id;
       localStorage.setItem('wordmaster_selected_book', String(book.id));
-      const remaining = Math.max(0, Number(book.plan?.daily_quota || 0) - Number(book.new_today || 0));
+      const dailyRemaining = Math.max(0, Number(book.plan?.daily_quota || 0) - Number(book.new_today || 0));
+      // Desktop: a plan can have a default daily quota even after all words
+      // have been introduced. Do not advertise a task with an empty queue.
+      const remaining = IS_ANDROID_APP ? dailyRemaining
+        : Math.min(dailyRemaining, Math.max(0, Number(book.plan?.remaining_new) || 0));
       const mode = book.due_review > 0 ? 'meaning' : 'learn';
       const hasTask = book.due_review > 0 || remaining > 0;
       const button = $('#todayContinue');
@@ -302,7 +731,9 @@ const Home = {
       $('#todayEmptyMessage').classList.toggle('hidden', hasTask);
       $('#todayEmptyMessage').textContent = hasTask ? '' : '这本词库今天的待复习和新词配额都已完成。';
       if (book.due_review > 0) {
-        $('#todayNextAction').textContent = `先完成 ${book.due_review} 个到期复习；答完会自动接上今日新词。`;
+        $('#todayNextAction').textContent = IS_ANDROID_APP
+          ? `先完成 ${book.due_review} 个到期复习；答完会自动接上今日新词。`
+          : `有 ${book.due_review} 个到期复习，本轮先做最多 ${desktopRoundSize()} 词，完成后可继续下一轮。`;
       } else if (remaining > 0) {
         $('#todayNextAction').textContent = firstRun
           ? '轻量起步：先学 3 个新词，再默写其中 1 个。'
@@ -315,6 +746,7 @@ const Home = {
         if (query) sessionStorage.setItem('wordmaster_onboarding_started', '1');
         location.hash = `#/study/${book.id}/${mode}${query}`;
       };
+      DesktopHub.render(books, book, mistakeCount);
     };
     select.onchange = updateAction;
     updateAction();
@@ -365,9 +797,9 @@ const Home = {
         <div class="book-manage-row">
           <span>
             <button class="link-btn" onclick="location.hash='#/book/${b.id}'">管理单词 →</button>
-            <button class="link-btn" onclick="Home.openPlan(${b.id}, '${esc(b.name)}')">学习计划</button>
+            <button type="button" class="link-btn" data-home-action="plan" data-book-id="${b.id}">学习计划</button>
           </span>
-          ${b.is_builtin ? '' : `<button class="link-btn danger" onclick="Home.deleteBook(${b.id}, '${esc(b.name)}')">删除词库</button>`}
+          ${b.is_builtin ? '' : `<button type="button" class="link-btn danger" data-home-action="delete" data-book-id="${b.id}">删除词库</button>`}
         </div>
       </article>`;
     });
@@ -426,6 +858,16 @@ const Home = {
     } catch (e) { toast(e.message); }
   },
 };
+
+// Avoid embedding user-defined book names inside executable inline handlers.
+$('#booksGrid').addEventListener('click', event => {
+  const button = event.target.closest('[data-home-action]');
+  if (!button) return;
+  const book = Home.books.find(item => item.id === Number(button.dataset.bookId));
+  if (!book) return;
+  if (button.dataset.homeAction === 'plan') void Home.openPlan(book.id, book.name);
+  if (button.dataset.homeAction === 'delete') void Home.deleteBook(book.id, book.name);
+});
 
 /* 学习计划表单 */
 $('#planDate').addEventListener('change', () => {
@@ -494,11 +936,17 @@ const Study = {
   correctCount: 0, firstCorrectCount: 0, retryCorrectCount: 0,
   wrongCount: 0, abandonedCount: 0, retryCount: 0,
   sessionId: null,
+  todayFlow: null,
+  instanceId: null,
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
   keyHandler: null,
+  runToken: 0,
 
   async start(bookId, mode, options = {}) {
+    this.todayFlow = null;
+    $('#desktopStudyJourney').classList.add('hidden');
+    $('#studyExit').textContent = '← 退出';
     this.bookId = bookId; this.mode = mode;
     this.guidedRun = Boolean(options.guided && mode === 'learn');
     if (!this.guidedRun) this.guidedSpellWords = null;
@@ -508,6 +956,8 @@ const Study = {
     $('#studyModeTag').textContent = `${this.guidedRun ? '初次体验 · ' : ''}${MODES.find(m => m.key === mode)?.name || mode}`;
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING …</p></div>';
     const params = new URLSearchParams({ mode });
+    if (!IS_ANDROID_APP && mode !== 'learn') params.set('session_limit', String(desktopRoundSize()));
+    if (!IS_ANDROID_APP && mode === 'learn' && !options.limit) params.set('limit', String(desktopRoundSize()));
     if (options.limit > 0) params.set('limit', String(Math.min(Math.floor(options.limit), 50)));
     showPageLoading('正在准备这一轮的单词…');
     try {
@@ -520,7 +970,195 @@ const Study = {
     }
   },
 
+  async startToday(bookId) {
+    if (IS_ANDROID_APP) return;
+    this.todayFlow = null;
+    this.bookId = bookId;
+    this.mode = 'meaning';
+    this.guidedRun = false;
+    show('study');
+    $('#studyDone').classList.add('hidden');
+    $('#studyStage').classList.remove('hidden');
+    $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING TODAY…</p></div>';
+    $('#studyExit').textContent = '← 保存进度并退出';
+    $('#studyExit').onclick = () => { location.hash = '#/'; };
+    // An independent temporary test database can share the same localhost
+    // origin as the user's real installation. Never restore its checkpoints.
+    try {
+      const identity = await api('/api/desktop/identity');
+      if (location.hash !== `#/today-study/${bookId}`) return;
+      this.instanceId = identity.instance_id;
+    } catch (error) {
+      showPageError(`无法验证当前词库的数据身份：${error.message}`, () => this.startToday(bookId));
+      return;
+    }
+    const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId);
+    if (cached) {
+      this.restoreToday(cached);
+      return;
+    }
+    showPageLoading('正在准备完整的今日任务…');
+    try {
+      const payload = await api(`/api/desktop/books/${bookId}/today`);
+      if (location.hash !== `#/today-study/${bookId}`) return;
+      clearPageStatus();
+      this.todayFlow = {
+        bookId, day: Domain.localDayKey(),
+        stage: payload.review.length ? 'review' : 'learn',
+        review: payload.review,
+        learn: payload.learn,
+        reviewTotal: payload.review.length,
+        learnTotal: payload.learn.length,
+        completed: { review: 0, learn: 0, spelling: 0 },
+        reviewHasMore: payload.review_has_more,
+        learnHasMore: payload.learn_has_more,
+      };
+      this.mode = payload.review.length ? 'meaning' : 'learn';
+      $('#studyModeTag').textContent = payload.review.length ? '今日任务 · 第一步：到期复习' : '今日任务 · 新词学习';
+      if (!payload.review.length && !payload.learn.length) {
+        $('#studyStage').innerHTML = `<div class="quiz-card">
+          <p class="quiz-kicker">TODAY COMPLETE</p>
+          <h2 class="quiz-word" style="font-size:30px">今天的任务已完成</h2>
+          <p class="quiz-meaning">已经没有待复习和计划内的新词了，可以查看学习数据，或明天继续。</p>
+          <div class="quiz-actions"><button class="btn btn-primary" id="todayNoTasksBack">返回今日</button></div>
+        </div>`;
+        $('#todayNoTasksBack').onclick = () => { location.hash = '#/'; };
+        this.renderTodayJourney();
+        return;
+      }
+      this.begin(payload.review.length ? payload.review : payload.learn);
+    } catch (error) {
+      showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId));
+    }
+  },
+
+  saveTodayCheckpoint(includeCurrent = true, phaseDone = false) {
+    if (IS_ANDROID_APP || !this.todayFlow) return;
+    const day = Domain.localDayKey();
+    const snapshot = {
+      version: DesktopCheckpoint.VERSION, day: this.todayFlow.day || day,
+      bookId: this.bookId, instanceId: this.instanceId,
+      stage: this.todayFlow.stage, phaseDone,
+      flow: {
+        review: this.todayFlow.review, learn: this.todayFlow.learn,
+        reviewTotal: this.todayFlow.reviewTotal,
+        learnTotal: this.todayFlow.learnTotal,
+        completed: { ...this.todayFlow.completed },
+        reviewHasMore: this.todayFlow.reviewHasMore,
+        learnHasMore: this.todayFlow.learnHasMore,
+      },
+      queue: [...(includeCurrent && this.current ? [this.current] : []), ...this.queue],
+      roundWords: this.roundWords,
+      total: this.total, done: this.done, sessionId: this.sessionId,
+      counters: {
+        correctCount: this.correctCount, firstCorrectCount: this.firstCorrectCount,
+        retryCorrectCount: this.retryCorrectCount, wrongCount: this.wrongCount,
+        abandonedCount: this.abandonedCount, retryCount: this.retryCount,
+      },
+      attemptedWordIds: [...this.attemptedWordIds],
+      retryWordIds: [...this.retryWordIds],
+      learnAgainIds: [...this.learnAgainIds],
+      learnCompletedIds: [...this.learnCompletedIds],
+    };
+    if (!DesktopCheckpoint.write(localStorage, snapshot)) {
+      console.warn('本地学习断点暂时不可保存。请检查浏览器存储空间。');
+      $('#studyExit').textContent = '← 退出（断点未保存）';
+      if (!this.checkpointWarned) {
+        this.checkpointWarned = true;
+        toast('本地空间不足或禁用了存储，当前断点未保存；建议完成这一轮后再退出');
+      }
+    } else {
+      this.checkpointWarned = false;
+      $('#studyExit').textContent = '← 保存进度并退出';
+    }
+  },
+
+  restoreToday(snapshot) {
+    this.runToken++;
+    // Reconstitute the original spelling manifest from older valid snapshots.
+    // Only the pending queue remains shortened: answered words stay answered.
+    snapshot = DesktopCheckpoint.repairLearnManifest(snapshot);
+    this.todayFlow = { bookId: snapshot.bookId, day: snapshot.day, stage: snapshot.stage, ...snapshot.flow };
+    this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
+    this.guidedRun = false;
+    this.queue = snapshot.queue.slice();
+    this.roundWords = snapshot.roundWords.slice();
+    this.total = snapshot.total;
+    this.done = snapshot.done;
+    this.current = null;
+    this.locked = false;
+    this.sessionId = snapshot.sessionId; // Required to classify retries reliably.
+    Object.assign(this, snapshot.counters);
+    for (const field of ['attemptedWordIds', 'retryWordIds', 'learnAgainIds', 'learnCompletedIds']) {
+      this[field] = new Set(snapshot[field].map(String));
+    }
+    $('#studyModeTag').textContent = this.mode === 'meaning'
+      ? '接着学 · 到期复习' : this.mode === 'learn'
+        ? '接着学 · 新词学习' : '接着学 · 巩固默写';
+    $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
+    this.updateProgress();
+    if (snapshot.phaseDone) {
+      void this.finish();
+    } else if (this.queue.length) {
+      this.next();
+    } else {
+      void this.finish();
+    }
+  },
+
+  renderTodayJourney() {
+    const host = $('#desktopStudyJourney');
+    if (IS_ANDROID_APP || !this.todayFlow) { host.classList.add('hidden'); return; }
+    host.classList.remove('hidden');
+    const flow = this.todayFlow;
+    const completed = { ...flow.completed };
+    if (flow.stage && this.total) completed[flow.stage] = Math.max(completed[flow.stage], this.done);
+    const steps = [
+      { id: 'review', title: '到期复习', target: flow.reviewTotal },
+      { id: 'learn', title: '学习新词', target: flow.learnTotal },
+      { id: 'spelling', title: '巩固默写', target: Domain.spellingWords(flow.learn).length },
+    ];
+    $('#desktopStudySteps').innerHTML = steps.map((step, i) => {
+      const done = Math.min(completed[step.id] || 0, step.target);
+      const active = step.id === flow.stage;
+      const finished = done === step.target && step.target > 0;
+      const status = step.target === 0 ? '本日无需' : finished ? '已完成'
+        : active ? `${done} / ${step.target}` : `共 ${step.target} 词`;
+      return `<div class="desktop-journey-step ${active ? 'active' : ''} ${finished ? 'finished' : ''}"
+        role="listitem" ${active ? 'aria-current="step"' : ''}>
+        <span class="desktop-journey-step-number">${finished ? '✓' : String(i + 1).padStart(2, '0')}</span>
+        <span class="desktop-journey-step-text"><strong>${step.title}</strong><small>${status}</small></span>
+      </div>`;
+    }).join('');
+    const total = flow.reviewTotal + flow.learnTotal;
+    const achieved = Math.min(total, Math.min(flow.reviewTotal, completed.review)
+      + Math.min(flow.learnTotal, completed.learn));
+    const pct = total ? Math.round(achieved * 100 / total) : 100;
+    $('#desktopStudyOverallText').textContent = `今日任务 ${achieved} / ${total} 词 · 巩固默写另计`;
+    $('#desktopStudyOverallFill').style.width = `${pct}%`;
+  },
+
+  continueToday(stage) {
+    if (!this.todayFlow) return;
+    this.todayFlow.stage = stage;
+    if (stage === 'learn') {
+      this.mode = 'learn';
+      $('#studyModeTag').textContent = '今日任务 · 第二步：学习新词';
+      this.begin(this.todayFlow.learn);
+    } else if (stage === 'spelling') {
+      this.mode = 'spelling';
+      $('#studyModeTag').textContent = '今日任务 · 第三步：巩固默写';
+      this.begin(Domain.spellingWords(this.todayFlow.learn).map(word => ({ ...word, is_new: 0 })));
+    }
+    $('#studyDone').classList.add('hidden');
+    $('#studyStage').classList.remove('hidden');
+    $('#studyStage').classList.toggle('dictionary-stage', stage === 'learn');
+  },
+
   startGuidedSpelling(bookId) {
+    this.todayFlow = null;
+    $('#desktopStudyJourney').classList.add('hidden');
+    $('#studyExit').textContent = '← 退出';
     let words = this.guidedSpellWords || [];
     if (!words.length) {
       try {
@@ -542,6 +1180,7 @@ const Study = {
   },
 
   begin(words) {
+    this.runToken++;
     this.clearSaveFailure();
     $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
     if (!words.length) {
@@ -576,14 +1215,19 @@ const Study = {
       $('#spellingFallbackHome').onclick = () => { location.hash = '#/'; };
       return;
     }
+    // Keep the complete study manifest immutable. next() consumes its own
+    // working queue via shift(); otherwise saving halfway loses already learned
+    // words from today's spelling phase after a restart.
     this.roundWords = queue.slice();
-    this.queue = queue;
+    this.queue = queue.slice();
     this.total = queue.length;
     this.done = 0;
     this.correctCount = 0; this.firstCorrectCount = 0; this.retryCorrectCount = 0;
     this.wrongCount = 0; this.abandonedCount = 0; this.retryCount = 0;
     this.sessionId = makeRequestId();
     this.attemptedWordIds = new Set(); this.retryWordIds = new Set(); this.learnAgainIds = new Set(); this.learnCompletedIds = new Set();
+    this.current = null;
+    this.renderTodayJourney();
     this.next();
   },
 
@@ -594,12 +1238,21 @@ const Study = {
     }
   },
 
+  scheduleNext(delay) {
+    const token = this.runToken;
+    setTimeout(() => {
+      if (this.runToken !== token || $('#view-study').classList.contains('hidden')) return;
+      this.next();
+    }, delay);
+  },
+
   next() {
     this.leave();
     this.clearSaveFailure();
     if (!this.queue.length) return this.finish();
     this.current = this.queue.shift();
     this.locked = false;
+    this.saveTodayCheckpoint(true, false);
     this.updateProgress();
     if (this.mode === 'learn') this.renderLearn(this.current);
     else if (this.mode === 'spelling') this.renderSpelling(this.current);
@@ -612,6 +1265,7 @@ const Study = {
     $('#studyProgressFill').style.width = pct + '%';
     $('#studyProgressText').textContent = `${Math.min(this.done, this.total)} / ${this.total}` +
       (this.retryCount ? ` · 回炉 ${this.retryCount}` : '');
+    this.renderTodayJourney();
   },
 
   createProgressAttempt(correct, failedOutcome, answerValue) {
@@ -653,6 +1307,7 @@ const Study = {
       if (!this.queue.some(word => String(word.id) === wordId)) this.queue.push(this.current);
     }
     this.updateProgress();
+    this.saveTodayCheckpoint(false, false);
   },
 
   clearSaveFailure() {
@@ -759,6 +1414,7 @@ const Study = {
         }
         this.retryCount = this.learnAgainIds.size;
         this.updateProgress();
+        this.saveTodayCheckpoint(false, false);
         this.next();
       };
       await save();
@@ -915,7 +1571,7 @@ const Study = {
         const payload = this.createProgressAttempt(true, undefined, spellInput.value);
         this.saveProgressAttempt(payload, () => {
           feedback.textContent = `拼写正确：${answerLabel}。已保存，下一题即将开始。`;
-          setTimeout(() => this.next(), 800);
+          this.scheduleNext(800);
         });
       } else {
         $('#quizCard').classList.remove('shake');
@@ -1065,7 +1721,7 @@ const Study = {
       this.saveProgressAttempt(payload, () => {
         if (ok) {
           $('#answerResult').textContent = `回答正确：${wordMeaningSummary(w)}。下一题即将开始。`;
-          setTimeout(() => this.next(), 900);
+          this.scheduleNext(900);
         } else {
           $('#answerResult').textContent = `正确释义：${wordMeaningSummary(w)}。已加入回炉，点继续开始下一题。`;
           this.waitContinue();
@@ -1146,7 +1802,7 @@ const Study = {
       this.saveProgressAttempt(payload, () => {
         if (ok) {
           $('#answerResult').textContent = `回答正确：${target}。下一题即将开始。`;
-          setTimeout(() => this.next(), 900);
+          this.scheduleNext(900);
         } else {
           $('#answerResult').textContent = `正确词性：${target}。已加入回炉，点继续开始下一题。`;
           this.waitContinue();
@@ -1182,22 +1838,84 @@ const Study = {
       : this.mode === 'learn'
         ? `共完成 ${this.total} 个新词 · 回看 ${this.learnAgainIds.size} 个`
         : `共 ${this.total} 个词 · 首次答对 ${this.firstCorrectCount} · 回炉答对 ${this.retryCorrectCount} · 答错 ${this.wrongCount} 次 · 放弃 ${this.abandonedCount} 次`;
-    if (this.guidedRun && this.mode === 'learn' && this.bookId) {
+    const xpEarned = this.firstCorrectCount * 12 + this.retryCorrectCount * 6;
+    const doneXp = $('#doneXp');
+    if (IS_ANDROID_APP || !xpEarned) {
+      doneXp.classList.add('hidden');
+      doneXp.textContent = '';
+    } else {
+      doneXp.textContent = `✦ 本轮获得 ${xpEarned} 墨点 · 首次答对 +12，回炉答对 +6`;
+      doneXp.classList.remove('hidden');
+    }
+    if (this.todayFlow) {
+      const flow = this.todayFlow;
+      flow.completed[flow.stage] = this.total;
+      const needsMore = flow.reviewHasMore || flow.learnHasMore;
+      $('#desktopDoneEyebrow').classList.remove('hidden');
+      const titles = { review: '复习这一程，已完成', learn: '今日新词，已认识', spelling: '巩固默写，已完成' };
+      $('#studyDoneTitle').textContent = titles[flow.stage];
+      const stepCopy = flow.stage === 'review' ? '第一步 · 到期复习'
+        : flow.stage === 'learn' ? '第二步 · 新词认识' : '第三步 · 巩固默写';
+      const resultColumns = flow.stage === 'learn'
+        ? `<div><strong>${this.total}</strong><small>认识新词</small></div>
+          <div><strong>${this.learnAgainIds.size}</strong><small>本轮回看</small></div>
+          <div><strong>${Domain.spellingWords(flow.learn).length}</strong><small>可巩固默写</small></div>`
+        : `<div><strong>${this.firstCorrectCount}</strong><small>首次答对</small></div>
+          <div><strong>${this.retryCorrectCount}</strong><small>回炉答对</small></div>
+          <div><strong>${this.wrongCount + this.abandonedCount}</strong><small>错误或跳过次数</small></div>`;
+      $('#desktopDoneJourney').innerHTML = `<div class="desktop-done-head"><span>${stepCopy}</span><strong>${this.total} / ${this.total} 词</strong></div>
+        <div class="desktop-done-numbers">${resultColumns}</div>
+        <p>${flow.stage === 'learn' ? '认识新词不代表完全掌握，接下来通过默写巩固。'
+          : '已完成的答题会真实记录到学习数据，复习日期仍遵循现有规则。'}</p>`;
+      $('#desktopDoneJourney').classList.remove('hidden');
+      this.renderTodayJourney();
+      // A saved milestone is as resumable as a saved individual question.
+      this.saveTodayCheckpoint(false, true);
+      const continueBatch = () => {
+        DesktopCheckpoint.clear(localStorage, this.bookId);
+        void this.startToday(this.bookId);
+      };
+      if (flow.stage === 'review' && flow.reviewHasMore) {
+        $('#doneSummary').textContent = `已完成这一批 ${this.total} 个到期复习词，先继续剩余的到期复习，再学习今天的新词。`;
+        $('#doneAgain').textContent = '继续剩余到期复习 →';
+        $('#doneAgain').onclick = continueBatch;
+      } else if (flow.stage === 'review' && flow.learn.length) {
+        $('#doneSummary').textContent = `到期复习完成 ${this.total} 词。接下来认识 ${flow.learn.length} 个今日新词。`;
+        $('#doneAgain').textContent = `继续学习新词 · ${flow.learn.length} 个 →`;
+        $('#doneAgain').onclick = () => this.continueToday('learn');
+      } else if (flow.stage === 'learn' && Domain.spellingWords(flow.learn).length) {
+        $('#doneSummary').textContent = `今天认识了 ${this.total} 个新词。接下来通过默写巩固这一批新词。`;
+        $('#doneAgain').textContent = '继续巩固默写 →';
+        $('#doneAgain').onclick = () => this.continueToday('spelling');
+      } else if (needsMore) {
+        $('#doneAgain').textContent = '继续剩余今日任务 →';
+        $('#doneAgain').onclick = continueBatch;
+      } else {
+        $('#doneAgain').textContent = '返回今日学习中枢';
+        $('#doneAgain').onclick = () => { location.hash = '#/'; };
+        DesktopCheckpoint.clear(localStorage, this.bookId);
+      }
+    } else {
+      $('#desktopDoneEyebrow').classList.add('hidden');
+      $('#desktopDoneJourney').classList.add('hidden');
+      $('#studyDoneTitle').textContent = '本轮完成';
+    }
+    if (!this.todayFlow && this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
       sessionStorage.setItem(GUIDED_SPELLING_KEY, JSON.stringify({ bookId: this.bookId, words: this.guidedSpellWords }));
       $('#doneAgain').textContent = '默写 1 个词 →';
       $('#doneAgain').onclick = () => { location.hash = `#/guided-spelling/${this.bookId}`; };
-    } else if (this.guidedRun && this.mode === 'spelling') {
+    } else if (!this.todayFlow && this.guidedRun && this.mode === 'spelling') {
       localStorage.setItem('wordmaster_onboarding_done', '1');
       sessionStorage.removeItem(GUIDED_SPELLING_KEY);
       $('#doneAgain').textContent = '回到今日';
       $('#doneAgain').onclick = () => { location.hash = '#/'; };
-    } else if (this.mode === 'learn' && this.bookId) {
+    } else if (!this.todayFlow && this.mode === 'learn' && this.bookId) {
       // 学完引导去默写，学过的词已进入复习队列。
       $('#doneAgain').textContent = '去默写这些词 →';
       $('#doneAgain').onclick = () => { location.hash = `#/study/${this.bookId}/spelling`; };
-    } else {
+    } else if (!this.todayFlow) {
       $('#doneAgain').textContent = '再来一轮';
       $('#doneAgain').onclick = () => location.hash === `#/study/${this.bookId}/${this.mode}`
         ? this.start(this.bookId, this.mode)
@@ -1237,6 +1955,7 @@ document.addEventListener('click', (e) => {
    错题本
    ============================================================ */
 const Mistakes = {
+  rows: [],
   async render() {
     show('mistakes', 'books');
     showPageLoading('正在加载错题本…');
@@ -1248,6 +1967,7 @@ const Mistakes = {
       showPageError(`错题本暂时无法加载：${error.message}`, () => this.render());
       return;
     }
+    this.rows = list;
     $('#mistakeCount').textContent = list.length;
     $('#mistakeBody').innerHTML = list.map(w => `
       <tr>
@@ -1257,7 +1977,7 @@ const Mistakes = {
         <td class="ex">${esc(w.book_name)}</td>
         <td><span class="wrong-tag">错 ${w.wrong} 次</span></td>
         <td class="ops">
-          <button class="link-btn danger" onclick="Mistakes.remove(${w.id}, '${esc(wordHeadword(w))}')">移出</button>
+          <button type="button" class="link-btn danger" data-mistake-remove="${w.id}">移出</button>
         </td>
       </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">暂无错题，继续保持</td></tr>';
     $('#mistakesBack').onclick = () => { location.hash = '#/'; };
@@ -1266,6 +1986,8 @@ const Mistakes = {
   },
 
   async study(mode) {
+    // Mistake drills are separate from the home daily route.
+    Study.todayFlow = null;
     Study.mode = mode;
     Study.bookId = null;
     show('study');
@@ -1283,35 +2005,58 @@ const Mistakes = {
   },
 
   async remove(wordId, word) {
-    await api(`/api/mistakes/${wordId}`, { method: 'DELETE' });
-    toast(`「${word}」已移出错题本`);
-    this.render();
+    try {
+      await api(`/api/mistakes/${wordId}`, { method: 'DELETE' });
+      toast(`「${word}」已移出错题本`);
+      await this.render();
+    } catch (error) { toast(`移出错题失败：${error.message}`); }
   },
 };
+
+$('#mistakeBody').addEventListener('click', event => {
+  const button = event.target.closest('[data-mistake-remove]');
+  if (!button) return;
+  const word = Mistakes.rows.find(row => row.id === Number(button.dataset.mistakeRemove));
+  if (word) void Mistakes.remove(word.id, wordHeadword(word));
+});
 
 /* ============================================================
    词库管理页
    ============================================================ */
 const Manage = {
   bookId: null, words: [], editingId: null,
+  page: 1, pages: 1, total: 0, pageSize: 40,
+  query: '', status: 'all', requestToken: 0, searchTimer: null,
 
   async open(bookId) {
     this.bookId = bookId;
+    this.page = 1; this.pages = 1; this.query = ''; this.status = 'all';
+    this.requestToken++;
+    clearTimeout(this.searchTimer);
     show('manage', 'books');
-    showPageLoading('正在加载词库…');
-    let books, words;
+    $('#desktopManageToolbar').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#desktopManageResult').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#desktopManagePages').classList.toggle('hidden', IS_ANDROID_APP);
+    $('#manageSearch').value = '';
+    $('#manageStatus').value = 'all';
+    showPageLoading('正在打开词库…');
     try {
-      [books, words] = await Promise.all([api('/api/books'), api(`/api/books/${bookId}/words`)]);
-      clearPageStatus();
+      const books = await api('/api/books');
+      if (this.bookId !== bookId || (location.hash || '').split('?')[0] !== `#/book/${bookId}`) return;
+      const book = books.find(b => b.id === bookId);
+      if (!book) throw new Error('词库不存在');
+      $('#manageTitle').textContent = book.name;
+      if (IS_ANDROID_APP) {
+        this.words = await api(`/api/books/${bookId}/words`);
+        clearPageStatus();
+        this.renderTable();
+      } else {
+        await this.loadPage(1);
+      }
     } catch (error) {
-      showPageError(`词库暂时无法加载：${error.message}`, () => this.open(bookId));
-      return;
+      if (this.bookId === bookId) showPageError(`词库暂时无法加载：${error.message}`, () => this.open(bookId));
     }
-    const book = books.find(b => b.id === bookId);
-    $('#manageTitle').textContent = book ? book.name : '词库';
-    this.words = words;
-    this.renderTable();
-    $('#manageBack').onclick = () => { location.hash = '#/'; };
+    $('#manageBack').onclick = () => { location.hash = '#/books'; };
     $('#addWordBtn').onclick = () => this.openModal(null);
     $('#importBtn').onclick = () => {
       $('#importText').value = '';
@@ -1321,7 +2066,51 @@ const Manage = {
     };
   },
 
+  async loadPage(page = 1) {
+    if (IS_ANDROID_APP) return;
+    const token = ++this.requestToken;
+    const id = this.bookId;
+    const params = new URLSearchParams({
+      page: String(page), page_size: String(this.pageSize),
+      search: this.query, status: this.status,
+    });
+    $('#wordTableBody').setAttribute('aria-busy', 'true');
+    try {
+      const data = await api(`/api/desktop/books/${id}/words?${params}`);
+      if (token !== this.requestToken || this.bookId !== id || location.hash.split('?')[0] !== `#/book/${id}`) return;
+      this.words = data.items;
+      this.page = data.page;
+      this.pages = data.pages;
+      this.total = data.total;
+      this.renderTable();
+      this.renderPager();
+      clearPageStatus();
+    } catch (error) {
+      if (token === this.requestToken && this.bookId === id && location.hash.split('?')[0] === `#/book/${id}`) {
+        showPageError(`查询词库失败：${error.message}`, () => this.loadPage(page));
+      }
+    } finally {
+      if (token === this.requestToken) $('#wordTableBody').removeAttribute('aria-busy');
+    }
+  },
+
+  renderPager() {
+    if (IS_ANDROID_APP) return;
+    const first = this.total ? (this.page - 1) * this.pageSize + 1 : 0;
+    const last = Math.min(this.page * this.pageSize, this.total);
+    $('#desktopManageResult').textContent =
+      `共匹配 ${this.total} 词 · 当前显示 ${first}–${last} · 每页 ${this.pageSize} 词`;
+    $('#managePageInfo').textContent = `第 ${this.page} / ${this.pages} 页`;
+    $('#managePrev').disabled = this.page <= 1;
+    $('#manageNext').disabled = this.page >= this.pages;
+  },
+
   renderTable() {
+    const empty = IS_ANDROID_APP
+      ? '词库为空，用右上角「批量导入」或「添加单词」开始录入'
+      : this.query || this.status !== 'all'
+        ? '没有符合条件的单词，可以尝试其他关键词或清除筛选'
+        : '词库为空，点击「添加单词」或「批量导入」开始';
     $('#wordTableBody').innerHTML = this.words.map(w => `
       <tr>
         <td class="w">${esc(wordHeadword(w))}<button class="speak-btn" data-speak="${esc(wordSpeech(w))}" aria-label="播放 ${esc(wordHeadword(w))} 的发音">${speakerIconMarkup}</button>${w.sense_label ? `<small class="word-sense-label">${esc(w.sense_label)}</small>` : ''}</td>
@@ -1330,15 +2119,17 @@ const Manage = {
         <td>${wordMeaningMarkup(w, 'table-word-meaning')}</td>
         <td class="ex">${esc(w.example)}</td>
         <td class="ops">
-          <button class="link-btn" onclick="Manage.openModal(${w.id})">编辑</button>
-          <button class="link-btn danger" onclick="Manage.remove(${w.id}, '${esc(wordHeadword(w))}')">删除</button>
+          <button class="link-btn" data-manage-action="edit" data-word-id="${w.id}">编辑</button>
+          <button class="link-btn danger" data-manage-action="delete" data-word-id="${w.id}">删除</button>
         </td>
-      </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">词库为空，用右上角「批量导入」或「添加单词」开始录入</td></tr>';
+      </tr>`).join('') || `<tr><td colspan="6" class="manage-empty">${esc(empty)}</td></tr>`;
   },
 
   openModal(id) {
+    const word = id ? this.words.find(x => x.id === id) : null;
+    if (id && !word) { toast('未找到当前单词，请刷新列表'); return; }
     this.editingId = id;
-    const w = id ? this.words.find(x => x.id === id) : {};
+    const w = word || {};
     $('#wordModalTitle').textContent = id ? '编辑单词' : '添加单词';
     $('#wfWord').value = w.word || '';
     $('#wfPhonetic').value = w.phonetic || '';
@@ -1350,13 +2141,57 @@ const Manage = {
   },
 
   async remove(id, word) {
-    if (!confirm(`删除单词「${word}」？`)) return;
-    await api(`/api/words/${id}`, { method: 'DELETE' });
-    toast('已删除');
-    this.words = this.words.filter(w => w.id !== id);
-    this.renderTable();
+    if (!confirm(`确定删除单词「${word}」？这会同时删除它的复习进度。`)) return;
+    try {
+      await api(`/api/words/${id}`, { method: 'DELETE' });
+      toast('已删除单词');
+      if (IS_ANDROID_APP) {
+        this.words = this.words.filter(w => w.id !== id);
+        this.renderTable();
+      } else {
+        await this.loadPage(this.page);
+      }
+    } catch (error) { toast(`删除失败：${error.message}`); }
   },
 };
+
+$('#wordTableBody').addEventListener('click', event => {
+  const button = event.target.closest('[data-manage-action]');
+  if (!button) return;
+  const id = Number(button.dataset.wordId);
+  const word = Manage.words.find(item => item.id === id);
+  if (!word) return;
+  if (button.dataset.manageAction === 'edit') Manage.openModal(id);
+  if (button.dataset.manageAction === 'delete') void Manage.remove(id, wordHeadword(word));
+});
+
+$('#manageSearch').addEventListener('input', event => {
+  if (IS_ANDROID_APP) return;
+  clearTimeout(Manage.searchTimer);
+  Manage.query = event.target.value.trim();
+  Manage.requestToken++; // Cancel the logical lifetime of any earlier response.
+  Manage.searchTimer = setTimeout(() => void Manage.loadPage(1), 260);
+});
+$('#manageStatus').addEventListener('change', event => {
+  if (IS_ANDROID_APP) return;
+  Manage.status = event.target.value;
+  clearTimeout(Manage.searchTimer);
+  void Manage.loadPage(1);
+});
+$('#manageReset').addEventListener('click', () => {
+  if (IS_ANDROID_APP) return;
+  $('#manageSearch').value = '';
+  $('#manageStatus').value = 'all';
+  Manage.query = ''; Manage.status = 'all';
+  clearTimeout(Manage.searchTimer);
+  void Manage.loadPage(1);
+});
+$('#managePrev').addEventListener('click', () => {
+  if (!IS_ANDROID_APP && Manage.page > 1) void Manage.loadPage(Manage.page - 1);
+});
+$('#manageNext').addEventListener('click', () => {
+  if (!IS_ANDROID_APP && Manage.page < Manage.pages) void Manage.loadPage(Manage.page + 1);
+});
 
 $('#wordModalCancel').addEventListener('click', () => $('#wordModal').classList.add('hidden'));
 $('#wordModal').addEventListener('click', (e) => { if (e.target.id === 'wordModal') $('#wordModal').classList.add('hidden'); });
@@ -1369,15 +2204,18 @@ $('#wordForm').addEventListener('submit', async (e) => {
   try {
     if (Manage.editingId) {
       await api(`/api/words/${Manage.editingId}`, { method: 'PUT', body });
-      Object.assign(Manage.words.find(w => w.id === Manage.editingId), body);
+      if (IS_ANDROID_APP) Object.assign(Manage.words.find(w => w.id === Manage.editingId), body);
     } else {
-      const r = await api('/api/words', { method: 'POST', body: { ...body, book_id: Manage.bookId } });
-      Manage.words.push({ id: r.id, ...body });
-      Manage.words.sort((a, b) => a.word.localeCompare(b.word));
+      const result = await api('/api/words', { method: 'POST', body: { ...body, book_id: Manage.bookId } });
+      if (IS_ANDROID_APP) {
+        Manage.words.push({ id: result.id, ...body });
+        Manage.words.sort((a, b) => a.word.localeCompare(b.word));
+      }
     }
     $('#wordModal').classList.add('hidden');
-    Manage.renderTable();
     toast('已保存');
+    if (IS_ANDROID_APP) Manage.renderTable();
+    else await Manage.loadPage(Manage.page);
   } catch (err) { toast(err.message); }
 });
 
@@ -1395,8 +2233,14 @@ $('#importForm').addEventListener('submit', async (e) => {
     if (r.bad_total) msg += ` · ${r.bad_total} 行无法识别${r.bad.length ? '：' + r.bad.join('；') : ''}`;
     $('#importResult').textContent = msg;
     toast(`导入完成：${r.added} 词`);
-    if (r.added) Manage.words = await api(`/api/books/${Manage.bookId}/words`);
-    Manage.renderTable();
+    if (r.added) {
+      if (IS_ANDROID_APP) {
+        Manage.words = await api(`/api/books/${Manage.bookId}/words`);
+        Manage.renderTable();
+      } else {
+        await Manage.loadPage(1);
+      }
+    }
   } catch (err) { toast(err.message); }
 });
 
@@ -1404,31 +2248,76 @@ $('#importForm').addEventListener('submit', async (e) => {
    学习数据页
    ============================================================ */
 const Stats = {
+  requestToken: 0,
+  scope: 'all',
+
   async render() {
     show('stats');
+    if (!IS_ANDROID_APP) {
+      showPageLoading('正在加载学习统计范围…');
+      try {
+        const books = await api('/api/books');
+        if (location.hash !== '#/stats') return;
+        const select = $('#desktopStatsBookSelect');
+        const preferred = Home.selectedBookId || Number(localStorage.getItem('wordmaster_selected_book') || 0);
+        select.innerHTML = '<option value="all">全部词库</option>' + books.map(book =>
+          `<option value="${book.id}">${esc(book.name)}</option>`).join('');
+        select.value = books.some(book => book.id === preferred) ? String(preferred) : 'all';
+        this.scope = select.value;
+        select.onchange = () => {
+          this.scope = select.value;
+          void this.loadScoped(books);
+        };
+        await this.loadScoped(books);
+      } catch (error) {
+        showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+      }
+      return;
+    }
+    await this.loadScoped();
+  },
+
+  async loadScoped(books = []) {
+    const token = ++this.requestToken;
+    const chosen = !IS_ANDROID_APP && this.scope !== 'all'
+      ? books.find(book => String(book.id) === this.scope) : null;
+    const query = IS_ANDROID_APP ? '' : chosen ? `book_id=${chosen.id}` : 'scope=all';
     showPageLoading('正在汇总学习数据…');
     try {
       const [ov, daily, mistakes] = await Promise.all([
-        api('/api/stats/overview'), api('/api/stats/daily?days=90'), api('/api/mistakes')]);
+        api(`/api/stats/overview${query ? '?' + query : ''}`),
+        api(`/api/stats/daily?days=90${query ? '&' + query : ''}`),
+        api('/api/mistakes'),
+      ]);
+      if (token !== this.requestToken || location.hash !== '#/stats') return;
       clearPageStatus();
+      if (!IS_ANDROID_APP) {
+        $('#desktopStatsScopeNote').textContent = chosen
+          ? `当前范围：${chosen.name}。这里的待复习、新词、正确率和图表都来自这一本词库。`
+          : '当前范围：全部词库。待复习为所有词库总计；不同词库的每日新词目标不直接相加。';
+      }
       this.renderToday(ov);
       this.renderBars(daily);
       this.renderHeatmap(daily);
       this.renderLine(daily);
-      this.renderDifficult(mistakes);
+      this.renderDifficult(chosen ? mistakes.filter(word => word.book_name === chosen.name) : mistakes);
     } catch (error) {
-      showPageError(`学习数据暂时无法加载：${error.message}`, () => this.render());
+      if (token === this.requestToken) showPageError(`学习数据暂时无法加载：${error.message}`, () => this.loadScoped(books));
     }
   },
 
   renderToday(ov) {
     const t = ov.today;
+    const allBooks = !IS_ANDROID_APP && this.scope === 'all';
+    const newText = allBooks
+      ? `<b class="numeric">${t.new_today}</b><span>今日新学词数</span>`
+      : `<b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span>`;
     $('#statsToday').innerHTML = `
       <div class="today-cell"><b class="numeric">${ov.streak}</b><span>连续学习（天）</span></div>
-      <div class="today-cell"><b class="numeric">${t.due_review}</b><span>今日待复习</span></div>
-      <div class="today-cell"><b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span></div>
+      <div class="today-cell"><b class="numeric">${t.due_review}</b><span>待复习单词</span></div>
+      <div class="today-cell">${newText}</div>
       <div class="today-cell"><b class="numeric">${ov.total.today_reviewed}</b><span>今日已作答</span></div>
-      <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>总正确率</span></div>
+      <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>累计作答正确率</span></div>
       <div class="today-cell"><b class="numeric">${ov.total.mastered}</b><span>已掌握单词</span></div>`;
   },
 
@@ -1462,6 +2351,7 @@ const Stats = {
     const accuracy = totals.total ? Math.round(totals.correct / totals.total * 100) : 0;
     $('#chartRangeSummary').textContent = `${range} 天 · 作答 ${totals.total} 次 · 正确率 ${accuracy}% · 新词 ${totals.newWords} 个`;
     $('#chartBars').dataset.range = String(range);
+    $('#chartBars').classList.toggle('is-empty', totals.total === 0);
     $('#chartBars').closest('.chart-scroll')?.setAttribute(
       'aria-label',
       `近 ${range} 天学习量图表${range > 7 ? '，可横向滚动' : ''}`,
@@ -1488,9 +2378,11 @@ const Stats = {
         <span class="bar-label">${showLabel ? label : ''}</span>
       </button>`;
     }).join('');
-    $('#chartBarsLive').textContent = range === 7
-      ? '近 7 天按日期顺序排列；点按柱形可读出当天作答与新词数量。'
-      : '近 30 天按日期顺序排列；点按柱形可读出当天作答与新词数量，可横向滑动。';
+    $('#chartBarsLive').textContent = totals.total === 0
+      ? `近 ${range} 天尚无学习作答，开始学习后就会看到你的记录。`
+      : range === 7
+        ? '近 7 天按日期顺序排列；点按柱形可读出当天作答与新词数量。'
+        : '近 30 天按日期顺序排列；点按柱形可读出当天作答与新词数量，可横向滑动。';
     const announceBar = button => {
       $('#chartBarsLive').textContent = `${button.dataset.label}：共作答 ${button.dataset.total} 次，其中新词 ${button.dataset.new} 个。`;
     };

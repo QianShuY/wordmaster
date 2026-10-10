@@ -6,6 +6,7 @@
 <title>墨词 · WordMaster</title>
 <link rel="icon" href="logo.png">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="desktop-redesign.css">
 </head>
 <body>
 <div class="grain"></div>
@@ -52,13 +53,87 @@
         <h1 class="hero-title" id="todayTitle">今日</h1>
         <p class="hero-sub">先完成眼前的一小步，温故而知新。</p>
       </div>
+      <!-- Desktop command center. Keep legacy Today DOM untouched for Android. -->
+      <section id="desktopTodayHub" class="desktop-today-hub" aria-label="今天的学习计划与行动">
+        <div class="hub-heading">
+          <div>
+            <p class="hero-kicker">YOUR STUDY DESK · 学习中枢</p>
+            <h1 id="hubHeadingTitle">今天，继续向前。</h1>
+            <p>一份长期计划，一条清晰的今日路线。</p>
+          </div>
+          <div class="hub-date" id="desktopHubDate" aria-label="今日日期"></div>
+        </div>
+        <div class="hub-primary">
+          <article class="hub-plan" aria-labelledby="hubPlanTitle">
+            <div class="hub-plan-top">
+              <span class="hub-eyebrow">01 / 长期方向 · STUDY PLAN</span>
+              <span class="hub-plan-status" id="hubPlanStatus">读取计划中</span>
+            </div>
+            <label class="hub-book-label" for="desktopTodayBookSelect">当前学习词库</label>
+            <select id="desktopTodayBookSelect" aria-label="切换首页学习词库"></select>
+            <div class="hub-plan-description">
+              <h3 id="hubPlanTitle">为学习定一个方向</h3>
+              <p id="hubPlanSubtitle">为词库设定日期，墨词会结合剩余新词自动分配每天的学习量。</p>
+            </div>
+            <div class="hub-progress-label">
+              <span>新词学习覆盖</span>
+              <strong id="hubPlanPercent" class="numeric">0%</strong>
+            </div>
+            <div class="hub-progress-track" role="progressbar" aria-label="当前词库新词学习覆盖率" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="hubPlanProgress">
+              <span id="hubPlanProgressFill"></span>
+            </div>
+            <div class="hub-plan-metrics" id="hubPlanMetrics" aria-label="学习计划指标">
+              <div><strong class="numeric" id="hubRemaining">0</strong><span>尚未学习新词</span></div>
+              <div><strong class="numeric" id="hubDays">—</strong><span>目标剩余天数</span></div>
+              <div><strong class="numeric" id="hubQuota">15</strong><span>每日新词安排</span></div>
+            </div>
+            <div class="hub-plan-footer">
+              <p id="hubPlanFootnote">已有学习记录和复习计划都会保留。</p>
+              <button type="button" class="hub-plan-edit" id="hubEditPlan">设置学习计划 <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <aside class="hub-action" aria-labelledby="hubTodayHeading">
+            <div class="hub-eyebrow">02 / 当下任务 · TODAY'S ROUTE</div>
+            <h3 id="hubTodayHeading">今天先做什么？</h3>
+            <p id="hubActionSummary">墨词会优先安排到期复习，再衔接今日新词。</p>
+            <div class="hub-tasks">
+              <div class="hub-task-row">
+                <span><i class="hub-task-icon review" aria-hidden="true">↻</i> 到期复习</span>
+                <strong class="numeric" id="hubDueCount">0 <small>词</small></strong>
+              </div>
+              <div class="hub-task-row">
+                <span><i class="hub-task-icon learn" aria-hidden="true">＋</i> 今日新词</span>
+                <strong class="numeric" id="hubNewProgress">0 / 15</strong>
+              </div>
+            </div>
+            <div class="hub-daily-total" id="hubDailyTotal" role="status" aria-live="polite">
+              <span>本次今日任务</span>
+              <strong class="numeric" id="hubTotalNumber">0 <small>词</small></strong>
+            </div>
+            <p class="hub-route-preview" id="hubRoutePreview">到期复习 → 新词学习 → 巩固默写</p>
+            <button type="button" class="btn btn-primary hub-start" id="hubStart">开始今日学习 <span aria-hidden="true">→</span></button>
+            <button type="button" class="hub-mistakes hidden" id="hubMistakes">错题回炉 <span aria-hidden="true">↗</span></button>
+            <p class="hub-action-help" id="hubActionHelp">每天只需沿着这一条路线走下去。</p>
+            <p class="hub-resume-note hidden" id="hubResumeNote" aria-live="polite"></p>
+          </aside>
+        </div>
+      </section>
       <div class="today-panel">
         <div class="today-task-list" id="todayTaskSummary" aria-live="polite"></div>
         <div class="today-start">
           <label class="book-select-label" for="todayBookSelect">今天学习哪本词库</label>
           <select id="todayBookSelect" aria-describedby="todayNextAction"></select>
+          <label class="desktop-round-select" id="desktopRoundControl">
+            <span>单轮练习节奏</span>
+            <select id="desktopRoundSize" aria-label="每轮复习题量">
+              <option value="10">轻量 · 10 词</option>
+              <option value="20">标准 · 20 词</option>
+              <option value="40">强化 · 40 词</option>
+            </select>
+          </label>
           <p id="todayNextAction" class="today-next-action"></p>
           <button type="button" class="btn btn-primary today-continue" id="todayContinue">继续学习</button>
+          <button type="button" class="today-quick-mistakes hidden" id="todayQuickMistakes">↗ 针对错题再练一轮</button>
           <p id="todayEmptyMessage" class="today-empty-message hidden"></p>
         </div>
       </div>
@@ -69,6 +144,10 @@
           <p>先看词卡，再默写 1 个词。今天的小目标完成后，明天再接着学。</p>
         </div>
       </aside>
+      <!-- Desktop learning journey: Android intentionally keeps its current home screen
+           until the mobile implementation and native store are separately reviewed. -->
+      <section id="desktopJourney" class="desktop-journey hidden" aria-label="学习旅程与成长成就">
+      </section>
     </section>
 
     <section id="booksSection" class="books-section hidden" aria-labelledby="booksTitle">
@@ -76,7 +155,7 @@
         <div>
           <p class="hero-kicker">YOUR WORDSHELF</p>
           <h1 id="booksTitle">词库</h1>
-          <p>管理学习材料与计划；开始学习请回到「今日」。</p>
+          <p>收藏、导入和整理词库；每日计划请回到「今日」。</p>
         </div>
         <button type="button" class="btn btn-primary" id="newBookToggle"><span class="plus">＋</span> 新建词库</button>
       </div>
@@ -101,14 +180,26 @@
         <span id="studyProgressText" aria-live="polite"></span>
       </div>
       <div class="study-mode-tag" id="studyModeTag" aria-live="polite"></div>
+      <button type="button" id="studyFocusToggle" class="btn btn-ghost study-focus-toggle" aria-pressed="false" title="隐藏导航与装饰，让注意力回到题目">◉ 专注</button>
+    </div>
+
+    <div id="desktopStudyJourney" class="desktop-study-journey hidden" aria-label="今日学习路线">
+      <div class="desktop-study-steps" id="desktopStudySteps" role="list"></div>
+      <div class="desktop-study-overall">
+        <span id="desktopStudyOverallText" aria-live="polite">本日任务进度</span>
+        <div class="desktop-study-overall-bar"><span id="desktopStudyOverallFill"></span></div>
+      </div>
     </div>
 
     <div class="study-stage" id="studyStage" aria-live="polite"></div>
 
     <div class="study-done hidden" id="studyDone">
       <div class="done-seal">成</div>
-      <h2>本轮完成</h2>
+      <p class="desktop-done-eyebrow hidden" id="desktopDoneEyebrow">STUDY MILESTONE · 今日旅程</p>
+      <h2 id="studyDoneTitle">本轮完成</h2>
       <p id="doneSummary"></p>
+      <p id="doneXp" class="done-xp hidden" aria-live="polite"></p>
+      <div id="desktopDoneJourney" class="desktop-done-journey hidden"></div>
       <button type="button" class="btn btn-vermilion hidden" id="doneDraw">✦ 领取今日卡牌</button>
       <div class="form-actions">
         <button class="btn btn-primary" id="doneAgain">再来一轮</button>
@@ -125,12 +216,35 @@
       <button class="btn" id="importBtn">⇪ 批量导入</button>
       <button class="btn btn-primary" id="addWordBtn">＋ 添加单词</button>
     </div>
+    <div class="manage-toolbar hidden" id="desktopManageToolbar">
+      <label class="manage-search">
+        <span class="manage-search-caption">快速查找</span>
+        <input type="search" id="manageSearch" autocomplete="off" maxlength="80" placeholder="搜索单词或中文释义，例如 resilience / 坚韧">
+      </label>
+      <label class="manage-filter">
+        <span class="manage-search-caption">学习状态</span>
+        <select id="manageStatus">
+          <option value="all">全部单词</option>
+          <option value="new">尚未学习</option>
+          <option value="due">待复习</option>
+          <option value="mistakes">待回炉错题</option>
+          <option value="mastered">已掌握</option>
+        </select>
+      </label>
+      <button type="button" class="btn btn-ghost manage-reset" id="manageReset">清除筛选</button>
+    </div>
+    <div class="manage-result-bar hidden" id="desktopManageResult" role="status" aria-live="polite"></div>
     <div class="word-table-wrap">
       <table class="word-table">
         <thead><tr><th>单词</th><th>音标</th><th>词性</th><th>释义</th><th>例句</th><th></th></tr></thead>
         <tbody id="wordTableBody"></tbody>
       </table>
     </div>
+    <nav class="manage-pagination hidden" id="desktopManagePages" aria-label="词库分页">
+      <button type="button" class="btn btn-ghost" id="managePrev">← 上一页</button>
+      <span id="managePageInfo" class="numeric" aria-live="polite"></span>
+      <button type="button" class="btn btn-ghost" id="manageNext">下一页 →</button>
+    </nav>
   </section>
 
   <!-- ============ 视图：错题本 ============ -->
@@ -151,6 +265,26 @@
 
   <!-- ============ 视图：学习数据 ============ -->
   <section id="view-stats" class="view hidden">
+    <div class="stats-backup" id="desktopBackupPanel">
+      <div>
+        <strong>给学习成果留一份底稿</strong>
+        <p>电脑端可下载完整学习数据库，包含词库、学习进度、错题记录和卡牌收藏。</p>
+      </div>
+      <a class="btn btn-ghost" href="/api/backup" download>↓ 备份学习数据</a>
+    </div>
+    <div class="desktop-stats-scope" id="desktopStatsScope">
+      <div>
+        <span class="stats-scope-eyebrow">LEARNING REVIEW · 学习复盘</span>
+        <h2>看清自己的进步</h2>
+        <p id="desktopStatsScopeNote">选择词库，查看对应的学习成果。</p>
+      </div>
+      <label for="desktopStatsBookSelect">
+        <span>统计范围</span>
+        <select id="desktopStatsBookSelect">
+          <option value="all">全部词库</option>
+        </select>
+      </label>
+    </div>
     <div class="stats-today" id="statsToday"></div>
 
     <div class="stats-panels">
@@ -297,6 +431,58 @@ ambitious 有雄心的</pre>
   </form>
 </div>
 
+<!-- Desktop-only full study plan workspace; Android continues to use planModal. -->
+<div class="modal-mask hidden desktop-plan-mask" id="desktopPlanModal" role="presentation">
+  <form class="desktop-plan-editor" id="desktopPlanForm" role="dialog" aria-modal="true" aria-labelledby="desktopPlanTitle">
+    <div class="desktop-plan-header">
+      <div>
+        <p class="hero-kicker">PLAN YOUR PROGRESS</p>
+        <h2 id="desktopPlanTitle">安排学习计划</h2>
+        <p id="desktopPlanBookName"></p>
+      </div>
+      <button type="button" class="desktop-plan-close" id="desktopPlanClose" aria-label="关闭学习计划">×</button>
+    </div>
+    <div class="desktop-plan-body">
+      <div class="desktop-plan-settings">
+        <p class="desktop-plan-step">01 / 确定目标日期</p>
+        <label for="desktopPlanDate">希望在什么时候学完新词？</label>
+        <input type="date" id="desktopPlanDate" required>
+        <div class="desktop-plan-presets" role="group" aria-label="常用学习周期">
+          <button type="button" data-plan-days="14">两周</button>
+          <button type="button" data-plan-days="30">一个月</button>
+          <button type="button" data-plan-days="60">两个月</button>
+          <button type="button" data-plan-days="90">三个月</button>
+        </div>
+        <div class="desktop-plan-context">
+          <span>词库总量 <b id="desktopPlanTotal" class="numeric">0</b> 词</span>
+          <span>尚未学习 <b id="desktopPlanUnseen" class="numeric">0</b> 词</span>
+          <span>已掌握 <b id="desktopPlanMastered" class="numeric">0</b> 词</span>
+        </div>
+      </div>
+      <div class="desktop-plan-preview">
+        <p class="desktop-plan-step">02 / 预览每日安排</p>
+        <p class="desktop-plan-preview-label">预计每日需要学习</p>
+        <div class="desktop-plan-big"><b class="numeric" id="desktopPlanDaily">—</b><span>个新词 / 天</span></div>
+        <div class="desktop-plan-preview-separator"></div>
+        <div class="desktop-plan-facts">
+          <div><span>目标剩余时间</span><strong id="desktopPlanDays">—</strong></div>
+          <div><span>计划结束日期</span><strong id="desktopPlanDeadline">未设置</strong></div>
+          <div><span>复习任务</span><strong>按到期日优先</strong></div>
+        </div>
+        <p class="desktop-plan-advice" id="desktopPlanAdvice" role="status" aria-live="polite">选一个目标日期，这里会实时估算学习节奏。</p>
+      </div>
+    </div>
+    <div class="desktop-plan-bottom">
+      <p>每天的新词数量会随剩余任务动态更新；复习仍按原有遗忘曲线执行。</p>
+      <div class="desktop-plan-buttons">
+        <button type="button" class="btn btn-ghost" id="desktopPlanRemove">移除目标</button>
+        <button type="button" class="btn btn-ghost" id="desktopPlanCancel">返回</button>
+        <button type="submit" class="btn btn-primary" id="desktopPlanSave">保存学习计划</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 <!-- 学习计划弹窗 -->
 <div class="modal-mask hidden" id="planModal">
   <form class="modal" id="planForm">
@@ -317,6 +503,7 @@ ambitious 有雄心的</pre>
 <div class="toast hidden" id="toast"></div>
 
 <script src="/shared/domain.js"></script>
+<script src="/shared/desktop-checkpoint.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

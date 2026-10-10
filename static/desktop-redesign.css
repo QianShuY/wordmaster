@@ -1,0 +1,540 @@
+/* 墨词电脑端 · 学习中枢视觉体系 V1.2
+ * Avoid changing Android's legacy home or native bridge.
+ * Design: spacious paper, quiet pine green, precise red ink.
+ */
+.desktop-today-hub { display: none; }
+.desktop-plan-mask { display: none; }
+html.is-android-app .desktop-today-hub,
+html.is-android-app .desktop-plan-mask { display: none !important; }
+
+@media (min-width: 721px) {
+  html:not(.is-android-app) main:has(.today-page:not(.hidden)) {
+    max-width: 1296px;
+    padding-top: 34px;
+  }
+}
+html:not(.is-android-app) .today-page {
+  max-width: 1160px;
+}
+html:not(.is-android-app) .today-page > .today-heading,
+html:not(.is-android-app) .today-page > .today-panel {
+  display: none !important;
+}
+html:not(.is-android-app) .desktop-today-hub {
+  display: block;
+  margin: 0 auto 24px;
+}
+html:not(.is-android-app) .today-page > .desktop-journey {
+  max-width: 1160px;
+  margin-top: 30px;
+}
+html:not(.is-android-app) .today-page > .first-run-guide {
+  max-width: 1160px;
+  margin-top: 18px;
+}
+
+.hub-heading {
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 30px;
+  padding: 22px 0 28px;
+}
+.hub-heading .hero-kicker { margin-bottom: 11px; letter-spacing: .25em; }
+.hub-heading h1 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.9vw, 51px);
+  font-weight: 620;
+  letter-spacing: -.025em;
+  line-height: 1.16;
+}
+.hub-heading p:last-child {
+  margin-top: 12px; color: var(--ink-soft); font-size: 14px;
+  line-height: 1.7; letter-spacing: .035em;
+}
+.hub-date {
+  flex: none; padding: 8px 0 4px;
+  color: #766d5d; font-family: var(--serif); font-size: 16px;
+  text-align: right; letter-spacing: .04em;
+}
+.hub-primary {
+  display: grid; grid-template-columns: minmax(0, 1.44fr) minmax(320px, .86fr);
+  gap: 18px; align-items: stretch;
+}
+.hub-plan, .hub-action {
+  position: relative;
+  min-width: 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(46,41,32,.045), 0 16px 44px rgba(46,41,32,.075);
+  overflow: hidden;
+}
+.hub-plan {
+  padding: 30px 36px 27px;
+  border: 1px solid #dcd5c8;
+  background:
+    linear-gradient(126deg, rgba(255,253,248,.98), rgba(250,247,239,.94) 66%, rgba(241,238,228,.96));
+}
+.hub-plan::before {
+  content: ''; position: absolute; left: 0; top: 30px; bottom: 30px;
+  width: 3px; background: #b65a45; border-radius: 0 3px 3px 0;
+}
+.hub-plan-top, .hub-plan-footer, .hub-progress-label,
+.hub-plan-metrics, .hub-task-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.hub-eyebrow {
+  color: #9a604e; font-size: 11px; font-weight: 700;
+  letter-spacing: .14em; line-height: 1.6;
+}
+.hub-plan-status {
+  flex: none; color: #436655;
+  background: rgba(47,93,80,.08); border: 1px solid rgba(47,93,80,.14);
+  border-radius: 50px; padding: 5px 12px; font-size: 11px;
+}
+.hub-book-label {
+  display: block; margin-top: 30px; margin-bottom: 8px;
+  color: #8d8170; font-size: 12px; letter-spacing: .02em;
+}
+#desktopTodayBookSelect {
+  display: block; width: 100%; max-width: 520px; min-height: 51px;
+  padding: 9px 40px 10px 15px;
+  background: #fffdfa; border: 1px solid #dbd1c0;
+  border-radius: 11px; font-family: var(--sans); font-size: 17px; font-weight: 600;
+  color: var(--ink); cursor: pointer;
+}
+#desktopTodayBookSelect:focus-visible { outline-color: var(--pine); }
+.hub-plan-description { min-height: 113px; padding: 21px 0 14px; }
+.hub-plan-description h3 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(23px, 2.55vw, 30px); line-height: 1.32;
+}
+.hub-plan-description p {
+  max-width: 510px; margin-top: 8px;
+  color: var(--ink-soft); font-size: 13px; line-height: 1.72;
+}
+.hub-progress-label { margin: 12px 0 9px; color: var(--ink-soft); font-size: 12px; }
+.hub-progress-label strong { color: var(--pine); font-size: 17px; }
+.hub-progress-track {
+  width: 100%; height: 9px; overflow: hidden;
+  border-radius: 999px; background: #e7e2d8;
+}
+.hub-progress-track span {
+  display: block; width: 0; height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, #4d7867, #8cae8b);
+  transition: width .42s cubic-bezier(.22,1,.36,1);
+}
+.hub-plan-metrics {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;
+  margin-top: 23px; padding-bottom: 22px; border-bottom: 1px solid #e4ddcf;
+}
+.hub-plan-metrics > div {
+  display: grid; justify-items: start; align-content: start; gap: 6px;
+  min-width: 0; padding-inline: 16px; border-left: 1px solid #e4ddcf;
+}
+.hub-plan-metrics > div:first-child { padding-left: 0; border-left: 0; }
+.hub-plan-metrics strong {
+  display: block; font-size: clamp(26px, 3vw, 35px); font-weight: 670;
+  line-height: 1.15; color: var(--ink);
+}
+.hub-plan-metrics span { font-size: 12px; color: var(--ink-soft); line-height: 1.6; }
+.hub-plan-footer { align-items: flex-end; margin-top: 20px; }
+.hub-plan-footer p { max-width: 280px; font-size: 12px; line-height: 1.6; color: #8c8172; }
+.hub-plan-edit {
+  flex: none; padding: 10px 15px; border: 1px solid rgba(47,93,80,.25);
+  border-radius: 10px; background: rgba(47,93,80,.06);
+  color: #2e6250; font: inherit; font-size: 13px; font-weight: 650;
+  cursor: pointer; transition: background .15s, border-color .15s, transform .15s;
+}
+.hub-plan-edit span { margin-left: 9px; font-size: 15px; }
+.hub-plan-edit:hover { background: rgba(47,93,80,.13); border-color: rgba(47,93,80,.43); transform: translateY(-1px); }
+
+.hub-action {
+  display: flex; flex-direction: column;
+  padding: 32px 31px 28px;
+  border: 1px solid #304f43;
+  background: linear-gradient(145deg, #345b4c 0%, #244639 90%);
+  color: #f6f3e9;
+}
+.hub-action .hub-eyebrow { color: #d9b997; }
+.hub-action h3 {
+  margin-top: 20px; font-family: var(--serif);
+  font-weight: 600; font-size: 27px; letter-spacing: -.012em;
+}
+.hub-action > p#hubActionSummary {
+  margin-top: 9px; font-size: 13px; line-height: 1.75;
+  color: rgba(248,244,230,.8);
+}
+.hub-tasks {
+  margin-top: 25px; border-top: 1px solid rgba(252,248,235,.17);
+  border-bottom: 1px solid rgba(252,248,235,.17);
+}
+.hub-task-row { min-height: 66px; }
+.hub-task-row + .hub-task-row { border-top: 1px solid rgba(252,248,235,.1); }
+.hub-task-row > span {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 13px; color: rgba(251,247,232,.9);
+}
+.hub-task-icon {
+  display: inline-grid; place-items: center;
+  width: 30px; height: 30px; border-radius: 9px; font-size: 17px;
+  font-style: normal; color: #f3e6cf; background: rgba(255,255,255,.1);
+}
+.hub-task-row strong { font-size: 25px; font-weight: 680; white-space: nowrap; }
+.hub-task-row strong small { font-size: 12px; font-weight: 400; color: rgba(251,247,232,.7); }
+.hub-round-label {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 19px; font-size: 12px; color: rgba(252,249,235,.82);
+}
+#desktopHubRound {
+  width: min(55%, 189px); min-height: 40px; padding: 8px 10px;
+  color: #244639; background: #f8f5eb; border: 1px solid rgba(250,244,232,.28);
+  border-radius: 9px; font: inherit; font-size: 12px; cursor: pointer;
+}
+.hub-start {
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; min-height: 56px; margin-top: 27px;
+  padding: 12px 21px; border-radius: 11px; border-color: #f4e7d1;
+  background: #f3e9d8; color: #264d3c; font-weight: 720; font-size: 16px;
+  box-shadow: 0 4px 0 rgba(11,30,22,.15);
+}
+.hub-start span { font-size: 21px; }
+.hub-start:hover { background: #fff9ec; box-shadow: 0 5px 0 rgba(11,30,22,.18); }
+.hub-start:disabled { color: rgba(38,77,60,.45); box-shadow: none; }
+.hub-mistakes {
+  align-self: center; margin-top: 16px; padding: 6px 11px;
+  border: 0; border-bottom: 1px solid rgba(250,246,228,.4);
+  background: transparent; color: #f4dcb9; font: inherit; font-size: 13px;
+  cursor: pointer;
+}
+.hub-mistakes span { margin-left: 8px; }
+.hub-action-help { margin-top: auto; padding-top: 15px; color: rgba(249,244,231,.61); font-size: 11px; line-height: 1.6; text-align: center; }
+
+/* Main editor: generous canvas and immediate, honest pacing feedback. */
+html:not(.is-android-app) #desktopPlanModal:not(.hidden) {
+  display: grid; place-items: center;
+  padding: 28px 18px;
+  background: rgba(24,27,23,.52);
+  backdrop-filter: blur(8px);
+}
+.desktop-plan-editor {
+  display: flex; flex-direction: column; width: min(860px, 100%);
+  max-height: min(860px, calc(100dvh - 48px)); overflow: auto;
+  background: #fcfaf5; border: 1px solid #d7cfc0; border-radius: 20px;
+  box-shadow: 0 18px 90px rgba(16,22,18,.28);
+  animation: viewIn .22s ease-out both;
+}
+.desktop-plan-header {
+  display: flex; justify-content: space-between; gap: 20px;
+  padding: 34px 39px 22px; border-bottom: 1px solid #e6dfd2;
+}
+.desktop-plan-header .hero-kicker { margin-bottom: 8px; font-size: 10px; }
+.desktop-plan-header h2 { font-family: var(--serif); font-size: 32px; font-weight: 620; }
+.desktop-plan-header p:last-child { margin-top: 5px; font-size: 14px; color: var(--ink-soft); }
+.desktop-plan-close {
+  flex: none; align-self: flex-start;
+  width: 38px; height: 38px; border: 1px solid #e1d9ca; border-radius: 50%;
+  background: #f9f5ee; color: var(--ink-soft); font-size: 27px;
+  font-weight: 300; line-height: 1; cursor: pointer;
+}
+.desktop-plan-close:hover { background: #ebe5d9; color: var(--ink); }
+.desktop-plan-body {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  min-height: 330px; padding: 0 39px; gap: 32px;
+}
+.desktop-plan-settings, .desktop-plan-preview { min-width: 0; padding: 32px 0 30px; }
+.desktop-plan-settings { display: flex; flex-direction: column; }
+.desktop-plan-preview {
+  padding-left: 30px; border-left: 1px solid #e5ded1;
+}
+.desktop-plan-step { color: #a05c42; font-size: 11px; font-weight: 700; letter-spacing: .11em; }
+.desktop-plan-settings > label {
+  margin-top: 26px; margin-bottom: 9px;
+  font-size: 15px; color: var(--ink); font-weight: 650;
+}
+#desktopPlanDate { width: 100%; min-height: 54px; background: #fffdf9; border: 1px solid #d9cfbf; font-size: 17px; }
+.desktop-plan-presets { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 7px; margin-top: 12px; }
+.desktop-plan-presets button {
+  min-height: 38px; padding: 7px 4px; border: 1px solid #e0d8c9;
+  border-radius: 7px; background: #f7f2e8; color: #695c4e;
+  font-family: var(--sans); font-size: 12px; cursor: pointer;
+}
+.desktop-plan-presets button:hover, .desktop-plan-presets button[aria-pressed="true"] {
+  background: #e6ede6; color: #2f5d50; border-color: #8fae9d;
+}
+.desktop-plan-context {
+  display: flex; flex-wrap: wrap; gap: 9px 17px;
+  margin-top: auto; padding-top: 27px; color: var(--ink-soft); font-size: 12px;
+}
+.desktop-plan-context b { color: var(--ink); }
+.desktop-plan-preview-label { margin-top: 26px; font-size: 13px; color: var(--ink-soft); }
+.desktop-plan-big { display: flex; align-items: baseline; gap: 10px; margin-top: 1px; }
+.desktop-plan-big b { font-size: clamp(50px, 5vw, 67px); line-height: 1.25; color: var(--pine); }
+.desktop-plan-big span { font-size: 13px; color: var(--ink-soft); }
+.desktop-plan-preview-separator { margin: 14px 0; height: 1px; background: #e4dccc; }
+.desktop-plan-facts { display: grid; gap: 12px; }
+.desktop-plan-facts > div { display: flex; justify-content: space-between; gap: 14px; color: #807466; font-size: 12px; }
+.desktop-plan-facts strong { color: var(--ink); font-size: 12px; font-weight: 650; text-align: right; }
+.desktop-plan-advice {
+  margin-top: 23px; padding: 13px 15px; border-radius: 9px;
+  background: #e9f0ea; color: #315f4a; font-size: 12px; line-height: 1.65;
+}
+.desktop-plan-advice.is-warning { color: #9a4b35; background: #f8e9e0; }
+.desktop-plan-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 23px; padding: 20px 39px 27px;
+  background: #f5f0e6; border-top: 1px solid #e5decf;
+}
+.desktop-plan-bottom > p { max-width: 240px; font-size: 11px; color: #887c6b; line-height: 1.7; }
+.desktop-plan-buttons { display: flex; gap: 9px; align-items: center; }
+.desktop-plan-buttons .btn { min-height: 45px; padding: 10px 16px; white-space: nowrap; font-size: 13px; }
+#desktopPlanRemove { margin-right: 8px; border-color: transparent; color: #a14c38; background: transparent; }
+#desktopPlanRemove:hover { border-color: #ccab9f; }
+
+/* Desktop study: make controls behave like one coherent rail. */
+@media (min-width: 721px) {
+  html:not(.is-android-app) body.is-studying main { max-width: 1100px; padding-top: 44px; }
+  html:not(.is-android-app) .study-top {
+    gap: 15px; padding: 14px 18px; margin-bottom: 24px;
+    border: 1px solid rgba(221,211,191,.85); border-radius: 13px;
+    background: rgba(255,253,248,.8);
+  }
+  html:not(.is-android-app) .study-stage,
+  html:not(.is-android-app) .study-stage.dictionary-stage { max-width: 810px; }
+  html:not(.is-android-app) .quiz-card { border-radius: 18px; padding: 41px 50px 35px; }
+  html:not(.is-android-app) .dictionary-entry { padding: 39px 46px 35px; }
+  html:not(.is-android-app) .dictionary-headword { font-size: clamp(47px, 4.9vw, 68px); }
+  html:not(.is-android-app) .dictionary-actions { gap: 12px; }
+  html:not(.is-android-app) .dictionary-actions .btn { min-width: 174px; }
+  html:not(.is-android-app) .dictionary-actions .btn-primary { background: #2d5a48; border-color: #2d5a48; }
+  html:not(.is-android-app) .dictionary-actions .btn-primary:hover { box-shadow: 3px 3px 0 rgba(47,93,80,.29); }
+}
+
+@media (max-width: 980px) {
+  .hub-primary { grid-template-columns: 1fr; gap: 14px; }
+  .hub-plan { padding-inline: 29px; }
+  .hub-action { padding: 25px 29px; }
+  .hub-action h3 { margin-top: 10px; }
+  .hub-tasks { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: 16px; }
+  .hub-task-row { padding: 8px 11px; }
+  .hub-task-row + .hub-task-row { border-top: 0; border-left: 1px solid rgba(252,248,235,.17); }
+  .hub-start { margin-top: 16px; }
+  .hub-action-help { margin-top: 5px; }
+}
+@media (max-width: 720px) {
+  html:not(.is-android-app) .today-page { max-width: 100%; }
+  .hub-heading { align-items: flex-start; padding: 0 0 22px; gap: 8px; }
+  .hub-heading h1 { font-size: 32px; }
+  .hub-heading p:last-child { font-size: 12px; }
+  .hub-date { display: none; }
+  .hub-plan { padding: 23px 20px; border-radius: 14px; }
+  .hub-plan-top { align-items: flex-start; }
+  .hub-eyebrow { font-size: 10px; }
+  .hub-book-label { margin-top: 21px; }
+  #desktopTodayBookSelect { max-width: none; font-size: 15px; }
+  .hub-plan-description { min-height: 0; padding: 18px 0; }
+  .hub-plan-description h3 { font-size: 23px; }
+  .hub-plan-metrics > div { padding-inline: 8px; }
+  .hub-plan-metrics strong { font-size: 25px; }
+  .hub-plan-metrics span { font-size: 10px; }
+  .hub-plan-footer { flex-wrap: wrap; }
+  .hub-plan-footer p { max-width: 100%; }
+  .hub-plan-edit { width: 100%; }
+  .hub-action { padding: 24px 20px; border-radius: 14px; }
+  .hub-tasks { grid-template-columns: 1fr; }
+  .hub-task-row { padding: 8px 0; }
+  .hub-task-row + .hub-task-row { border-top: 1px solid rgba(252,248,235,.17); border-left: 0; }
+  .desktop-plan-editor { max-height: calc(100dvh - 24px); }
+  .desktop-plan-header { padding: 24px 20px 16px; }
+  .desktop-plan-header h2 { font-size: 26px; }
+  .desktop-plan-body { grid-template-columns: 1fr; gap: 0; padding: 0 20px; }
+  .desktop-plan-settings { padding: 19px 0; }
+  .desktop-plan-context { margin-top: 0; padding-top: 18px; }
+  .desktop-plan-preview { padding: 17px 0 19px; border-left: 0; border-top: 1px solid #e4ddcf; }
+  .desktop-plan-preview-label { margin-top: 15px; }
+  .desktop-plan-bottom { flex-direction: column; align-items: stretch; gap: 15px; padding: 17px 20px; }
+  .desktop-plan-bottom > p { max-width: 100%; }
+  .desktop-plan-buttons { justify-content: space-between; flex-wrap: wrap; }
+  .desktop-plan-buttons .btn { padding: 10px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hub-progress-track span, .hub-plan-edit { transition: none; }
+}
+
+/* Word shelf is for collection management; plan editing belongs to the home desk. */
+html:not(.is-android-app) #booksGrid [data-home-action="plan"] { display: none !important; }
+
+/* Dashboard-style stat hierarchy: due reviews are actionable, accuracy is context. */
+@media (min-width: 721px) {
+  html:not(.is-android-app) .stats-today {
+    display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px; margin-top: 6px; margin-bottom: 28px; border: 0;
+  }
+  html:not(.is-android-app) .stats-today .today-cell {
+    padding: 19px 15px; border: 1px solid #ded6c8; border-radius: 11px;
+    background: #fffcf6;
+  }
+  html:not(.is-android-app) .stats-today .today-cell b { font-size: 29px; }
+  html:not(.is-android-app) .stats-today .today-cell:nth-child(2) {
+    border-color: #b9ccc0; background: #eaf1e9;
+  }
+  html:not(.is-android-app) .stats-today .today-cell:nth-child(2) b { color: #315a47; font-size: 34px; }
+  html:not(.is-android-app) .stats-panels .stats-panel {
+    border-radius: 14px; padding: 24px 25px;
+    background: #fffdfa; box-shadow: 0 3px 22px rgba(33,29,24,.055);
+  }
+}
+@media (min-width: 721px) and (max-width: 1040px) {
+  html:not(.is-android-app) .stats-today { grid-template-columns: repeat(3, minmax(0,1fr)); }
+}
+html:not(.is-android-app) .chart-bars.is-empty {
+  position: relative;
+}
+html:not(.is-android-app) .chart-bars.is-empty::after {
+  content: '还没有这一阶段的学习记录，从今天开始写下第一笔。';
+  position: absolute; top: 37%; left: 50%; width: min(90%, 330px);
+  transform: translate(-50%, -50%);
+  color: #8c8070; font-size: 12px; line-height: 1.6; text-align: center;
+  pointer-events: none;
+}
+
+/* V1.3: A single daily journey replaces the ambiguous 10/20/40 question cap. */
+.hub-daily-total {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  margin-top: 20px; padding: 15px 18px; border: 1px solid rgba(244,238,218,.22);
+  border-radius: 11px; background: rgba(255,255,255,.085);
+}
+.hub-daily-total > span { color: rgba(251,247,232,.88); font-size: 13px; }
+.hub-daily-total strong { color: #f5ebd7; font-size: 29px; font-weight: 700; }
+.hub-daily-total strong small { color: rgba(251,247,232,.75); font-size: 12px; font-weight: 400; }
+.hub-route-preview {
+  min-height: 21px; margin-top: 11px; color: rgba(252,248,234,.72);
+  font-size: 12px; line-height: 1.7;
+}
+.hub-start { margin-top: 22px; }
+.desktop-stats-scope {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 24px; margin: 25px 0 24px;
+}
+.stats-scope-eyebrow {
+  display: block; margin-bottom: 8px;
+  color: #ad624d; font-size: 11px; font-weight: 700; letter-spacing: .19em;
+}
+.desktop-stats-scope h2 {
+  color: var(--ink); font: 600 clamp(23px, 2.6vw, 31px)/1.3 var(--serif);
+}
+.desktop-stats-scope p {
+  margin-top: 9px; color: var(--ink-soft); font-size: 13px; line-height: 1.7;
+}
+.desktop-stats-scope label {
+  display: flex; align-items: center; gap: 12px; flex: none;
+  color: var(--ink-soft); font-size: 13px;
+}
+#desktopStatsBookSelect {
+  min-width: 220px; max-width: 320px; min-height: 46px;
+  padding: 9px 14px; border-radius: 10px;
+  border: 1px solid #d8cfbe; background: #fffdfa;
+  font: 600 14px/1.4 var(--sans); color: var(--ink);
+}
+html.is-android-app .desktop-stats-scope { display: none !important; }
+/* The inherited rule accidentally shrunk the *number* to 58% of 29px.
+   Only the percent sign should be small. */
+html:not(.is-android-app) .stats-today .today-cell b.metric-percent-value {
+  display: flex !important; align-items: baseline; gap: 2px;
+  font-family: var(--numeric-font); font-size: 32px;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+html:not(.is-android-app) .stats-today .today-cell b.metric-percent-value > span {
+  display: inline; font-size: 1em !important; line-height: 1.1; color: var(--ink);
+}
+html:not(.is-android-app) .stats-today .today-cell b.metric-percent-value > i {
+  font-size: .5em !important; font-style: normal; font-weight: 500;
+  color: var(--ink-soft); line-height: 1.2;
+}
+html:not(.is-android-app) .stats-today .today-cell b.metric-fraction .metric-current {
+  font-size: 1em;
+}
+html:not(.is-android-app) .stats-today .today-cell b.metric-fraction .metric-target {
+  font-size: .55em; font-weight: 500; color: var(--ink-faint);
+}
+@media (max-width: 720px) {
+  .desktop-stats-scope { align-items: stretch; flex-direction: column; gap: 16px; margin-top: 12px; }
+  .desktop-stats-scope label { justify-content: space-between; }
+  #desktopStatsBookSelect { min-width: 0; width: 70%; }
+}
+
+/* V1.4 · 让学习旅程可见，而不是只显示一条模糊的百分比线。 */
+.desktop-study-journey {
+  max-width: 850px; margin: -7px auto 24px; padding: 17px 23px 15px;
+  border: 1px solid #ded7c9; border-radius: 15px;
+  background: linear-gradient(130deg, rgba(255,253,247,.92), rgba(246,244,236,.88));
+  box-shadow: 0 7px 20px rgba(54,43,31,.045);
+}
+.desktop-study-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; }
+.desktop-journey-step {
+  display: flex; gap: 10px; align-items: center; min-width: 0;
+  padding: 10px 11px; border: 1px solid transparent; border-radius: 10px;
+  background: rgba(234,230,220,.43);
+  color: #8c8375;
+}
+.desktop-journey-step.active {
+  background: #e6ede6; color: #285743; border-color: #b4cabb;
+}
+.desktop-journey-step.finished { background: #f0f2e9; color: #3c6e54; }
+.desktop-journey-step-number {
+  display: grid; place-items: center; flex: 0 0 34px;
+  height: 34px; border: 1px solid #d7cfc1; border-radius: 50%;
+  font-family: var(--numeric-font); font-size: 12px; font-weight: 700;
+}
+.desktop-journey-step.active .desktop-journey-step-number {
+  background: #315f4d; border-color: #315f4d; color: #fff8ed;
+}
+.desktop-journey-step.finished .desktop-journey-step-number {
+  border-color: #b5cbac; background: #dceadb; color: #2e6249;
+}
+.desktop-journey-step-text { min-width: 0; display: grid; gap: 3px; }
+.desktop-journey-step-text strong { font-family: var(--sans); font-size: 13px; font-weight: 670; }
+.desktop-journey-step-text small { color: inherit; opacity: .8; font-size: 11px; }
+.desktop-study-overall { display: flex; align-items: center; gap: 15px; margin-top: 13px; }
+#desktopStudyOverallText { flex: none; color: #7e7464; font-size: 11px; }
+.desktop-study-overall-bar {
+  flex: 1; height: 5px; border-radius: 99px;
+  background: #e5dfd3; overflow: hidden;
+}
+.desktop-study-overall-bar span {
+  display: block; width: 0; height: 100%; border-radius: inherit;
+  background: #557961; transition: width .35s ease-out;
+}
+html.is-android-app .desktop-study-journey { display: none !important; }
+.desktop-done-eyebrow { color: #a66953; font-size: 11px; letter-spacing: .16em; font-weight: 650; }
+.desktop-done-journey {
+  max-width: 610px; margin: 22px auto 25px; padding: 20px 23px 16px;
+  border-radius: 13px; border: 1px solid #ded6c9;
+  background: #fffcf7; text-align: left;
+}
+.desktop-done-head { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.desktop-done-head > span { font-size: 12px; color: #7c6d5c; }
+.desktop-done-head strong { font-size: 17px; color: #2c604a; }
+.desktop-done-numbers {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px; margin-top: 16px; padding: 15px 0;
+  border-top: 1px solid #e8e2d5; border-bottom: 1px solid #e8e2d5;
+}
+.desktop-done-numbers > div { display: grid; justify-content: center; gap: 4px; text-align: center; }
+.desktop-done-numbers strong { font-size: 30px; color: #24231f; }
+.desktop-done-numbers small { font-size: 11px; color: #847b6c; }
+.desktop-done-journey p { margin: 13px 0 0; color: #817463; font-size: 12px; line-height: 1.65; text-align: center; }
+.hub-resume-note {
+  margin: 11px 0 0; padding: 9px 12px; border-radius: 8px;
+  background: rgba(237,245,229,.09); border: 1px solid rgba(238,246,229,.25);
+  color: #e6ecd6; font-size: 12px; line-height: 1.6; text-align: center;
+}
+@media (max-width: 760px) {
+  .desktop-study-journey { padding: 14px 12px; }
+  .desktop-study-steps { gap: 6px; }
+  .desktop-journey-step { padding: 8px 5px; flex-direction: column; gap: 6px; }
+  .desktop-journey-step-text { justify-items: center; text-align: center; }
+  .desktop-journey-step-text strong { font-size: 11px; }
+  .desktop-journey-step-text small { font-size: 10px; }
+  .desktop-study-overall { flex-direction: column; align-items: stretch; gap: 7px; }
+  .desktop-done-journey { padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .desktop-study-overall-bar span { transition: none; }
+}
