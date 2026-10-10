@@ -204,6 +204,7 @@ function route() {
   const guidedM = hash.match(/^#\/guided-spelling\/(\d+)/);
   const manageM = hash.match(/^#\/book\/(\d+)/);
   const mStudy = hash.match(/^#\/mistakes-study\/(\w+)/);
+  Study.runToken++;
   Study.leave();
   if (todayStudyM) Study.startToday(Number(todayStudyM[1]));
   else if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
@@ -932,6 +933,7 @@ const Study = {
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
   keyHandler: null,
+  runToken: 0,
 
   async start(bookId, mode, options = {}) {
     this.todayFlow = null;
@@ -1045,6 +1047,7 @@ const Study = {
   },
 
   restoreToday(snapshot) {
+    this.runToken++;
     this.todayFlow = { bookId: snapshot.bookId, day: snapshot.day, stage: snapshot.stage, ...snapshot.flow };
     this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
     this.guidedRun = false;
@@ -1147,6 +1150,7 @@ const Study = {
   },
 
   begin(words) {
+    this.runToken++;
     this.clearSaveFailure();
     $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
     if (!words.length) {
@@ -1199,6 +1203,14 @@ const Study = {
       document.removeEventListener('keydown', this.keyHandler, true);
       this.keyHandler = null;
     }
+  },
+
+  scheduleNext(delay) {
+    const token = this.runToken;
+    setTimeout(() => {
+      if (this.runToken !== token || $('#view-study').classList.contains('hidden')) return;
+      this.next();
+    }, delay);
   },
 
   next() {
@@ -1526,7 +1538,7 @@ const Study = {
         const payload = this.createProgressAttempt(true, undefined, spellInput.value);
         this.saveProgressAttempt(payload, () => {
           feedback.textContent = `拼写正确：${answerLabel}。已保存，下一题即将开始。`;
-          setTimeout(() => this.next(), 800);
+          this.scheduleNext(800);
         });
       } else {
         $('#quizCard').classList.remove('shake');
@@ -1676,7 +1688,7 @@ const Study = {
       this.saveProgressAttempt(payload, () => {
         if (ok) {
           $('#answerResult').textContent = `回答正确：${wordMeaningSummary(w)}。下一题即将开始。`;
-          setTimeout(() => this.next(), 900);
+          this.scheduleNext(900);
         } else {
           $('#answerResult').textContent = `正确释义：${wordMeaningSummary(w)}。已加入回炉，点继续开始下一题。`;
           this.waitContinue();
@@ -1757,7 +1769,7 @@ const Study = {
       this.saveProgressAttempt(payload, () => {
         if (ok) {
           $('#answerResult').textContent = `回答正确：${target}。下一题即将开始。`;
-          setTimeout(() => this.next(), 900);
+          this.scheduleNext(900);
         } else {
           $('#answerResult').textContent = `正确词性：${target}。已加入回炉，点继续开始下一题。`;
           this.waitContinue();
