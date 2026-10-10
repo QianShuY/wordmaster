@@ -82,5 +82,19 @@
       steps: completed };
   }
 
-  return Object.freeze({ VERSION, key, read, write, clear, progress, sane });
+  // Earlier V1.4 versions accidentally shared flow.learn with a queue that
+  // shift() consumed. roundWords retained the original complete list, so
+  // recover that manifest without returning answered words to the queue.
+  function repairLearnManifest(snapshot) {
+    if (!sane(snapshot)) return snapshot;
+    if (snapshot.stage !== 'learn' ||
+        snapshot.flow.learn.length >= snapshot.flow.learnTotal ||
+        snapshot.roundWords.length !== snapshot.flow.learnTotal) return snapshot;
+    return {
+      ...snapshot,
+      flow: { ...snapshot.flow, learn: snapshot.roundWords.slice() },
+    };
+  }
+
+  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest });
 });
