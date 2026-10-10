@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('node:path');
 const fs = require('node:fs');
 const os = require('node:os');
-const { db, seed, parseImportLine } = require('./db');
+const { db, seed, parseImportLine, getDatabaseInstanceId } = require('./db');
 const Domain = require('../shared/domain');
 const DesktopJourney = require('./desktop-journey');
 const publicCardCopy = require('../static/cards/card-copy.json');
@@ -350,6 +350,10 @@ app.get('/api/books/:id/study', (req, res) => {
   const words = Domain.composeStudyQueue(due, fresh, { ...limits, due_limit: due.length, new_limit: remaining });
   if (mode === 'meaning') attachChoices(words);
   res.json(presentWords(words, book));
+});
+
+app.get('/api/desktop/identity', (req, res) => {
+  res.set('Cache-Control', 'no-store').json({ instance_id: getDatabaseInstanceId() });
 });
 
 // The Desktop "Today" experience follows the real plan, not an arbitrary
