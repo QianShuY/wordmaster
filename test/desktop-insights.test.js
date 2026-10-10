@@ -120,7 +120,9 @@ test('insight decisions remain honest for missing samples and changing prioritie
   assert.equal(x.last7.percentage, null);
   assert.equal(x.previous7.percentage, null);
   assert.equal(x.change_points, null);
-  assert.equal(x.recommendation.kind, 'empty');
+  assert.equal(x.recommendation.kind, 'steady',
+    'historically learned words with no recent answers are not a first-time learner');
+  assert.match(x.recommendation.explanation, /历史学习记录/);
   const mistakes = Insights.buildInsights({
     scope: 'book', bookId: 77,
     counts: { total_words: 2, started_words: 2, due_words: 0, mistake_words: 1 },
