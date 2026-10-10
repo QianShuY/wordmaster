@@ -628,3 +628,45 @@ html.is-android-app .desktop-insights { display: none !important; }
 @media (prefers-reduced-motion: reduce) {
   .insights-cover-bar > span, .insights-next-btn { transition: none; }
 }
+
+/* V1.5: diagnosis → the exact book's mistakes, without losing context. */
+.desktop-mistakes-filter {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px; margin: 0 0 18px; padding: 15px 19px;
+  border: 1px solid #e2d9ca; border-radius: 12px;
+  background: #fffcf6;
+}
+.desktop-mistakes-filter label { display: flex; align-items: center; gap: 12px; flex: none; }
+.desktop-mistakes-filter label span { color: var(--ink-soft); font-size: 12px; }
+#desktopMistakesBook {
+  min-height: 42px; width: min(280px, 42vw);
+  padding: 8px 12px; border: 1px solid #d7cfbe;
+  border-radius: 9px; background: #fffdf9;
+  color: var(--ink); font: 600 13px var(--sans);
+}
+#desktopMistakesHint { color: #827767; font-size: 12px; line-height: 1.6; }
+html.is-android-app .desktop-mistakes-filter { display: none !important; }
+#mistakeBody tr.is-highlighted {
+  outline: 2px solid #799d83; outline-offset: -2px; background: #eaf2e7;
+}
+#mistakeBody tr.is-highlighted td { background: transparent; }
+.insight-word {
+  align-items: center; gap: 12px;
+}
+.insight-word-actions {
+  display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap;
+  gap: 11px;
+}
+.insight-word-link {
+  flex: none; border: 1px solid #b8ccbc; border-radius: 8px;
+  background: #eaf0e8; color: #34634e; font: 650 12px/1.35 var(--sans);
+  min-height: 35px; padding: 8px 11px; cursor: pointer;
+}
+.insight-word-link:hover { border-color: #739d7f; background: #dfece0; }
+.insight-word-link:focus-visible { outline: 3px solid #c2ad82; outline-offset: 2px; }
+@media (max-width: 800px) {
+  .desktop-mistakes-filter { align-items: stretch; flex-direction: column; gap: 9px; }
+  .desktop-mistakes-filter label { justify-content: space-between; }
+  #desktopMistakesBook { width: min(280px, 55vw); }
+  .insight-word-actions { gap: 5px; }
+}
