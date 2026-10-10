@@ -69,12 +69,46 @@ test('scoped mistake drill never mixes wordbooks and preserves the old Android a
   assert.equal((await get('/api/mistakes/study?mode=spelling&book_id=999999')).status, 404);
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM progress').get().n, 4,
     'list and drill preparation must not modify progress rows');
+
+  // Same request series the real review UI submits. The completion summary
+  // must query SQLite anew, not assume one successful attempt clears a word.
+  const review = async (id, ordinal) => {
+    const response = await fetch(base + '/api/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        word_id: id, correct: true, is_new: false,
+        outcome: 'first_correct',
+        request_id: `mistake-req-${id}-${ordinal}`,
+        session_id: `mistake-session-${id}-${ordinal}`,
+      }),
+    });
+    assert.equal(response.status, 200);
+    return response.json();
+  };
+  await review(ids[0], 1);
+  assert.equal((await get(`/api/mistakes?book_id=${a}`)).body.length, 2,
+    'one answer must not be called mastery');
+  await review(ids[0], 2);
+  await review(ids[0], 3);
+  assert.equal((await get(`/api/mistakes?book_id=${a}`)).body.length, 1,
+    'third consecutive correct answer moves this word out of the mistake list');
+  assert.equal((await get(`/api/mistakes?book_id=${b}`)).body.length, 1,
+    'the other wordbook is unaffected');
+  assert.equal((await get('/api/mistakes')).body.length, 2,
+    'global Android list still reflects authoritative SQLite');
+  await review(ids[1], 1);
+  await review(ids[1], 2);
+  await review(ids[1], 3);
+  assert.equal((await get(`/api/mistakes?book_id=${a}`)).body.length, 0,
+    'finished wordbook displays zero remaining, not stale session length');
 });
 
 test('desktop focus-word routing retains source book and study scope end to end', () => {
   const js = readFileSync(path.join(__dirname, '../static/app.js'), 'utf8');
   const html = readFileSync(path.join(__dirname, '../static/index.html'), 'utf8');
-  for (const id of ['desktopMistakesBook', 'desktopMistakesHint', 'difficultWords']) {
+  for (const id of ['desktopMistakesBook', 'desktopMistakesHint', 'difficultWords',
+    'desktopMistakeOutcome']) {
     assert.ok(html.includes('id="' + id + '"'), `Missing #${id}`);
   }
   assert.ok(js.includes('data-insight-word='));
@@ -86,4 +120,12 @@ test('desktop focus-word routing retains source book and study scope end to end'
     'non-due errors must be linkable to the highlighted word');
   assert.ok(js.includes('/api/mistakes/study?mode='),
     'mistake drill must still use the real existing study endpoint');
+  assert.ok(js.includes('Mistakes.renderRoundOutcome(drill, run)'),
+    'completion must load actual remaining mistakes after the round');
+  assert.ok(js.includes('Study.runToken !== run'),
+    'stale async result from an old round must not overwrite the current screen');
+  assert.ok(js.includes("Study.guidedRun = false"),
+    'mistake practice must not accidentally inherit onboarding behavior');
+  assert.ok(js.includes('this.mistakeDrill = null'),
+    'unrelated study modes must clear mistake-drill state');
 });
