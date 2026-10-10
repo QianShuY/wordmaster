@@ -92,4 +92,17 @@ test('daily desk uses 13 due plus 10 planned new words, while charts have an exp
   const after = await get(`/api/desktop/books/${first}/today`);
   assert.equal(after.body.learn.length, 9, 'marking a new word learned removes it from the new-word phase');
   assert.equal((await get(`/api/stats/overview?book_id=${first}`)).body.today.new_today, 1);
+
+  for (const id of freshIds.slice(1)) {
+    const response = await fetch(base + '/api/learn', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ word_id: id }),
+    });
+    assert.equal(response.status, 200);
+  }
+  const completed = await get(`/api/stats/overview?book_id=${first}`);
+  assert.equal(completed.body.today.new_today, 10);
+  assert.equal(completed.body.today.daily_new_quota, 10,
+    'finishing the last new word today must show 10/10 instead of 10/0');
+  assert.equal((await get(`/api/desktop/books/${first}/today`)).body.learn.length, 0);
 });
