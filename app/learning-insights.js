@@ -34,7 +34,7 @@ function explainWord(word) {
   };
 }
 
-function recommend({ scope, bookId, dueWords, mistakeWords, newWords, recent }) {
+function recommend({ scope, bookId, dueWords, mistakeWords, newWords, startedWords, recent }) {
   const scoped = scope === 'book' && Number.isSafeInteger(Number(bookId));
   if (dueWords) {
     return {
@@ -60,14 +60,22 @@ function recommend({ scope, bookId, dueWords, mistakeWords, newWords, recent }) 
       button: scoped ? '开始当前词库的今日任务 →' : '回到今日选择词库 →',
     };
   }
+  if (startedWords) {
+    return {
+      kind: 'steady',
+      title: '当前没有待处理的学习任务',
+      explanation: recent.attempts
+        ? '没有到期复习、待回炉错题或未开始的新词。后续任务仍按原定时间出现。'
+        : '虽然最近 7 天未作答，但已有历史学习记录。下一次复习仍按原定到期日安排。',
+      action: 'choose_book', button: '回到今日 →',
+    };
+  }
   return {
-    kind: recent.attempts ? 'steady' : 'empty',
-    title: recent.attempts ? '暂时没有待处理的学习任务' : '从第一份学习记录开始',
-    explanation: recent.attempts
-      ? '当前没有到期复习、待回炉错题或未开始的新词。后续任务仍会按原定时间出现。'
-      : '还没有近期答题记录。先选一本词库开始学习，数据会逐渐丰富。',
-    action: 'choose_book',
-    button: '回到今日 →',
+    kind: 'empty',
+    title: '先给词库添上第一批单词',
+    explanation: '当前范围还没有单词记录。导入或创建词库后，这里才会出现真实学习诊断。',
+    action: 'books',
+    button: '去词库管理 →',
   };
 }
 
@@ -99,7 +107,7 @@ function buildInsights({
       ? null : now.percentage - before.percentage,
     focus_words: candidates.slice(0, 5).map(explainWord),
     recommendation: recommend({
-      scope, bookId, dueWords, mistakeWords, newWords: unseen, recent: now,
+      scope, bookId, dueWords, mistakeWords, newWords: unseen, startedWords: started, recent: now,
     }),
     disclaimer: '基于本机真实学习记录的规则建议；掌握数与新词覆盖率不同，不预测记忆概率。',
   };
