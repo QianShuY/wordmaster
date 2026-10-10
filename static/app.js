@@ -912,6 +912,8 @@ const Study = {
 
   async start(bookId, mode, options = {}) {
     this.todayFlow = null;
+    $('#desktopStudyJourney').classList.add('hidden');
+    $('#studyExit').textContent = '← 退出';
     this.bookId = bookId; this.mode = mode;
     this.guidedRun = Boolean(options.guided && mode === 'learn');
     if (!this.guidedRun) this.guidedSpellWords = null;
@@ -1099,6 +1101,8 @@ const Study = {
 
   startGuidedSpelling(bookId) {
     this.todayFlow = null;
+    $('#desktopStudyJourney').classList.add('hidden');
+    $('#studyExit').textContent = '← 退出';
     let words = this.guidedSpellWords || [];
     if (!words.length) {
       try {
@@ -1162,6 +1166,8 @@ const Study = {
     this.wrongCount = 0; this.abandonedCount = 0; this.retryCount = 0;
     this.sessionId = makeRequestId();
     this.attemptedWordIds = new Set(); this.retryWordIds = new Set(); this.learnAgainIds = new Set(); this.learnCompletedIds = new Set();
+    this.current = null;
+    this.renderTodayJourney();
     this.next();
   },
 
@@ -1178,6 +1184,7 @@ const Study = {
     if (!this.queue.length) return this.finish();
     this.current = this.queue.shift();
     this.locked = false;
+    this.saveTodayCheckpoint(true, false);
     this.updateProgress();
     if (this.mode === 'learn') this.renderLearn(this.current);
     else if (this.mode === 'spelling') this.renderSpelling(this.current);
@@ -1190,6 +1197,7 @@ const Study = {
     $('#studyProgressFill').style.width = pct + '%';
     $('#studyProgressText').textContent = `${Math.min(this.done, this.total)} / ${this.total}` +
       (this.retryCount ? ` · 回炉 ${this.retryCount}` : '');
+    this.renderTodayJourney();
   },
 
   createProgressAttempt(correct, failedOutcome, answerValue) {
@@ -1231,6 +1239,7 @@ const Study = {
       if (!this.queue.some(word => String(word.id) === wordId)) this.queue.push(this.current);
     }
     this.updateProgress();
+    this.saveTodayCheckpoint(false, false);
   },
 
   clearSaveFailure() {
@@ -1337,6 +1346,7 @@ const Study = {
         }
         this.retryCount = this.learnAgainIds.size;
         this.updateProgress();
+        this.saveTodayCheckpoint(false, false);
         this.next();
       };
       await save();
