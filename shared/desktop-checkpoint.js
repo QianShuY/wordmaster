@@ -8,7 +8,7 @@
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (root) root.WordMasterDesktopCheckpoint = api;
 })(typeof window === 'undefined' ? null : window, function () {
-  const VERSION = 1;
+  const VERSION = 2;
   const PREFIX = 'wordmaster_desktop_today_v14_';
   const STAGES = new Set(['review', 'learn', 'spelling']);
 
@@ -20,6 +20,7 @@
     && values.every(word);
   const sane = value => value && value.version === VERSION
     && Number.isSafeInteger(value.bookId) && value.bookId > 0
+    && typeof value.instanceId === 'string' && value.instanceId.length >= 12
     && /^\d{4}-\d{2}-\d{2}$/.test(value.day)
     && STAGES.has(value.stage)
     && typeof value.phaseDone === 'boolean'
@@ -36,13 +37,14 @@
     && ['attemptedWordIds', 'retryWordIds', 'learnAgainIds', 'learnCompletedIds']
       .every(k => Array.isArray(value[k]) && value[k].length <= 500);
 
-  function read(storage, bookId, day) {
+  function read(storage, bookId, day, instanceId) {
     if (!storage || !Number.isSafeInteger(bookId) || bookId < 1) return null;
     try {
       const raw = storage.getItem(key(bookId));
       if (!raw) return null;
       const snapshot = JSON.parse(raw);
-      if (!sane(snapshot) || snapshot.bookId !== bookId || snapshot.day !== day) {
+      if (!sane(snapshot) || snapshot.bookId !== bookId || snapshot.day !== day
+        || snapshot.instanceId !== instanceId) {
         storage.removeItem(key(bookId));
         return null;
       }
