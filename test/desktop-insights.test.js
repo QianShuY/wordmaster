@@ -121,6 +121,13 @@ test('learning diagnosis uses true seven-day samples and an explicit per-book sc
   assert.equal(plannedResponse.value.today.new_words_remaining, 0);
   assert.equal(plannedResponse.value.recommendation.kind, 'plan_done',
     'quota exhausted today, even with 2 unseen words remaining');
+  const plannedQueue = await get(`/api/desktop/books/${planned}/today`);
+  assert.equal(plannedQueue.status, 200);
+  assert.equal(plannedQueue.value.new_remaining, plannedResponse.value.today.new_words_remaining,
+    'Today page and Insights must agree on the remaining new-word task');
+  const plannedOverview = await get(`/api/stats/overview?book_id=${planned}`);
+  assert.equal(plannedOverview.value.today.new_today, 1);
+  assert.equal(plannedOverview.value.today.daily_new_quota, 1);
   const stillNew = Number(db.prepare(
     "INSERT INTO wordbooks(name, description, daily_new) VALUES ('计划可学', '', 2)"
   ).run().lastInsertRowid);
@@ -133,6 +140,11 @@ test('learning diagnosis uses true seven-day samples and an explicit per-book sc
   assert.equal(todayResponse.value.today.new_words_remaining, 2);
   assert.equal(todayResponse.value.recommendation.kind, 'new');
   assert.match(todayResponse.value.recommendation.title, /2 个新词/);
+  const availableQueue = await get(`/api/desktop/books/${stillNew}/today`);
+  assert.equal(availableQueue.status, 200);
+  assert.equal(availableQueue.value.learn.length, 2);
+  assert.equal(availableQueue.value.new_remaining, todayResponse.value.today.new_words_remaining,
+    'diagnosis must never advertise more new words than Today's actual study queue');
 
   for (const uri of ['?book_id=abc', '?book_id=0', '?book_id=-1']) {
     assert.equal((await get('/api/desktop/insights' + uri)).status, 400);
