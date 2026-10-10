@@ -76,6 +76,36 @@ test('phase boundaries preserve previous milestones and retry history', () => {
     'a completed stage must reopen at its next-action screen');
 });
 
+test('new-word learning keeps all 10 words available for spelling after a five-word resume', () => {
+  const allWords = Array.from({ length: 10 }, (_, i) => sampleWord(i + 101));
+  const flow = { ...makeSnapshot().flow, learn: allWords, learnTotal: 10,
+    completed: { review: 2, learn: 0, spelling: 0 } };
+  const workingQueue = allWords.slice();
+  const roundWords = workingQueue.slice();
+  for (let i = 0; i < 5; i++) workingQueue.shift(); // five introductions already saved
+  assert.equal(flow.learn.length, 10, 'the original manifest must never be shifted');
+  assert.deepEqual(workingQueue.map(w => w.id), [106, 107, 108, 109, 110]);
+
+  const snapshot = makeSnapshot({ stage: 'learn', flow, roundWords, queue: workingQueue,
+    total: 10, done: 5 });
+  const storage = makeStorage();
+  assert.equal(Checkpoint.write(storage, snapshot), true);
+  const restored = Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1');
+  assert.equal(restored.flow.learn.length, 10, 'all ten remain eligible for spelling');
+  assert.equal(restored.queue.length, 5, 'only the unfinished five remain for study');
+
+  const legacy = makeSnapshot({ stage: 'learn',
+    flow: { ...flow, learn: allWords.slice(0, 5) },
+    roundWords, queue: workingQueue, total: 10, done: 5 });
+  assert.equal(Checkpoint.write(storage, legacy), true);
+  const repaired = Checkpoint.repairLearnManifest(
+    Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1'));
+  assert.deepEqual(repaired.flow.learn.map(w => w.id), allWords.map(w => w.id),
+    'repair the shorter V1.4 manifest from the saved full round');
+  assert.deepEqual(repaired.queue.map(w => w.id), workingQueue.map(w => w.id),
+    'repair must not reintroduce previously answered words');
+});
+
 test('two databases sharing localhost cannot reuse the same unfinished word IDs', () => {
   const storage = makeStorage();
   assert.equal(Checkpoint.write(storage, makeSnapshot()), true);
@@ -108,6 +138,8 @@ test('UI connects saved progress, phase stepper and the daily route without touc
     assert.ok(html.includes('id="' + id + '"'), 'missing ' + id);
   }
   assert.ok(app.includes('DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId)'));
+  assert.ok(app.includes('this.queue = queue.slice()'), 'the quiz queue must never mutate the original word list');
+  assert.ok(app.includes('DesktopCheckpoint.repairLearnManifest(snapshot)'));
   assert.match(app, /this\.saveTodayCheckpoint\(false, false\)/);
   assert.match(app, /this\.saveTodayCheckpoint\(false, true\)/);
   assert.match(css, /desktop-study-steps/);
