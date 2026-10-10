@@ -987,6 +987,99 @@ const Study = {
     }
   },
 
+  saveTodayCheckpoint(includeCurrent = true, phaseDone = false) {
+    if (IS_ANDROID_APP || !this.todayFlow) return;
+    const day = Domain.localDayKey();
+    const snapshot = {
+      version: DesktopCheckpoint.VERSION, day, bookId: this.bookId,
+      stage: this.todayFlow.stage, phaseDone,
+      flow: {
+        review: this.todayFlow.review, learn: this.todayFlow.learn,
+        reviewTotal: this.todayFlow.reviewTotal,
+        learnTotal: this.todayFlow.learnTotal,
+        completed: { ...this.todayFlow.completed },
+        reviewHasMore: this.todayFlow.reviewHasMore,
+        learnHasMore: this.todayFlow.learnHasMore,
+      },
+      queue: [...(includeCurrent && this.current ? [this.current] : []), ...this.queue],
+      roundWords: this.roundWords,
+      total: this.total, done: this.done, sessionId: this.sessionId,
+      counters: {
+        correctCount: this.correctCount, firstCorrectCount: this.firstCorrectCount,
+        retryCorrectCount: this.retryCorrectCount, wrongCount: this.wrongCount,
+        abandonedCount: this.abandonedCount, retryCount: this.retryCount,
+      },
+      attemptedWordIds: [...this.attemptedWordIds],
+      retryWordIds: [...this.retryWordIds],
+      learnAgainIds: [...this.learnAgainIds],
+      learnCompletedIds: [...this.learnCompletedIds],
+    };
+    if (!DesktopCheckpoint.write(localStorage, snapshot)) {
+      console.warn('本地学习断点暂时不可保存。请检查浏览器存储空间。');
+    }
+  },
+
+  restoreToday(snapshot) {
+    this.todayFlow = { bookId: snapshot.bookId, stage: snapshot.stage, ...snapshot.flow };
+    this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
+    this.guidedRun = false;
+    this.queue = snapshot.queue.slice();
+    this.roundWords = snapshot.roundWords.slice();
+    this.total = snapshot.total;
+    this.done = snapshot.done;
+    this.current = null;
+    this.locked = false;
+    this.sessionId = snapshot.sessionId; // Required to classify retries reliably.
+    Object.assign(this, snapshot.counters);
+    for (const field of ['attemptedWordIds', 'retryWordIds', 'learnAgainIds', 'learnCompletedIds']) {
+      this[field] = new Set(snapshot[field].map(String));
+    }
+    $('#studyModeTag').textContent = this.mode === 'meaning'
+      ? '接着学 · 到期复习' : this.mode === 'learn'
+        ? '接着学 · 新词学习' : '接着学 · 巩固默写';
+    $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
+    this.updateProgress();
+    if (snapshot.phaseDone) {
+      void this.finish();
+    } else if (this.queue.length) {
+      this.next();
+    } else {
+      void this.finish();
+    }
+  },
+
+  renderTodayJourney() {
+    const host = $('#desktopStudyJourney');
+    if (IS_ANDROID_APP || !this.todayFlow) { host.classList.add('hidden'); return; }
+    host.classList.remove('hidden');
+    const flow = this.todayFlow;
+    const completed = { ...flow.completed };
+    if (flow.stage && this.total) completed[flow.stage] = Math.max(completed[flow.stage], this.done);
+    const steps = [
+      { id: 'review', title: '到期复习', target: flow.reviewTotal },
+      { id: 'learn', title: '学习新词', target: flow.learnTotal },
+      { id: 'spelling', title: '巩固默写', target: Domain.spellingWords(flow.learn).length },
+    ];
+    $('#desktopStudySteps').innerHTML = steps.map((step, i) => {
+      const done = Math.min(completed[step.id] || 0, step.target);
+      const active = step.id === flow.stage;
+      const finished = done === step.target && step.target > 0;
+      const status = step.target === 0 ? '本日无需' : finished ? '已完成'
+        : active ? `${done} / ${step.target}` : `共 ${step.target} 词`;
+      return `<div class="desktop-journey-step ${active ? 'active' : ''} ${finished ? 'finished' : ''}"
+        role="listitem" ${active ? 'aria-current="step"' : ''}>
+        <span class="desktop-journey-step-number">${finished ? '✓' : String(i + 1).padStart(2, '0')}</span>
+        <span class="desktop-journey-step-text"><strong>${step.title}</strong><small>${status}</small></span>
+      </div>`;
+    }).join('');
+    const total = flow.reviewTotal + flow.learnTotal;
+    const achieved = Math.min(total, Math.min(flow.reviewTotal, completed.review)
+      + Math.min(flow.learnTotal, completed.learn));
+    const pct = total ? Math.round(achieved * 100 / total) : 100;
+    $('#desktopStudyOverallText').textContent = `今日任务 ${achieved} / ${total} 词 · 巩固默写另计`;
+    $('#desktopStudyOverallFill').style.width = `${pct}%`;
+  },
+
   continueToday(stage) {
     if (!this.todayFlow) return;
     this.todayFlow.stage = stage;
