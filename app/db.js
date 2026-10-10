@@ -2,6 +2,7 @@
 const { DatabaseSync } = require('node:sqlite');
 const path = require('node:path');
 const fs = require('node:fs');
+const { randomUUID } = require('node:crypto');
 
 const DEFAULT_DATA_DIR = path.join(__dirname, '..', 'data');
 const DB_PATH = path.resolve(process.env.WORDMASTER_DB_PATH || path.join(DEFAULT_DATA_DIR, 'wordmaster.db'));
@@ -72,7 +73,15 @@ CREATE TABLE IF NOT EXISTS schema_meta (
   schema_version INTEGER NOT NULL
 );
 INSERT OR IGNORE INTO schema_meta (id, schema_version) VALUES (1, 0);
+-- Unique local database identity stops browser checkpoints from a previous
+-- installation (or test database) from being applied to unrelated word IDs.
+CREATE TABLE IF NOT EXISTS desktop_database_identity (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  instance_id TEXT NOT NULL
+);
 `);
+db.prepare('INSERT OR IGNORE INTO desktop_database_identity (id, instance_id) VALUES (1, ?)')
+  .run(randomUUID());
 
 function hasColumn(table, column) {
   return db.prepare(`PRAGMA table_info(${table})`).all().some(row => row.name === column);
@@ -310,4 +319,5 @@ function seedCards() {
   console.log(`[seed] 卡牌图鉴: ${normal.length} 普通 + ${hidden.length} 隐藏`);
 }
 
-module.exports = { db, seed, parseImportLine, getSchemaVersion };
+const getDatabaseInstanceId = () => db.prepare('SELECT instance_id FROM desktop_database_identity WHERE id = 1').get().instance_id;
+module.exports = { db, seed, parseImportLine, getSchemaVersion, getDatabaseInstanceId };
