@@ -1781,38 +1781,70 @@ const Study = {
     }
     if (this.todayFlow) {
       const flow = this.todayFlow;
+      flow.completed[flow.stage] = this.total;
       const needsMore = flow.reviewHasMore || flow.learnHasMore;
-      if (flow.stage === 'review' && flow.learn.length) {
-        $('#doneSummary').textContent = `第一步完成：到期复习 ${this.total} 词。接下来学习 ${flow.learn.length} 个今日新词。`;
-        $('#doneAgain').textContent = `继续今日新词 · ${flow.learn.length} 个 →`;
+      $('#desktopDoneEyebrow').classList.remove('hidden');
+      const titles = { review: '复习这一程，已完成', learn: '今日新词，已认识', spelling: '巩固默写，已完成' };
+      $('#studyDoneTitle').textContent = titles[flow.stage];
+      const stepCopy = flow.stage === 'review' ? '第一步 · 到期复习'
+        : flow.stage === 'learn' ? '第二步 · 新词认识' : '第三步 · 巩固默写';
+      $('#desktopDoneJourney').innerHTML = `<div class="desktop-done-head"><span>${stepCopy}</span><strong>${this.total} / ${this.total} 词</strong></div>
+        <div class="desktop-done-numbers">
+          <div><strong>${this.firstCorrectCount}</strong><small>首次答对</small></div>
+          <div><strong>${this.retryCorrectCount}</strong><small>回炉答对</small></div>
+          <div><strong>${this.wrongCount + this.abandonedCount}</strong><small>错误或跳过次数</small></div>
+        </div>
+        <p>${flow.stage === 'learn' ? '认识新词不代表完全掌握，接下来通过默写巩固。'
+          : '已完成的答题会真实记录到学习数据，复习日期仍遵循现有规则。'}</p>`;
+      $('#desktopDoneJourney').classList.remove('hidden');
+      this.renderTodayJourney();
+      // A saved milestone is as resumable as a saved individual question.
+      this.saveTodayCheckpoint(false, true);
+      const continueBatch = () => {
+        DesktopCheckpoint.clear(localStorage, this.bookId);
+        void this.startToday(this.bookId);
+      };
+      if (flow.stage === 'review' && flow.reviewHasMore) {
+        $('#doneSummary').textContent = `已完成这一批 ${this.total} 个到期复习词，先继续剩余的到期复习，再学习今天的新词。`;
+        $('#doneAgain').textContent = '继续剩余到期复习 →';
+        $('#doneAgain').onclick = continueBatch;
+      } else if (flow.stage === 'review' && flow.learn.length) {
+        $('#doneSummary').textContent = `到期复习完成 ${this.total} 词。接下来认识 ${flow.learn.length} 个今日新词。`;
+        $('#doneAgain').textContent = `继续学习新词 · ${flow.learn.length} 个 →`;
         $('#doneAgain').onclick = () => this.continueToday('learn');
       } else if (flow.stage === 'learn' && Domain.spellingWords(flow.learn).length) {
-        $('#doneSummary').textContent = `新词学习完成 ${flow.learn.length} 个。接下来用拼写巩固刚刚认识的词。`;
+        $('#doneSummary').textContent = `今天认识了 ${this.total} 个新词。接下来通过默写巩固这一批新词。`;
         $('#doneAgain').textContent = '继续巩固默写 →';
         $('#doneAgain').onclick = () => this.continueToday('spelling');
+      } else if (needsMore) {
+        $('#doneAgain').textContent = '继续剩余今日任务 →';
+        $('#doneAgain').onclick = continueBatch;
       } else {
-        $('#doneAgain').textContent = needsMore ? '继续剩余今日任务 →' : '回到今日';
-        $('#doneAgain').onclick = () => {
-          if (needsMore) this.startToday(this.bookId);
-          else location.hash = '#/';
-        };
+        $('#doneAgain').textContent = '返回今日学习中枢';
+        $('#doneAgain').onclick = () => { location.hash = '#/'; };
+        DesktopCheckpoint.clear(localStorage, this.bookId);
       }
-    } else if (this.guidedRun && this.mode === 'learn' && this.bookId) {
+    } else {
+      $('#desktopDoneEyebrow').classList.add('hidden');
+      $('#desktopDoneJourney').classList.add('hidden');
+      $('#studyDoneTitle').textContent = '本轮完成';
+    }
+    if (!this.todayFlow && this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
       sessionStorage.setItem(GUIDED_SPELLING_KEY, JSON.stringify({ bookId: this.bookId, words: this.guidedSpellWords }));
       $('#doneAgain').textContent = '默写 1 个词 →';
       $('#doneAgain').onclick = () => { location.hash = `#/guided-spelling/${this.bookId}`; };
-    } else if (this.guidedRun && this.mode === 'spelling') {
+    } else if (!this.todayFlow && this.guidedRun && this.mode === 'spelling') {
       localStorage.setItem('wordmaster_onboarding_done', '1');
       sessionStorage.removeItem(GUIDED_SPELLING_KEY);
       $('#doneAgain').textContent = '回到今日';
       $('#doneAgain').onclick = () => { location.hash = '#/'; };
-    } else if (this.mode === 'learn' && this.bookId) {
+    } else if (!this.todayFlow && this.mode === 'learn' && this.bookId) {
       // 学完引导去默写，学过的词已进入复习队列。
       $('#doneAgain').textContent = '去默写这些词 →';
       $('#doneAgain').onclick = () => { location.hash = `#/study/${this.bookId}/spelling`; };
-    } else {
+    } else if (!this.todayFlow) {
       $('#doneAgain').textContent = '再来一轮';
       $('#doneAgain').onclick = () => location.hash === `#/study/${this.bookId}/${this.mode}`
         ? this.start(this.bookId, this.mode)
