@@ -215,9 +215,19 @@ function route() {
       guided: query.get('guided') === '1',
     });
   }
-  else if (mStudy) Mistakes.study(mStudy[1]);
+  else if (mStudy) {
+    const params = new URLSearchParams(hash.split('?')[1] || '');
+    const scoped = !IS_ANDROID_APP ? Number(params.get('book_id')) : 0;
+    Mistakes.study(mStudy[1], Number.isSafeInteger(scoped) && scoped > 0 ? scoped : null);
+  }
   else if (manageM) Manage.open(Number(manageM[1]));
-  else if (hash === '#/mistakes') Mistakes.render();
+  else if (hash === '#/mistakes' || (!IS_ANDROID_APP && hash.startsWith('#/mistakes?'))) {
+    const params = new URLSearchParams(hash.split('?')[1] || '');
+    const bookId = !IS_ANDROID_APP ? Number(params.get('book_id')) : 0;
+    const wordId = !IS_ANDROID_APP ? Number(params.get('word_id')) : 0;
+    Mistakes.render(Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null,
+      Number.isSafeInteger(wordId) && wordId > 0 ? wordId : null);
+  }
   else if (hash === '#/stats') Stats.render();
   else if (hash === '#/cards') Cards.render();
   else if (hash === '#/cards-preview') Cards.render(true);
@@ -1956,21 +1966,50 @@ document.addEventListener('click', (e) => {
    ============================================================ */
 const Mistakes = {
   rows: [],
-  async render() {
+  scopeBookId: null,
+  focusWordId: null,
+  requestToken: 0,
+
+  async render(bookId = null, focusWordId = null) {
+    this.scopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
+    this.focusWordId = !IS_ANDROID_APP && Number.isSafeInteger(focusWordId) && focusWordId > 0 ? focusWordId : null;
+    const token = ++this.requestToken;
     show('mistakes', 'books');
     showPageLoading('正在加载错题本…');
-    let list;
+    const scopedQuery = this.scopeBookId ? `?book_id=${this.scopeBookId}` : '';
+    let list, books;
     try {
-      list = await api('/api/mistakes');
+      [list, books] = await Promise.all([
+        api(`/api/mistakes${scopedQuery}`),
+        IS_ANDROID_APP ? Promise.resolve(null) : api('/api/books'),
+      ]);
+      if (token !== this.requestToken || !location.hash.startsWith('#/mistakes')) return;
       clearPageStatus();
     } catch (error) {
-      showPageError(`错题本暂时无法加载：${error.message}`, () => this.render());
+      if (token === this.requestToken) {
+        showPageError(`错题本暂时无法加载：${error.message}`,
+          () => this.render(this.scopeBookId, this.focusWordId));
+      }
       return;
     }
     this.rows = list;
+    if (!IS_ANDROID_APP) {
+      const select = $('#desktopMistakesBook');
+      select.innerHTML = '<option value="all">全部词库</option>' +
+        books.map(book => `<option value="${book.id}">${esc(book.name)}</option>`).join('');
+      select.value = this.scopeBookId ? String(this.scopeBookId) : 'all';
+      $('#desktopMistakesHint').textContent = this.scopeBookId
+        ? `当前仅显示所选词库的 ${list.length} 个错题，点击「开始回炉」也只练这本词库。`
+        : `当前显示全部词库的 ${list.length} 个错题。可按词库筛选，再开始回炉。`;
+      select.onchange = () => {
+        const selected = Number(select.value);
+        location.hash = Number.isSafeInteger(selected) && selected > 0
+          ? `#/mistakes?book_id=${selected}` : '#/mistakes';
+      };
+    }
     $('#mistakeCount').textContent = list.length;
     $('#mistakeBody').innerHTML = list.map(w => `
-      <tr>
+      <tr data-mistake-word="${w.id}" class="${this.focusWordId === w.id ? 'is-highlighted' : ''}">
         <td class="w">${esc(wordHeadword(w))}<button class="speak-btn" data-speak="${esc(wordSpeech(w))}" aria-label="播放 ${esc(wordHeadword(w))} 的发音">${speakerIconMarkup}</button></td>
         <td class="pos">${esc([w.pos, w.sense_label].filter(Boolean).join(' · '))}</td>
         <td>${wordMeaningMarkup(w, 'table-word-meaning')}</td>
@@ -1979,36 +2018,56 @@ const Mistakes = {
         <td class="ops">
           <button type="button" class="link-btn danger" data-mistake-remove="${w.id}">移出</button>
         </td>
-      </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">暂无错题，继续保持</td></tr>';
+      </tr>`).join('') || '<tr><td colspan="6" style="text-align:center;color:var(--ink-faint);padding:40px">此范围暂时没有错题</td></tr>';
     $('#mistakesBack').onclick = () => { location.hash = '#/'; };
-    $('#mistakeStudyBtn').onclick = () => { location.hash = '#/mistakes-study/spelling'; };
+    const urlSuffix = this.scopeBookId ? `?book_id=${this.scopeBookId}` : '';
+    $('#mistakeStudyBtn').onclick = () => { location.hash = `#/mistakes-study/spelling${urlSuffix}`; };
     $('#mistakeStudyBtn').disabled = list.length === 0;
+
+    if (this.focusWordId && list.some(w => w.id === this.focusWordId)) {
+      requestAnimationFrame(() => {
+        if (token !== this.requestToken || !location.hash.startsWith('#/mistakes')) return;
+        const row = $('#mistakeBody').querySelector(`[data-mistake-word="${this.focusWordId}"]`);
+        row?.scrollIntoView({ block: 'center', behavior: 'instant' });
+        row?.querySelector('.speak-btn')?.focus({ preventScroll: true });
+      });
+    }
   },
 
-  async study(mode) {
-    // Mistake drills are separate from the home daily route.
+  async study(mode, bookId = null) {
+    // Mistake drills are separate from Today's SQLite-owned daily route.
     Study.todayFlow = null;
     Study.mode = mode;
     Study.bookId = null;
     show('study');
+    $('#desktopStudyJourney').classList.add('hidden');
     $('#studyDone').classList.add('hidden');
     $('#studyStage').classList.remove('hidden');
-    $('#studyModeTag').textContent = '错题本 · ' + (MODES.find(m => m.key === mode)?.name || mode);
+    const scoped = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0;
+    const suffix = scoped ? `&book_id=${bookId}` : '';
+    const returnHash = scoped ? `#/mistakes?book_id=${bookId}` : '#/mistakes';
+    $('#studyExit').textContent = '← 退出';
+    $('#studyExit').onclick = () => { location.hash = returnHash; };
+    $('#studyModeTag').textContent = `错题回炉 · ${scoped ? '当前词库' : '全部词库'} · ${MODES.find(m => m.key === mode)?.name || mode}`;
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING …</p></div>';
-    const words = await api(`/api/mistakes/study?mode=${mode}`);
-    if (!words.length) {
-      $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-meaning">错题本是空的，太棒了。</p></div>';
-    } else {
-      Study.begin(words);
+    try {
+      const words = await api(`/api/mistakes/study?mode=${encodeURIComponent(mode)}${suffix}`);
+      if (!location.hash.startsWith(`#/mistakes-study/${mode}`)) return;
+      if (!words.length) {
+        $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-meaning">当前范围没有需要回炉的错题。</p></div>';
+      } else {
+        Study.begin(words);
+      }
+    } catch (error) {
+      showPageError(`错题练习加载失败：${error.message}`, () => this.study(mode, bookId));
     }
-    $('#studyExit').onclick = () => { location.hash = '#/mistakes'; };
   },
 
   async remove(wordId, word) {
     try {
       await api(`/api/mistakes/${wordId}`, { method: 'DELETE' });
       toast(`「${word}」已移出错题本`);
-      await this.render();
+      await this.render(this.scopeBookId);
     } catch (error) { toast(`移出错题失败：${error.message}`); }
   },
 };
