@@ -254,6 +254,14 @@
       <h2>错题本 <span class="mistake-total">共 <b id="mistakeCount">0</b> 词待回炉</span></h2>
       <button class="btn btn-vermilion" id="mistakeStudyBtn">开始回炉</button>
     </div>
+    <div class="desktop-mistakes-filter" id="desktopMistakesFilter">
+      <label for="desktopMistakesBook"><span>只看这本词库的错题</span>
+        <select id="desktopMistakesBook" aria-label="筛选错题本词库">
+          <option value="all">全部词库</option>
+        </select>
+      </label>
+      <p id="desktopMistakesHint" aria-live="polite">按词库筛选后，回炉练习也会限定在相同词库。</p>
+    </div>
     <div class="word-table-wrap">
       <table class="word-table">
         <thead><tr><th>单词</th><th>词性</th><th>释义</th><th>来自词库</th><th>错误</th><th></th></tr></thead>
