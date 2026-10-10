@@ -576,7 +576,10 @@ app.get('/api/stats/overview', (req, res) => {
   const today = scoped ? {
     due_review: book.due_review,
     new_today: book.new_today,
-    daily_new_quota: Math.min(planFor(book).daily_quota, book.new_today + planFor(book).remaining_new),
+    // The quota can become zero *after* the last new word is introduced.
+    // Preserve today's already completed target (10/10, never 10/0).
+    daily_new_quota: Math.max(book.new_today,
+      Math.min(planFor(book).daily_quota, book.new_today + planFor(book).remaining_new)),
   } : {
     due_review: books.reduce((sum, item) => sum + item.due_review, 0),
     new_today: books.reduce((sum, item) => sum + item.new_today, 0),
