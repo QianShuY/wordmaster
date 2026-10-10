@@ -113,6 +113,8 @@ test('learning diagnosis uses true seven-day samples and an explicit per-book sc
   add.run(planned, 'planned-future', '日后认识');
   add.run(planned, 'planned-later', '以后认识');
   upsert.run(finishedToday, 1, 0, 1, '2099-01-01 00:00:00');
+  db.prepare("UPDATE progress SET first_studied = datetime('now', 'localtime') WHERE word_id = ?")
+    .run(finishedToday);
   const plannedResponse = await get(`/api/desktop/insights?book_id=${planned}`);
   assert.equal(plannedResponse.status, 200);
   assert.equal(plannedResponse.value.coverage.unseen_words, 2);
