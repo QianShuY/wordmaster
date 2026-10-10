@@ -415,7 +415,8 @@ const DesktopHub = {
     this.progress(pct);
 
     $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
-    $('#hubNewProgress').textContent = `${learned} / ${Math.min(quota, learned + remaining)}`;
+    const effectiveNewTarget = Math.max(learned, Math.min(quota, learned + remaining));
+    $('#hubNewProgress').textContent = `${learned} / ${effectiveNewTarget}`;
     $('#hubTotalNumber').innerHTML = `${due + upcoming} <small>词</small>`;
     $('#hubRoutePreview').textContent = due && upcoming
       ? `复习 ${due} 词 → 学习 ${upcoming} 新词 → 巩固默写`
@@ -455,6 +456,10 @@ const DesktopHub = {
       $('#hubRoutePreview').textContent = remainingDue + remainingNew
         ? `本日任务共 ${progress.expected} 词，已有 ${progress.achieved} 词完成 · 继续 ${stageNames[checkpoint.stage]}`
         : '新词和复习已做完，继续完成最后的巩固。';
+      // A word that failed and is waiting to be retried stays in the
+      // checkpoint queue even if live "due" counts temporarily differ.
+      $('#hubActionSummary').textContent =
+        `接续上次的任务：还需完成 ${remainingDue} 个复习词（含待回炉词）和 ${remainingNew} 个新词。实时到期数可能与本次队列不同。`;
       resume.textContent = `✓ 学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;
@@ -1071,6 +1076,14 @@ const Study = {
   restoreToday(snapshot) {
     this.runToken++;
     this.todayFlow = { bookId: snapshot.bookId, day: snapshot.day, stage: snapshot.stage, ...snapshot.flow };
+    // Repair checkpoints saved by V1.4 before the queue/manifest separation.
+    // During new-word learning, roundWords still contained all original
+    // new words even when the shared todayFlow.learn array had been shifted.
+    if (snapshot.stage === 'learn' &&
+        this.todayFlow.learn.length < this.todayFlow.learnTotal &&
+        snapshot.roundWords.length === this.todayFlow.learnTotal) {
+      this.todayFlow.learn = snapshot.roundWords.slice();
+    }
     this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
     this.guidedRun = false;
     this.queue = snapshot.queue.slice();
@@ -1207,8 +1220,11 @@ const Study = {
       $('#spellingFallbackHome').onclick = () => { location.hash = '#/'; };
       return;
     }
+    // Keep the complete study manifest immutable. next() consumes its own
+    // working queue via shift(); otherwise saving halfway loses already learned
+    // words from today's spelling phase after a restart.
     this.roundWords = queue.slice();
-    this.queue = queue;
+    this.queue = queue.slice();
     this.total = queue.length;
     this.done = 0;
     this.correctCount = 0; this.firstCorrectCount = 0; this.retryCorrectCount = 0;
