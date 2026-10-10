@@ -5,6 +5,7 @@
 
 const $ = (sel) => document.querySelector(sel);
 const Domain = window.WordMasterDomain;
+const DesktopCheckpoint = window.WordMasterDesktopCheckpoint;
 const makeRequestId = () => window.crypto?.randomUUID?.()
   || `attempt-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 const GUIDED_SPELLING_KEY = 'wordmaster_guided_spelling';
@@ -944,7 +945,13 @@ const Study = {
     $('#studyDone').classList.add('hidden');
     $('#studyStage').classList.remove('hidden');
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING TODAY…</p></div>';
+    $('#studyExit').textContent = '← 保存进度并退出';
     $('#studyExit').onclick = () => { location.hash = '#/'; };
+    const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey());
+    if (cached) {
+      this.restoreToday(cached);
+      return;
+    }
     showPageLoading('正在准备完整的今日任务…');
     try {
       const payload = await api(`/api/desktop/books/${bookId}/today`);
@@ -955,11 +962,25 @@ const Study = {
         stage: payload.review.length ? 'review' : 'learn',
         review: payload.review,
         learn: payload.learn,
+        reviewTotal: payload.review.length,
+        learnTotal: payload.learn.length,
+        completed: { review: 0, learn: 0, spelling: 0 },
         reviewHasMore: payload.review_has_more,
         learnHasMore: payload.learn_has_more,
       };
       this.mode = payload.review.length ? 'meaning' : 'learn';
       $('#studyModeTag').textContent = payload.review.length ? '今日任务 · 第一步：到期复习' : '今日任务 · 新词学习';
+      if (!payload.review.length && !payload.learn.length) {
+        $('#studyStage').innerHTML = `<div class="quiz-card">
+          <p class="quiz-kicker">TODAY COMPLETE</p>
+          <h2 class="quiz-word" style="font-size:30px">今天的任务已完成</h2>
+          <p class="quiz-meaning">已经没有待复习和计划内的新词了，可以查看学习数据，或明天继续。</p>
+          <div class="quiz-actions"><button class="btn btn-primary" id="todayNoTasksBack">返回今日</button></div>
+        </div>`;
+        $('#todayNoTasksBack').onclick = () => { location.hash = '#/'; };
+        this.renderTodayJourney();
+        return;
+      }
       this.begin(payload.review.length ? payload.review : payload.learn);
     } catch (error) {
       showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId));
