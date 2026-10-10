@@ -2032,7 +2032,7 @@ const Mistakes = {
       requestAnimationFrame(() => {
         if (token !== this.requestToken || !(location.hash === '#/mistakes' || location.hash.startsWith('#/mistakes?'))) return;
         const row = $('#mistakeBody').querySelector(`[data-mistake-word="${this.focusWordId}"]`);
-        row?.scrollIntoView({ block: 'center', behavior: 'instant' });
+        row?.scrollIntoView({ block: 'center', behavior: 'auto' });
         row?.querySelector('.speak-btn')?.focus({ preventScroll: true });
       });
     }
@@ -2051,13 +2051,15 @@ const Mistakes = {
     const scoped = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0;
     const suffix = scoped ? `&book_id=${bookId}` : '';
     const returnHash = scoped ? `#/mistakes?book_id=${bookId}` : '#/mistakes';
+    const expectedHash = scoped ? `#/mistakes-study/${mode}?book_id=${bookId}`
+      : `#/mistakes-study/${mode}`;
     $('#studyExit').textContent = '← 退出';
     $('#studyExit').onclick = () => { location.hash = returnHash; };
     $('#studyModeTag').textContent = `错题回炉 · ${scoped ? '当前词库' : '全部词库'} · ${MODES.find(m => m.key === mode)?.name || mode}`;
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING …</p></div>';
     try {
       const words = await api(`/api/mistakes/study?mode=${encodeURIComponent(mode)}${suffix}`);
-      if (!location.hash.startsWith(`#/mistakes-study/${mode}`)) return;
+      if (location.hash !== expectedHash) return;
       if (!words.length) {
         $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-meaning">当前范围没有需要回炉的错题。</p></div>';
       } else {
@@ -2087,9 +2089,14 @@ $('#difficultWords').addEventListener('click', event => {
   const wordId = Number(button.dataset.insightWord);
   if (!Number.isSafeInteger(bookId) || bookId < 1 ||
       !Number.isSafeInteger(wordId) || wordId < 1) return;
-  location.hash = button.dataset.insightDue === '1'
-    ? `#/today-study/${bookId}`
-    : `#/mistakes?book_id=${bookId}&word_id=${wordId}`;
+  if (button.dataset.insightDue === '1') {
+    // Keep Today focused on the book that owns this due word.
+    Home.selectedBookId = bookId;
+    localStorage.setItem('wordmaster_selected_book', String(bookId));
+    location.hash = `#/today-study/${bookId}`;
+  } else {
+    location.hash = `#/mistakes?book_id=${bookId}&word_id=${wordId}`;
+  }
 });
 
 $('#mistakeBody').addEventListener('click', event => {
