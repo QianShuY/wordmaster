@@ -104,11 +104,40 @@ test('learning diagnosis uses true seven-day samples and an explicit per-book sc
   assert.deepEqual(nothing.value.focus_words, []);
   assert.equal(nothing.value.recommendation.kind, 'empty');
 
+  // A complete daily quota must not trigger another "learn N new words"
+  // recommendation even when the book still has lots of unseen vocabulary.
+  const planned = Number(db.prepare(
+    "INSERT INTO wordbooks(name, description, daily_new) VALUES ('计划边界', '', 1)"
+  ).run().lastInsertRowid);
+  const finishedToday = Number(add.run(planned, 'planned-intro', '今日已认识').lastInsertRowid);
+  add.run(planned, 'planned-future', '日后认识');
+  add.run(planned, 'planned-later', '以后认识');
+  upsert.run(finishedToday, 1, 0, 1, '2099-01-01 00:00:00');
+  const plannedResponse = await get(`/api/desktop/insights?book_id=${planned}`);
+  assert.equal(plannedResponse.status, 200);
+  assert.equal(plannedResponse.value.coverage.unseen_words, 2);
+  assert.equal(plannedResponse.value.today.new_words_remaining, 0);
+  assert.equal(plannedResponse.value.recommendation.kind, 'plan_done',
+    'quota exhausted today, even with 2 unseen words remaining');
+  const stillNew = Number(db.prepare(
+    "INSERT INTO wordbooks(name, description, daily_new) VALUES ('计划可学', '', 2)"
+  ).run().lastInsertRowid);
+  add.run(stillNew, 'future-one', '新词一');
+  add.run(stillNew, 'future-two', '新词二');
+  add.run(stillNew, 'future-three', '新词三');
+  const todayResponse = await get(`/api/desktop/insights?book_id=${stillNew}`);
+  assert.equal(todayResponse.status, 200);
+  assert.equal(todayResponse.value.coverage.unseen_words, 3);
+  assert.equal(todayResponse.value.today.new_words_remaining, 2);
+  assert.equal(todayResponse.value.recommendation.kind, 'new');
+  assert.match(todayResponse.value.recommendation.title, /2 个新词/);
+
   for (const uri of ['?book_id=abc', '?book_id=0', '?book_id=-1']) {
     assert.equal((await get('/api/desktop/insights' + uri)).status, 400);
   }
   assert.equal((await get('/api/desktop/insights?book_id=999999')).status, 404);
-  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM progress').get().n, before.progress);
+  assert.equal(db.prepare('SELECT COUNT(*) AS n FROM progress').get().n, before.progress + 1,
+    'only the test fixture added one progress record; read-only insights add none');
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM review_log').get().n, before.logs);
 });
 
@@ -135,8 +164,21 @@ test('insight decisions remain honest for missing samples and changing prioritie
   assert.equal(mistakes.focus_words[0].reason, '曾经答错，尚需巩固');
   const fresh = Insights.buildInsights({
     scope: 'book', bookId: 77,
-    counts: { total_words: 20, started_words: 0, due_words: 0, mistake_words: 0 },
+    counts: { total_words: 20, started_words: 0, due_words: 0,
+      mistake_words: 0, today_new_remaining: 5 },
   });
   assert.equal(fresh.recommendation.kind, 'new');
   assert.equal(fresh.recommendation.action, 'today');
+  assert.equal(fresh.today.new_words_remaining, 5);
+  assert.match(fresh.recommendation.title, /5 个新词/);
+  const quotaDone = Insights.buildInsights({
+    scope: 'book', bookId: 77,
+    counts: { total_words: 20, started_words: 7, due_words: 0,
+      mistake_words: 0, today_new_remaining: 0 },
+  });
+  assert.equal(quotaDone.coverage.unseen_words, 13);
+  assert.equal(quotaDone.today.new_words_remaining, 0);
+  assert.equal(quotaDone.recommendation.kind, 'plan_done',
+    'unseen words do not imply a new-word task remains today');
+  assert.equal(quotaDone.recommendation.action, 'choose_book');
 });
