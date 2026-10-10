@@ -1929,9 +1929,12 @@ const Study = {
       $('#doneAgain').textContent = '再来一轮';
       $('#doneAgain').onclick = () => location.hash === `#/study/${this.bookId}/${this.mode}`
         ? this.start(this.bookId, this.mode)
-        : Mistakes.study(this.mode);
+        : Mistakes.study(this.mode, Mistakes.studyScopeBookId);
     }
-    $('#doneBack').onclick = () => { location.hash = '#/'; };
+    $('#doneBack').onclick = () => {
+      const scope = !this.todayFlow && this.bookId === null && Mistakes.studyScopeBookId;
+      location.hash = scope ? `#/mistakes?book_id=${scope}` : '#/';
+    };
     // 完成一轮学习后引导抽卡
     const btn = $('#doneDraw');
     if (this.guidedRun) {
@@ -1969,6 +1972,7 @@ const Mistakes = {
   scopeBookId: null,
   focusWordId: null,
   requestToken: 0,
+  studyScopeBookId: null,
 
   async render(bookId = null, focusWordId = null) {
     this.scopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
@@ -1983,7 +1987,7 @@ const Mistakes = {
         api(`/api/mistakes${scopedQuery}`),
         IS_ANDROID_APP ? Promise.resolve(null) : api('/api/books'),
       ]);
-      if (token !== this.requestToken || !location.hash.startsWith('#/mistakes')) return;
+      if (token !== this.requestToken || !(location.hash === '#/mistakes' || location.hash.startsWith('#/mistakes?'))) return;
       clearPageStatus();
     } catch (error) {
       if (token === this.requestToken) {
@@ -2026,7 +2030,7 @@ const Mistakes = {
 
     if (this.focusWordId && list.some(w => w.id === this.focusWordId)) {
       requestAnimationFrame(() => {
-        if (token !== this.requestToken || !location.hash.startsWith('#/mistakes')) return;
+        if (token !== this.requestToken || !(location.hash === '#/mistakes' || location.hash.startsWith('#/mistakes?'))) return;
         const row = $('#mistakeBody').querySelector(`[data-mistake-word="${this.focusWordId}"]`);
         row?.scrollIntoView({ block: 'center', behavior: 'instant' });
         row?.querySelector('.speak-btn')?.focus({ preventScroll: true });
@@ -2035,6 +2039,7 @@ const Mistakes = {
   },
 
   async study(mode, bookId = null) {
+    this.studyScopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
     // Mistake drills are separate from Today's SQLite-owned daily route.
     Study.todayFlow = null;
     Study.mode = mode;
@@ -2071,6 +2076,21 @@ const Mistakes = {
     } catch (error) { toast(`移出错题失败：${error.message}`); }
   },
 };
+
+// A priority word links to its actual book. A due word enters the real
+// scheduled queue; a non-due error focuses its row in the same-book mistake list.
+$('#difficultWords').addEventListener('click', event => {
+  if (IS_ANDROID_APP) return;
+  const button = event.target.closest('[data-insight-word]');
+  if (!button) return;
+  const bookId = Number(button.dataset.insightBook);
+  const wordId = Number(button.dataset.insightWord);
+  if (!Number.isSafeInteger(bookId) || bookId < 1 ||
+      !Number.isSafeInteger(wordId) || wordId < 1) return;
+  location.hash = button.dataset.insightDue === '1'
+    ? `#/today-study/${bookId}`
+    : `#/mistakes?book_id=${bookId}&word_id=${wordId}`;
+});
 
 $('#mistakeBody').addEventListener('click', event => {
   const button = event.target.closest('[data-mistake-remove]');
@@ -2431,7 +2451,8 @@ const Stats = {
     $('#insightsNextAction').onclick = () => {
       const action = insights.recommendation.action;
       if (action === 'today' && chosen) location.hash = `#/today-study/${chosen.id}`;
-      else if (action === 'mistakes') location.hash = '#/mistakes';
+      else if (action === 'mistakes') location.hash = chosen
+        ? `#/mistakes?book_id=${chosen.id}` : '#/mistakes';
       else if (action === 'books') location.hash = '#/books';
       else location.hash = '#/';
     };
@@ -2441,8 +2462,8 @@ const Stats = {
     // and linked even non-mistake "due" words to the mistakes-only page.
     $('#difficultTitle').textContent = '建议关注的单词';
     $('#difficultSubtitle').textContent = '优先到期，再看曾经答错的词';
-    $('#difficultMore').textContent = chosen ? '返回今日处理本词库复习 →' : '从今日选择一本词库 →';
-    $('#difficultMore').setAttribute('href', '#/');
+    $('#difficultMore').textContent = chosen ? '查看当前词库的错题 →' : '打开全部词库错题本 →';
+    $('#difficultMore').setAttribute('href', chosen ? `#/mistakes?book_id=${chosen.id}` : '#/mistakes');
     const target = $('#difficultWords');
     if (!insights.focus_words.length) {
       target.innerHTML = '<p class="difficult-empty">当前没有到期或需要回炉的单词，先按学习计划继续即可。</p>';
@@ -2453,7 +2474,15 @@ const Stats = {
             <b>${esc(word.word)}</b>
             <small>${esc([word.reason, word.book_name].filter(Boolean).join(' · '))}</small>
           </span>
-          <span class="difficult-count numeric">${word.wrong ? `错 ${word.wrong} 次` : '待复习'}</span>
+          <span class="insight-word-actions">
+            <span class="difficult-count numeric">${word.wrong ? `错 ${word.wrong} 次` : '待复习'}</span>
+            <button type="button" class="insight-word-link"
+              data-insight-book="${word.book_id}" data-insight-word="${word.id}"
+              data-insight-due="${word.due_now ? '1' : '0'}"
+              aria-label="${word.due_now ? '开始' : '定位'} ${esc(word.word)} 所在词库${word.due_now ? '的今日复习' : '的错题'}">
+              ${word.due_now ? '去今日复习 ↗' : '定位错题 ↗'}
+            </button>
+          </span>
         </div>`).join('');
     }
     target.setAttribute('role', 'list');
