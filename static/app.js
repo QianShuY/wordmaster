@@ -1843,6 +1843,7 @@ const Study = {
   /* ---------- 完成 ---------- */
   async finish() {
     this.leave();
+    $('#doneBack').textContent = '返回今日';
     $('#studyStage').classList.add('hidden');
     $('#studyDone').classList.remove('hidden');
     $('#studyProgressFill').style.width = '100%';
@@ -2049,6 +2050,9 @@ const Mistakes = {
   },
 
   async study(mode, bookId = null) {
+    // A same-hash "continue" button also starts a brand-new round. Invalidate
+    // delayed callbacks and old completion-summary responses before fetching.
+    Study.runToken++;
     this.studyScopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
     // Mistake drills are separate from Today's SQLite-owned daily route.
     Study.todayFlow = null;
