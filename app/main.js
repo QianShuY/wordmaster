@@ -393,14 +393,36 @@ function countNewToday(bookId) {
     WHERE w.book_id = ? AND date(p.first_studied) = date('now', 'localtime')`).get(bookId).c;
 }
 
+// The existing no-query mistake endpoints remain global for Android.
+// Desktop can request one book; other books must never leak into that view.
+function getMistakeScope(req, res) {
+  if (req.query.book_id === undefined) return { bookId: null, words: q.mistakes.all() };
+  const bookId = Number(req.query.book_id);
+  if (!Number.isSafeInteger(bookId) || bookId < 1) {
+    res.status(400).json({ error: '无效的词库 ID' });
+    return null;
+  }
+  if (!db.prepare('SELECT 1 FROM wordbooks WHERE id = ?').get(bookId)) {
+    res.status(404).json({ error: '词库不存在' });
+    return null;
+  }
+  return { bookId, words: q.mistakes.all().filter(word => word.book_id === bookId) };
+}
+
 // 错题本
-app.get('/api/mistakes', (req, res) => res.json(presentMistakeWords(q.mistakes.all())));
+app.get('/api/mistakes', (req, res) => {
+  const scope = getMistakeScope(req, res);
+  if (!scope) return;
+  res.set('Cache-Control', 'no-store').json(presentMistakeWords(scope.words));
+});
 
 app.get('/api/mistakes/study', (req, res) => {
-  let words = presentMistakeWords(q.mistakes.all()).slice(0, 30);
+  const scope = getMistakeScope(req, res);
+  if (!scope) return;
+  const words = presentMistakeWords(scope.words).slice(0, 30);
   words.sort(() => Math.random() - 0.5);
   if (req.query.mode === 'meaning') attachChoices(words);
-  res.json(words);
+  res.set('Cache-Control', 'no-store').json(words);
 });
 
 app.delete('/api/mistakes/:wordId', (req, res) => {
