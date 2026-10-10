@@ -107,7 +107,7 @@ test('UI connects saved progress, phase stepper and the daily route without touc
     'desktopDoneJourney', 'hubResumeNote', 'studyDoneTitle']) {
     assert.ok(html.includes('id="' + id + '"'), 'missing ' + id);
   }
-  assert.match(app, /DesktopCheckpoint\\.read\\(localStorage, bookId, Domain\\.localDayKey\\(\\), this\\.instanceId\\)/);
+  assert.ok(app.includes('DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId)'));
   assert.match(app, /this\.saveTodayCheckpoint\(false, false\)/);
   assert.match(app, /this\.saveTodayCheckpoint\(false, true\)/);
   assert.match(css, /desktop-study-steps/);
