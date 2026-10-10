@@ -49,7 +49,7 @@ function recommend({ scope, bookId, dueWords, mistakeWords, newWords, startedWor
       kind: 'mistakes', title: `有 ${mistakeWords} 个易错词值得回看`,
       explanation: '它们曾经答错，且还没有达到当前系统的掌握标准。不改变原定复习日期。',
       action: 'mistakes',
-      button: '前往错题本（全部词库） →',
+      button: scoped ? '查看当前词库错题 →' : '前往错题本（全部词库） →',
     };
   }
   if (newWords) {
