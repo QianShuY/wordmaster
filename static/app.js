@@ -947,6 +947,7 @@ const Study = {
   wrongCount: 0, abandonedCount: 0, retryCount: 0,
   sessionId: null,
   todayFlow: null,
+  mistakeDrill: null,
   instanceId: null,
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
@@ -955,6 +956,7 @@ const Study = {
 
   async start(bookId, mode, options = {}) {
     this.todayFlow = null;
+    this.mistakeDrill = null;
     $('#desktopStudyJourney').classList.add('hidden');
     $('#studyExit').textContent = '← 退出';
     this.bookId = bookId; this.mode = mode;
@@ -983,6 +985,7 @@ const Study = {
   async startToday(bookId) {
     if (IS_ANDROID_APP) return;
     this.todayFlow = null;
+    this.mistakeDrill = null;
     this.bookId = bookId;
     this.mode = 'meaning';
     this.guidedRun = false;
@@ -1167,6 +1170,7 @@ const Study = {
 
   startGuidedSpelling(bookId) {
     this.todayFlow = null;
+    this.mistakeDrill = null;
     $('#desktopStudyJourney').classList.add('hidden');
     $('#studyExit').textContent = '← 退出';
     let words = this.guidedSpellWords || [];
@@ -1910,6 +1914,12 @@ const Study = {
       $('#desktopDoneJourney').classList.add('hidden');
       $('#studyDoneTitle').textContent = '本轮完成';
     }
+    $('#desktopMistakeOutcome').classList.add('hidden');
+    if (!IS_ANDROID_APP && this.mistakeDrill) {
+      const drill = { ...this.mistakeDrill };
+      const run = this.runToken;
+      void Mistakes.renderRoundOutcome(drill, run);
+    }
     if (!this.todayFlow && this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
@@ -2042,6 +2052,11 @@ const Mistakes = {
     this.studyScopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
     // Mistake drills are separate from Today's SQLite-owned daily route.
     Study.todayFlow = null;
+    Study.mistakeDrill = IS_ANDROID_APP ? null : {
+      bookId: this.studyScopeBookId, mode,
+    };
+    Study.guidedRun = false;
+    Study.guidedSpellWords = null;
     Study.mode = mode;
     Study.bookId = null;
     show('study');
@@ -2067,6 +2082,48 @@ const Mistakes = {
       }
     } catch (error) {
       showPageError(`错题练习加载失败：${error.message}`, () => this.study(mode, bookId));
+    }
+  },
+
+  async renderRoundOutcome(drill, run) {
+    if (IS_ANDROID_APP || !drill) return;
+    const host = $('#desktopMistakeOutcome');
+    const scoped = Number.isSafeInteger(drill.bookId) && drill.bookId > 0;
+    const url = scoped ? `/api/mistakes?book_id=${drill.bookId}` : '/api/mistakes';
+    const expectedHash = scoped
+      ? `#/mistakes-study/${drill.mode}?book_id=${drill.bookId}`
+      : `#/mistakes-study/${drill.mode}`;
+    host.classList.remove('hidden');
+    host.innerHTML = '<p>正在核对仍需回炉的单词…</p>';
+    try {
+      const remaining = await api(url);
+      if (Study.runToken !== run || location.hash !== expectedHash || $('#studyDone').classList.contains('hidden')) return;
+      const n = remaining.length;
+      const scope = scoped ? '这本词库' : '全部词库';
+      host.innerHTML = `<p class="mistake-outcome-eyebrow">REVIEW STATUS · 错题状态</p>
+        <div class="mistake-outcome-line">
+          <strong class="numeric">${n}</strong>
+          <span>${scope}仍需回炉的单词</span>
+        </div>
+        <p>${n === 0
+          ? '当前范围已经没有需要回炉的错题了，之后仍需按到期日继续复习。'
+          : '这里是完成本轮后仍在错题本中的实际数量。答对一次不等于完全掌握；需要按原有规则继续巩固。'}</p>`;
+      if (n === 0) {
+        $('#doneAgain').textContent = '返回错题本查看成果';
+        $('#doneAgain').onclick = () => {
+          location.hash = scoped ? `#/mistakes?book_id=${drill.bookId}` : '#/mistakes';
+        };
+      } else {
+        $('#doneAgain').textContent = `继续回炉剩余 ${n} 个错词 →`;
+        $('#doneAgain').onclick = () => this.study(drill.mode, drill.bookId);
+      }
+      $('#doneBack').textContent = scoped ? '返回当前词库错题' : '返回全部错题';
+      $('#doneBack').onclick = () => {
+        location.hash = scoped ? `#/mistakes?book_id=${drill.bookId}` : '#/mistakes';
+      };
+    } catch (error) {
+      if (Study.runToken !== run || location.hash !== expectedHash) return;
+      host.textContent = `本轮答题已保存，但暂时无法读取剩余错题数量：${error.message}。仍可返回错题本核对。`;
     }
   },
 
