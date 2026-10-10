@@ -9,7 +9,7 @@ const Checkpoint = require('../shared/desktop-checkpoint');
 const sampleWord = id => ({ id, word: 'word-' + id, meaning: '释义' + id, is_new: 0 });
 function makeSnapshot(overrides = {}) {
   return {
-    version: Checkpoint.VERSION, day: '2026-10-10', bookId: 42,
+    version: Checkpoint.VERSION, day: '2026-10-10', bookId: 42, instanceId: 'db-test-instance-1',
     stage: 'review', phaseDone: false,
     flow: { review: [sampleWord(1), sampleWord(2)], learn: [sampleWord(3)],
       reviewTotal: 2, learnTotal: 1,
@@ -38,9 +38,9 @@ test('same-day checkpoints roundtrip, resume at next word, and expire at local m
   const storage = makeStorage();
   const initial = makeSnapshot();
   assert.equal(Checkpoint.write(storage, initial), true);
-  const copy = Checkpoint.read(storage, 42, '2026-10-10');
+  const copy = Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1');
   assert.deepEqual(copy, initial);
-  assert.equal(Checkpoint.read(storage, 43, '2026-10-10'), null, 'book scopes are independent');
+  assert.equal(Checkpoint.read(storage, 43, '2026-10-10', 'db-test-instance-1'), null, 'book scopes are independent');
   assert.deepEqual(Checkpoint.progress(copy), {
     achieved: 0, expected: 3, stage: 'review', phaseDone: false,
     steps: { review: 0, learn: 0, spelling: 0 },
@@ -50,10 +50,10 @@ test('same-day checkpoints roundtrip, resume at next word, and expire at local m
     counters: { ...initial.counters, firstCorrectCount: 1, correctCount: 1 },
   });
   assert.equal(Checkpoint.write(storage, afterFirst), true);
-  assert.deepEqual(Checkpoint.read(storage, 42, '2026-10-10').queue.map(w => w.id), [2],
+  assert.deepEqual(Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1').queue.map(w => w.id), [2],
     'already answered first word must not return to the queue');
   assert.equal(Checkpoint.progress(afterFirst).achieved, 1);
-  assert.equal(Checkpoint.read(storage, 42, '2026-10-11'), null);
+  assert.equal(Checkpoint.read(storage, 42, '2026-10-11', 'db-test-instance-1'), null);
   assert.equal(storage.data.size, 0, 'expired checkpoint must not be reinterpreted as new-day work');
 });
 
@@ -72,8 +72,15 @@ test('phase boundaries preserve previous milestones and retry history', () => {
   assert.equal(Checkpoint.progress(done).achieved, 3);
   const storage = makeStorage();
   assert.equal(Checkpoint.write(storage, done), true);
-  assert.equal(Checkpoint.read(storage, 42, '2026-10-10').phaseDone, true,
+  assert.equal(Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1').phaseDone, true,
     'a completed stage must reopen at its next-action screen');
+});
+
+test('two databases sharing localhost cannot reuse the same unfinished word IDs', () => {
+  const storage = makeStorage();
+  assert.equal(Checkpoint.write(storage, makeSnapshot()), true);
+  assert.equal(Checkpoint.read(storage, 42, '2026-10-10', 'db-different-installation'), null);
+  assert.equal(storage.data.size, 0);
 });
 
 test('bad or corrupt checkpoints never interrupt studying', () => {
@@ -82,11 +89,11 @@ test('bad or corrupt checkpoints never interrupt studying', () => {
   assert.equal(Checkpoint.write(storage, makeSnapshot({ stage: 'unknown' })), false);
   assert.equal(Checkpoint.write(storage, makeSnapshot({ done: 7 })), false);
   storage.setItem(Checkpoint.key(42), '{broken-json');
-  assert.equal(Checkpoint.read(storage, 42, '2026-10-10'), null);
+  assert.equal(Checkpoint.read(storage, 42, '2026-10-10', 'db-test-instance-1'), null);
   assert.equal(storage.data.size, 0);
   const blocked = { getItem() { throw Error('Storage denied'); },
     setItem() { throw Error('Storage denied'); }, removeItem() { throw Error('Storage denied'); } };
-  assert.equal(Checkpoint.read(blocked, 42, '2026-10-10'), null);
+  assert.equal(Checkpoint.read(blocked, 42, '2026-10-10', 'db-test-instance-1'), null);
   assert.equal(Checkpoint.write(blocked, makeSnapshot()), false);
   assert.equal(Checkpoint.clear(blocked, 42), false);
 });
@@ -100,7 +107,7 @@ test('UI connects saved progress, phase stepper and the daily route without touc
     'desktopDoneJourney', 'hubResumeNote', 'studyDoneTitle']) {
     assert.ok(html.includes('id="' + id + '"'), 'missing ' + id);
   }
-  assert.match(app, /DesktopCheckpoint\.read\(localStorage, bookId, Domain\.localDayKey\(\)\)/);
+  assert.match(app, /DesktopCheckpoint\\.read\\(localStorage, bookId, Domain\\.localDayKey\\(\\), this\\.instanceId\\)/);
   assert.match(app, /this\.saveTodayCheckpoint\(false, false\)/);
   assert.match(app, /this\.saveTodayCheckpoint\(false, true\)/);
   assert.match(css, /desktop-study-steps/);
