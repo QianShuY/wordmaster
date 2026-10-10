@@ -200,6 +200,7 @@
       <p id="doneSummary"></p>
       <p id="doneXp" class="done-xp hidden" aria-live="polite"></p>
       <div id="desktopDoneJourney" class="desktop-done-journey hidden"></div>
+      <section id="desktopMistakeOutcome" class="desktop-mistake-outcome hidden" aria-label="本次错题回炉结果" aria-live="polite"></section>
       <button type="button" class="btn btn-vermilion hidden" id="doneDraw">✦ 领取今日卡牌</button>
       <div class="form-actions">
         <button class="btn btn-primary" id="doneAgain">再来一轮</button>
@@ -254,6 +255,14 @@
       <h2>错题本 <span class="mistake-total">共 <b id="mistakeCount">0</b> 词待回炉</span></h2>
       <button class="btn btn-vermilion" id="mistakeStudyBtn">开始回炉</button>
     </div>
+    <div class="desktop-mistakes-filter" id="desktopMistakesFilter">
+      <label for="desktopMistakesBook"><span>只看这本词库的错题</span>
+        <select id="desktopMistakesBook" aria-label="筛选错题本词库">
+          <option value="all">全部词库</option>
+        </select>
+      </label>
+      <p id="desktopMistakesHint" aria-live="polite">按词库筛选后，回炉练习也会限定在相同词库。</p>
+    </div>
     <div class="word-table-wrap">
       <table class="word-table">
         <thead><tr><th>单词</th><th>词性</th><th>释义</th><th>来自词库</th><th>错误</th><th></th></tr></thead>
@@ -286,6 +295,41 @@
       </label>
     </div>
     <div class="stats-today" id="statsToday"></div>
+
+    <!-- Desktop V1.5: explainable diagnosis, never presented as AI prediction. -->
+    <section class="desktop-insights" id="desktopInsights" aria-labelledby="desktopInsightsHeading">
+      <div class="insights-heading">
+        <div>
+          <p class="insights-eyebrow">STUDY INSIGHTS · 学习诊断</p>
+          <h3 id="desktopInsightsHeading">下一步，该把时间花在哪里？</h3>
+          <p>结合最近两周的真实作答和复习记录，给出有依据的建议。</p>
+        </div>
+        <span class="insights-badge">本地数据 · 只读分析</span>
+      </div>
+      <div class="insights-content">
+        <div class="insights-trend">
+          <span class="insights-section-label">近 7 天作答正确率</span>
+          <div class="insights-accuracy">
+            <strong id="insightsRecentAccuracy" class="numeric">—</strong>
+            <span id="insightsAccuracyChange" class="insights-change">暂无对照</span>
+          </div>
+          <p id="insightsRecentSample">尚无最近 7 天的作答记录。</p>
+          <div class="insights-coverage">
+            <span id="insightsCoverageTitle">新词学习覆盖率</span>
+            <strong id="insightsCoverageValue" class="numeric">—</strong>
+          </div>
+          <div class="insights-cover-bar"><span id="insightsCoverageFill"></span></div>
+          <small id="insightsCoverageNote">覆盖率表示开始学习过，不代表完全掌握。</small>
+        </div>
+        <div class="insights-next">
+          <span class="insights-section-label">建议优先做</span>
+          <h4 id="insightsNextTitle">正在分析学习记录…</h4>
+          <p id="insightsNextReason">复习时间由现有系统决定，这里仅做任务排序建议。</p>
+          <button type="button" class="insights-next-btn" id="insightsNextAction">返回今日 <span aria-hidden="true">↗</span></button>
+          <p class="insights-footnote" id="insightsFootnote">不修改复习间隔 · 不依赖付费 AI</p>
+        </div>
+      </div>
+    </section>
 
     <div class="stats-panels">
       <div class="stats-panel">
@@ -334,9 +378,9 @@
       </div>
 
       <div class="stats-panel difficult-panel">
-        <div class="panel-head"><h3>困难词优先</h3><span class="panel-sub">先回看答错较多的词</span></div>
+        <div class="panel-head"><h3 id="difficultTitle">困难词优先</h3><span class="panel-sub" id="difficultSubtitle">先回看答错较多的词</span></div>
         <div class="difficult-list" id="difficultWords"></div>
-        <a class="difficult-more" href="#/mistakes">查看错题本 →</a>
+        <a class="difficult-more" id="difficultMore" href="#/mistakes">查看错题本 →</a>
       </div>
     </div>
   </section>
