@@ -2284,10 +2284,13 @@ const Stats = {
     const query = IS_ANDROID_APP ? '' : chosen ? `book_id=${chosen.id}` : 'scope=all';
     showPageLoading('正在汇总学习数据…');
     try {
-      const [ov, daily, mistakes] = await Promise.all([
+      const [ov, daily, mistakes, insights] = await Promise.all([
         api(`/api/stats/overview${query ? '?' + query : ''}`),
         api(`/api/stats/daily?days=90${query ? '&' + query : ''}`),
         api('/api/mistakes'),
+        IS_ANDROID_APP ? Promise.resolve(null)
+          : api(`/api/desktop/insights${query ? '?' + query : ''}`)
+              .catch(error => ({ error: error.message })),
       ]);
       if (token !== this.requestToken || location.hash !== '#/stats') return;
       clearPageStatus();
@@ -2301,6 +2304,7 @@ const Stats = {
       this.renderHeatmap(daily);
       this.renderLine(daily);
       this.renderDifficult(chosen ? mistakes.filter(word => word.book_name === chosen.name) : mistakes);
+      if (!IS_ANDROID_APP) this.renderInsights(insights, chosen);
     } catch (error) {
       if (token === this.requestToken) showPageError(`学习数据暂时无法加载：${error.message}`, () => this.loadScoped(books));
     }
@@ -2319,6 +2323,75 @@ const Stats = {
       <div class="today-cell"><b class="numeric">${ov.total.today_reviewed}</b><span>今日已作答</span></div>
       <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>累计作答正确率</span></div>
       <div class="today-cell"><b class="numeric">${ov.total.mastered}</b><span>已掌握单词</span></div>`;
+  },
+
+  renderInsights(insights, chosen) {
+    const panel = $('#desktopInsights');
+    if (!insights || insights.error) {
+      panel.classList.add('insights-unavailable');
+      $('#insightsRecentAccuracy').textContent = '—';
+      $('#insightsAccuracyChange').textContent = '暂不可用';
+      $('#insightsRecentSample').textContent = insights?.error
+        ? `诊断暂不可用：${insights.error}，其他统计仍可使用。`
+        : '诊断暂不可用，其他统计仍可使用。';
+      $('#insightsNextTitle').textContent = '先查看当前学习任务';
+      $('#insightsNextReason').textContent = '学习计划和复习仍会照常运行。';
+      $('#insightsCoverageValue').textContent = '—';
+      $('#insightsCoverageFill').style.width = '0%';
+      $('#insightsCoverageNote').textContent = '学习数据诊断暂未加载。';
+      $('#insightsNextAction').textContent = '返回今日 ↗';
+      $('#insightsNextAction').onclick = () => { location.hash = '#/'; };
+      return;
+    }
+    panel.classList.remove('insights-unavailable');
+    const now = insights.last7;
+    const before = insights.previous7;
+    $('#insightsRecentAccuracy').textContent =
+      now.percentage === null ? '—' : `${now.percentage}%`;
+    $('#insightsAccuracyChange').textContent = insights.change_points === null
+      ? '暂无上期对照'
+      : `${insights.change_points > 0 ? '+' : ''}${insights.change_points} 个百分点`;
+    $('#insightsAccuracyChange').dataset.direction = insights.change_points === null
+      ? 'unknown' : insights.change_points > 0 ? 'up' : insights.change_points < 0 ? 'down' : 'steady';
+    $('#insightsRecentSample').textContent = now.attempts
+      ? `近 7 天作答 ${now.attempts} 次，其中答对 ${now.correct} 次。上一个 7 天${before.attempts ? `作答 ${before.attempts} 次` : '没有作答记录'}。`
+      : '最近 7 天还没有作答记录，不会把未学习当作 0% 正确率。';
+    $('#insightsCoverageValue').textContent = `${insights.coverage.started_percent}%`;
+    $('#insightsCoverageFill').style.width = `${insights.coverage.started_percent}%`;
+    $('#insightsCoverageNote').textContent =
+      `已开始 ${insights.coverage.started_words} / ${insights.coverage.total_words} 词 · 已掌握 ${insights.coverage.mastered_words} 词（不等于开始学习）。`;
+    $('#insightsNextTitle').textContent = insights.recommendation.title;
+    $('#insightsNextReason').textContent = insights.recommendation.explanation;
+    $('#insightsNextAction').innerHTML =
+      `${esc(insights.recommendation.button.replace(/\s*→$/, ''))} <span aria-hidden="true">↗</span>`;
+    $('#insightsNextAction').onclick = () => {
+      const action = insights.recommendation.action;
+      if (action === 'today' && chosen) location.hash = `#/today-study/${chosen.id}`;
+      else if (action === 'mistakes') location.hash = '#/mistakes';
+      else location.hash = '#/';
+    };
+    $('#insightsFootnote').textContent = insights.disclaimer;
+
+    // Keep one priority-word list. The old list sorted solely by wrong counts
+    // and linked even non-mistake "due" words to the mistakes-only page.
+    $('#difficultTitle').textContent = '建议关注的单词';
+    $('#difficultSubtitle').textContent = '优先到期，再看曾经答错的词';
+    $('#difficultMore').textContent = chosen ? '返回今日处理本词库复习 →' : '从今日选择一本词库 →';
+    $('#difficultMore').setAttribute('href', '#/');
+    const target = $('#difficultWords');
+    if (!insights.focus_words.length) {
+      target.innerHTML = '<p class="difficult-empty">当前没有到期或需要回炉的单词，先按学习计划继续即可。</p>';
+    } else {
+      target.innerHTML = insights.focus_words.map(word => `
+        <div class="difficult-word insight-word" role="listitem">
+          <span class="difficult-word-main">
+            <b>${esc(word.word)}</b>
+            <small>${esc([word.reason, word.book_name].filter(Boolean).join(' · '))}</small>
+          </span>
+          <span class="difficult-count numeric">${word.wrong ? `错 ${word.wrong} 次` : '待复习'}</span>
+        </div>`).join('');
+    }
+    target.setAttribute('role', 'list');
   },
 
   renderDifficult(mistakes) {
