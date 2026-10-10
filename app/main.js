@@ -6,6 +6,7 @@ const os = require('node:os');
 const { db, seed, parseImportLine, getDatabaseInstanceId } = require('./db');
 const Domain = require('../shared/domain');
 const DesktopJourney = require('./desktop-journey');
+const LearningInsights = require('./learning-insights');
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
 
@@ -535,6 +536,56 @@ app.get('/api/desktop/journey', (req, res) => {
     mastered: q.stats.get().mastered,
     ownedCards: q.myCards.all().length,
     drawnToday: !!q.todayCard.get(),
+  }));
+});
+
+// Desktop-only, read-only learning diagnosis. All numbers have an explicit
+// time range and optional single-book scope. This does not change SRS scheduling.
+app.get('/api/desktop/insights', (req, res) => {
+  const scoped = req.query.book_id !== undefined;
+  const bookId = scoped ? Number(req.query.book_id) : null;
+  if (scoped && (!Number.isSafeInteger(bookId) || bookId < 1)) {
+    return res.status(400).json({ error: '无效的词库 ID' });
+  }
+  const book = scoped ? db.prepare('SELECT id, name FROM wordbooks WHERE id = ?').get(bookId) : null;
+  if (scoped && !book) return res.status(404).json({ error: '词库不存在' });
+
+  const args = scoped ? [bookId] : [];
+  const wordFilter = scoped ? 'WHERE w.book_id = ?' : '';
+  const counts = db.prepare(`
+    SELECT COUNT(*) AS total_words, COUNT(p.word_id) AS started_words,
+      COALESCE(SUM(CASE WHEN p.streak >= 3 THEN 1 ELSE 0 END), 0) AS mastered_words,
+      COALESCE(SUM(CASE WHEN p.next_due IS NOT NULL
+        AND p.next_due <= datetime('now', 'localtime') THEN 1 ELSE 0 END), 0) AS due_words,
+      COALESCE(SUM(CASE WHEN p.wrong > 0 AND p.streak < 3 THEN 1 ELSE 0 END), 0) AS mistake_words
+    FROM words w LEFT JOIN progress p ON p.word_id = w.id ${wordFilter}`).get(...args);
+
+  const period = (from, to) => db.prepare(`
+    SELECT COUNT(*) AS attempts, COALESCE(SUM(CASE WHEN l.correct = 1 THEN 1 ELSE 0 END), 0) AS correct
+    FROM review_log l JOIN words w ON w.id = l.word_id
+    WHERE date(l.ts) BETWEEN date('now', 'localtime', ?) AND date('now', 'localtime', ?)
+    ${scoped ? 'AND w.book_id = ?' : ''}`).get(from, to, ...args);
+  const recent = period('-6 days', '0 days');
+  const previous = period('-13 days', '-7 days');
+
+  const candidates = db.prepare(`
+    SELECT w.id, w.book_id, w.word, w.meaning, b.name AS book_name,
+      p.wrong, p.streak,
+      CASE WHEN p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
+        THEN 1 ELSE 0 END AS due_now
+    FROM progress p JOIN words w ON w.id = p.word_id
+    JOIN wordbooks b ON b.id = w.book_id
+    WHERE (p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
+      OR (p.wrong > 0 AND p.streak < 3))
+      ${scoped ? 'AND w.book_id = ?' : ''}
+    ORDER BY
+      CASE WHEN p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
+        THEN 1 ELSE 0 END DESC,
+      p.wrong DESC, p.streak ASC, w.id ASC LIMIT 5`).all(...args);
+
+  res.set('Cache-Control', 'no-store').json(LearningInsights.buildInsights({
+    scope: scoped ? 'book' : 'all', bookId,
+    bookName: book?.name, counts, recent, previous, candidates,
   }));
 });
 
