@@ -374,6 +374,7 @@ const DesktopHub = {
       $('#hubNewProgress').textContent = '0 / 0';
       $('#hubTotalNumber').innerHTML = '0 <small>词</small>';
       $('#hubRoutePreview').textContent = '先选择一本有单词的词库，便可开始今日任务。';
+      $('#hubResumeNote').classList.add('hidden');
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = '去管理词库 <span aria-hidden="true">→</span>';
       $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
@@ -434,8 +435,20 @@ const DesktopHub = {
         : '今日任务已完成 ✓';
     $('#hubActionHelp').textContent = due > 0 && upcoming > 0
       ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
-      : due > 0 ? '不限制为 10/20 词，今天到期的复习会优先安排。'
+      : due > 0 ? '今天到期的复习会全部优先安排。'
       : '先认识新词，再用默写确认是否真正记住。';
+    const checkpoint = DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey());
+    const resume = $('#hubResumeNote');
+    resume.classList.toggle('hidden', !checkpoint);
+    if (checkpoint) {
+      const progress = DesktopCheckpoint.progress(checkpoint);
+      const stageNames = { review: '到期复习', learn: '新词学习', spelling: '巩固默写' };
+      const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
+      resume.textContent = `✓ 今日学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
+      $('#hubStart').disabled = false;
+      $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;
+      $('#hubActionHelp').textContent = '已学部分不会因退出而重新入队；点击继续可以接着上次的位置学习。';
+    }
     $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
     $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
   },
@@ -960,7 +973,7 @@ const Study = {
       if (location.hash !== `#/today-study/${bookId}`) return;
       clearPageStatus();
       this.todayFlow = {
-        bookId,
+        bookId, day: Domain.localDayKey(),
         stage: payload.review.length ? 'review' : 'learn',
         review: payload.review,
         learn: payload.learn,
@@ -993,7 +1006,7 @@ const Study = {
     if (IS_ANDROID_APP || !this.todayFlow) return;
     const day = Domain.localDayKey();
     const snapshot = {
-      version: DesktopCheckpoint.VERSION, day, bookId: this.bookId,
+      version: DesktopCheckpoint.VERSION, day: this.todayFlow.day || day, bookId: this.bookId,
       stage: this.todayFlow.stage, phaseDone,
       flow: {
         review: this.todayFlow.review, learn: this.todayFlow.learn,
@@ -1022,7 +1035,7 @@ const Study = {
   },
 
   restoreToday(snapshot) {
-    this.todayFlow = { bookId: snapshot.bookId, stage: snapshot.stage, ...snapshot.flow };
+    this.todayFlow = { bookId: snapshot.bookId, day: snapshot.day, stage: snapshot.stage, ...snapshot.flow };
     this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
     this.guidedRun = false;
     this.queue = snapshot.queue.slice();
