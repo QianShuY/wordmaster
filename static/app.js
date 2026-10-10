@@ -438,7 +438,7 @@ const DesktopHub = {
       ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
       : due > 0 ? '今天到期的复习会全部优先安排。'
       : '先认识新词，再用默写确认是否真正记住。';
-    const checkpoint = DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey());
+    const checkpoint = DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey(), Home.instanceId);
     const resume = $('#hubResumeNote');
     resume.classList.toggle('hidden', !checkpoint);
     if (checkpoint) {
@@ -638,7 +638,7 @@ const Home = {
   section: 'today',
   books: [],
   selectedBookId: 0,
-  stats: null, mistakeCount: 0,
+  stats: null, mistakeCount: 0, instanceId: null,
 
   async render(section = 'today') {
     this.section = section;
@@ -648,10 +648,12 @@ const Home = {
     $('#booksSection').classList.toggle('hidden', section !== 'books');
     showPageLoading('正在准备今日学习…');
     try {
-      const [books, stats, mistakes] = await Promise.all([
-        api('/api/books'), api('/api/stats'), api('/api/mistakes')]);
+      const [books, stats, mistakes, identity] = await Promise.all([
+        api('/api/books'), api('/api/stats'), api('/api/mistakes'),
+        IS_ANDROID_APP ? Promise.resolve(null) : api('/api/desktop/identity')]);
       clearPageStatus();
       this.books = books;
+      this.instanceId = identity?.instance_id || null;
       this.stats = stats;
       this.mistakeCount = mistakes.length;
       this.renderStats(stats);
@@ -930,6 +932,7 @@ const Study = {
   wrongCount: 0, abandonedCount: 0, retryCount: 0,
   sessionId: null,
   todayFlow: null,
+  instanceId: null,
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
   keyHandler: null,
@@ -974,7 +977,17 @@ const Study = {
     $('#studyStage').innerHTML = '<div class="quiz-card"><p class="quiz-kicker">LOADING TODAY…</p></div>';
     $('#studyExit').textContent = '← 保存进度并退出';
     $('#studyExit').onclick = () => { location.hash = '#/'; };
-    const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey());
+    // An independent temporary test database can share the same localhost
+    // origin as the user's real installation. Never restore its checkpoints.
+    try {
+      const identity = await api('/api/desktop/identity');
+      if (location.hash !== `#/today-study/${bookId}`) return;
+      this.instanceId = identity.instance_id;
+    } catch (error) {
+      showPageError(`无法验证当前词库的数据身份：${error.message}`, () => this.startToday(bookId));
+      return;
+    }
+    const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId);
     if (cached) {
       this.restoreToday(cached);
       return;
@@ -1018,7 +1031,8 @@ const Study = {
     if (IS_ANDROID_APP || !this.todayFlow) return;
     const day = Domain.localDayKey();
     const snapshot = {
-      version: DesktopCheckpoint.VERSION, day: this.todayFlow.day || day, bookId: this.bookId,
+      version: DesktopCheckpoint.VERSION, day: this.todayFlow.day || day,
+      bookId: this.bookId, instanceId: this.instanceId,
       stage: this.todayFlow.stage, phaseDone,
       flow: {
         review: this.todayFlow.review, learn: this.todayFlow.learn,
