@@ -444,10 +444,20 @@ const DesktopHub = {
       const progress = DesktopCheckpoint.progress(checkpoint);
       const stageNames = { review: '到期复习', learn: '新词学习', spelling: '巩固默写' };
       const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
-      resume.textContent = `✓ 今日学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
+      const remainingDue = Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
+      const remainingNew = Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
+      // Live SQLite counts can include newly introduced (now instantly due)
+      // words. While resuming, present the *same* original task manifest.
+      $('#hubDueCount').innerHTML = `${remainingDue} <small>词</small>`;
+      $('#hubNewProgress').textContent = `${checkpoint.flow.learnTotal - remainingNew} / ${checkpoint.flow.learnTotal}`;
+      $('#hubTotalNumber').innerHTML = `${remainingDue + remainingNew} <small>词</small>`;
+      $('#hubRoutePreview').textContent = remainingDue + remainingNew
+        ? `本日任务共 ${progress.expected} 词，已有 ${progress.achieved} 词完成 · 继续 ${stageNames[checkpoint.stage]}`
+        : '新词和复习已做完，继续完成最后的巩固。';
+      resume.textContent = `✓ 学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;
-      $('#hubActionHelp').textContent = '已学部分不会因退出而重新入队；点击继续可以接着上次的位置学习。';
+      $('#hubActionHelp').textContent = '退出后仍然保留本次任务和未完成的题目，点击继续即可接上。';
     }
     $('#hubMistakes').classList.toggle('hidden', mistakeCount === 0);
     $('#hubMistakes').textContent = `回炉 ${mistakeCount} 个错题 ↗`;
