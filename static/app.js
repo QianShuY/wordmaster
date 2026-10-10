@@ -2368,6 +2368,7 @@ const Stats = {
       const action = insights.recommendation.action;
       if (action === 'today' && chosen) location.hash = `#/today-study/${chosen.id}`;
       else if (action === 'mistakes') location.hash = '#/mistakes';
+      else if (action === 'books') location.hash = '#/books';
       else location.hash = '#/';
     };
     $('#insightsFootnote').textContent = insights.disclaimer;
