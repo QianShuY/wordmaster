@@ -2329,6 +2329,11 @@ const Stats = {
     const panel = $('#desktopInsights');
     if (!insights || insights.error) {
       panel.classList.add('insights-unavailable');
+      $('#difficultTitle').textContent = '困难词优先';
+      $('#difficultSubtitle').textContent = '先回看答错较多的词';
+      $('#difficultMore').textContent = '查看错题本 →';
+      $('#difficultMore').setAttribute('href', '#/mistakes');
+      $('#difficultWords').removeAttribute('role');
       $('#insightsRecentAccuracy').textContent = '—';
       $('#insightsAccuracyChange').textContent = '暂不可用';
       $('#insightsRecentSample').textContent = insights?.error
