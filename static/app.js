@@ -1811,12 +1811,15 @@ const Study = {
       $('#studyDoneTitle').textContent = titles[flow.stage];
       const stepCopy = flow.stage === 'review' ? '第一步 · 到期复习'
         : flow.stage === 'learn' ? '第二步 · 新词认识' : '第三步 · 巩固默写';
-      $('#desktopDoneJourney').innerHTML = `<div class="desktop-done-head"><span>${stepCopy}</span><strong>${this.total} / ${this.total} 词</strong></div>
-        <div class="desktop-done-numbers">
-          <div><strong>${this.firstCorrectCount}</strong><small>首次答对</small></div>
+      const resultColumns = flow.stage === 'learn'
+        ? `<div><strong>${this.total}</strong><small>认识新词</small></div>
+          <div><strong>${this.learnAgainIds.size}</strong><small>本轮回看</small></div>
+          <div><strong>${Domain.spellingWords(flow.learn).length}</strong><small>可巩固默写</small></div>`
+        : `<div><strong>${this.firstCorrectCount}</strong><small>首次答对</small></div>
           <div><strong>${this.retryCorrectCount}</strong><small>回炉答对</small></div>
-          <div><strong>${this.wrongCount + this.abandonedCount}</strong><small>错误或跳过次数</small></div>
-        </div>
+          <div><strong>${this.wrongCount + this.abandonedCount}</strong><small>错误或跳过次数</small></div>`;
+      $('#desktopDoneJourney').innerHTML = `<div class="desktop-done-head"><span>${stepCopy}</span><strong>${this.total} / ${this.total} 词</strong></div>
+        <div class="desktop-done-numbers">${resultColumns}</div>
         <p>${flow.stage === 'learn' ? '认识新词不代表完全掌握，接下来通过默写巩固。'
           : '已完成的答题会真实记录到学习数据，复习日期仍遵循现有规则。'}</p>`;
       $('#desktopDoneJourney').classList.remove('hidden');
