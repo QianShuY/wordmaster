@@ -54,7 +54,7 @@ test('same-day checkpoints roundtrip, resume at next word, and expire at local m
     'already answered first word must not return to the queue');
   assert.equal(Checkpoint.progress(afterFirst).achieved, 1);
   assert.equal(Checkpoint.read(storage, 42, '2026-10-11'), null);
-  assert.equal(storage.data.size, 0, 'yesterday checkpoint is removed, never reinterpreted as today's');
+  assert.equal(storage.data.size, 0, 'expired checkpoint must not be reinterpreted as new-day work');
 });
 
 test('phase boundaries preserve previous milestones and retry history', () => {
