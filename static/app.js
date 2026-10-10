@@ -1946,6 +1946,8 @@ const Study = {
       const scope = !this.todayFlow && this.bookId === null && Mistakes.studyScopeBookId;
       location.hash = scope ? `#/mistakes?book_id=${scope}` : '#/';
     };
+    // An old reward request must not repaint the next study round.
+    const finishToken = this.runToken;
     // 完成一轮学习后引导抽卡
     const btn = $('#doneDraw');
     if (this.guidedRun) {
@@ -1955,6 +1957,7 @@ const Study = {
     showPageLoading('正在确认今日卡牌奖励状态…');
     try {
       const cd = await api('/api/cards');
+      if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
       clearPageStatus();
       if (cd.drawn_today || cd.today_answered < cd.draw_target) {
         btn.classList.add('hidden');
@@ -1963,6 +1966,7 @@ const Study = {
         btn.onclick = () => { Cards._preview = false; Cards.draw(); };
       }
     } catch (error) {
+      if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
       btn.classList.add('hidden');
       showPageError(`本轮已完成，但卡牌状态暂时无法读取：${error.message}`, () => this.finish());
     }
