@@ -763,12 +763,13 @@ const Home = {
   },
 
   renderStats(s) {
-    const acc = s.total_correct + s.total_wrong > 0
-      ? Math.round(s.total_correct / (s.total_correct + s.total_wrong) * 100) : 0;
+    const attempted = Number(s.total_correct || 0) + Number(s.total_wrong || 0);
+    const acc = attempted > 0 ? Math.round(s.total_correct / attempted * 100)
+      : IS_ANDROID_APP ? 0 : '—';
     $('#topStats').innerHTML = `
       <div class="stat"><b class="numeric">${s.today_reviewed}</b>今日已学</div>
       <div class="stat"><b class="numeric">${s.mastered}</b>已掌握</div>
-      <div class="stat"><b class="numeric"><span>${acc}</span><small class="metric-percent">%</small></b>总正确率</div>`;
+      <div class="stat"><b class="numeric"><span>${acc}</span><small class="metric-percent">${acc === '—' ? '' : '%'}</small></b>${IS_ANDROID_APP ? '总正确率' : '全库累计正确率'}</div>`;
   },
 
   renderBooks(books, mistakeCount) {
@@ -2464,6 +2465,9 @@ const Stats = {
   renderToday(ov) {
     const t = ov.today;
     const allBooks = !IS_ANDROID_APP && this.scope === 'all';
+    const answerCount = Number(ov.total.total_correct || 0) + Number(ov.total.total_wrong || 0);
+    // A missing history is unknown, never a real zero-percent result.
+    const allTimeAccuracy = !IS_ANDROID_APP && answerCount === 0 ? '—' : ov.accuracy;
     const newText = allBooks
       ? `<b class="numeric">${t.new_today}</b><span>今日新学词数</span>`
       : `<b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span>`;
@@ -2472,7 +2476,7 @@ const Stats = {
       <div class="today-cell"><b class="numeric">${t.due_review}</b><span>待复习单词</span></div>
       <div class="today-cell">${newText}</div>
       <div class="today-cell"><b class="numeric">${ov.total.today_reviewed}</b><span>今日已作答</span></div>
-      <div class="today-cell"><b class="metric-percent-value numeric"><span>${ov.accuracy}</span><i>%</i></b><span>累计作答正确率</span></div>
+      <div class="today-cell"><b class="metric-percent-value numeric"><span>${allTimeAccuracy}</span><i>${allTimeAccuracy === '—' ? '' : '%'}</i></b><span>${allTimeAccuracy === '—' ? '累计作答正确率 · 暂无记录' : '累计作答正确率'}</span></div>
       <div class="today-cell"><b class="numeric">${ov.total.mastered}</b><span>已掌握单词</span></div>`;
   },
 
