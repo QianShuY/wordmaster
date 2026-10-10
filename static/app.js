@@ -1075,15 +1075,10 @@ const Study = {
 
   restoreToday(snapshot) {
     this.runToken++;
+    // Reconstitute the original spelling manifest from older valid snapshots.
+    // Only the pending queue remains shortened: answered words stay answered.
+    snapshot = DesktopCheckpoint.repairLearnManifest(snapshot);
     this.todayFlow = { bookId: snapshot.bookId, day: snapshot.day, stage: snapshot.stage, ...snapshot.flow };
-    // Repair checkpoints saved by V1.4 before the queue/manifest separation.
-    // During new-word learning, roundWords still contained all original
-    // new words even when the shared todayFlow.learn array had been shifted.
-    if (snapshot.stage === 'learn' &&
-        this.todayFlow.learn.length < this.todayFlow.learnTotal &&
-        snapshot.roundWords.length === this.todayFlow.learnTotal) {
-      this.todayFlow.learn = snapshot.roundWords.slice();
-    }
     this.mode = snapshot.stage === 'review' ? 'meaning' : snapshot.stage === 'learn' ? 'learn' : 'spelling';
     this.guidedRun = false;
     this.queue = snapshot.queue.slice();
