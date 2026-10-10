@@ -1057,6 +1057,14 @@ const Study = {
     };
     if (!DesktopCheckpoint.write(localStorage, snapshot)) {
       console.warn('本地学习断点暂时不可保存。请检查浏览器存储空间。');
+      $('#studyExit').textContent = '← 退出（断点未保存）';
+      if (!this.checkpointWarned) {
+        this.checkpointWarned = true;
+        toast('本地空间不足或禁用了存储，当前断点未保存；建议完成这一轮后再退出');
+      }
+    } else {
+      this.checkpointWarned = false;
+      $('#studyExit').textContent = '← 保存进度并退出';
     }
   },
 
