@@ -2401,15 +2401,17 @@ $('#importForm').addEventListener('submit', async (e) => {
    ============================================================ */
 const Stats = {
   requestToken: 0,
+  renderToken: 0,
   scope: 'all',
 
   async render() {
+    const renderToken = ++this.renderToken;
     show('stats');
     if (!IS_ANDROID_APP) {
       showPageLoading('正在加载学习统计范围…');
       try {
         const books = await api('/api/books');
-        if (location.hash !== '#/stats') return;
+        if (this.renderToken !== renderToken || location.hash !== '#/stats') return;
         const select = $('#desktopStatsBookSelect');
         const preferred = Home.selectedBookId || Number(localStorage.getItem('wordmaster_selected_book') || 0);
         select.innerHTML = '<option value="all">全部词库</option>' + books.map(book =>
@@ -2422,7 +2424,9 @@ const Stats = {
         };
         await this.loadScoped(books);
       } catch (error) {
-        showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+        if (this.renderToken === renderToken && location.hash === '#/stats') {
+          showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+        }
       }
       return;
     }
