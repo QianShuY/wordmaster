@@ -1,0 +1,30 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-runtime-'));
+process.env.WORDMASTER_DB_PATH=path.join(dir,'isolated.db');
+const {installationKey,runtimeInfo}=require('../app/runtime-info');
+test('installation identity distinguishes application directories and databases without exposing paths',()=>{
+ const root=path.resolve(__dirname,'..'),db=process.env.WORDMASTER_DB_PATH;
+ assert.match(installationKey(root,db),/^[0-9a-f]{64}$/);
+ assert.equal(installationKey(root,db),installationKey(root+path.sep,db));
+ assert.notEqual(installationKey(root,db),installationKey(root,path.join(dir,'other.db')));
+ assert.notEqual(installationKey(root,db),installationKey(path.join(root,'other'),db));
+ const info=runtimeInfo();assert.equal(info.application,'wordmaster');assert.equal(info.installationKey,installationKey(root,db));
+ assert.ok(!JSON.stringify(info).includes(dir));
+});
+test('runtime readiness is read-only and uncached, and reports the actual content build',async t=>{
+ const {app,db}=require('../app/main');const server=app.listen(0,'127.0.0.1');
+ t.after(()=>{server.close();db.close();fs.rmSync(dir,{recursive:true,force:true});});
+ await new Promise(resolve=>server.once('listening',resolve));
+ const response=await fetch('http://127.0.0.1:'+server.address().port+'/api/desktop/runtime');
+ assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'no-store');
+ assert.deepEqual(await response.json(),runtimeInfo(db));
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM progress').get().n,0);
+ const version=require('../app/vocabulary').VERSION,id=Number(db.prepare('INSERT INTO wordbooks(name,is_builtin) VALUES(?,1)').run('运行版本夹具').lastInsertRowid);
+ db.prepare('INSERT INTO vocabulary_builds VALUES(?,?,?,?)').run(id,'older-installed-content','fixture-source','{}');
+ const before=JSON.stringify(db.prepare('SELECT * FROM vocabulary_builds ORDER BY book_id').all());
+ const old=await (await fetch('http://127.0.0.1:'+server.address().port+'/api/desktop/runtime')).json();assert.equal(old.contentVersion,'older-installed-content');assert.equal(old.availableContentVersion,version);assert.equal(old.contentCurrent,false);assert.equal(JSON.stringify(db.prepare('SELECT * FROM vocabulary_builds ORDER BY book_id').all()),before);
+ db.prepare('UPDATE vocabulary_builds SET content_version=? WHERE book_id=?').run(version,id);
+ const current=await (await fetch('http://127.0.0.1:'+server.address().port+'/api/desktop/runtime')).json();assert.equal(current.contentVersion,version);assert.equal(current.contentCurrent,true);
+ db.prepare('INSERT INTO wordbooks(name,is_builtin) VALUES(?,1)').run('未追踪内容夹具');const unknown=runtimeInfo(db);assert.equal(unknown.contentVersion,null);assert.equal(unknown.contentCurrent,false);assert.equal(unknown.untrackedBuiltInBooks,1);
+});

@@ -1,0 +1,113 @@
+# tem-082 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：155
+- 输入 SHA256：296c9d988ab784f71313b2342ae9d39e8264f27dcbe4d61c0de92324ea202760
+
+## 待主代理复核
+
+Recur 已访问 Oxford Learner’s Dictionaries 并核对动词“再次发生”义和英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。Rectification 的中文义、regardless/regulation 的词性标注均有疑点；另外需核对多义条目的完整释义。
+
+- rectangle
+- rectangular
+- rectification
+- rectify
+- rectitude
+- rector
+- recurrence
+- recurrent
+- recycle
+- red
+- redbrick
+- reddish
+- redeem
+- redemption
+- redemptive
+- redevelopment
+- red-hot
+- redistribute
+- redolent
+- redraw
+- redress
+- reduce
+- reductio ad absurdum
+- reduction
+- redundancy
+- redundant
+- reed
+- reedy
+- reef
+- reel
+- re-examine
+- refer
+- referee
+- reference
+- referendum
+- refine
+- refined
+- refinement
+- refinery
+- reflect
+- reflection
+- reflex
+- reform
+- reformer
+- refrain
+- refresh
+- refreshing
+- refrigerator
+- refuge
+- refugee
+- refurbish
+- refusal
+- refuse
+- refute
+- refutation
+- regain
+- regal
+- regard
+- regarding
+- regardless
+- regatta
+- regency
+- regeneration
+- regent
+- regime
+- regiment
+- region
+- register
+- registrar
+- registration
+- registry
+- regress
+- regression
+- regressive
+- regret
+- regular
+- regularity
+- regulate
+- regulation
+- rehabilitate
+- rehearsal
+- rehearse
+- rehouse
+- reign
+- reimburse
+- rein
+- reinforce
+- reinforcement
+- reinstate
+- reject
+- rejection
+- rejoice
+- rejuvenate
+- relapse
+- relate
+- relation
+- relationship
+- relative
+- relativity

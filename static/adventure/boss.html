@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>雾桥守卫 · 墨词：旅行与咒语</title>
+  <link rel="icon" href="/logo.png"><link rel="stylesheet" href="boss.css">
+<script src="/shared/theme-bridge.js"></script><link rel="stylesheet" href="shell-theme.css"></head>
+<body>
+  <header class="folio-header"><a href="journey.html?place=bridge">← 返回旅行地图</a><a class="wordmark" href="/#/">墨词 <span>旅行与咒语</span></a><span class="edition">角色手记 / 001</span></header>
+  <main>
+    <div class="chapter-heading"><p>第一章 · 雾桥来信</p><a href="battle.html" class="battle-entry">进入英语战斗 →</a></div>
+    <section class="encounter" id="encounter" data-state="idle" aria-label="雾桥守卫动态场景">
+      <div class="scene-backdrop" aria-hidden="true"></div><div class="scene-vignette" aria-hidden="true"></div>
+      <div class="mist mist-back" aria-hidden="true"></div>
+      <div class="guardian-position" aria-hidden="true"><div class="guardian-motion"><img class="guardian" src="assets/mist-warden-v1.webp" alt="" fetchpriority="high"><div class="guardian-pose"></div><span class="lantern-glow"></span><span class="shield-aura"></span></div></div>
+      <div class="lantern-wash" aria-hidden="true"><img src="assets/lantern-brush.svg" alt=""><span class="swept-mist"></span></div><div class="ground-ink" aria-hidden="true"><img src="assets/shield-ink-impact-v1.webp" alt=""><span class="stone-dust"></span></div><div class="paper-storm" aria-hidden="true"></div>
+      <div class="mist mist-front" aria-hidden="true"></div>
+      <div class="pages" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="spell-ring" aria-hidden="true"></div><div class="spell-stroke" aria-hidden="true"></div><div class="shield-shards" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="impact-flash" aria-hidden="true"></div>
+      <div class="encounter-copy">
+        <p class="eyebrow">关隘之主 · THE MIST WARDEN</p><h1>雾桥守卫</h1>
+        <p class="lore">它守着一封没有文字的来信。<br>记起的每一个词，都能让迷雾退去一点。</p>
+        <div class="intent"><span class="intent-dot" aria-hidden="true"></span><div><small>守卫意图</small><strong id="intentText">静候 · 石印护盾</strong></div></div>
+        <p class="intent-detail" id="intentDetail">灯火平稳，石印未动。先看懂它的动作，再决定如何施法。</p>
+        <div class="state-label"><span id="stateLabel">01 / 静候</span><span class="scene-seal" id="sceneSeal">雾桥</span></div>
+      </div>
+      <div class="scene-caption"><span>记忆让道路显现。</span><button id="pauseMotion" type="button" aria-pressed="false">暂停动态</button></div>
+      <div class="asset-error" id="assetError" role="alert" hidden>场景素材加载失败。请刷新页面重试。</div>
+    </section>
+    <section class="direction-desk" aria-labelledby="motionHeading">
+      <div class="desk-heading"><div><p class="eyebrow">动作手记</p><h2 id="motionHeading">让英语，成为破雾的力量。</h2></div><button id="resetScene" type="button" class="reset">重置演出 ↺</button></div>
+      <div class="motion-actions" aria-label="选择守卫动作">
+        <button type="button" data-motion="charge"><span>一式 / 词义辨识格挡</span><strong>提灯扫雾</strong><small>举灯收势 → 灯痕扫桥 → 雾气退开</small></button>
+        <button type="button" data-motion="sealCharge"><span>二式 / 默写破印</span><strong>石印封路</strong><small>沉肩蓄势 → 盾落停顿 → 墨裂散尘</small></button>
+        <button type="button" data-motion="stormCharge"><span>三式 / 双词回忆打断</span><strong>残页风暴</strong><small>残页聚拢 → 翻卷爆发 → 余页落地</small></button>
+        <button type="button" data-motion="hit"><span>02 / 单词咒语</span><strong>墨光受击</strong><small>回忆命中，石甲留下震颤</small></button>
+        <button type="button" data-motion="break"><span>03 / 默写破盾</span><strong>石印碎裂</strong><small>护盾崩解，露出短暂破绽</small></button>
+        <button type="button" data-motion="vanish"><span>04 / 胜利退场</span><strong>散作残页</strong><small>雾退桥开，留下一枚通关印章</small></button>
+      </div>
+      <p class="motion-status" id="motionStatus" role="status" aria-live="polite">选择一个动作，查看守卫的演出。当前为形象预览，不结算通关或学习奖励。</p>
+    </section>
+    <section class="field-notes" aria-label="守卫设计笔记">
+      <article><span>一 / 提灯扫雾</span><h3>灯火先于攻击亮起。</h3><p>提灯先收向身侧，再向桥面扫出一道暖色灯痕，雾气随之退开。正式战斗中用词义辨识施放格挡。</p></article>
+      <article><span>二 / 用回忆破盾</span><h3>石印记住了遗忘的词。</h3><p>厚重的石盾与残页是守卫的核心轮廓。中文提示下的英文默写击破护盾，使“想起答案”有明确的视觉回报。</p></article>
+      <article><span>三 / 残页风暴</span><h3>半血之后，残页归风。</h3><p>第二阶段展开披风，纸页围绕守卫组成旋涡。连续回忆两个不同单词打断；当前可直接预览这招演出。</p></article>
+    </section>
+    <footer>墨词 · 原创角色设定 <span>雾桥来信 / 第一张敌人手记</span></footer>
+  </main>
+  <script src="boss-motion.js"></script><script src="boss.js"></script>
+</body>
+</html>

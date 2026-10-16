@@ -4,13 +4,13 @@
 // DB remains the authority for saved answers, XP and due dates. Never copy
 // passwords, API keys or tokens into a checkpoint.
 (function (root, factory) {
-  const api = factory();
+  const api = factory(typeof module === 'object' && module.exports ? require('./domain') : root.WordMasterDomain);
   if (typeof module === 'object' && module.exports) module.exports = api;
   if (root) root.WordMasterDesktopCheckpoint = api;
-})(typeof window === 'undefined' ? null : window, function () {
+})(typeof window === 'undefined' ? null : window, function (Domain) {
   const VERSION = 2;
   const PREFIX = 'wordmaster_desktop_today_v14_';
-  const STAGES = new Set(['review', 'learn', 'spelling']);
+  const STAGES = new Set(['review', 'review-spelling', 'learn', 'choice', 'spelling']);
 
   const key = bookId => PREFIX + String(bookId);
   const natural = value => Number.isSafeInteger(value) && value >= 0 && value <= 10000;
@@ -26,10 +26,23 @@
     && typeof value.phaseDone === 'boolean'
     && value.flow && words(value.flow.review) && words(value.flow.learn)
     && natural(value.flow.reviewTotal) && natural(value.flow.learnTotal)
+    && (value.flow.learnGroupSize === undefined || value.flow.learnGroupSize === 10)
+    && (value.flow.learnGroupStart === undefined || (natural(value.flow.learnGroupStart) && value.flow.learnGroupStart <= value.flow.learn.length && value.flow.learnGroupStart % 10 === 0))
     && typeof value.flow.reviewHasMore === 'boolean'
     && typeof value.flow.learnHasMore === 'boolean'
     && value.flow.completed && ['review', 'learn', 'spelling'].every(k => natural(value.flow.completed[k]))
+    && (value.flow.completed['review-spelling'] === undefined || natural(value.flow.completed['review-spelling']))
+    && (value.flow.reviewCycleId === undefined || (typeof value.flow.reviewCycleId === 'string' && value.flow.reviewCycleId.length>=8 && value.flow.reviewCycleId.length<=128))
+    && (value.flow.completed.choice === undefined || natural(value.flow.completed.choice))
+    && (value.flow.deferred === undefined || words(value.flow.deferred))
+    && (value.deferredIds === undefined || (Array.isArray(value.deferredIds) && value.deferredIds.length <= 200 && value.deferredIds.every(id => /^\d+$/.test(id))))
+    && (value.reinforcement === undefined || (value.reinforcement && typeof value.reinforcement === 'object' && !Array.isArray(value.reinforcement)
+      && Object.entries(value.reinforcement).length <= 200
+      && Object.entries(value.reinforcement).every(([id, state]) => /^\d+$/.test(id) && state
+        && natural(state.errors) && natural(state.streak)
+        && [1,2].includes(state.required) && typeof state.passed === 'boolean' && typeof state.canDefer === 'boolean')))
     && words(value.roundWords) && words(value.queue)
+    && (value.roundXp === undefined || (Number.isSafeInteger(value.roundXp) && value.roundXp >= 0 && value.roundXp <= 1000000))
     && natural(value.total) && natural(value.done) && value.done <= value.total
     && value.counters && ['correctCount','firstCorrectCount','retryCorrectCount',
       'wrongCount','abandonedCount','retryCount'].every(k => natural(value.counters[k]))
@@ -74,7 +87,7 @@
     if (!sane(snapshot)) return null;
     const { flow } = snapshot;
     const completed = { ...flow.completed };
-    if (!snapshot.phaseDone) completed[snapshot.stage] = Math.min(snapshot.total, snapshot.done);
+    if (!snapshot.phaseDone) completed[snapshot.stage] = stageOffset(flow,snapshot.stage) + Math.min(snapshot.total, snapshot.done);
     const expected = Math.max(0, flow.reviewTotal + flow.learnTotal);
     const achieved = Math.min(expected, Math.min(flow.reviewTotal, completed.review)
       + Math.min(flow.learnTotal, completed.learn));
@@ -96,5 +109,13 @@
     };
   }
 
-  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest });
+  function learnGroup(flow) {
+    return flow.learnGroupSize===10 ? flow.learn.slice(flow.learnGroupStart||0,(flow.learnGroupStart||0)+10) : flow.learn.slice();
+  }
+  function stageOffset(flow,stage) {
+    if(flow.learnGroupSize!==10||!['learn','choice','spelling'].includes(stage))return 0;
+    const prior=flow.learn.slice(0,flow.learnGroupStart||0);
+    return stage==='spelling'?Domain.spellingWords(prior).filter(w=>!(flow.deferred||[]).some(x=>x.id===w.id)).length:prior.length;
+  }
+  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest, learnGroup, stageOffset });
 });

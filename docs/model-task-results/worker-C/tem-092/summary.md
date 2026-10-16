@@ -1,0 +1,113 @@
+# tem-092 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：152
+- 输入 SHA256：9deca8f8284f34955afadc6bc923cd44c1a34ad2a8de478d199252716d7af118
+
+## 待主代理复核
+
+Shiny 已访问 Oxford Learner’s Dictionaries 并核对形容词核心义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。Shit 和 shrew 的粗俗/贬损义、shrine 的源中文错字等疑点已记录。
+
+- shimmer
+- shin
+- shine
+- ship
+- shipboard
+- shipment
+- shipping
+- shipwreck
+- shipyard
+- shirk
+- shirt
+- shit
+- shiver
+- shoal 1
+- shoal 2
+- shock
+- shockproof
+- shoddy
+- shoe
+- shoemaker
+- shoot
+- shop
+- shopkeeper
+- shoplift
+- shopper
+- shopping
+- shore
+- short
+- shortage
+- shortchange
+- short-circuit
+- shortcoming
+- shortcut
+- shorten
+- shortfall
+- shorthand
+- shortly
+- shorts
+- shortsighted
+- short-term
+- short-wave
+- shot
+- shotgun
+- should
+- shoulder
+- shout
+- shove
+- shovel
+- show
+- showcase
+- showdown
+- shower
+- showpiece
+- showy
+- shred
+- shrew
+- shriek
+- shrill
+- shrimp
+- shrine
+- shrink
+- shrinkage
+- shrivel
+- shroud
+- shrub
+- shrubbery
+- shrubby
+- shrug
+- shudder
+- shuffle
+- shun
+- shunt
+- shut
+- shutter
+- shy
+- sibling
+- sic
+- sick
+- sickbay
+- sicken
+- sickening
+- sickle
+- sickness
+- side
+- sideboard
+- sidelight
+- sideline
+- sidestep
+- sidewalk
+- sideways
+- sidle
+- siege
+- sierra
+- sieve
+- sift
+- sigh
+- sight
+- sighting
+- sightseeing

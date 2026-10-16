@@ -5,7 +5,10 @@
   "main": "app/main.js",
   "scripts": {
     "start": "node app/main.js",
-    "test": "node --test"
+    "test": "node --test",
+    "audit:vocabulary": "node scripts/audit-vocabulary.js",
+    "audit:content": "node scripts/content-quality.js",
+    "measure:api": "node scripts/measure-readonly-api.js"
   },
   "dependencies": {
     "express": "^5.1.0"

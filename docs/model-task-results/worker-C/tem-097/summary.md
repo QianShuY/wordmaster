@@ -1,0 +1,113 @@
+# tem-097 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：170
+- 输入 SHA256：55a85aa2adba1e3d19f2b9f5143d1580b42b50bb845fa05d9aeb96de9b2e7087
+
+## 待主代理复核
+
+Spoon 已访问 Oxford Learner’s Dictionaries 并核对名词餐具义与英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需核对 spook 的冒犯性俚语义、spoonful 的词性标签、sportsman/sportswoman 的性别化称谓。
+
+- sponge
+- sponsor
+- spontaneous
+- spook
+- spoonful
+- sporadic
+- spore
+- sport
+- sportsman
+- sportsmanship
+- sportswoman
+- spot
+- spotless
+- spotlight
+- spouse
+- spout
+- sprain
+- sprawl
+- spray
+- spread
+- spring 1
+- spring 2
+- springboard
+- springlock
+- sprinkle
+- sprint
+- sprout
+- spruce
+- spur
+- spurious
+- spy
+- squabble
+- squad
+- squadron
+- squalid
+- squall
+- squalor
+- squander
+- square
+- squarely
+- squash 1
+- squash 2
+- squat
+- squawk
+- squeak
+- squeal
+- squeamish
+- squeeze
+- squint
+- squire
+- squirm
+- squirrel
+- squirt
+- stab
+- stability
+- stabilize
+- stable 1
+- stable 2
+- staccato
+- stack
+- stadium
+- staff
+- stag
+- stage
+- stagger
+- stagnant
+- stagnation
+- staid
+- stain
+- stainless
+- stair
+- staircase
+- stake
+- stale
+- stalemate
+- stalk 1
+- stalk 2
+- stall 1
+- stall 2
+- stallion
+- stalwart
+- stamina
+- stammer
+- stamp
+- stampede
+- stance
+- stand
+- standard
+- standardize
+- standing
+- standpoint
+- standstill
+- stanza
+- staple 1
+- staple 2
+- stapler
+- star
+- starboard
+- starch

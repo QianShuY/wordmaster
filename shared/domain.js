@@ -1,10 +1,10 @@
 'use strict';
 
 (function exposeDomain(root, factory) {
-  const domain = factory();
+  const domain = factory(typeof module === 'object' && module.exports ? require('./answer-policy') : root.WordMasterAnswerPolicy);
   if (typeof module === 'object' && module.exports) module.exports = domain;
   else root.WordMasterDomain = domain;
-})(typeof globalThis === 'undefined' ? this : globalThis, function createDomain() {
+})(typeof globalThis === 'undefined' ? this : globalThis, function createDomain(AnswerPolicy) {
   const REVIEW_INTERVALS_DAYS = [1, 2, 4, 7, 15, 30];
   const CARD_DRAW_TARGET = 10;
   const CARD_RARITY_WEIGHTS = Object.freeze({ N: 50, R: 30, SR: 15, UR: 5 });
@@ -48,15 +48,63 @@
     return String(value ?? '').toLowerCase().trim().replace(/\s+/g, ' ');
   }
 
-  function isSpellableWord(value) {
+  function reviewedSpellingPolicy(word) {
+    const policy=word?.answer_policy;
+    return AnswerPolicy?.bound(policy,word?.answer_word||word?.headword||word?.word)||null;
+  }
+
+  function isSpellableWord(value, policy) {
+    if(policy&&AnswerPolicy)return Boolean(reviewedSpellingPolicy({word:value,answer_policy:policy}));
     return SPELLING_WORD_PATTERN.test(normalizeSpelling(value));
   }
 
   function spellingWords(words) {
-    return Array.isArray(words) ? words.filter(word => isSpellableWord(word?.answer_word || word?.word)) : [];
+    return Array.isArray(words) ? words.filter(word => isSpellableWord(word?.answer_word || word?.word,word?.answer_policy)) : [];
+  }
+
+  function structureMeaning(pos, meaning) {
+    const raw=String(meaning||'');
+    const marker=/(?:^|\s)((?:vt|vi|adj|adv|prep|conj|pron|art|num|interj|int|aux|abbr|modal|n|v|a|ad)\.(?:\s*[\/&]\s*(?:vt|vi|adj|adv|n|v|a|ad)\.)*)\s*/gi;
+    const boundaries=[];
+    for(const match of raw.matchAll(marker)) {
+      const before=raw.slice(0,match.index);
+      if((before.match(/[（(]/g)||[]).length>(before.match(/[）)]/g)||[]).length)continue;
+      boundaries.push({at:match.index,end:match.index+match[0].length,pos:match[1].replace(/\s/g,'')});
+    }
+    const groups=[],notes=[];
+    const sections=[{at:0,end:0,pos:pos||'释义'},...boundaries];
+    let pendingPhonetic='';
+    for(let i=0;i<sections.length;i++) {
+      let text=raw.slice(sections[i].end,sections[i+1]?.at??raw.length).trim();
+      let followingPhonetic='';
+      const ipa=text.match(/\s*\[([^\]]+)\]\s*$/);
+      if(ipa&&sections[i+1]){followingPhonetic=ipa[1];text=text.slice(0,ipa.index).trim();}
+      const [core,...phrases]=text.split(/\s*\|\|\s*/);
+      const items=core.split(/(?:^|\s)\d{1,2}[.．、]\s*(?=[^\d\s])/).map(s=>s.trim()).filter(Boolean);
+      if(items.length)groups.push({heading:sections[i].pos,items,...(pendingPhonetic?{phonetic:pendingPhonetic}:{})});
+      for(const phrase of phrases)for(const part of phrase.split(/\s+\/\s*(?=[A-Za-z])/)){
+        if(part.trim())notes.push({heading:'搭配 · '+sections[i].pos,text:part.trim().replace(/([A-Za-z)])\s*(?=[\u3400-\u9fff])/g,'$1 — ')});
+      }
+      pendingPhonetic=followingPhonetic;
+    }
+    // Some entries consist entirely of a fixed phrase. Present the source
+    // phrase as such, rather than turning the word's meaning area blank.
+    if(!groups.length&&notes.length)return {meaning_groups:notes.map(note=>({heading:note.heading,items:[note.text]})),meaning_notes:[]};
+    return {meaning_groups:groups,meaning_notes:notes};
   }
 
   function sampleWordPresentation(word, book) {
+    if (word && book?.is_builtin && word.source_file && isSpellableWord(word.headword,word.answer_policy)) {
+      const structured=['zhongkao.txt','cet4.txt','cet6.txt','npee.txt','tem.txt'].includes(word.source_file)
+        ? structureMeaning(word.pos,word.meaning) : {};
+      return {
+        ...structured,
+        display_word: word.headword, answer_word: word.headword,
+        sense_label: word.homograph ? `同形词 ${word.homograph}` : '',
+        phonetic_display: word.phonetic ? `/${word.phonetic}/` : '',
+        meaning_notes: [...(structured.meaning_notes||[]),...(word.source_raw?.match(/[（(]pl\s+[^)）]+[)）]/) || []).map(text => ({ heading: '词形', text }))],
+      };
+    }
     if (!word || !book?.is_builtin || !SAMPLE_BOOKS.has(book.name)) return null;
     const sample = SAMPLE_PRESENTATIONS[word.word];
     if (!sample || word.phonetic !== sample.phonetic || word.pos !== sample.pos || word.meaning !== sample.meaning) return null;
@@ -70,15 +118,18 @@
     };
   }
 
-  function filterSpellingInput(value, maxLength = Infinity) {
+  function filterSpellingInput(value, maxLength = Infinity, policy) {
     const limit = Number.isFinite(Number(maxLength)) ? Math.max(0, Math.trunc(Number(maxLength))) : Infinity;
+    if(policy&&AnswerPolicy)return String(value??'').normalize('NFC').toLowerCase().replace(/[’‘]/g,"'")
+      .replace(/\s+/g,' ').replace(/[^\p{Script=Latin}\p{M}.' -]/gu,'').slice(0,limit);
     return String(value ?? '').toLowerCase()
       .replace(/[^a-z\s'-]/g, '')
       .replace(/\s+/g, ' ')
       .slice(0, limit);
   }
 
-  function normalizeSpellingAnswer(value) {
+  function normalizeSpellingAnswer(value, policy) {
+    if(policy&&AnswerPolicy)return AnswerPolicy.normalize(value);
     return filterSpellingInput(value).trim();
   }
 
@@ -98,16 +149,32 @@
   function judgeAnswer(mode, submitted, word) {
     if (!word) return null;
     if (mode === 'spelling') {
+      if(word.answer_policy!==undefined){const policy=reviewedSpellingPolicy(word);return Boolean(policy&&AnswerPolicy.grade(policy,submitted));}
       const expected = word.answer_word || word.word;
       return Boolean(expected) && normalizeSpellingAnswer(submitted) === normalizeSpelling(expected);
     }
     if (mode === 'meaning') return String(submitted ?? '') === String(word.meaning ?? '');
     if (mode === 'pos') {
+      if (!isUnambiguousPos(word)) return null;
       const expected = normalizePartOfSpeech(word.pos);
       const actual = normalizePartOfSpeech(submitted);
       return expected !== null && actual !== null && expected === actual;
     }
     return null;
+  }
+
+  function isUnambiguousPos(word) {
+    if (!word) return false;
+    const labels = String(word.pos || '').split(/[\/&,;\s]+/).filter(Boolean);
+    const classes = labels.map(normalizePartOfSpeech);
+    if (!classes.length || classes.some(pos => !pos)) return false;
+    const embedded = [...String(word.meaning || '').matchAll(/(?:^|[^A-Za-z])((?:vt|vi|adj|adv|prep|conj|pron|art|num|interj|int|aux|n|v|a|ad)\.)/gi)].map(match => match[1]);
+    for (const label of embedded) {
+      const pos = normalizePartOfSpeech(label.trim());
+      if (!pos) return false;
+      classes.push(pos);
+    }
+    return new Set(classes).size === 1;
   }
 
   function cardWeight(rarity) {
@@ -158,8 +225,15 @@
     return Math.max(1, Math.floor((targetOrdinal - todayOrdinal) / 86400000) + 1);
   }
 
-  function calculatePlan({ remainingNew, dailyNew = 15, planActive = false, targetDate = null, now = new Date() }) {
+  function calculatePlan({ remainingNew, dailyNew = 15, planActive = false, targetDate = null, planMode = 'date', now = new Date() }) {
     const remaining = Math.max(0, Math.trunc(Number(remainingNew) || 0));
+    const daily = Math.min(50, Math.max(1, Math.trunc(Number(dailyNew) || 15)));
+    if (planActive && planMode === 'daily') {
+      const days = remaining ? Math.ceil(remaining / daily) : 0;
+      const estimated = asValidDate(now); estimated.setDate(estimated.getDate() + Math.max(0, days - 1));
+      return { active: true, mode: 'daily', status: remaining ? 'active' : 'completed', remaining_new: remaining,
+        daily_quota: Math.min(daily, remaining), days_left: days, target_date: localDayKey(estimated) };
+    }
     if (!planActive || !targetDate) {
       return {
         active: false,
@@ -170,6 +244,13 @@
     }
 
     const daysLeft = inclusiveDaysUntil(targetDate, now);
+    const overdue = targetDate < localDayKey(now);
+    if (overdue && remaining) {
+      const target = parseCalendarDay(targetDate), current = parseCalendarDay(localDayKey(now));
+      const daysOverdue = Math.round((Date.UTC(current.getFullYear(), current.getMonth(), current.getDate()) - Date.UTC(target.getFullYear(), target.getMonth(), target.getDate())) / 86400000);
+      return { active: true, mode: 'date', status: 'overdue', remaining_new: remaining, daily_quota: Math.min(daily, remaining),
+        days_left: 0, overdue_days: daysOverdue, target_date: targetDate };
+    }
     return {
       active: true,
       remaining_new: remaining,
@@ -215,6 +296,19 @@
 
   function nextDueModifier(correct, streak) {
     return correct ? `+${nextScheduleDays(streak)} days` : '+10 minutes';
+  }
+
+  // Desktop schedule advances only on a due recall, not repeated early drills.
+  // Answer streak remains a separate count for the existing learning metrics.
+  function recallSchedule(current, correct, now = new Date()) {
+    if (!correct) return { level: 0, modifier: '+10 minutes', preserveDue: null };
+    const level = Math.max(0, Math.min(6, Number(current?.review_level) || 0));
+    const due = current?.next_due && new Date(String(current.next_due).replace(' ', 'T'));
+    if (level > 0 && due && Number.isFinite(due.getTime()) && due > now) {
+      return { level, modifier: null, preserveDue: current.next_due };
+    }
+    const next = Math.min(level + 1, REVIEW_INTERVALS_DAYS.length);
+    return { level: next, modifier: `+${REVIEW_INTERVALS_DAYS[next - 1]} days`, preserveDue: null };
   }
 
   function nextStreak(currentStreak, correct) {
@@ -302,7 +396,22 @@
     return Number(answered) >= Number(target);
   }
 
+  // An explicit choice wins. A new browser should return to real due work or
+  // an existing plan before proposing a fresh, unrelated built-in book.
+  function chooseTodayBook(books, preferredId) {
+    const usable = books.filter(book => book.word_count > 0 && !book.read_only);
+    const pending = book => Number(book.plan?.daily_quota || 0) > Number(book.new_today || 0);
+    return usable.find(book => book.id === Number(preferredId))
+      || usable.find(book => Number(book.due_review || 0) > 0)
+      || usable.find(book => book.plan?.active && pending(book))
+      || usable.find(book => book.plan?.active)
+      || usable.find(pending)
+      || usable[0] || null;
+  }
+
   return {
+    reviewedSpellingPolicy,
+    chooseTodayBook,
     CARD_DRAW_TARGET,
     CARD_RARITY_WEIGHTS,
     POS_OPTIONS,
@@ -317,12 +426,14 @@
     filterSpellingInput,
     isSpellableWord,
     judgeAnswer,
+    isUnambiguousPos,
     inclusiveDaysUntil,
     localDayKey,
     normalizeSpelling,
     normalizeSpellingAnswer,
     normalizePartOfSpeech,
     nextDueModifier,
+    recallSchedule,
     nextScheduleDays,
     nextStreak,
     progressPercent,
@@ -331,6 +442,7 @@
     pickWeightedCard,
     recordLearnChoice,
     sampleWordPresentation,
+    structureMeaning,
     spellingWords,
   };
 });

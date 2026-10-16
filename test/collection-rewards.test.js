@@ -1,0 +1,36 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{once}=require('node:events');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-reward-'));process.env.WORDMASTER_DB_PATH=path.join(dir,'test.db');
+const {app,db}=require('../app/main');
+test('daily reward counts distinct saved correct entries across books, excludes failures and past days; draw is once only',async t=>{
+  const server=app.listen(0,'127.0.0.1');await once(server,'listening');
+  t.after(async()=>{server.close();await once(server,'close');db.close();fs.rmSync(dir,{recursive:true,force:true});});
+  db.exec("INSERT INTO wordbooks(id,name) VALUES(1,'A'),(2,'B'); INSERT INTO cards(id,title,category,palette) VALUES(1,'ordinary','test','sahara'),(2,'secret','test','secret'); UPDATE cards SET hidden=1,unlock_at=1 WHERE id=2");
+  const word=db.prepare('INSERT INTO words(id,book_id,word,meaning) VALUES(?,?,?,?)');
+  for(let i=1;i<=12;i++)word.run(i,i%2+1,'word'+i,'meaning'+i);
+  const log=db.prepare('INSERT INTO review_log(word_id,correct,outcome,ts) VALUES(?,?,?,?)');
+  const now=db.prepare("SELECT datetime('now','localtime') ts").get().ts;
+  for(let i=0;i<10;i++)log.run(1,1,'first_correct',now);
+  log.run(2,0,'wrong',now);log.run(3,0,'abandoned',now);log.run(4,1,'abandoned',now);
+  log.run(5,1,'first_correct','2000-01-01 12:00:00');
+  const base=`http://127.0.0.1:${server.address().port}`;
+  const cards=async()=> (await fetch(base+'/api/cards')).json();
+  const draw=()=>fetch(base+'/api/cards/draw',{method:'POST'});
+  assert.equal((await cards()).reward_words,1);assert.equal((await draw()).status,400);
+  for(let i=2;i<=9;i++)log.run(i,1,i===2?'retry_correct':null,now);
+  assert.equal((await cards()).reward_words,9);assert.equal((await draw()).status,400);
+  log.run(10,1,'first_correct',now);
+  const journey=await(await fetch(base+'/api/desktop/journey')).json();assert.equal(journey.rewardWords,10);
+  const result=await draw();assert.equal(result.status,200);const received=await result.json();assert.equal(received.card.id,1);assert.equal(received.unlocked[0].id,2);
+  assert.equal((await draw()).status,409);assert.equal(db.prepare('SELECT COUNT(*) n FROM user_cards').get().n,2);
+  assert.equal(db.prepare('SELECT COUNT(*) n FROM card_draws').get().n,1);
+  assert.equal((await cards()).drawn_today,true);
+});
+test('chapter seals use real ownership and reveal the next milestone without hidden cards',()=>{
+ const J=require('../shared/journal');const cards=J.chapters.flatMap(c=>c.palettes.map(palette=>({palette,owned:false,hidden:0})));
+ let chapter=J.summarize(cards)[0];assert.equal(chapter.stamp,'待启');assert.equal(chapter.nextMilestone,1);
+ cards[0].owned=true;chapter=J.summarize(cards)[0];assert.equal(chapter.stamp,'初藏');assert.equal(chapter.nextMilestone,9);
+ cards.slice(0,9).forEach(c=>c.owned=true);chapter=J.summarize(cards)[0];assert.equal(chapter.stamp,'渐丰');assert.equal(chapter.nextMilestone,17);
+ cards.slice(0,17).forEach(c=>c.owned=true);chapter=J.summarize(cards)[0];assert.equal(chapter.stamp,'成章');assert.equal(chapter.complete,true);assert.equal(chapter.nextMilestone,null);
+});

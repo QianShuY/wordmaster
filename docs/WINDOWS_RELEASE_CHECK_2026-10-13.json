@@ -1,0 +1,49 @@
+{
+  "release": "D:\\工作区\\wordmaster\\output\\releases\\zip-check-20261013\\WordMaster-2026-10-13-preview",
+  "manifest_files": 765,
+  "actual_windows_exe_tested": true,
+  "headless_launcher_only": true,
+  "real_database_unchanged": true,
+  "results": [
+    {
+      "scenario": "fresh-install-and-double-launch",
+      "first": {
+        "words": 26268,
+        "progress": 0,
+        "schema": 11
+      },
+      "reused": true,
+      "concurrent_launch_reused": true,
+      "default_port_already_serving": true,
+      "selected_port": 3457,
+      "ready_ms": 1851.0667999999998,
+      "repeat_ready_ms": 230.86990000000014,
+      "pages": [
+        "/",
+        "/adventure/index.html",
+        "/adventure/journey.html",
+        "/adventure/camp.html",
+        "/adventure/battle.html",
+        "/adventure/ending.html"
+      ]
+    },
+    {
+      "scenario": "existing-database-upgrade-and-reopen",
+      "all_existing_rows_unchanged": true,
+      "integrity": {
+        "integrity_check": "ok"
+      },
+      "foreign_keys": [],
+      "ready_ms": 840.6551999999992,
+      "reopen_ready_ms": 779.4573
+    }
+  ],
+  "remaining": [
+    "Browser visual acceptance",
+    "Long-duration use and animation measurements",
+    "Gaokao replacement and full-book language review",
+    "Signed installer not produced"
+  ],
+  "archive_roundtrip_verified": true,
+  "archive_sha256": "47bc202ea56da11141b3cd45d97358c9ed9031be5b324078ef83af40abc79ed1"
+}

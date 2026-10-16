@@ -1,0 +1,59 @@
+{
+  "release": "D:\\工作区\\wordmaster\\output\\releases\\WordMaster-2026-10-14-validation",
+  "manifest_files": 795,
+  "actual_windows_exe_tested": true,
+  "headless_launcher_only": true,
+  "real_database_unchanged": true,
+  "results": [
+    {
+      "scenario": "fresh-install-and-double-launch",
+      "first": {
+        "words": 26268,
+        "progress": 0,
+        "schema": 12
+      },
+      "reused": true,
+      "concurrent_launch_reused": true,
+      "default_port_already_serving": false,
+      "selected_port": 3456,
+      "ready_ms": 1406.2287000000001,
+      "repeat_ready_ms": 103.37480000000005,
+      "pages": [
+        "/",
+        "/adventure/index.html",
+        "/adventure/journey.html",
+        "/adventure/camp.html",
+        "/adventure/battle.html",
+        "/adventure/ending.html"
+      ]
+    },
+    {
+      "scenario": "existing-database-upgrade-and-reopen",
+      "source_schema": 12,
+      "reconstructed_schema11_in_disposable_copy": true,
+      "all_existing_rows_unchanged": true,
+      "migration": {
+        "from_schema": 11,
+        "to_schema": 12,
+        "existing_tables_checked": 15,
+        "existing_rows_unchanged": true,
+        "new_tables_empty": [
+          "book_history",
+          "word_answer_policies"
+        ]
+      },
+      "integrity": {
+        "integrity_check": "ok"
+      },
+      "foreign_keys": [],
+      "ready_ms": 882.944,
+      "reopen_ready_ms": 884.9805999999999
+    }
+  ],
+  "remaining": [
+    "Browser visual acceptance",
+    "Long-duration use and animation measurements",
+    "Gaokao replacement and full-book language review",
+    "Signed installer not produced"
+  ]
+}

@@ -1,0 +1,113 @@
+# tem-086 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：99（为 99 条补充原创例句与译文；1 条词头疑似错配，义项和例句留空待确认）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：152
+- 输入 SHA256：3b7900e1712a2ec317499339809c12443d38d47e5b0cc8c93565bce2ad42044c
+
+## 待主代理复核
+
+Roar 已访问 Oxford Learner’s Dictionaries 并核对动词义和英式 IPA，词库还列名词及其他动词义。其余条目无本轮可用的原始词典证据，音标留空。Truffle 的中文释义与词头不符，需确认是否为 ruffle；另有 troll/roll 对齐和其他多义项需审查。
+
+- road
+- roadside
+- roadway
+- roam
+- roast
+- rob
+- robbery
+- robe
+- robin
+- robot
+- robust
+- rock 1
+- rock 2
+- rock 3
+- rocker
+- rocket
+- rocky
+- rod
+- rodent
+- rodeo
+- roger
+- role
+- roll
+- roller
+- rolling-pin
+- rolling-stock
+- Roman
+- romance
+- romantic
+- romanticism
+- Rome
+- roof
+- rookie
+- room
+- roost
+- rooster
+- root
+- rope
+- rose
+- rosette
+- rostrum
+- rosy
+- rot
+- rota
+- rotary
+- rotate
+- rotational
+- rotor
+- rotten
+- rouge
+- rough
+- roughen
+- roughly
+- roulette
+- round
+- roundabout
+- rounders
+- roundup
+- rouse
+- route
+- routine
+- rove
+- rover
+- row
+- rowdy
+- rower
+- royal
+- royalist
+- royalty
+- rub
+- rubber
+- rubbish
+- rubble
+- rubdown
+- ruby
+- rucksack
+- ruckus
+- ruddy
+- rude
+- rudimentary
+- rue 1
+- rue 2
+- rueful
+- ruffian
+- ruffle
+- rug
+- rugby
+- rugged
+- rugger
+- ruin
+- ruinous
+- rule
+- ruler
+- ruling
+- rum
+- rumble
+- rummage
+- run
+- runaway

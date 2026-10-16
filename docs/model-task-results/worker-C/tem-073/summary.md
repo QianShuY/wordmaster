@@ -1,0 +1,114 @@
+# tem-073 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；完整原释义和原词性保留）
+- 证据已核对数量：0
+- needs-review 数量：100
+- 疑点数量（issues 条目）：152
+- 输入 SHA256：47c98fb57843cef7c385b4836d2698c94579ec8a4eefd0afcb43ff37036500b0
+
+## 待主代理复核
+
+本批未取得可访问、足以支持义项及英式 IPA 的词典页面。所有词条保留原释义，音标建议均留空。多义项词条需逐项审核；pervert 2 另需复核其贬损性用语标签及教学呈现。
+
+- peg
+- pelican
+- pen
+- penalize
+- penalty
+- pencil
+- pendent
+- pending
+- pendulum
+- penetrate
+- penguin
+- peninsula
+- penis
+- penny
+- pension
+- pensioner
+- pentagon
+- pentathlon
+- penthouse
+- peony
+- people
+- pepper
+- peppermint
+- per
+- perceive
+- percent
+- percentage
+- perceptible
+- perception
+- perceptive
+- perch
+- percussion
+- perfect
+- perfection
+- perform
+- performance
+- performer
+- perfume
+- perfunctory
+- perhaps
+- peril
+- perilous
+- perimeter
+- period
+- periodic
+- periodical
+- peripheral
+- periphery
+- perish
+- perjury
+- perk
+- permanent
+- permeate
+- permissible
+- permission
+- permit
+- pernicious
+- perpendicular
+- perpetrate
+- perpetrator
+- perpetual
+- perpetuate
+- perplex
+- persecute
+- perseverance
+- persevere
+- Persian
+- persimmon
+- persist
+- persistent
+- person
+- personage
+- personal
+- personality
+- personify
+- personnel
+- perspective
+- persuade
+- persuasion
+- persuasive
+- pertain
+- pertinent
+- perturb
+- pervade
+- pervert 1
+- pervert 2
+- pessimist
+- pessimistic
+- pest
+- pester
+- pesticide
+- pet
+- petal
+- petition
+- petrol
+- petroleum
+- petty
+- phantom
+- pharmaceutical
+- pharmacist

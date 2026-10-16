@@ -1,0 +1,113 @@
+# tem-085 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：149
+- 输入 SHA256：a760e48a5aa7bd7bb103c397ab26ccb4d778767b94c0fe0e5829542558e2a453
+
+## 待主代理复核
+
+Retribution 已实际访问 Oxford Learner’s Dictionaries 并核对名词义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另有 trifle 词头与步枪释义不符，已注明；reverend、revivify、ribald、rip-roaring 等条目需核对词性或语域。
+
+- retort
+- retreat
+- retrievable
+- retrieval
+- retrieve
+- retrospect
+- retrospective
+- return
+- reunion
+- reunite
+- revaluation
+- revamp
+- reveal
+- revel
+- revelation
+- revenge
+- revenue
+- revere
+- reverence
+- reverend
+- reverent
+- reverie
+- reversal
+- reverse
+- reversible
+- reversion
+- revert
+- review
+- revise
+- revision
+- revitalize
+- revival
+- revive
+- revivify
+- revoke
+- revolt
+- revolution
+- revolutionary
+- revolve
+- revolver
+- revulsion
+- reward
+- rewrite
+- rhetoric
+- rhetorical
+- rheumatism
+- rhino
+- rhinoceros
+- rhyme
+- rhythm
+- rhythmic
+- rhythmical
+- rib
+- ribald
+- ribbon
+- rice
+- rich
+- rickets
+- rickety
+- rickshaw
+- rid
+- riddle
+- ride
+- ridge
+- ridicule
+- ridiculous
+- rifle
+- rifleman
+- rift
+- rig 1
+- rig 2
+- right 1
+- right 2
+- righteous
+- right-hand
+- rightly
+- right-wing
+- rigid
+- rigorous
+- rim
+- rind
+- ring 1
+- ring 2
+- rink
+- rinse
+- riot
+- rip
+- ripe
+- ripen
+- ripple
+- rip-roaring
+- rise
+- risk
+- risky
+- rite
+- ritual
+- rivalry
+- rivet
+- roach

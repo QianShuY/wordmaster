@@ -7,6 +7,9 @@
 <link rel="icon" href="logo.png">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="desktop-redesign.css">
+<link rel="stylesheet" href="journal.css">
+<link rel="stylesheet" href="learning-refinement.css">
+<link rel="stylesheet" href="study-notebook.css"><link rel="stylesheet" href="/adventure/portal.css"><link rel="stylesheet" href="/adventure/arrival-letter.css">
 </head>
 <body>
 <div class="grain"></div>
@@ -38,12 +41,17 @@
     <a href="#/books" data-nav="books">词库</a>
     <a href="#/stats" data-nav="stats">学习数据</a>
     <a href="#/cards" data-nav="cards">卡牌 <span class="card-dot hidden" id="cardDot"></span></a>
+    <a href="#/adventure" data-nav="adventure">旅行与咒语</a>
   </nav>
   <div class="topbar-stats" id="topStats" aria-label="学习概览"></div>
 </header>
 
 <main id="app">
   <div id="pageStatus" class="page-status hidden" role="status" aria-live="polite"></div>
+  <aside id="contentUpdateNotice" class="content-update-notice" role="status" aria-live="polite" hidden>
+    <p id="contentUpdateMessage"></p>
+    <button id="contentUpdateRetry" class="btn btn-ghost" type="button">重试更新</button>
+  </aside>
 
   <!-- ============ 视图：今日 / 词库 ============ -->
   <section id="view-home" class="view">
@@ -57,18 +65,19 @@
       <section id="desktopTodayHub" class="desktop-today-hub" aria-label="今天的学习计划与行动">
         <div class="hub-heading">
           <div>
-            <p class="hero-kicker">YOUR STUDY DESK · 学习中枢</p>
-            <h1 id="hubHeadingTitle">今天，继续向前。</h1>
-            <p>一份长期计划，一条清晰的今日路线。</p>
+            <p class="hero-kicker" id="hubThemeKicker">墨词 · 每日手账</p>
+            <h1 id="hubHeadingTitle">每学一词，远行一步。</h1>
+            <p id="hubHeadingSubtitle">先温习旧知，再为今天添上新的一页。</p>
           </div>
           <div class="hub-date" id="desktopHubDate" aria-label="今日日期"></div>
         </div>
         <div class="hub-primary">
           <article class="hub-plan" aria-labelledby="hubPlanTitle">
             <div class="hub-plan-top">
-              <span class="hub-eyebrow">01 / 长期方向 · STUDY PLAN</span>
+              <span class="hub-eyebrow" id="hubPlanEyebrow">01 / 长期方向 · STUDY PLAN</span>
               <span class="hub-plan-status" id="hubPlanStatus">读取计划中</span>
             </div>
+            <p class="hub-theme-note hidden" id="hubPlanThemeNote"></p>
             <label class="hub-book-label" for="desktopTodayBookSelect">当前学习词库</label>
             <select id="desktopTodayBookSelect" aria-label="切换首页学习词库"></select>
             <div class="hub-plan-description">
@@ -93,7 +102,7 @@
             </div>
           </article>
           <aside class="hub-action" aria-labelledby="hubTodayHeading">
-            <div class="hub-eyebrow">02 / 当下任务 · TODAY'S ROUTE</div>
+            <div class="hub-eyebrow" id="hubActionEyebrow">02 / 当下任务 · TODAY'S ROUTE</div>
             <h3 id="hubTodayHeading">今天先做什么？</h3>
             <p id="hubActionSummary">墨词会优先安排到期复习，再衔接今日新词。</p>
             <div class="hub-tasks">
@@ -117,6 +126,7 @@
             <p class="hub-resume-note hidden" id="hubResumeNote" aria-live="polite"></p>
           </aside>
         </div>
+        <section id="journalShelf" class="journal-shelf" aria-label="我的旅行收藏"></section>
       </section>
       <div class="today-panel">
         <div class="today-task-list" id="todayTaskSummary" aria-live="polite"></div>
@@ -168,6 +178,7 @@
         </div>
       </form>
       <div class="books-grid" id="booksGrid"></div>
+      <section id="bookHistoryShelf" class="hidden" aria-label="历史只读词库"></section>
     </section>
   </section>
 
@@ -216,6 +227,7 @@
       <button class="btn" id="importBtn">⇪ 批量导入</button>
       <button class="btn btn-primary" id="addWordBtn">＋ 添加单词</button>
     </div>
+    <p id="manageReadOnlyNotice" class="hidden" role="note">历史只读资料：原词条与学习记录已保留。新学习请返回词库，使用替换后的词表；这里仍可搜索、查看释义和播放发音。</p>
     <div class="manage-toolbar hidden" id="desktopManageToolbar">
       <label class="manage-search">
         <span class="manage-search-caption">快速查找</span>
@@ -228,7 +240,7 @@
           <option value="new">尚未学习</option>
           <option value="due">待复习</option>
           <option value="mistakes">待回炉错题</option>
-          <option value="mastered">已掌握</option>
+          <option value="mastered">已巩固（连续答对 ≥3 次）</option>
         </select>
       </label>
       <button type="button" class="btn btn-ghost manage-reset" id="manageReset">清除筛选</button>
@@ -283,7 +295,7 @@
     <div class="desktop-stats-scope" id="desktopStatsScope">
       <div>
         <span class="stats-scope-eyebrow">LEARNING REVIEW · 学习复盘</span>
-        <h2>看清自己的进步</h2>
+        <h1>看清自己的进步</h1>
         <p id="desktopStatsScopeNote">选择词库，查看对应的学习成果。</p>
       </div>
       <label for="desktopStatsBookSelect">
@@ -294,6 +306,18 @@
       </label>
     </div>
     <div class="stats-today" id="statsToday"></div>
+    <section id="learningTimeline" class="learning-timeline" aria-labelledby="timelineTitle">
+      <div class="timeline-heading"><div><p class="journal-eyebrow">学习轨迹 · 每一天都算数</p><h3 id="timelineTitle">把积累连成一条路</h3><p id="timelineSummary"></p></div>
+        <div class="timeline-controls">
+          <label>观察指标<select id="timelineMetric" aria-label="观察指标"><option value="total">作答次数</option><option value="new_words">新学词数</option><option value="accuracy">作答正确率</option></select></label>
+          <label>时间范围<select id="timelineRange" aria-label="时间范围"><option value="7">近 7 天</option><option value="30" selected>近 30 天</option><option value="90">近 90 天</option></select></label>
+        </div>
+      </div>
+      <div id="timelinePlot" class="timeline-plot"></div>
+      <div class="timeline-scrubber"><label for="timelineDay">选择日期，查看当天记录</label><input type="range" id="timelineDay" min="0" max="29" value="29"></div>
+      <div id="timelineDetail" class="timeline-detail" aria-live="polite"></div>
+      <p class="timeline-note">新学词数来自首次学习记录；正确率来自实际作答，未作答的日期不计为 0%。“已巩固”仍需到期复习。</p>
+    </section>
 
     <!-- Desktop V1.5: explainable diagnosis, never presented as AI prediction. -->
     <section class="desktop-insights" id="desktopInsights" aria-labelledby="desktopInsightsHeading">
@@ -389,8 +413,9 @@
     <div class="cards-hero" id="cardsNormalHero">
       <div class="cards-hero-copy">
         <p class="hero-kicker">COLLECTION · 每日完成学习可抽取一张</p>
-        <h2 class="hero-title">墨藏集</h2>
+        <h1 class="hero-title">墨藏集</h1>
         <p class="hero-sub" id="cardsProgress"></p>
+        <p class="journal-reward-rule">当天答对 10 个不同词条，可领取一张卡牌。错后答对也计入，同一词条只计一次，可跨词库累计。</p>
       </div>
       <div class="cards-hero-art" aria-hidden="true">
         <span class="cards-hero-card cards-hero-card--back"></span>
@@ -408,9 +433,28 @@
         <span data-rarity="SR">SR <i>史诗</i></span><span data-rarity="UR">UR <i>传说</i></span>
       </div>
     </div>
+    <section id="journalChapters" class="journal-chapters" aria-label="收藏章节"></section>
+    <div id="journalAlbumHeading" class="journal-album-heading"></div>
     <div class="cards-grid" id="cardsGrid"></div>
   </section>
 
+<section id="view-adventure" class="view hidden"><div class="portal-main">
+ <section class="departure" aria-labelledby="departureTitle">
+  <img class="departure-art" data-src="/adventure/assets/mist-campaign-map-v4-dusk.png" alt="夕照下的村庄通向古林、雪山与遥远的雾桥" decoding="async">
+  <div class="departure-shade"></div>
+  <div class="departure-copy"><p class="portal-kicker">MOCI · TRAVELS & SPELLS</p><h1 id="departureTitle">旅行与咒语</h1><p class="departure-line">每一个记住的词，<br>都是通往远方的力量。</p><p class="departure-description">从一封旧信出发，走过低地与古林。<br>每天完成学习计划，让旅程向前一关。</p><a class="depart-button" id="continueJourney" href="/adventure/journey.html">展开我的旅程 <span>→</span></a><span class="departure-footnote">十三段行路 · 雾桥之约</span></div>
+  <div class="map-caption"><span>CHAPTER I</span>雾桥来信</div>
+ </section>
+ <section class="travel-ledger" aria-label="我的旅程进度"><div><p class="portal-kicker">我的远行手账</p><h2 id="currentStop">正在翻开旅程……</h2><p id="travelStatus" role="status">正在读取真实学习进度</p></div><div class="ledger-progress"><span id="travelCount">— <small>/ 14 关</small></span><div class="ledger-track" role="progressbar" aria-label="第一章已通过关卡" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" id="travelProgress"><i></i></div><span class="ledger-note">每天一程，漏学不倒退。</span></div></section>
+ <section class="portal-paths" aria-label="旅途中的去处">
+  <a class="path-card chapter-card" href="/adventure/journey.html"><span class="path-number">01 / 章节地图</span><h2>雾桥来信</h2><p>沿着十四个路标，从旧邮亭走向迷雾深处。让学习真正成为一段旅程。</p><span class="path-link">展开旅行地图 ↗</span></a>
+  <a class="path-card camp-card" href="/adventure/camp.html"><span class="path-number">02 / 沿途休整</span><h2>渡火营地</h2><p>在火光旁重温已学词汇，练习咒语与复起宣言，为下一程做好准备。</p><span class="path-link">走进营地 ↗</span></a>
+  <button class="path-card clue-card" id="openClues" type="button" aria-expanded="false" aria-controls="clueJournal"><span class="path-number">03 / 未解之谜</span><h2>沿途拾笺</h2><p>信中未说尽的故事，藏在路旁与旧迹之中。随着行路，一点一点拼起远方的秘密。</p><span class="path-link" id="clueCount">翻阅线索 · 尚未拾得</span></button>
+ </section>
+ <section class="clue-journal" id="clueJournal" aria-label="已拾得的旅途线索" hidden><h2>沿途拾笺</h2><div id="portalClues"></div></section>
+ <aside class="next-chapter"><span>未寄出的下一封信</span><p>更远的土地，还藏在手账未翻开的页里。</p><small>后续章节 · 待开启</small></aside>
+ <button class="reread-letter" id="rereadLetter" type="button">重读启程来信 ↗</button>
+</div></section>
 </main>
 
 <nav class="bottom-nav" aria-label="底部导航">
@@ -420,6 +464,7 @@
   <a href="#/books" data-nav="books" aria-label="词库">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h11.5A2.5 2.5 0 0 1 19 7v13H7a2 2 0 0 1-2-2z"/><path d="M5 17.5A2.5 2.5 0 0 1 7.5 15H19M9 8h6M9 11h6"/></svg><span>词库</span>
   </a>
+  <a href="#/adventure" data-nav="adventure" aria-label="旅行与咒语"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16M15 5v16"/></svg><span>旅行</span></a>
   <a href="#/cards" data-nav="cards" aria-label="卡册">
     <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M8 4V2.5h8V4M9 9h6M9 13h6M9 17h3"/></svg><span>卡册</span><i class="bottom-card-dot hidden" id="bottomCardDot"></i>
   </a>
@@ -435,7 +480,7 @@
 
 <!-- 单词编辑弹窗 -->
 <div class="modal-mask hidden" id="wordModal">
-  <form class="modal" id="wordForm">
+  <form class="modal" id="wordForm" role="dialog" aria-modal="true" aria-labelledby="wordModalTitle">
     <h3 id="wordModalTitle">添加单词</h3>
     <label>单词<input type="text" id="wfWord" required maxlength="60"></label>
     <label>音标<input type="text" id="wfPhonetic" placeholder="可选" maxlength="60"></label>
@@ -457,18 +502,19 @@
 
 <!-- 批量导入弹窗 -->
 <div class="modal-mask hidden" id="importModal">
-  <form class="modal modal-wide" id="importForm">
-    <h3>批量导入单词</h3>
+  <form class="modal modal-wide" id="importForm" role="dialog" aria-modal="true" aria-labelledby="importModalTitle">
+    <h3 id="importModalTitle">批量导入单词</h3>
     <p class="modal-hint">每行一个词，支持以下格式（可混用）：</p>
     <pre class="import-sample">apple [ˈæpl] n. 苹果
 run v. 跑；经营
 serene	adj.	宁静的
 lucid,adj.,清晰易懂的
 ambitious 有雄心的</pre>
-    <textarea id="importText" rows="9" placeholder="把单词列表粘贴到这里…" required></textarea>
+    <textarea id="importText" rows="9" aria-label="待导入的单词列表" placeholder="把单词列表粘贴到这里…" required></textarea>
     <p class="import-result" id="importResult"></p>
     <div class="form-actions">
-      <button type="submit" class="btn btn-primary">导入</button>
+      <button type="button" class="btn" id="importPreview">检查并预览</button>
+      <button type="submit" class="btn btn-primary" id="importConfirm">导入</button>
       <button type="button" class="btn btn-ghost" id="importCancel">关闭</button>
     </div>
   </form>
@@ -487,19 +533,27 @@ ambitious 有雄心的</pre>
     </div>
     <div class="desktop-plan-body">
       <div class="desktop-plan-settings">
-        <p class="desktop-plan-step">01 / 确定目标日期</p>
-        <label for="desktopPlanDate">希望在什么时候学完新词？</label>
-        <input type="date" id="desktopPlanDate" required>
+        <p class="desktop-plan-step">01 / 选择学习节奏</p>
+        <p>按日期规划，或选择每天可承受的新词量。</p>
+        <label for="desktopPlanMode">计划方式</label>
+        <select id="desktopPlanMode"><option value="date">按目标日期安排</option><option value="daily">按每日词量安排</option></select>
+        <div id="desktopPlanDateFields"><input type="date" id="desktopPlanDate" aria-label="目标日期">
         <div class="desktop-plan-presets" role="group" aria-label="常用学习周期">
           <button type="button" data-plan-days="14">两周</button>
           <button type="button" data-plan-days="30">一个月</button>
           <button type="button" data-plan-days="60">两个月</button>
           <button type="button" data-plan-days="90">三个月</button>
         </div>
+        </div>
+        <div id="desktopPlanDailyFields" class="hidden">
+          <label for="desktopPlanDailyInput">每天学习多少个新词？</label>
+          <input type="number" id="desktopPlanDailyInput" min="1" max="50" step="1" value="15">
+          <p>建议从 15 个开始，再为到期复习留出时间。可设为 1–50 个。</p>
+        </div>
         <div class="desktop-plan-context">
           <span>词库总量 <b id="desktopPlanTotal" class="numeric">0</b> 词</span>
           <span>尚未学习 <b id="desktopPlanUnseen" class="numeric">0</b> 词</span>
-          <span>已掌握 <b id="desktopPlanMastered" class="numeric">0</b> 词</span>
+          <span>已巩固 <b id="desktopPlanMastered" class="numeric">0</b> 词</span>
         </div>
       </div>
       <div class="desktop-plan-preview">
@@ -516,7 +570,7 @@ ambitious 有雄心的</pre>
       </div>
     </div>
     <div class="desktop-plan-bottom">
-      <p>每天的新词数量会随剩余任务动态更新；复习仍按原有遗忘曲线执行。</p>
+        <p>日期模式动态安排新词，词量模式保持每日节奏；复习始终按到期时间优先。</p>
       <div class="desktop-plan-buttons">
         <button type="button" class="btn btn-ghost" id="desktopPlanRemove">移除目标</button>
         <button type="button" class="btn btn-ghost" id="desktopPlanCancel">返回</button>
@@ -543,10 +597,21 @@ ambitious 有雄心的</pre>
   </form>
 </div>
 
+<dialog id="arrivalLetter" class="arrival-letter" aria-labelledby="letterTitle">
+ <div class="letter-arrival"><span class="letter-kicker">一封由远方捎来的信</span><h2 id="letterTitle">致尚未启程的旅人</h2><button class="sealed-envelope" id="breakSeal" type="button" aria-label="拆开蜡封，阅读来信"><span class="envelope-fold"></span><span class="envelope-address">呈予 · 愿记住古老言辞之人</span><span class="wax-seal" aria-hidden="true">M</span><span class="seal-hint">轻触蜡封 · 启信</span></button>
+ <div id="letterPages" class="letter-pages" hidden><p class="letter-salutation">愿星辰照拂汝之行路。</p><p>远方的雾桥久无人至，旧邮路亦渐没于荒草。今将此卷手账托付于汝：愿汝携所学之言，循路而行，寻那封尚未写完的回信。</p><p>此途不求疾驰。<strong>每日读毕新词，温习旧知，再以择义与默写验其所记；当日学课既成，路便向前一程。</strong>若有一日歇脚，已行之路亦不会消逝。</p><p>沿途或有残笺、旧印与营火间的耳语。勿急问雾中为何物；待汝走得够远，散落的线索自会相逢。</p><p>倦时，可赴渡火营地重温言辞。待抵关隘，汝所记住的英语，便是应答未知的咒语。</p><p class="letter-signature">愿汝言有所记，行有所获。<br><span>—— 旧邮路的守信人</span></p><button id="acceptLetter" class="accept-letter" type="button">收好来信，启程 →</button></div>
+ <a class="letter-return" href="/#/">暂归今日手账</a></div></dialog>
 <div class="toast hidden" id="toast"></div>
 
+<script src="/shared/json-request.js"></script>
+<script src="/shared/answer-policy.js"></script>
 <script src="/shared/domain.js"></script>
 <script src="/shared/desktop-checkpoint.js"></script>
-<script src="app.js"></script>
+<script src="/shared/reinforcement.js"></script>
+<script src="/shared/journal.js"></script>
+<script src="/shared/learning-context.js"></script>
+<script src="review-chart.js"></script>
+<script src="modal-focus.js"></script>
+<script src="/shared/campaign-route.js"></script><script src="/shared/campaign-clues.js"></script><script src="/shared/theme-bridge.js"></script><script src="/adventure/arrival-letter.js"></script><script src="/adventure/portal.js"></script><script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+/* The shared notebook surrounds chapter artwork without replacing its scenery. */
+.has-card-theme body.campaign-page,.has-card-theme body.camp-page,.has-card-theme body.battle-page{background-color:var(--theme-ground);background-image:linear-gradient(90deg,color-mix(in srgb,var(--theme-paper) 89%,transparent),color-mix(in srgb,var(--theme-paper) 89%,transparent)),var(--theme-art);background-size:cover;background-attachment:fixed;color:var(--theme-ink)}
+.has-card-theme .folio-header{max-width:none;background-image:linear-gradient(90deg,#101c1ad9,#101c1a8c 40%,#101c1ad9),var(--theme-art);background-position:center,var(--theme-header-position,center);background-size:cover;color:#fff3d9;border-color:#e0d1a955;padding-inline:26px}
+.has-card-theme .folio-header .edition{color:#f1e6cc}.has-card-theme .campaign-heading h1{color:var(--theme-ink)}.has-card-theme .campaign-oath,.has-card-theme .campaign-progress>span{color:var(--theme-muted)}
+.has-card-theme .stage-drawer,.has-card-theme .map-clue-journal{background:var(--theme-paper);border-color:var(--theme-line)}

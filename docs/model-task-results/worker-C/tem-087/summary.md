@@ -1,0 +1,113 @@
+# tem-087 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：99（99 条补充原创例句和译文；1 条词头疑似错配，义项和例句留空待确认）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：160
+- 输入 SHA256：99b63635a2a1497dded7d6491452ba4ad4d13119fa3684d4cfa55bf4ea8262cb
+
+## 待主代理复核
+
+Runner 已访问 Oxford Learner’s Dictionaries 并核对名词核心义与英式 IPA；页面还列出多个其他名词义。其余词条无本轮可用的原始词典证据，音标留空。Truthless 的释义疑似应属 ruthless，已留待确认；另需核对性别化职业称谓、敏感词语域和多义项覆盖。
+
+- runner-up
+- running
+- runway
+- rupture
+- rural
+- rush
+- russet
+- Russian
+- rust
+- rustic
+- rustle
+- rut
+- ruthless
+- rye
+- Sabbath
+- sabbatical
+- sabotage
+- saboteur
+- sabre
+- sack 1
+- sack 2
+- sacking
+- sacrament
+- sacred
+- sacrifice
+- sacrilegious
+- sad
+- sadden
+- saddle
+- sadism
+- safari
+- safe
+- safeguard
+- safety
+- saffron
+- sag
+- saga
+- sagacious
+- sage
+- sail
+- sailcloth
+- sailor
+- saint
+- sake
+- salad
+- salary
+- sale
+- salesclerk
+- salesgirl
+- saleslady
+- salesman
+- salesmanager
+- salient
+- saline
+- saliva
+- salivary
+- salivate
+- sallow 1
+- sallow 2
+- salmon
+- salon
+- saloon
+- salt
+- salty
+- salutary
+- salute
+- salvage
+- salvation
+- salvo
+- samba
+- same
+- sampan
+- sample
+- sanatorium
+- sanctification
+- sanctify
+- sanction
+- sanctuary
+- sanctum
+- sand
+- sandstone
+- sandwich
+- sandy
+- sane
+- sanguinary
+- sanguine
+- sanitary
+- sanity
+- Santa Claus
+- sap 1
+- sap 2
+- sapling
+- sarcasm
+- sarcastic
+- sardine
+- sardonic
+- sarong
+- sartorial
+- sash 1

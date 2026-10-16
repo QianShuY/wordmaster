@@ -1,0 +1,4520 @@
+{
+  "task_id": "npee-009",
+  "input_sha256": "0ff620260f324d81d64cb6c5304e9304d71b3f7fd7602a2698ba4ae1643c6146",
+  "status": "proposal",
+  "entries": [
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1525,
+        "word": "dwarf",
+        "headword": "dwarf",
+        "homograph": null,
+        "source_raw": "dwarf [dwɔːf] n.矮子,侏儒,矮小的动植物 vt.使…矮小"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "矮子,侏儒,矮小的动植物 vt.使…矮小",
+        "phonetic": "dwɔːf",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; vt.",
+        "meaning": "奇幻故事中有魔法、住在地下的小型人物"
+      },
+      "proposed": {
+        "pos": "n.; vt.",
+        "meaning": "矮人（奇幻）；侏儒（旧/冒犯）；矮小动植物；使矮小",
+        "phonetic": "/dwɔːf/",
+        "example": "The story follows a dwarf who works beneath the mountain.",
+        "example_translation": "故事讲述一位住在山下工作的矮人。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/dwɔːf/",
+          "checked_sense": "fantasy creature like small man with magic; person with dwarfism",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/dwarf"
+        }
+      ],
+      "issues": [
+        "指现实人物时可能冒犯，建议用 person with dwarfism；区分奇幻矮人与现实人群。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1526,
+        "word": "dwell",
+        "headword": "dwell",
+        "homograph": null,
+        "source_raw": "dwell v.住,居留"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "住,居留",
+        "phonetic": "dwel",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "居住在某处"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "居住；栖身；（on）详述",
+        "phonetic": "/dwel/",
+        "example": "They dwell in a village near the coast.",
+        "example_translation": "他们住在海边的村庄里。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/dwel/",
+          "checked_sense": "",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/dwell"
+        }
+      ],
+      "issues": [
+        "页面释义未提取；dwell on 表示反复谈论/沉思，搭配另核。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1527,
+        "word": "dwelling",
+        "headword": "dwelling",
+        "homograph": null,
+        "source_raw": "dwelling [ˈdweliŋ] n.住宅,寓所"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "住宅,寓所",
+        "phonetic": "ˈdweliŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "供人居住的房屋或公寓"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "住宅；住所",
+        "phonetic": "/ˈdwelɪŋ/",
+        "example": "The old dwelling has been restored as a museum.",
+        "example_translation": "这座旧住宅被修复成博物馆。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈdwelɪŋ/",
+          "checked_sense": "house/flat where person lives",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/dwelling"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1528,
+        "word": "dye",
+        "headword": "dye",
+        "homograph": null,
+        "source_raw": "dye [dai] n.染料 v.染,染色"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "染料 v.染,染色",
+        "phonetic": "dai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "改变物体颜色，尤指使用专门液体/物质"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "染料；给……染色",
+        "phonetic": "/daɪ/",
+        "example": "She used natural dye to colour the wool.",
+        "example_translation": "她用天然染料给羊毛染色。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/daɪ/",
+          "checked_sense": "change colour using special liquid/substance",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/dye"
+        }
+      ],
+      "issues": [
+        "名词/动词区分；colour 为英式拼写用于译文，不改变词头。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1531,
+        "word": "each",
+        "headword": "each",
+        "homograph": null,
+        "source_raw": "each [iːtʃ] a./pron.各,各自的,每"
+      },
+      "original": {
+        "pos": "a./pron.",
+        "meaning": "各,各自的,每",
+        "phonetic": "iːtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "det.; pron.",
+        "meaning": "分别指两人或更多人/物中的每一个"
+      },
+      "proposed": {
+        "pos": "det.; pron.",
+        "meaning": "每个，各自的；每一个",
+        "phonetic": "/iːtʃ/",
+        "example": "Each student received a map.",
+        "example_translation": "每位学生都拿到了一张地图。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/iːtʃ/",
+          "checked_sense": "each of two or more considered separately",
+          "checked_pos": "determiner",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/each"
+        }
+      ],
+      "issues": [
+        "限定词/代词句法不同；与 every 的用法区别需讲清。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1535,
+        "word": "early",
+        "headword": "early",
+        "homograph": null,
+        "source_raw": "early [ˈəːli] a.早的,早期的,及早的 ad.早,在初期"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "早的,早期的,及早的 ad.早,在初期",
+        "phonetic": "ˈəːli",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; adv.",
+        "meaning": "接近某段时间或事件的开端"
+      },
+      "proposed": {
+        "pos": "a.; adv.",
+        "meaning": "早的，早期的；及早地",
+        "phonetic": "/ˈɜːli/",
+        "example": "We arrived early for the appointment.",
+        "example_translation": "我们提前到了约定地点。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈɜːli/",
+          "checked_sense": "near beginning of time/event; before expected time",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/early"
+        }
+      ],
+      "issues": [
+        "形容词/副词同形；与 soon 不完全同义。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1537,
+        "word": "earnest",
+        "headword": "earnest",
+        "homograph": null,
+        "source_raw": "earnest [ˈəːnist] a.热心的,诚挚的 n.热心;真挚;定金;认真"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "热心的,诚挚的 n.热心;真挚;定金;认真",
+        "phonetic": "ˈəːnist",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; n.",
+        "meaning": "非常认真、真诚的"
+      },
+      "proposed": {
+        "pos": "a.; n.",
+        "meaning": "热心的，诚挚的；认真；定金",
+        "phonetic": "/ˈɜːnɪst/",
+        "example": "He made an earnest effort to repair the relationship.",
+        "example_translation": "他真诚地努力修复这段关系。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈɜːnɪst/",
+          "checked_sense": "very serious and sincere",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/earnest"
+        }
+      ],
+      "issues": [
+        "earnest money 为交易法律用语，需核对词性/用法。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1540,
+        "word": "ease",
+        "headword": "ease",
+        "homograph": null,
+        "source_raw": "ease [iːz] v.减轻;使舒适,使安心 n.容易;舒适,悠闲"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "减轻;使舒适,使安心 n.容易;舒适,悠闲",
+        "phonetic": "iːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "没有困难的状态"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "容易；舒适；减轻，使舒适/安心",
+        "phonetic": "/iːz/",
+        "example": "She completed the task with ease.",
+        "example_translation": "她轻松完成了任务。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/iːz/",
+          "checked_sense": "lack of difficulty; relaxed/comfortable state",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ease"
+        }
+      ],
+      "issues": [
+        "动词减轻义、名词舒适义和军队口令分别核查。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1542,
+        "word": "Easter",
+        "headword": "Easter",
+        "homograph": null,
+        "source_raw": "Easter n.复活节"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "复活节",
+        "phonetic": "ˈiːstə(r)",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "基督徒庆祝复活的节日"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "复活节",
+        "phonetic": "/ˈiːstə(r)/",
+        "example": "The family visits their grandparents at Easter.",
+        "example_translation": "复活节期间，全家去看望祖父母。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈiːstə(r)/",
+          "checked_sense": "Christian Sunday celebrating resurrection; surrounding period",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/easter"
+        }
+      ],
+      "issues": [
+        "节日专名大写；词典还将节日前后时期称作 Easter。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1546,
+        "word": "ebb",
+        "headword": "ebb",
+        "homograph": null,
+        "source_raw": "ebb [eb] vi.衰退,减退 n.处于低潮,处于衰退状态"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "衰退,减退 n.处于低潮,处于衰退状态",
+        "phonetic": "eb",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; vi.",
+        "meaning": "海水向远离陆地方向流动的时段"
+      },
+      "proposed": {
+        "pos": "n.; vi.",
+        "meaning": "退潮；衰退，减退",
+        "phonetic": "/eb/",
+        "example": "We waited for the tide to ebb before crossing the rocks.",
+        "example_translation": "我们等潮水退去才穿过岩石。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/eb/",
+          "checked_sense": "period when sea flows away from land",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ebb"
+        }
+      ],
+      "issues": [
+        "比喻衰退与海潮义分别保留。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1547,
+        "word": "eccentric",
+        "headword": "eccentric",
+        "homograph": null,
+        "source_raw": "eccentric [ikˈsentrik] a.古怪的,怪癖的,异乎寻常的n.古怪的人"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "古怪的,怪癖的,异乎寻常的n.古怪的人",
+        "phonetic": "ikˈsentrik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; n.",
+        "meaning": "被他人认为奇怪或不寻常的"
+      },
+      "proposed": {
+        "pos": "a.; n.",
+        "meaning": "古怪的；异乎寻常的；n.古怪的人",
+        "phonetic": "/ɪkˈsentrɪk/",
+        "example": "The eccentric inventor filled his workshop with unusual machines.",
+        "example_translation": "这位古怪的发明家在工作间里放满奇特机器。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪkˈsentrɪk/",
+          "checked_sense": "considered by others strange/unusual",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eccentric"
+        }
+      ],
+      "issues": [
+        "用作名词称人时可能带贬义，语境要谨慎。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1548,
+        "word": "echo",
+        "headword": "echo",
+        "homograph": null,
+        "source_raw": "echo [ˈekəu] v./n.回声,反响,共鸣"
+      },
+      "original": {
+        "pos": "v./n.",
+        "meaning": "回声,反响,共鸣",
+        "phonetic": "ˈekəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "声音反射后再次听到"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "回声，反响，共鸣；发出回声，附和",
+        "phonetic": "/ˈekəʊ/",
+        "example": "Our voices echoed through the empty hall.",
+        "example_translation": "我们的声音在空荡的大厅里回荡。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈekəʊ/",
+          "checked_sense": "sound echoes",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/echo"
+        }
+      ],
+      "issues": [
+        "本次访问动词；名词回声和比喻反响另核。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1549,
+        "word": "eclipse",
+        "headword": "eclipse",
+        "homograph": null,
+        "source_raw": "eclipse [iˈklips] n.日食,月食"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "日食,月食",
+        "phonetic": "iˈklips",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "月球经过地球与太阳之间，遮挡部分/全部太阳"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "日食；月食；失去重要性",
+        "phonetic": "/ɪˈklɪps/",
+        "example": "We watched a partial solar eclipse through safe glasses.",
+        "example_translation": "我们戴安全眼镜观看了日偏食。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈklɪps/",
+          "checked_sense": "moon passes between earth and sun; also lunar eclipse",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eclipse"
+        }
+      ],
+      "issues": [
+        "区分日食、月食、重要性/权力黯然失色及动词义。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1552,
+        "word": "economical",
+        "headword": "economical",
+        "homograph": null,
+        "source_raw": "economical [ˌiːkəˈnɔmikəl] a.节约的,经济的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "节约的,经济的",
+        "phonetic": "ˌiːkəˈnɔmikəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "相较花费的时间/金钱提供良好价值"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "节约的；经济实惠的；高效利用资源的",
+        "phonetic": "/ˌiːkəˈnɒmɪkl/",
+        "example": "This small car is economical to run.",
+        "example_translation": "这辆小汽车使用起来很省钱。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌiːkəˈnɒmɪkl/",
+          "checked_sense": "good value relative to time/money; uses no more than necessary",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/economical"
+        }
+      ],
+      "issues": [
+        "与 economic（经济学/经济的）不同；强调省钱省资源。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1553,
+        "word": "economics",
+        "headword": "economics",
+        "homograph": null,
+        "source_raw": "economics [ˌiːkəˈnɔmiks] n.经济学,经济情况"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "经济学,经济情况",
+        "phonetic": "ˌiːkəˈnɔmiks",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "研究社会如何组织资金、贸易和产业的学科"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "经济学；经济状况",
+        "phonetic": "/ˌiːkəˈnɒmɪks/",
+        "example": "He is studying economics at university.",
+        "example_translation": "他在大学学习经济学。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌiːkəˈnɒmɪks/",
+          "checked_sense": "study of how society organizes money/trade/industry",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/economics"
+        }
+      ],
+      "issues": [
+        "也指某业务/地区的经济情况；学科名虽以 s 结尾通常按单数处理。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1556,
+        "word": "edible",
+        "headword": "edible",
+        "homograph": null,
+        "source_raw": "edible [ˈedibl] a.可食用的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "可食用的",
+        "phonetic": "ˈedibl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "适合食用且无毒的"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "可食用的；无毒可吃的",
+        "phonetic": "/ˈedəbl/",
+        "example": "Only the ripe berries are edible.",
+        "example_translation": "只有成熟的浆果可以食用。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈedəbl/",
+          "checked_sense": "fit/suitable to be eaten; not poisonous",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/edible"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1557,
+        "word": "edit",
+        "headword": "edit",
+        "homograph": null,
+        "source_raw": "edit [ˈedit] v.编辑,校订"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "编辑,校订",
+        "phonetic": "ˈedit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.; n.",
+        "meaning": "修改文字或数据"
+      },
+      "proposed": {
+        "pos": "v.; n.",
+        "meaning": "编辑；校订；删改；n.编辑修改",
+        "phonetic": "/ˈedɪt/",
+        "example": "She edited the report for clarity before publication.",
+        "example_translation": "出版前她为提高清晰度编辑了报告。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈedɪt/",
+          "checked_sense": "make changes to text/data",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/edit_2"
+        },
+        {
+          "checked_uk_ipa": "/ˈedɪt/",
+          "checked_sense": "act of editing",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/edit_1"
+        }
+      ],
+      "issues": [
+        "分别访问 edit_2 动词与 edit_1 名词，音标相同。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1558,
+        "word": "edition",
+        "headword": "edition",
+        "homograph": null,
+        "source_raw": "edition [iˈdiʃən] n.版,版本,版次"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "版,版本,版次",
+        "phonetic": "iˈdiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "书、报纸等出版的形式或版本"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "版；版本；版次",
+        "phonetic": "/ɪˈdɪʃn/",
+        "example": "The second edition includes a new chapter.",
+        "example_translation": "第二版增加了一章。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈdɪʃn/",
+          "checked_sense": "form in which book/newspaper published; revised version",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/edition"
+        }
+      ],
+      "issues": [
+        "版次、版本和印次要依出版语境区分。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1560,
+        "word": "editorial",
+        "headword": "editorial",
+        "homograph": null,
+        "source_raw": "editorial [ˌediˈtɔːriəl] n.社论 a.社论的;编辑上的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "社论 a.社论的;编辑上的",
+        "phonetic": "ˌediˈtɔːriəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; a.",
+        "meaning": "与准备出版或播出的工作有关"
+      },
+      "proposed": {
+        "pos": "n.; a.",
+        "meaning": "n.社论；a.编辑的，社论的",
+        "phonetic": "/ˌedɪˈtɔːriəl/",
+        "example": "The editorial team checked the article's sources.",
+        "example_translation": "编辑团队核查了文章来源。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌedɪˈtɔːriəl/",
+          "checked_sense": "relating to preparation for publication",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/editorial_1"
+        },
+        {
+          "checked_uk_ipa": "/ˌedɪˈtɔːriəl/",
+          "checked_sense": "opinion article",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/editorial_2"
+        }
+      ],
+      "issues": [
+        "分别访问 editorial_1 形容词与 editorial_2 名词；社论为意见文章。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1561,
+        "word": "educate",
+        "headword": "educate",
+        "homograph": null,
+        "source_raw": "educate [ˈedjuːkeit] v.教育,培养,训练"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "教育,培养,训练",
+        "phonetic": "ˈedjuːkeit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "传授知识并发展技能"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "教育；培养；训练",
+        "phonetic": "/ˈedʒukeɪt/",
+        "example": "The programme educates children about road safety.",
+        "example_translation": "这个项目教育儿童了解道路安全。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈedʒukeɪt/",
+          "checked_sense": "",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/educate"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；教育、培养、训练的用法需按语境核实。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；语体、词性等未核实处另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1564,
+        "word": "effective",
+        "headword": "effective",
+        "homograph": null,
+        "source_raw": "effective [iˈfektiv] a.有效的,生效的;被实施的;给人深刻印象"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有效的,生效的;被实施的;给人深刻印象",
+        "phonetic": "iˈfektiv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "有效的；生效的；给人深刻印象的",
+        "phonetic": "/ɪˈfektɪv/",
+        "example": "The new method was effective in reducing errors.",
+        "example_translation": "这种新方法有效地减少了错误。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈfektɪv/",
+          "checked_pos": "adjective",
+          "checked_sense": "producing result wanted/intended; successful",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/effective"
+        }
+      ],
+      "issues": [
+        "还可表示法律/政策已经生效；“给人深刻印象”需核查具体义项。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1565,
+        "word": "efficiency",
+        "headword": "efficiency",
+        "homograph": null,
+        "source_raw": "efficiency [iˈfiʃənsi] n.效率;功效"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "效率;功效",
+        "phonetic": "iˈfiʃənsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "效率；功效；能源效率",
+        "phonetic": "/ɪˈfɪʃnsi/",
+        "example": "The new system improved the efficiency of the office.",
+        "example_translation": "新系统提高了办公室的效率。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈfɪʃnsi/",
+          "checked_pos": "noun",
+          "checked_sense": "doing something well without waste of time/money",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/efficiency"
+        }
+      ],
+      "issues": [
+        "还可指节约时间/金钱的方法及机器能量转换效率。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1569,
+        "word": "ego",
+        "headword": "ego",
+        "homograph": null,
+        "source_raw": "ego [ˈiːɡəu, ˈeɡəu] n.自我,自负,利已主义;(心理学)自我意识"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "自我,自负,利已主义;(心理学)自我意识",
+        "phonetic": "ˈiːɡəu, ˈeɡəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "自我；自负；自我意识",
+        "phonetic": "/ˈiːɡəʊ/",
+        "example": "His ego was hurt when the idea was rejected.",
+        "example_translation": "他的想法被否决时，自尊心受到了打击。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈiːɡəʊ/",
+          "checked_pos": "noun",
+          "checked_sense": "sense of own value/importance; part of mind responsible for identity",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ego"
+        }
+      ],
+      "issues": [
+        "心理学中指自我人格结构，与日常“自负”义不同。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1570,
+        "word": "eight",
+        "headword": "eight",
+        "homograph": null,
+        "source_raw": "eight [eit] num.八 pron.八(个,只...)"
+      },
+      "original": {
+        "pos": "num.",
+        "meaning": "八 pron.八(个,只...)",
+        "phonetic": "eit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "num.; pron.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "num.; pron.",
+        "meaning": "八；八个",
+        "phonetic": "/eɪt/",
+        "example": "Eight students joined the science club.",
+        "example_translation": "八名学生加入了科学俱乐部。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/eɪt/",
+          "checked_pos": "number",
+          "checked_sense": "8; rowing team of eight",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eight"
+        }
+      ],
+      "issues": [
+        "也可指由八名选手组成的划船队；数字、数量词和队伍义分开。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1571,
+        "word": "eighteen",
+        "headword": "eighteen",
+        "homograph": null,
+        "source_raw": "eighteen [ˈeiˈtiːn] num.十八,十八个"
+      },
+      "original": {
+        "pos": "num.",
+        "meaning": "十八,十八个",
+        "phonetic": "ˈeiˈtiːn",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "num.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "num.",
+        "meaning": "十八；十八个",
+        "phonetic": "/ˌeɪˈtiːn/",
+        "example": "The bus leaves at eighteen past six.",
+        "example_translation": "公交车在六点十八分发车。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌeɪˈtiːn/",
+          "checked_pos": "number",
+          "checked_sense": "18",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eighteen"
+        }
+      ],
+      "issues": [
+        "表示时间时需按时钟格式表述；序数词为 eighteenth。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1572,
+        "word": "eighty",
+        "headword": "eighty",
+        "homograph": null,
+        "source_raw": "eighty [ˈeiti] num./a.八十 pron.八十(个,只...)"
+      },
+      "original": {
+        "pos": "num./a.",
+        "meaning": "八十 pron.八十(个,只...)",
+        "phonetic": "ˈeiti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "num.; a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "num.; a.",
+        "meaning": "八十；八十个",
+        "phonetic": "/ˈeɪti/",
+        "example": "The library has about eighty new books.",
+        "example_translation": "图书馆有大约八十本新书。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈeɪti/",
+          "checked_pos": "number",
+          "checked_sense": "80; numbers/years/temperatures 80 to 89",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eighty"
+        }
+      ],
+      "issues": [
+        "也指80到89的数字/年龄区间；避免将基数词与范围用法混为一谈。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1573,
+        "word": "either",
+        "headword": "either",
+        "homograph": null,
+        "source_raw": "either [ˈaiðə, ˈiː-] ad.也(不) pron.两者之一 a.(两者中)任一的"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "也(不) pron.两者之一 a.(两者中)任一的",
+        "phonetic": "ˈaiðə, ˈiː-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "det.; pron.; adv.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "det.; pron.; adv.",
+        "meaning": "两者之一；任一；（否定句）也不",
+        "phonetic": "/ˈaɪðə(r)/",
+        "example": "You can take either road to reach the village.",
+        "example_translation": "你走哪条路都能到村庄。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈaɪðə(r)/",
+          "checked_pos": "determiner",
+          "checked_sense": "one or the other of two; each of two",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/either"
+        }
+      ],
+      "issues": [
+        "限定词、代词、副词/连接用法较多；either of 与 either...or 等结构需分开说明。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1574,
+        "word": "eject",
+        "headword": "eject",
+        "homograph": null,
+        "source_raw": "eject [iˈdʒekt, ˈiːdʒekt] v.喷射,排出;驱逐"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "喷射,排出;驱逐",
+        "phonetic": "iˈdʒekt, ˈiːdʒekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "喷出；排出；驱逐",
+        "phonetic": "/ɪˈdʒekt/",
+        "example": "Security ejected the visitor for disrupting the meeting.",
+        "example_translation": "安保人员因访客扰乱会议而将其请出。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈdʒekt/",
+          "checked_pos": "verb",
+          "checked_sense": "force somebody to leave place/position",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eject"
+        }
+      ],
+      "issues": [
+        "词典主义为驱逐；喷射、弹射等技术义需按对象核查。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1575,
+        "word": "elaborate",
+        "headword": "elaborate",
+        "homograph": null,
+        "source_raw": "elaborate [iˈlæbərət, iˈlæbəreit] v./a.精心制作(的);详细阐述(的)"
+      },
+      "original": {
+        "pos": "v./a.",
+        "meaning": "精心制作(的);详细阐述(的)",
+        "phonetic": "iˈlæbərət, iˈlæbəreit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.; v.",
+        "meaning": "a.精心制作的，详细的；v.详细阐述，详尽说明",
+        "phonetic": "/ɪˈlæbərət/",
+        "example": "The proposal includes an elaborate plan for restoring the garden.",
+        "example_translation": "提案包含一份精心制定的花园修复计划。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlæbərət/",
+          "checked_pos": "adjective",
+          "checked_sense": "complex and detailed/carefully prepared",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elaborate_1"
+        },
+        {
+          "checked_uk_ipa": "/ɪˈlæbəreɪt/",
+          "checked_pos": "verb",
+          "checked_sense": "elaborate on/describe in more detail",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elaborate_2"
+        }
+      ],
+      "issues": [
+        "形容词 /ɪˈlæbərət/ 与动词 /ɪˈlæbəreɪt/ 读音不同；已分别访问 elaborate_1/2。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1576,
+        "word": "elapse",
+        "headword": "elapse",
+        "homograph": null,
+        "source_raw": "elapse [iˈlæps] vi.(时间)溜走;(光阴)逝去"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "(时间)溜走;(光阴)逝去",
+        "phonetic": "iˈlæps",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vi.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vi.",
+        "meaning": "（时间）流逝；过去",
+        "phonetic": "/ɪˈlæps/",
+        "example": "Several months elapsed before the repairs were complete.",
+        "example_translation": "维修完成前过去了几个月。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlæps/",
+          "checked_pos": "verb",
+          "checked_sense": "period of time passes",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elapse"
+        }
+      ],
+      "issues": [
+        "多用于正式文体，主语通常为时间段；不可简单替代 pass in all structures。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1577,
+        "word": "elastic",
+        "headword": "elastic",
+        "homograph": null,
+        "source_raw": "elastic [iˈlæstik] a.弹性的 n.松紧带,橡皮圈"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "弹性的 n.松紧带,橡皮圈",
+        "phonetic": "iˈlæstik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.; n.",
+        "meaning": "有弹性的；灵活的；n.松紧带，橡皮圈",
+        "phonetic": "/ɪˈlæstɪk/",
+        "example": "The elastic band holds the papers together.",
+        "example_translation": "橡皮筋把文件捆在一起。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlæstɪk/",
+          "checked_pos": "noun",
+          "checked_sense": "rubber material that stretches and returns to original size",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elastic"
+        }
+      ],
+      "issues": [
+        "形容词强调可恢复伸展；名词 band 义依地区有所不同。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1578,
+        "word": "elbow",
+        "headword": "elbow",
+        "homograph": null,
+        "source_raw": "elbow [ˈelbəu] n.肘,(衣服的)肘部vt.用肘推,用肘挤"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "肘,(衣服的)肘部vt.用肘推,用肘挤",
+        "phonetic": "ˈelbəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.; vt.",
+        "meaning": "肘；（衣服）肘部；vt.用肘推挤",
+        "phonetic": "/ˈelbəʊ/",
+        "example": "He leaned his elbow on the table.",
+        "example_translation": "他把肘部靠在桌上。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈelbəʊ/",
+          "checked_pos": "noun",
+          "checked_sense": "joint in arm; clothing part covering elbow",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elbow"
+        }
+      ],
+      "issues": [
+        "动词用肘推/挤为另一词性义，注意语气。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1581,
+        "word": "elect",
+        "headword": "elect",
+        "homograph": null,
+        "source_raw": "elect v.选举,推选;选择,作出选择"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "选举,推选;选择,作出选择",
+        "phonetic": "ɪˈlekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "选举；推选；选择",
+        "phonetic": "/ɪˈlekt/",
+        "example": "The members elected a new chairperson.",
+        "example_translation": "成员们选出了一位新主席。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlekt/",
+          "checked_pos": "verb",
+          "checked_sense": "choose somebody for job by voting",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elect"
+        }
+      ],
+      "issues": [
+        "页面支持选人担任工作；“选择”义需看是否用于 select an option 等结构。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1583,
+        "word": "electrical",
+        "headword": "electrical",
+        "homograph": null,
+        "source_raw": "electrical [iˈlektrikəl] a.电的,电学的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "电的,电学的",
+        "phonetic": "iˈlektrikəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "电的；电学的；用电/产生电的",
+        "phonetic": "/ɪˈlektrɪkl/",
+        "example": "An electrical fault caused the lights to go out.",
+        "example_translation": "电路故障导致灯熄灭。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlektrɪkl/",
+          "checked_pos": "adjective",
+          "checked_sense": "relating to/using/producing electricity",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/electrical"
+        }
+      ],
+      "issues": [
+        "区分 electrical（电力/设备）与 electronic（电子设备/信号）。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1584,
+        "word": "electrician",
+        "headword": "electrician",
+        "homograph": null,
+        "source_raw": "electrician [ˌilekˈtriʃən] n.电学家,电工"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "电学家,电工",
+        "phonetic": "ˌilekˈtriʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "电工；电气设备维修人员",
+        "phonetic": "/ɪˌlekˈtrɪʃn/",
+        "example": "We called an electrician to check the wiring.",
+        "example_translation": "我们叫了电工来检查线路。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˌlekˈtrɪʃn/",
+          "checked_pos": "noun",
+          "checked_sense": "person whose job connects/repairs electrical equipment",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/electrician"
+        }
+      ],
+      "issues": [
+        "“电学家”与 electrician 的职业释义不同，原释义应纠正为电工。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1586,
+        "word": "electron",
+        "headword": "electron",
+        "homograph": null,
+        "source_raw": "electron [iˈlektrɔn] n.电子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "电子",
+        "phonetic": "iˈlektrɔn",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "电子",
+        "phonetic": "/ɪˈlektrɒn/",
+        "example": "/The electron carries a negative electric charge.",
+        "example_translation": "电子带负电荷。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlektrɒn/",
+          "checked_pos": "noun",
+          "checked_sense": "very small particle",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/electron"
+        }
+      ],
+      "issues": [
+        "原页面定义仅称 very small particle；建议补充带负电荷，需主代理核对课程所需深度。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1590,
+        "word": "elementary",
+        "headword": "elementary",
+        "homograph": null,
+        "source_raw": "elementary [ˌeliˈmentəri] a.初步的;基本的;[化]元素的;自然力的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "初步的;基本的;[化]元素的;自然力的",
+        "phonetic": "ˌeliˈmentəri",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "初步的；基本的；（化学）元素的",
+        "phonetic": "/ˌelɪˈmentri/",
+        "example": "The course starts with elementary grammar.",
+        "example_translation": "这门课程从基础语法开始。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌelɪˈmentri/",
+          "checked_pos": "adjective",
+          "checked_sense": "first stages of study; most basic; simple/easy",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elementary"
+        }
+      ],
+      "issues": [
+        "还可指最基础、简单易懂；化学“元素的”是专业义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1592,
+        "word": "elevate",
+        "headword": "elevate",
+        "homograph": null,
+        "source_raw": "elevate [ˈeliveit] vt.举起,提拔,振奋,提升...的职位"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "举起,提拔,振奋,提升...的职位",
+        "phonetic": "ˈeliveit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "举起；提升；提拔；振奋",
+        "phonetic": "/ˈelɪveɪt/",
+        "example": "The platform elevates the speaker above the audience.",
+        "example_translation": "平台把演讲者抬高到观众上方。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈelɪveɪt/",
+          "checked_pos": "verb",
+          "checked_sense": "",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elevate"
+        }
+      ],
+      "issues": [
+        "页面定义文本未提取；物理抬高、晋升和提升情绪分开核实。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1594,
+        "word": "eleven",
+        "headword": "eleven",
+        "homograph": null,
+        "source_raw": "eleven [iˈlevən] num.十一 pron./a.十一(个,只...)"
+      },
+      "original": {
+        "pos": "num.",
+        "meaning": "十一 pron./a.十一(个,只...)",
+        "phonetic": "iˈlevən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "num.; pron.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "num.; pron.",
+        "meaning": "十一；十一个",
+        "phonetic": "/ɪˈlevn/",
+        "example": "Eleven players took part in the match.",
+        "example_translation": "十一名球员参加了比赛。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈlevn/",
+          "checked_pos": "number",
+          "checked_sense": "11; team of eleven players",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eleven"
+        }
+      ],
+      "issues": [
+        "也指足球/板球队伍；区分数字与队伍义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1595,
+        "word": "eligible",
+        "headword": "eligible",
+        "homograph": null,
+        "source_raw": "eligible [ˈelidʒəbl] a.符合条件的;(尤指婚姻等)合适(意)的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "符合条件的;(尤指婚姻等)合适(意)的",
+        "phonetic": "ˈelidʒəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "符合条件的；有资格的；（婚姻等）合适的",
+        "phonetic": "/ˈelɪdʒəbl/",
+        "example": "Only registered students are eligible for the grant.",
+        "example_translation": "只有注册学生才有资格获得这项助学金。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈelɪdʒəbl/",
+          "checked_pos": "adjective",
+          "checked_sense": "eligible person; suitable person in specific contexts",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eligible"
+        }
+      ],
+      "issues": [
+        "婚恋“合适对象”义有语境限制，不应泛化为对人的评价。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；多词性和读音差异另行记录。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1597,
+        "word": "elite",
+        "headword": "elite",
+        "homograph": null,
+        "source_raw": "elite [eiˈliːt, iˈliːt] n.<法>[集合名词]精华;精锐;中坚分子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "<法>[集合名词]精华;精锐;中坚分子",
+        "phonetic": "eiˈliːt, iˈliːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.; a.",
+        "meaning": "n.精英，精华；a.精英的，顶尖的",
+        "phonetic": "/eɪˈliːt/",
+        "example": "The summit brought together members of the political elite.",
+        "example_translation": "峰会汇集了政治精英。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/eɪˈliːt/",
+          "checked_sense": "small powerful/influential group; highest ability at competition",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elite",
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        "页面是形容词词条；名词集合义需另核。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1598,
+        "word": "eloquent",
+        "headword": "eloquent",
+        "homograph": null,
+        "source_raw": "eloquent [ˈeləkwənt] a.雄辩的,有说服力的;善辩的,口才流利的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "雄辩的,有说服力的;善辩的,口才流利的",
+        "phonetic": "ˈeləkwənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "雄辩的；有说服力的；善辩的，口才流利的",
+        "phonetic": "/ˈeləkwənt/",
+        "example": "Her eloquent speech moved the audience.",
+        "example_translation": "她雄辩的演讲打动了观众。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈeləkwənt/",
+          "checked_sense": "able to use language and express opinions well; express feeling",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eloquent",
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        "也可形容表情/行为清楚传达感受，不限口头表达。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1600,
+        "word": "elsewhere",
+        "headword": "elsewhere",
+        "homograph": null,
+        "source_raw": "elsewhere [ˌelsˈhwεə] ad.在别处,向别处"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "在别处,向别处",
+        "phonetic": "ˌelsˈhwεə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adv.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "adv.",
+        "meaning": "在别处；向别处",
+        "phonetic": "/ˌelsˈweə(r)/",
+        "example": "If this shop is closed, we can try elsewhere.",
+        "example_translation": "如果这家店关门了，我们可以去别处看看。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˌelsˈweə(r)/",
+          "checked_sense": "in/at/to another place or places",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/elsewhere",
+          "checked_pos": "adverb"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1601,
+        "word": "e-mail",
+        "headword": "e-mail",
+        "homograph": null,
+        "source_raw": "e-mail n.(electronic mail)电子信函,电子邮件"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(electronic mail)电子信函,电子邮件",
+        "phonetic": "ˈiːmeɪl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "电子邮件；电子信函",
+        "phonetic": null,
+        "example": "She sent an e-mail to confirm the appointment.",
+        "example_translation": "她发了一封电子邮件确认约定。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "Oxford English 页面对连字符拼写 e-mail 返回 404；不要与 email 拼写合并，音标留空并由主代理核验是否历史/变体拼写。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1602,
+        "word": "embark",
+        "headword": "embark",
+        "homograph": null,
+        "source_raw": "embark [emˈbɑːk, im-] v.(使)上船(或飞机,汽车等);着手,从事"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)上船(或飞机,汽车等);着手,从事",
+        "phonetic": "emˈbɑːk, im-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "（使）上船/飞机/车辆；着手，从事",
+        "phonetic": "/ɪmˈbɑːk/",
+        "example": "She embarked on a research project about city parks.",
+        "example_translation": "她着手开展一项关于城市公园的研究。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪmˈbɑːk/",
+          "checked_sense": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embark",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；embark on/upon 与登上交通工具的义分开。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1603,
+        "word": "embarrass",
+        "headword": "embarrass",
+        "homograph": null,
+        "source_raw": "embarrass [imˈbærəs] vt.使困窘,使局促不安;阻碍,麻烦"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "使困窘,使局促不安;阻碍,麻烦",
+        "phonetic": "imˈbærəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "使困窘；使局促不安；妨碍，给……添麻烦",
+        "phonetic": "/ɪmˈbærəs/",
+        "example": "I did not want to embarrass him by asking in front of everyone.",
+        "example_translation": "我不想当着大家的面提问让他难堪。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪmˈbærəs/",
+          "checked_sense": "make somebody shy/uncomfortable/ashamed socially",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embarrass",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "羞窘义为词典主义；阻碍/麻烦义需另核。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1604,
+        "word": "embassy",
+        "headword": "embassy",
+        "homograph": null,
+        "source_raw": "embassy [ˈembəsi] n.大使馆;大使及其随员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "大使馆;大使及其随员",
+        "phonetic": "ˈembəsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "大使馆；大使及其随员",
+        "phonetic": "/ˈembəsi/",
+        "example": "The embassy issued travel advice to its citizens.",
+        "example_translation": "大使馆向本国公民发布了旅行建议。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈembəsi/",
+          "checked_sense": "group of officials led by ambassador; embassy building",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embassy",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "同词也指使馆所在建筑，注意机构/建筑物转喻。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1605,
+        "word": "embed",
+        "headword": "embed",
+        "homograph": null,
+        "source_raw": "embed [imˈbed] vt.把…嵌(埋、插)入,扎牢;使深留脑中"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "把…嵌(埋、插)入,扎牢;使深留脑中",
+        "phonetic": "imˈbed",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "嵌入；埋入；插入；使深留脑中",
+        "phonetic": "/ɪmˈbed/",
+        "example": "The stone was embedded in the wall.",
+        "example_translation": "石头嵌在墙里。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪmˈbed/",
+          "checked_sense": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embed",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；实际/数字内容嵌入和记忆深植需分义。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1606,
+        "word": "embody",
+        "headword": "embody",
+        "homograph": null,
+        "source_raw": "embody [imˈbɔdi] vt.具体表达,使具体化;包含,收录"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "具体表达,使具体化;包含,收录",
+        "phonetic": "imˈbɔdi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "具体表达；体现；包含，收录",
+        "phonetic": "/ɪmˈbɒdi/",
+        "example": "The design embodies the company's focus on simplicity.",
+        "example_translation": "这个设计体现了公司对简约的重视。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪmˈbɒdi/",
+          "checked_sense": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embody",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；“包含/收录”义须结合结构复核。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1607,
+        "word": "embrace",
+        "headword": "embrace",
+        "homograph": null,
+        "source_raw": "embrace [imˈbreis] v.拥抱;包含;包围;环绕;采用;接受"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拥抱;包含;包围;环绕;采用;接受",
+        "phonetic": "imˈbreis",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.; n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.; n.",
+        "meaning": "拥抱；接受，欣然采用；包含，包围",
+        "phonetic": "/ɪmˈbreɪs/",
+        "example": "They embraced warmly after the long separation.",
+        "example_translation": "久别重逢后，他们热情相拥。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪmˈbreɪs/",
+          "checked_sense": "act of putting arms around somebody; accepting idea enthusiastically",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/embrace",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "访问的是名词页；动词拥抱、接受理念和包含义要分别查。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1608,
+        "word": "emerge",
+        "headword": "emerge",
+        "homograph": null,
+        "source_raw": "emerge [iˈməːdʒ] vt.显现,浮现;暴露;形成;"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "显现,浮现;暴露;形成;",
+        "phonetic": "iˈməːdʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "显现；浮现；暴露；形成",
+        "phonetic": "/ɪˈmɜːdʒ/",
+        "example": "The sun emerged from behind the clouds.",
+        "example_translation": "太阳从云层后面露了出来。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪˈmɜːdʒ/",
+          "checked_sense": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emerge",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；逐渐形成/显露事实等义分开。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1609,
+        "word": "emergency",
+        "headword": "emergency",
+        "homograph": null,
+        "source_raw": "emergency [iˈməːdʒənsi] n.紧急情况,突然事件,非常时刻"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "紧急情况,突然事件,非常时刻",
+        "phonetic": "iˈməːdʒənsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "紧急情况；突发事件；非常时刻",
+        "phonetic": "/ɪˈmɜːdʒənsi/",
+        "example": "The crew followed the emergency procedure calmly.",
+        "example_translation": "机组人员镇定地执行了应急程序。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪˈmɜːdʒənsi/",
+          "checked_sense": "sudden serious dangerous event requiring immediate action",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emergency",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "常与 emergency services/exit 等搭配；区分重大紧急事件与一般突发情况。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1610,
+        "word": "emigrate",
+        "headword": "emigrate",
+        "homograph": null,
+        "source_raw": "emigrate [ˈemiɡreit] v.(反)immigrate;(to,from)自本国移居他"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(反)immigrate;(to,from)自本国移居他",
+        "phonetic": "ˈemiɡreit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "自本国移居他国；移民（迁出）",
+        "phonetic": "/ˈemɪɡreɪt/",
+        "example": "Her grandparents emigrated from Italy in the 1950s.",
+        "example_translation": "她的祖父母在20世纪50年代从意大利移居海外。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈemɪɡreɪt/",
+          "checked_sense": "leave own country to live permanently in another",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emigrate",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "emigrate from 与 immigrate to 方向相反；搭配要明确。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1611,
+        "word": "eminent",
+        "headword": "eminent",
+        "homograph": null,
+        "source_raw": "eminent [ˈeminənt] a.显赫的;杰出的;有名的;优良的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "显赫的;杰出的;有名的;优良的",
+        "phonetic": "ˈeminənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "显赫的；杰出的；著名的；卓越的",
+        "phonetic": "/ˈemɪnənt/",
+        "example": "The conference invited an eminent scientist to give the opening talk.",
+        "example_translation": "会议邀请了一位杰出科学家作开场演讲。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈemɪnənt/",
+          "checked_sense": "famous/respected especially in a profession; unusual/excellent",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/eminent",
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        "不要与 imminent（即将发生的）混淆。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1612,
+        "word": "emit",
+        "headword": "emit",
+        "homograph": null,
+        "source_raw": "emit [iˈmit] vt.发出;放射;吐露;散发;发表;发行"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "发出;放射;吐露;散发;发表;发行",
+        "phonetic": "iˈmit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "发出；放射；散发；吐露",
+        "phonetic": "/iˈmɪt/",
+        "example": "The device emits a soft warning sound.",
+        "example_translation": "设备会发出轻柔的警示声。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/iˈmɪt/",
+          "checked_sense": "send out light/heat/sound/gas etc.",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emit",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "也可指发表、发行或表达；需按宾语选译。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1613,
+        "word": "emotion",
+        "headword": "emotion",
+        "homograph": null,
+        "source_raw": "emotion [iˈməuʃən] n.情绪,情感,感情"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "情绪,情感,感情",
+        "phonetic": "iˈməuʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "情绪；情感；感情",
+        "phonetic": "/ɪˈməʊʃn/",
+        "example": "Her voice shook with emotion during the speech.",
+        "example_translation": "演讲时，她的声音因激动而颤抖。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ɪˈməʊʃn/",
+          "checked_sense": "strong feeling such as love/fear/anger; feelings part of character",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emotion",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "也指一个人性格中由感受构成的部分。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1614,
+        "word": "emperor",
+        "headword": "emperor",
+        "homograph": null,
+        "source_raw": "emperor [ˈempərə] n.皇帝"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "皇帝",
+        "phonetic": "ˈempərə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "皇帝；帝王；（俚语）最优秀/最重要者",
+        "phonetic": "/ˈempərə(r)/",
+        "example": "The emperor addressed the people from the palace balcony.",
+        "example_translation": "皇帝在宫殿阳台上向民众讲话。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈempərə(r)/",
+          "checked_sense": "ruler of an empire",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emperor",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "Oxford 还列“皇帝没穿衣服”习语；勿把寓意当普通字面义。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1615,
+        "word": "emphasis",
+        "headword": "emphasis",
+        "homograph": null,
+        "source_raw": "emphasis [ˈemfəsis] n.强调,重点"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "强调,重点",
+        "phonetic": "ˈemfəsis",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "强调；重点；着重",
+        "phonetic": "/ˈemfəsɪs/",
+        "example": "The teacher placed emphasis on clear pronunciation.",
+        "example_translation": "老师特别强调发音清晰。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈemfəsɪs/",
+          "checked_sense": "special importance given to something",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emphasis",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "复数 emphases；注意词形与发音变化。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1616,
+        "word": "emphasize",
+        "headword": "emphasize",
+        "homograph": null,
+        "source_raw": "emphasize [ˈemfəsaiz] v.(emphasise)强调"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(emphasise)强调",
+        "phonetic": "ˈemfəsaiz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "强调；着重指出",
+        "phonetic": "/ˈemfəsaɪz/",
+        "example": "The guide emphasizes the need to protect local wildlife.",
+        "example_translation": "指南强调保护当地野生动物的必要性。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈemfəsaɪz/",
+          "checked_sense": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/emphasize",
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "保留美式拼写 emphasize，不与 emphasise 合并；Oxford 英式页面提供该拼写。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1617,
+        "word": "empire",
+        "headword": "empire",
+        "homograph": null,
+        "source_raw": "empire [ˈempaiə] n.帝国"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "帝国",
+        "phonetic": "ˈempaiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": null
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "帝国；（商业）庞大企业集团",
+        "phonetic": "/ˈempaɪə(r)/",
+        "example": "The empire expanded across several continents.",
+        "example_translation": "这个帝国扩张到了多个大洲。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "/ˈempaɪə(r)/",
+          "checked_sense": "countries/states controlled by leader/government; commercial group",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/empire",
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "也指由个人/公司控制的商业集团。"
+      ],
+      "change_reason": "根据实际访问的 Oxford 页面核对所选义项；无法访问的原拼写或未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1618,
+        "word": "empirical",
+        "headword": "empirical",
+        "homograph": null,
+        "source_raw": "empirical [emˈpirikəl] a.凭经验(或观察)的,经验主义的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "凭经验(或观察)的,经验主义的",
+        "phonetic": "emˈpirikəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "依据实验或经验而非纯理论"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "凭经验/观察的；经验主义的",
+        "phonetic": "/ɪmˈpɪrɪkl/",
+        "example": "The team gathered empirical data from field observations.",
+        "example_translation": "团队从实地观察中收集了经验数据。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪmˈpɪrɪkl/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/empirical",
+          "checked_sense": "based on experiments/experience rather than ideas/theories",
+          "accessed": true,
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        "强调以观察/实验为依据，并不代表经验主义哲学立场。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1619,
+        "word": "employ",
+        "headword": "employ",
+        "homograph": null,
+        "source_raw": "employ [imˈplɔi] n./v.雇用;用,使用"
+      },
+      "original": {
+        "pos": "n./v.",
+        "meaning": "雇用;用,使用",
+        "phonetic": "imˈplɔi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "雇用某人工作"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "雇用；使用；运用",
+        "phonetic": "/ɪmˈplɔɪ/",
+        "example": "The company employs over two hundred people.",
+        "example_translation": "这家公司雇用了两百多名员工。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪmˈplɔɪ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/employ",
+          "checked_sense": "",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面为动词；名词 employ 较旧或罕用，原词条需核实词性；“使用”义也按宾语区别。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1620,
+        "word": "employee",
+        "headword": "employee",
+        "homograph": null,
+        "source_raw": "employee [ˌemplɔiˈiː, emˈplɔiiː] n.雇工,雇员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "雇工,雇员",
+        "phonetic": "ˌemplɔiˈiː, emˈplɔiiː",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "受雇为某人/机构工作并领取报酬的人"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "雇员；员工",
+        "phonetic": "/ɪmˈplɔɪiː/",
+        "example": "Every employee receives safety training.",
+        "example_translation": "每位员工都会接受安全培训。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪmˈplɔɪiː/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/employee",
+          "checked_sense": "person paid to work for somebody",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1621,
+        "word": "employer",
+        "headword": "employer",
+        "homograph": null,
+        "source_raw": "employer [imˈplɔiə] n.雇主"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "雇主",
+        "phonetic": "imˈplɔiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "支付工资让他人工作的人或公司"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "雇主；用人单位",
+        "phonetic": "/ɪmˈplɔɪə(r)/",
+        "example": "The employer offers flexible working hours.",
+        "example_translation": "雇主提供灵活的工作时间。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪmˈplɔɪə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/employer",
+          "checked_sense": "person/company paying people to work",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1622,
+        "word": "employment",
+        "headword": "employment",
+        "homograph": null,
+        "source_raw": "employment [imˈplɔimənt] n.雇用;使用;工作,职业"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "雇用;使用;工作,职业",
+        "phonetic": "imˈplɔimənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "工作，尤其是以挣钱为目的的工作"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "雇用；工作，职业；使用",
+        "phonetic": "/ɪmˈplɔɪmənt/",
+        "example": "She found employment at a local hospital.",
+        "example_translation": "她在当地医院找到了一份工作。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪmˈplɔɪmənt/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/employment",
+          "checked_sense": "work for money; state of being employed",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "还指受雇状态及资源使用；“雇用”动作和职位要分开。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1623,
+        "word": "empty",
+        "headword": "empty",
+        "homograph": null,
+        "source_raw": "empty [ˈempti] a.空的;空洞的 v.倒空,使成为空的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "空的;空洞的 v.倒空,使成为空的",
+        "phonetic": "ˈempti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.; v.",
+        "meaning": "里面没有人或物的"
+      },
+      "proposed": {
+        "pos": "a.; v.",
+        "meaning": "空的；空洞的；v.倒空，使成为空的",
+        "phonetic": "/ˈempti/",
+        "example": "The room was empty when we arrived.",
+        "example_translation": "我们到达时房间里空无一人。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈempti/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/empty",
+          "checked_sense": "with no people/things inside; with no meaning",
+          "accessed": true,
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        "还指言辞无意义；动词倒空义应另列。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1624,
+        "word": "enable",
+        "headword": "enable",
+        "homograph": null,
+        "source_raw": "enable [iˈneibl] v.使能够,使成为可能;授予权利或方法"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使能够,使成为可能;授予权利或方法",
+        "phonetic": "iˈneibl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "使某人能够做某事"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "使能够；使成为可能；授予权利/手段",
+        "phonetic": "/ɪˈneɪbl/",
+        "example": "The new ramp enables wheelchair users to enter the building.",
+        "example_translation": "新坡道使轮椅使用者能够进入大楼。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪˈneɪbl/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enable",
+          "checked_sense": "",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；enable sb to do 与 enable access 等结构要分清。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1625,
+        "word": "enclose",
+        "headword": "enclose",
+        "homograph": null,
+        "source_raw": "enclose [inˈkləuz] v.围住,圈起,封入"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "围住,圈起,封入",
+        "phonetic": "inˈkləuz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "用墙、篱笆等围起某物"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "围住，圈起；随函附上",
+        "phonetic": "/ɪnˈkləʊz/",
+        "example": "A wooden fence encloses the garden.",
+        "example_translation": "一道木栅栏围住了花园。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈkləʊz/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enclose",
+          "checked_sense": "build wall/fence around something",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "也可指信中附上文件；区分物理围住与随函附入。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1626,
+        "word": "enclosure",
+        "headword": "enclosure",
+        "homograph": null,
+        "source_raw": "enclosure [inˈkləuʒə] n.围住,圈起,封入,附件"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "围住,圈起,封入,附件",
+        "phonetic": "inˈkləuʒə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "被围栏/墙围住、用于特定用途的一块土地"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "围场；圈地；圈围行为；随函附件",
+        "phonetic": "/ɪnˈkləʊʒə(r)/",
+        "example": "The sheep were moved into a secure enclosure.",
+        "example_translation": "羊被赶进了安全的围场。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈkləʊʒə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enclosure",
+          "checked_sense": "land surrounded by fence/wall; act of enclosing; item in envelope",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "词典还列圈围行为及信封内附件；原释义“围住”应改名词化。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1627,
+        "word": "encounter",
+        "headword": "encounter",
+        "homograph": null,
+        "source_raw": "encounter [inˈkauntə] n./v.遇到,遭遇"
+      },
+      "original": {
+        "pos": "n./v.",
+        "meaning": "遇到,遭遇",
+        "phonetic": "inˈkauntə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "意外或突然遇到某人/某事"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "遇到；遭遇；n.相遇，冲突",
+        "phonetic": "/ɪnˈkaʊntə(r)/",
+        "example": "We encountered heavy rain on the way home.",
+        "example_translation": "我们回家途中遇到了大雨。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈkaʊntə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/encounter",
+          "checked_sense": "",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "本次页面动词义且释义未提取；名词相遇/冲突义分开核对。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1628,
+        "word": "encourage",
+        "headword": "encourage",
+        "homograph": null,
+        "source_raw": "encourage [inˈkʌridʒ] v.鼓励,怂恿"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "鼓励,怂恿",
+        "phonetic": "inˈkʌridʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "给某人信心或希望，使其更愿意做某事"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "鼓励；支持；怂恿",
+        "phonetic": "/ɪnˈkʌrɪdʒ/",
+        "example": "Her teacher encouraged her to apply for the scholarship.",
+        "example_translation": "老师鼓励她申请奖学金。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈkʌrɪdʒ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/encourage",
+          "checked_sense": "",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "“怂恿”含负面语气；encourage sb to do 结构常见。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1629,
+        "word": "encyclopedia",
+        "headword": "encyclopedia",
+        "homograph": null,
+        "source_raw": "encyclopedia [en,saikləuˈpiːdjə] n.(encyclopaedia)百科全书"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(encyclopaedia)百科全书",
+        "phonetic": "en,saikləuˈpiːdjə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "按字母顺序整理各领域知识的书/书集或数字信息库"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "百科全书；百科资料库",
+        "phonetic": "/ɪnˌsaɪkləˈpiːdiə/",
+        "example": "The online encyclopedia is updated by subject experts.",
+        "example_translation": "这部在线百科全书由各学科专家更新。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˌsaɪkləˈpiːdiə/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/encyclopedia",
+          "checked_sense": "book/set of books or digital collection of knowledge",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "保留输入美式拼写 encyclopedia，不与 encyclopaedia 合并。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1630,
+        "word": "end",
+        "headword": "end",
+        "homograph": null,
+        "source_raw": "end [end] n.末端,端,梢;目标,目的 v.终止,结束"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "末端,端,梢;目标,目的 v.终止,结束",
+        "phonetic": "end",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.; v.",
+        "meaning": "某段时间、事件或故事的最后部分"
+      },
+      "proposed": {
+        "pos": "n.; v.",
+        "meaning": "末端；结束；目标；v.终止，结束",
+        "phonetic": "/end/",
+        "example": "We reached the end of the trail before sunset.",
+        "example_translation": "日落前我们走到了小径尽头。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/end/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/end",
+          "checked_sense": "final part of time/event/activity/story",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "end 多义，需区分空间末端、时间结束、目的及动词结束。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1631,
+        "word": "endeavor",
+        "headword": "endeavor",
+        "homograph": null,
+        "source_raw": "endeavor [inˈdevə] v./n.(endeavour)努力,尽力,力图"
+      },
+      "original": {
+        "pos": "v./n.",
+        "meaning": "(endeavour)努力,尽力,力图",
+        "phonetic": "inˈdevə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.; n.",
+        "meaning": "努力去做某事"
+      },
+      "proposed": {
+        "pos": "v.; n.",
+        "meaning": "努力；尽力；力图",
+        "phonetic": "/NULL/",
+        "example": "They endeavored to finish the bridge before winter.",
+        "example_translation": "他们努力在冬天前建好这座桥。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/american_english/endeavor",
+          "checked_sense": "effort/attempt",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "Oxford 英语页对美式拼写 endeavor 返回 404；美式词典页未给英式 IPA；保留拼写独立并留空音标。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1632,
+        "word": "ending",
+        "headword": "ending",
+        "homograph": null,
+        "source_raw": "ending [ˈendiŋ] n.结尾,结局"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "结尾,结局",
+        "phonetic": "ˈendiŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "故事、电影等的最后部分"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "结尾；结局；结束",
+        "phonetic": "/ˈendɪŋ/",
+        "example": "The story has a surprising ending.",
+        "example_translation": "这个故事有一个出人意料的结局。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈendɪŋ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ending",
+          "checked_sense": "last part of story/film; act of finishing",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "也指结束行为或某事的最后部分。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1633,
+        "word": "endow",
+        "headword": "endow",
+        "homograph": null,
+        "source_raw": "endow [inˈdau] vt.资助,捐赠;(with)给予,赋予"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "资助,捐赠;(with)给予,赋予",
+        "phonetic": "inˈdau",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "向学校/机构捐赠大笔资金以提供收入"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "资助；捐赠；（with）赋予",
+        "phonetic": "/ɪnˈdaʊ/",
+        "example": "The donor endowed the college with funds for research.",
+        "example_translation": "捐赠者为学院设立了研究基金。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈdaʊ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/endow",
+          "checked_sense": "give large sum to institution to provide income",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "“赋予某人天赋/品质”常用于 endow sb with sth，需与资金捐赠义区分。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1634,
+        "word": "endurance",
+        "headword": "endurance",
+        "homograph": null,
+        "source_raw": "endurance [inˈdjuərəns] n.忍耐(力),持久(力),耐久(性)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "忍耐(力),持久(力),耐久(性)",
+        "phonetic": "inˈdjuərəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "长时间坚持做痛苦或困难事情而不放弃的能力"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "忍耐力；持久力；耐力",
+        "phonetic": "/ɪnˈdjʊərəns/",
+        "example": "The hike tested the runners' endurance.",
+        "example_translation": "这次徒步考验了跑者的耐力。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈdjʊərəns/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/endurance",
+          "checked_sense": "ability to continue painful/difficult activity without giving up",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "不仅是忍受痛苦，也可用于体能/心理持久性。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1635,
+        "word": "endure",
+        "headword": "endure",
+        "homograph": null,
+        "source_raw": "endure [inˈdjuə] v.忍受,持久,持续"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "忍受,持久,持续",
+        "phonetic": "inˈdjuə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "长时间承受困难"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "忍受；持续；持久",
+        "phonetic": "/ɪnˈdjʊə(r)/",
+        "example": "They endured several weeks without electricity.",
+        "example_translation": "他们在没有电的情况下熬过了数周。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ɪnˈdjʊə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/endure",
+          "checked_sense": "",
+          "accessed": true,
+          "checked_pos": "verb"
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；耐受与持续存在是不同行为主语结构。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1636,
+        "word": "enemy",
+        "headword": "enemy",
+        "homograph": null,
+        "source_raw": "enemy [ˈenimi] n.敌人,仇敌,反对者;敌人,敌军,敌国"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "敌人,仇敌,反对者;敌人,敌军,敌国",
+        "phonetic": "ˈenimi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "憎恨某人或采取行动反对某人/某事的人"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "敌人；仇敌；反对者；敌军/敌国",
+        "phonetic": "/ˈenəmi/",
+        "example": "The two former enemies agreed to work together.",
+        "example_translation": "这两位昔日敌人同意合作。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˈenəmi/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enemy",
+          "checked_sense": "person hating/acting against somebody/something",
+          "accessed": true,
+          "checked_pos": "noun"
+        }
+      ],
+      "issues": [
+        "可以指个人、群体或国家；不等同任何持不同意见者。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1637,
+        "word": "energetic",
+        "headword": "energetic",
+        "homograph": null,
+        "source_raw": "energetic [ˌenəˈdʒetik] a.精力旺盛的;积极的;有力的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "精力旺盛的;积极的;有力的",
+        "phonetic": "ˌenəˈdʒetik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "有很多精力和热情"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "精力旺盛的；积极的；有力的",
+        "phonetic": "/ˌenəˈdʒetɪk/",
+        "example": "The energetic children ran around the playground.",
+        "example_translation": "精力充沛的孩子们在操场上跑来跑去。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "checked_uk_ipa": "/ˌenəˈdʒetɪk/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/energetic",
+          "checked_sense": "having or needing lots of energy/enthusiasm",
+          "accessed": true,
+          "checked_pos": "adjective"
+        }
+      ],
+      "issues": [
+        ""
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；未核实的变体拼写或词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1638,
+        "word": "energy",
+        "headword": "energy",
+        "homograph": null,
+        "source_raw": "energy [ˈenədʒi] n.活力,精力;能,能量"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "活力,精力;能,能量",
+        "phonetic": "ˈenədʒi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "从事体力/脑力活动所需的力量和热情"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "活力，精力；能，能量",
+        "phonetic": "/ˈenədʒi/",
+        "example": "The hike used up most of our energy.",
+        "example_translation": "这次徒步消耗了我们大部分精力。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ˈenədʒi/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/energy",
+          "checked_sense": "strength/effort/enthusiasm for activity/work"
+        }
+      ],
+      "issues": [
+        "还包括物理学能量义；注意语境区分。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1639,
+        "word": "enforce",
+        "headword": "enforce",
+        "homograph": null,
+        "source_raw": "enforce [inˈfɔːs] v.实施,执行;强制;支持,坚持(要求,主张等)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "实施,执行;强制;支持,坚持(要求,主张等)",
+        "phonetic": "inˈfɔːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "使法律或规则得到遵守"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "实施，执行；强制；坚持要求",
+        "phonetic": "/ɪnˈfɔːs/",
+        "example": "The school enforces a strict safety policy.",
+        "example_translation": "学校严格执行安全政策。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈfɔːs/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enforce",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；enforce a rule/law 与 enforce a requirement 等结构需复核。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1640,
+        "word": "engage",
+        "headword": "engage",
+        "homograph": null,
+        "source_raw": "engage [inˈɡeidʒ] v.(in)从事,着手;约定;使订婚;保证;雇用"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(in)从事,着手;约定;使订婚;保证;雇用",
+        "phonetic": "inˈɡeidʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "参与某项活动或开始从事某事"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "从事，着手；约定；订婚；保证；雇用",
+        "phonetic": "/ɪnˈɡeɪdʒ/",
+        "example": "She engages in community projects every summer.",
+        "example_translation": "她每年夏天都参与社区项目。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈɡeɪdʒ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/engage",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "词义包括参加、吸引、雇用、订婚及保证；多义须按宾语/介词区分。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1641,
+        "word": "engagement",
+        "headword": "engagement",
+        "homograph": null,
+        "source_raw": "engagement [inˈɡeidʒmənt] n.约会,约定;婚约,订婚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "约会,约定;婚约,订婚",
+        "phonetic": "inˈɡeidʒmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "两人同意结婚及订婚期间"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "约定；婚约，订婚；聘用；参与",
+        "phonetic": "/ɪnˈɡeɪdʒmənt/",
+        "example": "Their engagement was announced in the local paper.",
+        "example_translation": "他们订婚的消息刊登在当地报纸上。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ɪnˈɡeɪdʒmənt/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/engagement",
+          "checked_sense": "agreement/period to marry; arrangement to do something at a time"
+        }
+      ],
+      "issues": [
+        "还指工作安排、交战和参与；需据语境译。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1642,
+        "word": "engine",
+        "headword": "engine",
+        "homograph": null,
+        "source_raw": "engine [ˈendʒin] n.发动机,引擎;火车头"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "发动机,引擎;火车头",
+        "phonetic": "ˈendʒin",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "产生动力使车辆移动的部分"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "发动机；引擎；火车头",
+        "phonetic": "/ˈendʒɪn/",
+        "example": "The engine started after two attempts.",
+        "example_translation": "尝试两次后发动机启动了。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ˈendʒɪn/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/engine",
+          "checked_sense": "part of vehicle producing power to move it"
+        }
+      ],
+      "issues": [
+        "还可指火车头或计算机引擎；例句选车辆发动机义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1643,
+        "word": "engineer",
+        "headword": "engineer",
+        "homograph": null,
+        "source_raw": "engineer [ˌendʒiˈniə] n.工程师"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工程师",
+        "phonetic": "ˌendʒiˈniə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "设计或建造发动机、机器、道路、桥梁等的人"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "工程师；电气设备维修人员",
+        "phonetic": "/ˌendʒɪˈnɪə(r)/",
+        "example": "The civil engineer inspected the new bridge.",
+        "example_translation": "土木工程师检查了这座新桥。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ˌendʒɪˈnɪə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/engineer",
+          "checked_sense": "person designing/building engines/machines/roads/bridges; repair technician"
+        }
+      ],
+      "issues": [
+        "工程设计与维修技术人员是不同职业方向，须按学科说明。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1644,
+        "word": "engineering",
+        "headword": "engineering",
+        "homograph": null,
+        "source_raw": "engineering [ˌendʒiˈniəriŋ] n.工程学"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工程学",
+        "phonetic": "ˌendʒiˈniəriŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "把科学知识用于设计、建造和控制设备/结构的活动"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "工程学；工程设计与建造",
+        "phonetic": "/ˌendʒɪˈnɪərɪŋ/",
+        "example": "She studied mechanical engineering at university.",
+        "example_translation": "她在大学学习机械工程。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ˌendʒɪˈnɪərɪŋ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/engineering",
+          "checked_sense": "applying science to design/build/control machines/structures; study"
+        }
+      ],
+      "issues": [
+        "也指 engineering 的学科研究；与 engineer 的职业名词区分。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1645,
+        "word": "enhance",
+        "headword": "enhance",
+        "homograph": null,
+        "source_raw": "enhance [inˈhɑːns, -hæns] v.提高,增强"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "提高,增强",
+        "phonetic": "inˈhɑːns, -hæns",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "使某事物变得更好或更有吸引力"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "提高；增强；改善",
+        "phonetic": "/ɪnˈhɑːns/",
+        "example": "The new lighting enhanced the artwork's colours.",
+        "example_translation": "新的照明增强了艺术品的色彩效果。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈhɑːns/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enhance",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；常用于提升质量、价值或吸引力。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1646,
+        "word": "enjoy",
+        "headword": "enjoy",
+        "homograph": null,
+        "source_raw": "enjoy [inˈdʒɔi] vt.享受…的乐趣;欣赏;喜爱"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "享受…的乐趣;欣赏;喜爱",
+        "phonetic": "inˈdʒɔi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "从某事物中获得快乐或满足"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "享受……的乐趣；欣赏；喜爱",
+        "phonetic": "/ɪnˈdʒɔɪ/",
+        "example": "They enjoy walking along the river after dinner.",
+        "example_translation": "他们喜欢晚饭后沿河散步。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈdʒɔɪ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enjoy",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "常接名词或动名词，不接不定式；页面释义未提取。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1647,
+        "word": "enlarge",
+        "headword": "enlarge",
+        "homograph": null,
+        "source_raw": "enlarge [inˈlɑːdʒ] vt.扩大,放大,增大"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "扩大,放大,增大",
+        "phonetic": "inˈlɑːdʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "使某物变大"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "扩大；放大；增大",
+        "phonetic": "/ɪnˈlɑːdʒ/",
+        "example": "They enlarged the kitchen by removing a wall.",
+        "example_translation": "他们拆掉一面墙来扩大厨房。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈlɑːdʒ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enlarge",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "页面释义未提取；可指照片放大或范围扩展，按宾语翻译。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1648,
+        "word": "enlighten",
+        "headword": "enlighten",
+        "homograph": null,
+        "source_raw": "enlighten [inˈlaitən] v.启发,启蒙,教导"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "启发,启蒙,教导",
+        "phonetic": "inˈlaitən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "提供信息使某人更好理解某事"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "启发；开导；教导",
+        "phonetic": "/ɪnˈlaɪtn/",
+        "example": "The guide enlightened us about the building's history.",
+        "example_translation": "导游让我们了解了这栋建筑的历史。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈlaɪtn/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enlighten",
+          "checked_sense": "give somebody information so they understand better"
+        }
+      ],
+      "issues": [
+        "常带较正式/旧式语气；避免与 light 的字面照明混淆。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1649,
+        "word": "enormous",
+        "headword": "enormous",
+        "homograph": null,
+        "source_raw": "enormous [iˈnɔːməs] a.巨大的,庞大的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "巨大的,庞大的",
+        "phonetic": "iˈnɔːməs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "极大"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "巨大的；庞大的",
+        "phonetic": "/ɪˈnɔːməs/",
+        "example": "The project requires an enormous amount of planning.",
+        "example_translation": "这个项目需要大量规划。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "adjective",
+          "checked_uk_ipa": "/ɪˈnɔːməs/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enormous",
+          "checked_sense": "extremely large"
+        }
+      ],
+      "issues": [
+        "一般不修饰微小差异；注意语气强度。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1650,
+        "word": "enough",
+        "headword": "enough",
+        "homograph": null,
+        "source_raw": "enough [iˈnʌf] a.(for)足够的 n.足够,充分 ad.足够地"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "(for)足够的 n.足够,充分 ad.足够地",
+        "phonetic": "iˈnʌf",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "det.; pron.; adv.; a.",
+        "meaning": "用于复数或不可数名词前，表示数量达到需要"
+      },
+      "proposed": {
+        "pos": "det.; pron.; adv.; a.",
+        "meaning": "足够的；足够地；足够数量/程度",
+        "phonetic": "/ɪˈnʌf/",
+        "example": "We have enough chairs for everyone.",
+        "example_translation": "我们的椅子足够每个人坐。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "determiner",
+          "checked_uk_ipa": "/ɪˈnʌf/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enough",
+          "checked_sense": "as many/much as somebody needs/wants"
+        }
+      ],
+      "issues": [
+        "词性取决于句法位置；与形容词/副词搭配顺序需说明。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1651,
+        "word": "enquire",
+        "headword": "enquire",
+        "homograph": null,
+        "source_raw": "enquire [inˈkwaiə] v.(inquire)询问,打听;调查;查问"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(inquire)询问,打听;调查;查问",
+        "phonetic": "inˈkwaiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "询问信息"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "询问；打听；调查，查问",
+        "phonetic": "/ɪnˈkwaɪə(r)/",
+        "example": "She called to enquire about the course dates.",
+        "example_translation": "她打电话询问课程日期。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈkwaɪə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enquire",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "保留英式 enquire 拼写；与 inquire 美式变体保持独立；enquire after/of 等搭配另核。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1652,
+        "word": "enrich",
+        "headword": "enrich",
+        "homograph": null,
+        "source_raw": "enrich [inˈritʃ] v.使富足;使肥沃;装饰;加料于;浓缩"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使富足;使肥沃;装饰;加料于;浓缩",
+        "phonetic": "inˈritʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "增加某事物的质量、价值或内容"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "使富足；使肥沃；丰富，充实；加料",
+        "phonetic": "/ɪnˈrɪtʃ/",
+        "example": "The course is designed to enrich students' understanding of history.",
+        "example_translation": "这门课程旨在加深学生对历史的理解。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈrɪtʃ/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enrich",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取； enrich with、土壤肥沃和营养强化分别处理。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1653,
+        "word": "enroll",
+        "headword": "enroll",
+        "homograph": null,
+        "source_raw": "enroll [inˈrəul] v.(enrol)招收;登记;入学;参军;成为会员"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(enrol)招收;登记;入学;参军;成为会员",
+        "phonetic": "inˈrəul",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "正式登记参加课程"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "招收；登记；入学；参军；成为会员",
+        "phonetic": null,
+        "example": "She enrolled in a language course last autumn.",
+        "example_translation": "她去年秋天报名参加了一门语言课程。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/american_english/enroll",
+          "checked_sense": "register for a course"
+        }
+      ],
+      "issues": [
+        "Oxford 英语页对美式拼写 enroll 返回 404；美式页面无英式 IPA。保持 enroll 与 enrol 两种拼写分开，音标留空。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1654,
+        "word": "ensure",
+        "headword": "ensure",
+        "homograph": null,
+        "source_raw": "ensure [inˈʃuə] v.确保,保证;使安全"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "确保,保证;使安全",
+        "phonetic": "inˈʃuə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "采取行动使某事确定会发生"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "确保；保证；使安全",
+        "phonetic": "/ɪnˈʃʊə(r)/",
+        "example": "Please ensure that every window is closed before leaving.",
+        "example_translation": "离开前请确保每扇窗户都关好了。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈʃʊə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ensure",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "页面释义文本未提取；区分 ensure（确保）与 insure（投保）及 assure（使确信）。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1655,
+        "word": "entail",
+        "headword": "entail",
+        "homograph": null,
+        "source_raw": "entail [inˈteil] vt.使承担;需要;把(疾病等)遗传给;限定"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "使承担;需要;把(疾病等)遗传给;限定",
+        "phonetic": "inˈteil",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "不可避免地需要某事"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "使承担；需要；涉及",
+        "phonetic": "/ɪnˈteɪl/",
+        "example": "The job entails travelling several times a month.",
+        "example_translation": "这份工作需要每月出差数次。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ɪnˈteɪl/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/entail",
+          "checked_sense": "involve something that cannot be avoided"
+        }
+      ],
+      "issues": [
+        "还可指继承法 entail；页面支持不可避免涉及义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1656,
+        "word": "enter",
+        "headword": "enter",
+        "homograph": null,
+        "source_raw": "enter [ˈentə] vt.进入;参加,加入;写入 vi.进去,进来"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "进入;参加,加入;写入 vi.进去,进来",
+        "phonetic": "ˈentə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "进入某个房间或地点"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "进入；参加/加入；写入，输入",
+        "phonetic": "/ˈentə(r)/",
+        "example": "Please enter the room quietly.",
+        "example_translation": "请安静地进入房间。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_uk_ipa": "/ˈentə(r)/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enter",
+          "checked_sense": ""
+        }
+      ],
+      "issues": [
+        "及物/不及物用法不同；也有录入数据与参赛义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 1657,
+        "word": "enterprise",
+        "headword": "enterprise",
+        "homograph": null,
+        "source_raw": "enterprise [ˈentəpraiz] n.事业,企(事)业单位;事业心,进取心"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "事业,企(事)业单位;事业心,进取心",
+        "phonetic": "ˈentəpraiz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "公司/企业或规模较大的项目"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "事业；企业；事业心，进取精神",
+        "phonetic": "/ˈentəpraɪz/",
+        "example": "The family enterprise has operated for three generations.",
+        "example_translation": "这家家族企业已经营了三代。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_uk_ipa": "/ˈentəpraɪz/",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/enterprise",
+          "checked_sense": "company/business; large difficult project"
+        }
+      ],
+      "issues": [
+        "还指大型项目和主动进取的精神；本次选企业义。"
+      ],
+      "change_reason": "依据实际访问的 Oxford 页面核对所选义项；变体拼写、语体及未核实词性另列。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    }
+  ]
+}

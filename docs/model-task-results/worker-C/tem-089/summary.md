@@ -1,0 +1,113 @@
+# tem-089 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：159
+- 输入 SHA256：8e7f2d61e9898263c3de6c6065e742119f961ea567e1d7015535a8a6c4717a54
+
+## 待主代理复核
+
+Scorn 已访问 Oxford Learner’s Dictionaries 并核对名词义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需核对 truthless/sed(an) 类源词头与中文释义错配、scanty 源中文错字、性别化称谓和精神健康词语的语域。
+
+- scope
+- scorch
+- scorching
+- score
+- scoring
+- scorpion
+- Scotch
+- scotch
+- Scotland
+- Scots
+- Scotsman
+- Scotswoman
+- Scottish
+- scoundrel
+- scour 1
+- scour 2
+- scout
+- scowl
+- scramble
+- scrap
+- scrape
+- scratch
+- scrawl
+- scrawny
+- scream
+- screech
+- screen
+- screenplay
+- screw
+- screwdriver
+- scribble
+- scribe
+- script
+- scripture
+- scriptwriter
+- scroll
+- scrounge
+- scrub 1
+- scrub 2
+- scrum
+- scruple
+- scrupulous
+- scrutiny
+- scuba
+- scuffle
+- sculptor
+- sculpture
+- scum
+- scupper
+- scurf
+- scurry
+- scuttle 1
+- scuttle 2
+- scythe
+- sea
+- seafood
+- seagull
+- seal 1
+- seal 2
+- seam
+- seaman
+- seaport
+- search
+- sea-shell
+- seashore
+- seasick
+- seasickness
+- seaside
+- season
+- seasoning
+- seat
+- seatbelt
+- seaward
+- seaweed
+- secession
+- seclude
+- secluded
+- second 1
+- second 2
+- secondary
+- secondhand
+- second-rate
+- secrecy
+- secret
+- secretarial
+- secretariat
+- secretary
+- secrete
+- secretive
+- sect
+- sectarian
+- section
+- sector
+- secular
+- secure
+- security
+- sedan
+- sedative
+- sediment

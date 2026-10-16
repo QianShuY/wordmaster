@@ -1,0 +1,113 @@
+# tem-094 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：165
+- 输入 SHA256：587bb28e75dd180bbb65b019c216889af46223cea4598c747e336a67f7f9f0f6
+
+## 待主代理复核
+
+Slander 已实际访问 Oxford Learner’s Dictionaries 并核对名词义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需关注 shit 的粗俗语域、slur 的贬损义、trifle 词义错配等疑点。
+
+- slanderous
+- slang
+- slangy
+- slant
+- slap
+- slash
+- slat
+- slate
+- slaughter
+- slave
+- slavery
+- slavish
+- slay
+- sleazy
+- sledge
+- sleek
+- sleep
+- sleeper
+- sleepless
+- sleepy
+- sleet
+- sleeve
+- sleigh
+- slender
+- slice
+- slick
+- slide
+- slight
+- slightly
+- slim
+- slime
+- slimnastics
+- slimy
+- sling
+- slink
+- slip 1
+- slip 2
+- slipper
+- slippery
+- slit
+- slither
+- sliver
+- slogan
+- slop
+- slope
+- slot
+- slouch
+- slow
+- slowly
+- slug 1
+- slug 2
+- sluggish
+- slum
+- slumber
+- slump
+- slur
+- slurry
+- sly
+- smack
+- small
+- smart
+- smash
+- smear
+- smell
+- smelly
+- smile
+- smith
+- smog
+- smoke
+- smokeless
+- smoker
+- smokestack
+- smoking
+- smoky
+- smooth
+- smother
+- smudge
+- smug
+- smuggle
+- snack
+- snag
+- snail
+- snake
+- snap
+- snapshot
+- snare
+- snarl
+- snatch
+- sneakily
+- sneer
+- sneeze
+- snicker
+- sniff
+- sniffle
+- snigger
+- snipe
+- sniper
+- snivel
+- snob

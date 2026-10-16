@@ -1,0 +1,113 @@
+# tem-078 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：149
+- 输入 SHA256：4936cbd60c203712170108bc5ceb5327d4d63ff4fdfe01750fb467dbe556d925
+
+## 待主代理复核
+
+Prohibit 已访问 Oxford Learner’s Dictionaries 并核对动词义项与英式 IPA；其第二个动词义需确认源中文涵盖情况。其余词条无本轮可用的原始词典证据，音标留空。另需复核 prostitute 的语域和 psycho 的污名化标签，以及多义多词性词条完整性。
+
+- progress
+- progressive
+- prohibition
+- project
+- projection
+- projector
+- proletarian
+- proliferation
+- prolific
+- prologue
+- prolong
+- prominence
+- prominent
+- promising
+- promote
+- promotion
+- prompt 1
+- prompt 2
+- prone
+- pronoun
+- pronounce
+- pronunciation
+- proof 1
+- proof 2
+- proofread
+- prop
+- propaganda
+- propagate
+- propel
+- proper
+- property
+- prophecy
+- prophesy
+- prophet
+- proponent
+- proportion
+- proportional
+- proposal
+- propose
+- proposition
+- proprietor
+- prose
+- prosecute
+- prosecution
+- prospect
+- prospective
+- prosperity
+- prosperous
+- prostate
+- prostitute
+- prostitution
+- protagonist
+- protection
+- protective
+- protein
+- protest
+- Protestant
+- protocol
+- prototype
+- protracted
+- protrude
+- proud
+- prove
+- proverb
+- provide
+- provided
+- provident
+- province
+- provincial
+- provision
+- provisional
+- provocation
+- provocative
+- provoke
+- prowess
+- proximity
+- prudent
+- prune
+- pseudo
+- psychiatrist
+- psychiatry
+- psycho
+- psychoanalyst
+- psychological
+- psychologist
+- psychology
+- psychotherapist
+- psychotherapy
+- pub
+- puberty
+- public
+- publication
+- publish
+- publisher
+- pudding
+- puff
+- pull
+- pullover
+- pulp

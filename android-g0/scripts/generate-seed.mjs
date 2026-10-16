@@ -128,7 +128,7 @@ function exportFreshWebSeed(tempDbPath) {
   try {
     console.log = () => {};
     db.exec('BEGIN IMMEDIATE');
-    seed();
+    seed({ legacyAndroid: true });
     db.exec('COMMIT');
   } catch (error) {
     try { db.exec('ROLLBACK'); } catch {}

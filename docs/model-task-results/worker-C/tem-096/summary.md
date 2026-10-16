@@ -1,0 +1,113 @@
+# tem-096 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：153
+- 输入 SHA256：6128f530455edea5da9ff6e2ab7435964de8e27f8d10dc522d4f0ed9ef08797a
+
+## 待主代理复核
+
+Souvenir 已访问 Oxford Learner’s Dictionaries 并核对名词义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需复核 soda/sodium 源中文错字、sophist/sophisticate 义项及 spinster 和 spokesman 的现代用语。
+
+- southeast
+- southerly
+- southern
+- southward
+- southwest
+- sovereign
+- sovereignty
+- Soviet
+- sow 1
+- sow 2
+- spa
+- space
+- spacecraft
+- spaceship
+- space shuttle
+- spacious
+- spade
+- Spain
+- span
+- Spaniard
+- spanner
+- spar 1
+- spar 2
+- spare
+- sparingly
+- spark
+- sparkle
+- sparrow
+- sparse
+- spasm
+- spasmodic
+- spate
+- spatial
+- spatter
+- spawn
+- speak
+- speaker
+- spear
+- spearhead
+- special
+- specialist
+- specialize
+- specially
+- species
+- specific
+- specify
+- specimen
+- speck
+- speckle
+- spectacle
+- spectacular
+- spectator
+- spectre
+- spectrum
+- speculate
+- speculative
+- speculatively
+- speculator
+- speech
+- speed
+- speedometer
+- speedway
+- spell 1
+- spell 2
+- spelling
+- spend
+- sperm
+- spew
+- sphere
+- spice
+- spiced
+- spicy
+- spider
+- spike
+- spill
+- spin
+- spinach
+- spindle
+- spine
+- spinner
+- spinster
+- spiral
+- spire
+- spirit
+- spirited
+- spiritual
+- spirituality
+- spit
+- spite
+- spiteful
+- splash
+- spleen
+- splendid
+- splinter
+- split
+- splutter
+- spoil
+- spoken
+- spokesman

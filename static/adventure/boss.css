@@ -1,0 +1,172 @@
+:root{color-scheme:light;--paper:#f4efe3;--ink:#263c3c;--muted:#586864;--gold:#e1bd77;--serif:'Noto Serif SC','Source Han Serif SC','Songti SC','SimSun',serif;--sans:'Microsoft YaHei','PingFang SC',sans-serif}
+.battle-entry{padding:7px 13px;border-bottom:1px solid #927244;color:#77582d;font-size:13px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 var(--sans);background-image:radial-gradient(#716a5312 .7px,transparent .7px);background-size:5px 5px}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:3px solid #b35d3e;outline-offset:5px}button:disabled{cursor:default}button{touch-action:manipulation}.folio-header{height:82px;max-width:1380px;margin:auto;padding:0 38px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #253b3b26}.folio-header>a:first-child{font-size:13px}.wordmark{font:27px var(--serif);letter-spacing:3px}.wordmark span{font:12px var(--sans);letter-spacing:2px;margin-left:14px}.edition{font-size:12px;letter-spacing:2px;color:var(--muted)}main{max-width:1380px;margin:auto;padding:0 38px}.chapter-heading{display:flex;justify-content:space-between;align-items:center;margin:20px 0 13px;font-size:12px;letter-spacing:2px;color:var(--muted)}.chapter-heading p{margin:0}.chapter-heading>span{letter-spacing:0}.encounter{position:relative;height:590px;isolation:isolate;overflow:hidden;background:#203a3e;color:#f9f1da;border:1px solid #223e3a;box-shadow:0 18px 35px #1e303123}.scene-backdrop,.scene-vignette,.impact-flash{position:absolute;inset:0;pointer-events:none}.scene-backdrop{z-index:-5;background:url('assets/mist-bridge-v1.webp') center 53%/cover no-repeat;filter:saturate(.73)}.scene-vignette{z-index:-4;background:linear-gradient(90deg,#0e282ded 0%,#142a30bf 30%,#132a2f14 65%),linear-gradient(0deg,#102728cc,transparent 28%,#1a313211 85%,#0c282a66)}.guardian-position{position:absolute;right:7%;bottom:2%;height:96%;width:43%;pointer-events:none;z-index:-2}.guardian-motion{height:100%;width:100%;position:relative;transform-origin:50% 90%;animation:guardian-breathe 5.4s ease-in-out infinite}.guardian{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 15px 13px #0c2024a8)}.lantern-glow{position:absolute;left:17%;top:14%;width:15%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ffe7ab99,#f1ab3638 38%,transparent 72%);mix-blend-mode:screen;animation:lantern 3s ease-in-out infinite}.shield-aura{position:absolute;right:4%;top:38%;height:31%;width:38%;border-radius:50%;border:1px solid #bdd9ca45;box-shadow:0 0 26px #a7dfdb29,inset 0 0 20px #b7d6c619;transform:rotate(-15deg);animation:shield 4s ease-in-out infinite}.mist{position:absolute;left:-30%;width:160%;height:48%;bottom:-20%;pointer-events:none;filter:blur(20px);background:radial-gradient(ellipse at 26% 72%,#d1e0d24a,transparent 43%),radial-gradient(ellipse at 70% 68%,#e4e6ce61,transparent 42%);animation:mist 18s ease-in-out infinite alternate}.mist-back{z-index:-3;bottom:12%;opacity:.5;animation-direction:alternate-reverse}.mist-front{z-index:1;opacity:.55}.encounter-copy{position:absolute;left:5%;top:12%;width:41%;z-index:2}.eyebrow{font-size:11px;letter-spacing:2.4px;margin:0 0 15px}.encounter-copy .eyebrow{color:#cfbf91}.encounter h1{font:clamp(44px,5vw,70px)/1.2 var(--serif);letter-spacing:8px;margin:0 0 23px;text-shadow:0 2px 12px #0d2026}.lore{font:17px/1.95 var(--serif);color:#e0dfcc;margin:0 0 35px}.intent{display:flex;gap:13px;align-items:center;padding:17px 0;border-top:1px solid #dac9a24d;max-width:340px}.intent-dot{width:8px;height:8px;background:#d4b977;transform:rotate(45deg);box-shadow:0 0 12px #edb46077}.intent small{display:block;font-size:11px;letter-spacing:2px;color:#b9c6bd}.intent strong{font:19px/1.8 var(--serif);letter-spacing:1px}.intent-detail{font-size:12px;line-height:1.9;max-width:320px;color:#cad4c9;min-height:48px;margin:0}.state-label{margin-top:24px;display:flex;align-items:center;gap:20px;font:11px var(--sans);letter-spacing:2px;color:#d0c8ab}.scene-seal{display:inline-flex;justify-content:center;align-items:center;min-width:41px;height:41px;border:3px double #d8b66b;color:#ecd49b;transform:rotate(-8deg);font:19px var(--serif)}.scene-caption{position:absolute;bottom:22px;left:5%;right:3%;display:flex;align-items:center;justify-content:space-between;z-index:4}.scene-caption>span{font:12px var(--serif);letter-spacing:3px;color:#c0cebd}.scene-caption button{min-height:44px;border:1px solid #e1dcc454;background:#182e34ba;color:#eee9d8;padding:8px 15px;font-size:12px;backdrop-filter:blur(5px)}.pages{position:absolute;inset:0;pointer-events:none;z-index:1}.pages i{position:absolute;right:20%;bottom:16%;width:11px;height:16px;background:#eeddb58c;clip-path:polygon(0 0,100% 15%,86% 100%,0 88%);animation:page-drift 12s ease-in-out infinite;opacity:0}.pages i:nth-child(2){right:40%;bottom:8%;animation-delay:-2.7s;width:8px}.pages i:nth-child(3){right:12%;bottom:5%;animation-delay:-5s}.pages i:nth-child(4){right:55%;bottom:30%;animation-delay:-7s;width:7px}.pages i:nth-child(5){right:33%;bottom:22%;animation-delay:-9s}
+.direction-desk{padding:33px 0 22px}.desk-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:12px}.desk-heading .eyebrow{color:#8d694a;margin:0 0 7px}.desk-heading h2{font:26px/1.6 var(--serif);margin:0}.reset{border:0;background:transparent;color:var(--muted);min-height:44px;padding:8px 0;white-space:nowrap;font-size:12px}.motion-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.motion-actions button{position:relative;text-align:left;border:1px solid #a9ab977d;background:#fcf9f0;padding:19px 20px;min-height:125px;color:var(--ink);transition:background .2s,border-color .2s,transform .2s}.motion-actions button:hover{background:#e8eee4;border-color:#4e7873;transform:translateY(-2px)}.motion-actions button[aria-pressed=true]{border-color:#315c57;background:#dde6dc;box-shadow:inset 0 -3px #315c57}.motion-actions span,.motion-actions small{display:block;font-size:11px;color:var(--muted);line-height:1.8}.motion-actions span{letter-spacing:1px;margin-bottom:8px}.motion-actions strong{display:block;font:21px/1.5 var(--serif);margin-bottom:7px}.motion-status{font-size:12px;color:var(--muted);margin:17px 0 0;min-height:22px}.field-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;border-top:1px solid #253b3b26;padding:30px 0 40px}.field-notes article>span{font-size:11px;letter-spacing:2px;color:#856643}.field-notes h3{font:20px/1.6 var(--serif);margin:12px 0}.field-notes p{font-size:13px;color:var(--muted);margin:0;line-height:1.9}footer{border-top:1px solid #253b3b26;padding:20px 0 32px;font-size:11px;letter-spacing:1px;color:var(--muted);display:flex;justify-content:space-between}.asset-error{position:absolute;inset:45% 5% auto;z-index:9;background:#f7ead7;color:#702c20;padding:20px;text-align:center}.asset-error[hidden]{display:none}
+.spell-ring{position:absolute;right:15%;top:35%;width:25%;aspect-ratio:1;border:2px solid #e8e5af;border-radius:50%;opacity:0;pointer-events:none;z-index:3;box-shadow:0 0 30px #bde4c277,inset 0 0 25px #e4dfb344}.spell-stroke{position:absolute;left:30%;top:55%;width:47%;height:3px;transform:rotate(-12deg) scaleX(0);transform-origin:left;background:#fff0c9;box-shadow:0 0 18px 8px #bde0ccaa;opacity:0;z-index:3;pointer-events:none}.shield-shards{position:absolute;inset:0;z-index:3;pointer-events:none}.shield-shards i{position:absolute;right:20%;top:52%;width:27px;height:33px;background:linear-gradient(145deg,#d0d5bd,#3a666c);clip-path:polygon(20% 0,100% 30%,75% 100%,0 65%);opacity:0;--x:80px;--y:60px}.shield-shards i:nth-child(2){--x:-90px;--y:-80px}.shield-shards i:nth-child(3){--x:120px;--y:-90px}.shield-shards i:nth-child(4){--x:-65px;--y:110px}.shield-shards i:nth-child(5){--x:170px;--y:20px}.shield-shards i:nth-child(6){--x:20px;--y:150px}.impact-flash{opacity:0;z-index:3;background:radial-gradient(ellipse at 72% 48%,#f5e3bc55,transparent 65%)}
+[data-state=charge] .guardian-motion{animation:charge-pose 3.2s ease-in-out both}[data-state=charge] .lantern-glow{animation:charge-glow 3.2s ease-in-out both}[data-state=charge] .intent-dot{background:#ffcf76;box-shadow:0 0 16px 4px #f2b54399}
+[data-state=attack] .guardian-motion{animation:warden-attack 1s ease-in-out both}[data-state=attack] .impact-flash{animation:impact 1s ease-out both}[data-state=attack] .mist-front{animation:mist-strike 1s ease-out both}
+[data-state=hit] .guardian-motion{animation:warden-hit 1.1s ease-out both}[data-state=hit] .spell-stroke{animation:spell 1.1s ease-out both}[data-state=hit] .spell-ring{animation:ripple 1.1s ease-out both}
+[data-state=break] .guardian-motion{animation:warden-hit 1.5s ease-out both}[data-state=break] .shield-aura{animation:shield-break 1.5s ease-out both}[data-state=break] .shield-shards i{animation:shard 1.5s ease-out both}[data-state=break] .spell-ring{animation:ripple 1.5s ease-out both}[data-state=break] .spell-stroke{animation:spell 1s ease-out both}
+[data-state=exposed] .guardian-motion{animation:exposed 5s ease-in-out infinite}[data-state=exposed] .shield-aura{opacity:0}[data-state=exposed] .lantern-glow{opacity:.25}
+[data-state=vanish] .guardian-motion{animation:vanish 2.4s ease-in both}[data-state=vanish] .pages i{animation:page-victory 2.4s ease-out both}[data-state=vanish] .mist-front{animation:mist-clear 2.4s ease-out both}[data-state=cleared] .guardian-position{opacity:0}[data-state=cleared] .mist{opacity:.1}[data-state=cleared] .scene-vignette{background:linear-gradient(90deg,#102a2dd9,#182e315c 48%,transparent)}
+.is-paused *,.is-paused *::before,.is-paused *::after{animation-play-state:paused!important}.reduced-motion *{animation:none!important;transition:none!important}.reduced-motion[data-state=charge] .lantern-glow{opacity:1;transform:scale(2)}.reduced-motion[data-state=break] .shield-aura,.reduced-motion[data-state=exposed] .shield-aura{opacity:0}.reduced-motion[data-state=hit] .spell-ring{opacity:.5}.reduced-motion[data-state=vanish] .guardian-position{opacity:.2}
+@keyframes guardian-breathe{0%,100%{transform:translateY(0) rotate(-.3deg)}50%{transform:translateY(-6px) rotate(.3deg)}}@keyframes lantern{0%,100%{opacity:.5;transform:scale(.9)}50%{opacity:1;transform:scale(1.15)}}@keyframes shield{50%{opacity:.35}}@keyframes mist{from{transform:translateX(-5%)}to{transform:translateX(6%)}}@keyframes page-drift{0%{transform:translate(0,0) rotate(0);opacity:0}20%,70%{opacity:.6}100%{transform:translate(-100px,-140px) rotate(145deg);opacity:0}}
+@keyframes charge-pose{0%{transform:translateY(0)}100%{transform:translate(-8px,-7px) rotate(-2deg)}}@keyframes charge-glow{0%{transform:scale(1);opacity:.5}100%{transform:scale(3.6);opacity:1;filter:brightness(1.7)}}@keyframes warden-attack{0%,100%{transform:translateX(0)}35%{transform:translate(-38px,4px) rotate(-4deg)}60%{transform:translate(-12px,0)}}@keyframes impact{20%{opacity:0}40%{opacity:1}100%{opacity:0}}@keyframes mist-strike{0%{transform:translateX(0);opacity:.4}60%{transform:translateX(-15%);opacity:.9}100%{transform:translateX(-25%);opacity:.4}}
+@keyframes warden-hit{0%,100%{transform:translateX(0);filter:brightness(1)}20%{transform:translate(12px,-3px) rotate(1deg);filter:brightness(1.45)}35%{transform:translate(-5px,0)}50%{transform:translate(5px,0)}}@keyframes spell{0%{transform:rotate(-12deg) scaleX(0);opacity:0}20%{opacity:1}40%{transform:rotate(-12deg) scaleX(1);opacity:1}100%{transform:rotate(-12deg) scaleX(1);opacity:0}}@keyframes ripple{0%{transform:scale(.3);opacity:0}30%{opacity:.9}100%{transform:scale(1.5);opacity:0}}@keyframes shield-break{0%{opacity:1;transform:scale(1) rotate(-15deg)}45%{opacity:1;transform:scale(1.3) rotate(-15deg);filter:brightness(2)}100%{opacity:0;transform:scale(1.6) rotate(-15deg)}}@keyframes shard{0%,15%{opacity:0;transform:translate(0,0)}25%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(120deg)}}@keyframes exposed{0%,100%{transform:rotate(2deg) translateY(3px)}50%{transform:rotate(2deg) translateY(0)}}@keyframes vanish{0%{opacity:1;filter:blur(0);transform:translateY(0)}40%{opacity:.6;filter:blur(1px)}100%{opacity:0;filter:blur(8px);transform:translateY(-25px) scale(.98)}}@keyframes page-victory{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}100%{opacity:0;transform:translate(-180px,-230px) rotate(210deg)}}@keyframes mist-clear{to{opacity:.08;transform:translateX(-8%)}}
+@media(min-width:1600px){.encounter{height:650px}}@media(max-width:1000px){.encounter{height:540px}.encounter-copy{width:46%;top:12%}.guardian-position{right:-2%;width:51%;height:88%}.encounter h1{font-size:49px}.lore{font-size:15px}.motion-actions{gap:9px}.motion-actions button{padding:16px 13px}.motion-actions small{font-size:10px}.field-notes{gap:20px}}
+@media(max-width:680px){.folio-header{height:65px;padding:0 18px}.folio-header>a:first-child{font-size:11px}.wordmark{font-size:22px;letter-spacing:1px}.wordmark span{display:none}.edition{font-size:10px;letter-spacing:0}main{padding:0 16px}.chapter-heading{font-size:11px;letter-spacing:1px;margin-top:18px}.chapter-heading>span{font-size:10px}.encounter{height:650px}.scene-backdrop{background-position:58% center}.scene-vignette{background:linear-gradient(180deg,#10282ee8,#10282ea8 30%,transparent 58%,#10282ec7)}.encounter-copy{left:7%;top:5%;width:86%}.encounter-copy .eyebrow{font-size:9px;letter-spacing:1.4px;margin-bottom:10px}.encounter h1{font-size:40px;letter-spacing:6px;margin-bottom:13px}.lore{font-size:13px;line-height:1.8;margin-bottom:17px}.intent{padding:10px 0;gap:10px;max-width:260px}.intent strong{font-size:16px}.intent small{font-size:10px}.intent-detail{font-size:11px;max-width:250px;min-height:40px}.state-label{position:absolute;right:0;top:140px;margin:0;flex-direction:column-reverse;gap:10px;font-size:9px;letter-spacing:0}.scene-seal{min-width:33px;height:33px;font-size:16px}.guardian-position{height:55%;width:90%;bottom:5%;right:-6%}.scene-caption{bottom:14px;left:7%;right:5%}.scene-caption>span{font-size:10px;letter-spacing:1px}.scene-caption button{font-size:10px;padding:7px 10px}.spell-ring{width:45%;right:8%;top:60%}.spell-stroke{width:65%;left:13%;top:72%}.shield-shards i{right:19%;top:75%}.mist-back{bottom:0}.desk-heading{align-items:flex-start}.desk-heading h2{font-size:20px;max-width:230px;line-height:1.6}.desk-heading .eyebrow{font-size:10px}.reset{font-size:11px;padding-top:17px}.direction-desk{padding-top:24px}.motion-actions{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.motion-actions button{min-height:126px;padding:13px 12px}.motion-actions strong{font-size:19px}.motion-actions small{font-size:10px}.motion-actions span{font-size:9px;letter-spacing:.5px}.motion-status{font-size:11px;line-height:1.8}.field-notes{grid-template-columns:1fr;gap:24px;padding-top:24px}.field-notes h3{font-size:19px;margin:8px 0}.field-notes p{font-size:12px}.field-notes article>span{font-size:10px}footer{font-size:10px;gap:10px}footer span{max-width:130px;text-align:right}}
+.guardian-position{width:auto;aspect-ratio:2/3;right:14%}
+@media(max-width:1000px){.guardian-position{width:auto;right:4%}}
+@media(max-width:680px){.guardian-position{width:auto;right:7%}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Three attack silhouettes use independent generated pose images; effects stay separate. */
+.guardian-pose{position:absolute;inset:0;background:url('assets/warden-lantern-v1.webp') center/contain no-repeat;opacity:0;filter:drop-shadow(0 12px 12px #071b26aa)}
+:is([data-state=charge],[data-state=attack],[data-state=sealCharge],[data-state=sealSlam],[data-state=sealed],[data-state=stormCharge],[data-state=storm]) .guardian{opacity:0}
+:is([data-state=charge],[data-state=attack],[data-state=sealCharge],[data-state=sealSlam],[data-state=sealed],[data-state=stormCharge],[data-state=storm]) .guardian-pose{opacity:1}
+:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .guardian-pose{background-image:url('assets/warden-shield-v1.webp')}
+:is([data-state=stormCharge],[data-state=storm]) .guardian-pose{background-image:url('assets/warden-storm-v1.webp')}
+:is([data-state=charge],[data-state=attack],[data-state=sealCharge],[data-state=sealSlam],[data-state=sealed],[data-state=stormCharge],[data-state=storm]) .shield-aura{opacity:0}
+[data-state=charge] .guardian-motion{animation:lift-lantern 3.2s ease-in-out both}
+[data-state=charge] .lantern-glow{left:14%;top:9%;animation:charge-glow 3.2s ease-in-out both}
+[data-state=attack] .guardian-motion{animation:lantern-swing 1s cubic-bezier(.15,.8,.2,1) both}
+.sweep-wave{position:absolute;right:20%;top:28%;width:50%;height:55%;border-radius:50%;border:9px solid transparent;border-left-color:#ffe4a1;border-bottom-color:#ffcc6b77;opacity:0;z-index:1;pointer-events:none;filter:drop-shadow(0 0 15px #f6d28c);transform:rotate(-20deg) scale(.2)}
+[data-state=attack] .sweep-wave{animation:fan-sweep 1s ease-out both}
+.ground-seal{position:absolute;right:10%;bottom:8%;width:41%;height:19%;border:3px double #b8e2ce;border-radius:50%;opacity:0;z-index:1;pointer-events:none;box-shadow:0 0 30px #5bd8bd55,inset 0 0 30px #9bdfbd44}
+.ground-seal i{position:absolute;inset:15%;border:1px dashed #d4e4a9;border-radius:50%}.ground-seal i:nth-child(2){inset:30%;border-radius:0;transform:rotate(45deg)}.ground-seal i:nth-child(3){inset:-25%;border:2px solid #9de7ce55}
+[data-state=sealCharge] .guardian-motion{animation:shield-lift 2.2s ease-in both}
+[data-state=sealCharge] .ground-seal{animation:seal-anticipation 2.2s ease-in both}
+[data-state=sealSlam] .guardian-motion{animation:shield-slam 1.2s ease-out both}
+[data-state=sealSlam] .ground-seal{animation:seal-expand 1.2s ease-out both}
+[data-state=sealSlam] .shield-shards i{animation:shard 1.2s ease-out both;top:82%}
+[data-state=sealed] .ground-seal{opacity:.8;animation:seal-pulse 3s ease-in-out infinite}
+[data-state=sealed] .guardian-motion{animation:guardian-breathe 6s ease-in-out infinite}
+.storm-vortex{position:absolute;right:5%;top:17%;width:51%;height:72%;opacity:0;z-index:1;pointer-events:none;transform:rotate(-15deg)}
+.storm-vortex i{position:absolute;inset:15% 0;border:3px solid transparent;border-top-color:#dfebd888;border-bottom-color:#abcabc99;border-radius:50%;filter:drop-shadow(0 0 10px #b5dcca77)}.storm-vortex i:nth-child(2){inset:0 15%;transform:rotate(65deg)}.storm-vortex i:nth-child(3){inset:25% -10%;transform:rotate(-30deg)}
+[data-state=stormCharge] .guardian-motion{animation:storm-rise 2.6s ease-in-out both}
+[data-state=stormCharge] .storm-vortex{animation:vortex-gather 2.6s ease-in both}
+[data-state=storm] .guardian-motion{animation:storm-hover 1.2s ease-in-out infinite}
+[data-state=storm] .storm-vortex{opacity:1;animation:vortex-spin 1.4s linear infinite}
+[data-state=storm] .storm-vortex i{animation:vortex-spin 1.8s linear infinite reverse}
+[data-state=storm] .mist-front{animation:storm-mist 1.8s ease-in-out infinite alternate;opacity:.85}
+:is([data-state=stormCharge],[data-state=storm]) .pages i{width:18px;height:27px;background:#f7ebc9;animation:storm-page 1.5s linear infinite;opacity:.9}
+:is([data-state=stormCharge],[data-state=storm]) .pages i:nth-child(2){animation-delay:-.3s}:is([data-state=stormCharge],[data-state=storm]) .pages i:nth-child(3){animation-delay:-.6s}:is([data-state=stormCharge],[data-state=storm]) .pages i:nth-child(4){animation-delay:-.9s}:is([data-state=stormCharge],[data-state=storm]) .pages i:nth-child(5){animation-delay:-1.2s}
+:is([data-state=attack],[data-state=sealSlam]) .scene-backdrop{animation:bridge-impact .5s .18s ease-out both}
+[data-state=sealSlam] .impact-flash{animation:impact 1.2s ease-out both}
+.motion-actions{grid-template-columns:repeat(3,minmax(0,1fr))}
+@keyframes lift-lantern{0%{transform:translate(0,0) rotate(0)}80%,100%{transform:translate(10px,-13px) rotate(5deg)}}
+@keyframes lantern-swing{0%{transform:translate(10px,-13px) rotate(5deg)}25%{transform:translate(-40px,4px) rotate(-12deg)}35%{transform:translate(-40px,4px) rotate(-12deg)}65%{transform:translate(-18px,0) rotate(-5deg)}100%{transform:none}}
+@keyframes fan-sweep{0%{opacity:0;transform:translate(30px,0) rotate(-65deg) scale(.2)}20%{opacity:1}65%{opacity:.9;transform:translate(-160px,30px) rotate(15deg) scale(1.8)}100%{opacity:0;transform:translate(-240px,70px) rotate(35deg) scale(2.4)}}
+@keyframes shield-lift{0%{transform:translateY(0)}100%{transform:translateY(-28px) rotate(3deg)}}
+@keyframes shield-slam{0%{transform:translateY(-28px) rotate(3deg)}20%,30%{transform:translateY(14px) scaleY(.96)}55%{transform:translateY(-5px)}100%{transform:none}}
+@keyframes seal-anticipation{from{opacity:0;transform:scale(.4)}to{opacity:.6;transform:scale(.8)}}
+@keyframes seal-expand{0%{opacity:.5;transform:scale(.8)}25%{opacity:1;transform:scale(1.2)}100%{opacity:.8;transform:scale(1)}}
+@keyframes seal-pulse{50%{opacity:.5;filter:brightness(1.4)}}
+@keyframes storm-rise{from{transform:translateY(0)}to{transform:translateY(-22px) scale(1.05)}}
+@keyframes storm-hover{0%,100%{transform:translateY(-22px) rotate(-1deg) scale(1.05)}50%{transform:translateY(-30px) rotate(1deg) scale(1.05)}}
+@keyframes vortex-gather{from{opacity:0;transform:scale(.4) rotate(-100deg)}to{opacity:.7;transform:scale(1) rotate(0)}}
+@keyframes vortex-spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@keyframes storm-page{0%{transform:translate(80px,40px) rotate(0);opacity:0}20%{opacity:1}50%{transform:translate(-130px,-200px) rotate(180deg);opacity:1}100%{transform:translate(100px,-330px) rotate(360deg);opacity:0}}
+@keyframes storm-mist{from{transform:translateX(-10%) rotate(-4deg)}to{transform:translateX(10%) rotate(4deg)}}
+@keyframes bridge-impact{0%,100%{transform:translate(0)}20%{transform:translate(-5px,3px)}40%{transform:translate(4px,-2px)}60%{transform:translate(-3px,2px)}}
+.reduced-motion .guardian-motion,.reduced-motion .scene-backdrop,.reduced-motion .pages i{animation:none!important}
+.reduced-motion[data-state=attack] .sweep-wave{opacity:.6;transform:scale(1)}
+.reduced-motion:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .ground-seal{opacity:.7}
+.reduced-motion:is([data-state=stormCharge],[data-state=storm]) .storm-vortex{opacity:.6}
+@media(max-width:680px){.motion-actions{grid-template-columns:repeat(2,minmax(0,1fr))}.sweep-wave{top:57%;right:5%;width:70%;height:25%}.ground-seal{right:7%;bottom:6%;width:74%;height:13%}.storm-vortex{right:0;top:50%;width:85%;height:40%}}
+/* One actor container for every state; raised weapons do not shrink the body. */
+.guardian-position{height:78%}
+.guardian-pose{transform-origin:50% 98%}
+:is([data-state=charge],[data-state=attack]) .guardian-pose{transform:translateY(1.5%) scale(1.18)}
+:is([data-state=stormCharge],[data-state=storm]) .guardian-pose{transform:scale(1.2)}
+:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .guardian-pose{transform:translateY(-1%) scale(1.05)}
+@media(max-width:1000px){.guardian-position{height:78%}}
+@media(max-width:680px){.guardian-position{height:50%}}
+.encounter{overflow:clip}
+/* Shield study v2: physical contact, restrained ink, no geometric ground light. */
+.ground-seal{display:none!important}
+.ground-ink{position:absolute;right:2%;bottom:-5%;width:58%;height:39%;z-index:1;pointer-events:none;opacity:0;transform-origin:64% 57%}
+.ground-ink>img{width:100%;height:100%;object-fit:contain;filter:saturate(.35) contrast(1.12)}
+.stone-dust{position:absolute;inset:30% 15% 10%;opacity:0;background:radial-gradient(ellipse at 65% 60%,#c6bba469,transparent 55%),radial-gradient(ellipse at 35% 70%,#b7b2984a,transparent 50%);filter:blur(8px)}
+[data-state=sealCharge] .guardian-motion{animation:shield-prepare-v2 2.2s cubic-bezier(.35,0,.5,1) both}
+[data-state=sealCharge] .guardian{animation:shield-original-out 2.2s linear both}
+[data-state=sealCharge] .guardian-pose{animation:shield-pose-in 2.2s linear both}
+:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .lantern-glow{opacity:.22;animation:none}
+:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .pages{opacity:.22}
+[data-state=sealSlam] .guardian-motion{animation:shield-weight-v2 1.2s linear both}
+[data-state=sealSlam] .impact-flash,[data-state=sealSlam] .shield-shards{display:none}
+[data-state=sealSlam] .scene-backdrop{animation:contact-shudder-v2 1.2s linear both}
+[data-state=sealSlam] .ground-ink{animation:ink-contact-v2 1.2s linear both}
+[data-state=sealSlam] .stone-dust{animation:dust-contact-v2 1.2s ease-out both}
+[data-state=sealed] .guardian-motion{animation:none;transform:translateY(6px) rotate(-1deg) scaleY(.99)}
+[data-state=sealed] .ground-ink{opacity:.72;transform:scale(1);clip-path:inset(0)}
+[data-state=break] .ground-ink{animation:ink-release-v2 1.5s ease-out both}
+@keyframes shield-original-out{0%,7%{opacity:1}23%,100%{opacity:0}}
+@keyframes shield-pose-in{0%,7%{opacity:0}23%,100%{opacity:1}}
+@keyframes shield-prepare-v2{0%{transform:translateY(0) rotate(0)}25%{transform:translate(-3px,5px) rotate(-1deg)}70%{transform:translate(-5px,-12px) rotate(2deg)}90%,100%{transform:translate(-6px,-22px) rotate(3deg)}}
+@keyframes shield-weight-v2{0%{transform:translate(-6px,-22px) rotate(3deg)}18%{transform:translate(-2px,-8px) rotate(1deg)}26%,38%{transform:translate(0,13px) rotate(-1.5deg) scaleY(.975)}55%{transform:translate(0,3px) rotate(-.6deg) scaleY(.995)}76%,100%{transform:translateY(6px) rotate(-1deg) scaleY(.99)}}
+@keyframes contact-shudder-v2{0%,25%,42%,100%{transform:none}27%{transform:translateY(3px)}31%{transform:translate(-2px,-1px)}36%{transform:translate(1px,1px)}}
+@keyframes ink-contact-v2{0%,25%{opacity:0;transform:scale(.65,.7);clip-path:inset(0 36% 0 48%)}27%,38%{opacity:.9;transform:scale(.7,.8);clip-path:inset(0 25% 0 35%)}65%{opacity:.85;transform:scale(.94,1);clip-path:inset(0 4% 0 8%)}100%{opacity:.72;transform:scale(1);clip-path:inset(0)}}
+@keyframes dust-contact-v2{0%,26%{opacity:0;transform:translateY(0) scale(.6)}40%{opacity:.85;transform:translateY(-5px) scale(.9)}75%{opacity:.3;transform:translate(-8px,-14px) scale(1.3)}100%{opacity:0;transform:translate(-14px,-22px) scale(1.5)}}
+@keyframes ink-release-v2{from{opacity:.72;transform:scale(1)}to{opacity:0;transform:scale(1.02)}}
+.reduced-motion:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .guardian{animation:none!important;opacity:0}
+.reduced-motion:is([data-state=sealCharge],[data-state=sealSlam],[data-state=sealed]) .guardian-pose{animation:none!important;opacity:1}
+.reduced-motion:is([data-state=sealSlam],[data-state=sealed]) .ground-ink{opacity:.72;clip-path:inset(0);transform:none}
+@media(max-width:680px){.ground-ink{right:-10%;bottom:-2%;width:110%;height:27%}}
+.ground-ink{right:-1%;bottom:-10%}
+@media(max-width:680px){.ground-ink{right:-10%;bottom:-2%}}
+/* Lantern and paper studies: brush wash, torn manuscript, staged release. */
+.lantern-wash{position:absolute;inset:24% 0 4% 22%;z-index:1;pointer-events:none;opacity:0;transform-origin:75% 30%}
+.lantern-wash>img{width:100%;height:100%;object-fit:fill;mix-blend-mode:screen}
+.swept-mist{position:absolute;inset:30% 0 0;background:radial-gradient(ellipse at 40% 65%,#d8d9c54a,transparent 52%),radial-gradient(ellipse at 70% 50%,#b9c7bc40,transparent 40%);filter:blur(14px)}
+[data-state=charge] .guardian-motion{animation:lamp-draw 3.2s cubic-bezier(.4,0,.4,1) both}
+[data-state=charge] .guardian{animation:shield-original-out 3.2s linear both}
+[data-state=charge] .guardian-pose{animation:shield-pose-in 3.2s linear both}
+:is([data-state=charge],[data-state=attack]) .lantern-glow{left:20%;top:13%;width:20%;animation:lamp-warm 3.2s ease-in both}
+[data-state=charge] .lantern-wash{animation:lamp-breath 3.2s ease-in both}
+[data-state=attack] .guardian-motion{animation:lamp-cast 1s linear both}
+[data-state=attack] .guardian{animation:lamp-return 1s linear both}
+[data-state=attack] .guardian-pose{animation:lamp-pose-return 1s linear both}
+[data-state=attack] .lantern-wash{animation:brush-cast 1s cubic-bezier(.12,.6,.2,1) both}
+[data-state=attack] .swept-mist{animation:mist-part 1s ease-out both}
+[data-state=attack] .mist-front{animation:fog-open 1s ease-out both}
+[data-state=attack] .scene-backdrop{animation:none}
+[data-state=attack] .impact-flash{display:none}
+.paper-storm{position:absolute;inset:0;pointer-events:none;z-index:1;perspective:850px;overflow:clip}
+.paper-orbit{position:absolute;left:70%;top:48%;opacity:0;width:var(--size);aspect-ratio:72/98;transform-style:preserve-3d}
+.torn-page{display:block;width:100%;height:100%;background:url('assets/torn-page.svg') center/contain no-repeat;filter:drop-shadow(2px 4px 3px #071b2670);transform:rotate(var(--tilt))}
+.paper-orbit:nth-child(3n){filter:brightness(.65);z-index:-1}
+.paper-orbit:nth-child(4n){filter:brightness(1.1);z-index:2}
+:is([data-state=stormCharge],[data-state=storm]) .pages{display:none}
+[data-state=stormCharge] .guardian-motion{animation:paper-prepare 2.6s ease-in-out both}
+[data-state=stormCharge] .guardian{animation:shield-original-out 2.6s linear both}
+[data-state=stormCharge] .guardian-pose{animation:shield-pose-in 2.6s linear both}
+[data-state=stormCharge] .paper-orbit{animation:paper-gather 2.6s var(--lag) cubic-bezier(.45,0,.7,1) both}
+[data-state=storm] .guardian-motion{animation:paper-release 3.6s ease-out both}
+[data-state=storm] .guardian{animation:storm-return 3.6s linear both}
+[data-state=storm] .guardian-pose{animation:storm-pose-return 3.6s linear both}
+[data-state=storm] .paper-orbit{animation:paper-burst 3.6s var(--lag) cubic-bezier(.15,.55,.35,1) both}
+:is([data-state=stormCharge],[data-state=storm]) .torn-page{animation:paper-flutter 1.1s calc(var(--lag) * -1) ease-in-out infinite}
+[data-state=storm] .mist-front{animation:paper-wind 3.6s ease-out both;opacity:.55}
+:is([data-state=stormCharge],[data-state=storm]) .lantern-glow{animation:none;opacity:.3}
+@keyframes lamp-draw{0%{transform:none}28%{transform:translate(2px,5px) rotate(1deg)}78%,100%{transform:translate(9px,-11px) rotate(4deg)}}
+@keyframes lamp-warm{0%{opacity:.25;transform:scale(.8)}65%{opacity:.5}100%{opacity:.8;transform:scale(1.4)}}
+@keyframes lamp-breath{0%,40%{opacity:0;transform:scale(.55)}100%{opacity:.16;transform:scale(.7)}}
+@keyframes lamp-cast{0%{transform:translate(9px,-11px) rotate(4deg)}16%{transform:translate(10px,-12px) rotate(5deg)}29%,37%{transform:translate(-23px,4px) rotate(-6deg)}62%{transform:translate(-12px,2px) rotate(-2deg)}100%{transform:none}}
+@keyframes lamp-return{0%,65%{opacity:0}100%{opacity:1}}
+@keyframes lamp-pose-return{0%,65%{opacity:1}100%{opacity:0}}
+@keyframes brush-cast{0%,16%{opacity:.08;transform:translate(3%,0) rotate(-8deg) scale(.65);clip-path:inset(0 0 0 75%)}29%,37%{opacity:.85;transform:translate(-3%,2%) rotate(-2deg) scale(.95);clip-path:inset(0 0 0 30%)}70%{opacity:.65;transform:translate(-13%,5%) rotate(2deg) scale(1.13);clip-path:inset(0)}100%{opacity:0;transform:translate(-19%,7%) rotate(4deg) scale(1.2);clip-path:inset(0)}}
+@keyframes mist-part{0%,25%{transform:none;opacity:.1}65%{transform:translate(-14%,12%) scaleX(1.15);opacity:.7}100%{transform:translate(-23%,16%) scaleX(1.3);opacity:0}}
+@keyframes fog-open{0%{opacity:.55}38%,70%{opacity:.12;transform:translateX(-9%)}100%{opacity:.55;transform:translateX(-5%)}}
+@keyframes paper-prepare{0%{transform:none}35%{transform:translateY(4px) scale(.99)}85%,100%{transform:translateY(-12px) scale(1.02)}}
+@keyframes paper-release{0%{transform:translateY(-12px) scale(1.02)}8%,14%{transform:translate(0,2px) scale(1.025)}38%{transform:translate(-3px,-7px) rotate(-.6deg)}68%{transform:translate(2px,-4px) rotate(.5deg)}100%{transform:none}}
+@keyframes paper-gather{0%,10%{opacity:0;transform:translate(var(--fly),var(--fall)) rotate(-25deg) scale(.6)}30%{opacity:.5}75%{opacity:.85;transform:translate(calc(var(--x) * .8),calc(var(--y) * .8)) rotate(var(--turn)) scale(.8)}100%{opacity:.85;transform:translate(var(--x),var(--y)) rotate(var(--turn)) scale(.85)}}
+@keyframes paper-burst{0%{opacity:.85;transform:translate(var(--x),var(--y)) rotate(var(--turn)) scale(.85)}8%,14%{opacity:1;transform:translate(calc(var(--x) * 1.1),calc(var(--y) * 1.1)) rotate(var(--turn)) scale(.95)}38%{opacity:1;transform:translate(var(--fly),calc(var(--y) - 95px)) rotate(calc(var(--turn) + 100deg)) scale(1.25)}65%{opacity:.8;transform:translate(calc(var(--fly) - 45px),calc(var(--y) + 30px)) rotate(calc(var(--turn) + 190deg)) scale(1)}88%{opacity:.4;transform:translate(calc(var(--fly) - 20px),var(--fall)) rotate(calc(var(--turn) + 230deg)) scale(.75)}100%{opacity:0;transform:translate(var(--fly),calc(var(--fall) + 25px)) rotate(calc(var(--turn) + 245deg)) scale(.7)}}
+@keyframes paper-flutter{0%,100%{transform:rotate(var(--tilt)) rotateY(12deg)}50%{transform:rotate(calc(var(--tilt) + 18deg)) rotateY(145deg)}}
+@keyframes storm-return{0%,78%{opacity:0}100%{opacity:1}}
+@keyframes storm-pose-return{0%,78%{opacity:1}100%{opacity:0}}
+@keyframes paper-wind{0%{transform:translateX(-5%);opacity:.55}25%{transform:translateX(-12%);opacity:.8}70%{transform:translateX(4%);opacity:.35}100%{transform:translateX(-5%);opacity:.55}}
+.reduced-motion:is([data-state=charge],[data-state=attack],[data-state=stormCharge],[data-state=storm]) .guardian{opacity:0}
+.reduced-motion:is([data-state=charge],[data-state=attack],[data-state=stormCharge],[data-state=storm]) .guardian-pose{opacity:1}
+.reduced-motion[data-state=attack] .lantern-wash{opacity:.5;transform:none}
+.reduced-motion:is([data-state=stormCharge],[data-state=storm]) .paper-orbit{opacity:.75;transform:translate(var(--x),var(--y)) rotate(var(--tilt))}
+@media(max-width:680px){.lantern-wash{inset:58% -20% 5% 0}.paper-orbit{left:60%;top:70%;width:calc(var(--size) * .7)}.paper-storm{perspective:600px}}

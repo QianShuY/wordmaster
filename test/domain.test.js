@@ -23,7 +23,11 @@ test('plan quotas use inclusive local calendar days and retain the caps', () => 
     active: true, remaining_new: 21, daily_quota: 3, days_left: 7, target_date: '2026-10-03',
   });
   assert.equal(Domain.calculatePlan({ remainingNew: 100, dailyNew: 75 }).daily_quota, 50);
-  assert.equal(Domain.calculatePlan({ remainingNew: 1000, planActive: true, targetDate: '2026-09-26', now }).daily_quota, 200);
+  const overdue = Domain.calculatePlan({ remainingNew: 1000, planActive: true, targetDate: '2026-09-26', now });
+  assert.equal(overdue.daily_quota, 15);
+  assert.equal(overdue.status, 'overdue');
+  assert.equal(overdue.days_left, 0);
+  assert.equal(overdue.overdue_days, 1);
   assert.throws(() => Domain.inclusiveDaysUntil('2026-02-30', now), /valid YYYY-MM-DD/);
 });
 

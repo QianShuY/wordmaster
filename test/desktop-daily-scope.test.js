@@ -44,6 +44,10 @@ test('daily desk uses 13 due plus 10 planned new words, while charts have an exp
     return { status: response.status, body: await response.json() };
   };
   const daily = await get(`/api/desktop/books/${first}/today`);
+  const mistakeList=await get('/api/mistakes'),mistakeCount=await get('/api/desktop/mistakes/count');
+  assert.equal(mistakeCount.status,200);
+  assert.equal(mistakeCount.body.count,mistakeList.body.length);
+  assert.deepEqual(Object.keys(mistakeCount.body),['count']);
   assert.equal(daily.status, 200);
   assert.equal(daily.body.review.length, 13, 'review all 13, never cap at 10');
   assert.equal(daily.body.learn.length, 10, 'also include all planned 10 new words');

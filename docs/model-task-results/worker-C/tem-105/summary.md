@@ -1,0 +1,113 @@
+# tem-105 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：158
+- 输入 SHA256：51a6beb19a763055cc52a965f34ecc90fde04188914a2c1e9a699754569f3d22
+
+## 待主代理复核
+
+Terrific 已访问 Oxford Learner’s Dictionaries 并核对形容词义及英式 IPA；源条目还列“可怕的”义，需确认是否保留。其余词条无本轮可用的原始词典证据，音标留空。另需核对 tad? source defects include tarmac, etc; template current flagged: source row meaning group: maybe ta? This summary should mention terror, straightforward.
+
+- thrive
+- throat
+- throatily
+- throb
+- throne
+- throttle
+- through
+- throughout
+- throughput
+- throw
+- thrush
+- thrust
+- thud
+- thug
+- thumb
+- thumbtack
+- thump
+- thunder
+- thunderclap
+- thunderous
+- thunderstorm
+- Thursday
+- thus
+- thwart
+- thyroid
+- tiara
+- tick
+- ticket
+- tickle
+- tidal
+- tide
+- tidy
+- tie
+- tier
+- tie-up
+- tiger
+- tight
+- tighten
+- tile
+- till 1
+- till 2
+- tilt
+- timber
+- time
+- timely
+- timetable
+- timid
+- timidity
+- tin
+- tinder
+- tinge
+- tingle
+- tinker
+- tinkle
+- tinny
+- tint
+- tiny
+- tip 1
+- tip 2
+- tipper
+- tiptoe
+- tirade
+- tire
+- tired
+- tiresome
+- tissue
+- titan
+- titanic
+- title
+- to
+- toad
+- toast
+- tobacco
+- tobacconist
+- today
+- toddle
+- toe
+- toenail
+- toffee
+- together
+- toil
+- toilet
+- tolerable
+- tolerance
+- tolerant
+- tolerate
+- toleration
+- toll 1
+- toll 2
+- tom
+- tomato
+- tomb
+- tomorrow
+- ton
+- tonal
+- tone
+- tongs
+- tongue
+- tonic

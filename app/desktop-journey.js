@@ -7,7 +7,7 @@ const STAMPS = Object.freeze([
   { id: 'answers50', title: '渐入佳境', description: '累计作答 50 次', threshold: 50, field: 'attempts' },
   { id: 'streak3', title: '三日不辍', description: '连续学习 3 天', threshold: 3, field: 'longestStreak' },
   { id: 'answers200', title: '百炼成墨', description: '累计作答 200 次', threshold: 200, field: 'attempts' },
-  { id: 'master50', title: '熟能生巧', description: '掌握 50 个单词', threshold: 50, field: 'mastered' },
+  { id: 'master50', title: '熟能生巧', description: '50 个词连续答对至少 3 次', threshold: 50, field: 'mastered' },
   { id: 'cards5', title: '墨藏初成', description: '收藏 5 张卡牌', threshold: 5, field: 'cards' },
 ]);
 
@@ -58,7 +58,7 @@ function calculateLevel(rawXp) {
   return { xp, level, current: xp - start, required: next - start, nextLevelAt: next };
 }
 
-function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, ownedCards = 0, drawnToday = false, today = new Date() } = {}) {
+function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, ownedCards = 0, drawnToday = false, rewardWords = 0, today = new Date() } = {}) {
   const streak = streaks(activeDays, today);
   const counts = {
     attempts: Math.max(0, Number(totals.attempts) || 0),
@@ -85,7 +85,7 @@ function buildJourney({ totals = {}, activeDays = [], daily = [], mastered = 0, 
   return {
     level, streak: counts.current, longestStreak: counts.longestStreak,
     attempts: counts.attempts,
-    answeredToday, dailyTarget: 10, drawnToday: Boolean(drawnToday),
+    answeredToday, rewardWords: Math.max(0, Number(rewardWords) || 0), dailyTarget: 10, drawnToday: Boolean(drawnToday),
     last7, stamps,
     unlockedCount: stamps.filter(s => s.unlocked).length,
   };

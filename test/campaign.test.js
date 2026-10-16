@@ -1,0 +1,27 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{once}=require('node:events');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-campaign-'));process.env.WORDMASTER_DB_PATH=path.join(dir,'test.db');
+const {app,db}=require('../app/main');
+test('daily plan completion advances once across books; missing consolidation, due reviews and forgotten words cannot claim; Boss waits beyond thirteen study days',async t=>{
+ const server=app.listen(0,'127.0.0.1');await once(server,'listening');t.after(async()=>{server.close();await once(server,'close');db.close();fs.rmSync(dir,{recursive:true,force:true});});
+ const base=`http://127.0.0.1:${server.address().port}`,state=async()=> (await fetch(base+'/api/adventure/campaign')).json();
+ const claim=async book_id=>{const response=await fetch(base+'/api/adventure/campaign/complete-day',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({book_id})});return {status:response.status,...await response.json()};};
+ db.exec("INSERT INTO wordbooks(id,name,daily_new,plan_mode) VALUES(1,'A',1,'daily'),(2,'B',1,'daily'); INSERT INTO words(id,book_id,word,meaning,pos) VALUES(1,1,'bridge','桥梁','n.'),(2,1,'river','河流','n.'),(3,2,'stone','石头','n.')");
+ assert.equal((await state()).completed,0);assert.equal((await claim(1)).status,409);
+ db.exec("INSERT INTO progress(word_id,first_studied,next_due) VALUES(1,datetime('now','localtime'),datetime('now','localtime','+1 day'))");
+ const log=db.prepare('INSERT INTO review_log(word_id,correct,outcome,practice_mode) VALUES(?,?,?,?)');log.run(1,1,'first_correct','meaning');
+ assert.equal((await claim(1)).status,409);assert.equal((await state()).books[0].pending,1);
+ log.run(1,1,'first_correct','spelling');
+ db.exec("INSERT INTO progress(word_id,first_studied,next_due) VALUES(2,datetime('now','localtime','-2 days'),datetime('now','localtime','-1 day'))");
+ assert.equal((await claim(1)).status,409);log.run(2,0,'wrong','meaning');db.exec("UPDATE progress SET next_due=datetime('now','localtime','+10 minutes') WHERE word_id=2");assert.equal((await claim(1)).status,409);
+ log.run(2,1,'retry_correct','meaning');db.exec("UPDATE progress SET next_due=datetime('now','localtime','+1 day') WHERE word_id=2");
+ const before=JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all()),count=db.prepare('SELECT COUNT(*) n FROM review_log').get().n;
+ const first=await claim(1);assert.equal(first.status,200);assert.equal(first.stage,1);assert.equal(first.duplicate,false);
+ const repeated=await claim(1),other=await claim(2);assert.equal(repeated.duplicate,true);assert.equal(other.duplicate,true);assert.equal((await state()).completed,1);assert.equal((await state()).todayCleared,true);
+ assert.equal(JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all()),before);assert.equal(db.prepare('SELECT COUNT(*) n FROM review_log').get().n,count);assert.equal(db.prepare('SELECT COUNT(*) n FROM user_cards').get().n,0);
+ db.exec('DELETE FROM adventure_days');const put=db.prepare("INSERT INTO adventure_days(day,stage_no,book_id,book_name) VALUES(date('now','localtime',?),?,1,'A')");for(let i=1;i<=13;i++)put.run(`-${14-i} days`,i);
+ const atBoss=await state();assert.equal(atBoss.completed,13);assert.equal(atBoss.current,14);assert.equal(atBoss.bossAvailable,true);assert.equal((await claim(1)).status,409);
+ db.exec("UPDATE adventure_days SET day=date('now','localtime') WHERE stage_no=13");assert.equal((await state()).bossAvailable,false);
+});
+test('fourteen route stages have accessible statuses and a single final Boss',()=>{const R=require('../shared/campaign-route');assert.equal(R.stages.length,14);assert.equal(R.stages.filter(s=>s.boss).length,1);assert.equal(R.status(1,0),'current');assert.equal(R.status(1,1),'passed');assert.equal(R.status(2,1,true),'waiting');assert.equal(R.status(4,1),'locked');assert.equal(R.status(14,13,false,false),'waiting');assert.equal(R.status(14,13,false,true),'current');});

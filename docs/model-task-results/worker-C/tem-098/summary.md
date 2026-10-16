@@ -1,0 +1,113 @@
+# tem-098 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：154
+- 输入 SHA256：c7ea4c9a89e467b8d3d3b29162498199d71f2f8bd6fd4815fa2823e7a003f34e
+
+## 待主代理复核
+
+Startle 已访问 Oxford Learner’s Dictionaries 并核对动词义和英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需注意 slang 的历史释义可能过时、seminal 的源词义敏感、several 的词性标签、shrine 释义错字等。
+
+- stardom
+- stare
+- starry
+- start
+- starter
+- startle
+- starvation
+- starve
+- state
+- stately
+- statement
+- stateroom
+- statesman
+- static
+- station
+- stationary
+- stationery
+- station-wagon
+- statistical
+- statistician
+- statistics
+- statue
+- status
+- statute
+- statutory
+- staunch
+- stay
+- steadfast
+- steady
+- steak
+- steal
+- stealth
+- stealthily
+- stealthy
+- steam
+- steamer
+- steel
+- steely
+- steep 1
+- steep 2
+- steeple
+- steer
+- steering-wheel
+- stem 1
+- stem 2
+- stench
+- step
+- stereo
+- stereotype
+- sterile
+- sterility
+- sterilize
+- sterling
+- stern 1
+- stern 2
+- steroid
+- stethoscope
+- stew
+- steward
+- stewardess
+- stick 1
+- stick 2
+- sticky
+- stiff
+- stiffen
+- stifle
+- stigma
+- stile
+- still
+- stimulant
+- stimulate
+- stimulation
+- stimulus
+- sting
+- stink
+- stint
+- stipend
+- stipulate
+- stir
+- stirrup
+- stitch
+- stock
+- stockbroker
+- stockholder
+- stocking
+- stoic
+- stoical
+- stoke
+- stomach
+- stone
+- stoneware
+- stony
+- stool
+- stoop
+- stop
+- stoppage
+- stopper
+- storage
+- store

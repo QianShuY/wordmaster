@@ -1,0 +1,113 @@
+# tem-083 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：164
+- 输入 SHA256：5edae7a06ff168445a3ec27f6eb35f8432b9645dea02b5089687084d48b33598
+
+## 待主代理复核
+
+Relent 已访问 Oxford Learner’s Dictionaries 并核对动词义和英式 IPA。其余条目无本轮可用的原始词典证据，音标留空。另需留意 rep 的其他义项、repine 的罕见文学语域，以及多义词的完整释义。
+
+- relax
+- relaxation
+- relay
+- release
+- relegate
+- relentless
+- relevance
+- relevant
+- reliable
+- reliability
+- reliance
+- relic
+- relief
+- relieve
+- religion
+- religious
+- relinquish
+- reluctance
+- reluctant
+- rely
+- remain
+- remains
+- remark
+- remarkable
+- remedial
+- remedy
+- remembrance
+- remind
+- reminder
+- reminiscence
+- reminiscent
+- remission
+- remit
+- remittance
+- remorse
+- remorseful
+- remorseless
+- remote
+- removable
+- removal
+- remove
+- remunerate
+- remuneration
+- renaissance
+- rend
+- render
+- rendezvous
+- rendition
+- renegade
+- renew
+- renewal
+- renounce
+- renovate
+- renovation
+- renown
+- renowned
+- rent
+- rental
+- renunciation
+- reorient
+- rep
+- repair
+- repairable
+- reparation
+- repay
+- repayment
+- repeal
+- repeatedly
+- repel
+- repellent
+- repent
+- repentance
+- repercussion
+- repertoire
+- repertory
+- repetition
+- repetitive
+- repine
+- replace
+- replacement
+- replay
+- replenish
+- replica
+- replicate
+- reply
+- report
+- reporter
+- repository
+- represent
+- representation
+- representative
+- repress
+- repression
+- repressive
+- reprimand
+- reprint 1
+- reprint 2
+- reprisal
+- reproach

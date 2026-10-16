@@ -1,0 +1,113 @@
+# tem-088 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：147
+- 输入 SHA256：118257ba5f3fd598250a9d2516543fdb622af901d83fb7ec78a7a0bc54165418
+
+## 待主代理复核
+
+Satire 已访问 Oxford Learner’s Dictionaries 并核对名词义和英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需核对 sallow 词项、salmon 源释义错字、scanty 源释义错字、精神健康术语语域，以及性别化职业称谓。
+
+- sash 2
+- Satan
+- satanic
+- satchel
+- satellite
+- satiate
+- satiation
+- satin
+- satirical
+- satirist
+- satisfaction
+- satisfactory
+- satisfied
+- satisfy
+- Saturn
+- saturate
+- Saturday
+- satyr
+- sauce
+- saucepan
+- saucer
+- sauna
+- saunter
+- sausage
+- savage
+- savagery
+- savant
+- save 1
+- save 2
+- savings
+- savoury
+- saw
+- sawmill
+- saxophone
+- say
+- saying
+- scab
+- scaffold
+- scaffolding
+- scalar
+- scale 1
+- scale 2
+- scallop
+- scalp
+- scalpel
+- scan
+- scandal
+- scandalous
+- Scandinavian
+- scanner
+- scant
+- scanty
+- scapegoat
+- scar
+- scarce
+- scarcely
+- scarcity
+- scare
+- scaremonger
+- scarf
+- scarlet
+- scary
+- scathing
+- scatter
+- scatterbrain
+- scavenge
+- scavenger
+- scenario
+- scene
+- scenery
+- scenic
+- scent
+- sceptical
+- scepticism
+- schedule
+- schema
+- schematize
+- scheme
+- schizophrenia
+- scholar
+- scholarly
+- scholarship
+- scholastic
+- school
+- schoolboy
+- schoolchild
+- schoolgirl
+- schoolmaster
+- schoolmistress
+- science
+- scientific
+- scientist
+- scintillation
+- scissors
+- scoff 1
+- scoff 2
+- scold
+- scoop
+- scooter

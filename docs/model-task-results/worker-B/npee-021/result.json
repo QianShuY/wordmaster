@@ -1,0 +1,4507 @@
+{
+  "task_id": "npee-021",
+  "input_sha256": "a325f363e94f7169947b77593572b3feef055d79a14f7003784c5cdf9360b974",
+  "status": "proposal",
+  "entries": [
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2767,
+        "word": "least",
+        "headword": "least",
+        "homograph": null,
+        "source_raw": "least [liːst] a.最小的;最少的 ad.最小;最少"
+      },
+      "issues": [
+        "Oxford 将 least 主要标为限定词、代词和副词；旧词典采用形容词、副词分类，需主代理确认分类口径。"
+      ],
+      "proposed": {
+        "phonetic": "liːst",
+        "teaching_note": "",
+        "meaning": "最小的;最少的；最小;最少",
+        "pos": "a./ad.",
+        "example": "This is the least expensive option.",
+        "example_translation": "这是最便宜的选择。"
+      },
+      "selected_sense": {
+        "meaning": "smallest in size, amount, degree, etc.",
+        "pos": "determiner, pronoun"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "最小的;最少的 ad.最小;最少",
+        "phonetic": "liːst",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "smallest in size, amount, degree, etc.",
+          "checked_uk_ipa": "liːst",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/least_1",
+          "checked_pos": "determiner, pronoun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2768,
+        "word": "leather",
+        "headword": "leather",
+        "homograph": null,
+        "source_raw": "leather [ˈleðə] n.皮革,皮革制品"
+      },
+      "issues": [
+        "词典另列复数 leathers 表示摩托车骑行服；原词义保留。"
+      ],
+      "proposed": {
+        "phonetic": "ˈleðə(r)",
+        "teaching_note": "",
+        "meaning": "皮革,皮革制品",
+        "pos": "n.",
+        "example": "His new boots are made of leather.",
+        "example_translation": "他的新靴子是皮革制成的。"
+      },
+      "selected_sense": {
+        "meaning": "material made from animal skins that have been processed",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "皮革,皮革制品",
+        "phonetic": "ˈleðə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "material made by removing hair or fur from animal skins and preserving them",
+          "checked_uk_ipa": "ˈleðə(r)",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leather",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2769,
+        "word": "leave",
+        "headword": "leave",
+        "homograph": null,
+        "source_raw": "leave [liːv] v.离开;留下,忘带;让,听任;交付n.许可;假期"
+      },
+      "issues": [
+        "原条目另列留下、交付及名词 leave（许可、假期）；本例只采用动词离开义。"
+      ],
+      "proposed": {
+        "phonetic": "liːv",
+        "teaching_note": "",
+        "meaning": "离开;留下,忘带;让,听任;交付 n.许可;假期",
+        "pos": "v.",
+        "example": "We need to leave before the roads get busy.",
+        "example_translation": "我们得在道路变拥挤前离开。"
+      },
+      "selected_sense": {
+        "meaning": "to go away from a place",
+        "pos": "verb"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "离开;留下,忘带;让,听任;交付n.许可;假期",
+        "phonetic": "liːv",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "to go away from a place",
+          "checked_uk_ipa": "liːv",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leave_1",
+          "checked_pos": "verb"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2770,
+        "word": "lecture",
+        "headword": "lecture",
+        "homograph": null,
+        "source_raw": "lecture [ˈlektʃə] n./v.演讲,讲课"
+      },
+      "issues": [
+        "词条兼有名词和动词，本例选择名词；动词用法仍需独立核验。"
+      ],
+      "proposed": {
+        "phonetic": "ˈlektʃə(r)",
+        "teaching_note": "",
+        "meaning": "演讲,讲课",
+        "pos": "n./v.",
+        "example": "The lecture begins at nine in the main hall.",
+        "example_translation": "讲座九点在主厅开始。"
+      },
+      "selected_sense": {
+        "meaning": "a talk that is given to a group of people to teach them about a particular subject",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n./v.",
+        "meaning": "演讲,讲课",
+        "phonetic": "ˈlektʃə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a talk given to a group to teach them about a subject",
+          "checked_uk_ipa": "ˈlektʃə(r)",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lecture_1",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2771,
+        "word": "left",
+        "headword": "left",
+        "homograph": null,
+        "source_raw": "left [left] n.左面,左方 a.左边的,左面的;在左方的"
+      },
+      "issues": [
+        "原条目兼列形容词、副词，本结果按原主词性选名词义；另有政治左派义。"
+      ],
+      "proposed": {
+        "phonetic": "left",
+        "teaching_note": "",
+        "meaning": "左面,左方；左边的,左面的;在左方",
+        "pos": "n.",
+        "example": "The post office is on the left.",
+        "example_translation": "邮局在左边。"
+      },
+      "selected_sense": {
+        "meaning": "the left side or direction",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "左面,左方 a.左边的,左面的;在左方的",
+        "phonetic": "left",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "the left side or direction",
+          "checked_uk_ipa": "left",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/left_3",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2772,
+        "word": "leg",
+        "headword": "leg",
+        "homograph": null,
+        "source_raw": "leg [leɡ] n.腿,腿部;支柱;(旅程的)一段,一站"
+      },
+      "issues": [
+        "原释义还包括家具支腿和旅程的一段等转义，已保留。"
+      ],
+      "proposed": {
+        "phonetic": "leɡ",
+        "teaching_note": "",
+        "meaning": "腿,腿部;支柱;(旅程的)一段,一站",
+        "pos": "n.",
+        "example": "After the long walk, my legs felt tired.",
+        "example_translation": "走了很久后，我的腿感到很累。"
+      },
+      "selected_sense": {
+        "meaning": "one of the long parts of the body that support its weight",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "腿,腿部;支柱;(旅程的)一段,一站",
+        "phonetic": "leɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "one of the long parts of the body that support its weight",
+          "checked_uk_ipa": "leɡ",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leg",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2773,
+        "word": "legacy",
+        "headword": "legacy",
+        "homograph": null,
+        "source_raw": "legacy [ˈleɡəsi] n.遗产,遗赠;先人(或过去)留下的东西"
+      },
+      "issues": [
+        "词典另列死亡后给予的财产义项；本例用历史遗留义。"
+      ],
+      "proposed": {
+        "phonetic": "ˈleɡəsi",
+        "teaching_note": "",
+        "meaning": "遗产,遗赠;先人(或过去)留下的东西",
+        "pos": "n.",
+        "example": "The old factory left a legacy of pollution.",
+        "example_translation": "旧工厂留下了污染问题。"
+      },
+      "selected_sense": {
+        "meaning": "a situation that exists now because of events or actions in the past",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "遗产,遗赠;先人(或过去)留下的东西",
+        "phonetic": "ˈleɡəsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a situation that exists now because of events, actions, etc. in the past",
+          "checked_uk_ipa": "ˈleɡəsi",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/legacy_1",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2774,
+        "word": "legal",
+        "headword": "legal",
+        "homograph": null,
+        "source_raw": "legal [ˈliːɡəl] a.法律的,法定的;合法的,正当的"
+      },
+      "issues": [
+        "legal 也表示法律允许的、合法的；例句采用“与法律有关”义。"
+      ],
+      "proposed": {
+        "phonetic": "ˈliːɡl",
+        "teaching_note": "",
+        "meaning": "法律的,法定的;合法的,正当的",
+        "pos": "a.",
+        "example": "You should get legal advice before signing.",
+        "example_translation": "签字前你应该寻求法律建议。"
+      },
+      "selected_sense": {
+        "meaning": "connected with the law",
+        "pos": "adjective"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "法律的,法定的;合法的,正当的",
+        "phonetic": "ˈliːɡəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "connected with the law",
+          "checked_uk_ipa": "ˈliːɡl",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/legal",
+          "checked_pos": "adjective"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2775,
+        "word": "legend",
+        "headword": "legend",
+        "homograph": null,
+        "source_raw": "legend [ˈledʒənd] n.传说,传奇"
+      },
+      "issues": [
+        "legend 还可指传奇人物或图表说明，需按语境区分。"
+      ],
+      "proposed": {
+        "phonetic": "ˈledʒənd",
+        "teaching_note": "",
+        "meaning": "传说,传奇",
+        "pos": "n.",
+        "example": "The guide told us a legend about the mountain.",
+        "example_translation": "导游给我们讲了一个关于这座山的传说。"
+      },
+      "selected_sense": {
+        "meaning": "a story from ancient times about people and events, that may or may not be true",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "传说,传奇",
+        "phonetic": "ˈledʒənd",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a story from ancient times about people and events that may or may not be true",
+          "checked_uk_ipa": "ˈledʒənd",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/legend",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2776,
+        "word": "legislation",
+        "headword": "legislation",
+        "homograph": null,
+        "source_raw": "legislation [ˌledʒisˈleiʃən] n.法律(规);立法,法律的制定(或通过)"
+      },
+      "issues": [
+        "不可数名词，既指法规也指立法体系；保留原释义范围。"
+      ],
+      "proposed": {
+        "phonetic": "ˌledʒɪsˈleɪʃn",
+        "teaching_note": "",
+        "meaning": "法律(规);立法,法律的制定(或通过)",
+        "pos": "n.",
+        "example": "New legislation will protect the river.",
+        "example_translation": "新法规将保护这条河流。"
+      },
+      "selected_sense": {
+        "meaning": "a law or a set of laws passed by a parliament",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "法律(规);立法,法律的制定(或通过)",
+        "phonetic": "ˌledʒisˈleiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a law or set of laws passed by a parliament",
+          "checked_uk_ipa": "ˌledʒɪsˈleɪʃn",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/legislation",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2777,
+        "word": "legitimate",
+        "headword": "legitimate",
+        "homograph": null,
+        "source_raw": "legitimate [liˈdʒitimət] a.合法的;合理的,合乎逻辑的 vt.使合法"
+      },
+      "issues": [
+        "原释义含合理义并列出使合法的及物动词，页面本次核对形容词义，其他词性仍需复核。"
+      ],
+      "proposed": {
+        "phonetic": "lɪˈdʒɪtɪmət",
+        "teaching_note": "",
+        "meaning": "合法的;合理的,合乎逻辑的 vt.使合法",
+        "pos": "a.",
+        "example": "The company has a legitimate reason to cancel the order.",
+        "example_translation": "这家公司有正当理由取消订单。"
+      },
+      "selected_sense": {
+        "meaning": "allowed and acceptable according to the law",
+        "pos": "adjective"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "合法的;合理的,合乎逻辑的 vt.使合法",
+        "phonetic": "liˈdʒitimət",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "allowed and acceptable according to the law",
+          "checked_uk_ipa": "lɪˈdʒɪtɪmət",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/legitimate",
+          "checked_pos": "adjective"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2778,
+        "word": "leisure",
+        "headword": "leisure",
+        "homograph": null,
+        "source_raw": "leisure [ˈleʒə] n.空闲,闲暇;悠闲,安逸"
+      },
+      "issues": [
+        "leisure time 为常见搭配；词典亦有 at leisure 等习语。"
+      ],
+      "proposed": {
+        "phonetic": "ˈleʒə(r)",
+        "teaching_note": "",
+        "meaning": "空闲,闲暇;悠闲,安逸",
+        "pos": "n.",
+        "example": "She reads novels in her leisure time.",
+        "example_translation": "她在闲暇时间读小说。"
+      },
+      "selected_sense": {
+        "meaning": "time that is spent doing what you enjoy when you are not working",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "空闲,闲暇;悠闲,安逸",
+        "phonetic": "ˈleʒə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "time spent doing what you enjoy when not working",
+          "checked_uk_ipa": "ˈleʒə(r)",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/leisure",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2779,
+        "word": "lemon",
+        "headword": "lemon",
+        "homograph": null,
+        "source_raw": "lemon [ˈlemən] n.柠檬"
+      },
+      "issues": [
+        "词典还列柠檬汁、柠檬饮料、淡黄色及口语中的劣质物等义项。"
+      ],
+      "proposed": {
+        "phonetic": "ˈlemən",
+        "teaching_note": "",
+        "meaning": "柠檬",
+        "pos": "n.",
+        "example": "Add some lemon to the tea.",
+        "example_translation": "往茶里加一点柠檬。"
+      },
+      "selected_sense": {
+        "meaning": "a yellow citrus fruit with a sharp sour taste",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "柠檬",
+        "phonetic": "ˈlemən",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a yellow citrus fruit with juice that has a sharp sour taste",
+          "checked_uk_ipa": "ˈlemən",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lemon_1",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2780,
+        "word": "lend",
+        "headword": "lend",
+        "homograph": null,
+        "source_raw": "lend [lend] vt.借给,贷(款)"
+      },
+      "issues": [
+        "lend 的方向是借出，常与 borrow（借入）混淆；词典还列 lend money 和比喻用法。"
+      ],
+      "proposed": {
+        "phonetic": "lend",
+        "teaching_note": "",
+        "meaning": "借给,贷(款)",
+        "pos": "vt.",
+        "example": "Could you lend me your notes for a day?",
+        "example_translation": "你能把笔记借给我一天吗？"
+      },
+      "selected_sense": {
+        "meaning": "to give something to somebody for a short time",
+        "pos": "verb"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "借给,贷(款)",
+        "phonetic": "lend",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "to give something to somebody for a short time",
+          "checked_uk_ipa": "lend",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lend",
+          "checked_pos": "verb"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2781,
+        "word": "length",
+        "headword": "length",
+        "homograph": null,
+        "source_raw": "length [leŋθ, leŋkθ] n.长,长度;一段,一节,程度,范围"
+      },
+      "issues": [
+        "英式词典列 /leŋkθ/；也常见 /leŋθ/ 变体。length 还表示一段长度、程度等。"
+      ],
+      "proposed": {
+        "phonetic": "leŋkθ",
+        "teaching_note": "",
+        "meaning": "长,长度;一段,一节,程度,范围",
+        "pos": "n.",
+        "example": "Measure the length of the table before you buy a cloth.",
+        "example_translation": "买桌布前先量一下桌子的长度。"
+      },
+      "selected_sense": {
+        "meaning": "the size or measurement of something from one end to the other",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "长,长度;一段,一节,程度,范围",
+        "phonetic": "leŋθ, leŋkθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "the size or measurement of something from one end to the other",
+          "checked_uk_ipa": "leŋkθ",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/length",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2782,
+        "word": "lens",
+        "headword": "lens",
+        "homograph": null,
+        "source_raw": "lens [lenz] n.透镜,镜头"
+      },
+      "issues": [
+        "lens 也指眼睛中的晶状体；相机语境的镜头义用于本例。"
+      ],
+      "proposed": {
+        "phonetic": "lenz",
+        "teaching_note": "",
+        "meaning": "透镜,镜头",
+        "pos": "n.",
+        "example": "The camera has a wide-angle lens.",
+        "example_translation": "这台相机配有广角镜头。"
+      },
+      "selected_sense": {
+        "meaning": "a curved piece of glass or plastic that makes things look larger, smaller or clearer",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "透镜,镜头",
+        "phonetic": "lenz",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a curved piece of glass or plastic that changes how things look",
+          "checked_uk_ipa": "lenz",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lens",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2783,
+        "word": "less",
+        "headword": "less",
+        "homograph": null,
+        "source_raw": "less [les] a./ad.更少的(地),更小的(地)"
+      },
+      "issues": [
+        "Oxford 主分类为限定词、代词；传统词库写形容词、副词，现代词性标签差异需主代理确认。与可数名词通常用 fewer。"
+      ],
+      "proposed": {
+        "phonetic": "les",
+        "teaching_note": "",
+        "meaning": "更少的(地),更小的(地)",
+        "pos": "a./ad.",
+        "example": "We need less sugar in the recipe.",
+        "example_translation": "这个食谱需要少放些糖。"
+      },
+      "selected_sense": {
+        "meaning": "a smaller amount of something",
+        "pos": "determiner, pronoun"
+      },
+      "original": {
+        "pos": "a./ad.",
+        "meaning": "更少的(地),更小的(地)",
+        "phonetic": "les",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "used with uncountable nouns to mean a smaller amount of",
+          "checked_uk_ipa": "les",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/less_1",
+          "checked_pos": "determiner, pronoun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2784,
+        "word": "lesson",
+        "headword": "lesson",
+        "homograph": null,
+        "source_raw": "lesson [ˈlesən] n.(功)课;[pl.]课程;教训"
+      },
+      "issues": [
+        "lesson 还可表示从经历中吸取的教训；复数 lessons 也常指课程。"
+      ],
+      "proposed": {
+        "phonetic": "ˈlesn",
+        "teaching_note": "",
+        "meaning": "(功)课;[pl.]课程;教训",
+        "pos": "n.",
+        "example": "Our first lesson starts at eight.",
+        "example_translation": "我们的第一节课八点开始。"
+      },
+      "selected_sense": {
+        "meaning": "a period of time in which somebody is taught something",
+        "pos": "noun"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(功)课;[pl.]课程;教训",
+        "phonetic": "ˈlesən",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "a period of time in which somebody is taught something",
+          "checked_uk_ipa": "ˈlesn",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lesson",
+          "checked_pos": "noun"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2785,
+        "word": "lest",
+        "headword": "lest",
+        "homograph": null,
+        "source_raw": "lest [lest] conj.惟恐,免得"
+      },
+      "issues": [
+        "较正式用语，常见结构为 lest + 主语 + (should) + 动词原形。"
+      ],
+      "proposed": {
+        "phonetic": "lest",
+        "teaching_note": "",
+        "meaning": "惟恐,免得",
+        "pos": "conj.",
+        "example": "She wrote the address down lest she forget it.",
+        "example_translation": "她把地址写下来，以免忘记。"
+      },
+      "selected_sense": {
+        "meaning": "in order to prevent something from happening",
+        "pos": "conjunction"
+      },
+      "original": {
+        "pos": "conj.",
+        "meaning": "惟恐,免得",
+        "phonetic": "lest",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "in order to prevent something from happening",
+          "checked_uk_ipa": "lest",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lest",
+          "checked_pos": "conjunction"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2786,
+        "word": "let",
+        "headword": "let",
+        "homograph": null,
+        "source_raw": "let [let] v.让,允许,听任;设,假设;出租,租给"
+      },
+      "issues": [
+        "Oxford 还列建议、请求、出租等动词义项；本例为允许义，避免把let与make等强制义混同。"
+      ],
+      "proposed": {
+        "phonetic": "let",
+        "teaching_note": "",
+        "meaning": "让,允许,听任;设,假设;出租,租给",
+        "pos": "v.",
+        "example": "Please let me finish my sentence.",
+        "example_translation": "请让我把话说完。"
+      },
+      "selected_sense": {
+        "meaning": "to allow somebody to do something or something to happen",
+        "pos": "verb"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "让,允许,听任;设,假设;出租,租给",
+        "phonetic": "let",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "checked_sense": "to allow somebody to do something or something to happen",
+          "checked_uk_ipa": "let",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/let_1",
+          "checked_pos": "verb"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "external_human_review": false
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2787,
+        "word": "letter",
+        "headword": "letter",
+        "homograph": null,
+        "source_raw": "letter [ˈletə] n.信,函件;字母,文字"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "a written, typed or printed message sent to somebody",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/letter_1",
+          "accessed": true,
+          "checked_uk_ipa": "ˈletə(r)"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "信,函件;字母,文字",
+        "phonetic": "ˈletə",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "I received a letter from my cousin.",
+        "pos": "n.",
+        "meaning": "信,函件;字母,文字",
+        "phonetic": "ˈletə(r)",
+        "example_translation": "我收到了表亲寄来的一封信。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a written message sent to somebody"
+      },
+      "issues": [
+        "letter 还指字母；例句采用信件义。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2788,
+        "word": "level",
+        "headword": "level",
+        "homograph": null,
+        "source_raw": "level [ˈlevəl] n.水平,水准,等级 v.弄平,铺平 a.水平的"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "the height of something in relation to the ground or its earlier level",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/level_1",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlevl"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "水平,水准,等级 v.弄平,铺平 a.水平的",
+        "phonetic": "ˈlevəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The water level rose after the rain.",
+        "pos": "n.",
+        "meaning": "水平,水准,等级 v.弄平,铺平 a.水平的",
+        "phonetic": "ˈlevl",
+        "example_translation": "下雨后水位上升了。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the height of something in relation to the ground"
+      },
+      "issues": [
+        "原词条兼有动词和形容词；本例用名词水位义，其余词性需分别核查。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2789,
+        "word": "lever",
+        "headword": "lever",
+        "homograph": null,
+        "source_raw": "lever [ˈliːvə, ˈle-] n.杆,杠杆,手段,途径,工具"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "a handle used to operate a vehicle or a machine",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/lever_1",
+          "accessed": true,
+          "checked_uk_ipa": "ˈliːvə(r)"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "杆,杠杆,手段,途径,工具",
+        "phonetic": "ˈliːvə, ˈle-",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "Pull the lever to open the gate.",
+        "pos": "n.",
+        "meaning": "杆,杠杆,手段,途径,工具",
+        "phonetic": "ˈliːvə(r)",
+        "example_translation": "拉动杠杆打开闸门。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a handle used to operate a machine"
+      },
+      "issues": [
+        "词典还列用于撬动的长杆和比喻用法；本例为机器操纵杆。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2790,
+        "word": "levy",
+        "headword": "levy",
+        "homograph": null,
+        "source_raw": "levy [ˈlevi] n.征收,征税,征兵 v.征收,征集,征用"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "an extra amount of money that has to be paid, especially as a tax",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/levy_1",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlevi"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "征收,征税,征兵 v.征收,征集,征用",
+        "phonetic": "ˈlevi",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The city introduced a levy on plastic bags.",
+        "pos": "n.",
+        "meaning": "征收,征税,征兵 v.征收,征集,征用",
+        "phonetic": "ˈlevi",
+        "example_translation": "市政府对塑料袋征收了一项附加费。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an extra amount of money paid as a tax"
+      },
+      "issues": [
+        "词条也可作动词表示征收；本例选择名词税费义。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2791,
+        "word": "liability",
+        "headword": "liability",
+        "homograph": null,
+        "source_raw": "liability [ˌlaiəˈbiləti] n.责任,义务;(pl.)债务"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "the state of being legally responsible for something",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liability",
+          "accessed": true,
+          "checked_uk_ipa": "ˌlaɪəˈbɪləti"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "责任,义务;(pl.)债务",
+        "phonetic": "ˌlaiəˈbiləti",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The contract limits our liability for delays.",
+        "pos": "n.",
+        "meaning": "责任,义务;(pl.)债务",
+        "phonetic": "ˌlaɪəˈbɪləti",
+        "example_translation": "合同限制了我们对延误承担的责任。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the state of being legally responsible for something"
+      },
+      "issues": [
+        "词典另列债务及口语中的负担义；本例为法律责任。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2792,
+        "word": "liable",
+        "headword": "liable",
+        "homograph": null,
+        "source_raw": "liable [ˈlaiəbl] a.有...倾向的;可能遭受...的;有责任的"
+      },
+      "evidence": [
+        {
+          "checked_pos": "adjective",
+          "checked_sense": "legally responsible for paying the cost of something",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liable",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlaɪəbl"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "有...倾向的;可能遭受...的;有责任的",
+        "phonetic": "ˈlaiəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The owner may be liable for the damage.",
+        "pos": "a.",
+        "meaning": "有...倾向的;可能遭受...的;有责任的",
+        "phonetic": "ˈlaɪəbl",
+        "example_translation": "业主可能要对损失承担责任。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "legally responsible for paying for something"
+      },
+      "issues": [
+        "liable to 还可表达可能遭遇或有某种倾向；需注意介词搭配。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2793,
+        "word": "liberal",
+        "headword": "liberal",
+        "homograph": null,
+        "source_raw": "liberal [ˈlibərəl] a.慷慨的,大方的;富足的;自由的,思想开放的"
+      },
+      "evidence": [
+        {
+          "checked_pos": "adjective",
+          "checked_sense": "willing to understand and respect other people's behaviour and opinions",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/liberal_1",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪbərəl"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "慷慨的,大方的;富足的;自由的,思想开放的",
+        "phonetic": "ˈlibərəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "Her parents are liberal and welcome different opinions.",
+        "pos": "a.",
+        "meaning": "慷慨的,大方的;富足的;自由的,思想开放的",
+        "phonetic": "ˈlɪbərəl",
+        "example_translation": "她的父母思想开明，愿意接纳不同意见。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "willing to understand and respect other people's opinions"
+      },
+      "issues": [
+        "liberal 还包括政治立场、慷慨大量及宽泛不精确等义项，原释义应分别保留。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2794,
+        "word": "liberate",
+        "headword": "liberate",
+        "homograph": null,
+        "source_raw": "liberate [ˈlibəreit] vt.解放,释放"
+      },
+      "evidence": [
+        {
+          "checked_pos": "verb",
+          "checked_sense": "to free a country or a person from the control of somebody else",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liberate",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪbəreɪt"
+        }
+      ],
+      "original": {
+        "pos": "vt.",
+        "meaning": "解放,释放",
+        "phonetic": "ˈlibəreit",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The army helped liberate the town.",
+        "pos": "vt.",
+        "meaning": "解放,释放",
+        "phonetic": "ˈlɪbəreɪt",
+        "example_translation": "军队帮助解放了这座城镇。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to free a country or person from another's control"
+      },
+      "issues": [
+        "可表示解放、释放或使摆脱限制；本例选择城镇获得解放义。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2795,
+        "word": "liberty",
+        "headword": "liberty",
+        "homograph": null,
+        "source_raw": "liberty [ˈlibəti] n.自由,自由权;特权"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "the state of being free",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liberty",
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪbəti"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "自由,自由权;特权",
+        "phonetic": "ˈlibəti",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The law protects every citizen's liberty.",
+        "pos": "n.",
+        "meaning": "自由,自由权;特权",
+        "phonetic": "ˈlɪbəti",
+        "example_translation": "法律保护每位公民的自由。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the state of being free"
+      },
+      "issues": [
+        "liberty 还指特定自由权利；习语 take the liberty of 有固定用法。"
+      ]
+    },
+    {
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "verification": "source-checked",
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2796,
+        "word": "librarian",
+        "headword": "librarian",
+        "homograph": null,
+        "source_raw": "librarian [laiˈbrεəriən] n.图书管理员"
+      },
+      "evidence": [
+        {
+          "checked_pos": "noun",
+          "checked_sense": "a person who works in a library",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/librarian",
+          "accessed": true,
+          "checked_uk_ipa": "laɪˈbreəriən"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "图书管理员",
+        "phonetic": "laiˈbrεəriən",
+        "example": "",
+        "example_translation": ""
+      },
+      "proposed": {
+        "example": "The librarian helped me find the history section.",
+        "pos": "n.",
+        "meaning": "图书管理员",
+        "phonetic": "laɪˈbreəriən",
+        "example_translation": "图书管理员帮我找到了历史类书架。",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who works in a library"
+      },
+      "issues": [
+        "原音标需核对；英式音标为 /laɪˈbreəriən/。"
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2798,
+        "word": "license",
+        "headword": "license",
+        "homograph": null,
+        "source_raw": "license [ˈlaisəns] n.(licence)许可证,执照 v.准许,认可"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(licence)许可证,执照 v.准许,认可",
+        "phonetic": "ˈlaisəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlaɪsns",
+          "checked_sense": "an official document that shows that permission has been given to do or use something",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/licence"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "英式拼写为 licence，美式拼写为 license；证据页注明 license 是美式变体。动词用法仍须另核。"
+      ],
+      "selected_sense": {
+        "meaning": "an official document that gives permission to do, own or use something",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "在这里钓鱼需要许可证。",
+        "meaning": "(licence)许可证,执照 v.准许,认可",
+        "example": "You need a fishing license to fish here.",
+        "pos": "n.",
+        "phonetic": "ˈlaɪsns"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2799,
+        "word": "lick",
+        "headword": "lick",
+        "homograph": null,
+        "source_raw": "lick [lik] vt.舔;(火焰或浪)掠过;打败 n.舔;少量"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "舔;(火焰或浪)掠过;打败 n.舔;少量",
+        "phonetic": "lik",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "lɪk",
+          "checked_sense": "to move your tongue over the surface of something in order to taste it, make it wet or clean",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lick_1"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "动词还可指火舌掠过、轻易打败；原词条还列名词义。"
+      ],
+      "selected_sense": {
+        "meaning": "to move your tongue over the surface of something",
+        "pos": "verb"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "狗把碗舔干净了。",
+        "meaning": "舔;(火焰或浪)掠过;打败 n.舔;少量",
+        "example": "The dog licked the bowl clean.",
+        "pos": "vt.",
+        "phonetic": "lɪk"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2800,
+        "word": "lid",
+        "headword": "lid",
+        "homograph": null,
+        "source_raw": "lid [lid] n.盖"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "盖",
+        "phonetic": "lid",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "lɪd",
+          "checked_sense": "a cover over a container that can be removed or opened by turning or lifting it",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lid"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "lid 也可指眼睑；本例为容器盖。"
+      ],
+      "selected_sense": {
+        "meaning": "a cover over a container that can be removed or opened",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "把盖子重新盖回罐子上。",
+        "meaning": "盖",
+        "example": "Put the lid back on the jar.",
+        "pos": "n.",
+        "phonetic": "lɪd"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2801,
+        "word": "lie",
+        "headword": "lie",
+        "homograph": null,
+        "source_raw": "lie [lai] vi.躺,平放;处于;位于 v.说谎 n.谎话"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "躺,平放;处于;位于 v.说谎 n.谎话",
+        "phonetic": "lai",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "laɪ",
+          "checked_sense": "to be or put yourself in a flat position",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lie1_1"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "lie 躺与 lie 说谎为不同动词条目，过去式分别为 lay 与 lied；例句用躺义。"
+      ],
+      "selected_sense": {
+        "meaning": "to be or put yourself in a flat position",
+        "pos": "verb"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "他躺在草地上看云。",
+        "meaning": "躺,平放;处于;位于 v.说谎 n.谎话",
+        "example": "He lay on the grass and watched the clouds.",
+        "pos": "vi.",
+        "phonetic": "laɪ"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2802,
+        "word": "life",
+        "headword": "life",
+        "homograph": null,
+        "source_raw": "life [laif] n.生命,生存;一生,寿命;生活;生物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "生命,生存;一生,寿命;生活;生物",
+        "phonetic": "laif",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "laɪf",
+          "checked_sense": "the ability to breathe, grow, produce and develop",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/life"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "life 多义丰富，包括生命、生涯、生活方式和生物等；保留原释义各项。"
+      ],
+      "selected_sense": {
+        "meaning": "the ability to breathe, grow, produce and develop",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "医生说这次手术可能挽救她的生命。",
+        "meaning": "生命,生存;一生,寿命;生活;生物",
+        "example": "The doctor said the operation could save her life.",
+        "pos": "n.",
+        "phonetic": "laɪf"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2803,
+        "word": "lifetime",
+        "headword": "lifetime",
+        "homograph": null,
+        "source_raw": "lifetime [ˈlaiftaim] n.一生,终生"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "一生,终生",
+        "phonetic": "ˈlaiftaim",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlaɪftaɪm",
+          "checked_sense": "the length of time that somebody lives or that something lasts",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/lifetime"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "常用于 a lifetime、in somebody's lifetime；另有 once-in-a-lifetime 搭配。"
+      ],
+      "selected_sense": {
+        "meaning": "the length of time that somebody lives or that something lasts",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "她一生都在集邮。",
+        "meaning": "一生,终生",
+        "example": "She has collected stamps for a lifetime.",
+        "pos": "n.",
+        "phonetic": "ˈlaɪftaɪm"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2804,
+        "word": "lift",
+        "headword": "lift",
+        "homograph": null,
+        "source_raw": "lift [lift] v.升起,举起,消散 n.电梯,上升,免费搭车"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "升起,举起,消散 n.电梯,上升,免费搭车",
+        "phonetic": "lift",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "lɪft",
+          "checked_sense": "to raise somebody or something to a higher position",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lift_1"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "英式 lift 还可指电梯、搭便车；动词另有解除限制、改善情绪、偷窃等义项。"
+      ],
+      "selected_sense": {
+        "meaning": "to raise somebody or something to a higher position",
+        "pos": "verb"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "你能把这个箱子举到架子上吗？",
+        "meaning": "升起,举起,消散 n.电梯,上升,免费搭车",
+        "example": "Could you lift this box onto the shelf?",
+        "pos": "v.",
+        "phonetic": "lɪft"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2805,
+        "word": "light",
+        "headword": "light",
+        "homograph": null,
+        "source_raw": "light [ˈlait] n.光;灯 v.点燃;照亮 a.轻(快);淡;明亮"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "光;灯 v.点燃;照亮 a.轻(快);淡;明亮",
+        "phonetic": "ˈlait",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "laɪt",
+          "checked_sense": "the energy from the sun or a lamp that makes it possible to see things",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/light_1"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "light 的名词、动词、形容词均为不同词性义项；本例仅选光线名词义。"
+      ],
+      "selected_sense": {
+        "meaning": "the energy from the sun or a lamp that makes it possible to see",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "房间里充满了柔和的晨光。",
+        "meaning": "光;灯 v.点燃;照亮 a.轻(快);淡;明亮",
+        "example": "The room was filled with soft morning light.",
+        "pos": "n.",
+        "phonetic": "laɪt"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2806,
+        "word": "lightning",
+        "headword": "lightning",
+        "homograph": null,
+        "source_raw": "lightning [ˈlaitniŋ] n.闪电 a.闪电般的,快速的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "闪电 a.闪电般的,快速的",
+        "phonetic": "ˈlaitniŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlaɪtnɪŋ",
+          "checked_sense": "a flash of very bright light in the sky caused by electricity",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lightning_1?q=lightning"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "名词 lightning 通常不可数；lightning-fast 等形容词用法不应与名词混为一条定义。"
+      ],
+      "selected_sense": {
+        "meaning": "a flash of very bright light in the sky caused by electricity",
+        "pos": "noun"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "一道闪电照亮了山丘。",
+        "meaning": "闪电 a.闪电般的,快速的",
+        "example": "A flash of lightning lit up the hills.",
+        "pos": "n.",
+        "phonetic": "ˈlaɪtnɪŋ"
+      },
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2807,
+        "word": "like",
+        "headword": "like",
+        "homograph": null,
+        "source_raw": "like [laik] v.喜欢 prep.象;比如 a.相象的 n.象…一样"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "喜欢 prep.象;比如 a.相象的 n.象…一样",
+        "phonetic": "laik",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "laɪk",
+          "checked_sense": "to find somebody or something pleasant, attractive or of a good enough standard",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/like_3"
+        }
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "issues": [
+        "like 同形词有动词、介词、形容词和名词用法；例句选择喜欢义。"
+      ],
+      "selected_sense": {
+        "meaning": "to find somebody or something pleasant, attractive or good",
+        "pos": "verb"
+      },
+      "proposed": {
+        "teaching_note": "",
+        "example_translation": "我喜欢这个镇上安静的街道。",
+        "meaning": "喜欢 prep.象;比如 a.相象的 n.象…一样",
+        "example": "I like the quiet streets in this town.",
+        "pos": "v.",
+        "phonetic": "laɪk"
+      },
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "the chance of something happening; how likely something is to happen",
+          "checked_uk_ipa": "ˈlaɪklihʊd",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/likelihood"
+        }
+      ],
+      "issues": [
+        "常见搭配 likelihood of；本例用可数或不可数可能性义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2808,
+        "word": "likelihood",
+        "headword": "likelihood",
+        "homograph": null,
+        "source_raw": "likelihood [ˈlaiklihud] n.可能性"
+      },
+      "proposed": {
+        "example": "There is little likelihood of rain today.",
+        "phonetic": "ˈlaɪklihʊd",
+        "meaning": "可能性",
+        "example_translation": "今天下雨的可能性很小。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "可能性",
+        "phonetic": "ˈlaiklihud",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the chance of something happening"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "having a good chance of happening or being something; probable or expected",
+          "checked_uk_ipa": "ˈlaɪkli",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/likely_1"
+        }
+      ],
+      "issues": [
+        "likely 也可作副词，特别常见 most likely；原条目保留副词义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2809,
+        "word": "likely",
+        "headword": "likely",
+        "homograph": null,
+        "source_raw": "likely [ˈlaikli] a.很可能的,有希望的 ad.大概,多半"
+      },
+      "proposed": {
+        "example": "A storm is likely to arrive tonight.",
+        "phonetic": "ˈlaɪkli",
+        "meaning": "很可能的,有希望的 ad.大概,多半",
+        "example_translation": "今晚可能会有暴风雨。",
+        "teaching_note": "",
+        "pos": "a."
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "很可能的,有希望的 ad.大概,多半",
+        "phonetic": "ˈlaikli",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "having a good chance of happening or being something"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "in the same way",
+          "checked_uk_ipa": "ˈlaɪkwaɪz",
+          "accessed": true,
+          "checked_pos": "adverb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/likewise"
+        }
+      ],
+      "issues": [
+        "also 可表示“也”，需按句子连接关系选择。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2810,
+        "word": "likewise",
+        "headword": "likewise",
+        "homograph": null,
+        "source_raw": "likewise [ˈlaikwaiz] ad.同样地,照样地;又,也,而且"
+      },
+      "proposed": {
+        "example": "Mina enjoys hiking, and I likewise love long walks.",
+        "phonetic": "ˈlaɪkwaɪz",
+        "meaning": "同样地,照样地;又,也,而且",
+        "example_translation": "米娜喜欢徒步，我也喜欢长距离散步。",
+        "teaching_note": "",
+        "pos": "ad."
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "同样地,照样地;又,也,而且",
+        "phonetic": "ˈlaikwaiz",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "in the same way"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "an arm or a leg",
+          "checked_uk_ipa": "lɪm",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/limb"
+        }
+      ],
+      "issues": [
+        "limb 也可指树枝及鸟的翼；本例为人体肢体。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2811,
+        "word": "limb",
+        "headword": "limb",
+        "homograph": null,
+        "source_raw": "limb [lim] n.肢,翼,大树枝"
+      },
+      "proposed": {
+        "example": "He broke a limb in the fall.",
+        "phonetic": "lɪm",
+        "meaning": "肢,翼,大树枝",
+        "example_translation": "他摔倒时摔断了一条肢体。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "肢,翼,大树枝",
+        "phonetic": "lim",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an arm or a leg"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "the greatest or smallest amount of something that is allowed",
+          "checked_uk_ipa": "ˈlɪmɪt",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/limit_1"
+        }
+      ],
+      "issues": [
+        "limit 亦作动词，原释义需保留多词性；本例选择名词限制值。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2812,
+        "word": "limit",
+        "headword": "limit",
+        "homograph": null,
+        "source_raw": "limit [ˈlimit] n.界限,限度,范围 v.(to)限制,限定"
+      },
+      "proposed": {
+        "example": "The bag is over the weight limit.",
+        "phonetic": "ˈlɪmɪt",
+        "meaning": "界限,限度,范围 v.(to)限制,限定",
+        "example_translation": "这个包超过了重量限制。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "界限,限度,范围 v.(to)限制,限定",
+        "phonetic": "ˈlimit",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the greatest or smallest amount that is allowed"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a rule or situation that limits what you can do or what can happen",
+          "checked_uk_ipa": "ˌlɪmɪˈteɪʃn",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/limitation"
+        }
+      ],
+      "issues": [
+        "limitation 与 limit 有关联，但常指限制条件或局限性。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2813,
+        "word": "limitation",
+        "headword": "limitation",
+        "homograph": null,
+        "source_raw": "limitation [ˌlimiˈteiʃən] n.限制,局限性"
+      },
+      "proposed": {
+        "example": "The main limitation is the short deadline.",
+        "phonetic": "ˌlɪmɪˈteɪʃn",
+        "meaning": "限制,局限性",
+        "example_translation": "主要限制是期限太短。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "限制,局限性",
+        "phonetic": "ˌlimiˈteiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a rule or fact that limits what you can do"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "small in amount or number",
+          "checked_uk_ipa": "ˈlɪmɪtɪd",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/limited"
+        }
+      ],
+      "issues": [
+        "limited 也可表示受限制的；本例强调数量有限。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2814,
+        "word": "limited",
+        "headword": "limited",
+        "homograph": null,
+        "source_raw": "limited [ˈlimitid] a.有限的,被限制的"
+      },
+      "proposed": {
+        "example": "We have limited time to finish the work.",
+        "phonetic": "ˈlɪmɪtɪd",
+        "meaning": "有限的,被限制的",
+        "example_translation": "我们完成这项工作的时间有限。",
+        "teaching_note": "",
+        "pos": "a."
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有限的,被限制的",
+        "phonetic": "ˈlimitid",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "small in amount or number"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "not stiff or strong",
+          "checked_uk_ipa": "lɪmp",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/limp_1"
+        }
+      ],
+      "issues": [
+        "limp 还可作动词和名词表示跛行；本例保留形容词主词性。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2815,
+        "word": "limp",
+        "headword": "limp",
+        "homograph": null,
+        "source_raw": "limp [limp] a.柔软的,易曲的 v./n.蹒跚,跛行"
+      },
+      "proposed": {
+        "example": "The wet paper bag went limp.",
+        "phonetic": "lɪmp",
+        "meaning": "柔软的,易曲的 v./n.蹒跚,跛行",
+        "example_translation": "湿纸袋变得软塌塌的。",
+        "teaching_note": "",
+        "pos": "a."
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "柔软的,易曲的 v./n.蹒跚,跛行",
+        "phonetic": "limp",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "not stiff or strong"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a long thin mark on a surface",
+          "checked_uk_ipa": "laɪn",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/line_1"
+        }
+      ],
+      "issues": [
+        "line 义项众多，原条目所列航线、线路、队列等应继续保留。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2816,
+        "word": "line",
+        "headword": "line",
+        "homograph": null,
+        "source_raw": "line [lain] n.线;路线,航线;排;线路;界线 v.排队;加衬"
+      },
+      "proposed": {
+        "example": "Draw a straight line under the title.",
+        "phonetic": "laɪn",
+        "meaning": "线;路线,航线;排;线路;界线 v.排队;加衬",
+        "example_translation": "在标题下面画一条直线。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "线;路线,航线;排;线路;界线 v.排队;加衬",
+        "phonetic": "lain",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a long thin mark on a surface"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "involving a straight line",
+          "checked_uk_ipa": "ˈlɪniə(r)",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/linear"
+        }
+      ],
+      "issues": [
+        "linear 也指按顺序逐步发展的；本例使用数学关系义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2817,
+        "word": "linear",
+        "headword": "linear",
+        "homograph": null,
+        "source_raw": "linear [ˈliniə] a.线的,直线的,线状的;长度的;线性的"
+      },
+      "proposed": {
+        "example": "The graph shows a linear relationship between the two values.",
+        "phonetic": "ˈlɪniə(r)",
+        "meaning": "线的,直线的,线状的;长度的;线性的",
+        "example_translation": "图表显示这两个数值之间呈线性关系。",
+        "teaching_note": "",
+        "pos": "a."
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "线的,直线的,线状的;长度的;线性的",
+        "phonetic": "ˈliniə",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "involving a straight line"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "cloth made from the fibres of the flax plant",
+          "checked_uk_ipa": "ˈlɪnɪn",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/linen"
+        }
+      ],
+      "issues": [
+        "linen 可指亚麻织物，也可泛指床上用品和桌布等家用布品。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2818,
+        "word": "linen",
+        "headword": "linen",
+        "homograph": null,
+        "source_raw": "linen [ˈlinin] n.亚麻布,亚麻布制品"
+      },
+      "proposed": {
+        "example": "The table was covered with clean linen.",
+        "phonetic": "ˈlɪnɪn",
+        "meaning": "亚麻布,亚麻布制品",
+        "example_translation": "桌上铺着干净的亚麻布。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "亚麻布,亚麻布制品",
+        "phonetic": "ˈlinin",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "cloth made from the fibres of the flax plant"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a large ship that carries passengers regularly between ports",
+          "checked_uk_ipa": "ˈlaɪnə(r)",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liner"
+        }
+      ],
+      "issues": [
+        "liner 也可构成 passenger liner 等复合词；原词条的定期班机义需单独确认。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2819,
+        "word": "liner",
+        "headword": "liner",
+        "homograph": null,
+        "source_raw": "liner [ˈlainə] n.班机,定期轮船,邮船"
+      },
+      "proposed": {
+        "example": "The liner left the port at dawn.",
+        "phonetic": "ˈlaɪnə(r)",
+        "meaning": "班机,定期轮船,邮船",
+        "example_translation": "这艘定期客轮黎明时离开港口。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "班机,定期轮船,邮船",
+        "phonetic": "ˈlainə",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a large ship that carries passengers regularly between ports"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "to continue to exist for longer than expected",
+          "checked_uk_ipa": "ˈlɪŋɡə(r)",
+          "accessed": true,
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/linger"
+        }
+      ],
+      "issues": [
+        "linger 还表示逗留、缓慢离开；本例选持续存在义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2820,
+        "word": "linger",
+        "headword": "linger",
+        "homograph": null,
+        "source_raw": "linger [ˈliŋɡə] v.逗留,徘徊,拖延,留恋,浪费光阴,苟延残喘"
+      },
+      "proposed": {
+        "example": "The smell of coffee lingered in the room.",
+        "phonetic": "ˈlɪŋɡə(r)",
+        "meaning": "逗留,徘徊,拖延,留恋,浪费光阴,苟延残喘",
+        "example_translation": "房间里仍弥漫着咖啡的香味。",
+        "teaching_note": "",
+        "pos": "v."
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "逗留,徘徊,拖延,留恋,浪费光阴,苟延残喘",
+        "phonetic": "ˈliŋɡə",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to continue to exist for longer than expected"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "connected with language or the scientific study of language",
+          "checked_uk_ipa": "lɪŋˈɡwɪstɪk",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/linguistic"
+        }
+      ],
+      "issues": [
+        "linguistic 与 linguistics 区分；前者为形容词，后者为学科名词。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2821,
+        "word": "linguistic",
+        "headword": "linguistic",
+        "homograph": null,
+        "source_raw": "linguistic [liŋˈɡwistik,-kəl] a.语言的,语言学的"
+      },
+      "proposed": {
+        "example": "The report highlights linguistic differences between the regions.",
+        "phonetic": "lɪŋˈɡwɪstɪk",
+        "meaning": "语言的,语言学的",
+        "example_translation": "报告强调了各地区之间的语言差异。",
+        "teaching_note": "",
+        "pos": "a."
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "语言的,语言学的",
+        "phonetic": "liŋˈɡwistik,-kəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "connected with language or the scientific study of language"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "to make a physical or electronic connection between one object, machine, place, etc. and another",
+          "checked_uk_ipa": "lɪŋk",
+          "accessed": true,
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/link_2"
+        }
+      ],
+      "issues": [
+        "link 可指物理或抽象联系；名词义保留在原条目中。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2822,
+        "word": "link",
+        "headword": "link",
+        "homograph": null,
+        "source_raw": "link [liŋk] v.连接,联系 n.环节,链环"
+      },
+      "proposed": {
+        "example": "The bridge links the two villages.",
+        "phonetic": "lɪŋk",
+        "meaning": "连接,联系 n.环节,链环",
+        "example_translation": "这座桥连接着两个村庄。",
+        "teaching_note": "",
+        "pos": "v."
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "连接,联系 n.环节,链环",
+        "phonetic": "liŋk",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make a connection between two things"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a large wild animal of the cat family",
+          "checked_uk_ipa": "ˈlaɪən",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lion"
+        }
+      ],
+      "issues": [
+        "lion 的复数为 lions；本例指动物本身。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2823,
+        "word": "lion",
+        "headword": "lion",
+        "homograph": null,
+        "source_raw": "lion [ˈlaiən] n.狮子"
+      },
+      "proposed": {
+        "example": "We saw a lion resting in the shade.",
+        "phonetic": "ˈlaɪən",
+        "meaning": "狮子",
+        "example_translation": "我们看到一头狮子在阴凉处休息。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "狮子",
+        "phonetic": "ˈlaiən",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a large wild animal of the cat family"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "one of the two soft edges of the mouth",
+          "checked_uk_ipa": "lɪp",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lip"
+        }
+      ],
+      "issues": [
+        "lip 还可表示容器边缘或口部边沿等转义，需按语境区分。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2824,
+        "word": "lip",
+        "headword": "lip",
+        "homograph": null,
+        "source_raw": "lip [lip] n.嘴唇"
+      },
+      "proposed": {
+        "example": "She put on lip balm before going outside.",
+        "phonetic": "lɪp",
+        "meaning": "嘴唇",
+        "example_translation": "她出门前涂了润唇膏。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "嘴唇",
+        "phonetic": "lip",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "one of the two soft edges of the mouth"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a substance that flows freely and is not a solid or a gas",
+          "checked_uk_ipa": "ˈlɪkwɪd",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liquid_1"
+        }
+      ],
+      "issues": [
+        "liquid 也可作形容词；本例选名词，原词条中的形容词义保留。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2825,
+        "word": "liquid",
+        "headword": "liquid",
+        "homograph": null,
+        "source_raw": "liquid [ˈlikwid] n.液体 a.液体的,液态的"
+      },
+      "proposed": {
+        "example": "Pour the liquid into a clean glass.",
+        "phonetic": "ˈlɪkwɪd",
+        "meaning": "液体 a.液体的,液态的",
+        "example_translation": "把液体倒进干净的玻璃杯里。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "液体 a.液体的,液态的",
+        "phonetic": "ˈlikwid",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a substance that flows freely and is not a solid or a gas"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "an alcoholic drink",
+          "checked_uk_ipa": "ˈlɪkə(r)",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liquor"
+        }
+      ],
+      "issues": [
+        "不同英语地区 liquor 指代酒类的范围有差异，主代理复核词库中“溶液、液剂”义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2826,
+        "word": "liquor",
+        "headword": "liquor",
+        "homograph": null,
+        "source_raw": "liquor [ˈlikə] n.酒;溶液,液剂"
+      },
+      "proposed": {
+        "example": "They served liquor after dinner.",
+        "phonetic": "ˈlɪkə(r)",
+        "meaning": "酒;溶液,液剂",
+        "example_translation": "晚餐后他们供应了酒类饮品。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "酒;溶液,液剂",
+        "phonetic": "ˈlikə",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an alcoholic drink"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "evidence": [
+        {
+          "checked_sense": "a set of names, items or numbers written one below another",
+          "checked_uk_ipa": "lɪst",
+          "accessed": true,
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/list_1"
+        }
+      ],
+      "issues": [
+        "list 也可作动词表示列出；本例选择名单名词义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2827,
+        "word": "list",
+        "headword": "list",
+        "homograph": null,
+        "source_raw": "list [list] n.表,目录,名单 v.把…编列成表,列入表内"
+      },
+      "proposed": {
+        "example": "Please add your name to the list.",
+        "phonetic": "lɪst",
+        "meaning": "表,目录,名单 v.把…编列成表,列入表内",
+        "example_translation": "请把你的名字加到名单里。",
+        "teaching_note": "",
+        "pos": "n."
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "表,目录,名单 v.把…编列成表,列入表内",
+        "phonetic": "list",
+        "example": "",
+        "example_translation": ""
+      },
+      "verification": "source-checked",
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a set of names, items or numbers written one below another"
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "external_human_review": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2829,
+        "word": "literacy",
+        "headword": "literacy",
+        "homograph": null,
+        "source_raw": "literacy [ˈlitərəsi] n.有文化,有教养,有读写能力"
+      },
+      "issues": [
+        "literacy 还可指特定领域的知识或技能，如 digital literacy；需与 illiteracy 区分。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "the ability to read and write",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtərəsi",
+        "example_translation": "这个项目帮助成年人提高读写能力。",
+        "example": "The program helps adults improve their literacy.",
+        "meaning": "有文化,有教养,有读写能力",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "有文化,有教养,有读写能力",
+        "phonetic": "ˈlitərəsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtərəsi",
+          "checked_sense": "the ability to read and write",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/literacy"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2830,
+        "word": "literally",
+        "headword": "literally",
+        "homograph": null,
+        "source_raw": "literally [ˈlitərəli] ad.照字面意义,逐字地;确实"
+      },
+      "issues": [
+        "口语中 literally 也常作强调语；本例使用照字面义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "in a literal way",
+        "pos": "adverb"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtərəli",
+        "example_translation": "这个短语的字面意思是“阳光下的一个地方”。",
+        "example": "The phrase literally means “a place in the sun.”",
+        "meaning": "照字面意义,逐字地;确实",
+        "pos": "ad.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "ad.",
+        "meaning": "照字面意义,逐字地;确实",
+        "phonetic": "ˈlitərəli",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtərəli",
+          "checked_sense": "in a literal way",
+          "checked_pos": "adverb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/literally"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2831,
+        "word": "literary",
+        "headword": "literary",
+        "homograph": null,
+        "source_raw": "literary [ˈlitərəri] a.文学上的,文学的;精通文学的,从事写作的"
+      },
+      "issues": [
+        "literary 可表示文学相关或善于文学的；勿与 literal 混淆。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "connected with literature",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtərəri",
+        "example_translation": "这座城镇每年春天举办文学节。",
+        "example": "The town holds a literary festival each spring.",
+        "meaning": "文学上的,文学的;精通文学的,从事写作的",
+        "pos": "a.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "a.",
+        "meaning": "文学上的,文学的;精通文学的,从事写作的",
+        "phonetic": "ˈlitərəri",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtərəri",
+          "checked_sense": "connected with literature",
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/literary"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2832,
+        "word": "literature",
+        "headword": "literature",
+        "homograph": null,
+        "source_raw": "literature [ˈlitərətʃə] n.文学,文学作品,文献,图书资料,印刷品"
+      },
+      "issues": [
+        "literature 还可泛指某一主题的文献或印刷材料，保留原有广义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "written works that are considered to be very good or important",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtərətʃə(r)",
+        "example_translation": "她在大学学习英国文学。",
+        "example": "She studied English literature at university.",
+        "meaning": "文学,文学作品,文献,图书资料,印刷品",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "文学,文学作品,文献,图书资料,印刷品",
+        "phonetic": "ˈlitərətʃə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtərətʃə(r)",
+          "checked_sense": "written works that are considered to be very good or important",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/literature"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2833,
+        "word": "litre",
+        "headword": "litre",
+        "homograph": null,
+        "source_raw": "litre [ˈliːtə] n.(liter)升;公升(容量单位)"
+      },
+      "issues": [
+        "litre 为英式拼写，liter 为美式拼写；两者不合并。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "a unit for measuring liquid equal to 1,000 cubic centimetres",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈliːtə(r)",
+        "example_translation": "往锅里加一升水。",
+        "example": "Add one litre of water to the pot.",
+        "meaning": "(liter)升;公升(容量单位)",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "(liter)升;公升(容量单位)",
+        "phonetic": "ˈliːtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈliːtə(r)",
+          "checked_sense": "a unit for measuring liquid equal to 1,000 cubic centimetres",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/litre"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2834,
+        "word": "litter",
+        "headword": "litter",
+        "homograph": null,
+        "source_raw": "litter [ˈlitə] n.垃圾,(杂乱的)废物 v.使杂乱,乱丢"
+      },
+      "issues": [
+        "litter 还指一窝幼崽、猫砂等；本例为公共场所垃圾，保留动词义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "small pieces of rubbish left lying in a public place",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtə(r)",
+        "example_translation": "请把垃圾扔进垃圾桶。",
+        "example": "Please put your litter in the bin.",
+        "meaning": "垃圾,(杂乱的)废物 v.使杂乱,乱丢",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "垃圾,(杂乱的)废物 v.使杂乱,乱丢",
+        "phonetic": "ˈlitə",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtə(r)",
+          "checked_sense": "small pieces of rubbish such as paper, cans and bottles left in a public place",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/litter_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2835,
+        "word": "little",
+        "headword": "little",
+        "homograph": null,
+        "source_raw": "little [ˈlitl] a.小,幼小;不多的 ad./n.不多,几乎没有"
+      },
+      "issues": [
+        "little 还表示年幼、时间短或数量少；限定词和副词用法应分别保留。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "not big; small",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪtl",
+        "example_translation": "他们住在河边一所小房子里。",
+        "example": "They live in a little house by the river.",
+        "meaning": "小,幼小;不多的 ad./n.不多,几乎没有",
+        "pos": "a.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "a.",
+        "meaning": "小,幼小;不多的 ad./n.不多,几乎没有",
+        "phonetic": "ˈlitl",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪtl",
+          "checked_sense": "not big; small; smaller than others",
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/little_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2836,
+        "word": "live",
+        "headword": "live",
+        "homograph": null,
+        "source_raw": "live [liv] v.活着,生活,居住 a.活的,生动的,直播的"
+      },
+      "issues": [
+        "live 动词读 /lɪv/；形容词 live 表示现场直播时读音不同，不能共用音标。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "to have your home in a particular place",
+        "pos": "verb"
+      },
+      "proposed": {
+        "phonetic": "lɪv",
+        "example_translation": "他们住在海边的一个小村庄里。",
+        "example": "They live in a small village near the coast.",
+        "meaning": "活着,生活,居住 a.活的,生动的,直播的",
+        "pos": "v.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "v.",
+        "meaning": "活着,生活,居住 a.活的,生动的,直播的",
+        "phonetic": "liv",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "lɪv",
+          "checked_sense": "to have your home in a particular place",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/live1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2837,
+        "word": "lively",
+        "headword": "lively",
+        "homograph": null,
+        "source_raw": "lively [ˈlaivli] a.活泼的,活跃的;栩栩如生的,真实的"
+      },
+      "issues": [
+        "lively 也可形容生动、有活力或热闹的场合。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "full of energy and enthusiasm",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "phonetic": "ˈlaɪvli",
+        "example_translation": "孩子们围绕这个故事进行了热烈的讨论。",
+        "example": "The children had a lively discussion about the story.",
+        "meaning": "活泼的,活跃的;栩栩如生的,真实的",
+        "pos": "a.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "a.",
+        "meaning": "活泼的,活跃的;栩栩如生的,真实的",
+        "phonetic": "ˈlaivli",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlaɪvli",
+          "checked_sense": "full of energy and enthusiasm",
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lively"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2838,
+        "word": "liver",
+        "headword": "liver",
+        "homograph": null,
+        "source_raw": "liver n.肝,肝脏"
+      },
+      "issues": [
+        "liver 还指可食用的动物肝脏；本例为人体器官义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "a large organ in the body that cleans the blood",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪvə(r)",
+        "example_translation": "肝脏有助于清除血液中的废物。",
+        "example": "The liver helps remove waste from the blood.",
+        "meaning": "肝,肝脏",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "肝,肝脏",
+        "phonetic": "ˈlɪvə(r)",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪvə(r)",
+          "checked_sense": "a large organ in the body that cleans the blood",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/liver"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2839,
+        "word": "living",
+        "headword": "living",
+        "homograph": null,
+        "source_raw": "living [ˈliviŋ] a.活的,有生命的,天然的,逼真的n.生活,生计"
+      },
+      "issues": [
+        "living 还可表示谋生方式或生计，也用于 living language 等搭配。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "alive now",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪvɪŋ",
+        "example_translation": "这个公园保护着许多现存的动植物。",
+        "example": "The park protects many living plants and animals.",
+        "meaning": "活的,有生命的,天然的,逼真的 n.生活,生计",
+        "pos": "a.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "a.",
+        "meaning": "活的,有生命的,天然的,逼真的n.生活,生计",
+        "phonetic": "ˈliviŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪvɪŋ",
+          "checked_sense": "alive now",
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/living_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2840,
+        "word": "living-room",
+        "headword": "living-room",
+        "homograph": null,
+        "source_raw": "living-room n.起居室"
+      },
+      "issues": [
+        "词典词头通常写 living room，也有 sitting room；保留输入拼写和身份。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "a room in a house for sitting and relaxing in",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɪvɪŋ ruːm",
+        "example_translation": "我们晚上在起居室里聊天。",
+        "example": "We spent the evening talking in the living room.",
+        "meaning": "起居室",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "起居室",
+        "phonetic": "ˈlɪvɪŋ ruːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɪvɪŋ ruːm",
+          "checked_sense": "a room in a house for sitting and relaxing in",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/living-room"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2841,
+        "word": "load",
+        "headword": "load",
+        "homograph": null,
+        "source_raw": "load [ləud] v.装(货),装载 n.装载(量),负荷(量);(一)担"
+      },
+      "issues": [
+        "load 也可指给枪装弹、加载数据或使某人负重；原释义保留名词义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "to put a large quantity of things onto or into something",
+        "pos": "verb"
+      },
+      "proposed": {
+        "phonetic": "ləʊd",
+        "example_translation": "他们把箱子装进了货车。",
+        "example": "They loaded the boxes into the van.",
+        "meaning": "装(货),装载 n.装载(量),负荷(量);(一)担",
+        "pos": "v.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "v.",
+        "meaning": "装(货),装载 n.装载(量),负荷(量);(一)担",
+        "phonetic": "ləud",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊd",
+          "checked_sense": "to put a large quantity of things or people onto or into something",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/load_2"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2842,
+        "word": "loaf",
+        "headword": "loaf",
+        "homograph": null,
+        "source_raw": "loaf [ləuf] n.一个面包"
+      },
+      "issues": [
+        "复数为 loaves，注意词尾变化。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "an amount of bread shaped and baked in one piece",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ləʊf",
+        "example_translation": "他买了一条面包当午餐。",
+        "example": "He bought a loaf of bread for lunch.",
+        "meaning": "一个面包",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "一个面包",
+        "phonetic": "ləuf",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊf",
+          "checked_sense": "an amount of bread that has been shaped and baked in one piece",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loaf_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2843,
+        "word": "loan",
+        "headword": "loan",
+        "homograph": null,
+        "source_raw": "loan [ləun] n.贷款;出借,借出 v.借出"
+      },
+      "issues": [
+        "loan 也可指借出或借入的物品，动词 loan 需区分语境和词性。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "money that somebody borrows from a bank or another person",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ləʊn",
+        "example_translation": "她按月偿还贷款。",
+        "example": "She repaid the loan in monthly payments.",
+        "meaning": "贷款;出借,借出 v.借出",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "贷款;出借,借出 v.借出",
+        "phonetic": "ləun",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊn",
+          "checked_sense": "money that an organization or person lends and somebody borrows",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loan_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2844,
+        "word": "lobby",
+        "headword": "lobby",
+        "homograph": null,
+        "source_raw": "lobby [ˈlɔbi] n.门廊,门厅,(会议)休息厅"
+      },
+      "issues": [
+        "lobby 另有政治游说团体、议会大厅等义；美式音标不同。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "a large area inside the entrance of a public building",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ˈlɒbi",
+        "example_translation": "我们在酒店门厅等导游。",
+        "example": "We waited for the guide in the hotel lobby.",
+        "meaning": "门廊,门厅,(会议)休息厅",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "门廊,门厅,(会议)休息厅",
+        "phonetic": "ˈlɔbi",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈlɒbi",
+          "checked_sense": "a large area inside the entrance of a public building where people can meet and wait",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lobby_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2845,
+        "word": "local",
+        "headword": "local",
+        "homograph": null,
+        "source_raw": "local [ˈləukəl] a.地方的,当地的;局部的"
+      },
+      "issues": [
+        "local 也可表示局部的或特定服务范围内的，按语境选择。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "connected with a particular area",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "phonetic": "ˈləʊkl",
+        "example_translation": "当地市场每周六很早开门。",
+        "example": "The local market opens early on Saturdays.",
+        "meaning": "地方的,当地的;局部的",
+        "pos": "a.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "a.",
+        "meaning": "地方的,当地的;局部的",
+        "phonetic": "ˈləukəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ˈləʊkl",
+          "checked_sense": "connected with the particular place or area that you are talking about",
+          "checked_pos": "adjective",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/local_1"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2846,
+        "word": "locality",
+        "headword": "locality",
+        "homograph": null,
+        "source_raw": "locality [ləuˈkæləti] n.位置,地点"
+      },
+      "issues": [
+        "较正式用语；也可指某事物存在的地点。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "the area that surrounds the place you are in or are talking about",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ləʊˈkæləti",
+        "example_translation": "附近有几家小农场在经营。",
+        "example": "Several small farms operate in the locality.",
+        "meaning": "位置,地点",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "位置,地点",
+        "phonetic": "ləuˈkæləti",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊˈkæləti",
+          "checked_sense": "the area that surrounds the place you are in or are talking about",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/locality"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2847,
+        "word": "locate",
+        "headword": "locate",
+        "homograph": null,
+        "source_raw": "locate [ləuˈkeit, ˈləu] v.查出,探出,查找…地点,使…坐落于,位于"
+      },
+      "issues": [
+        "locate 也可作及物动词表示把设施设置在某地；本例选择查找位置义。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "to find the exact position of somebody or something",
+        "pos": "verb"
+      },
+      "proposed": {
+        "phonetic": "ləʊˈkeɪt",
+        "example_translation": "团队借助地图找到了小屋的位置。",
+        "example": "The team used a map to locate the cabin.",
+        "meaning": "查出,探出,查找…地点,使…坐落于,位于",
+        "pos": "v.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "v.",
+        "meaning": "查出,探出,查找…地点,使…坐落于,位于",
+        "phonetic": "ləuˈkeit, ˈləu",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊˈkeɪt",
+          "checked_sense": "to find the exact position of somebody or something",
+          "checked_pos": "verb",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/locate"
+        }
+      ]
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2848,
+        "word": "location",
+        "headword": "location",
+        "homograph": null,
+        "source_raw": "location [ləuˈkeiʃən] n.位置,场所,定位,测位"
+      },
+      "issues": [
+        "location 也指物体所在位置或拍摄地点；不可与 locate 动词混淆。"
+      ],
+      "full_dictionary_senses_reviewed": false,
+      "external_human_review": false,
+      "selected_sense": {
+        "meaning": "a place where something happens or exists",
+        "pos": "noun"
+      },
+      "proposed": {
+        "phonetic": "ləʊˈkeɪʃn",
+        "example_translation": "摄制组为拍摄选了一个安静地点。",
+        "example": "The crew chose a quiet location for filming.",
+        "meaning": "位置,场所,定位,测位",
+        "pos": "n.",
+        "teaching_note": ""
+      },
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "verification": "source-checked",
+      "original": {
+        "pos": "n.",
+        "meaning": "位置,场所,定位,测位",
+        "phonetic": "ləuˈkeiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "evidence": [
+        {
+          "accessed": true,
+          "checked_uk_ipa": "ləʊˈkeɪʃn",
+          "checked_sense": "a place where something happens or exists; the position of something",
+          "checked_pos": "noun",
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/location"
+        }
+      ]
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɒk",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/lock_2",
+          "checked_sense": "a device that keeps a door, window, box, etc. shut, usually needing a key to open it"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "锁 v.锁,锁上",
+        "phonetic": "lɔk",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "lock 还可指机器锁止装置、运河闸室、发绺等；名词读 /lɒk/，动词也同音。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2849,
+        "word": "lock",
+        "headword": "lock",
+        "homograph": null,
+        "source_raw": "lock [lɔk] n.锁 v.锁,锁上"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a device that keeps a door shut, usually needing a key to open it",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "She turned the key in the lock.",
+        "example_translation": "她转动钥匙打开了锁。",
+        "meaning": "锁 v.锁,锁上",
+        "teaching_note": "",
+        "phonetic": "lɒk"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒkə(r)",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/locker",
+          "checked_sense": "a small cupboard that can be locked, especially one used for keeping clothes or personal possessions in"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "更衣箱",
+        "phonetic": "ˈlɔkə",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "locker 可指学校、健身房等处的储物柜。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2850,
+        "word": "locker",
+        "headword": "locker",
+        "homograph": null,
+        "source_raw": "locker [ˈlɔkə] n.更衣箱"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a small cupboard that can be locked, especially one used for keeping clothes or personal possessions in",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "She left her coat in the locker.",
+        "example_translation": "她把外套放在更衣柜里。",
+        "meaning": "更衣箱",
+        "teaching_note": "",
+        "phonetic": "ˈlɒkə(r)"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˌləʊkəˈməʊtɪv",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/locomotive_1",
+          "checked_sense": "a railway engine that pulls a train"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "机车,火车头 a.运动的,移动的,运载的",
+        "phonetic": "ˈləukə,məutiv",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "locomotive 也有正式形容词义“运动的、移动的”，本例选名词火车机车义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2851,
+        "word": "locomotive",
+        "headword": "locomotive",
+        "homograph": null,
+        "source_raw": "locomotive [ˈləukə,məutiv] n.机车,火车头 a.运动的,移动的,运载的"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a railway engine that pulls a train",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The locomotive pulled six passenger carriages.",
+        "example_translation": "机车牵引着六节客车车厢。",
+        "meaning": "机车,火车头 a.运动的,移动的",
+        "teaching_note": "",
+        "phonetic": "ˌləʊkəˈməʊtɪv"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɒdʒ",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lodge_2",
+          "checked_sense": "to make a formal statement about something to a public organization or authority"
+        }
+      ],
+      "original": {
+        "pos": "v.",
+        "meaning": "临时住宿,寄宿,寄存,容纳n.传达室,小旅馆",
+        "phonetic": "lɔdʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "lodge 还表示住宿、寄存或卡住；本例选择正式提交申诉义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2852,
+        "word": "lodge",
+        "headword": "lodge",
+        "homograph": null,
+        "source_raw": "lodge [lɔdʒ] v.临时住宿,寄宿,寄存,容纳n.传达室,小旅馆"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "to make a formal statement to a public organization or authority",
+        "pos": "verb"
+      },
+      "proposed": {
+        "pos": "v.",
+        "example": "They lodged a complaint with the council.",
+        "example_translation": "他们向市政委员会提出了投诉。",
+        "meaning": "临时住宿,寄宿,寄存,容纳 n.传达室,小旅馆",
+        "teaching_note": "",
+        "phonetic": "lɒdʒ"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒfti",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lofty",
+          "checked_sense": "very high and impressive"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "崇高的,高尚的;高傲的;极高的",
+        "phonetic": "ˈlɔfti, ˈlɔːf-",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "lofty 还可形容崇高理想或高傲态度，需结合搭配判断。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2853,
+        "word": "lofty",
+        "headword": "lofty",
+        "homograph": null,
+        "source_raw": "lofty [ˈlɔfti, ˈlɔːf-] a.崇高的,高尚的;高傲的;极高的"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "very high and impressive",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "pos": "a.",
+        "example": "The castle stood on a lofty hill.",
+        "example_translation": "城堡矗立在一座高耸的山丘上。",
+        "meaning": "崇高的,高尚的;高傲的;极高的",
+        "teaching_note": "",
+        "phonetic": "ˈlɒfti"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɒɡ",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/log_1",
+          "checked_sense": "a thick piece of wood that is cut from or has fallen from a tree"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "原木,圆木;航海日志",
+        "phonetic": "lɔɡ, lɔːɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "log 还可指航海日志、活动记录或数学对数；例句选原木义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2854,
+        "word": "log",
+        "headword": "log",
+        "homograph": null,
+        "source_raw": "log [lɔɡ, lɔːɡ] n.原木,圆木;航海日志"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a thick piece of wood cut from a tree",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "They used a log to support the broken fence.",
+        "example_translation": "他们用一根原木支撑坏掉的栅栏。",
+        "meaning": "原木,圆木;航海日志",
+        "teaching_note": "",
+        "phonetic": "lɒɡ"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒdʒɪk",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/logic_1",
+          "checked_sense": "a way of thinking or explaining something"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "逻辑,逻辑学",
+        "phonetic": "ˈlɔdʒik",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "logic 也指逻辑学及计算机逻辑；本例取一般推理方式义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2855,
+        "word": "logic",
+        "headword": "logic",
+        "homograph": null,
+        "source_raw": "logic [ˈlɔdʒik] n.逻辑,逻辑学"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a way of thinking or explaining something",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "I could not follow the logic of his decision.",
+        "example_translation": "我无法理解他这个决定的逻辑。",
+        "meaning": "逻辑,逻辑学",
+        "teaching_note": "",
+        "phonetic": "ˈlɒdʒɪk"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒdʒɪkl",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/logical_1",
+          "checked_sense": "following or able to follow the rules of logic"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "逻辑的,符合逻辑的",
+        "phonetic": "ˈlɔdʒikəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "也可表示合乎常理的；与名词 logic 区分。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2856,
+        "word": "logical",
+        "headword": "logical",
+        "homograph": null,
+        "source_raw": "logical [ˈlɔdʒikəl] a.逻辑的,符合逻辑的"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "following or able to follow the rules of logic",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "pos": "a.",
+        "example": "Her explanation was clear and logical.",
+        "example_translation": "她的解释清楚而有逻辑。",
+        "meaning": "逻辑的,符合逻辑的",
+        "teaching_note": "",
+        "phonetic": "ˈlɒdʒɪkl"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈləʊnli",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/lonely",
+          "checked_sense": "unhappy because you have no friends or people to talk to"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "孤独的,寂寞的;荒凉的,人迹稀少的",
+        "phonetic": "ˈləunli",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "lonely 也可形容人迹稀少的地方；alone 本身不一定表示孤独。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2857,
+        "word": "lonely",
+        "headword": "lonely",
+        "homograph": null,
+        "source_raw": "lonely [ˈləunli] a.孤独的,寂寞的;荒凉的,人迹稀少的"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "unhappy because you have no friends or people to talk to",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "pos": "a.",
+        "example": "He felt lonely after moving to a new city.",
+        "example_translation": "搬到新城市后，他感到孤独。",
+        "meaning": "孤独的,寂寞的;荒凉的,人迹稀少的",
+        "teaching_note": "",
+        "phonetic": "ˈləʊnli"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɒŋ",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/long_1",
+          "checked_sense": "measuring a great distance from one end to the other"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "长的,长时间的,长期的 ad.长久,长期地",
+        "phonetic": "lɔŋ, lɔːŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "long 另有时间长、长期等义；副词和其他词性需分别核对。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2858,
+        "word": "long",
+        "headword": "long",
+        "homograph": null,
+        "source_raw": "long [lɔŋ, lɔːŋ] a.长的,长时间的,长期的 ad.长久,长期地"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "measuring a great distance from one end to the other",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "pos": "a.",
+        "example": "The bridge is two kilometres long.",
+        "example_translation": "这座桥有两公里长。",
+        "meaning": "长的,长时间的,长期的 ad.长久,长期地",
+        "teaching_note": "",
+        "phonetic": "lɒŋ"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒŋɡɪtjuːd",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/longitude",
+          "checked_sense": "the distance of a place east or west of the Greenwich meridian"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "经度",
+        "phonetic": "ˈlɔndʒitjuːd, -tuːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "longitude 与 latitude（纬度）相对应；原音标转写需按词典修订。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2859,
+        "word": "longitude",
+        "headword": "longitude",
+        "homograph": null,
+        "source_raw": "longitude [ˈlɔndʒitjuːd, -tuːd] n.经度"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "the distance of a place east or west of the Greenwich meridian",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The island lies at 12 degrees west longitude.",
+        "example_translation": "这座岛位于西经十二度。",
+        "meaning": "经度",
+        "teaching_note": "",
+        "phonetic": "ˈlɒŋɡɪtjuːd"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lʊk",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/look_1",
+          "checked_sense": "to turn your eyes in a particular direction"
+        }
+      ],
+      "original": {
+        "pos": "vi./n.",
+        "meaning": "看,注视 v.好像,显得 n.外表,脸色",
+        "phonetic": "luk",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "look 还可表示看起来、寻找或外表；本例采用注视义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2860,
+        "word": "look",
+        "headword": "look",
+        "homograph": null,
+        "source_raw": "look [luk] vi./n.看,注视 v.好像,显得 n.外表,脸色"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "to turn your eyes in a particular direction",
+        "pos": "verb"
+      },
+      "proposed": {
+        "pos": "vi./n.",
+        "example": "Look at the sign above the door.",
+        "example_translation": "看门上方的标志。",
+        "meaning": "看,注视 v.好像,显得 n.外表,脸色",
+        "teaching_note": "",
+        "phonetic": "lʊk"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "luːm",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loom_2",
+          "checked_sense": "a machine for making cloth by crossing threads over and under other threads"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "织布机,织机 v.隐现,(危险、忧虑等)迫近",
+        "phonetic": "luːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "loom 另有动词隐约出现、迫近义，与本名词不同词性。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2861,
+        "word": "loom",
+        "headword": "loom",
+        "homograph": null,
+        "source_raw": "loom [luːm] n.织布机,织机 v.隐现,(危险、忧虑等)迫近"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a machine for making cloth by crossing threads over and under other threads",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The museum displayed an old hand loom.",
+        "example_translation": "博物馆展出了一台旧手织机。",
+        "meaning": "织布机,织机 v.隐现,(危险、忧虑等)迫近",
+        "teaching_note": "",
+        "phonetic": "luːm"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "luːp",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loop_1",
+          "checked_sense": "a shape like a curve or circle made by a line curving right round"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "圈,环",
+        "phonetic": "luːp",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "loop 还可指绳圈、磁带循环、计算机循环等义。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2862,
+        "word": "loop",
+        "headword": "loop",
+        "homograph": null,
+        "source_raw": "loop [luːp] n.圈,环"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a shape like a curve or circle made by a line curving right round",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The path forms a loop around the pond.",
+        "example_translation": "这条小路绕池塘形成一个环形。",
+        "meaning": "圈,环",
+        "teaching_note": "",
+        "phonetic": "luːp"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "luːs",
+          "checked_pos": "adjective",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/loose_1",
+          "checked_sense": "not securely fixed where it should be; able to become separated from something"
+        }
+      ],
+      "original": {
+        "pos": "a.",
+        "meaning": "(宽)松的;不精确的;自由的,散漫的",
+        "phonetic": "luːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "常与 lose 混淆：loose 是形容词，lose 是“丢失”动词；loose 也可作动词“释放”。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2863,
+        "word": "loose",
+        "headword": "loose",
+        "homograph": null,
+        "source_raw": "loose [luːs] a.(宽)松的;不精确的;自由的,散漫的"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "not securely fixed where it should be",
+        "pos": "adjective"
+      },
+      "proposed": {
+        "pos": "a.",
+        "example": "One button on my coat is loose.",
+        "example_translation": "我外套上有一颗扣子松了。",
+        "meaning": "(宽)松的;不精确的;自由的,散漫的",
+        "teaching_note": "",
+        "phonetic": "luːs"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈluːsn",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loosen",
+          "checked_sense": "to make something less tight or strongly fixed"
+        }
+      ],
+      "original": {
+        "pos": "v.",
+        "meaning": "解开,放松",
+        "phonetic": "ˈluːsən",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "loosen 还可指松开发型、减弱控制或关系。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2864,
+        "word": "loosen",
+        "headword": "loosen",
+        "homograph": null,
+        "source_raw": "loosen [ˈluːsən] v.解开,放松"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "to make something less tight or strongly fixed",
+        "pos": "verb"
+      },
+      "proposed": {
+        "pos": "v.",
+        "example": "Loosen the cap before pouring the juice.",
+        "example_translation": "倒果汁前先把瓶盖拧松。",
+        "meaning": "解开,放松",
+        "teaching_note": "",
+        "phonetic": "ˈluːsn"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɔːd",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lord_1",
+          "checked_sense": "a man of high rank in the nobility in the UK"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "(Lord)上帝,主;主人,长官,君主,贵族",
+        "phonetic": "lɔːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "Lord 作为称号、宗教称谓和英国上议院名称时大小写与语境不同。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2865,
+        "word": "lord",
+        "headword": "lord",
+        "homograph": null,
+        "source_raw": "lord [lɔːd] n.(Lord)上帝,主;主人,长官,君主,贵族"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a man of high rank in the nobility in the UK",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The lord opened the gates of his estate.",
+        "example_translation": "贵族领主打开了庄园的大门。",
+        "meaning": "(Lord)上帝,主;主人,长官,君主,贵族",
+        "teaching_note": "",
+        "phonetic": "lɔːd"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "ˈlɒri",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lorry",
+          "checked_sense": "a large vehicle for carrying goods by road"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "卡车,运货汽车",
+        "phonetic": "ˈlɔːri, ˈlɔː-",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "British English；American English 常用 truck。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2866,
+        "word": "lorry",
+        "headword": "lorry",
+        "homograph": null,
+        "source_raw": "lorry [ˈlɔːri, ˈlɔː-] n.卡车,运货汽车"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "a large vehicle for carrying goods by road",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "A lorry delivered the furniture this morning.",
+        "example_translation": "一辆货车今天早上送来了家具。",
+        "meaning": "卡车,运货汽车",
+        "teaching_note": "",
+        "phonetic": "ˈlɒri"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "luːz",
+          "checked_pos": "verb",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/lose",
+          "checked_sense": "to be unable to find something or somebody"
+        }
+      ],
+      "original": {
+        "pos": "v.",
+        "meaning": "丢失,迷路,输掉,亏本,失败,走慢,使沉湎于",
+        "phonetic": "luːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "lose 可指丢失、输掉、失去、亏损或钟表走慢；与 loose 拼写相似但词性不同。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2867,
+        "word": "lose",
+        "headword": "lose",
+        "homograph": null,
+        "source_raw": "lose [luːz] v.丢失,迷路,输掉,亏本,失败,走慢,使沉湎于"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "to be unable to find something or somebody",
+        "pos": "verb"
+      },
+      "proposed": {
+        "pos": "v.",
+        "example": "I hope I do not lose my keys again.",
+        "example_translation": "希望我不会再把钥匙弄丢。",
+        "meaning": "丢失,迷路,输掉,亏本,失败,走慢,使沉湎于",
+        "teaching_note": "",
+        "phonetic": "luːz"
+      }
+    },
+    {
+      "evidence": [
+        {
+          "checked_uk_ipa": "lɒs",
+          "checked_pos": "noun",
+          "accessed": true,
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/loss",
+          "checked_sense": "the state of no longer having something or as much of something"
+        }
+      ],
+      "original": {
+        "pos": "n.",
+        "meaning": "丧失,遗失;损失,损耗,亏损;失败",
+        "phonetic": "lɔs, lɔːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "issues": [
+        "loss 也指经济损失、失败或死亡等；按上下文确定具体义项。"
+      ],
+      "external_human_review": false,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2868,
+        "word": "loss",
+        "headword": "loss",
+        "homograph": null,
+        "source_raw": "loss [lɔs, lɔːs] n.丧失,遗失;损失,损耗,亏损;失败"
+      },
+      "full_dictionary_senses_reviewed": false,
+      "verification": "source-checked",
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条并核对所选词性、义项与英式音标；保留原有多义内容，补写原创例句。",
+      "selected_sense": {
+        "meaning": "the state of no longer having something or as much of something",
+        "pos": "noun"
+      },
+      "proposed": {
+        "pos": "n.",
+        "example": "The fire caused the loss of several old records.",
+        "example_translation": "火灾造成几份旧档案遗失。",
+        "meaning": "丧失,遗失;损失,损耗,亏损;失败",
+        "teaching_note": "",
+        "phonetic": "lɒs"
+      }
+    }
+  ]
+}

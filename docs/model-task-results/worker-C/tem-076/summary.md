@@ -1,0 +1,110 @@
+# tem-076 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；保留原词性和完整原释义）
+- 证据已核对数量：4
+- needs-review 数量：96
+- 疑点数量（issues 条目）：154
+- 输入 SHA256：0d9debd00186c9691a9e8bbde44908830e094fdd7fafa85c5760b26ee3902801
+
+## 待主代理复核
+
+Porcelain、porch、portable、portrait 已访问 Oxford Learner’s Dictionaries 并核对所选义项及英式 IPA；其中 porch、portable、portrait 的其他词典义项尚待确认是否补入。其余条目缺少本轮原始词典证据，音标留空。另有 practitioner 中文文本异常及 prehistoric 条目残留文本需要核对。
+
+- pore 1
+- pore 2
+- pork
+- pornography
+- porridge
+- port
+- porter
+- portfolio
+- portion
+- portray
+- pose
+- position
+- positive
+- possess
+- possession
+- possible
+- possibly
+- post 1
+- post 2
+- post 3
+- postage
+- postcard
+- poster
+- posthumous
+- postman
+- postpone
+- postscript
+- postulate
+- posture
+- pot
+- potato
+- potency
+- potent
+- potential
+- potluck
+- pottery
+- pouch
+- poultry
+- pounce
+- pound 1
+- pound 2
+- pour
+- poverty
+- powder
+- power
+- powerful
+- practicable
+- practical
+- practicality
+- practitioner
+- pragmatic
+- prairie
+- praise
+- pram
+- prawn
+- pray
+- prayer
+- preach
+- precarious
+- precaution
+- precede
+- precedent
+- precinct
+- precious
+- precipitate
+- precipitous
+- precis
+- precise
+- precision
+- preclude
+- predatory
+- predecessor
+- predicament
+- predicate
+- predict
+- prediction
+- predominant
+- prefabricate
+- preface
+- prefer
+- preferable
+- preference
+- preferential
+- prefix
+- pregnancy
+- pregnant
+- prehistoric
+- prejudice
+- preliminary
+- prelude
+- premature
+- premier
+- premise
+- premium
+- premonition
+- prenatal

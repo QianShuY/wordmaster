@@ -1,0 +1,4417 @@
+{
+  "task_id": "npee-031",
+  "input_sha256": "6836a0c068275d50e8650d6e6a927485402ee8138f3bca5bab7da20e00795c49",
+  "status": "proposal",
+  "entries": [
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3776,
+        "word": "procedure",
+        "headword": "procedure",
+        "homograph": null,
+        "source_raw": "procedure [prəˈsiːdʒə] n.程序,手续,步骤"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "程序,手续,步骤",
+        "phonetic": "prəˈsiːdʒə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a way of doing something, especially the usual or correct way"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "程序；手续；步骤",
+        "phonetic": "prəˈsiːdʒə(r)",
+        "example": "Follow the safety procedure before using the machine.",
+        "example_translation": "使用机器前，请遵循安全操作程序。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/procedure",
+          "checked_pos": "noun",
+          "checked_sense": "a way of doing something, especially the usual or correct way",
+          "checked_uk_ipa": "prəˈsiːdʒə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对操作步骤义；司法、行政程序等用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3777,
+        "word": "proceed",
+        "headword": "proceed",
+        "homograph": null,
+        "source_raw": "proceed [prəuˈsiːd] v.进行,继续下去;发生"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "进行,继续下去;发生",
+        "phonetic": "prəuˈsiːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to continue doing something that has already been started"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "进行；继续下去；发生",
+        "phonetic": "prəˈsiːd",
+        "example": "After a short break, we proceeded with the meeting.",
+        "example_translation": "短暂休息后，我们继续开会。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proceed",
+          "checked_pos": "verb",
+          "checked_sense": "to continue doing something that has already been started",
+          "checked_uk_ipa": "prəˈsiːd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常见结构 proceed with/to；词库“发生”义需主审确认语境。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3778,
+        "word": "proceeding",
+        "headword": "proceeding",
+        "homograph": null,
+        "source_raw": "proceeding [prəuˈsiːdiŋ] n.行动,进行,(pl.)会议录,学报"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "行动,进行,(pl.)会议录,学报",
+        "phonetic": "prəuˈsiːdiŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a series of things that are done in order to achieve a particular result"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "行动；进行；（pl.）会议记录，学报",
+        "phonetic": "prəˈsiːdɪŋ",
+        "example": "The proceedings of the meeting were published online.",
+        "example_translation": "会议记录已在线发布。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proceeding",
+          "checked_pos": "noun",
+          "checked_sense": "a series of things that are done in order to achieve a particular result",
+          "checked_uk_ipa": "prəˈsiːdɪŋ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "proceedings 常以复数表示正式会议或法律程序记录；本例核对会议记录义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3779,
+        "word": "process",
+        "headword": "process",
+        "homograph": null,
+        "source_raw": "process [ˈprəuses, ˈprɔ-] n.过程,进程;工序,制作法;工艺 v.加工,处理"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "过程,进程;工序,制作法;工艺 v.加工,处理",
+        "phonetic": "ˈprəuses, ˈprɔ-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a series of things that are done in order to achieve a particular result"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "过程；进程；工序；制作法；工艺；（v.）加工，处理",
+        "phonetic": null,
+        "example": "The process takes about two hours to complete.",
+        "example_translation": "这个过程大约需要两小时完成。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面及英式 IPA；例句为未核实草稿，未能确认词典分项页面。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3780,
+        "word": "procession",
+        "headword": "procession",
+        "homograph": null,
+        "source_raw": "procession [prəuˈseʃən] n.队伍,行列"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "队伍,行列",
+        "phonetic": "prəuˈseʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a line of people or vehicles moving slowly, especially as part of a ceremony"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "队伍；行列",
+        "phonetic": "prəˈseʃn",
+        "example": "A procession moved slowly through the town centre.",
+        "example_translation": "一支队伍缓缓穿过市中心。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/procession",
+          "checked_pos": "noun",
+          "checked_sense": "a line of people or vehicles moving slowly, especially as part of a ceremony",
+          "checked_uk_ipa": "prəˈseʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3781,
+        "word": "proclaim",
+        "headword": "proclaim",
+        "homograph": null,
+        "source_raw": "proclaim [prəuˈkleim] v.宣告,声明"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "宣告,声明",
+        "phonetic": "prəuˈkleim",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to publicly and officially tell people about something important"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "宣告；声明",
+        "phonetic": "prəˈkleɪm",
+        "example": "The council proclaimed the day a local holiday.",
+        "example_translation": "市政委员会宣布这一天为当地假日。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proclaim",
+          "checked_pos": "verb",
+          "checked_sense": "to publicly and officially tell people about something important",
+          "checked_uk_ipa": "prəˈkleɪm",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对正式宣告义；其他搭配未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3782,
+        "word": "produce",
+        "headword": "produce",
+        "homograph": null,
+        "source_raw": "produce [prəuˈdjuːs, ˈprɔdjuːs] v.生产,制造,显示,演出,导致 n.产品"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "生产,制造,显示,演出,导致 n.产品",
+        "phonetic": "prəuˈdjuːs, ˈprɔdjuːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make things to be sold, especially in large quantities"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "生产；制造；显示；演出；导致；（n.）农产品",
+        "phonetic": "prəˈdjuːs",
+        "example": "The factory produces parts for electric cars.",
+        "example_translation": "这家工厂生产电动汽车零部件。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/produce_1",
+          "checked_pos": "verb",
+          "checked_sense": "to make things to be sold, especially in large quantities",
+          "checked_uk_ipa": "prəˈdjuːs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对制造义；显示、演出、导致及名词 produce 的释义应分别复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3783,
+        "word": "product",
+        "headword": "product",
+        "homograph": null,
+        "source_raw": "product [ˈprɔdəkt, -ʌkt] n.产品,产物;乘积"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "产品,产物;乘积",
+        "phonetic": "ˈprɔdəkt, -ʌkt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a thing that is produced or grown, usually to be sold"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "产品；产物；乘积",
+        "phonetic": "ˈprɒdʌkt",
+        "example": "The company launched a new cleaning product.",
+        "example_translation": "这家公司推出了一款新的清洁产品。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/product",
+          "checked_pos": "noun",
+          "checked_sense": "a thing that is produced or grown, usually to be sold",
+          "checked_uk_ipa": "ˈprɒdʌkt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对商品义；数学乘积等专业义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3784,
+        "word": "production",
+        "headword": "production",
+        "homograph": null,
+        "source_raw": "production [prəuˈdʌkʃən] n.生产,产品,作品,(研究)成果,总产量"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "生产,产品,作品,(研究)成果,总产量",
+        "phonetic": "prəuˈdʌkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the process of growing or making food, goods or materials, especially large quantities"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "生产；产品；作品；（研究）成果；总产量",
+        "phonetic": "prəˈdʌkʃn",
+        "example": "The report compares the production of steel in both countries.",
+        "example_translation": "报告比较了两国的钢铁产量。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/production",
+          "checked_pos": "noun",
+          "checked_sense": "the process of growing or making food, goods or materials, especially large quantities",
+          "checked_uk_ipa": "prəˈdʌkʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对产量义；作品、生产过程和成果等义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3785,
+        "word": "productive",
+        "headword": "productive",
+        "homograph": null,
+        "source_raw": "productive [prəuˈdʌktiv] a.生产(性)的,能产的,多产的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "生产(性)的,能产的,多产的",
+        "phonetic": "prəuˈdʌktiv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "making goods or growing crops, especially in large quantities"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "生产（性）的；能产的；多产的",
+        "phonetic": "prəˈdʌktɪv",
+        "example": "The new equipment made the workshop more productive.",
+        "example_translation": "新设备提高了车间的生产效率。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/productive",
+          "checked_pos": "adjective",
+          "checked_sense": "making goods or growing crops, especially in large quantities",
+          "checked_uk_ipa": "prəˈdʌktɪv",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对生产效能义；土地肥沃和创造性用法保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3786,
+        "word": "productivity",
+        "headword": "productivity",
+        "homograph": null,
+        "source_raw": "productivity [ˌprɔdʌkˈtivəti, ,prəu-] n.生产率"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "生产率",
+        "phonetic": "ˌprɔdʌkˈtivəti, ,prəu-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the rate at which a worker, a company or a country produces goods, and the amount produced, compared with how much time, work and money is needed to produce them"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "生产率；生产力",
+        "phonetic": "ˌprɒdʌkˈtɪvəti, ˌprəʊdʌkˈtɪvəti",
+        "example": "The changes led to higher productivity.",
+        "example_translation": "这些变化提高了生产率。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/productivity",
+          "checked_pos": "noun",
+          "checked_sense": "the rate at which a worker, a company or a country produces goods, and the amount produced, compared with how much time, work and money is needed to produce them",
+          "checked_uk_ipa": "ˌprɒdʌkˈtɪvəti, ˌprəʊdʌkˈtɪvəti",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "词典列出两种英式读音，均记录。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3787,
+        "word": "profession",
+        "headword": "profession",
+        "homograph": null,
+        "source_raw": "profession [prəuˈfeʃən] n.职业,专业,表白,宣布"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "职业,专业,表白,宣布",
+        "phonetic": "prəuˈfeʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a type of job that needs special training or skill, especially one that needs a high level of education"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "职业；专业；表白，宣布",
+        "phonetic": "prəˈfeʃn",
+        "example": "Medicine is a demanding profession.",
+        "example_translation": "医学是一门要求很高的职业。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/profession",
+          "checked_pos": "noun",
+          "checked_sense": "a type of job that needs special training or skill, especially one that needs a high level of education",
+          "checked_uk_ipa": "prəˈfeʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对职业义；“表白、宣布”含义需主审核查是否为旧义或误混。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3788,
+        "word": "professional",
+        "headword": "professional",
+        "homograph": null,
+        "source_raw": "professional [prəuˈfeʃənəl] a.职业的,专门的 n.自由职业者,专业人员"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "职业的,专门的 n.自由职业者,专业人员",
+        "phonetic": "prəuˈfeʃənəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "connected with a job that needs special training or skill, especially one that needs a high level of education"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "职业的；专业的；（n.）自由职业者，专业人员",
+        "phonetic": "prəˈfeʃənl",
+        "example": "Please keep a professional tone in the email.",
+        "example_translation": "请在邮件中保持专业的语气。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/professional_1",
+          "checked_pos": "adjective",
+          "checked_sense": "connected with a job that needs special training or skill, especially one that needs a high level of education",
+          "checked_uk_ipa": "prəˈfeʃənl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用职业规范义；名词义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3789,
+        "word": "professor",
+        "headword": "professor",
+        "homograph": null,
+        "source_raw": "professor [prəuˈfesə] n.教授"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "教授",
+        "phonetic": "prəuˈfesə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a university teacher of the highest rank"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "教授",
+        "phonetic": "prəˈfesə(r)",
+        "example": "The professor gave a lecture on modern history.",
+        "example_translation": "教授作了一场关于现代史的讲座。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/professor",
+          "checked_pos": "noun",
+          "checked_sense": "a university teacher of the highest rank",
+          "checked_uk_ipa": "prəˈfesə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "英国等地 professor 常为高级学术职衔，并非所有大学教师的统称。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3790,
+        "word": "proficiency",
+        "headword": "proficiency",
+        "homograph": null,
+        "source_raw": "proficiency [prəuˈfiʃənsi] n.(in)熟练,精通"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(in)熟练,精通",
+        "phonetic": "prəuˈfiʃənsi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the ability to do something well because of training and practice"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "（in）熟练；精通",
+        "phonetic": "prəˈfɪʃnsi",
+        "example": "The job requires proficiency in written English.",
+        "example_translation": "这份工作要求熟练掌握书面英语。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proficiency",
+          "checked_pos": "noun",
+          "checked_sense": "the ability to do something well because of training and practice",
+          "checked_uk_ipa": "prəˈfɪʃnsi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常见结构 proficiency in。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3791,
+        "word": "profile",
+        "headword": "profile",
+        "homograph": null,
+        "source_raw": "profile [ˈprəufail] n.侧面(像);轮廓,外形;人物简介"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "侧面(像);轮廓,外形;人物简介",
+        "phonetic": "ˈprəufail",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a description of somebody/something that gives useful information"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "侧面像；轮廓；外形；人物简介",
+        "phonetic": "ˈprəʊfaɪl",
+        "example": "The magazine published a profile of the young artist.",
+        "example_translation": "这本杂志刊登了一篇年轻艺术家的人物简介。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/profile_1",
+          "checked_pos": "noun",
+          "checked_sense": "a description of somebody/something that gives useful information",
+          "checked_uk_ipa": "ˈprəʊfaɪl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对人物简介义；侧面像和轮廓义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3792,
+        "word": "profit",
+        "headword": "profit",
+        "homograph": null,
+        "source_raw": "profit [ˈprɔfit] n.利润,收益 v.(by,from)得利,获益;有利于"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "利润,收益 v.(by,from)得利,获益;有利于",
+        "phonetic": "ˈprɔfit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the money that you make in business or by selling things, especially after paying the costs involved"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "利润；收益；（v.）得利，获益，有利于",
+        "phonetic": "ˈprɒfɪt",
+        "example": "The shop made a small profit last year.",
+        "example_translation": "这家商店去年获得了少量利润。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/profit_1",
+          "checked_pos": "noun",
+          "checked_sense": "the money that you make in business or by selling things, especially after paying the costs involved",
+          "checked_uk_ipa": "ˈprɒfɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对名词义；动词搭配 by/from 保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3793,
+        "word": "profitable",
+        "headword": "profitable",
+        "homograph": null,
+        "source_raw": "profitable [ˈprɔfitəbl] a.有利可图的,有益的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有利可图的,有益的",
+        "phonetic": "ˈprɔfitəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "that makes or is likely to make a profit"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "有利可图的；有益的",
+        "phonetic": "ˈprɒfɪtəbl",
+        "example": "They turned the small farm into a profitable business.",
+        "example_translation": "他们把这个小农场经营成了盈利的生意。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/profitable",
+          "checked_pos": "adjective",
+          "checked_sense": "that makes or is likely to make a profit",
+          "checked_uk_ipa": "ˈprɒfɪtəbl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "profit 与 beneficial 两类“有益”含义需结合语境区分。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3794,
+        "word": "profound",
+        "headword": "profound",
+        "homograph": null,
+        "source_raw": "profound [prəuˈfaund] a.深刻的,意义深远的;渊博的,造诣深的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "深刻的,意义深远的;渊博的,造诣深的",
+        "phonetic": "prəuˈfaund",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "very great; felt or experienced very strongly"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "深刻的；意义深远的；渊博的；造诣深的",
+        "phonetic": "prəˈfaʊnd",
+        "example": "The book had a profound effect on her thinking.",
+        "example_translation": "这本书对她的思想产生了深远影响。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/profound",
+          "checked_pos": "adjective",
+          "checked_sense": "very great; felt or experienced very strongly",
+          "checked_uk_ipa": "prəˈfaʊnd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对影响深远义；学识深厚及情感强烈义未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3795,
+        "word": "programme",
+        "headword": "programme",
+        "homograph": null,
+        "source_raw": "programme [ˈprəuɡræm, -ɡrəm] n.(program)节目,计划,规划,程序 v.编程序"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(program)节目,计划,规划,程序 v.编程序",
+        "phonetic": "ˈprəuɡræm, -ɡrəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a plan of things that will be done or included in the development of something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "节目；计划；规划；程序；（v.）编程序",
+        "phonetic": null,
+        "example": "The programme starts at eight this evening.",
+        "example_translation": "节目今晚八点开始。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未能取得可核验英式词典页面与 IPA；programme 为英式拼写，program 多用于美式英语，例句为未核实草稿。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3796,
+        "word": "progress",
+        "headword": "progress",
+        "homograph": null,
+        "source_raw": "progress [ˈprəuɡres, prəuˈɡres] v./n.进步,进展;前进"
+      },
+      "original": {
+        "pos": "v./n.",
+        "meaning": "进步,进展;前进",
+        "phonetic": "ˈprəuɡres, prəuˈɡres",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the process of improving or developing, or of getting nearer to achieving or completing something"
+      },
+      "proposed": {
+        "pos": "v./n.",
+        "meaning": "进步；进展；前进",
+        "phonetic": "ˈprəʊɡres",
+        "example": "The project has made good progress this month.",
+        "example_translation": "这个项目本月取得了良好进展。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/progress_1",
+          "checked_pos": "noun",
+          "checked_sense": "the process of improving or developing, or of getting nearer to achieving or completing something",
+          "checked_uk_ipa": "ˈprəʊɡres",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "progress 作名词时为不可数；动词读音重音不同，本例核对名词义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3797,
+        "word": "progressive",
+        "headword": "progressive",
+        "homograph": null,
+        "source_raw": "progressive [prəuˈɡresiv] a.进步的,先进的;前进的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "进步的,先进的;前进的",
+        "phonetic": "prəuˈɡresiv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "happening or developing gradually"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "进步的；先进的；前进的",
+        "phonetic": null,
+        "example": "The school introduced progressive teaching methods.",
+        "example_translation": "这所学校引入了先进的教学方法。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面及英式 IPA；例句为未核实草稿，progressive 有多种专门含义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3798,
+        "word": "prohibit",
+        "headword": "prohibit",
+        "homograph": null,
+        "source_raw": "prohibit [prəuˈhibit] v.禁止,不准;阻止"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "禁止,不准;阻止",
+        "phonetic": "prəuˈhibit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to stop something from being done or used, especially by law"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "禁止；不准；阻止",
+        "phonetic": "prəˈhɪbɪt",
+        "example": "The rules prohibit smoking inside the building.",
+        "example_translation": "规定禁止在楼内吸烟。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prohibit",
+          "checked_pos": "verb",
+          "checked_sense": "to stop something from being done or used, especially by law",
+          "checked_uk_ipa": "prəˈhɪbɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对禁止义；prohibit somebody from doing 的结构需注意。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3799,
+        "word": "project",
+        "headword": "project",
+        "homograph": null,
+        "source_raw": "project [ˈprɔdʒekt, prəˈdʒekt] n.方案,工程,项目v.投射,放映;设计,规划"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "方案,工程,项目v.投射,放映;设计,规划",
+        "phonetic": "ˈprɔdʒekt, prəˈdʒekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a planned piece of work that is designed to find information about something, to produce something new, or to improve something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "方案；工程；项目；（v.）投射，放映；设计，规划",
+        "phonetic": "ˈprɒdʒekt",
+        "example": "The bridge is a major engineering project.",
+        "example_translation": "这座桥是一项大型工程项目。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/project_1",
+          "checked_pos": "noun",
+          "checked_sense": "a planned piece of work that is designed to find information about something, to produce something new, or to improve something",
+          "checked_uk_ipa": "ˈprɒdʒekt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "noun project 重音首音节；动词 project 重音在后，需保持分项。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3800,
+        "word": "projector",
+        "headword": "projector",
+        "homograph": null,
+        "source_raw": "projector [prəuˈdʒektə] n.放映机,幻灯机,投影仪"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "放映机,幻灯机,投影仪",
+        "phonetic": "prəuˈdʒektə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a machine that shows images or films on a screen or wall"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "放映机；幻灯机；投影仪",
+        "phonetic": "prəˈdʒektə(r)",
+        "example": "The teacher connected the laptop to the projector.",
+        "example_translation": "老师把笔记本电脑连接到了投影仪。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/projector",
+          "checked_pos": "noun",
+          "checked_sense": "a machine that shows images or films on a screen or wall",
+          "checked_uk_ipa": "prəˈdʒektə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3801,
+        "word": "prolong",
+        "headword": "prolong",
+        "homograph": null,
+        "source_raw": "prolong [prəˈlɔŋ, ˈlɔːŋ] v.拉长,延长,拖延"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拉长,延长,拖延",
+        "phonetic": "prəˈlɔŋ, ˈlɔːŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make something last longer"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "拉长；延长；拖延",
+        "phonetic": "prəˈlɒŋ",
+        "example": "The delay prolonged our stay by two days.",
+        "example_translation": "这次延误使我们的停留时间延长了两天。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prolong",
+          "checked_pos": "verb",
+          "checked_sense": "to make something last longer",
+          "checked_uk_ipa": "prəˈlɒŋ",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3802,
+        "word": "prominent",
+        "headword": "prominent",
+        "homograph": null,
+        "source_raw": "prominent [ˈprɔminənt] a.突起的,凸出的;突出的,杰出的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "突起的,凸出的;突出的,杰出的",
+        "phonetic": "ˈprɔminənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "very noticeable or important"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "突起的；凸出的；突出的；杰出的",
+        "phonetic": "ˈprɒmɪnənt",
+        "example": "A prominent sign marks the entrance.",
+        "example_translation": "一个醒目的标志标出了入口。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prominent",
+          "checked_pos": "adjective",
+          "checked_sense": "very noticeable or important",
+          "checked_uk_ipa": "ˈprɒmɪnənt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例采用醒目义；人物杰出义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3803,
+        "word": "promise",
+        "headword": "promise",
+        "homograph": null,
+        "source_raw": "promise [ˈprɔmis] v.允许,答应;有…可能n.承诺;希望,出息"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "允许,答应;有…可能n.承诺;希望,出息",
+        "phonetic": "ˈprɔmis",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to tell somebody that you will definitely do or not do something, or that something will definitely happen"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "允许；答应；有……可能；（n.）承诺，希望，出息",
+        "phonetic": "ˈprɒmɪs",
+        "example": "She promised to call as soon as she arrived.",
+        "example_translation": "她答应一到就打电话。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/promise_1",
+          "checked_pos": "verb",
+          "checked_sense": "to tell somebody that you will definitely do or not do something, or that something will definitely happen",
+          "checked_uk_ipa": "ˈprɒmɪs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对承诺义；作为名词的希望/出息义应另审。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3804,
+        "word": "promising",
+        "headword": "promising",
+        "homograph": null,
+        "source_raw": "promising [ˈprɔmisiŋ] a.有希望的,有前途的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有希望的,有前途的",
+        "phonetic": "ˈprɔmisiŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "showing signs of being successful or good in the future"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "有希望的；有前途的",
+        "phonetic": "ˈprɒmɪsɪŋ",
+        "example": "The young musician has a promising future.",
+        "example_translation": "这位年轻音乐家前途可期。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/promising",
+          "checked_pos": "adjective",
+          "checked_sense": "showing signs of being successful or good in the future",
+          "checked_uk_ipa": "ˈprɒmɪsɪŋ",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3805,
+        "word": "promote",
+        "headword": "promote",
+        "homograph": null,
+        "source_raw": "promote [prəuˈməut] v.促进,发扬;提升,提拔;增进,助长"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "促进,发扬;提升,提拔;增进,助长",
+        "phonetic": "prəuˈməut",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to help something to happen or develop"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "促进；发扬；提升，提拔；增进，助长",
+        "phonetic": "prəˈməʊt",
+        "example": "The campaign promotes healthier eating.",
+        "example_translation": "这项宣传活动提倡更健康的饮食。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/promote",
+          "checked_pos": "verb",
+          "checked_sense": "to help something to happen or develop",
+          "checked_uk_ipa": "prəˈməʊt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对促进义；晋升、宣传及其他动词义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3806,
+        "word": "prompt",
+        "headword": "prompt",
+        "homograph": null,
+        "source_raw": "prompt [prɔmpt] a.敏捷的,迅速的,即刻的 v.激起,促进,推动"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "敏捷的,迅速的,即刻的 v.激起,促进,推动",
+        "phonetic": "prɔmpt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "done without delay"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "敏捷的；迅速的；即刻的；（v.）激起，促进，推动",
+        "phonetic": "prɒmpt",
+        "example": "Thank you for your prompt reply.",
+        "example_translation": "感谢你迅速回复。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prompt_2",
+          "checked_pos": "adjective",
+          "checked_sense": "done without delay",
+          "checked_uk_ipa": "prɒmpt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对形容词义；动词义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3807,
+        "word": "prone",
+        "headword": "prone",
+        "homograph": null,
+        "source_raw": "prone [prəun] a.倾向于,俯伏的,倾斜的,陡的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "倾向于,俯伏的,倾斜的,陡的",
+        "phonetic": "prəun",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "likely to suffer from something or to do something bad"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "倾向于；俯伏的；倾斜的；陡的",
+        "phonetic": "prəʊn",
+        "example": "This area is prone to flooding after heavy rain.",
+        "example_translation": "这一区域在大雨后容易发生洪水。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prone",
+          "checked_pos": "adjective",
+          "checked_sense": "likely to suffer from something or to do something bad",
+          "checked_uk_ipa": "prəʊn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常用结构 prone to；俯卧义与风险义不同。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3808,
+        "word": "pronoun",
+        "headword": "pronoun",
+        "homograph": null,
+        "source_raw": "pronoun [ˈprəunaun] n.代词"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "代词",
+        "phonetic": "ˈprəunaun",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a word that is used instead of a noun or noun phrase"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "代词",
+        "phonetic": "ˈprəʊnaʊn",
+        "example": "In “they are ready”, “they” is a pronoun.",
+        "example_translation": "在 they are ready 这个句子中，they 是代词。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pronoun",
+          "checked_pos": "noun",
+          "checked_sense": "a word that is used instead of a noun or noun phrase",
+          "checked_uk_ipa": "ˈprəʊnaʊn",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3809,
+        "word": "pronounce",
+        "headword": "pronounce",
+        "homograph": null,
+        "source_raw": "pronounce [prəuˈnauns] v.发…的音;宣布,宣判"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "发…的音;宣布,宣判",
+        "phonetic": "prəuˈnauns",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make the sound of a word or letter in a particular way"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "发……的音；宣布；宣判",
+        "phonetic": "prəˈnaʊns",
+        "example": "How do you pronounce this surname?",
+        "example_translation": "这个姓氏怎么发音？",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pronounce",
+          "checked_pos": "verb",
+          "checked_sense": "to make the sound of a word or letter in a particular way",
+          "checked_uk_ipa": "prəˈnaʊns",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对读音义；正式宣布或宣判用法应另审。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3810,
+        "word": "pronunciation",
+        "headword": "pronunciation",
+        "homograph": null,
+        "source_raw": "pronunciation [prəu,nʌnsiˈeiʃən] n.发音,发音方法"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "发音,发音方法",
+        "phonetic": "prəu,nʌnsiˈeiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the way in which a language or a particular word or sound is pronounced"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "发音；发音方法",
+        "phonetic": "prəˌnʌnsiˈeɪʃn",
+        "example": "The app helps learners improve their pronunciation.",
+        "example_translation": "这款应用帮助学习者改善发音。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pronunciation",
+          "checked_pos": "noun",
+          "checked_sense": "the way in which a language or a particular word or sound is pronounced",
+          "checked_uk_ipa": "prəˌnʌnsiˈeɪʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3811,
+        "word": "proof",
+        "headword": "proof",
+        "homograph": null,
+        "source_raw": "proof [pruːf] n.证据,证明;校样,样张"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "证据,证明;校样,样张",
+        "phonetic": "pruːf",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "information, documents, etc. that show that something is true"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "证据；证明；校样，样张",
+        "phonetic": "pruːf",
+        "example": "There is no proof that the document was changed.",
+        "example_translation": "没有证据表明这份文件被改动过。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proof_1",
+          "checked_pos": "noun",
+          "checked_sense": "information, documents, etc. that show that something is true",
+          "checked_uk_ipa": "pruːf",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "proof 还可指印刷校样、数学证明等；本例核对证据义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3812,
+        "word": "propaganda",
+        "headword": "propaganda",
+        "homograph": null,
+        "source_raw": "propaganda [ˌprɔpəˈɡændə] n.宣传(机构);[天主教]传道总会"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "宣传(机构);[天主教]传道总会",
+        "phonetic": "ˌprɔpəˈɡændə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "ideas or statements that may be false or exaggerated and that are used in order to gain support for a political leader, party, etc."
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "宣传；宣传机构；（天主教）传道总会",
+        "phonetic": "ˌprɒpəˈɡændə",
+        "example": "The leaflet was criticized as political propaganda.",
+        "example_translation": "这份传单被批评为政治宣传。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/propaganda",
+          "checked_pos": "noun",
+          "checked_sense": "ideas or statements that may be false or exaggerated and that are used in order to gain support for a political leader, party, etc.",
+          "checked_uk_ipa": "ˌprɒpəˈɡændə",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "propaganda 通常带贬义；天主教历史专名义需另核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3813,
+        "word": "propel",
+        "headword": "propel",
+        "homograph": null,
+        "source_raw": "propel [prəuˈpel] vt.推进,推动;激励,驱使"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "推进,推动;激励,驱使",
+        "phonetic": "prəuˈpel",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to move, drive or push something forward or in a particular direction"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "推进；推动；激励，驱使",
+        "phonetic": "prəˈpel",
+        "example": "The engine propels the boat through the water.",
+        "example_translation": "发动机推动船只在水中前行。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/propel",
+          "checked_pos": "verb",
+          "checked_sense": "to move, drive or push something forward or in a particular direction",
+          "checked_uk_ipa": "prəˈpel",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用物理推进义；激励义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3814,
+        "word": "proper",
+        "headword": "proper",
+        "homograph": null,
+        "source_raw": "proper [ˈprɔpə] a.适合的;合乎体统的;固有的;有礼貌的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "适合的;合乎体统的;固有的;有礼貌的",
+        "phonetic": "ˈprɔpə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "appropriate, suitable or correct"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "适合的；合乎体统的；固有的；有礼貌的",
+        "phonetic": "ˈprɒpə(r)",
+        "example": "Please use the proper tools for the job.",
+        "example_translation": "请使用适合这项工作的工具。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proper",
+          "checked_pos": "adjective",
+          "checked_sense": "appropriate, suitable or correct",
+          "checked_uk_ipa": "ˈprɒpə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "proper 含多义与地区口语用法；本例采用适当义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3815,
+        "word": "property",
+        "headword": "property",
+        "homograph": null,
+        "source_raw": "property [ˈprɔpəti] n.财产,资产,地产,房地产,所有物;性质,特性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "财产,资产,地产,房地产,所有物;性质,特性",
+        "phonetic": "ˈprɔpəti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a thing or things that are owned by somebody"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "财产；资产；地产，房地产；所有物；性质，特性",
+        "phonetic": null,
+        "example": "The house is private property.",
+        "example_translation": "这所房子是私人财产。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面及英式 IPA；例句为未核实草稿，property 的财产义与性质义需区分。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3816,
+        "word": "prophet",
+        "headword": "prophet",
+        "homograph": null,
+        "source_raw": "prophet [ˈprɔfit] n.预言家;先知;提倡者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "预言家;先知;提倡者",
+        "phonetic": "ˈprɔfit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who is believed to have been chosen by God to say what God wants to tell people"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "先知；预言家；提倡者",
+        "phonetic": "ˈprɒfɪt",
+        "example": "The prophet warned the people about the coming storm.",
+        "example_translation": "先知警告人们风暴即将来临。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prophet",
+          "checked_pos": "noun",
+          "checked_sense": "a person who is believed to have been chosen by God to say what God wants to tell people",
+          "checked_uk_ipa": "ˈprɒfɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "prophet 有宗教义及比喻义；例句应避免暗示对真实未来的确定预言。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3817,
+        "word": "proportion",
+        "headword": "proportion",
+        "homograph": null,
+        "source_raw": "proportion [prəuˈpɔːʃən] n.比例;部分;均衡,相称"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "比例;部分;均衡,相称",
+        "phonetic": "prəuˈpɔːʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the relationship of one thing to another in size, amount, etc."
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "比例；部分；均衡，相称",
+        "phonetic": "prəˈpɔːʃn",
+        "example": "A large proportion of the budget goes to transport.",
+        "example_translation": "预算中很大一部分用于交通。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proportion",
+          "checked_pos": "noun",
+          "checked_sense": "the relationship of one thing to another in size, amount, etc.",
+          "checked_uk_ipa": "prəˈpɔːʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对数量比例义；均衡及部分义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3818,
+        "word": "proposal",
+        "headword": "proposal",
+        "homograph": null,
+        "source_raw": "proposal [prəuˈpəuzəl] n.提议,建议;求婚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "提议,建议;求婚",
+        "phonetic": "prəuˈpəuzəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a formal suggestion or plan; the act of making a suggestion"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "提议；建议；求婚",
+        "phonetic": "prəˈpəʊzl",
+        "example": "The committee approved her proposal for a new library.",
+        "example_translation": "委员会批准了她关于新图书馆的提议。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proposal",
+          "checked_pos": "noun",
+          "checked_sense": "a formal suggestion or plan; the act of making a suggestion",
+          "checked_uk_ipa": "prəˈpəʊzl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "proposal 也可指求婚；本例采用计划提议义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3819,
+        "word": "propose",
+        "headword": "propose",
+        "homograph": null,
+        "source_raw": "propose [prəuˈpəuz] v.提议,建议;提名,推荐;求婚"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "提议,建议;提名,推荐;求婚",
+        "phonetic": "prəuˈpəuz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to suggest a plan, an idea, etc. for people to think about and decide on"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "提议；建议；提名，推荐；求婚",
+        "phonetic": "prəˈpəʊz",
+        "example": "They proposed meeting again in June.",
+        "example_translation": "他们提议六月再见面。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/propose",
+          "checked_pos": "verb",
+          "checked_sense": "to suggest a plan, an idea, etc. for people to think about and decide on",
+          "checked_uk_ipa": "prəˈpəʊz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常用 propose doing sth 或 propose that；求婚义需另核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3820,
+        "word": "proposition",
+        "headword": "proposition",
+        "homograph": null,
+        "source_raw": "proposition [ˌprɔpəˈziʃən] n.主张,建议;陈述,命题"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "主张,建议;陈述,命题",
+        "phonetic": "ˌprɔpəˈziʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a statement or an opinion that people can consider or discuss"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "主张；建议；陈述；命题",
+        "phonetic": null,
+        "example": "The book examines the proposition that memory can be trained.",
+        "example_translation": "这本书探讨了记忆力可以训练这一命题。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面和英式 IPA；例句为未核实草稿，proposition 还有其他语境义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3821,
+        "word": "prose",
+        "headword": "prose",
+        "homograph": null,
+        "source_raw": "prose [prəuz] n.散文 a.散文的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "散文 a.散文的",
+        "phonetic": "prəuz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "written language in its ordinary form, as opposed to poetry"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "散文；（a.）散文的",
+        "phonetic": "prəʊz",
+        "example": "The novel is written in clear prose.",
+        "example_translation": "这部小说以清晰的散文体写成。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prose",
+          "checked_pos": "noun",
+          "checked_sense": "written language in its ordinary form, as opposed to poetry",
+          "checked_uk_ipa": "prəʊz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对名词义；形容词用法保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3822,
+        "word": "prosecute",
+        "headword": "prosecute",
+        "homograph": null,
+        "source_raw": "prosecute [ˈprɔsikjuːt] vt.实行,从事 v.起诉,告发 vi.作检察官"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "实行,从事 v.起诉,告发 vi.作检察官",
+        "phonetic": "ˈprɔsikjuːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to officially charge somebody with a crime in court"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "实行；从事；起诉，告发；作检察官",
+        "phonetic": "ˈprɒsɪkjuːt",
+        "example": "The company was prosecuted for breaking safety regulations.",
+        "example_translation": "这家公司因违反安全规定而被起诉。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prosecute",
+          "checked_pos": "verb",
+          "checked_sense": "to officially charge somebody with a crime in court",
+          "checked_uk_ipa": "ˈprɒsɪkjuːt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "词库“实行、从事”与本次核对的法律动词义差异较大，需主审核查；例句采用被动结构。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3823,
+        "word": "prospect",
+        "headword": "prospect",
+        "homograph": null,
+        "source_raw": "prospect [ˈprɔspekt] n.景色;前景,前途,展望"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "景色;前景,前途,展望",
+        "phonetic": "ˈprɔspekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the possibility that something will happen"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "景色；前景；前途；展望",
+        "phonetic": "ˈprɒspekt",
+        "example": "The job offers good prospects for promotion.",
+        "example_translation": "这份工作有不错的晋升前景。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prospect_1",
+          "checked_pos": "noun",
+          "checked_sense": "the possibility that something will happen",
+          "checked_uk_ipa": "ˈprɒspekt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对未来前景义；景色义及其他用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3824,
+        "word": "prospective",
+        "headword": "prospective",
+        "homograph": null,
+        "source_raw": "prospective [prəuˈspektiv] a.预期的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "预期的",
+        "phonetic": "prəuˈspektiv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "expected to do something or to become something"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "预期的；未来的",
+        "phonetic": "prəˈspektɪv",
+        "example": "The prospective buyer asked to see the house again.",
+        "example_translation": "这位潜在买家要求再看一次房子。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prospective",
+          "checked_pos": "adjective",
+          "checked_sense": "expected to do something or to become something",
+          "checked_uk_ipa": "prəˈspektɪv",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "prospective buyer 常译为潜在买家；本例依此用法。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3825,
+        "word": "prosper",
+        "headword": "prosper",
+        "homograph": null,
+        "source_raw": "prosper [ˈprɔspə] v.成功,兴隆,昌盛,使成功,使昌隆,繁荣"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "成功,兴隆,昌盛,使成功,使昌隆,繁荣",
+        "phonetic": "ˈprɔspə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to be successful, especially financially"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "成功；兴隆；昌盛；使成功，使昌隆，繁荣",
+        "phonetic": "ˈprɒspə(r)",
+        "example": "Small businesses can prosper with the right support.",
+        "example_translation": "在适当支持下，小企业也能兴旺发展。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prosper",
+          "checked_pos": "verb",
+          "checked_sense": "to be successful, especially financially",
+          "checked_uk_ipa": "ˈprɒspə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对成功发展义；及物使某人繁荣义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3826,
+        "word": "prosperity",
+        "headword": "prosperity",
+        "homograph": null,
+        "source_raw": "prosperity [prɔsˈperiti] n.繁荣,兴旺"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "繁荣,兴旺",
+        "phonetic": "prɔsˈperiti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the state of being successful, especially in making money"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "繁荣；兴旺",
+        "phonetic": "prɒˈsperəti",
+        "example": "The region enjoyed a period of prosperity.",
+        "example_translation": "这个地区曾经历一段繁荣时期。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prosperity",
+          "checked_pos": "noun",
+          "checked_sense": "the state of being successful, especially in making money",
+          "checked_uk_ipa": "prɒˈsperəti",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3827,
+        "word": "prosperous",
+        "headword": "prosperous",
+        "homograph": null,
+        "source_raw": "prosperous [ˈprɔspərəs] a.繁荣的,兴旺的,茂盛的,顺利的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "繁荣的,兴旺的,茂盛的,顺利的",
+        "phonetic": "ˈprɔspərəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "successful, especially financially"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "繁荣的；兴旺的；茂盛的；顺利的",
+        "phonetic": "ˈprɒspərəs",
+        "example": "The once small town is now a prosperous city.",
+        "example_translation": "这座曾经的小镇如今已发展成繁荣的城市。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prosperous",
+          "checked_pos": "adjective",
+          "checked_sense": "successful, especially financially",
+          "checked_uk_ipa": "ˈprɒspərəs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对经济繁荣义；植物茂盛等比喻义未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3829,
+        "word": "protein",
+        "headword": "protein",
+        "homograph": null,
+        "source_raw": "protein [ˈprəutiːn, -tiːin] n.蛋白质"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "蛋白质",
+        "phonetic": "ˈprəutiːn, -tiːin",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a substance found in food such as meat, eggs and milk that people need in order to grow and be healthy"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "蛋白质",
+        "phonetic": "ˈprəʊtiːn",
+        "example": "Beans are a good source of protein.",
+        "example_translation": "豆类是蛋白质的良好来源。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/protein",
+          "checked_pos": "noun",
+          "checked_sense": "a substance found in food such as meat, eggs and milk that people need in order to grow and be healthy",
+          "checked_uk_ipa": "ˈprəʊtiːn",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3830,
+        "word": "protest",
+        "headword": "protest",
+        "homograph": null,
+        "source_raw": "protest [prəuˈtest, ˈprəu-] v./n.主张,断言,抗议,反对"
+      },
+      "original": {
+        "pos": "v./n.",
+        "meaning": "主张,断言,抗议,反对",
+        "phonetic": "prəuˈtest, ˈprəu-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a strong statement or action expressing disagreement, disapproval or opposition"
+      },
+      "proposed": {
+        "pos": "v./n.",
+        "meaning": "主张；断言；抗议；反对",
+        "phonetic": "ˈprəʊtest",
+        "example": "The workers held a peaceful protest outside the office.",
+        "example_translation": "工人们在办公室外举行了和平抗议。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/protest_1",
+          "checked_pos": "noun",
+          "checked_sense": "a strong statement or action expressing disagreement, disapproval or opposition",
+          "checked_uk_ipa": "ˈprəʊtest",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "词典链接对应名词义；动词重音和读音需另核。本例使用和平抗议语境。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3831,
+        "word": "prototype",
+        "headword": "prototype",
+        "homograph": null,
+        "source_raw": "prototype [ˈprəutətaip] n.原型;典型,范例"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "原型;典型,范例",
+        "phonetic": "ˈprəutətaip",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the first design of something from which other forms are copied or developed"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "原型；典型；范例",
+        "phonetic": "ˈprəʊtətaɪp",
+        "example": "The engineers tested a prototype before building the final model.",
+        "example_translation": "工程师们在制造最终型号前测试了一个原型。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prototype",
+          "checked_pos": "noun",
+          "checked_sense": "the first design of something from which other forms are copied or developed",
+          "checked_uk_ipa": "ˈprəʊtətaɪp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例采用产品原型义；“典型、范例”需结合语境。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3832,
+        "word": "proud",
+        "headword": "proud",
+        "homograph": null,
+        "source_raw": "proud [praud] a.(of)自豪的;引以自豪的;妄自尊大的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "(of)自豪的;引以自豪的;妄自尊大的",
+        "phonetic": "praud",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "feeling pleased and satisfied about something that you own or have done, or are connected with"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "（of）自豪的；引以自豪的；妄自尊大的",
+        "phonetic": "praʊd",
+        "example": "She is proud of the work her team completed.",
+        "example_translation": "她为团队完成的工作感到自豪。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/proud",
+          "checked_pos": "adjective",
+          "checked_sense": "feeling pleased and satisfied about something that you own or have done, or are connected with",
+          "checked_uk_ipa": "praʊd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常见结构 proud of；词库妄自尊大的贬义需另复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3833,
+        "word": "prove",
+        "headword": "prove",
+        "homograph": null,
+        "source_raw": "prove [pruːv] v.证明,证实;检验;考验;鉴定;结果是,表明是"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "证明,证实;检验;考验;鉴定;结果是,表明是",
+        "phonetic": "pruːv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to use facts, evidence, etc. to show that something is true"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "证明；证实；检验；考验；鉴定；结果是，表明是",
+        "phonetic": "pruːv",
+        "example": "The tests proved that the device was safe.",
+        "example_translation": "测试证明这台设备是安全的。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prove",
+          "checked_pos": "verb",
+          "checked_sense": "to use facts, evidence, etc. to show that something is true",
+          "checked_uk_ipa": "pruːv",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对证明义；prove to be 表示结果为，结构需另核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3834,
+        "word": "provide",
+        "headword": "provide",
+        "homograph": null,
+        "source_raw": "provide [prəuˈvaid] v.供应,供给,准备,预防,规定"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "供应,供给,准备,预防,规定",
+        "phonetic": "prəuˈvaid",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to give something to somebody or make it available for them to use"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "供应；供给；准备；预防；规定",
+        "phonetic": "prəˈvaɪd",
+        "example": "The shelter provides hot meals for families.",
+        "example_translation": "这家收容所为家庭提供热餐。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/provide",
+          "checked_pos": "verb",
+          "checked_sense": "to give something to somebody or make it available for them to use",
+          "checked_uk_ipa": "prəˈvaɪd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对供给义；provide for 和法律规定等用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3835,
+        "word": "provided",
+        "headword": "provided",
+        "homograph": null,
+        "source_raw": "provided conj.倘若,只要,假如"
+      },
+      "original": {
+        "pos": "conj.",
+        "meaning": "倘若,只要,假如",
+        "phonetic": "prəˈvaɪdɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "conjunction",
+        "meaning": "used to say what must happen or be done to make it possible for something else to happen"
+      },
+      "proposed": {
+        "pos": "conj.",
+        "meaning": "倘若；只要；假如",
+        "phonetic": "prəˈvaɪdɪd",
+        "example": "You may borrow the car, provided that you return it by six.",
+        "example_translation": "只要你六点前还车，就可以借用这辆车。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/provided",
+          "checked_pos": "conjunction",
+          "checked_sense": "used to say what must happen or be done to make it possible for something else to happen",
+          "checked_uk_ipa": "prəˈvaɪdɪd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常见结构 provided (that)；正式书面语色彩较强。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3836,
+        "word": "province",
+        "headword": "province",
+        "homograph": null,
+        "source_raw": "province [ˈprɔvins] n.省;领域,范围,本分"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "省;领域,范围,本分",
+        "phonetic": "ˈprɔvins",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "one of the areas into which some countries are divided, and which has its own local government"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "省；领域；范围；本分",
+        "phonetic": "ˈprɒvɪns",
+        "example": "The province is known for its mountain villages.",
+        "example_translation": "这个省以山村闻名。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/province",
+          "checked_pos": "noun",
+          "checked_sense": "one of the areas into which some countries are divided, and which has its own local government",
+          "checked_uk_ipa": "ˈprɒvɪns",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对行政区义；领域、本分等引申义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3837,
+        "word": "provision",
+        "headword": "provision",
+        "homograph": null,
+        "source_raw": "provision [prəuˈviʒən] n.供应,(一批)供应品;预备;条款;(pl.)给养"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "供应,(一批)供应品;预备;条款;(pl.)给养",
+        "phonetic": "prəuˈviʒən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "supplies of food and other necessary things"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "供应；（一批）供应品；预备；条款；（pl.）给养",
+        "phonetic": "prəˈvɪʒn",
+        "example": "The hikers packed provisions for the journey.",
+        "example_translation": "徒步者们为旅程备好了给养。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/provision_1",
+          "checked_pos": "noun",
+          "checked_sense": "supplies of food and other necessary things",
+          "checked_uk_ipa": "prəˈvɪʒn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对物资给养义；法律规定、准备等义项保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3838,
+        "word": "provoke",
+        "headword": "provoke",
+        "homograph": null,
+        "source_raw": "provoke [prəuˈvəuk] v.挑动;激发;招惹"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "挑动;激发;招惹",
+        "phonetic": "prəuˈvəuk",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to cause a particular reaction or have a particular effect"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "挑动；激发；招惹",
+        "phonetic": "prəˈvəʊk",
+        "example": "His careless remark provoked an argument.",
+        "example_translation": "他不经意的话引发了一场争论。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/provoke",
+          "checked_pos": "verb",
+          "checked_sense": "to cause a particular reaction or have a particular effect",
+          "checked_uk_ipa": "prəˈvəʊk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对引发反应义；招惹、故意激怒等用法保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3839,
+        "word": "prudent",
+        "headword": "prudent",
+        "homograph": null,
+        "source_raw": "prudent [ˈpruːdənt] a.谨慎的,智慧的,稳健的,节俭的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "谨慎的,智慧的,稳健的,节俭的",
+        "phonetic": "ˈpruːdənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "sensible and careful when you make judgements and decisions; avoiding unnecessary risks"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "谨慎的；智慧的；稳健的；节俭的",
+        "phonetic": "ˈpruːdnt",
+        "example": "It would be prudent to save some money for emergencies.",
+        "example_translation": "留一些钱应对紧急情况是明智的。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/prudent",
+          "checked_pos": "adjective",
+          "checked_sense": "sensible and careful when you make judgements and decisions; avoiding unnecessary risks",
+          "checked_uk_ipa": "ˈpruːdnt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对审慎理财义；智慧、节俭等近义释义需主审整理。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3840,
+        "word": "psychiatry",
+        "headword": "psychiatry",
+        "homograph": null,
+        "source_raw": "psychiatry [psaiˈkaiətri, psi-] n.精神病学,精神病疗法"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "精神病学,精神病疗法",
+        "phonetic": "psaiˈkaiətri, psi-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the study and treatment of mental illnesses"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "精神病学；精神病疗法",
+        "phonetic": "saɪˈkaɪətri",
+        "example": "She plans to study psychiatry at university.",
+        "example_translation": "她计划在大学学习精神病学。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/psychiatry",
+          "checked_pos": "noun",
+          "checked_sense": "the study and treatment of mental illnesses",
+          "checked_uk_ipa": "saɪˈkaɪətri",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "医学学科名称；本例不构成诊断或治疗建议。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3841,
+        "word": "psychology",
+        "headword": "psychology",
+        "homograph": null,
+        "source_raw": "psychology [psaiˈkɔlədʒi] n.心理,心理学,心理状态"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "心理,心理学,心理状态",
+        "phonetic": "psaiˈkɔlədʒi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the scientific study of the mind and how it influences behaviour"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "心理；心理学；心理状态",
+        "phonetic": "saɪˈkɒlədʒi",
+        "example": "The course introduces students to child psychology.",
+        "example_translation": "这门课程向学生介绍儿童心理学。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/psychology",
+          "checked_pos": "noun",
+          "checked_sense": "the scientific study of the mind and how it influences behaviour",
+          "checked_uk_ipa": "saɪˈkɒlədʒi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对学科义；词库“心理状态”用法需另行确认。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3842,
+        "word": "pub",
+        "headword": "pub",
+        "homograph": null,
+        "source_raw": "pub [pʌb] n.(英国)小酒店;小旅馆"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(英国)小酒店;小旅馆",
+        "phonetic": "pʌb",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a building where people go to drink and meet their friends"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "（英国）小酒店；酒吧",
+        "phonetic": "pʌb",
+        "example": "They met friends at the local pub.",
+        "example_translation": "他们在当地酒吧与朋友见面。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pub",
+          "checked_pos": "noun",
+          "checked_sense": "a building where people go to drink and meet their friends",
+          "checked_uk_ipa": "pʌb",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "pub 是英国常见场所用语；通常译作酒吧或酒馆，非旅馆。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3843,
+        "word": "public",
+        "headword": "public",
+        "homograph": null,
+        "source_raw": "public [ˈpʌblik] a.公共的,公用的;公开的,公然的n.公众,民众"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "公共的,公用的;公开的,公然的n.公众,民众",
+        "phonetic": "ˈpʌblik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "connected with ordinary people in society in general"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "公共的；公用的；公开的，公然的；（n.）公众，民众",
+        "phonetic": "ˈpʌblɪk",
+        "example": "The park is open to the public.",
+        "example_translation": "这座公园向公众开放。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/public_1",
+          "checked_pos": "adjective",
+          "checked_sense": "connected with ordinary people in society in general",
+          "checked_uk_ipa": "ˈpʌblɪk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对公众义；其他形容词义及名词义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3844,
+        "word": "publication",
+        "headword": "publication",
+        "homograph": null,
+        "source_raw": "publication [ˌpʌbliˈkeiʃən] n.出版物;出版,发行;公布,发表"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "出版物;出版,发行;公布,发表",
+        "phonetic": "ˌpʌbliˈkeiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a book, magazine, etc. that is published"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "出版物；出版，发行；公布，发表",
+        "phonetic": "ˌpʌblɪˈkeɪʃn",
+        "example": "The journal's latest publication focuses on climate research.",
+        "example_translation": "这本期刊的最新刊物聚焦气候研究。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/publication",
+          "checked_pos": "noun",
+          "checked_sense": "a book, magazine, etc. that is published",
+          "checked_uk_ipa": "ˌpʌblɪˈkeɪʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对出版物义；出版行为及公布义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3845,
+        "word": "publicity",
+        "headword": "publicity",
+        "homograph": null,
+        "source_raw": "publicity [pʌbˈlisiti] n.公开,宣传,广告,推销"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "公开,宣传,广告,推销",
+        "phonetic": "pʌbˈlisiti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the attention that somebody/something gets from newspapers, television, etc."
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "公开；宣传；广告；推销",
+        "phonetic": "pʌbˈlɪsəti",
+        "example": "The charity received good publicity for its campaign.",
+        "example_translation": "这家慈善机构的活动获得了良好宣传。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/publicity",
+          "checked_pos": "noun",
+          "checked_sense": "the attention that somebody/something gets from newspapers, television, etc.",
+          "checked_uk_ipa": "pʌbˈlɪsəti",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "publicity 可为正面或负面报道；不要与 advertising 完全等同。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3846,
+        "word": "publish",
+        "headword": "publish",
+        "homograph": null,
+        "source_raw": "publish [ˈpʌbliʃ] v.出版,刊印;公布,发布"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "出版,刊印;公布,发布",
+        "phonetic": "ˈpʌbliʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to produce a book, magazine, CD-ROM, etc. and sell it to the public"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "出版；刊印；公布，发布",
+        "phonetic": "ˈpʌblɪʃ",
+        "example": "The results will be published next week.",
+        "example_translation": "结果将于下周公布。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/publish",
+          "checked_pos": "verb",
+          "checked_sense": "to produce a book, magazine, CD-ROM, etc. and sell it to the public",
+          "checked_uk_ipa": "ˈpʌblɪʃ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用公布结果义；出版印刷品义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3847,
+        "word": "puff",
+        "headword": "puff",
+        "homograph": null,
+        "source_raw": "puff [pʌf] n.一阵,一股(气味等);喘息;吹嘘v.喘息,鼓吹"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "一阵,一股(气味等);喘息;吹嘘v.喘息,鼓吹",
+        "phonetic": "pʌf",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a small amount of smoke, air, wind, etc. that is blown from somewhere"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "一阵；一股（气味等）；喘息；吹嘘；（v.）喘息，鼓吹",
+        "phonetic": "pʌf",
+        "example": "A puff of smoke rose from the chimney.",
+        "example_translation": "一股烟从烟囱里升起。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/puff_2",
+          "checked_pos": "noun",
+          "checked_sense": "a small amount of smoke, air, wind, etc. that is blown from somewhere",
+          "checked_uk_ipa": "pʌf",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对气流/烟雾义；喘息、宣传和动词义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3848,
+        "word": "pull",
+        "headword": "pull",
+        "homograph": null,
+        "source_raw": "pull [pul] v.拉,拖 n.拉,拖;拉力,牵引力"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拉,拖 n.拉,拖;拉力,牵引力",
+        "phonetic": "pul",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to hold something and move it in a particular direction; to move somebody/something in this way"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "拉；拖；（n.）拉，拖；拉力，牵引力",
+        "phonetic": "pʊl",
+        "example": "Pull the handle gently to open the drawer.",
+        "example_translation": "轻轻拉把手打开抽屉。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pull_1",
+          "checked_pos": "verb",
+          "checked_sense": "to hold something and move it in a particular direction; to move somebody/something in this way",
+          "checked_uk_ipa": "pʊl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对动词义；其他动词搭配和名词义未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3849,
+        "word": "pulse",
+        "headword": "pulse",
+        "homograph": null,
+        "source_raw": "pulse [pʌls] n.脉搏,脉冲"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "脉搏,脉冲",
+        "phonetic": "pʌls",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the regular beat of blood as it is sent around the body, that can be felt in different places"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "脉搏；脉冲",
+        "phonetic": "pʌls",
+        "example": "The nurse checked his pulse.",
+        "example_translation": "护士给他检查了脉搏。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pulse_1",
+          "checked_pos": "noun",
+          "checked_sense": "the regular beat of blood as it is sent around the body, that can be felt in different places",
+          "checked_uk_ipa": "pʌls",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对生理脉搏义；电学脉冲义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3850,
+        "word": "pump",
+        "headword": "pump",
+        "homograph": null,
+        "source_raw": "pump [pʌmp] n.泵 v.用(泵)抽(水);打气,泵送"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "泵 v.用(泵)抽(水);打气,泵送",
+        "phonetic": "pʌmp",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a machine that is used to force liquid, gas or air into, out of or through something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "泵；（v.）用泵抽水；打气，泵送",
+        "phonetic": "pʌmp",
+        "example": "We used a hand pump to inflate the tyre.",
+        "example_translation": "我们用手动气泵给轮胎打气。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pump_2",
+          "checked_pos": "noun",
+          "checked_sense": "a machine that is used to force liquid, gas or air into, out of or through something",
+          "checked_uk_ipa": "pʌmp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对器具义；动词用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3851,
+        "word": "punch",
+        "headword": "punch",
+        "homograph": null,
+        "source_raw": "punch [pʌntʃ] n.冲压机,冲床;穿孔机 v.冲压,穿孔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "冲压机,冲床;穿孔机 v.冲压,穿孔",
+        "phonetic": "pʌntʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a tool or machine for making holes in paper or another material"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "冲压机；冲床；穿孔机；（v.）冲压，穿孔",
+        "phonetic": "pʌntʃ",
+        "example": "She used a hole punch to prepare the documents.",
+        "example_translation": "她用打孔器处理这些文件。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/punch_2",
+          "checked_pos": "noun",
+          "checked_sense": "a tool or machine for making holes in paper or another material",
+          "checked_uk_ipa": "pʌntʃ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对工具义；拳击动作和饮料 punch 为不同词义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3852,
+        "word": "punctual",
+        "headword": "punctual",
+        "homograph": null,
+        "source_raw": "punctual [ˈpʌŋktjuəl, -tʃuəl] a.严守时刻的,准时的,正点的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "严守时刻的,准时的,正点的",
+        "phonetic": "ˈpʌŋktjuəl, -tʃuəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "arriving, happening or being done at the arranged or correct time; not late"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "严守时刻的；准时的，正点的",
+        "phonetic": "ˈpʌŋktʃuəl",
+        "example": "The bus service is usually punctual.",
+        "example_translation": "这条公交线路通常很准时。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/punctual",
+          "checked_pos": "adjective",
+          "checked_sense": "arriving, happening or being done at the arranged or correct time; not late",
+          "checked_uk_ipa": "ˈpʌŋktʃuəl",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3853,
+        "word": "punish",
+        "headword": "punish",
+        "homograph": null,
+        "source_raw": "punish [ˈpʌniʃ] v.惩罚,处罚"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "惩罚,处罚",
+        "phonetic": "ˈpʌniʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make somebody suffer because they have broken the law or done something wrong"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "惩罚；处罚",
+        "phonetic": "ˈpʌnɪʃ",
+        "example": "The referee punished the team for breaking the rules.",
+        "example_translation": "裁判因球队违反规则而对其处罚。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/punish",
+          "checked_pos": "verb",
+          "checked_sense": "to make somebody suffer because they have broken the law or done something wrong",
+          "checked_uk_ipa": "ˈpʌnɪʃ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用规则处罚义；避免将惩罚等同于伤害。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3854,
+        "word": "pupil",
+        "headword": "pupil",
+        "homograph": null,
+        "source_raw": "pupil [ˈpjupəl] n.学生,小学生;瞳孔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "学生,小学生;瞳孔",
+        "phonetic": "ˈpjupəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who is being taught, especially a child in a school"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "学生，小学生；瞳孔",
+        "phonetic": null,
+        "example": "The pupil asked a question during the lesson.",
+        "example_translation": "上课时，这名学生提出了一个问题。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未能取得可核验页面及英式 IPA；pupil 同时指学生和眼瞳，例句仅作未核实草稿。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3855,
+        "word": "puppet",
+        "headword": "puppet",
+        "homograph": null,
+        "source_raw": "puppet [ˈpʌpit] n.木偶,傀儡"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "木偶,傀儡",
+        "phonetic": "ˈpʌpit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a model of a person or an animal that can be made to move, for example by pulling strings"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "木偶；傀儡",
+        "phonetic": "ˈpʌpɪt",
+        "example": "The puppet waved to the children from the stage.",
+        "example_translation": "木偶在舞台上向孩子们挥手。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/puppet",
+          "checked_pos": "noun",
+          "checked_sense": "a model of a person or an animal that can be made to move, for example by pulling strings",
+          "checked_uk_ipa": "ˈpʌpɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "比喻义“傀儡”常带贬义，需依语境使用。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3856,
+        "word": "purchase",
+        "headword": "purchase",
+        "homograph": null,
+        "source_raw": "purchase [ˈpəːtʃəs] v.买,购买 n.购买的物品"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "买,购买 n.购买的物品",
+        "phonetic": "ˈpəːtʃəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to buy something"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "买；购买；（n.）购买的物品",
+        "phonetic": "ˈpɜːtʃəs",
+        "example": "They purchased the tickets in advance.",
+        "example_translation": "他们提前买了票。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/purchase_1",
+          "checked_pos": "verb",
+          "checked_sense": "to buy something",
+          "checked_uk_ipa": "ˈpɜːtʃəs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "purchase 较正式；例句核对动词义，名词义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3857,
+        "word": "pure",
+        "headword": "pure",
+        "homograph": null,
+        "source_raw": "pure [pjuə] a.纯的,纯洁的;纯理论的,抽象的;完全的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "纯的,纯洁的;纯理论的,抽象的;完全的",
+        "phonetic": "pjuə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "not mixed with anything else; with nothing added"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "纯的；纯洁的；纯理论的，抽象的；完全的",
+        "phonetic": "pjʊə(r)",
+        "example": "The bottle contains pure spring water.",
+        "example_translation": "瓶子里装的是纯净的泉水。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pure",
+          "checked_pos": "adjective",
+          "checked_sense": "not mixed with anything else; with nothing added",
+          "checked_uk_ipa": "pjʊə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例采用物质纯净义；纯洁、纯理论等义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3858,
+        "word": "purify",
+        "headword": "purify",
+        "homograph": null,
+        "source_raw": "purify [ˈpjuərifai] v.使纯净,提纯"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使纯净,提纯",
+        "phonetic": "ˈpjuərifai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make something pure by removing substances that are dirty or harmful"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "使纯净；提纯",
+        "phonetic": "ˈpjʊərɪfaɪ",
+        "example": "The filter purifies the water before it reaches the tap.",
+        "example_translation": "水流到水龙头前会经过滤器净化。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/purify",
+          "checked_pos": "verb",
+          "checked_sense": "to make something pure by removing substances that are dirty or harmful",
+          "checked_uk_ipa": "ˈpjʊərɪfaɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3859,
+        "word": "purple",
+        "headword": "purple",
+        "homograph": null,
+        "source_raw": "purple [ˈpəːpl] a.紫的 n.紫色"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "紫的 n.紫色",
+        "phonetic": "ˈpəːpl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "having the colour of red and blue mixed together"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "紫的；（n.）紫色",
+        "phonetic": "ˈpɜːpl",
+        "example": "She wore a purple scarf in the snow.",
+        "example_translation": "她在雪地里戴着一条紫色围巾。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/purple_1",
+          "checked_pos": "adjective",
+          "checked_sense": "having the colour of red and blue mixed together",
+          "checked_uk_ipa": "ˈpɜːpl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对形容词义；名词义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3860,
+        "word": "purpose",
+        "headword": "purpose",
+        "homograph": null,
+        "source_raw": "purpose [ˈpəːpəs] n.目的,意图;用途,效果"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "目的,意图;用途,效果",
+        "phonetic": "ˈpəːpəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the intention, aim or function of something; the thing that something is supposed to achieve"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "目的；意图；用途；效果",
+        "phonetic": "ˈpɜːpəs",
+        "example": "The purpose of the meeting is to plan the next stage.",
+        "example_translation": "这次会议的目的是规划下一阶段。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/purpose",
+          "checked_pos": "noun",
+          "checked_sense": "the intention, aim or function of something; the thing that something is supposed to achieve",
+          "checked_uk_ipa": "ˈpɜːpəs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对目的义；用途及效果等用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3861,
+        "word": "purse",
+        "headword": "purse",
+        "homograph": null,
+        "source_raw": "purse [pəːs] n.钱包"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "钱包",
+        "phonetic": "pəːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a small bag for money, keys, etc., carried especially by women"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "钱包；小手提包",
+        "phonetic": null,
+        "example": "She kept her travel card in her purse.",
+        "example_translation": "她把交通卡放在钱包里。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面及英式 IPA；例句为未核实草稿，英美语境的 purse 所指可能不同。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3862,
+        "word": "pursue",
+        "headword": "pursue",
+        "homograph": null,
+        "source_raw": "pursue [pəˈsjuː, -ˈsuː] v.追赶,追踪;继续,从事"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "追赶,追踪;继续,从事",
+        "phonetic": "pəˈsjuː, -ˈsuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to continue to do or achieve something over a long period of time"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "追赶；追踪；继续；从事",
+        "phonetic": "pəˈsjuː",
+        "example": "She plans to pursue a career in science.",
+        "example_translation": "她计划从事科学事业。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pursue",
+          "checked_pos": "verb",
+          "checked_sense": "to continue to do or achieve something over a long period of time",
+          "checked_uk_ipa": "pəˈsjuː",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用从事事业义；追赶及法律追诉义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3863,
+        "word": "pursuit",
+        "headword": "pursuit",
+        "homograph": null,
+        "source_raw": "pursuit [pəˈsjuːt] n.追赶,追求;职业,工作"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "追赶,追求;职业,工作",
+        "phonetic": "pəˈsjuːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the act of looking for or trying to find something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "追赶；追求；职业，工作",
+        "phonetic": "pəˈsjuːt",
+        "example": "Music is a worthwhile pursuit at any age.",
+        "example_translation": "音乐在任何年龄都是值得投入的追求。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pursuit",
+          "checked_pos": "noun",
+          "checked_sense": "the act of looking for or trying to find something",
+          "checked_uk_ipa": "pəˈsjuːt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对活动/追求义；追捕和职业相关用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3864,
+        "word": "push",
+        "headword": "push",
+        "homograph": null,
+        "source_raw": "push [puʃ] v.推;催逼,逼迫 n.推,推力;促进,推进"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "推;催逼,逼迫 n.推,推力;促进,推进",
+        "phonetic": "puʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to use your hands, arms or body in order to make somebody/something move forward or away from you"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "推；催逼，逼迫；（n.）推，推力；促进，推进",
+        "phonetic": "pʊʃ",
+        "example": "Push the door gently to open it.",
+        "example_translation": "轻轻推门把它打开。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/push_1",
+          "checked_pos": "verb",
+          "checked_sense": "to use your hands, arms or body in order to make somebody/something move forward or away from you",
+          "checked_uk_ipa": "pʊʃ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对物理推动义；催促及名词用法保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3865,
+        "word": "put",
+        "headword": "put",
+        "homograph": null,
+        "source_raw": "put [put] vt.放,搁,置;表达;使处于...状态,记下"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "放,搁,置;表达;使处于...状态,记下",
+        "phonetic": "put",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to move something into a particular place or position"
+      },
+      "proposed": {
+        "pos": "vt.",
+        "meaning": "放；搁；置；表达；使处于……状态；记下",
+        "phonetic": "pʊt",
+        "example": "Put the keys on the table by the door.",
+        "example_translation": "把钥匙放在门边的桌上。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/put",
+          "checked_pos": "verb",
+          "checked_sense": "to move something into a particular place or position",
+          "checked_uk_ipa": "pʊt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "put 是高度多义动词；本例只核对放置义，句型与短语动词需另审。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3866,
+        "word": "puzzle",
+        "headword": "puzzle",
+        "homograph": null,
+        "source_raw": "puzzle [ˈpʌzl] n.难题,谜,迷惑 v.(使)迷惑,(使)为难"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "难题,谜,迷惑 v.(使)迷惑,(使)为难",
+        "phonetic": "ˈpʌzl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a game, etc. that you have to think about carefully in order to answer a question or solve it"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "难题；谜；迷惑；（v.）（使）迷惑，（使）为难",
+        "phonetic": "ˈpʌzl",
+        "example": "The children solved the puzzle together.",
+        "example_translation": "孩子们一起解开了这个谜题。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/puzzle_1",
+          "checked_pos": "noun",
+          "checked_sense": "a game, etc. that you have to think about carefully in order to answer a question or solve it",
+          "checked_uk_ipa": "ˈpʌzl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对谜题义；迷惑的动词义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3867,
+        "word": "pyramid",
+        "headword": "pyramid",
+        "homograph": null,
+        "source_raw": "pyramid [ˈpirəmid] n.金字塔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "金字塔",
+        "phonetic": "ˈpirəmid",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a large structure with a square base and four triangular sides that meet at a point"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "金字塔",
+        "phonetic": "ˈpɪrəmɪd",
+        "example": "The ancient pyramid attracts visitors from around the world.",
+        "example_translation": "这座古金字塔吸引着世界各地的游客。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/pyramid",
+          "checked_pos": "noun",
+          "checked_sense": "a large structure with a square base and four triangular sides that meet at a point",
+          "checked_uk_ipa": "ˈpɪrəmɪd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句核对建筑义；其他形状或比喻义保留未复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3868,
+        "word": "qualification",
+        "headword": "qualification",
+        "homograph": null,
+        "source_raw": "qualification [ˌkwɔlifiˈkeiʃən] n.资格,合格;限定,条件;合格证"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "资格,合格;限定,条件;合格证",
+        "phonetic": "ˌkwɔlifiˈkeiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an exam that you have passed or a course of study that you have completed"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "资格；合格；限定；条件；合格证",
+        "phonetic": "ˌkwɒlɪfɪˈkeɪʃn",
+        "example": "Applicants must have a teaching qualification.",
+        "example_translation": "申请者必须具备教师资格。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/qualification",
+          "checked_pos": "noun",
+          "checked_sense": "an exam that you have passed or a course of study that you have completed",
+          "checked_uk_ipa": "ˌkwɒlɪfɪˈkeɪʃn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对证书资格义；限制和条件义需另审。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3869,
+        "word": "qualify",
+        "headword": "qualify",
+        "homograph": null,
+        "source_raw": "qualify [ˈkwɔlifai] v.(使)具有资格,证明合格;限制,限定;修饰"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)具有资格,证明合格;限制,限定;修饰",
+        "phonetic": "ˈkwɔlifai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to have or give somebody the right to do something because of special knowledge, experience or training"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "（使）具有资格；证明合格；限制，限定；修饰",
+        "phonetic": "ˈkwɒlɪfaɪ",
+        "example": "She qualified as a doctor last year.",
+        "example_translation": "她去年取得了医生执业资格。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/qualify",
+          "checked_pos": "verb",
+          "checked_sense": "to have or give somebody the right to do something because of special knowledge, experience or training",
+          "checked_uk_ipa": "ˈkwɒlɪfaɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "例句采用获得资格义；限定、修饰等语法义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3870,
+        "word": "qualitative",
+        "headword": "qualitative",
+        "homograph": null,
+        "source_raw": "qualitative [ˈkwɔlitətiv, -tei-] a.性质上的,定性的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "性质上的,定性的",
+        "phonetic": "ˈkwɔlitətiv, -tei-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "connected with the quality or nature of something, rather than its quantity"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "性质上的；定性的",
+        "phonetic": "ˈkwɒlɪtətɪv",
+        "example": "The study used qualitative interviews rather than a survey.",
+        "example_translation": "这项研究使用了定性访谈，而不是问卷调查。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/qualitative",
+          "checked_pos": "adjective",
+          "checked_sense": "connected with the quality or nature of something, rather than its quantity",
+          "checked_uk_ipa": "ˈkwɒlɪtətɪv",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3871,
+        "word": "quality",
+        "headword": "quality",
+        "homograph": null,
+        "source_raw": "quality [ˈkwɔləti] n.质量,品质,特性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "质量,品质,特性",
+        "phonetic": "ˈkwɔləti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the standard of something when it is compared to other things like it; how good or bad something is"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "质量；品质；特性",
+        "phonetic": "ˈkwɒləti",
+        "example": "The shop is known for the quality of its bread.",
+        "example_translation": "这家店以面包的品质闻名。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/quality",
+          "checked_pos": "noun",
+          "checked_sense": "the standard of something when it is compared to other things like it; how good or bad something is",
+          "checked_uk_ipa": "ˈkwɒləti",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "quality 可指优劣程度或特性；例句采用优良品质义。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3872,
+        "word": "quantify",
+        "headword": "quantify",
+        "homograph": null,
+        "source_raw": "quantify [ˈkwɔntifai] v.确定数量"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "确定数量",
+        "phonetic": "ˈkwɔntifai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to express or measure the quantity of something"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "确定数量；量化",
+        "phonetic": "ˈkwɒntɪfaɪ",
+        "example": "The team tried to quantify the effects of the new policy.",
+        "example_translation": "团队试图量化新政策的影响。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/quantify",
+          "checked_pos": "verb",
+          "checked_sense": "to express or measure the quantity of something",
+          "checked_uk_ipa": "ˈkwɒntɪfaɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3873,
+        "word": "quantitative",
+        "headword": "quantitative",
+        "homograph": null,
+        "source_raw": "quantitative [ˈkwɔntitətiv, -tei-] a.数量的,定量的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "数量的,定量的",
+        "phonetic": "ˈkwɔntitətiv, -tei-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "connected with the amount or number of something rather than with how good it is"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "数量的；定量的",
+        "phonetic": "ˈkwɒntɪtətɪv",
+        "example": "The researchers collected quantitative data from the survey.",
+        "example_translation": "研究人员从调查中收集了定量数据。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/quantitative",
+          "checked_pos": "adjective",
+          "checked_sense": "connected with the amount or number of something rather than with how good it is",
+          "checked_uk_ipa": "ˈkwɒntɪtətɪv",
+          "accessed": true
+        }
+      ],
+      "issues": [],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3874,
+        "word": "quantity",
+        "headword": "quantity",
+        "homograph": null,
+        "source_raw": "quantity [ˈkwɔntəti] n.量,数量;大量"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "量,数量;大量",
+        "phonetic": "ˈkwɔntəti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an amount or a number of something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "量；数量；大量",
+        "phonetic": null,
+        "example": "Only a small quantity of flour is needed.",
+        "example_translation": "只需要少量面粉。",
+        "teaching_note": ""
+      },
+      "evidence": [],
+      "issues": [
+        "本轮未取得可核验页面和英式 IPA；例句为未核实草稿。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3875,
+        "word": "quarrel",
+        "headword": "quarrel",
+        "homograph": null,
+        "source_raw": "quarrel [ˈkwɔːrəl] v.争吵,争论 n.争吵,争吵的原因"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "争吵,争论 n.争吵,争吵的原因",
+        "phonetic": "ˈkwɔːrəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an angry argument or disagreement, especially between people who know each other well"
+      },
+      "proposed": {
+        "pos": "v./n.",
+        "meaning": "争吵；争论；争吵的原因",
+        "phonetic": "ˈkwɒrəl",
+        "example": "The neighbours had a quarrel about the fence.",
+        "example_translation": "邻居们为篱笆的事吵了一架。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/quarrel_1",
+          "checked_pos": "noun",
+          "checked_sense": "an angry argument or disagreement, especially between people who know each other well",
+          "checked_uk_ipa": "ˈkwɒrəl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "本例核对名词义；动词义保留未逐项复核。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 3876,
+        "word": "quart",
+        "headword": "quart",
+        "homograph": null,
+        "source_raw": "quart [kwɔːt] n.夸脱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "夸脱",
+        "phonetic": "kwɔːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a unit for measuring liquids, equal to about 1.14 litres in the UK"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "夸脱",
+        "phonetic": "kwɔːt",
+        "example": "The recipe calls for a quart of stock.",
+        "example_translation": "这个食谱需要加入一夸脱高汤。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/quart",
+          "checked_pos": "noun",
+          "checked_sense": "a unit for measuring liquids, equal to about 1.14 litres in the UK",
+          "checked_uk_ipa": "kwɔːt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "英美夸脱容量不同；此处词典来源采用英制单位，量值需按使用地区核对。"
+      ],
+      "change_reason": "核对词典所列词性、义项与英式音标，并补写原创例句；未逐项核查的其他义项已记入 issues。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    }
+  ]
+}

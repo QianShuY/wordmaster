@@ -3,6 +3,7 @@ const { DatabaseSync } = require('node:sqlite');
 const path = require('node:path');
 const fs = require('node:fs');
 const { randomUUID } = require('node:crypto');
+const Vocabulary = require('./vocabulary');
 
 const DEFAULT_DATA_DIR = path.join(__dirname, '..', 'data');
 const DB_PATH = path.resolve(process.env.WORDMASTER_DB_PATH || path.join(DEFAULT_DATA_DIR, 'wordmaster.db'));
@@ -138,6 +139,95 @@ const migrations = [
       db.exec('CREATE INDEX IF NOT EXISTS idx_review_log_session_word ON review_log(session_id, word_id, id)');
     },
   },
+  {
+    version: 6,
+    name: 'auditable built-in vocabulary and daily plans',
+    up() {
+      ensureColumn('words', 'headword', 'TEXT');
+      ensureColumn('words', 'homograph', 'INTEGER');
+      ensureColumn('words', 'source_file', 'TEXT');
+      ensureColumn('words', 'source_line', 'INTEGER');
+      ensureColumn('words', 'source_raw', 'TEXT');
+      ensureColumn('words', 'example_translation', "TEXT DEFAULT ''");
+      ensureColumn('wordbooks', 'plan_mode', "TEXT NOT NULL DEFAULT 'date'");
+      db.exec(`CREATE TABLE IF NOT EXISTS vocabulary_builds (
+        book_id INTEGER PRIMARY KEY REFERENCES wordbooks(id) ON DELETE CASCADE,
+        content_version TEXT NOT NULL, source_sha256 TEXT NOT NULL, audit_json TEXT NOT NULL
+      )`);
+    },
+  },
+  {
+    version: 7,
+    name: 'due recall stage separate from answer streak',
+    up() {
+      ensureColumn('progress', 'review_level', 'INTEGER NOT NULL DEFAULT 0');
+      ensureColumn('review_log', 'practice_mode', 'TEXT');
+      // Existing due dates stay intact; do not infer spaced recalls from same-day streaks.
+      db.exec('UPDATE progress SET review_level=CASE WHEN correct>0 THEN 1 ELSE 0 END');
+    },
+  },
+  {
+    version: 8,
+    name: 'one campaign stage per completed study day',
+    up() {
+      db.exec(`CREATE TABLE IF NOT EXISTS adventure_days (
+        day TEXT PRIMARY KEY, stage_no INTEGER NOT NULL UNIQUE CHECK(stage_no BETWEEN 1 AND 13),
+        book_id INTEGER NOT NULL, book_name TEXT NOT NULL,
+        completed_at TEXT NOT NULL DEFAULT (datetime('now','localtime'))
+      )`);
+    },
+  },
+  {
+    version: 9,
+    name: 'meaning and spelling recall cycles',
+    up() {
+      db.exec(`CREATE TABLE recall_cycles (
+        word_id INTEGER PRIMARY KEY REFERENCES words(id) ON DELETE CASCADE,
+        cycle_id TEXT NOT NULL, state_json TEXT NOT NULL
+      )`);
+    },
+  },
+  {
+    version: 10,
+    name: 'validated chapter battles and first-clear memorials',
+    up() {
+      db.exec(`CREATE TABLE boss_sessions (
+        id TEXT PRIMARY KEY, chapter INTEGER NOT NULL CHECK(chapter=1),
+        pool_json TEXT NOT NULL, initial_json TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now','localtime')),
+        transcript_sha256 TEXT, result_json TEXT
+      );
+      CREATE TABLE adventure_endings (
+        chapter INTEGER PRIMARY KEY CHECK(chapter=1), session_id TEXT NOT NULL REFERENCES boss_sessions(id),
+        completed_at TEXT NOT NULL DEFAULT (datetime('now','localtime')),
+        memorial TEXT NOT NULL, summary_json TEXT NOT NULL
+      );`);
+    },
+  },
+  {
+    version: 11,
+    name: 'ordered book pages and error summaries',
+    up() {
+      db.exec(`CREATE INDEX IF NOT EXISTS idx_words_book_nocase ON words(book_id,word COLLATE NOCASE,id);
+      CREATE INDEX IF NOT EXISTS idx_review_log_word_errors ON review_log(word_id,practice_mode) WHERE correct=0;`);
+    },
+  },
+  {
+    version: 12,
+    name: 'read-only vocabulary history and reviewed spelling policies',
+    up() {
+      db.exec(`CREATE TABLE book_history (
+        book_id INTEGER PRIMARY KEY REFERENCES wordbooks(id),
+        replacement_book_id INTEGER NOT NULL REFERENCES wordbooks(id),
+        reason_json TEXT NOT NULL, original_plan_json TEXT NOT NULL,
+        archived_at TEXT NOT NULL DEFAULT (datetime('now','localtime'))
+      );
+      CREATE TABLE word_answer_policies (
+        word_id INTEGER PRIMARY KEY REFERENCES words(id) ON DELETE CASCADE,
+        policy_json TEXT NOT NULL, content_sha256 TEXT NOT NULL
+      );`);
+    },
+  },
 ];
 
 for (const migration of migrations) {
@@ -160,7 +250,7 @@ function getSchemaVersion() {
 }
 
 // ---- 词表解析：行格式 "word [phonetic] pos. meaning" ----
-function parseLine(line) {
+function parseLegacyAndroidLine(line) {
   line = line.trim();
   if (!line) return null;
   const m = line.match(/^(.+?)\s*(?:\[([^\]]*)\])?\s+([a-z./&]+\.?)\s*[.:．]?\s*(.+)$/i);
@@ -175,53 +265,55 @@ function parseLine(line) {
   return { word, phonetic: (phonetic || '').trim(), pos: pos.trim(), meaning };
 }
 
-// ---- 批量导入解析：支持以下行格式 ----
-//   word [音标] 词性. 释义      （标准词表格式）
-//   word 词性. 释义             （无音标）
-//   word<TAB>词性<TAB>释义      （制表符）
-//   word,词性,释义 / word,释义  （CSV 风格）
-function parseImportLine(line) {
-  line = line.trim();
-  if (!line) return null;
-  const std = parseLine(line);
-  if (std) return std;
-  // 制表符 / CSV
-  const parts = line.split(/\t|,|，/).map(s => s.trim()).filter(Boolean);
-  if (parts.length >= 2 && !/[一-龥]/.test(parts[0])) {
-    const [word, a, b] = parts;
-    if (parts.length >= 3 && /^[a-z./&]+\.?$/i.test(a)) return { word, phonetic: '', pos: a, meaning: b };
-    return { word, phonetic: '', pos: '', meaning: parts.slice(1).join('，') };
-  }
-  // word 释义（空格分隔，释义含中文）
-  const m = line.match(/^([A-Za-z][A-Za-z\-' ]*?)\s+(.+[一-龥].*)$/);
-  if (m) return { word: m[1].trim(), phonetic: '', pos: '', meaning: m[2].trim() };
-  return null;
-}
-
-function seedBook(name, description, file, limit) {
-  const exists = db.prepare('SELECT id FROM wordbooks WHERE name = ?').get(name);
+function seedBook(spec) {
+  const exists = db.prepare('SELECT id FROM wordbooks WHERE name = ? AND is_builtin = 1').get(spec.name);
   if (exists) return;
-  const raw = fs.readFileSync(file, 'utf8').replace(/^﻿/, '');
-  const insertBook = db.prepare('INSERT INTO wordbooks (name, description, is_builtin) VALUES (?, ?, 1)');
-  const { lastInsertRowid: bookId } = insertBook.run(name, description);
-  const insertWord = db.prepare('INSERT OR IGNORE INTO words (book_id, word, phonetic, pos, meaning) VALUES (?, ?, ?, ?, ?)');
-  let count = 0;
-  for (const line of raw.split(/\r?\n/)) {
-    const parsed = parseLine(line);
-    if (!parsed) continue;
-    insertWord.run(bookId, parsed.word, parsed.phonetic, parsed.pos, parsed.meaning);
-    if (++count >= limit) break;
+  db.exec('SAVEPOINT seed_book');
+  try {
+    const bookId = Number(db.prepare('INSERT INTO wordbooks (name, is_builtin) VALUES (?, 1)').run(spec.name).lastInsertRowid);
+    installBookContent(bookId, spec);
+    db.exec('RELEASE seed_book');
+  } catch (error) {
+    db.exec('ROLLBACK TO seed_book'); db.exec('RELEASE seed_book'); throw error;
   }
-  console.log(`[seed] ${name}: ${count} 词`);
 }
 
-function seed() {
-  const seedDir = path.join(__dirname, 'seed');
-  seedBook('中考核心词汇', '中考英语大纲词汇（约 1600 词）', path.join(seedDir, 'zhongkao.txt'), 1600);
-  seedBook('四级核心词汇', '大学英语四级高频词（精选 800 词）', path.join(seedDir, 'cet4.txt'), 800);
-  seedBook('六级核心词汇', '大学英语六级高频词（精选 600 词）', path.join(seedDir, 'cet6.txt'), 600);
-  seedBook('考研大纲词汇', '考研英语大纲词汇（完整版，约 5500 词）', path.join(seedDir, 'npee.txt'), 5500);
-  seedBook('英语专四专八词汇', '英语专业四八级词汇（约 12000 词）', path.join(seedDir, 'tem.txt'), 12000);
+function installBookContent(bookId, spec) {
+  const { words, report } = Vocabulary.buildBook(spec);
+  const examples = require('./seed/reviewed-examples.json');
+  const { reviewedExample } = require('../shared/content-batch');
+  const Domain = require('../shared/domain');
+  const insert = db.prepare(`INSERT INTO words
+    (book_id, word, phonetic, pos, meaning, headword, homograph, source_file, source_line, source_raw, example, example_translation)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+  for (const w of words) {
+    const candidate = !w.homograph && examples[w.headword];
+    const ex = w.reviewed_example || reviewedExample(w) || (candidate && Domain.normalizePartOfSpeech(w.pos) === candidate.pos ? candidate : null);
+    insert.run(bookId, w.word, w.phonetic, w.pos, w.meaning, w.headword, w.homograph, w.source_file, w.source_line, w.source_raw, ex?.text || '', ex?.translation || '');
+  }
+  db.prepare('UPDATE wordbooks SET description = ? WHERE id = ?').run(
+    `${spec.label} · 收录 ${words.length} 条经结构校验的源词条；待核验 ${report.excluded} 行。版本 ${Vocabulary.VERSION}。不等同官方完整考纲。`, bookId);
+  db.prepare(`INSERT OR REPLACE INTO vocabulary_builds (book_id, content_version, source_sha256, audit_json) VALUES (?, ?, ?, ?)`)
+    .run(bookId, Vocabulary.VERSION, report.sha256, JSON.stringify(report));
+  return report;
+}
+
+function seed({ legacyAndroid = false } = {}) {
+  if (legacyAndroid) {
+    // Android G1 is an independently released frozen content contract.
+    const limits = [1600, 800, 600, 5500, 12000];
+    for (const [index, spec] of Vocabulary.CATALOG.entries()) {
+      if (db.prepare('SELECT id FROM wordbooks WHERE name=?').get(spec.name)) continue;
+      const id = Number(db.prepare('INSERT INTO wordbooks (name,is_builtin) VALUES (?,1)').run(spec.name).lastInsertRowid);
+      const insert = db.prepare('INSERT OR IGNORE INTO words (book_id,word,phonetic,pos,meaning) VALUES (?,?,?,?,?)');
+      let count = 0;
+      for (const line of fs.readFileSync(path.join(__dirname, 'seed', spec.file), 'utf8').replace(/^\uFEFF/, '').split(/\r?\n/)) {
+        const w = parseLegacyAndroidLine(line); if (!w) continue;
+        insert.run(id, w.word, w.phonetic, w.pos, w.meaning);
+        if (++count >= limits[index]) break;
+      }
+    }
+  } else for (const spec of Vocabulary.CATALOG) seedBook(spec);
   seedCards();
 }
 
@@ -320,4 +412,4 @@ function seedCards() {
 }
 
 const getDatabaseInstanceId = () => db.prepare('SELECT instance_id FROM desktop_database_identity WHERE id = 1').get().instance_id;
-module.exports = { db, seed, parseImportLine, getSchemaVersion, getDatabaseInstanceId };
+module.exports = { db, seed, installBookContent, parseImportLine: Vocabulary.parseImportLine, getSchemaVersion, getDatabaseInstanceId };

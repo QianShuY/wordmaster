@@ -1,0 +1,6 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path');
+const baseline=require('../docs/vocabulary-audit/phonetic-characters-original-20261015.json');
+const facts=[{word:'playground',pos:'n.',phonetic:'ˈpleɪɡraʊnd',url:'https://www.oxfordlearnersdictionaries.com/definition/english/playground'},{word:'synthetic',pos:'a.',phonetic:'sɪnˈθetɪk',url:'https://www.oxfordlearnersdictionaries.com/definition/english/synthetic_1'}];
+const patches=facts.map(f=>{const w=baseline.items.find(w=>w.source_file==='cet4.txt'&&w.word===f.word&&w.pos===f.pos&&w.flags.includes('private-use-or-replacement-character'));if(!w)throw Error('Missing exact corrupt source');return {word:w.word,headword:w.headword,source_file:w.source_file,source_line:w.source_line,source_raw:w.source_raw,from:{pos:w.pos,meaning:w.meaning,phonetic:w.phonetic},to:{phonetic:f.phonetic},source:f.url,review:'dictionary-checked-primary-pos-pronunciation',review_date:'2026-10-15',full_dictionary_senses_reviewed:false,external_human_review:false};});
+fs.writeFileSync(path.resolve(__dirname,'../app/seed/phonetics-private-use-20261015.json'),JSON.stringify(patches,null,2)+'\n');console.log(JSON.stringify({patches:patches.length}));

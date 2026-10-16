@@ -1,0 +1,113 @@
+# tem-095 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：154
+- 输入 SHA256：c0c7da8304506dd255f1baa4f55a172b63b67f67dcd76825bcfa525a90172cba
+
+## 待主代理复核
+
+Snug 已实际访问 Oxford Learner’s Dictionaries 并核对形容词核心义与英式 IPA。其余条目无本轮可用的原始词典证据，音标留空。Soda/sodium 源释义有错字疑点，solicit 有语域风险，senile/senility 需关注现代表达。
+
+- snobbery
+- snobbish
+- snooker
+- snooty
+- snore
+- snorkel
+- snort
+- snout
+- snow
+- snub
+- snuff
+- so
+- soak
+- soap
+- soapy
+- soar
+- sob
+- sober
+- sobriety
+- soccer
+- sociable
+- social
+- socialism
+- socialist
+- society
+- sociological
+- sociologist
+- sociology
+- sock
+- soda
+- sodium
+- sofa
+- soft
+- soften
+- softly
+- software
+- soggy
+- soil
+- sol
+- solace
+- solar
+- soldier
+- soldierly
+- sole
+- solely
+- solemn
+- solemnity
+- solicit
+- solicitor
+- solid
+- solidarity
+- soliloquy
+- solitary
+- solitude
+- solo
+- soloist
+- soluble
+- solution
+- solve
+- solvency
+- solvent
+- sombre
+- some
+- somehow
+- sometime
+- sometimes
+- somewhat
+- somewhere
+- son
+- sonar
+- sonata
+- song
+- son-in-law
+- sonnet
+- soon
+- soot
+- soothe
+- sophist
+- sophisticate
+- sophisticated
+- sophomore
+- soprano
+- sordid
+- sore
+- sorghum
+- sorrow
+- sorrowful
+- sorry
+- sort
+- sortie
+- SOS
+- so-so
+- soul
+- sound 1
+- sound 2
+- soup
+- sour
+- source
+- south

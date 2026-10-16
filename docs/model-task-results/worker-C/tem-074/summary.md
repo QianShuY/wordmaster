@@ -1,0 +1,113 @@
+# tem-074 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：151
+- 输入 SHA256：25bb1995d61514c3c87b0f4c76da65cac2e96b5bd666b01ef11ac3f4d395e786
+
+## 待主代理复核
+
+Phenomenon 已访问 Oxford Learner’s Dictionaries，核对名词核心义与英式 IPA，但其第二个名词义未在原词条体现，需决定是否补充。其余条目无本轮可用的原始词典证据，音标留空。另须复核 physiology 的源词性、pinpoint 的词性、piss 的粗俗语域，以及多义/多词性词条完整性。
+
+- pharmacy
+- phase
+- PhD
+- pheasant
+- phenomenal
+- philanthropic
+- philosopher
+- philosophic philosophical
+- philosophy
+- phobia
+- phoenix
+- phone
+- phonetic
+- phonology
+- phosphorous
+- phosphorus
+- photo
+- photocopier
+- photocopy
+- photograph
+- photographer
+- photography
+- phrase
+- physical
+- physician
+- physicist
+- physics
+- physiological
+- physiology
+- physiotherapy
+- physique
+- pianist
+- piano
+- pick
+- picket
+- pickle
+- pickpocket
+- picnic
+- pictorial
+- picture
+- picturesque
+- pidgin
+- pie
+- piece
+- pier
+- pierce
+- piety
+- pig
+- pigeon
+- pigsty
+- pike
+- pile
+- pilgrim
+- pill
+- pillar
+- pillow
+- pillowcase
+- pilot
+- pin
+- pinch
+- pine
+- pineapple
+- pink
+- pinpoint
+- pint
+- pioneer
+- pious
+- pipe
+- piracy
+- pirate
+- piss
+- pistol
+- piston
+- pit
+- pitcher
+- pitfall
+- pity
+- pivot
+- pivotal
+- pizza
+- place
+- placid
+- plague
+- plaid
+- plain 1
+- plain 2
+- plaintiff
+- plan
+- plane
+- planet
+- planetary
+- plank
+- plant
+- planter
+- plaque
+- plasma
+- plaster
+- plastic
+- plate

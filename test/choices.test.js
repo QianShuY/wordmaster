@@ -47,6 +47,11 @@ test('small custom vocabulary offers four unique definitions with one correct ch
       'the correct original meaning occurs exactly once');
   }
 
+  const collisionBook=addBook('显示去重测试');
+  for(const [word,meaning] of [['apple','苹果'],['pear','梨 || pear juice 梨汁'],['pearfruit','梨 || fruit 水果'],['peach','桃子'],['grape','葡萄']])addWord(collisionBook,word,meaning);
+  const compactRows=await (await fetch(`${base}/api/books/${collisionBook}/study?mode=meaning`)).json();
+  const Context=require('../shared/learning-context');
+  for(const word of compactRows)assert.equal(new Set(word.choices.map(Context.choiceSummary)).size,word.choices.length);
   const biggerResponse = await fetch(`${base}/api/books/${other}/study?mode=meaning`);
   const biggerWords = await biggerResponse.json();
   for (const word of biggerWords) {

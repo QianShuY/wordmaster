@@ -1,0 +1,113 @@
+# tem-075 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：144
+- 输入 SHA256：d0558fc18d1409421edc748a918d02c5e936b062ba012946bd0c1e24c7941537
+
+## 待主代理复核
+
+Plausible 已访问 Oxford Learner’s Dictionaries，核对形容词核心义和英式 IPA；其不赞许义尚需考虑是否补入。其余条目缺少本轮可用的原始词典证据，音标留空。另需关注 poignant 的中文释义、poetess 的语域，以及多义或多词性条目完整性。
+
+- platform
+- platinum
+- platoon
+- play
+- player
+- playground
+- playmate
+- playoff
+- playwright
+- plaza
+- plea
+- plead
+- pleasant
+- please
+- pleased
+- pleasing
+- pleasure
+- pleat
+- pledge
+- plenary
+- plenipotentiary
+- plentiful
+- plenty
+- plight
+- plot
+- pluck
+- plug
+- plum
+- plumb
+- plumber
+- plume
+- plummet
+- plump
+- plunder
+- plunger
+- plural
+- plus
+- plush
+- plutonium
+- pneumonia
+- poach
+- pocket
+- pockmark
+- pod
+- poem
+- poet
+- poetess
+- poetic
+- poetry
+- poignant
+- point
+- poise
+- poison
+- poisonous
+- poke
+- poker
+- polar
+- polarity
+- pole 1
+- pole 2
+- polemic
+- police
+- policeman
+- policewoman
+- policy
+- polio
+- Polish
+- polish
+- politburo
+- polite
+- political
+- politician
+- politics
+- poll
+- pollen
+- pollster
+- pollutant
+- pollute
+- pollution
+- polo
+- polyester
+- polytechnic
+- pompous
+- pond
+- ponder
+- pony
+- pool 1
+- pool 2
+- poor
+- pop 1
+- pop 2
+- pope
+- popcorn
+- poplar
+- poppy
+- popular
+- popularity
+- population
+- populous

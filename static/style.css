@@ -1614,3 +1614,16 @@ html.has-card-modal, body.has-card-modal { overflow: hidden; }
   .draw-stage.has-unlock .draw-result .draw-card-detail { width: 100%; }
   .draw-stage.has-unlock #drawClose { min-height: 44px; }
 }
+
+/* Travel is a first-class section in the mobile navigation. */
+@media(max-width:760px){.bottom-nav{grid-template-columns:repeat(5,minmax(0,1fr))}}
+
+/* Reveal keeps one centered card; story prose lives in the detail view. */
+.draw-stage:not(.has-unlock){width:min(430px,calc(100vw - 28px));max-height:calc(100dvh - 24px);gap:15px;padding:16px 20px;overflow:auto}
+.draw-stage:not(.has-unlock)>.draw-result{width:100%;grid-template-columns:minmax(0,1fr);justify-items:center;gap:16px;text-align:center}
+.draw-stage:not(.has-unlock) .draw-card{width:min(300px,70vw,calc((100dvh - 220px)*.714));margin:0;cursor:default}
+.draw-stage .draw-card-detail{justify-self:center;width:auto;max-width:100%;min-height:42px;padding:9px 22px;border:1px solid #e6d8bd88;background:#29251e7a;color:#fff3d9;font-size:12px;letter-spacing:1px}
+.draw-stage .draw-card-detail:hover{background:#40382bd9;border-color:#f4dfb3;color:#fff7e8}
+.draw-stage .draw-kicker{margin:0;line-height:1.6;text-align:center}
+.draw-stage #drawClose{min-height:44px;margin-top:1px;padding:10px 25px}
+@media(max-width:760px){#cardModal:has(.draw-stage){align-items:center}.draw-stage:not(.has-unlock){padding:12px 14px;gap:12px}.draw-stage.has-unlock .draw-card-detail{font-size:11px}}

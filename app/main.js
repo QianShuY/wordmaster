@@ -5,15 +5,64 @@ const fs = require('node:fs');
 const os = require('node:os');
 const { db, seed, parseImportLine, getDatabaseInstanceId } = require('./db');
 const Domain = require('../shared/domain');
+const LearningContext = require('../shared/learning-context');
 const DesktopJourney = require('./desktop-journey');
 const LearningInsights = require('./learning-insights');
+const BattlePool = require('./battle-pool');
+const ReviewCycle = require('./review-cycle');
+const WordMemory = require('./word-memory').createWordMemory(db);
+const VocabularyHistory = require('./vocabulary-history').create(db);
+const Campaign = require('./campaign').createCampaign(db,planFor);
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
+function adventurePool(){
+ const rows=db.prepare(`SELECT w.*,b.name book_name FROM words w JOIN wordbooks b ON b.id=w.book_id
+ JOIN progress p ON p.word_id=w.id WHERE b.is_builtin=1 AND p.first_studied IS NOT NULL
+ AND NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)
+ AND EXISTS(SELECT 1 FROM review_log l WHERE l.word_id=w.id AND (l.outcome IS NULL OR l.outcome IN ('first_correct','retry_correct','wrong')))
+ ORDER BY p.last_review DESC,p.wrong DESC,w.id`).all();
+ return BattlePool.preparePool(VocabularyHistory.policies(rows));
+}
+const ChapterEnding=require('./chapter-ending').createChapterEnding(db,Campaign,adventurePool,getDatabaseInstanceId);
 
 const app = express();
 app.use(express.json());
+app.use(VocabularyHistory.guard);
 app.use('/shared', express.static(path.join(__dirname, '..', 'shared')));
 app.use(express.static(path.join(__dirname, '..', 'static')));
+app.get('/api/desktop/runtime',(_req,res)=>{
+ const info=require('./runtime-info').runtimeInfo(db);if(app.locals.contentUpgrade)info.contentUpgrade=app.locals.contentUpgrade;
+ res.set('Cache-Control','no-store').json(info);
+});
+app.post('/api/desktop/content-update',async(_req,res)=>{
+ const contentUpgrade=await refreshContentUpdate();
+ res.status(contentUpgrade.status==='failed'?503:200).json({contentUpgrade,...(contentUpgrade.status==='failed'?{error:'词库更新未完成，已保留原有内容和学习记录。'}:{})});
+});
+app.get('/api/adventure/campaign',(req,res)=>{
+ const state=Campaign.state(),ending=ChapterEnding.ending();
+ res.set('Cache-Control','no-store').json({...state,completed:ending?14:state.completed,chapterCleared:!!ending,ending:ending?{title:ending.title,memorial:ending.memorial,completedAt:ending.completedAt}:null});
+});
+app.get('/api/adventure/ending',(req,res)=>res.set('Cache-Control','no-store').json({ending:ChapterEnding.ending()}));
+app.post('/api/adventure/boss/sessions',(req,res)=>{
+ try{res.status(201).json(ChapterEnding.start());}catch(e){res.status(409).json({error:e.message});}
+});
+app.get('/api/adventure/boss/sessions/:id',(req,res)=>{
+ const session=ChapterEnding.session(req.params.id);res.set('Cache-Control','no-store');
+ if(!session)return res.status(404).json({error:'挑战记录不存在'});res.json(session);
+});
+app.post('/api/adventure/boss/sessions/:id/finish',(req,res)=>{
+ try{res.json(ChapterEnding.finish(req.params.id,req.body?.events));}catch(e){res.status(409).json({error:e.message});}
+});
+app.post('/api/adventure/campaign/complete-day',(req,res)=>{
+  const bookId=Number(req.body?.book_id);if(!Number.isSafeInteger(bookId)||bookId<1)return res.status(400).json({error:'无效的词库 ID'});
+  try{const result=Campaign.claim(bookId);res.status(result.ok?200:409).json(result);}catch(e){console.error('[campaign]',e.message);res.status(500).json({error:'旅程暂时无法保存，请重试'});}
+});
+
+// Read-only battle roster. Playing never changes progress, review dates or rewards.
+app.get('/api/adventure/pool', (req, res) => {
+  const words=adventurePool();
+  res.set('Cache-Control','no-store').json({instanceId:getDatabaseInstanceId(),words,available:words.length,minimum:10});
+});
 
 const q = {
   books: db.prepare(`
@@ -38,7 +87,7 @@ const q = {
   deleteWord: db.prepare('DELETE FROM words WHERE id = ?'),
   // 到期复习词（按到期时间升序，最久未复习的优先）
   dueWords: db.prepare(`
-    SELECT w.*, p.streak, p.correct, p.wrong, 0 AS is_new
+    SELECT w.*, p.streak, p.correct, p.wrong, p.next_due, p.last_review, p.review_level, 0 AS is_new
     FROM words w JOIN progress p ON p.word_id = w.id
     WHERE w.book_id = ? AND p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
     ORDER BY p.next_due LIMIT ?`),
@@ -56,24 +105,25 @@ const q = {
     SELECT DISTINCT meaning FROM words
     WHERE book_id != ? AND TRIM(meaning) <> TRIM(?) AND TRIM(meaning) <> ''
     ORDER BY RANDOM() LIMIT 30`),
-  progress: db.prepare('SELECT streak, first_studied FROM progress WHERE word_id = ?'),
+  progress: db.prepare('SELECT streak, first_studied, next_due, review_level, wrong, correct FROM progress WHERE word_id = ?'),
   hasReviewForWord: db.prepare('SELECT 1 AS found FROM review_log WHERE word_id = ? LIMIT 1'),
   lastReviewForSession: db.prepare('SELECT outcome FROM review_log WHERE session_id = ? AND word_id = ? ORDER BY id DESC LIMIT 1'),
   upsertProgress: db.prepare(`
-    INSERT INTO progress (word_id, correct, wrong, streak, last_review, next_due, first_studied)
-    VALUES (?, ?, ?, ?, datetime('now', 'localtime'), datetime('now', 'localtime', ?), datetime('now', 'localtime'))
+    INSERT INTO progress (word_id, correct, wrong, streak, last_review, next_due, first_studied, review_level)
+    VALUES (?, ?, ?, ?, datetime('now', 'localtime'), coalesce(?,datetime('now', 'localtime', ?)), datetime('now', 'localtime'), ?)
     ON CONFLICT(word_id) DO UPDATE SET
       correct = correct + excluded.correct,
       wrong = wrong + excluded.wrong,
       streak = excluded.streak,
       last_review = excluded.last_review,
-      next_due = excluded.next_due`),
-  logReview: db.prepare('INSERT INTO review_log (word_id, correct, is_new, request_id, outcome, session_id, request_payload) VALUES (?, ?, ?, ?, ?, ?, ?)'),
+      next_due = excluded.next_due,
+      review_level = excluded.review_level`),
+  logReview: db.prepare('INSERT INTO review_log (word_id, correct, is_new, request_id, outcome, session_id, request_payload, practice_mode) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'),
   reviewByRequest: db.prepare('SELECT id, word_id, correct, outcome, request_payload FROM review_log WHERE request_id = ?'),
   mistakes: db.prepare(`
-    SELECT w.*, b.name AS book_name, b.is_builtin AS book_is_builtin, p.wrong, p.streak, p.last_review
+    SELECT w.*, b.name AS book_name, b.is_builtin AS book_is_builtin, p.wrong, p.streak, p.last_review, p.next_due, p.review_level
     FROM progress p JOIN words w ON w.id = p.word_id JOIN wordbooks b ON b.id = w.book_id
-    WHERE p.wrong > 0 AND p.streak < 3
+    WHERE p.wrong > 0 AND p.streak < 3 AND NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)
     ORDER BY p.wrong DESC, p.last_review DESC`),
   stats: db.prepare(`
     SELECT
@@ -104,6 +154,9 @@ const q = {
   // 有过学习记录的日期（算连续打卡）
   activeDays: db.prepare('SELECT DISTINCT date(ts) AS day FROM review_log ORDER BY day DESC'),
   allCards: db.prepare('SELECT * FROM cards ORDER BY hidden, unlock_at, id'),
+  rewardWords: db.prepare(`SELECT COUNT(DISTINCT word_id) AS count FROM review_log
+    WHERE date(ts) = date('now', 'localtime') AND correct = 1
+      AND (outcome IS NULL OR outcome IN ('first_correct', 'retry_correct'))`),
   myCards: db.prepare('SELECT card_id, earned_at FROM user_cards'),
   drawCard: db.prepare('INSERT INTO user_cards (card_id) VALUES (?)'),
   todayCard: db.prepare(`
@@ -115,19 +168,25 @@ const q = {
 };
 
 function presentWords(words, book) {
-  return words.map(word => {
+  const memories=WordMemory.read(words.filter(word=>word.is_new===0||word.wrong!==undefined).map(word=>word.id));
+  return VocabularyHistory.policies(words).map(word => {
     const presentation = Domain.sampleWordPresentation(word, book);
-    return presentation ? { ...word, ...presentation } : word;
+    return { ...word, ...presentation, memory: memories.get(word.id)||null };
   });
 }
 
+function wordMemory(id) {
+  return WordMemory.one(id);
+}
+
 function presentMistakeWords(words) {
-  return words.map(({ book_is_builtin, ...word }) => {
+  const memories=WordMemory.read(words.map(word=>word.id));
+  return VocabularyHistory.policies(words).map(({ book_is_builtin, ...word }) => {
     const presentation = Domain.sampleWordPresentation(word, {
       name: word.book_name,
       is_builtin: book_is_builtin,
     });
-    return presentation ? { ...word, ...presentation } : word;
+    return { ...word, ...presentation, memory: memories.get(word.id)||null };
   });
 }
 
@@ -137,12 +196,15 @@ function planFor(book) {
   const totalNew = db.prepare(`
     SELECT COUNT(*) AS c FROM words w LEFT JOIN progress p ON p.word_id = w.id
     WHERE w.book_id = ? AND p.word_id IS NULL`).get(book.id).c;
-  return Domain.calculatePlan({
-    remainingNew: totalNew,
+  const learnedToday = countNewToday(book.id);
+  const plan = Domain.calculatePlan({
+    remainingNew: totalNew + learnedToday,
     dailyNew: book.daily_new,
     planActive: Boolean(book.plan_active),
     targetDate: book.target_date,
+    planMode: book.plan_mode,
   });
+  return { ...plan, remaining_new: totalNew, ...(totalNew === 0 ? { status: 'completed' } : {}) };
 }
 
 function attachChoices(words) {
@@ -150,13 +212,14 @@ function attachChoices(words) {
     // A self-built vocabulary often has fewer than four distinct definitions.
     // Never display a duplicate or a second correct answer: top up from other
     // vocabulary books only when the selected book is too small.
-    const seen = new Set([word.meaning.trim().toLocaleLowerCase()]);
+    const seen = new Set([LearningContext.choiceSummary(word.meaning).toLocaleLowerCase()]);
+    const correctFragments = new Set(word.meaning.match(/[\u3400-\u9fff]{2,}/g) || []);
     const choices = [word.meaning];
     const addCandidates = rows => {
       for (const row of rows) {
         const text = row.meaning.trim();
-        const key = text.toLocaleLowerCase();
-        if (!text || seen.has(key)) continue;
+        const key = LearningContext.choiceSummary(text).toLocaleLowerCase();
+        if (!text || seen.has(key) || (text.match(/[\u3400-\u9fff]{2,}/g) || []).some(fragment => correctFragments.has(fragment))) continue;
         choices.push(text);
         seen.add(key);
         if (choices.length === 4) break;
@@ -173,9 +236,23 @@ function attachChoices(words) {
   return words;
 }
 
+app.get('/api/books/history', (req,res)=>{
+ const books=q.books.all().filter(b=>VocabularyHistory.isHistory(b.id)).map(b=>({...b,read_only:true}));
+ res.set('Cache-Control','no-store').json(books);
+});
 app.get('/api/books', (req, res) => {
-  const books = q.books.all();
-  for (const b of books) b.plan = planFor(b);
+  const books = q.books.all().map(b=>({...b,read_only:VocabularyHistory.isHistory(b.id)}))
+    .filter(b=>req.query.include_history==='1'||!b.read_only);
+  for (const b of books) {
+    b.plan = planFor(b);
+    const build = db.prepare('SELECT content_version,audit_json FROM vocabulary_builds WHERE book_id=?').get(b.id);
+    if (build) {
+      const audit = JSON.parse(build.audit_json);
+      b.quality = { version: build.content_version, source: audit.file, pending: audit.excluded,
+        unique_headwords: audit.unique_headwords,
+        examples: db.prepare("SELECT COUNT(*) n FROM words WHERE book_id=? AND trim(example)<>'' AND trim(example_translation)<>''").get(b.id).n };
+    }
+  }
   res.json(books);
 });
 
@@ -194,17 +271,25 @@ app.delete('/api/books/:id', (req, res) => {
 
 // 学习计划：设定目标学完日期，系统自动分配每日新词量
 app.put('/api/books/:id/plan', (req, res) => {
-  const { target_date } = req.body || {};
+  const { target_date, mode = 'date', daily_new } = req.body || {};
   const id = Number(req.params.id);
   const book = db.prepare('SELECT * FROM wordbooks WHERE id = ?').get(id);
   if (!book) return res.status(404).json({ error: '词库不存在' });
+  if (!['date', 'daily'].includes(mode)) return res.status(400).json({ error: '无效的计划方式' });
+  if (mode === 'daily') {
+    if (!Number.isSafeInteger(daily_new) || daily_new < 1 || daily_new > 50) return res.status(400).json({ error: '每日新词需为 1–50 的整数' });
+    db.prepare("UPDATE wordbooks SET plan_mode='daily',daily_new=?,target_date=NULL,plan_active=1 WHERE id=?").run(daily_new, id);
+    return res.json({ ok: true, plan: planFor({ ...book, daily_new, plan_mode: 'daily', plan_active: 1, target_date: null }) });
+  }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(target_date || '')) return res.status(400).json({ error: '目标日期格式应为 YYYY-MM-DD' });
   const target = new Date(target_date + 'T00:00:00');
   if (Domain.localDayKey(target) !== target_date) return res.status(400).json({ error: '目标日期不是有效日期' });
   const today = new Date(); today.setHours(0, 0, 0, 0);
   if (target < today) return res.status(400).json({ error: '目标日期不能早于今天' });
-  q.setPlan.run(target_date, id);
-  res.json({ ok: true, plan: planFor({ ...book, plan_active: 1, target_date }) });
+  const preview = planFor({ ...book, plan_active: 1, target_date, plan_mode: 'date' });
+  if (Math.ceil(preview.remaining_new / preview.days_left) > 200) return res.status(400).json({ error: '目标过紧，每日需超过 200 个新词，请延后日期或选择每日词量。' });
+  db.prepare("UPDATE wordbooks SET target_date=?,plan_active=1,plan_mode='date' WHERE id=?").run(target_date, id);
+  res.json({ ok: true, plan: preview });
 });
 
 app.delete('/api/books/:id/plan', (req, res) => {
@@ -254,7 +339,9 @@ app.get('/api/desktop/books/:id/words', (req, res) => {
   const matchSql = keyword ? ' AND (instr(lower(w.word), lower(?)) > 0 OR instr(lower(w.meaning), lower(?)) > 0)' : '';
   const where = 'WHERE w.book_id = ?' + filters[status] + matchSql;
   const args = keyword ? [bookId, keyword, keyword] : [bookId];
-  const from = 'FROM words w LEFT JOIN progress p ON p.word_id = w.id ';
+  // Substring matches still need a scan; retain the book-local scan for search
+  // rather than walking the new display-order index through every full row.
+  const from = `FROM words w ${keyword ? 'INDEXED BY idx_words_book ' : ''}LEFT JOIN progress p ON p.word_id = w.id `;
   const total = db.prepare('SELECT COUNT(*) AS total ' + from + where).get(...args).total;
   const pages = Math.max(1, Math.ceil(total / requestedSize));
   const page = Math.min(requestedPage, pages);
@@ -269,7 +356,7 @@ app.get('/api/desktop/books/:id/words', (req, res) => {
 
 app.post('/api/words', (req, res) => {
   const { book_id, word, phonetic = '', pos = '', meaning, example = '' } = req.body || {};
-  if (!book_id || !word || !meaning) return res.status(400).json({ error: '单词和释义必填' });
+  if (!book_id || typeof word !== 'string' || !word.trim() || typeof meaning !== 'string' || !meaning.trim()) return res.status(400).json({ error: '单词和释义必填' });
   try {
     const r = q.insertWord.run(book_id, word.trim(), phonetic.trim(), pos.trim(), meaning.trim(), example.trim());
     res.status(201).json({ id: Number(r.lastInsertRowid) });
@@ -279,30 +366,48 @@ app.post('/api/words', (req, res) => {
 });
 
 // 批量导入：{ book_id, text }，每行一个词，支持 "word [音标] 词性. 释义" / "word 词性. 释义" / "word<TAB>释义" / "word,释义"
+function previewImport(bookId, text) {
+  const seen = new Set(q.words.all(bookId).map(w => w.word));
+  const entries = [], bad = []; let dup = 0;
+  for (const [index, line] of text.split(/\r?\n/).entries()) {
+    if (!line.trim()) continue;
+    const entry = parseImportLine(line);
+    if (!entry) { bad.push({ line: index + 1, text: line.trim().slice(0, 120) }); continue; }
+    if (seen.has(entry.word)) { dup++; continue; }
+    seen.add(entry.word); entries.push(entry);
+  }
+  return { entries, dup, bad };
+}
+
+app.post('/api/books/:id/import/preview', (req, res) => {
+  const bookId = Number(req.params.id), text = req.body?.text;
+  if (!db.prepare('SELECT id FROM wordbooks WHERE id=?').get(bookId)) return res.status(404).json({ error: '词库不存在' });
+  if (typeof text !== 'string' || !text.trim()) return res.status(400).json({ error: '导入内容为空' });
+  const preview = previewImport(bookId, text);
+  res.json({ added: preview.entries.length, dup: preview.dup, bad: preview.bad.slice(0, 20), bad_total: preview.bad.length, sample: preview.entries.slice(0, 10) });
+});
+
 app.post('/api/books/:id/import', (req, res) => {
   const { text } = req.body || {};
   const bookId = Number(req.params.id);
-  if (!text || !text.trim()) return res.status(400).json({ error: '导入内容为空' });
+  if (typeof text !== 'string' || !text.trim()) return res.status(400).json({ error: '导入内容为空' });
   if (!db.prepare('SELECT id FROM wordbooks WHERE id = ?').get(bookId)) return res.status(404).json({ error: '词库不存在' });
-  let added = 0, dup = 0;
-  const badLines = [];
-  for (const line of text.split(/\r?\n/)) {
-    if (!line.trim()) continue;
-    const p = parseImportLine(line);
-    if (!p) { badLines.push(line.trim().slice(0, 60)); continue; }
-    try {
-      q.insertWord.run(bookId, p.word, p.phonetic, p.pos, p.meaning, '');
-      added++;
-    } catch (e) { dup++; }
-  }
-  res.json({ added, dup, bad: badLines.slice(0, 20), bad_total: badLines.length });
+  const preview = previewImport(bookId, text);
+  db.exec('BEGIN IMMEDIATE');
+  try {
+    for (const p of preview.entries) q.insertWord.run(bookId, p.word, p.phonetic, p.pos, p.meaning, '');
+    db.exec('COMMIT');
+  } catch (error) { db.exec('ROLLBACK'); return res.status(409).json({ error: '导入未完成，请重新预览后重试。' }); }
+  res.json({ added: preview.entries.length, dup: preview.dup, bad: preview.bad.slice(0, 20).map(r => `第 ${r.line} 行：${r.text}`), bad_total: preview.bad.length });
 });
 
 app.put('/api/words/:id', (req, res) => {
   const { word, phonetic = '', pos = '', meaning, example = '' } = req.body || {};
-  if (!word || !meaning) return res.status(400).json({ error: '单词和释义必填' });
+  if (typeof word !== 'string' || !word.trim() || typeof meaning !== 'string' || !meaning.trim()) return res.status(400).json({ error: '单词和释义必填' });
+  const original = db.prepare('SELECT word FROM words WHERE id=?').get(Number(req.params.id));
   const r = q.updateWord.run(word.trim(), phonetic.trim(), pos.trim(), meaning.trim(), example.trim(), Number(req.params.id));
   if (r.changes === 0) return res.status(404).json({ error: '单词不存在' });
+  if (original.word !== word.trim()) db.prepare('UPDATE words SET headword=NULL,homograph=NULL WHERE id=?').run(Number(req.params.id));
   res.json({ ok: true });
 });
 
@@ -327,7 +432,9 @@ app.get('/api/books/:id/study', (req, res) => {
     const limits = Domain.calculateStudyQueueLimits({
       mode, dailyQuota: plan.daily_quota, newToday, wantAll, requestedLimit: requested,
     });
-    return res.json(presentWords(q.newWords.all(bookId, limits.new_limit), book));
+    const fresh = q.newWords.all(bookId, limits.new_limit);
+    attachChoices(fresh);
+    return res.json(presentWords(fresh, book));
   }
 
   const plan = planFor(book);
@@ -350,7 +457,7 @@ app.get('/api/books/:id/study', (req, res) => {
   const fresh = q.newWords.all(bookId, remaining);
   const words = Domain.composeStudyQueue(due, fresh, { ...limits, due_limit: due.length, new_limit: remaining });
   if (mode === 'meaning') attachChoices(words);
-  res.json(presentWords(words, book));
+  res.json(presentWords(mode === 'pos' ? words.filter(Domain.isUnambiguousPos) : words, book));
 });
 
 app.get('/api/desktop/identity', (req, res) => {
@@ -360,6 +467,19 @@ app.get('/api/desktop/identity', (req, res) => {
 // The Desktop "Today" experience follows the real plan, not an arbitrary
 // ten/twenty/forty-question limit. Review and new words are separate phases
 // of a single guided task. Existing mobile study endpoints are unchanged.
+app.get('/api/desktop/books/:id/choices', (req, res) => {
+  const bookId = Number(req.params.id);
+  const ids = String(req.query.ids || '').split(',').map(Number);
+  if (!Number.isSafeInteger(bookId) || bookId < 1 || !ids.length || ids.length > 200
+      || ids.some(id => !Number.isSafeInteger(id) || id < 1)) {
+    return res.status(400).json({error: '无效的单词清单'});
+  }
+  const words = db.prepare(`SELECT * FROM words WHERE book_id = ? AND id IN (${ids.map(() => '?').join(',')})`).all(bookId, ...ids);
+  attachChoices(words);
+  const book=db.prepare('SELECT * FROM wordbooks WHERE id=?').get(bookId);
+  res.set('Cache-Control', 'no-store').json(presentWords(words,book).map(word=>({...word,memory:wordMemory(word.id)})));
+});
+
 app.get('/api/desktop/books/:id/today', (req, res) => {
   const bookId = Number(req.params.id);
   if (!Number.isSafeInteger(bookId) || bookId < 1) {
@@ -376,6 +496,7 @@ app.get('/api/desktop/books/:id/today', (req, res) => {
   const newRemaining = Math.min(plan.remaining_new, Math.max(0, plan.daily_quota - newToday));
   const fresh = q.newWords.all(bookId, Math.min(200, newRemaining));
   attachChoices(due);
+  attachChoices(fresh);
   res.set('Cache-Control', 'no-store').json({
     book_id: bookId,
     review: presentWords(due, book),
@@ -410,6 +531,12 @@ function getMistakeScope(req, res) {
 }
 
 // 错题本
+app.get('/api/desktop/mistakes/count', (req,res)=>{
+  const result=db.prepare(`SELECT COUNT(*) count FROM progress p
+    JOIN words w ON w.id=p.word_id JOIN wordbooks b ON b.id=w.book_id
+    WHERE p.wrong>0 AND p.streak<3 AND NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)`).get();
+  res.set('Cache-Control','no-store').json(result);
+});
 app.get('/api/mistakes', (req, res) => {
   const scope = getMistakeScope(req, res);
   if (!scope) return;
@@ -419,7 +546,7 @@ app.get('/api/mistakes', (req, res) => {
 app.get('/api/mistakes/study', (req, res) => {
   const scope = getMistakeScope(req, res);
   if (!scope) return;
-  const words = presentMistakeWords(scope.words).slice(0, 30);
+  const words = presentMistakeWords(req.query.mode === 'pos' ? scope.words.filter(Domain.isUnambiguousPos) : scope.words).slice(0, 30);
   words.sort(() => Math.random() - 0.5);
   if (req.query.mode === 'meaning') attachChoices(words);
   res.set('Cache-Control', 'no-store').json(words);
@@ -447,16 +574,29 @@ app.post('/api/progress', (req, res) => {
     return res.status(400).json({ error: '答题结果类型无效' });
   }
   const isNewRequest = Boolean(is_new);
-  const requestPayload = JSON.stringify({
+  const practiceMode = ['spelling','meaning','pos'].includes(req.body.judgement_mode) ? req.body.judgement_mode : null;
+  const cycleId=req.body.review_cycle;
+  if(cycleId!==undefined&&(typeof cycleId!=='string'||cycleId.length<8||cycleId.length>128||!['meaning','spelling'].includes(practiceMode)))return res.status(400).json({error:'复习轮次无效'});
+  let requestPayload = JSON.stringify({
     word_id: wordId,
     correct,
     is_new: isNewRequest,
     session_id,
     outcome,
+    ...(practiceMode ? { practice_mode: practiceMode } : {}),
+    ...(cycleId ? {review_cycle:cycleId} : {}),
   });
 
   db.exec('BEGIN IMMEDIATE');
   try {
+    const policySource=db.prepare('SELECT * FROM words WHERE id=?').get(wordId);
+    const policyWord=policySource&&VocabularyHistory.policies([policySource])[0];
+    if(practiceMode==='spelling'&&policyWord?.answer_policy){
+      if(outcome!=='abandoned'&&(typeof req.body.answer_value!=='string'||Domain.judgeAnswer('spelling',req.body.answer_value,policyWord)!==correct)){
+        db.exec('ROLLBACK');return res.status(409).json({error:'拼写结果与审核规则不符，请重新作答。'});
+      }
+      requestPayload=JSON.stringify({...JSON.parse(requestPayload),answer_value:String(req.body.answer_value??'')});
+    }
     const priorRequest = q.reviewByRequest.get(request_id);
     if (priorRequest) {
       const sameRequest = priorRequest.request_payload !== null
@@ -468,30 +608,30 @@ app.post('/api/progress', (req, res) => {
       }
       const current = q.progress.get(priorRequest.word_id);
       db.exec('COMMIT');
-      return res.json({ ok: true, duplicate: true, streak: current ? current.streak : 0, outcome: priorRequest.outcome });
+      return res.json({ ok: true, duplicate: true, streak: current ? current.streak : 0, outcome: priorRequest.outcome, memory: wordMemory(priorRequest.word_id) });
     }
 
-    const exists = db.prepare('SELECT 1 AS found FROM words WHERE id = ?').get(wordId);
+    const exists = db.prepare('SELECT * FROM words WHERE id = ?').get(wordId);
     if (!exists) {
       db.exec('ROLLBACK');
       return res.status(404).json({ error: '单词不存在' });
     }
     const current = q.progress.get(wordId);
     const streak = Domain.nextStreak(current ? current.streak : 0, correct);
-    const due = Domain.nextDueModifier(correct, streak);
+    const schedule = cycleId ? ReviewCycle.record(db,exists,current,practiceMode,correct,cycleId).schedule : Domain.recallSchedule(current, correct);
     const hadReview = Boolean(q.hasReviewForWord.get(wordId));
     const firstStudiedToday = current?.first_studied && String(current.first_studied).slice(0, 10) === Domain.localDayKey();
     const newFlag = Boolean(is_new || firstStudiedToday) && !hadReview;
     const previousOutcome = q.lastReviewForSession.get(session_id, wordId)?.outcome;
     const savedOutcome = Domain.classifyOutcome(
       correct,
-      ['wrong', 'abandoned'].includes(previousOutcome),
+      ['wrong', 'abandoned', 'retry_correct'].includes(previousOutcome),
       outcome,
     );
-    q.upsertProgress.run(wordId, correct ? 1 : 0, correct ? 0 : 1, streak, due);
-    q.logReview.run(wordId, correct ? 1 : 0, newFlag ? 1 : 0, request_id, savedOutcome, session_id, requestPayload);
+    q.upsertProgress.run(wordId, correct ? 1 : 0, correct ? 0 : 1, streak, schedule.preserveDue, schedule.modifier, schedule.level);
+    q.logReview.run(wordId, correct ? 1 : 0, newFlag ? 1 : 0, request_id, savedOutcome, session_id, requestPayload, practiceMode);
     db.exec('COMMIT');
-    return res.json({ ok: true, duplicate: false, streak, outcome: savedOutcome });
+    return res.json({ ok: true, duplicate: false, streak, outcome: savedOutcome, memory: wordMemory(wordId) });
   } catch (error) {
     try { db.exec('ROLLBACK'); } catch {}
     console.error('[progress] 保存失败:', error.message);
@@ -558,6 +698,7 @@ app.get('/api/desktop/journey', (req, res) => {
     mastered: q.stats.get().mastered,
     ownedCards: q.myCards.all().length,
     drawnToday: !!q.todayCard.get(),
+    rewardWords: q.rewardWords.get().count,
   }));
 });
 
@@ -597,7 +738,8 @@ app.get('/api/desktop/insights', (req, res) => {
         THEN 1 ELSE 0 END AS due_now
     FROM progress p JOIN words w ON w.id = p.word_id
     JOIN wordbooks b ON b.id = w.book_id
-    WHERE (p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
+    WHERE NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)
+      AND (p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')
       OR (p.wrong > 0 AND p.streak < 3))
       ${scoped ? 'AND w.book_id = ?' : ''}
     ORDER BY
@@ -612,6 +754,23 @@ app.get('/api/desktop/insights', (req, res) => {
 });
 
 // ---- 学习数据统计 ----
+app.get('/api/desktop/activity', (req,res) => {
+  const days = Number(req.query.days || 90);
+  const id = req.query.book_id === undefined ? null : Number(req.query.book_id);
+  if (!Number.isInteger(days) || days<1 || days>90 || (id!==null && (!Number.isSafeInteger(id) || id<1))) return res.status(400).json({error:'无效的统计范围'});
+  if (id!==null && !db.prepare('SELECT 1 FROM wordbooks WHERE id=?').get(id)) return res.status(404).json({error:'词库不存在'});
+  const since = `-${days-1} days`;
+  const filter = id === null ? '' : ' AND w.book_id=?';
+  const args = id===null ? [since,since] : [since,id,since,id];
+  const rows = db.prepare(`SELECT day,SUM(total) total,SUM(correct) correct,SUM(new_words) new_words FROM (
+    SELECT date(l.ts) day,COUNT(*) total,SUM(l.correct) correct,0 new_words FROM review_log l JOIN words w ON w.id=l.word_id
+    WHERE date(l.ts)>=date('now','localtime',?) AND date(l.ts)<=date('now','localtime') ${filter} GROUP BY date(l.ts)
+    UNION ALL
+    SELECT date(p.first_studied) day,0 total,0 correct,COUNT(*) new_words FROM progress p JOIN words w ON w.id=p.word_id
+    WHERE date(p.first_studied)>=date('now','localtime',?) AND date(p.first_studied)<=date('now','localtime') ${filter} GROUP BY date(p.first_studied)
+  ) GROUP BY day ORDER BY day`).all(...args);
+  res.set('Cache-Control','no-store').json(rows);
+});
 app.get('/api/stats/daily', (req, res) => {
   const days = Math.min(Number(req.query.days) || 90, 365);
   if (req.query.book_id === undefined) return res.json(q.dailyStats.all(`-${days} days`));
@@ -637,6 +796,7 @@ app.get('/api/stats/overview', (req, res) => {
   }
   const books = q.books.all();
   const book = scoped ? books.find(item => item.id === bookId) : null;
+  const actionableBooks=books.filter(item=>!VocabularyHistory.isHistory(item.id));
   if (scoped && !book) return res.status(404).json({ error: '词库不存在' });
   const days = (scoped ? db.prepare(`SELECT DISTINCT date(l.ts) AS day FROM review_log l
     JOIN words w ON w.id = l.word_id WHERE w.book_id = ? ORDER BY day DESC`).all(bookId)
@@ -646,7 +806,9 @@ app.get('/api/stats/overview', (req, res) => {
   if (!days.includes(Domain.localDayKey(cursor))) cursor.setDate(cursor.getDate() - 1);
   while (days.includes(Domain.localDayKey(cursor))) { streak++; cursor.setDate(cursor.getDate() - 1); }
 
-  const today = scoped ? {
+  const today = scoped && VocabularyHistory.isHistory(bookId) ? {
+    due_review:0,new_today:book.new_today,daily_new_quota:null,historical_read_only:true,
+  } : scoped ? {
     due_review: book.due_review,
     new_today: book.new_today,
     // The quota can become zero *after* the last new word is introduced.
@@ -654,10 +816,10 @@ app.get('/api/stats/overview', (req, res) => {
     daily_new_quota: Math.max(book.new_today,
       Math.min(planFor(book).daily_quota, book.new_today + planFor(book).remaining_new)),
   } : {
-    due_review: books.reduce((sum, item) => sum + item.due_review, 0),
+    due_review: actionableBooks.reduce((sum, item) => sum + item.due_review, 0),
     new_today: books.reduce((sum, item) => sum + item.new_today, 0),
     daily_new_quota: req.query.scope === 'all' ? null
-      : books.reduce((sum, item) => sum + planFor(item).daily_quota, 0),
+      : actionableBooks.reduce((sum, item) => sum + planFor(item).daily_quota, 0),
   };
   const total = scoped ? db.prepare(`
     SELECT
@@ -702,6 +864,7 @@ app.get('/api/cards', (req, res) => {
     owned: mine.size,
     drawn_today: !!q.todayCard.get(),
     today_answered: todayAnswered,
+    reward_words: q.rewardWords.get().count,
     draw_target: 10,
   });
 });
@@ -714,10 +877,9 @@ app.post('/api/cards/draw', (req, res) => {
       db.exec('ROLLBACK');
       return res.status(409).json({ error: '今天已经抽过卡了，明天再来' });
     }
-    const ov = q.stats.get();
-    if (!Domain.qualifiesForCard(ov.today_reviewed)) {
+    if (!Domain.qualifiesForCard(q.rewardWords.get().count)) {
       db.exec('ROLLBACK');
-      return res.status(400).json({ error: '先完成今天的学习（至少 10 次作答）再来抽卡' });
+      return res.status(400).json({ error: '今天答对 10 个不同词条后可领取卡牌；错后答对也计入，重复答对同一词只计一次' });
     }
 
     const mine = new Set(q.myCards.all().map(c => c.card_id));
@@ -728,12 +890,13 @@ app.post('/api/cards/draw', (req, res) => {
       const sample = normals[Math.floor(Math.random() * normals.length)] || null;
       q.claimCard.run(Domain.localDayKey(), null);
       db.exec('COMMIT');
-      return res.json({ card: null, duplicate: true, message: '普通卡已全部集齐！今日好运转化为双倍墨香。', sample });
+      return res.json({ card: null, duplicate: true, message: '普通卡已全部集齐，感谢你一路积累！', sample });
     }
 
     q.drawCard.run(card.id);
     const owned = mine.size + 1;
-    const unlocked = q.allCards.all().filter(c => c.hidden && !mine.has(c.id) && owned >= c.unlock_at);
+    const normalOwned = q.allCards.all().filter(c => !c.hidden && (mine.has(c.id) || c.id === card.id)).length;
+    const unlocked = q.allCards.all().filter(c => c.hidden && !mine.has(c.id) && normalOwned >= c.unlock_at);
     for (const hidden of unlocked) q.drawCard.run(hidden.id);
     q.claimCard.run(Domain.localDayKey(), card.id);
     db.exec('COMMIT');
@@ -745,11 +908,29 @@ app.post('/api/cards/draw', (req, res) => {
   }
 });
 
-if (require.main === module) {
-  seed();
-  const PORT = process.env.PORT || 3456;
-  const HOST = process.env.WORDMASTER_HOST || '127.0.0.1';
-  app.listen(PORT, HOST, () => console.log(`WordMaster 已启动: http://${HOST}:${PORT}`));
+let contentUpdatePromise=null;
+async function refreshContentUpdate(){
+  if(contentUpdatePromise)return contentUpdatePromise;
+  contentUpdatePromise=(async()=>{
+  try{
+    const update=await require('./content-upgrade').upgradeContent(db,{databasePath:path.resolve(process.env.WORDMASTER_DB_PATH||path.join(__dirname,'../data/wordmaster.db'))});
+    app.locals.contentUpgrade={status:update.status,version:update.version,counts:update.counts,editedRowsPreserved:update.edited_rows_preserved||0,skippedBooks:update.skipped?.length||0,receiptSaved:update.receipt_saved??null};
+  }catch(error){
+    app.locals.contentUpgrade={status:'failed',version:require('./vocabulary').VERSION,originalContentRetained:true};
+    console.error('[content] 词库内容更新未完成，继续使用原有内容。',error.message);
+  }
+  return app.locals.contentUpgrade;
+  })();
+  try{return await contentUpdatePromise;}finally{contentUpdatePromise=null;}
 }
+async function startDesktopServer({port=process.env.PORT||3456,host=process.env.WORDMASTER_HOST||'127.0.0.1'}={}) {
+  seed();
+  await refreshContentUpdate();
+  return new Promise((resolve,reject)=>{
+    const server=app.listen(port,host,()=>{console.log(`WordMaster 已启动: http://${host}:${server.address().port}`);resolve(server);});
+    server.once('error',reject);
+  });
+}
+if (require.main === module) startDesktopServer().catch(error=>{console.error('WordMaster 启动失败:',error.message);process.exitCode=1;});
 
-module.exports = { app, db };
+module.exports = { app, db, startDesktopServer };

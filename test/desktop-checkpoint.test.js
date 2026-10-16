@@ -34,6 +34,19 @@ function makeStorage() {
   };
 }
 
+test('second-group checkpoints retain cumulative progress and resume only unanswered words',()=>{
+ const learn=Array.from({length:23},(_,i)=>({id:i+1,word:'word'+String.fromCharCode(97+i)}));
+ const snapshot=makeSnapshot({stage:'learn',total:10,done:4,roundWords:learn.slice(10,20),queue:learn.slice(14,20),
+  flow:{...makeSnapshot().flow,review:[],reviewTotal:0,learn,learnTotal:23,learnGroupSize:10,learnGroupStart:10,completed:{review:0,learn:10,choice:10,spelling:10}}});
+ const storage=makeStorage();assert.equal(Checkpoint.write(storage,snapshot),true);
+ const restored=Checkpoint.read(storage,42,snapshot.day,snapshot.instanceId);
+ assert.deepEqual(restored.queue.map(w=>w.id),[15,16,17,18,19,20]);
+ assert.deepEqual(Checkpoint.learnGroup(restored.flow).map(w=>w.id),[11,12,13,14,15,16,17,18,19,20]);
+ assert.equal(Checkpoint.progress(restored).achieved,14);
+ assert.equal(Checkpoint.repairLearnManifest(restored).flow.learn.length,23);
+ assert.equal(Checkpoint.sane({...snapshot,flow:{...snapshot.flow,learnGroupStart:11}}),false);
+});
+
 test('same-day checkpoints roundtrip, resume at next word, and expire at local midnight', () => {
   const storage = makeStorage();
   const initial = makeSnapshot();

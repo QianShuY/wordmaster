@@ -1,0 +1,113 @@
+# tem-080 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：167
+- 输入 SHA256：c67408ec9c0bcd01c40c734f7623757cdf77104efced27005bebe0db36132bdd
+
+## 待主代理复核
+
+Rabid 已访问 Oxford Learner’s Dictionaries 并核对动物患狂犬病义及英式 IPA；该词另含“狂热/极端”义尚待复核。其余条目无本轮可用的原始词典证据，音标留空。输入含 train 的源义项“雨”与词头不符、trainbow 疑似错拼，以及 pungent/racist/randy 等语域与释义问题，已分别列疑点。
+
+- quote
+- quotient
+- rabbi
+- rabbit
+- rabies
+- race 1
+- race 2
+- racecourse
+- racer
+- racial
+- racialism
+- racing
+- racism
+- racist
+- rack
+- racket
+- racketeer
+- radar
+- radial
+- radiance
+- radiant
+- radiate
+- radiation
+- radiator
+- radical
+- radicalism
+- radio
+- radioactive
+- radioactivity
+- radiochemical
+- radium
+- raffle
+- raft 1
+- raft 2
+- rag
+- rage
+- ragged
+- raid
+- raider
+- rail
+- railway
+- rain
+- rainbow
+- raincoat
+- raindrop
+- rainfall
+- rainforest
+- rainproof
+- rainy
+- raise
+- raiser
+- raisin
+- rake
+- rally
+- RAM
+- ram
+- ramble
+- rambler
+- ramification
+- ramp
+- rampage
+- rampant
+- rampart
+- ranch
+- rancid
+- rancour
+- random
+- randy
+- range
+- ranger
+- rank
+- ransom
+- rap
+- rape
+- rapid
+- rapidly
+- rapist
+- rapport
+- rapprochement
+- rapt
+- rapture
+- rare
+- rarely
+- rarity
+- rascal
+- rash
+- rasp
+- raspberry
+- rat
+- rate
+- rateable
+- ratepayer
+- rather
+- rating
+- ratio
+- ration
+- rational
+- rationale
+- rationalize

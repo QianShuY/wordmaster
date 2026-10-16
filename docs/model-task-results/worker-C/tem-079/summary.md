@@ -1,0 +1,113 @@
+# tem-079 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：154
+- 输入 SHA256：62e0d457b6814ed997daf50911f6ee0c7b3200cb597bd1c10e8be447fba647d4
+
+## 待主代理复核
+
+Punctual 已访问 Oxford Learner’s Dictionaries 并核对形容词核心义和英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需关注 pungent 的源词性、purge 源释义格式、quack 的贬义、queer 的语域与现代用法，以及 quick 2 的解剖学义标签。
+
+- pulpit
+- pulse
+- pump
+- pumpkin
+- pun
+- punch 1
+- punch 2
+- punctuation
+- puncture
+- pungent
+- punish
+- punishment
+- punitive
+- pupil 1
+- pupil 2
+- puppet
+- puppy
+- purchase
+- pure
+- purely
+- purge
+- purify
+- Puritan
+- purity
+- purple
+- purport
+- purpose
+- purse
+- pursue
+- pursuit
+- push
+- put
+- puzzle
+- pyramid
+- python
+- quack 1
+- quack 2
+- quadrangle
+- quadrant
+- quadratic
+- quadrilateral
+- quadruple
+- quail 1
+- quail 2
+- quaint
+- quake
+- Quaker
+- qualification
+- qualified
+- qualifier
+- qualify
+- qualitative
+- quality
+- qualm
+- quantifier
+- quantify
+- quantitative
+- quantity
+- quantum
+- quarantine
+- quarrel
+- quarry
+- quart
+- quarter
+- quarterly
+- quartet
+- quartz
+- quash
+- quaver
+- quay
+- queen
+- queer
+- quell
+- quench
+- querulous
+- query
+- quest
+- questionable
+- queue
+- quibble
+- quick 1
+- quick 2
+- quickly
+- quicksand
+- quietly
+- quilt
+- quintessence
+- quintet
+- quip
+- quirk
+- quit
+- quite
+- quitter
+- quiver
+- quixotic
+- quiz
+- quizzical
+- quota
+- quotation

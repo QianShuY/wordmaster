@@ -1,0 +1,51 @@
+# tem-125 初审摘要
+
+- 输入数量：39
+- 结果数量：39
+- 原例句审阅并保留数量：39
+- 证据已核对数量：0
+- needs-review 数量：39
+- 待主代理处理疑点：39 条均缺少实际原始词典证据；多义、多词性词条及固定搭配需逐项核验。
+- 输入哈希按 manifest 核对；identity 和 original 均按输入顺序原样复制。
+- 状态：proposal；未进行外部人工审核，未声称完整词典义项已复核。
+## 补充：needs-review 身份清单
+
+- journey
+- learn
+- library
+- listen
+- loyalty
+- memory
+- merge
+- mountain
+- multiply
+- o'clock
+- path
+- practice
+- prepare
+- promise
+- protect
+- question
+- quiet
+- radius
+- refreshment
+- relish
+- remainder
+- remember
+- remnant
+- repeat
+- river
+- shelter
+- shrewd
+- shuttle
+- sneak
+- tariff
+- theft
+- token
+- travel
+- valley
+- velocity
+- ventilate
+- village
+- vital
+- weather

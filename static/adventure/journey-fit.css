@@ -1,0 +1,24 @@
+/* Keep the complete landscape in the first desktop viewport. */
+@media (min-width:761px){
+ .campaign-page .folio-header{height:56px;min-height:56px}
+ .campaign-heading{min-height:44px;margin:10px 0 8px;gap:12px}
+ .campaign-heading>div:first-child{display:flex;align-items:baseline;gap:14px;min-width:0}
+ .campaign-heading p{font-size:9px;letter-spacing:1.5px;margin:0}
+ .campaign-heading h1{font-size:28px;line-height:1.25;white-space:nowrap}
+ .campaign-oath{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .campaign-progress{display:flex;align-items:baseline;gap:9px}
+ .campaign-progress strong{font-size:24px}
+ .travel-toolbar{display:inline-flex;vertical-align:middle;width:calc(40% - 8px);margin:0 12px 12px 0;min-height:36px}
+ .journey-score{display:inline-flex;vertical-align:middle;justify-content:flex-end;width:calc(60% - 12px);margin:0 0 12px;min-height:36px;gap:9px}
+ .score-title{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .world-map,.preview-mode .world-map{max-width:var(--map-fit-width,none)}
+}
+@media (min-width:761px) and (max-width:1050px){
+ .campaign-heading>div:first-child{gap:8px}
+ .campaign-heading p{font-size:8px;letter-spacing:.8px}
+ .campaign-heading h1{font-size:25px}
+ .campaign-progress>span{max-width:125px;white-space:normal;font-size:9px}
+ .map-legend{font-size:9px;gap:4px}
+ .map-legend i{margin-left:8px}
+ .journey-score .sound-volume input{width:60px}
+}

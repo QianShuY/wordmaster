@@ -4,6 +4,9 @@ node_modules/
 .env.*
 !.env.example
 *.log
+/output/foundation/*.db*
+/output/**/*.db*
+/output/releases/
 *.lnk
 WordMaster.exe.bak
 android-g0/node_modules/
@@ -11,3 +14,13 @@ android-g0/android/.gradle/
 android-g0/android/build/
 android-g0/android/app/build/
 android-g0/android/local.properties
+
+# Local learning state and release/QA artifacts are not repository content.
+/data/
+*.db
+*.db-*
+*.db.backup*
+!android-g0/android/app/src/main/assets/wordmaster-seed.db
+/output/
+*.zip
+*.bak

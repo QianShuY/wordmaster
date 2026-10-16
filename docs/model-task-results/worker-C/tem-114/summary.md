@@ -1,0 +1,101 @@
+# tem-114 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句）
+- 证据已核对数量：0
+- needs-review 数量：100
+- 待主代理处理疑点：100 条均缺少实际原始词典证据；weekly、weighty 原音标疑似异常；wh- 词条 /hw/ 音标需核对；wicked 原释义“牙区恶的”和 wince 中“苦'Au”疑为录入噪声；will 1/2、wind 1/2 为不同词性或读音的独立词条。
+- 输入哈希按 manifest 核对；identity 和 original 均按输入顺序原样复制。
+- 状态：proposal；未进行外部人工审核，未声称完整词典义项已复核。
+## 补充：needs-review 身份清单
+
+- wax
+- way
+- wayward
+- weak
+- weaken
+- weakness
+- wealth
+- wealthy
+- wean
+- weapon
+- weaponry
+- wear
+- weary
+- weave
+- web
+- wed
+- wedding
+- wedge
+- Wednesday
+- weed
+- weekday
+- weekend
+- weep
+- weird
+- welcome
+- weld
+- welfare
+- well 2
+- well-being
+- well-known
+- well-to-do
+- Welsh
+- west
+- western
+- westward
+- wet
+- whack
+- whale
+- wharf
+- wheat
+- wheel
+- when
+- whenever
+- where
+- whereabouts
+- whereas
+- whereby
+- wherever
+- whether
+- whiff
+- while
+- whim
+- whimsical
+- whip
+- whirl
+- whirlwind
+- whisk
+- whisker
+- whisper
+- whistle
+- white
+- whiten
+- whitewash
+- whizz
+- whole
+- wholesale
+- wholesome
+- wholly
+- whoop
+- why
+- wicker
+- wide
+- widen
+- widespread
+- widow
+- width
+- wield
+- wife
+- wig
+- wiggle
+- wild
+- will 2
+- willow
+- willpower
+- wilt
+- wily
+- wind 2
+- windfall
+- windmill

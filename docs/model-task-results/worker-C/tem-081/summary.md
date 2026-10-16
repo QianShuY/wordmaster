@@ -1,0 +1,113 @@
+# tem-081 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：158
+- 输入 SHA256：9250e4b324e8d02dfd2f4f1b3df3e4e587817c450a15e0e836cb0b6f08f999ce
+
+## 待主代理复核
+
+Ravish 已实际访问 Oxford Learner’s Dictionaries，核对动词“使某人获得极大愉悦”义和英式 IPA；页面同时列旧式强迫性交义，已标注语域疑点。其余条目无本轮可用词典证据，音标留空。另需核对 recollect 和 recover 的源词性与定义对应问题，以及多义词完整释义。
+
+- rattle
+- rattlesnake
+- ravage
+- raven
+- ravine
+- raw
+- ray
+- razor
+- reach
+- react
+- reaction
+- reactionary
+- reactor
+- read
+- reader
+- readily
+- readiness
+- reading
+- ready
+- reaffirm
+- real
+- realism
+- realist
+- realistic
+- reality
+- realization
+- really
+- realm
+- reap
+- reappear
+- rear
+- rear-admiral
+- rearguard
+- rearmament
+- rearrange
+- reason
+- reasonable
+- reasoning
+- reassemble
+- reassessment
+- reassure
+- rebate
+- rebel
+- rebellion
+- rebellious
+- rebirth
+- rebound
+- rebuff
+- rebuild
+- rebuke
+- recall
+- recapture
+- recede
+- receipt
+- receive
+- receiver
+- recent
+- recently
+- reception
+- receptionist
+- receptive
+- recess
+- recession
+- recipe
+- recipient
+- reciprocal
+- reciprocate
+- reciprocity
+- recital
+- recitation
+- recite
+- reckless
+- reckon
+- reclaim
+- recline
+- recognition
+- recognizable
+- recognize
+- recollect
+- recollection
+- recommend
+- recommendation
+- recompense
+- reconcile
+- reconciliation
+- reconnaissance
+- reconstruct
+- record
+- recorder
+- recording
+- recount 1
+- recount 2
+- recoup
+- recourse
+- recover
+- recovery
+- recreate
+- recreation
+- recruit

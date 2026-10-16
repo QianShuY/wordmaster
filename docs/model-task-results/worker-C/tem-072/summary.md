@@ -1,0 +1,111 @@
+# tem-072 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句和译文；现有释义保留原样）
+- 证据已核对数量：3
+- needs-review 数量：97
+- 疑点数量（issues 条目）：156
+- 输入 SHA256：3b1ef913a5d814a9dccf28729d375fe914dd0f42049915af324500f027b88f5c
+
+## 待主代理复核
+
+以下条目缺少本轮可访问、足以确认所选义项及英式音标的词典证据；全部保留原释义，音标建议留空。
+
+- parliamentary
+- parrot
+- parry
+- parsley
+- parson
+- part
+- partake
+- partial
+- partiality
+- participant
+- participate
+- participle
+- particle
+- particular
+- particularly
+- parting
+- partisan
+- partition
+- partly
+- partner
+- part-time
+- party
+- pass
+- passage
+- passenger
+- passerby
+- passion
+- passionate
+- passive
+- passport
+- password
+- past
+- pasta
+- paste
+- pastel
+- pastime
+- pastoral
+- pastry
+- pasture
+- pat
+- patch
+- patchy
+- patent
+- pathetic
+- pathology
+- patience
+- patient 1
+- patient 2
+- patio
+- patriarch
+- patriarchal
+- patriot
+- patriotic
+- patrol
+- patron
+- patronage
+- patter
+- pattern
+- pause
+- pave
+- pavement
+- pavilion
+- paw
+- pawn 1
+- pawn 2
+- pay
+- payable
+- payment
+- payoff
+- payout
+- payroll
+- pea
+- peace
+- peaceful
+- peach
+- peacock
+- peak
+- peanut
+- pear
+- pearl
+- peasant
+- peat
+- pebble
+- peck
+- peculiar
+- peculiarity
+- pedal
+- pedantic
+- peddle
+- pedestal
+- pedestrian
+- pedigree
+- peek
+- peel
+- peep
+- peer 1
+- peer 2

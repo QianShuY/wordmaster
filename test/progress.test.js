@@ -137,15 +137,18 @@ test('progress saves atomically, classifies retries, and deduplicates request ID
   assert.equal(db.prepare('SELECT COUNT(*) AS n FROM progress WHERE word_id = ?').get(learnedId).n, 1);
 
   const reviewsBeforeCard = db.prepare('SELECT COUNT(*) AS n FROM review_log').get().n;
-  for (let i = 0; i < Math.max(0, 10 - reviewsBeforeCard); i++) {
+  const remainingRewardWords = 10 - (await (await fetch(`${base}/api/cards`)).json()).reward_words;
+  for (let i = 0; i < remainingRewardWords; i++) {
+    const rewardId = Number(db.prepare('INSERT INTO words(book_id,word,meaning) VALUES(?,?,?)').run(bookId, 'reward'+i, '奖励词'+i).lastInsertRowid);
     const response = await postProgress({
-      word_id: wordId, correct: true, is_new: false,
+      word_id: rewardId, correct: true, is_new: false,
       request_id: `attempt-card-${String(i).padStart(4, '0')}`, session_id: 'session-card-run-0001', outcome: 'first_correct',
     });
     assert.equal(response.status, 200);
   }
   const cardState = await (await fetch(`${base}/api/cards`)).json();
-  assert.equal(cardState.today_answered, 10);
+  assert.equal(cardState.today_answered, reviewsBeforeCard + remainingRewardWords);
+  assert.equal(cardState.reward_words, 10);
   const draw = await fetch(`${base}/api/cards/draw`, { method: 'POST' });
   assert.equal(draw.status, 200);
   const repeatedDraw = await fetch(`${base}/api/cards/draw`, { method: 'POST' });

@@ -1,0 +1,113 @@
+# tem-106 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：155
+- 输入 SHA256：ec3672abea1e5480521869905c6e0b72d87de232281ef791e604474e2c1c4692
+
+## 待主代理复核
+
+Topple 已访问 Oxford Learner’s Dictionaries 并核对动词“失衡倒下”义及英式 IPA；另有推翻权位义待复核。其余词条无本轮可用原始词典证据，音标留空。另需复核 subversion/suburbanite/requirement 等输入词性错配，以及具敏感语域的词条。
+
+- tonight
+- tonnage
+- too
+- tool
+- tooth
+- toothache
+- toothbrush
+- toothpaste
+- top
+- topic
+- topographer
+- topsoil
+- torch
+- torment
+- tornado
+- torpedo
+- torrent
+- torrential
+- torrid
+- torsion
+- torso
+- tortoise
+- tortuous
+- torture
+- Tory
+- toss
+- total
+- totalitarian
+- totalitarianism
+- totter
+- touch
+- touchdown
+- touching
+- tough
+- tour
+- tourism
+- tourist
+- tournament
+- tout
+- tow
+- towel
+- tower
+- town
+- townsfolk
+- township
+- townsman
+- toxic
+- toy
+- trace
+- track
+- tract
+- tractable
+- tractor
+- trade
+- trademark
+- tradesman
+- tradition
+- traditional
+- traffic
+- trafficker
+- tragedian
+- tragedy
+- tragic
+- trail
+- trailer
+- train 1
+- train 2
+- training
+- trait
+- traitor
+- tram
+- tramp
+- trample
+- trance
+- tranquil
+- tranquility
+- transaction
+- transcend
+- transcendental
+- transcendentalism
+- transcribe
+- transfer 1
+- transfer 2
+- transfigure
+- transform
+- transformation
+- transfuse
+- transient
+- transistor
+- transit
+- transition
+- transitive
+- transitory
+- translate
+- translation
+- translator
+- translucent
+- transmission
+- transmit

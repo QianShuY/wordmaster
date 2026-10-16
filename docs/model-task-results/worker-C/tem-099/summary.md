@@ -1,0 +1,107 @@
+# tem-099 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句）
+- 证据已核对数量：0
+- needs-review 数量：100
+- 待主代理处理疑点：100 条均缺少实际原始词典证据；strike 原音标疑似错误；strut 1/2、stud 1/2、subject 1/2 为不同词性条目，需分别核对；subjective 原释义括号未闭合。
+- 输入哈希按 manifest 核对；identity 和 original 均按输入顺序原样复制。
+- 状态：proposal；未进行外部人工审核，未声称完整词典义项已复核。
+## 补充：needs-review 身份清单
+
+- storm
+- story
+- stout
+- stove
+- stow
+- straddle
+- straggle
+- straight
+- straighten
+- straightforward
+- strain
+- strained
+- strait
+- straitlaced
+- strand
+- strange
+- stranger
+- strangle
+- strap
+- strategic
+- strategist
+- strategy
+- stratify
+- stratum
+- straw
+- strawberry
+- stray
+- streak
+- stream
+- streamline
+- street
+- streetcar
+- strength
+- strengthen
+- strenuous
+- stress
+- stressful
+- stretch
+- stretcher
+- strew
+- stricken
+- strict
+- stricture
+- stride
+- strident
+- strife
+- striking
+- string
+- stringent
+- strip 1
+- strip 2
+- stripe
+- striped
+- strive
+- stroke
+- stroll
+- strong
+- stronghold
+- strontium
+- structural
+- structure
+- struggle
+- strut 2
+- stub
+- stubble
+- stubborn
+- stud 2
+- student
+- studio
+- studious
+- study
+- stuff
+- stuffing
+- stuffy
+- stumble
+- stump
+- stun
+- stunt
+- stupefaction
+- stupendous
+- stupid
+- stupor
+- sturdy
+- stutter
+- style
+- stylish
+- stylistic
+- subconscious
+- subdue
+- subject 2
+- subjection
+- subjectivity
+- subjunctive
+- sublime
+- submarine

@@ -1,0 +1,4507 @@
+{
+  "task_id": "npee-016",
+  "input_sha256": "e9574000b1e79c88b50708a9d2b18f42172dd2218057cce43d2f3ea4b7ef44f5",
+  "status": "proposal",
+  "entries": [
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2262,
+        "word": "head",
+        "headword": "head",
+        "homograph": null,
+        "source_raw": "head [hed] n.头;顶部;领导,首脑 v.主管;位于..顶部"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "头;顶部;领导,首脑 v.主管;位于..顶部",
+        "phonetic": "hed",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the part of the body on top of the neck containing eyes, nose, mouth and brain"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "头;顶部;领导,首脑 v.主管;位于..顶部",
+        "phonetic": "hed",
+        "example": "He bumped his head on the low doorway.",
+        "example_translation": "他撞到了低矮门框上。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/head",
+          "checked_pos": "noun",
+          "checked_sense": "the part of the body on top of the neck containing eyes, nose, mouth and brain",
+          "checked_uk_ipa": "hed",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "身体部位、顶部、领导者及思维能力等常见义项需分开；动词管理/位于顶部另核。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2263,
+        "word": "headache",
+        "headword": "headache",
+        "homograph": null,
+        "source_raw": "headache [ˈhedeik] n.头痛"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "头痛",
+        "phonetic": "ˈhedeik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a continuous pain in the head"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "头痛",
+        "phonetic": "ˈhedeɪk",
+        "example": "She took a short break because of a headache.",
+        "example_translation": "她因头痛休息了一会儿。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/headache",
+          "checked_pos": "noun",
+          "checked_sense": "a continuous pain in the head",
+          "checked_uk_ipa": "ˈhedeɪk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可比喻令人烦恼的问题；医学语境不应把症状和病因混为一谈。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2264,
+        "word": "heading",
+        "headword": "heading",
+        "homograph": null,
+        "source_raw": "heading [ˈhediŋ] n.标题"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "标题",
+        "phonetic": "ˈhediŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a title at the top of a page or section"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "标题",
+        "phonetic": "ˈhedɪŋ",
+        "example": "Add a clear heading above each section.",
+        "example_translation": "在每个部分上方加一个清晰的标题。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heading",
+          "checked_pos": "noun",
+          "checked_sense": "a title at the top of a page or section",
+          "checked_uk_ipa": "ˈhedɪŋ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "标题、章节主题和方向/航向等义项需区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2265,
+        "word": "headline",
+        "headword": "headline",
+        "homograph": null,
+        "source_raw": "headline [ˈhedlain] n.大字标题,新闻标题"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "大字标题,新闻标题",
+        "phonetic": "ˈhedlain",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the title of a news article printed in large letters"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "大字标题,新闻标题",
+        "phonetic": "ˈhedlaɪn",
+        "example": "The headline announced the election result.",
+        "example_translation": "新闻标题公布了选举结果。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/headline",
+          "checked_pos": "noun",
+          "checked_sense": "the title of a news article printed in large letters",
+          "checked_uk_ipa": "ˈhedlaɪn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "新闻标题和广播新闻摘要为不同义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2266,
+        "word": "headmaster",
+        "headword": "headmaster",
+        "homograph": null,
+        "source_raw": "headmaster [ˈhedˈmɑːstə] n.校长"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "校长",
+        "phonetic": "ˈhedˈmɑːstə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a male teacher in charge of a school"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "校长",
+        "phonetic": "ˌhedˈmɑːstə(r)",
+        "example": "The headmaster welcomed the new students.",
+        "example_translation": "校长欢迎了新生。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/headmaster",
+          "checked_pos": "noun",
+          "checked_sense": "a male teacher in charge of a school",
+          "checked_uk_ipa": "ˌhedˈmɑːstə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "该词明确为男性校长；现代中性称谓常用 head teacher 或 principal，需注明语域和地区。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2267,
+        "word": "headquarters",
+        "headword": "headquarters",
+        "homograph": null,
+        "source_raw": "headquarters [ˌhedˈkwɔːtəz] n.司令部,指挥部;总部,总局"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "司令部,指挥部;总部,总局",
+        "phonetic": "ˌhedˈkwɔːtəz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the place from which an organization is controlled"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "司令部,指挥部;总部,总局",
+        "phonetic": "ˌhedˈkwɔːtəz",
+        "example": "The company moved its headquarters to Leeds.",
+        "example_translation": "这家公司把总部迁到了利兹。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/headquarters",
+          "checked_pos": "noun",
+          "checked_sense": "the place from which an organization is controlled",
+          "checked_uk_ipa": "ˌhedˈkwɔːtəz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "形式上以-s结尾，作单数总部或复数机构人员时需注意主谓一致。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2268,
+        "word": "heal",
+        "headword": "heal",
+        "homograph": null,
+        "source_raw": "heal [hiːl] v.治愈,愈合"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "治愈,愈合",
+        "phonetic": "hiːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to become healthy again or make something healthy again"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "治愈,愈合",
+        "phonetic": "hiːl",
+        "example": "The cut healed within a few days.",
+        "example_translation": "伤口几天内就愈合了。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heal",
+          "checked_pos": "verb",
+          "checked_sense": "to become healthy again or make something healthy again",
+          "checked_uk_ipa": "hiːl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "伤口/身体愈合与使人康复、情感创伤得到抚慰等用法需区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2269,
+        "word": "health",
+        "headword": "health",
+        "homograph": null,
+        "source_raw": "health [helθ] n.健康,健康状况;卫生"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "健康,健康状况;卫生",
+        "phonetic": "helθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the condition of a person body or mind"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "健康,健康状况;卫生",
+        "phonetic": "helθ",
+        "example": "Regular exercise can improve heart health.",
+        "example_translation": "定期锻炼能改善心脏健康。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/health",
+          "checked_pos": "noun",
+          "checked_sense": "the condition of a person body or mind",
+          "checked_uk_ipa": "helθ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "健康状态与公共卫生等用法相关但范围不同；通常为不可数名词。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2270,
+        "word": "healthy",
+        "headword": "healthy",
+        "homograph": null,
+        "source_raw": "healthy [ˈhelθi] a.健康的,健壮的;有益健康的,卫生的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "健康的,健壮的;有益健康的,卫生的",
+        "phonetic": "ˈhelθi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "having good health and not likely to become ill"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "健康的,健壮的;有益健康的,卫生的",
+        "phonetic": "ˈhelθi",
+        "example": "A healthy diet includes a variety of foods.",
+        "example_translation": "健康饮食应包括多种食物。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/healthy",
+          "checked_pos": "adjective",
+          "checked_sense": "having good health and not likely to become ill",
+          "checked_uk_ipa": "ˈhelθi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可表示有益健康、数量/发展良好；避免只将其译成“健壮”。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2271,
+        "word": "heap",
+        "headword": "heap",
+        "homograph": null,
+        "source_raw": "heap [hiːp] n.(一)堆,大量,许多 v.(up)堆,堆起"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(一)堆,大量,许多 v.(up)堆,堆起",
+        "phonetic": "hiːp",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an untidy pile of something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "(一)堆,大量,许多 v.(up)堆,堆起",
+        "phonetic": "hiːp",
+        "example": "A heap of leaves covered the path.",
+        "example_translation": "一堆树叶盖住了小路。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heap",
+          "checked_pos": "noun",
+          "checked_sense": "an untidy pile of something",
+          "checked_uk_ipa": "hiːp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "heap of也可表示大量；输入的动词堆起需另核。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2272,
+        "word": "hear",
+        "headword": "hear",
+        "homograph": null,
+        "source_raw": "hear [hiə] v.听见;审讯;(from)收到..的信/电话;听说"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "听见;审讯;(from)收到..的信/电话;听说",
+        "phonetic": "hiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to be aware of sounds using the ears"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "听见;审讯;(from)收到..的信/电话;听说",
+        "phonetic": "hɪə(r)",
+        "example": "I heard a strange noise outside.",
+        "example_translation": "我听见外面有奇怪的声音。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hear",
+          "checked_pos": "verb",
+          "checked_sense": "to be aware of sounds using the ears",
+          "checked_uk_ipa": "hɪə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "听见、听从、审理、收到消息和听说等义项及搭配差异很大。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2273,
+        "word": "hearing",
+        "headword": "hearing",
+        "homograph": null,
+        "source_raw": "hearing [ˈhiəriŋ] n.听,倾听;听力;审讯"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "听,倾听;听力;审讯",
+        "phonetic": "ˈhiəriŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the ability to hear"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "听,倾听;听力;审讯",
+        "phonetic": "ˈhɪərɪŋ",
+        "example": "The loud concert affected his hearing.",
+        "example_translation": "那场音量很大的音乐会影响了他的听力。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hearing",
+          "checked_pos": "noun",
+          "checked_sense": "the ability to hear",
+          "checked_uk_ipa": "ˈhɪərɪŋ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "听力、倾听行为和正式审讯为不同义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2274,
+        "word": "heart",
+        "headword": "heart",
+        "homograph": null,
+        "source_raw": "heart [hɑːt] n.心(脏);内心,感情;热忱;中心,要点"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "心(脏);内心,感情;热忱;中心,要点",
+        "phonetic": "hɑːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the organ in the chest that sends blood around the body"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "心(脏);内心,感情;热忱;中心,要点",
+        "phonetic": "hɑːt",
+        "example": "The heart pumps blood around the body.",
+        "example_translation": "心脏把血液输送到全身。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heart",
+          "checked_pos": "noun",
+          "checked_sense": "the organ in the chest that sends blood around the body",
+          "checked_uk_ipa": "hɑːt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "器官、感情内心、中心/要点与热忱等常见义需分开。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2275,
+        "word": "heat",
+        "headword": "heat",
+        "homograph": null,
+        "source_raw": "heat [hiːt] n.热,热度;热烈,激烈 v.(给)加热,(使)变热"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "热,热度;热烈,激烈 v.(给)加热,(使)变热",
+        "phonetic": "hiːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the quality of being hot"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "热,热度;热烈,激烈 v.(给)加热,(使)变热",
+        "phonetic": "hiːt",
+        "example": "The heat from the fire warmed the room.",
+        "example_translation": "火焰散发的热量温暖了房间。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heat",
+          "checked_pos": "noun",
+          "checked_sense": "the quality of being hot",
+          "checked_uk_ipa": "hiːt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "热量、炎热天气、激烈情绪及动词加热用法需区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2276,
+        "word": "heave",
+        "headword": "heave",
+        "homograph": null,
+        "source_raw": "heave [hiːv] v.(用力)举,提,拉;扔;拖;呕吐n.举起"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(用力)举,提,拉;扔;拖;呕吐n.举起",
+        "phonetic": "hiːv",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to lift or pull something heavy with one great effort"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "(用力)举,提,拉;扔;拖;呕吐n.举起",
+        "phonetic": "hiːv",
+        "example": "They heaved the crate onto the truck.",
+        "example_translation": "他们费力地把木箱抬上卡车。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heave",
+          "checked_pos": "verb",
+          "checked_sense": "to lift or pull something heavy with one great effort",
+          "checked_uk_ipa": "hiːv",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可表示起伏、扔掷或呕吐；名词举起/起伏需单独说明。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2277,
+        "word": "heaven",
+        "headword": "heaven",
+        "homograph": null,
+        "source_raw": "heaven [ˈhevən] n.天,天空,天堂;(Heaven)上帝,神"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "天,天空,天堂;(Heaven)上帝,神",
+        "phonetic": "ˈhevən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the place believed to be the home of God after death"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "天,天空,天堂;(Heaven)上帝,神",
+        "phonetic": "ˈhevn",
+        "example": "In the story, the hero hopes to reach heaven.",
+        "example_translation": "故事里的主人公希望进入天堂。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heaven",
+          "checked_pos": "noun",
+          "checked_sense": "the place believed to be the home of God after death",
+          "checked_uk_ipa": "ˈhevn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "天堂与快乐的处境为不同义项；大小写 God/Heaven 随宗教语境而变。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2278,
+        "word": "heavy",
+        "headword": "heavy",
+        "homograph": null,
+        "source_raw": "heavy [ˈhevi] a.重的,重型的;沉重的,大量的,猛烈的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "重的,重型的;沉重的,大量的,猛烈的",
+        "phonetic": "ˈhevi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "weighing a lot and difficult to lift or move"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "重的,重型的;沉重的,大量的,猛烈的",
+        "phonetic": "ˈhevi",
+        "example": "The heavy suitcase was difficult to carry upstairs.",
+        "example_translation": "这个沉重的手提箱很难搬上楼。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heavy",
+          "checked_pos": "adjective",
+          "checked_sense": "weighing a lot and difficult to lift or move",
+          "checked_uk_ipa": "ˈhevi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指数量大、强烈、严重或密集；各搭配译法不同。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2279,
+        "word": "hedge",
+        "headword": "hedge",
+        "homograph": null,
+        "source_raw": "hedge [hedʒ] n.篱笆,树篱,障碍物 v.用树篱围住"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "篱笆,树篱,障碍物 v.用树篱围住",
+        "phonetic": "hedʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a row of bushes or small trees planted close together"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "篱笆,树篱,障碍物 v.用树篱围住",
+        "phonetic": "hedʒ",
+        "example": "A tall hedge separates the garden from the road.",
+        "example_translation": "一道高树篱把花园和马路隔开。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hedge",
+          "checked_pos": "noun",
+          "checked_sense": "a row of bushes or small trees planted close together",
+          "checked_uk_ipa": "hedʒ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "还可比喻防范经济损失；动词用树篱围起需另核。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2280,
+        "word": "heel",
+        "headword": "heel",
+        "homograph": null,
+        "source_raw": "heel [hiːl] n.脚后跟,踵,鞋跟"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "脚后跟,踵,鞋跟",
+        "phonetic": "hiːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the back part of the foot below the ankle"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "脚后跟,踵,鞋跟",
+        "phonetic": "hiːl",
+        "example": "The new shoes rubbed the back of her heel.",
+        "example_translation": "新鞋磨到了她的脚后跟。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heel",
+          "checked_pos": "noun",
+          "checked_sense": "the back part of the foot below the ankle",
+          "checked_uk_ipa": "hiːl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "脚跟、袜子/鞋跟部位和不可靠的人等比喻义需区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2281,
+        "word": "height",
+        "headword": "height",
+        "homograph": null,
+        "source_raw": "height [hait] n.高,高度;(常pl.)高地,高处"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "高,高度;(常pl.)高地,高处",
+        "phonetic": "hait",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the measurement of how tall a person or thing is"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "高,高度;(常pl.)高地,高处",
+        "phonetic": "haɪt",
+        "example": "The table height can be adjusted.",
+        "example_translation": "桌子的高度可以调节。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/height",
+          "checked_pos": "noun",
+          "checked_sense": "the measurement of how tall a person or thing is",
+          "checked_uk_ipa": "haɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "测量值、身高/高度以及某事达到最高点等义项需分开。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2282,
+        "word": "heighten",
+        "headword": "heighten",
+        "homograph": null,
+        "source_raw": "heighten [ˈhaitən] v.提高,升高"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "提高,升高",
+        "phonetic": "ˈhaitən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to increase the strength or intensity of a feeling or effect"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "提高,升高",
+        "phonetic": "ˈhaɪtn",
+        "example": "The music heightened the tension in the scene.",
+        "example_translation": "音乐加剧了这一场景的紧张感。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heighten",
+          "checked_pos": "verb",
+          "checked_sense": "to increase the strength or intensity of a feeling or effect",
+          "checked_uk_ipa": "ˈhaɪtn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指提高水平/程度；宾语通常是情感、影响或意识等抽象事物。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2283,
+        "word": "heir",
+        "headword": "heir",
+        "homograph": null,
+        "source_raw": "heir [εə] n.继承人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "继承人",
+        "phonetic": "εə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person with a legal right to inherit property, money or a title"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "继承人",
+        "phonetic": "eə(r)",
+        "example": "She was named the sole heir to the estate.",
+        "example_translation": "她被指定为这处地产的唯一继承人。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heir",
+          "checked_pos": "noun",
+          "checked_sense": "a person with a legal right to inherit property, money or a title",
+          "checked_uk_ipa": "eə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "法定继承人与延续某传统/工作的继承者是不同义项；具体资格依法而定。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2284,
+        "word": "helicopter",
+        "headword": "helicopter",
+        "homograph": null,
+        "source_raw": "helicopter [ˈhelikɔptə] n.直升(飞)机"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "直升(飞)机",
+        "phonetic": "ˈhelikɔptə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an aircraft with large blades instead of fixed wings"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "直升(飞)机",
+        "phonetic": "ˈhelɪkɒptə(r)",
+        "example": "A helicopter landed near the rescue team.",
+        "example_translation": "一架直升机降落在救援队附近。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/helicopter",
+          "checked_pos": "noun",
+          "checked_sense": "an aircraft with large blades instead of fixed wings",
+          "checked_uk_ipa": "ˈhelɪkɒptə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "英式IPA在末尾保留/r/标注；中文直升机与直升飞机均见。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2285,
+        "word": "hell",
+        "headword": "hell",
+        "homograph": null,
+        "source_raw": "hell [hel] n.地狱,阴间;苦境,极大痛苦"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "地狱,阴间;苦境,极大痛苦",
+        "phonetic": "hel",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the place believed to be the home of devils"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "地狱,阴间;苦境,极大痛苦",
+        "phonetic": "hel",
+        "example": "The story describes a journey through hell.",
+        "example_translation": "故事描写了一段穿越地狱的旅程。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hell",
+          "checked_pos": "noun",
+          "checked_sense": "the place believed to be the home of devils",
+          "checked_uk_ipa": "hel",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "宗教义与“极其难受的处境”比喻义需区分；该词也用于感叹语，语体较强。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2286,
+        "word": "hello",
+        "headword": "hello",
+        "homograph": null,
+        "source_raw": "hello [heˈləu, hə-] int.英(美)喂,你好(用来打招呼或引起注意)"
+      },
+      "original": {
+        "pos": "int.",
+        "meaning": "英(美)喂,你好(用来打招呼或引起注意)",
+        "phonetic": "heˈləu, hə-",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "interjection",
+        "meaning": "used as a greeting"
+      },
+      "proposed": {
+        "pos": "int.",
+        "meaning": "英(美)喂,你好(用来打招呼或引起注意)",
+        "phonetic": "həˈləʊ",
+        "example": "She smiled and said hello to the new neighbour.",
+        "example_translation": "她微笑着向新邻居打招呼。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hello",
+          "checked_pos": "exclamation",
+          "checked_sense": "used as a greeting",
+          "checked_uk_ipa": "həˈləʊ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可表示惊讶或引起注意；Oxford标作exclamation，本地词性体系可能标interjection。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2287,
+        "word": "helmet",
+        "headword": "helmet",
+        "homograph": null,
+        "source_raw": "helmet [ˈhelmit] n.头盔,钢盔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "头盔,钢盔",
+        "phonetic": "ˈhelmit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a hard hat worn to protect the head"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "头盔,钢盔",
+        "phonetic": "ˈhelmɪt",
+        "example": "Always wear a helmet when riding a bicycle.",
+        "example_translation": "骑自行车时一定要戴头盔。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/helmet",
+          "checked_pos": "noun",
+          "checked_sense": "a hard hat worn to protect the head",
+          "checked_uk_ipa": "ˈhelmɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "头盔类型及相关安全标准需依活动/地区区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2288,
+        "word": "help",
+        "headword": "help",
+        "homograph": null,
+        "source_raw": "help [help] v.帮(援)助;有助于;[呼救]救命n.帮助(手)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "帮(援)助;有助于;[呼救]救命n.帮助(手)",
+        "phonetic": "help",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make it easier for somebody to do something"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "帮(援)助;有助于;[呼救]救命n.帮助(手)",
+        "phonetic": "help",
+        "example": "A map helped us find the trail.",
+        "example_translation": "一张地图帮我们找到了小径。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/help",
+          "checked_pos": "verb",
+          "checked_sense": "to make it easier for somebody to do something",
+          "checked_uk_ipa": "help",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "help可接宾语+动词原形或to不定式；还有求救感叹、名词帮助等用法。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2289,
+        "word": "helpful",
+        "headword": "helpful",
+        "homograph": null,
+        "source_raw": "helpful [ˈhelpful] a.(to)有帮助的,有益的,有用的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "(to)有帮助的,有益的,有用的",
+        "phonetic": "ˈhelpful",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "useful in improving a situation or willing to help"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "(to)有帮助的,有益的,有用的",
+        "phonetic": "ˈhelpfl",
+        "example": "The guide gave us helpful advice about the route.",
+        "example_translation": "向导就路线给了我们有用的建议。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/helpful",
+          "checked_pos": "adjective",
+          "checked_sense": "useful in improving a situation or willing to help",
+          "checked_uk_ipa": "ˈhelpfl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "有用和乐于助人是不同形容词义，常见 helpful to/for。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2290,
+        "word": "hemisphere",
+        "headword": "hemisphere",
+        "homograph": null,
+        "source_raw": "hemisphere [ˈhemi,sfiə] n.半球"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "半球",
+        "phonetic": "ˈhemi,sfiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "one half of the earth divided by the equator"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "半球",
+        "phonetic": "ˈhemɪsfɪə(r)",
+        "example": "The northern hemisphere has winter while the south has summer.",
+        "example_translation": "北半球是冬季时，南半球正值夏季。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hemisphere",
+          "checked_pos": "noun",
+          "checked_sense": "one half of the earth divided by the equator",
+          "checked_uk_ipa": "ˈhemɪsfɪə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "还可指大脑半球；地球半球需说明按赤道或经线划分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2291,
+        "word": "hen",
+        "headword": "hen",
+        "homograph": null,
+        "source_raw": "hen [hen] n.母鸡"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "母鸡",
+        "phonetic": "hen",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a female chicken, often kept for eggs or meat"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "母鸡",
+        "phonetic": "hen",
+        "example": "The hen laid an egg in the nesting box.",
+        "example_translation": "母鸡在产蛋箱里下了一枚蛋。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hen",
+          "checked_pos": "noun",
+          "checked_sense": "a female chicken, often kept for eggs or meat",
+          "checked_uk_ipa": "hen",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可泛指某些鸟类的雌鸟；鸡肉通常用 chicken 而非 hen。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2292,
+        "word": "hence",
+        "headword": "hence",
+        "homograph": null,
+        "source_raw": "hence [hens] ad.从此,今后;因此"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "从此,今后;因此",
+        "phonetic": "hens",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "for this reason"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "从此,今后;因此",
+        "phonetic": "hens",
+        "example": "The road was closed, hence the delay.",
+        "example_translation": "道路封闭了，因此出现延误。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hence",
+          "checked_pos": "adverb",
+          "checked_sense": "for this reason",
+          "checked_uk_ipa": "hens",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "正式连接副词；也可表示从现在起若干天后，如 two weeks hence。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2293,
+        "word": "henceforth",
+        "headword": "henceforth",
+        "homograph": null,
+        "source_raw": "henceforth [ˈhensˈfɔːθ] ad.今后"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "今后",
+        "phonetic": "ˈhensˈfɔːθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "starting from a particular time and continuing into the future"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "今后",
+        "phonetic": "ˌhensˈfɔːθ",
+        "example": "Henceforth, all requests must be sent by email.",
+        "example_translation": "从今以后，所有申请都必须通过电子邮件发送。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/henceforth",
+          "checked_pos": "adverb",
+          "checked_sense": "starting from a particular time and continuing into the future",
+          "checked_uk_ipa": "ˌhensˈfɔːθ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "较正式；表示今后持续，不宜与“因此”含义混淆。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2294,
+        "word": "her",
+        "headword": "her",
+        "homograph": null,
+        "source_raw": "her [həː, 弱əː, hə, ə] pron.[she的宾格]她;[she的所有格]她的"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "[she的宾格]她;[she的所有格]她的",
+        "phonetic": "həː, 弱əː, hə, ə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "used as the object referring to a female person or animal"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "[she的宾格]她;[she的所有格]她的",
+        "phonetic": "hə(r), ɜː(r), ə(r), hɜː(r)",
+        "example": "I gave her a copy of the schedule.",
+        "example_translation": "我给了她一份日程表。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/her",
+          "checked_pos": "pronoun",
+          "checked_sense": "used as the object referring to a female person or animal",
+          "checked_uk_ipa": "hə(r), ɜː(r), ə(r), hɜː(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "可作宾格和限定词/所有格形式；Oxford列出强读与弱读变体，泛指性别未知者时可考虑单数they。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2295,
+        "word": "herb",
+        "headword": "herb",
+        "homograph": null,
+        "source_raw": "herb [həːb, əːb] n.药草,(调味用的)香草,草本植物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "药草,(调味用的)香草,草本植物",
+        "phonetic": "həːb, əːb",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a plant whose leaves, flowers or seeds are used in food or medicine"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "药草,(调味用的)香草,草本植物",
+        "phonetic": "hɜːb",
+        "example": "Fresh herbs added flavour to the soup.",
+        "example_translation": "新鲜香草让汤的味道更丰富。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/herb",
+          "checked_pos": "noun",
+          "checked_sense": "a plant whose leaves, flowers or seeds are used in food or medicine",
+          "checked_uk_ipa": "hɜːb",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "调味/药用香草与广义草本植物相关但范围不同；英美发音存在差异。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2296,
+        "word": "herd",
+        "headword": "herd",
+        "homograph": null,
+        "source_raw": "herd [həːd] n.群,兽群,牛群 v.放牧,群集"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "群,兽群,牛群 v.放牧,群集",
+        "phonetic": "həːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a group of animals of the same type living or feeding together"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "群,兽群,牛群 v.放牧,群集",
+        "phonetic": "hɜːd",
+        "example": "A herd of deer crossed the road at dusk.",
+        "example_translation": "黄昏时一群鹿穿过道路。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/herd",
+          "checked_pos": "noun",
+          "checked_sense": "a group of animals of the same type living or feeding together",
+          "checked_uk_ipa": "hɜːd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "动物群、人群及动词放牧/群集需按词性区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2297,
+        "word": "here",
+        "headword": "here",
+        "homograph": null,
+        "source_raw": "here [hiə] ad.在(到,向)这里;这时;在这一点上"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "在(到,向)这里;这时;在这一点上",
+        "phonetic": "hiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "in, at or to this place"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "在(到,向)这里;这时;在这一点上",
+        "phonetic": "hɪə(r)",
+        "example": "Please wait here until the bus arrives.",
+        "example_translation": "请在这里等到公交车到达。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/here",
+          "checked_pos": "adverb",
+          "checked_sense": "in, at or to this place",
+          "checked_uk_ipa": "hɪə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也用于递交/展示东西和表示当前时刻/论点；here有时与动词/介词搭配移动。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2298,
+        "word": "heritage",
+        "headword": "heritage",
+        "homograph": null,
+        "source_raw": "heritage [ˈheritidʒ] n.遗产,继承物;传统"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "遗产,继承物;传统",
+        "phonetic": "ˈheritidʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the history, traditions and objects that shape a country or society"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "遗产,继承物;传统",
+        "phonetic": "ˈherɪtɪdʒ",
+        "example": "The festival celebrates the cultural heritage of the region.",
+        "example_translation": "这个节日庆祝该地区的文化遗产。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heritage",
+          "checked_pos": "noun",
+          "checked_sense": "the history, traditions and objects that shape a country or society",
+          "checked_uk_ipa": "ˈherɪtɪdʒ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "物质文化遗产、传统和族裔背景等含义不同，需具体说明。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2299,
+        "word": "hero",
+        "headword": "hero",
+        "homograph": null,
+        "source_raw": "hero [ˈhiərəu] n.英雄,勇士;男主角,男主人公"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "英雄,勇士;男主角,男主人公",
+        "phonetic": "ˈhiərəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person admired for doing something brave or good"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "英雄,勇士;男主角,男主人公",
+        "phonetic": "ˈhɪərəʊ",
+        "example": "The firefighter became a local hero after the rescue.",
+        "example_translation": "那次救援后，这位消防员成了当地英雄。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hero",
+          "checked_pos": "noun",
+          "checked_sense": "a person admired for doing something brave or good",
+          "checked_uk_ipa": "ˈhɪərəʊ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指故事主角；词典对主角义使用male等限定，需关注hero/heroine及性别包容表达。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2300,
+        "word": "heroic",
+        "headword": "heroic",
+        "homograph": null,
+        "source_raw": "heroic [hiˈrəuik] a.英雄的,英勇的,崇高的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "英雄的,英勇的,崇高的",
+        "phonetic": "hiˈrəuik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "showing extreme courage and admired by many people"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "英雄的,英勇的,崇高的",
+        "phonetic": "həˈrəʊɪk",
+        "example": "The crew made a heroic effort to save the passengers.",
+        "example_translation": "船员们英勇奋力营救乘客。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heroic",
+          "checked_pos": "adjective",
+          "checked_sense": "showing extreme courage and admired by many people",
+          "checked_uk_ipa": "həˈrəʊɪk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可表示为完成困难目标而作出的坚定努力；不只用于战争或英雄人物。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2301,
+        "word": "heroin",
+        "headword": "heroin",
+        "homograph": null,
+        "source_raw": "heroin [ˈherəuin] n.海洛因"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "海洛因",
+        "phonetic": "ˈherəuin",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a powerful illegal drug made from morphine"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "海洛因",
+        "phonetic": "ˈherəʊɪn",
+        "example": "The public health campaign explains the dangers of heroin.",
+        "example_translation": "这项公共卫生宣传说明了海洛因的危害。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heroin",
+          "checked_pos": "noun",
+          "checked_sense": "a powerful illegal drug made from morphine",
+          "checked_uk_ipa": "ˈherəʊɪn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "与 heroine（女英雄）拼写近似但词义和读音不同；药物相关释义应保持准确且无褒义。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2302,
+        "word": "heroine",
+        "headword": "heroine",
+        "homograph": null,
+        "source_raw": "heroine [ˈherəuin] n.女英雄;女主角"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "女英雄;女主角",
+        "phonetic": "ˈherəuin",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a girl or woman admired for doing something brave or good"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "女英雄;女主角",
+        "phonetic": "ˈherəʊɪn",
+        "example": "The heroine helped the villagers escape the fire.",
+        "example_translation": "这位女英雄帮助村民逃离了火灾。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/heroine",
+          "checked_pos": "noun",
+          "checked_sense": "a girl or woman admired for doing something brave or good",
+          "checked_uk_ipa": "ˈherəʊɪn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也指作品中的女性主角；hero/heroine带性别区分，现代文本可按语境选择更中性的称谓。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2303,
+        "word": "hers",
+        "headword": "hers",
+        "homograph": null,
+        "source_raw": "hers [həːz] pron.[she的物主代词]她的(所有物)"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "[she的物主代词]她的(所有物)",
+        "phonetic": "həːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "of or belonging to a female person or animal"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "[she的物主代词]她的(所有物)",
+        "phonetic": "hɜːz, ɜːz",
+        "example": "The blue bicycle is hers.",
+        "example_translation": "那辆蓝色自行车是她的。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hers",
+          "checked_pos": "pronoun",
+          "checked_sense": "of or belonging to a female person or animal",
+          "checked_uk_ipa": "hɜːz, ɜːz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "独立物主代词，不直接修饰名词；Oxford列出强读和弱读形式。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2304,
+        "word": "herself",
+        "headword": "herself",
+        "homograph": null,
+        "source_raw": "herself [həːˈself] pron.[反身代词]她自己;她亲自,她本人"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "[反身代词]她自己;她亲自,她本人",
+        "phonetic": "həːˈself",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "used when a female subject is also affected by the action"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "[反身代词]她自己;她亲自,她本人",
+        "phonetic": "hɜːˈself, həˈself",
+        "example": "She taught herself to play the piano.",
+        "example_translation": "她自学了钢琴。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/herself",
+          "checked_pos": "pronoun",
+          "checked_sense": "used when a female subject is also affected by the action",
+          "checked_uk_ipa": "hɜːˈself, həˈself",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "反身用法和强调“她本人”用法不同；保持性别指称的一致性。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2305,
+        "word": "hesitate",
+        "headword": "hesitate",
+        "homograph": null,
+        "source_raw": "hesitate [ˈheziteit] v.犹豫,踌躇;含糊,支吾"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "犹豫,踌躇;含糊,支吾",
+        "phonetic": "ˈheziteit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to pause or act slowly because of uncertainty or nervousness"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "犹豫,踌躇;含糊,支吾",
+        "phonetic": "ˈhezɪteɪt",
+        "example": "He hesitated before answering the question.",
+        "example_translation": "回答问题前，他犹豫了一下。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hesitate",
+          "checked_pos": "verb",
+          "checked_sense": "to pause or act slowly because of uncertainty or nervousness",
+          "checked_uk_ipa": "ˈhezɪteɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "犹豫、迟疑与说话含糊/支吾需按语境分辨。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2306,
+        "word": "hi",
+        "headword": "hi",
+        "homograph": null,
+        "source_raw": "hi [hai] interj.(hey)嗨!喂!"
+      },
+      "original": {
+        "pos": "interj.",
+        "meaning": "(hey)嗨!喂!",
+        "phonetic": "hai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "interjection",
+        "meaning": "used as an informal greeting"
+      },
+      "proposed": {
+        "pos": "interj.",
+        "meaning": "(hey)嗨!喂!",
+        "phonetic": "haɪ",
+        "example": "She waved and said hi to her neighbour.",
+        "example_translation": "她挥手向邻居打了声招呼。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hi",
+          "checked_pos": "exclamation",
+          "checked_sense": "used as an informal greeting",
+          "checked_uk_ipa": "haɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "口语问候语；Oxford标为exclamation，本地词性系统可标interjection。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2307,
+        "word": "hide",
+        "headword": "hide",
+        "homograph": null,
+        "source_raw": "hide [haid] v.隐藏,躲藏;隐瞒 n.皮革,兽皮"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "隐藏,躲藏;隐瞒 n.皮革,兽皮",
+        "phonetic": "haid",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to put or keep something where it cannot be seen or found"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "隐藏,躲藏;隐瞒 n.皮革,兽皮",
+        "phonetic": "haɪd",
+        "example": "He hid the spare key beneath a flowerpot.",
+        "example_translation": "他把备用钥匙藏在花盆下面。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hide",
+          "checked_pos": "verb",
+          "checked_sense": "to put or keep something where it cannot be seen or found",
+          "checked_uk_ipa": "haɪd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "及物隐藏、躲藏和隐瞒信息等结构不同；皮革名词hide为同形异义。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2308,
+        "word": "hierarchy",
+        "headword": "hierarchy",
+        "homograph": null,
+        "source_raw": "hierarchy [ˈhaiə,rɑːki] n.等级制度;统治集团,领导层"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "等级制度;统治集团,领导层",
+        "phonetic": "ˈhaiə,rɑːki",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a system with people or groups arranged from highest to lowest level"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "等级制度;统治集团,领导层",
+        "phonetic": "ˈhaɪərɑːki",
+        "example": "The organization has a clear management hierarchy.",
+        "example_translation": "这个组织有明确的管理层级。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hierarchy",
+          "checked_pos": "noun",
+          "checked_sense": "a system with people or groups arranged from highest to lowest level",
+          "checked_uk_ipa": "ˈhaɪərɑːki",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "层级制度及处于控制地位的人员群体为相关义项，需避免把结构与人员混为一谈。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2309,
+        "word": "high",
+        "headword": "high",
+        "homograph": null,
+        "source_raw": "high [hai] a.高的,高度的,高级的,高尚的 ad.高高地"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "高的,高度的,高级的,高尚的 ad.高高地",
+        "phonetic": "hai",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "measuring a long distance from the bottom to the top"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "高的,高度的,高级的,高尚的 ad.高高地",
+        "phonetic": "haɪ",
+        "example": "The top shelf is too high for the child to reach.",
+        "example_translation": "最上层的架子太高，孩子够不到。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/high",
+          "checked_pos": "adjective",
+          "checked_sense": "measuring a long distance from the bottom to the top",
+          "checked_uk_ipa": "haɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "高度、高级、重要、高尚等形容词义和副词高高地需分开。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2310,
+        "word": "highland",
+        "headword": "highland",
+        "homograph": null,
+        "source_raw": "highland [ˈhailənd] n. 高地,高原"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "高地,高原",
+        "phonetic": "ˈhailənd",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an area of land with hills or mountains"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "高地,高原",
+        "phonetic": "ˈhaɪlənd",
+        "example": "Sheep graze across the highland area.",
+        "example_translation": "羊群在这片高地上吃草。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/highland_2",
+          "checked_pos": "noun",
+          "checked_sense": "an area of land with hills or mountains",
+          "checked_uk_ipa": "ˈhaɪlənd",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "词典同时有形容词highland；苏格兰高地专名通常写作the Highlands，需区别大小写和数。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2311,
+        "word": "highlight",
+        "headword": "highlight",
+        "homograph": null,
+        "source_raw": "highlight [ˈhailait] v.使显著,使突出;强调 n.最精彩的部分"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使显著,使突出;强调 n.最精彩的部分",
+        "phonetic": "ˈhailait",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to emphasize something so people give it more attention"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "使显著,使突出;强调 n.最精彩的部分",
+        "phonetic": "ˈhaɪlaɪt",
+        "example": "The report highlights the need for safer roads.",
+        "example_translation": "报告强调了改善道路安全的必要性。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/highlight",
+          "checked_pos": "verb",
+          "checked_sense": "to emphasize something so people give it more attention",
+          "checked_uk_ipa": "ˈhaɪlaɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指用彩笔/屏幕标记文本；名词“最精彩部分”是另一义。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2312,
+        "word": "highly",
+        "headword": "highly",
+        "homograph": null,
+        "source_raw": "highly [ˈhaili] ad.高度地,很,非常;赞许地"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "高度地,很,非常;赞许地",
+        "phonetic": "ˈhaili",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "very, or to a high standard or level"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "高度地,很,非常;赞许地",
+        "phonetic": "ˈhaɪli",
+        "example": "The new system is highly reliable.",
+        "example_translation": "这套新系统非常可靠。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/highly",
+          "checked_pos": "adverb",
+          "checked_sense": "very, or to a high standard or level",
+          "checked_uk_ipa": "ˈhaɪli",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常修饰形容词/过去分词表示程度；highly praised等可表示受到高度评价。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2313,
+        "word": "highway",
+        "headword": "highway",
+        "homograph": null,
+        "source_raw": "highway [ˈhaiwei] n.公路,大路"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "公路,大路",
+        "phonetic": "ˈhaiwei",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a main road for long-distance travel"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "公路,大路",
+        "phonetic": "ˈhaɪweɪ",
+        "example": "The highway was closed after the storm.",
+        "example_translation": "暴风雨过后，这条公路封闭了。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/highway",
+          "checked_pos": "noun",
+          "checked_sense": "a main road for long-distance travel",
+          "checked_uk_ipa": "ˈhaɪweɪ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "词义有地区差异；美式常指主干公路，英式可能泛指公共道路。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2314,
+        "word": "hijack",
+        "headword": "hijack",
+        "homograph": null,
+        "source_raw": "hijack [ˈhaidʒæk] v.劫持,劫机,拦路抢劫"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "劫持,劫机,拦路抢劫",
+        "phonetic": "ˈhaidʒæk",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to use violence or threats to take control of a vehicle"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "劫持,劫机,拦路抢劫",
+        "phonetic": "ˈhaɪdʒæk",
+        "example": "Armed men attempted to hijack the bus.",
+        "example_translation": "持械人员试图劫持这辆公交车。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hijack",
+          "checked_pos": "verb",
+          "checked_sense": "to use violence or threats to take control of a vehicle",
+          "checked_uk_ipa": "ˈhaɪdʒæk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可比喻劫持会议/议题以服务自身目的，须与航空/交通犯罪义分开。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2315,
+        "word": "hike",
+        "headword": "hike",
+        "homograph": null,
+        "source_raw": "hike [haik] n.徒步旅行;增加vi.徒步旅行vt.提高"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "徒步旅行;增加vi.徒步旅行vt.提高",
+        "phonetic": "haik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a long walk in the country"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "徒步旅行;增加vi.徒步旅行vt.提高",
+        "phonetic": "haɪk",
+        "example": "We went on a hike through the forest.",
+        "example_translation": "我们去森林里徒步旅行了。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hike",
+          "checked_pos": "noun",
+          "checked_sense": "a long walk in the country",
+          "checked_uk_ipa": "haɪk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "名词也可指价格等大幅上涨；动词徒步和提高价格需分词性。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2316,
+        "word": "hill",
+        "headword": "hill",
+        "homograph": null,
+        "source_raw": "hill [hil] n.小山,山岗,高地;[pl.]丘陵(地带)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "小山,山岗,高地;[pl.]丘陵(地带)",
+        "phonetic": "hil",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an area of land higher than the land around it but lower than a mountain"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "小山,山岗,高地;[pl.]丘陵(地带)",
+        "phonetic": "hɪl",
+        "example": "A small village lies on the hill above the river.",
+        "example_translation": "河上方的山丘上有一个小村庄。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hill",
+          "checked_pos": "noun",
+          "checked_sense": "an area of land higher than the land around it but lower than a mountain",
+          "checked_uk_ipa": "hɪl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也指道路斜坡；丘陵地带可用复数 hills。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2317,
+        "word": "him",
+        "headword": "him",
+        "homograph": null,
+        "source_raw": "him [him, 弱im] pron.他(he的宾格形式)"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "他(he的宾格形式)",
+        "phonetic": "him, 弱im",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "used as the object referring to a male person or animal"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "他(he的宾格形式)",
+        "phonetic": "hɪm, ɪm",
+        "example": "I sent him the meeting notes.",
+        "example_translation": "我把会议记录发给了他。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/him",
+          "checked_pos": "pronoun",
+          "checked_sense": "used as the object referring to a male person or animal",
+          "checked_uk_ipa": "hɪm, ɪm",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "宾格代词；Oxford也列特定宗教语境中指God的用法，需按大小写和语境处理。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2318,
+        "word": "himself",
+        "headword": "himself",
+        "homograph": null,
+        "source_raw": "himself [himˈself] pron.[反身代词]他自己;他本人"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "[反身代词]他自己;他本人",
+        "phonetic": "himˈself",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "used when a male subject is also affected by the action"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "[反身代词]他自己;他本人",
+        "phonetic": "hɪmˈself",
+        "example": "He taught himself to repair the bicycle.",
+        "example_translation": "他自学修理自行车。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/himself",
+          "checked_pos": "pronoun",
+          "checked_sense": "used when a male subject is also affected by the action",
+          "checked_uk_ipa": "hɪmˈself",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "反身代词和强调“他本人”需区分；现代文本应避免把性别当作未知人的默认指称。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2319,
+        "word": "hinder",
+        "headword": "hinder",
+        "homograph": null,
+        "source_raw": "hinder v.(from)阻止,妨碍 a.后面的"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(from)阻止，妨碍 [ˈhaɪndə] a. 后面的",
+        "phonetic": "ˈhɪndə(r)",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to make it difficult for somebody to do something"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "(from)阻止，妨碍 [ˈhaɪndə] a. 后面的",
+        "phonetic": "ˈhɪndə(r)",
+        "example": "Poor lighting can hinder careful work.",
+        "example_translation": "光线不足会妨碍细致工作。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hinder",
+          "checked_pos": "verb",
+          "checked_sense": "to make it difficult for somebody to do something",
+          "checked_uk_ipa": "ˈhɪndə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "常见 hinder somebody from doing something；形容词“后面的”已属古旧用法，需单独标注。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2320,
+        "word": "hinge",
+        "headword": "hinge",
+        "homograph": null,
+        "source_raw": "hinge [hindʒ] n.合页,铰链 vi.依…而定"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "合页,铰链 vi.依…而定",
+        "phonetic": "hindʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a movable joint that lets a door or lid swing"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "合页,铰链 vi.依…而定",
+        "phonetic": "hɪndʒ",
+        "example": "One hinge on the gate needs replacing.",
+        "example_translation": "大门上的一只铰链需要更换。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hinge",
+          "checked_pos": "noun",
+          "checked_sense": "a movable joint that lets a door or lid swing",
+          "checked_uk_ipa": "hɪndʒ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "动词hinge on表示取决于，需与实体铰链名词区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2321,
+        "word": "hint",
+        "headword": "hint",
+        "homograph": null,
+        "source_raw": "hint [hint] n.暗示,提示,线索 v.暗示,示意"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "暗示,提示,线索 v.暗示,示意",
+        "phonetic": "hint",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "something said or done indirectly to suggest an idea"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "暗示,提示,线索 v.暗示,示意",
+        "phonetic": "hɪnt",
+        "example": "She gave me a hint about the answer.",
+        "example_translation": "她给了我一点关于答案的提示。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hint",
+          "checked_pos": "noun",
+          "checked_sense": "something said or done indirectly to suggest an idea",
+          "checked_uk_ipa": "hɪnt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "线索、建议、暗示和未来迹象为不同名词义；动词暗示另核。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2322,
+        "word": "hip",
+        "headword": "hip",
+        "homograph": null,
+        "source_raw": "hip [hip] n.臀部,髋;屋脊"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "臀部,髋;屋脊",
+        "phonetic": "hip",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the area at either side of the body between the top of the leg and middle body"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "臀部,髋;屋脊",
+        "phonetic": "hɪp",
+        "example": "She rested her hands on her hips.",
+        "example_translation": "她把手放在髋部。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hip",
+          "checked_pos": "noun",
+          "checked_sense": "the area at either side of the body between the top of the leg and middle body",
+          "checked_uk_ipa": "hɪp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "身体髋部与屋脊等建筑义为不同义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2323,
+        "word": "hire",
+        "headword": "hire",
+        "homograph": null,
+        "source_raw": "hire [haiə] n./v.雇用,租借"
+      },
+      "original": {
+        "pos": "n./v.",
+        "meaning": "雇用,租借",
+        "phonetic": "haiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to give somebody a job"
+      },
+      "proposed": {
+        "pos": "n./v.",
+        "meaning": "雇用,租借",
+        "phonetic": "ˈhaɪə(r)",
+        "example": "The firm hired two engineers last month.",
+        "example_translation": "这家公司上个月聘用了两名工程师。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hire",
+          "checked_pos": "verb",
+          "checked_sense": "to give somebody a job",
+          "checked_uk_ipa": "ˈhaɪə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "雇用长期员工与短期租用服务/设备为不同动词义；hire也可作名词。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2324,
+        "word": "his",
+        "headword": "his",
+        "homograph": null,
+        "source_raw": "his [hiz, 弱iz] pron.[he的所有格/物主代词]他的(所有物)"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "[he的所有格/物主代词]他的(所有物)",
+        "phonetic": "hiz, 弱iz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "pronoun",
+        "meaning": "of or belonging to him"
+      },
+      "proposed": {
+        "pos": "pron.",
+        "meaning": "[he的所有格/物主代词]他的(所有物)",
+        "phonetic": "hɪz, ɪz",
+        "example": "The final decision was his.",
+        "example_translation": "最终决定权在他。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/his_2",
+          "checked_pos": "pronoun",
+          "checked_sense": "of or belonging to him",
+          "checked_uk_ipa": "hɪz, ɪz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "独立物主代词与修饰名词的限定词用法需区分；Oxford此页核对pronoun。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2325,
+        "word": "historian",
+        "headword": "historian",
+        "homograph": null,
+        "source_raw": "historian [hisˈtɔːriən] n.历史学家"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "历史学家",
+        "phonetic": "hisˈtɔːriən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who studies or writes about history"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "历史学家",
+        "phonetic": "hɪˈstɔːriən",
+        "example": "The historian examined letters from the period.",
+        "example_translation": "这位历史学家研究了那个时期的书信。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/historian",
+          "checked_pos": "noun",
+          "checked_sense": "a person who studies or writes about history",
+          "checked_uk_ipa": "hɪˈstɔːriən",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "历史研究者与历史写作者角色相关但不完全相同。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2326,
+        "word": "historic",
+        "headword": "historic",
+        "homograph": null,
+        "source_raw": "historic [hisˈtɔrik] a.有历史意义的;历史的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有历史意义的;历史的",
+        "phonetic": "hisˈtɔrik",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "important in history or likely to be considered important"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "有历史意义的;历史的",
+        "phonetic": "hɪˈstɒrɪk",
+        "example": "The agreement marked a historic moment for the region.",
+        "example_translation": "这项协议标志着该地区的历史性时刻。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/historic",
+          "checked_pos": "adjective",
+          "checked_sense": "important in history or likely to be considered important",
+          "checked_uk_ipa": "hɪˈstɒrɪk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "historic强调有历史意义；historical通常表示与过去/历史研究有关，两词不可混用。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2327,
+        "word": "historical",
+        "headword": "historical",
+        "homograph": null,
+        "source_raw": "historical [hisˈtɔrikəl] a.历史的;有关历史的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "历史的;有关历史的",
+        "phonetic": "hisˈtɔrikəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "relating to the past or the study of history"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "历史的;有关历史的",
+        "phonetic": "hɪˈstɒrɪkl",
+        "example": "The museum displays historical maps of the coast.",
+        "example_translation": "博物馆展出海岸的历史地图。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/historical",
+          "checked_pos": "adjective",
+          "checked_sense": "relating to the past or the study of history",
+          "checked_uk_ipa": "hɪˈstɒrɪkl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "与historic“有历史意义的”区别应明确；同时可指历史研究本身。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2328,
+        "word": "history",
+        "headword": "history",
+        "homograph": null,
+        "source_raw": "history [ˈhistəri] n.历史,历史学;来历,经历"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "历史,历史学;来历,经历",
+        "phonetic": "ˈhistəri",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the study of past events"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "历史,历史学;来历,经历",
+        "phonetic": "ˈhɪstri",
+        "example": "She studied history at university.",
+        "example_translation": "她在大学学习历史。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/history",
+          "checked_pos": "noun",
+          "checked_sense": "the study of past events",
+          "checked_uk_ipa": "ˈhɪstri",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "历史学、过去发生的事件及个人/机构经历为不同义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2329,
+        "word": "hit",
+        "headword": "hit",
+        "homograph": null,
+        "source_raw": "hit [hit] v.打,击;碰撞 n.击中;成功而风行一时的事物"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "打,击;碰撞 n.击中;成功而风行一时的事物",
+        "phonetic": "hit",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to bring a hand or object against something quickly and with force"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "打,击;碰撞 n.击中;成功而风行一时的事物",
+        "phonetic": "hɪt",
+        "example": "The ball hit the window but did not break it.",
+        "example_translation": "球打中了窗户，但没有把它打破。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hit",
+          "checked_pos": "verb",
+          "checked_sense": "to bring a hand or object against something quickly and with force",
+          "checked_uk_ipa": "hɪt",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "打击、到达、突然想到等动词义及名词“成功事物”需分开；不规则变化hit/hit/hit。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2330,
+        "word": "hitherto",
+        "headword": "hitherto",
+        "homograph": null,
+        "source_raw": "hitherto [ˌhiðəˈtuː] ad.到目前为止,迄今"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "到目前为止,迄今",
+        "phonetic": "ˌhiðəˈtuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "until now or until the time being discussed"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "到目前为止,迄今",
+        "phonetic": "ˌhɪðəˈtuː",
+        "example": "The method was hitherto unknown outside the lab.",
+        "example_translation": "直到那时，这种方法还只在实验室内为人所知。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hitherto",
+          "checked_pos": "adverb",
+          "checked_sense": "until now or until the time being discussed",
+          "checked_uk_ipa": "ˌhɪðəˈtuː",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "正式书面语，通常指截至某一参照时点；不等于“从此以后”。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2331,
+        "word": "hobby",
+        "headword": "hobby",
+        "homograph": null,
+        "source_raw": "hobby [ˈhɔbi] n.业余爱好,嗜好,兴趣"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "业余爱好,嗜好,兴趣",
+        "phonetic": "ˈhɔbi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "an activity done for enjoyment outside work"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "业余爱好,嗜好,兴趣",
+        "phonetic": "ˈhɒbi",
+        "example": "Gardening is a relaxing hobby for him.",
+        "example_translation": "园艺是他的一项放松身心的业余爱好。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hobby",
+          "checked_pos": "noun",
+          "checked_sense": "an activity done for enjoyment outside work",
+          "checked_uk_ipa": "ˈhɒbi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "兴趣爱好不一定是动手活动；通常可数。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2332,
+        "word": "hoist",
+        "headword": "hoist",
+        "homograph": null,
+        "source_raw": "hoist [hɔist] v.举起,升起,吊起"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "举起,升起,吊起",
+        "phonetic": "hɔist",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to raise or pull something to a higher position"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "举起,升起,吊起",
+        "phonetic": "hɔɪst",
+        "example": "The crew hoisted the flag above the deck.",
+        "example_translation": "船员把旗帜升到了甲板上方。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hoist",
+          "checked_pos": "verb",
+          "checked_sense": "to raise or pull something to a higher position",
+          "checked_uk_ipa": "hɔɪst",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "hoist可作名词/动词；也有反噬自身计划的习语用法，勿与普通lift完全等同。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2333,
+        "word": "hold",
+        "headword": "hold",
+        "homograph": null,
+        "source_raw": "hold [həuld] v.拿着;保有;托住;举行;继续 n.握住;船舱"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拿着;保有;托住;举行;继续 n.握住;船舱",
+        "phonetic": "həuld",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to have somebody or something in your hand or arms"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "拿着;保有;托住;举行;继续 n.握住;船舱",
+        "phonetic": "həʊld",
+        "example": "She held the door open for the visitors.",
+        "example_translation": "她为来访者扶着门。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hold",
+          "checked_pos": "verb",
+          "checked_sense": "to have somebody or something in your hand or arms",
+          "checked_uk_ipa": "həʊld",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "hold含持有、容纳、举办、保持等大量义项；船舱名词另列，需依结构说明。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2334,
+        "word": "holder",
+        "headword": "holder",
+        "homograph": null,
+        "source_raw": "holder [ˈhəuldə] n.持有者,占有者;(台,架等)支持物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "持有者,占有者;(台,架等)支持物",
+        "phonetic": "ˈhəuldə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who has or owns the thing mentioned"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "持有者,占有者;(台,架等)支持物",
+        "phonetic": "ˈhəʊldə(r)",
+        "example": "Each ticket holder must show identification.",
+        "example_translation": "每位持票人都必须出示身份证件。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/holder",
+          "checked_pos": "noun",
+          "checked_sense": "a person who has or owns the thing mentioned",
+          "checked_uk_ipa": "ˈhəʊldə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "持有者和支架/容器等义项取决于后接名词。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2335,
+        "word": "hole",
+        "headword": "hole",
+        "homograph": null,
+        "source_raw": "hole [həul] n.洞,孔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "洞,孔",
+        "phonetic": "həul",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a hollow space or opening in something solid"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "洞,孔",
+        "phonetic": "həʊl",
+        "example": "There was a small hole in the fence.",
+        "example_translation": "栅栏上有一个小洞。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hole",
+          "checked_pos": "noun",
+          "checked_sense": "a hollow space or opening in something solid",
+          "checked_uk_ipa": "həʊl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "洞、贯通的孔、困境和高尔夫球洞等义项需区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2336,
+        "word": "holiday",
+        "headword": "holiday",
+        "homograph": null,
+        "source_raw": "holiday [ˈhɔlədi] n.假日,节日,假期,休假"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "假日,节日,假期,休假",
+        "phonetic": "ˈhɔlədi",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a period of time away from work or school"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "假日,节日,假期,休假",
+        "phonetic": "ˈhɒlədeɪ, ˈhɒlədi",
+        "example": "We are taking a short holiday in June.",
+        "example_translation": "我们六月要去度一个短假。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/holiday",
+          "checked_pos": "noun",
+          "checked_sense": "a period of time away from work or school",
+          "checked_uk_ipa": "ˈhɒlədeɪ, ˈhɒlədi",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "英式英语常指假期/休假；美式英语多用vacation，节日义另列。Oxford列出两种读音。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2337,
+        "word": "hollow",
+        "headword": "hollow",
+        "homograph": null,
+        "source_raw": "hollow [ˈhɔləu] a.空的,中空的;空洞的,空虚的 v.挖空,凿空"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "空的,中空的;空洞的,空虚的 v.挖空,凿空",
+        "phonetic": "ˈhɔləu",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "having an empty space inside"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "空的,中空的;空洞的,空虚的 v.挖空,凿空",
+        "phonetic": "ˈhɒləʊ",
+        "example": "The tree had a hollow trunk.",
+        "example_translation": "这棵树的树干是空心的。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hollow",
+          "checked_pos": "adjective",
+          "checked_sense": "having an empty space inside",
+          "checked_uk_ipa": "ˈhɒləʊ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "空心、凹陷的脸颊、空洞言辞及动词挖空等需分开。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2338,
+        "word": "holy",
+        "headword": "holy",
+        "homograph": null,
+        "source_raw": "holy [ˈhəuli] a.神圣的,圣洁的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "神圣的,圣洁的",
+        "phonetic": "ˈhəuli",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "relating to God or a particular religion"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "神圣的,圣洁的",
+        "phonetic": "ˈhəʊli",
+        "example": "They visited a holy site during the journey.",
+        "example_translation": "他们在旅途中参观了一处圣地。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/holy",
+          "checked_pos": "adjective",
+          "checked_sense": "relating to God or a particular religion",
+          "checked_uk_ipa": "ˈhəʊli",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "宗教神圣与道德圣洁等义项应尊重具体信仰语境。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2339,
+        "word": "home",
+        "headword": "home",
+        "homograph": null,
+        "source_raw": "home [həum] ad.回家,在家 n.家;家乡a.家庭的;家乡的"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "回家,在家 n.家;家乡a.家庭的;家乡的",
+        "phonetic": "həum",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adverb",
+        "meaning": "to or at the place where you live"
+      },
+      "proposed": {
+        "pos": "ad.",
+        "meaning": "回家,在家 n.家;家乡a.家庭的;家乡的",
+        "phonetic": "həʊm",
+        "example": "We walked home together after the concert.",
+        "example_translation": "音乐会结束后我们一起步行回家。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/home_2",
+          "checked_pos": "adverb",
+          "checked_sense": "to or at the place where you live",
+          "checked_uk_ipa": "həʊm",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "home作副词、名词和形容词使用不同；home通常不与to连用表示回家。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2340,
+        "word": "homework",
+        "headword": "homework",
+        "homograph": null,
+        "source_raw": "homework [ˈhəumwəːk] n.(学生的)家庭作业、课外人员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(学生的)家庭作业、课外人员",
+        "phonetic": "ˈhəumwəːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "work assigned by a teacher for students to do at home"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "（学生的）家庭作业；为准备某事而做的工作",
+        "phonetic": "ˈhəʊmwɜːk",
+        "example": "I finished my homework before dinner.",
+        "example_translation": "我晚饭前完成了家庭作业。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/homework",
+          "checked_pos": "noun",
+          "checked_sense": "work assigned by a teacher for students to do at home",
+          "checked_uk_ipa": "ˈhəʊmwɜːk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "输入中文中的“课外人员”明显不通，应修订为“家庭作业”；Oxford也收录为准备某事而做的工作。通常不可数。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对义项与英式音标，并修正明显的中文错字；补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2341,
+        "word": "homogeneous",
+        "headword": "homogeneous",
+        "homograph": null,
+        "source_raw": "homogeneous [ˌhɔməˈdʒiːniəs] a.同种类的,同性质的,有相同特征的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "同种类的,同性质的,有相同特征的",
+        "phonetic": "ˌhɔməˈdʒiːniəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "consisting of things or people that are all the same type"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "同种类的,同性质的,有相同特征的",
+        "phonetic": "ˌhɒməˈdʒiːniəs",
+        "example": "The sample was mixed until it became homogeneous.",
+        "example_translation": "样本经过混合，直到成分均匀一致。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/homogeneous",
+          "checked_pos": "adjective",
+          "checked_sense": "consisting of things or people that are all the same type",
+          "checked_uk_ipa": "ˌhɒməˈdʒiːniəs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "同质/同类通常为描述成分相似，不表示完全相同。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2342,
+        "word": "honest",
+        "headword": "honest",
+        "homograph": null,
+        "source_raw": "honest [ˈɔnist] a.诚实的,正直的,老实的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "诚实的,正直的,老实的",
+        "phonetic": "ˈɔnist",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "always telling the truth and not stealing or cheating"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "诚实的,正直的,老实的",
+        "phonetic": "ˈɒnɪst",
+        "example": "She gave an honest answer about the mistake.",
+        "example_translation": "她如实回答了有关这个错误的问题。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/honest",
+          "checked_pos": "adjective",
+          "checked_sense": "always telling the truth and not stealing or cheating",
+          "checked_uk_ipa": "ˈɒnɪst",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "诚实、坦率及不隐瞒事实为相关义项；honest首字母h不发音。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2343,
+        "word": "honey",
+        "headword": "honey",
+        "homograph": null,
+        "source_raw": "honey [ˈhʌni] n.蜜,蜂蜜"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "蜜,蜂蜜",
+        "phonetic": "ˈhʌni",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a sweet sticky substance made by bees"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "蜜,蜂蜜",
+        "phonetic": "ˈhʌni",
+        "example": "He added a spoonful of honey to his tea.",
+        "example_translation": "他在茶里加了一勺蜂蜜。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/honey",
+          "checked_pos": "noun",
+          "checked_sense": "a sweet sticky substance made by bees",
+          "checked_uk_ipa": "ˈhʌni",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可作亲昵称呼；该用法需考虑关系、语域和语境。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2344,
+        "word": "honor",
+        "headword": "honor",
+        "homograph": null,
+        "source_raw": "honor [ˈɔnə] n.(honour)尊敬,敬意;荣誉,光荣 v.尊敬"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(honour)尊敬,敬意;荣誉,光荣 v.尊敬",
+        "phonetic": "ˈɔnə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "great respect for somebody"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "(honour)尊敬,敬意;荣誉,光荣 v.尊敬",
+        "phonetic": "ˈɒnə(r)",
+        "example": "The award brought honor to the whole team.",
+        "example_translation": "这项奖项为整个团队带来了荣誉。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/honor",
+          "checked_pos": "noun",
+          "checked_sense": "great respect for somebody",
+          "checked_uk_ipa": "ˈɒnə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "保留美式拼写 honor，与英式 honour 分开；本页给出对应英式发音，动词义需另核。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2345,
+        "word": "honorable",
+        "headword": "honorable",
+        "homograph": null,
+        "source_raw": "honorable [ˈɔnərəbl] a.(honourable)可敬的;荣誉的,光荣的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "(honourable)可敬的;荣誉的,光荣的",
+        "phonetic": "ˈɔnərəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "deserving great respect or showing high moral standards"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "(honourable)可敬的;荣誉的,光荣的",
+        "phonetic": "ˈɒnərəbl",
+        "example": "She made an honorable decision despite the pressure.",
+        "example_translation": "尽管承受压力，她仍作出了正直的决定。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/honorable",
+          "checked_pos": "adjective",
+          "checked_sense": "deserving great respect or showing high moral standards",
+          "checked_uk_ipa": "ˈɒnərəbl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "保留美式拼写 honorable，与 honourable 分开；表示值得尊重或道德正直。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2346,
+        "word": "hook",
+        "headword": "hook",
+        "homograph": null,
+        "source_raw": "hook [huk] n.钩,吊钩,钩状物 v.钩住"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "钩,吊钩,钩状物 v.钩住",
+        "phonetic": "huk",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a curved piece used for hanging things or catching fish"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "钩,吊钩,钩状物 v.钩住",
+        "phonetic": "hʊk",
+        "example": "Hang the coat on the hook by the door.",
+        "example_translation": "把外套挂在门边的挂钩上。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hook",
+          "checked_pos": "noun",
+          "checked_sense": "a curved piece used for hanging things or catching fish",
+          "checked_uk_ipa": "hʊk",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指拳击勾拳、吸引人的开头或动词钩住；避免合并不同义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2347,
+        "word": "hop",
+        "headword": "hop",
+        "homograph": null,
+        "source_raw": "hop [hɔp] v.人单足跳;跳上(车等) n.蹦跳;短程飞行"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "人单足跳;跳上(车等) n.蹦跳;短程飞行",
+        "phonetic": "hɔp",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "verb",
+        "meaning": "to move by jumping on one foot"
+      },
+      "proposed": {
+        "pos": "v.",
+        "meaning": "人单足跳;跳上(车等) n.蹦跳;短程飞行",
+        "phonetic": "hɒp",
+        "example": "The rabbit hopped across the path.",
+        "example_translation": "兔子单脚跳过了小路。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hop",
+          "checked_pos": "verb",
+          "checked_sense": "to move by jumping on one foot",
+          "checked_uk_ipa": "hɒp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可双脚跳、跳上交通工具或表示短途飞行；各义项搭配不同。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2348,
+        "word": "hope",
+        "headword": "hope",
+        "homograph": null,
+        "source_raw": "hope [həup] n.希望,期望;希望的人或事 v.希望,期望"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "希望,期望;希望的人或事 v.希望,期望",
+        "phonetic": "həup",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a feeling that something wanted may happen"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "希望,期望;希望的人或事 v.希望,期望",
+        "phonetic": "həʊp",
+        "example": "There is still hope that the team can finish on time.",
+        "example_translation": "团队仍有希望按时完成。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hope",
+          "checked_pos": "noun",
+          "checked_sense": "a feeling that something wanted may happen",
+          "checked_uk_ipa": "həʊp",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "名词希望、希望的人/事及动词期望需分开；hope常接that或of结构。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2349,
+        "word": "hopeful",
+        "headword": "hopeful",
+        "homograph": null,
+        "source_raw": "hopeful [ˈhəupful] a.给人希望的,抱有希望的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "给人希望的,抱有希望的",
+        "phonetic": "ˈhəupful",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "believing that something wanted will happen"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "给人希望的,抱有希望的",
+        "phonetic": "ˈhəʊpfl",
+        "example": "We are hopeful about the next stage of the project.",
+        "example_translation": "我们对项目的下一阶段抱有希望。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hopeful",
+          "checked_pos": "adjective",
+          "checked_sense": "believing that something wanted will happen",
+          "checked_uk_ipa": "ˈhəʊpfl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "表示抱有希望或带来希望；搭配常用 hopeful about/of/that。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2350,
+        "word": "horizon",
+        "headword": "horizon",
+        "homograph": null,
+        "source_raw": "horizon [həˈraizən] n.地平线;眼界,见识"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "地平线;眼界,见识",
+        "phonetic": "həˈraizən",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the furthest visible line where sky seems to meet land or sea"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "地平线;眼界,见识",
+        "phonetic": "həˈraɪzn",
+        "example": "The sun disappeared below the horizon.",
+        "example_translation": "太阳消失在地平线下。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horizon",
+          "checked_pos": "noun",
+          "checked_sense": "the furthest visible line where sky seems to meet land or sea",
+          "checked_uk_ipa": "həˈraɪzn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也比喻知识、兴趣或发展范围，需区分字面与引申义。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2351,
+        "word": "horizontal",
+        "headword": "horizontal",
+        "homograph": null,
+        "source_raw": "horizontal [ˈhɔriˈzɔntəl] a.地平线的;水平的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "地平线的;水平的",
+        "phonetic": "ˈhɔriˈzɔntəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "flat and level, going across rather than up and down"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "地平线的;水平的",
+        "phonetic": "ˌhɒrɪˈzɒntl",
+        "example": "Draw a horizontal line across the page.",
+        "example_translation": "在页面上画一条水平线。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horizontal",
+          "checked_pos": "adjective",
+          "checked_sense": "flat and level, going across rather than up and down",
+          "checked_uk_ipa": "ˌhɒrɪˈzɒntl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指组织层级并列；与vertical相对。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2352,
+        "word": "horn",
+        "headword": "horn",
+        "homograph": null,
+        "source_raw": "horn [hɔːn] n.(牛羊等的)角;号,喇叭;角状物;角制品"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(牛羊等的)角;号,喇叭;角状物;角制品",
+        "phonetic": "hɔːn",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a hard pointed part growing on the head of some animals"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "(牛羊等的)角;号,喇叭;角状物;角制品",
+        "phonetic": "hɔːn",
+        "example": "The ram lowered its horns and stepped forward.",
+        "example_translation": "公羊低下角，向前迈了一步。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horn",
+          "checked_pos": "noun",
+          "checked_sense": "a hard pointed part growing on the head of some animals",
+          "checked_uk_ipa": "hɔːn",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "动物角、乐器/喇叭、汽车喇叭及角制品需按语境区分。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2353,
+        "word": "horrible",
+        "headword": "horrible",
+        "homograph": null,
+        "source_raw": "horrible [ˈhɔrəbl] a.令人恐惧的,可怕的;极讨厌的,糟透的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "令人恐惧的,可怕的;极讨厌的,糟透的",
+        "phonetic": "ˈhɔrəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "very bad, unpleasant or frightening"
+      },
+      "proposed": {
+        "pos": "a.",
+        "meaning": "令人恐惧的,可怕的;极讨厌的,糟透的",
+        "phonetic": "ˈhɒrəbl",
+        "example": "We had a horrible journey through the storm.",
+        "example_translation": "我们在暴风雨中经历了一段糟糕的旅程。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horrible",
+          "checked_pos": "adjective",
+          "checked_sense": "very bad, unpleasant or frightening",
+          "checked_uk_ipa": "ˈhɒrəbl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "可表示极讨厌、可怕或令人震惊；中文需依情境选词。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2354,
+        "word": "horror",
+        "headword": "horror",
+        "homograph": null,
+        "source_raw": "horror [ˈhɔrə] n.恐怖,战栗"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "恐怖,战栗",
+        "phonetic": "ˈhɔrə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a feeling of great shock or fear"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "恐怖,战栗",
+        "phonetic": "ˈhɒrə(r)",
+        "example": "She watched in horror as the tree fell.",
+        "example_translation": "树倒下时，她惊恐地看着。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horror",
+          "checked_pos": "noun",
+          "checked_sense": "a feeling of great shock or fear",
+          "checked_uk_ipa": "ˈhɒrə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "恐惧感、令人恐惧的经历及恐怖作品类型需分别说明。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2355,
+        "word": "horse",
+        "headword": "horse",
+        "homograph": null,
+        "source_raw": "horse [hɔːs] n.马;跳马,鞍马 v.骑马"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "马;跳马,鞍马 v.骑马",
+        "phonetic": "hɔːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a large four-legged animal with a mane"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "马;跳马,鞍马 v.骑马",
+        "phonetic": "hɔːs",
+        "example": "The horse pulled the cart along the lane.",
+        "example_translation": "马拉着车沿小路前行。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horse",
+          "checked_pos": "noun",
+          "checked_sense": "a large four-legged animal with a mane",
+          "checked_uk_ipa": "hɔːs",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "动物、赛马和跳马等义项需结合上下文判断。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2356,
+        "word": "horsepower",
+        "headword": "horsepower",
+        "homograph": null,
+        "source_raw": "horsepower [ˈhɔːs,pauə] n.[机]马力"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "[机]马力",
+        "phonetic": "ˈhɔːs,pauə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a unit for measuring the power of an engine"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "[机]马力",
+        "phonetic": "ˈhɔːspaʊə(r)",
+        "example": "The engine produces 150 horsepower.",
+        "example_translation": "这台发动机的功率为150马力。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/horsepower",
+          "checked_pos": "noun",
+          "checked_sense": "a unit for measuring the power of an engine",
+          "checked_uk_ipa": "ˈhɔːspaʊə(r)",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "功率单位及其缩写hp需准确保留；不要误当成马匹力量的日常衡量。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2357,
+        "word": "hose",
+        "headword": "hose",
+        "homograph": null,
+        "source_raw": "hose [həuz] n.水龙带,软管 v.用软管(淋浇,冲洗)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "水龙带,软管 v.用软管(淋浇,冲洗)",
+        "phonetic": "həuz",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a long flexible tube used to direct water"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "水龙带,软管 v.用软管(淋浇,冲洗)",
+        "phonetic": "həʊz",
+        "example": "Use a garden hose to water the flowers.",
+        "example_translation": "用花园软管给花浇水。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hose",
+          "checked_pos": "noun",
+          "checked_sense": "a long flexible tube used to direct water",
+          "checked_uk_ipa": "həʊz",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "也可指连裤袜；动词hose down表示用水管冲洗，英美衣物义有差异。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2358,
+        "word": "hospital",
+        "headword": "hospital",
+        "homograph": null,
+        "source_raw": "hospital [ˈhɔspitəl] n.医院"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "医院",
+        "phonetic": "ˈhɔspitəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a large building where ill or injured people receive medical care"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "医院",
+        "phonetic": "ˈhɒspɪtl",
+        "example": "The ambulance took him to hospital after the fall.",
+        "example_translation": "他摔倒后，救护车把他送去了医院。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hospital",
+          "checked_pos": "noun",
+          "checked_sense": "a large building where ill or injured people receive medical care",
+          "checked_uk_ipa": "ˈhɒspɪtl",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "英式英语常说in hospital/to hospital而不加冠词；美式用法通常有冠词，需标语域。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2359,
+        "word": "hospitality",
+        "headword": "hospitality",
+        "homograph": null,
+        "source_raw": "hospitality [ˌhɔspiˈtæləti] n.好客,殷勤,款待"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "好客,殷勤,款待",
+        "phonetic": "ˌhɔspiˈtæləti",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "friendly and generous treatment of guests"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "好客,殷勤,款待",
+        "phonetic": "ˌhɒspɪˈtæləti",
+        "example": "We thanked our hosts for their warm hospitality.",
+        "example_translation": "我们感谢主人热情款待。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hospitality",
+          "checked_pos": "noun",
+          "checked_sense": "friendly and generous treatment of guests",
+          "checked_uk_ipa": "ˌhɒspɪˈtæləti",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "待客之道及为顾客/宾客提供的餐饮服务为相关义项。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2360,
+        "word": "host",
+        "headword": "host",
+        "homograph": null,
+        "source_raw": "host [həust] n.主人;旅店老板;节目主持人;一大群,许多"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "主人;旅店老板;节目主持人;一大群,许多",
+        "phonetic": "həust",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person who invites guests or welcomes visitors"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "主人;旅店老板;节目主持人;一大群,许多",
+        "phonetic": "həʊst",
+        "example": "Our host welcomed everyone at the door.",
+        "example_translation": "主人在门口欢迎每一位客人。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/host",
+          "checked_pos": "noun",
+          "checked_sense": "a person who invites guests or welcomes visitors",
+          "checked_uk_ipa": "həʊst",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "主人、活动东道主、节目主持人和一大群等为不同义项；也有动词用法。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 2361,
+        "word": "hostage",
+        "headword": "hostage",
+        "homograph": null,
+        "source_raw": "hostage [ˈhɔstidʒ] n.人质"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "人质",
+        "phonetic": "ˈhɔstidʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "a person captured and held to force others to do something"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "人质",
+        "phonetic": "ˈhɒstɪdʒ",
+        "example": "The hostages were released safely the next morning.",
+        "example_translation": "人质第二天早上被安全释放。",
+        "teaching_note": ""
+      },
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/hostage",
+          "checked_pos": "noun",
+          "checked_sense": "a person captured and held to force others to do something",
+          "checked_uk_ipa": "ˈhɒstɪdʒ",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "人质及比喻性“被某物所制约”需区分；引用具体事件时保持准确与克制。"
+      ],
+      "change_reason": "已实际查看 Oxford Learners Dictionaries 对应词条，核对所选义项及英式音标；保留原完整中文释义与词性，补充原创例句。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    }
+  ]
+}

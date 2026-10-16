@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-15",
+  "operation": "actual-maintenance-noop-and-selector-check",
+  "checks": [
+    {
+      "script": "apply-reviewed-common-examples.js",
+      "args": [
+        "--common-i",
+        "--apply"
+      ],
+      "result": "zero-change-report-preserved"
+    },
+    {
+      "script": "apply-reviewed-meanings.js",
+      "args": [
+        "--i",
+        "--apply"
+      ],
+      "result": "zero-change-report-preserved"
+    },
+    {
+      "script": "apply-reviewed-common-examples.js",
+      "args": [
+        "--common-i",
+        "--common-h"
+      ],
+      "result": "invalid-selector-rejected"
+    },
+    {
+      "script": "apply-reviewed-meanings.js",
+      "args": [
+        "--i",
+        "--h"
+      ],
+      "result": "invalid-selector-rejected"
+    },
+    {
+      "script": "apply-reviewed-common-examples.js",
+      "args": [
+        "--common-unknown"
+      ],
+      "result": "invalid-selector-rejected"
+    },
+    {
+      "script": "apply-reviewed-meanings.js",
+      "args": [
+        "--unknown"
+      ],
+      "result": "invalid-selector-rejected"
+    }
+  ],
+  "all_report_hashes_unchanged": true,
+  "all_content_hashes_unchanged": true,
+  "protected_state_unchanged": true
+}

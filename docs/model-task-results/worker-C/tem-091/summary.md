@@ -1,0 +1,113 @@
+# tem-091 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：156
+- 输入 SHA256：dc0a0a089d972105ff00a00d9c451e42b1065664c9d9934af3c0ac6f1e251e2a
+
+## 待主代理复核
+
+Serene 已访问 Oxford Learner’s Dictionaries 并核对形容词核心义和英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需复核 senile/senility 的过时或污名风险、shanghai 的强迫征募义、性相关词条语域、性别化称谓，以及 sheaf 的源中文错字。
+
+- serenely
+- serenity
+- serf
+- sergeant
+- serial
+- series
+- serious
+- sermon
+- serpent
+- serrated
+- serum
+- servant
+- serve
+- service
+- serviceable
+- serviceman
+- servile
+- servility
+- servitude
+- sesame
+- session
+- set
+- setback
+- set-piece
+- settee
+- setting
+- settle
+- settlement
+- settler
+- seven
+- seventeen
+- seventh
+- seventieth
+- seventy
+- sever
+- several
+- severe
+- severity
+- sew
+- sewage
+- sewer
+- sewerage
+- sex
+- sexism
+- sexist
+- sexual
+- sexuality
+- sexy
+- shabby
+- shack
+- shade
+- shadow
+- shadowy
+- shady
+- shaft
+- shag
+- shaggy
+- shake
+- shaky
+- shall
+- shallow
+- sham
+- shamble
+- shame
+- shamefaced
+- shameful
+- shameless
+- shampoo
+- shanghai
+- shape
+- shapely
+- share
+- shareholder
+- shark
+- sharp
+- sharpen
+- sharpener
+- shatter
+- shave
+- shawl
+- sheaf
+- shear
+- sheath
+- shed 1
+- shed 2
+- sheen
+- sheep
+- sheepish
+- sheer
+- sheet
+- shelf
+- shell
+- shellfish
+- shepherd
+- sheriff
+- sherry
+- shield
+- shift
+- shilling

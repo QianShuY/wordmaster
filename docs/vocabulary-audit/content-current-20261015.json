@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-15",
+  "version": "2026-10-15.8",
+  "operation": "read-only-content-verification",
+  "protected_digest": "a32ee0fbd41806b5dc2b6181a46574f0e9eba921b5690fdde32e5102dd7b21c5",
+  "comparisons": [
+    {
+      "report": "deferred-meanings-applied-20261014.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "phonetic-symbols-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "phonetics-private-use-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "common-g-examples-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "g-meanings-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "common-h-examples-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "h-meanings-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "common-i-examples-applied-20261015.json",
+      "protected_state_matches": true
+    },
+    {
+      "report": "i-meanings-applied-20261015.json",
+      "protected_state_matches": true
+    }
+  ],
+  "integrity": "ok",
+  "foreign_key_violations": 0,
+  "words": 26268,
+  "progress": 32,
+  "review_log": 84,
+  "typography_flagged": 1,
+  "books": [
+    {
+      "name": "中考核心词汇",
+      "book_id": 1,
+      "source_file": "zhongkao.txt",
+      "source_sha256": "f2f67792e3c9f35e653c7a03eabe1c2f5e93f346295b34267bb3d6337cc32794",
+      "installed_source_matches": true,
+      "planned_action": "replace-with-verified-gaokao-content",
+      "source_rows": 1925,
+      "valid_source_entries": 1713,
+      "quarantined_source_rows": 186,
+      "total_installed": 1713,
+      "paired_examples": 18,
+      "batch_reviewed_examples": 0,
+      "pending_examples": 1695,
+      "suspicious_phonetics": 0,
+      "missing_phonetics": 1
+    },
+    {
+      "name": "四级核心词汇",
+      "book_id": 2,
+      "source_file": "cet4.txt",
+      "source_sha256": "662dcf755a053aa0c6951193d0c258c8fb1515d48a00cbc874057bb5103973b4",
+      "installed_source_matches": true,
+      "planned_action": "retain-and-review-all-entries",
+      "source_rows": 4643,
+      "valid_source_entries": 4460,
+      "quarantined_source_rows": 157,
+      "total_installed": 4460,
+      "paired_examples": 762,
+      "batch_reviewed_examples": 734,
+      "pending_examples": 3698,
+      "suspicious_phonetics": 0,
+      "missing_phonetics": 0
+    },
+    {
+      "name": "六级核心词汇",
+      "book_id": 3,
+      "source_file": "cet6.txt",
+      "source_sha256": "2756c14f1f84d1985969b0e5080a7e8f5691c0ffcb32abbe1d3a061739e89572",
+      "installed_source_matches": true,
+      "planned_action": "retain-and-review-all-entries",
+      "source_rows": 2273,
+      "valid_source_entries": 2272,
+      "quarantined_source_rows": 0,
+      "total_installed": 2272,
+      "paired_examples": 347,
+      "batch_reviewed_examples": 217,
+      "pending_examples": 1925,
+      "suspicious_phonetics": 0,
+      "missing_phonetics": 0
+    },
+    {
+      "name": "考研大纲词汇",
+      "book_id": 6,
+      "source_file": "npee.txt",
+      "source_sha256": "3e9383908e04aafa2626fda429b3d486e0f1667a3a66032097261b55f4ba72ad",
+      "installed_source_matches": true,
+      "planned_action": "retain-and-review-all-entries",
+      "source_rows": 5398,
+      "valid_source_entries": 5384,
+      "quarantined_source_rows": 11,
+      "total_installed": 5384,
+      "paired_examples": 778,
+      "batch_reviewed_examples": 751,
+      "pending_examples": 4606,
+      "suspicious_phonetics": 0,
+      "missing_phonetics": 0
+    },
+    {
+      "name": "英语专四专八词汇",
+      "book_id": 7,
+      "source_file": "tem.txt",
+      "source_sha256": "ae4262fc683836adf9250ab708b71307ca4fea43fc3320ff78dde47eb5a89c1f",
+      "installed_source_matches": true,
+      "planned_action": "retain-and-review-all-entries",
+      "source_rows": 12815,
+      "valid_source_entries": 12439,
+      "quarantined_source_rows": 376,
+      "total_installed": 12439,
+      "paired_examples": 907,
+      "batch_reviewed_examples": 884,
+      "pending_examples": 11532,
+      "suspicious_phonetics": 0,
+      "missing_phonetics": 0
+    }
+  ],
+  "limitations": "Example presence, typography normalization and selected-sense checks are not complete language review."
+}

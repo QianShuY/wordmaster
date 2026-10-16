@@ -1,0 +1,113 @@
+# tem-101 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：148
+- 输入 SHA256：176af4ab1917f2b192bdf12fd88a1e5efb7b54a44ae6c0e53dbcf8af44487185
+
+## 待主代理复核
+
+Superficial 已访问 Oxford Learner’s Dictionaries 并核对形容词义和英式 IPA；其他义项需主代理完整复核。其余条目无本轮可用原始词典证据，音标留空。另需注意 subversion/suburbanite/requirement 的源词性标签、soda/sodium 源释义错字、senile/senility 语域和 sensitive suicide-related terms。
+
+- sunshine
+- sunstroke
+- suntan
+- super 1
+- super 2
+- superb
+- superfluous
+- superhuman
+- superimpose
+- superintend
+- superintendent
+- superior
+- superiority
+- superlative
+- superman
+- supermarket
+- supernatural
+- supersede
+- supersonic
+- superstition
+- superstitious
+- supervise
+- supervision
+- supervisor
+- supper
+- supplant
+- supple
+- supplement
+- supplementary
+- supply
+- support
+- supportive
+- suppose
+- supposition
+- suppress
+- suppression
+- supremacy
+- supreme
+- surcharge
+- sure
+- surely
+- surf
+- surface
+- surfboard
+- surge
+- surgeon
+- surgery
+- surgical
+- surly
+- surmount
+- surname
+- surpass
+- surplus
+- surprise
+- surprising
+- surreal
+- surrealist
+- surrender
+- surreptitious
+- surrogate
+- surround
+- surveillance
+- survey
+- survival
+- survive
+- survivor
+- susceptible
+- susceptibility
+- suspect
+- suspend
+- suspender
+- suspense
+- suspension
+- suspicion
+- suspicious
+- sustain
+- sustenance
+- swagger
+- swallow 1
+- swallow 2
+- swamp
+- swan
+- swap
+- swarm
+- swathe 1
+- swathe 2
+- sway
+- swear
+- sweat
+- sweater
+- sweatshirt
+- sweatshop
+- Swede
+- sweep
+- sweeping
+- sweet
+- sweetheart
+- swell
+- swerve

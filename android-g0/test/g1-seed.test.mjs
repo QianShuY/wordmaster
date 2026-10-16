@@ -70,7 +70,7 @@ test('G1 Android seed matches a fresh isolated Web seed and includes no learning
     console.log = () => {};
     try {
       webDb.exec('BEGIN IMMEDIATE');
-      seed();
+      seed({ legacyAndroid: true });
       webDb.exec('COMMIT');
     } catch (error) {
       try { webDb.exec('ROLLBACK'); } catch {}

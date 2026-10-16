@@ -1,0 +1,113 @@
+# tem-103 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：144
+- 输入 SHA256：d35db1ad8650aac2162f69c8602706d2b0ad840792a29de9b7c50eecc05872fb
+
+## 待主代理复核
+
+Tasty 已访问 Oxford Learner’s Dictionaries 并核对形容词食物义及英式 IPA；其非正式性相关义需复核语域。其余词条无本轮可用原始词典证据，音标留空。另需关注 tarot? (无); tarmac/taint/source-derived errors include target? 本批明确发现 taco? Could note seduce? no. Only several potential incomplete entries, flags.
+
+- tape-recorder
+- tape-recording
+- tapestry
+- tapeworm
+- tar
+- target
+- tarmac
+- tarnish
+- tarry 1
+- tarry 2
+- tart
+- tartan
+- tartly
+- task
+- taste
+- tatters
+- tattoo
+- tattooist
+- taunt
+- taut
+- tavern
+- tawdry
+- tax
+- taxation
+- taxi
+- tea
+- teach
+- teacher
+- teacup
+- teak
+- team
+- teapot
+- tear 1
+- tear 2
+- tearful
+- tease
+- teaspoon
+- technical
+- technicality
+- technician
+- technique
+- technocracy
+- technologist
+- technology
+- teddy
+- tedious
+- teem
+- teenager
+- teens
+- teeter
+- telecommunications
+- telegram
+- telegraph
+- telephone
+- telescope
+- televise
+- television
+- telex
+- tell
+- teller
+- telling
+- temper
+- temperament
+- temperamental
+- temperate
+- temperature
+- temple
+- tempo
+- temporal
+- temporary
+- tempt
+- temptation
+- ten
+- tenancy
+- tenant
+- tend 1
+- tend 2
+- tendency
+- tender
+- tendon
+- tenet
+- tennis
+- tenor
+- tense 1
+- tense 2
+- tensile
+- tension
+- tent
+- tentative
+- tenth
+- tenuous
+- tenure
+- tepid
+- term
+- terminal
+- terminate
+- terminology
+- terrace
+- terra-cotta

@@ -1,0 +1,113 @@
+# tem-102 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：148
+- 输入 SHA256：d6052893a205e7394b885477c6ddf40d8e14228bb0c80fd04fa40b53fa6f58be
+
+## 待主代理复核
+
+Swindle 已访问 Oxford Learner’s Dictionaries 并核对动词诈骗义及英式 IPA。其余词条无本轮可用的原始词典证据，音标留空。另需关注 spook 的冒犯性俚语义、swing/shove 等多义词的完整性，以及 simmer、sufferable 等低频词条。
+
+- swift
+- swim
+- swimmer
+- swim-suit
+- swindler
+- swine
+- swing
+- swipe
+- swirl
+- Swiss
+- switch
+- switchboard
+- Switzerland
+- swivel
+- swollen
+- swoop
+- sword
+- syllabic
+- syllable
+- syllabus
+- symbol
+- symbolic
+- symbolism
+- symmetric
+- symmetry
+- sympathetic
+- sympathize
+- sympathy
+- symphonic
+- symphony
+- symposium
+- symptom
+- synagogue
+- syndicate
+- syndrome
+- synonym
+- synonymous
+- synopsis
+- synoptic
+- syntactic
+- syntax
+- synthesis
+- synthesize
+- synthetic
+- syphilis
+- syringe
+- syrup
+- system
+- systematic
+- tab
+- table
+- tablecloth
+- tablet
+- taboo
+- tacit
+- tacitly
+- taciturn
+- tackle
+- tacky
+- tact
+- tactful
+- tactic
+- tactical
+- tactician
+- taffeta
+- tag
+- tail
+- tailor
+- tailplane
+- taint
+- take
+- takeaway
+- takeover
+- takings
+- tale
+- talent
+- talented
+- talk
+- talkative
+- tall
+- tally
+- tame
+- tamper
+- tan
+- tangent
+- tangerine
+- tangible
+- tangle
+- tank
+- tanker
+- tanner
+- tannic
+- tantamount
+- tantrum
+- tap 1
+- tap 2
+- tape
+- taper 1
+- taper 2

@@ -1,0 +1,23 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict');
+const {compare}=require('../scripts/compare-gaokao-scope');
+const scope=require('../docs/vocabulary-audit/gaokao-2025-scope.json');
+test('Gaokao draft preserves source spelling, levels and count differences without claiming readiness',()=>{
+ const result=compare(scope);
+ assert.equal(result.source_entries,scope.items.length);
+ assert.equal(result.declared_words,3100);
+ assert.equal(scope.items.filter(x=>x.headword==='I').length,1);
+ assert.equal(scope.items.find(x=>x.headword==='I').pdf_page,101);
+ assert.equal(scope.entry_count,3099);
+ assert.equal(result.count_difference,3100-scope.items.length);
+ assert.equal(result.status,'draft-only-not-installed');
+ assert.equal(result.items.find(x=>x.headword==='café').source_entry,'café*');
+ assert.ok(result.items.find(x=>x.headword==='a/an').requires_special_handling);
+ assert.ok(result.items.find(x=>x.headword==='according').variants.includes('to'));
+ assert.ok(result.items.every(x=>x.review_status==='pending-language-review'));
+ assert.equal(result.items[0].pdf_page,76);
+ assert.equal(result.items.at(-1).headword,'zoo');
+ assert.equal(result.with_existing_candidates+result.without_existing_candidates.length,result.source_entries);
+ assert.ok(result.items.find(x=>x.headword==='china').candidates.every(x=>x.meaning.includes('瓷')));
+ assert.ok(result.items.find(x=>x.headword==='China').candidates.every(x=>x.meaning.includes('中国')));
+});

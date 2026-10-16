@@ -1,0 +1,113 @@
+# tem-077 初审摘要
+
+- 输入数量：100
+- 结果数量：100
+- 建议改动数量：100（补充原创例句与译文；原词性和完整原释义保留）
+- 证据已核对数量：1
+- needs-review 数量：99
+- 疑点数量（issues 条目）：165
+- 输入 SHA256：5dfc253a0e678e71be4db3f0d010a585ca5e88e4becf6b702742c429dbf04ba6
+
+## 待主代理复核
+
+Preoccupied 已访问 Oxford Learner’s Dictionaries 并核对形容词义及英式 IPA。Preoccupation 的 Cambridge 页面访问返回 403，仍待复核。其余词条无本轮可用证据，音标留空。另需核对 procure 的第二义、prick 的语域、profiteer 中文释义，以及多义多词性条目的完整性。
+
+- preoccupation
+- preparation
+- preparatory
+- preposition
+- prerequisite
+- preschool
+- prescribe
+- prescription
+- presence
+- present 1
+- present 2
+- present 3
+- presentation
+- presently
+- preservation
+- preserve
+- preside
+- president
+- presidential
+- presidium
+- press 1
+- press 2
+- pressing
+- pressure
+- prestige
+- prestigious
+- presumably
+- presume
+- presuppose
+- pretend
+- pretentious
+- pretext
+- pretty
+- prevail
+- prevalent
+- prevent
+- prevention
+- previous
+- prey
+- price
+- priceless
+- prick
+- pride
+- priest
+- primary
+- prime
+- primitive
+- prince
+- princess
+- principal
+- principle
+- print
+- printer
+- prior
+- priority
+- prism
+- prison
+- prisoner
+- pristine
+- privacy
+- private
+- privilege
+- prize
+- pro 1
+- pro 2
+- probability
+- probably
+- probation
+- probe
+- problem
+- procedural
+- procedure
+- proceed
+- process
+- procession
+- proclaim
+- procure
+- prod
+- prodigal
+- prodigy
+- produce 1
+- produce 2
+- producer
+- product
+- production
+- productive
+- productivity
+- profess
+- profession
+- professional
+- professor
+- proficiency
+- proficient
+- profile
+- profit
+- profitable
+- profiteer
+- profound
+- programmer
