@@ -1,10 +1,12 @@
 'use strict';
 // Read-only inspection of worker submissions; never approves or installs content.
 const fs=require('node:fs'),path=require('node:path'),{isDeepStrictEqual:eq}=require('node:util');
+const {createHash}=require('node:crypto');
 const root=path.resolve(__dirname,'..'),inputs=path.join(root,'docs/model-tasks-20261015'),outputs=path.join(root,'docs/model-task-results');
 const manifest=JSON.parse(fs.readFileSync(path.join(inputs,'manifest.json'),'utf8'));
 const owners={A:f=>/^cet[46]-/.test(f.task_id)||(/^tem-/.test(f.task_id)&&+f.task_id.slice(4)<=22),B:f=>/^(npee|gaokao)-/.test(f.task_id)||(/^tem-/.test(f.task_id)&&+f.task_id.slice(4)>=23&&+f.task_id.slice(4)<=36),C:f=>/^tem-/.test(f.task_id)&&+f.task_id.slice(4)>=37};
-const report={operation:'worker-progress-inspection-not-approval',checked_at:new Date().toISOString(),workers:[]};
+const report={operation:'worker-progress-inspection-not-approval',checked_at:new Date().toISOString(),input_file_hash_mismatches:[],workers:[]};
+for(const f of manifest.files){const bytes=fs.readFileSync(path.join(inputs,f.file));if(createHash('sha256').update(bytes).digest('hex')!==f.sha256)report.input_file_hash_mismatches.push(f.task_id);}
 for(const [owner,accept] of Object.entries(owners)){
  const folder=path.join(outputs,'worker-'+owner),assigned=manifest.files.filter(accept);
  const progress=fs.existsSync(path.join(folder,'progress.json'))?JSON.parse(fs.readFileSync(path.join(folder,'progress.json'),'utf8')):null;
@@ -41,4 +43,4 @@ for(const [owner,accept] of Object.entries(owners)){
  report.workers.push(worker);
 }
 const file=path.join(root,'output/refinement/model-worker-progress-20261016.json');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(report,null,2)+'\n');
-console.log(JSON.stringify({file,workers:report.workers.map(({tasks,identity_mismatches,original_mismatches,...w})=>({...w,identity_mismatches:identity_mismatches.length,original_mismatches:original_mismatches.length}))},null,2));
+console.log(JSON.stringify({file,input_file_hash_mismatches:report.input_file_hash_mismatches,workers:report.workers.map(({tasks,identity_mismatches,original_mismatches,...w})=>({...w,identity_mismatches:identity_mismatches.length,original_mismatches:original_mismatches.length}))},null,2));
