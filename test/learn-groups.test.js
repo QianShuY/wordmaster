@@ -3,7 +3,7 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const Domain=require('../shared/domain'),Checkpoint=require('../shared/desktop-checkpoint');
 test('23 new words complete three linked recognition-choice-spelling groups without early campaign claims',async()=>{
  const elements=new Map(),requests=[],saved=[];
- const $=key=>{if(!elements.has(key))elements.set(key,{textContent:'',innerHTML:'',style:{},classList:{add(){},remove(){},toggle(){}},after(){},remove(){},insertAdjacentHTML(){}});return elements.get(key);};
+ const $=key=>{if(!elements.has(key))elements.set(key,{textContent:'',innerHTML:'',style:{},classList:{add(){},remove(){},toggle(){},contains(){return false;}},after(){},remove(){},insertAdjacentHTML(){}});return elements.get(key);};
  const context=vm.createContext({Set,Domain,DesktopCheckpoint:Checkpoint,IS_ANDROID_APP:false,$,esc:String,wordHeadword:w=>w.word,
   localStorage:{setItem(){}},location:{hash:'#/today-study/1'},document:{createElement:()=>({setAttribute(){}})},
   api:async url=>{requests.push(url);return {drawn_today:true};},showPageLoading(){},clearPageStatus(){},showPageError(){}});

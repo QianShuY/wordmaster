@@ -715,6 +715,13 @@ app.get('/api/desktop/insights', (req, res) => {
 
   const args = scoped ? [bookId] : [];
   const wordFilter = scoped ? 'WHERE w.book_id = ?' : '';
+  // Use exactly the same per-book daily plan math as the Today page.
+  // "Unseen words" is a library fact, not permission to exceed today's quota.
+  const relevantBooks = scoped ? q.books.all().filter(item => item.id === bookId) : q.books.all();
+  const todayNewRemaining = relevantBooks.reduce((sum, item) => {
+    const plan = planFor(item);
+    return sum + Math.min(plan.remaining_new, Math.max(0, plan.daily_quota - item.new_today));
+  }, 0);
   const counts = db.prepare(`
     SELECT COUNT(*) AS total_words, COUNT(p.word_id) AS started_words,
       COALESCE(SUM(CASE WHEN p.streak >= 3 THEN 1 ELSE 0 END), 0) AS mastered_words,
@@ -749,7 +756,8 @@ app.get('/api/desktop/insights', (req, res) => {
 
   res.set('Cache-Control', 'no-store').json(LearningInsights.buildInsights({
     scope: scoped ? 'book' : 'all', bookId,
-    bookName: book?.name, counts, recent, previous, candidates,
+    bookName: book?.name, counts: { ...counts, today_new_remaining: todayNewRemaining },
+    recent, previous, candidates,
   }));
 });
 

@@ -865,12 +865,13 @@ const Home = {
   },
 
   renderStats(s) {
-    const acc = s.total_correct + s.total_wrong > 0
-      ? Math.round(s.total_correct / (s.total_correct + s.total_wrong) * 100) : 0;
+    const attempted = Number(s.total_correct || 0) + Number(s.total_wrong || 0);
+    const acc = attempted > 0 ? Math.round(s.total_correct / attempted * 100)
+      : IS_ANDROID_APP ? 0 : '—';
     $('#topStats').innerHTML = `
       <div class="stat"><b class="numeric">${s.today_reviewed}</b>今日已学</div>
       <div class="stat"><b class="numeric">${s.mastered}</b>已巩固</div>
-      <div class="stat"><b class="numeric"><span>${acc}</span><small class="metric-percent">%</small></b>总正确率</div>`;
+      <div class="stat"><b class="numeric"><span>${acc}</span><small class="metric-percent">${acc === '—' ? '' : '%'}</small></b>${IS_ANDROID_APP ? '总正确率' : '全库累计正确率'}</div>`;
   },
 
   renderBooks(books, mistakeCount) {
@@ -1052,6 +1053,7 @@ const Study = {
   wrongCount: 0, abandonedCount: 0, retryCount: 0,
   sessionId: null,
   todayFlow: null,
+  mistakeDrill: null,
   instanceId: null,
   attemptedWordIds: new Set(), retryWordIds: new Set(), learnAgainIds: new Set(), learnCompletedIds: new Set(),
   current: null, locked: false, roundWords: [], guidedRun: false, guidedSpellWords: null,
@@ -1061,6 +1063,7 @@ const Study = {
   async start(bookId, mode, options = {}) {
     if (!IS_ANDROID_APP && mode === 'meaning') return this.startToday(bookId);
     this.todayFlow = null;
+    this.mistakeDrill = null;
     $('#desktopStudyJourney').classList.add('hidden');
     $('#studyExit').textContent = '← 退出';
     this.bookId = bookId; this.mode = mode;
@@ -1104,6 +1107,7 @@ const Study = {
   async startToday(bookId) {
     if (IS_ANDROID_APP) return;
     this.todayFlow = null;
+    this.mistakeDrill = null;
     this.bookId = bookId;
     this.mode = 'meaning';
     this.guidedRun = false;
@@ -1335,6 +1339,7 @@ const Study = {
 
   startGuidedSpelling(bookId) {
     this.todayFlow = null;
+    this.mistakeDrill = null;
     $('#desktopStudyJourney').classList.add('hidden');
     $('#studyExit').textContent = '← 退出';
     let words = this.guidedSpellWords || [];
@@ -2194,6 +2199,7 @@ const Study = {
   /* ---------- 完成 ---------- */
   async finish() {
     this.leave();
+    $('#doneBack').textContent = '返回今日';
     $('#studyStage').classList.add('hidden');
     $('#studyDone').classList.remove('hidden');
     $('#studyProgressFill').style.width = '100%';
@@ -2296,6 +2302,12 @@ const Study = {
       receipt.innerHTML = `<p>这一轮，留下的词签 <span>${Domain.localDayKey()}</span></p><div>${this.roundWords.map(word => `<span class="${pendingIds.has(String(word.id)) ? 'receipt-pending' : ''}">${esc(wordHeadword(word))}<small>${pendingIds.has(String(word.id)) ? '待强化' : this.mode === 'learn' ? '已认识' : this.todayFlow?.stage === 'review' ? '词义已核对' : '已通过'}</small></span>`).join('')}</div>`;
       $('#desktopDoneJourney').after(receipt);
     }
+    $('#desktopMistakeOutcome').classList.add('hidden');
+    if (!IS_ANDROID_APP && this.mistakeDrill) {
+      const drill = { ...this.mistakeDrill };
+      const run = this.runToken;
+      void Mistakes.renderRoundOutcome(drill, run);
+    }
     if (!this.todayFlow && this.guidedRun && this.mode === 'learn' && this.bookId) {
       const spellingWords = Domain.spellingWords(this.roundWords);
       this.guidedSpellWords = spellingWords.slice(0, 1);
@@ -2321,6 +2333,8 @@ const Study = {
       const scope = !this.todayFlow && this.bookId === null && Mistakes.studyScopeBookId;
       location.hash = scope ? `#/mistakes?book_id=${scope}` : '#/';
     };
+    // Ignore late completion responses after navigating or starting another round.
+    const finishToken = this.runToken;
     // A completed daily route can advance one campaign stage. The server checks
     // saved answers, new-word consolidation, due reviews and the unique local day.
     if (!IS_ANDROID_APP && this.todayFlow && !this.todayFlow.reviewHasMore && !this.todayFlow.learnHasMore
@@ -2329,6 +2343,7 @@ const Study = {
       && (this.todayFlow.stage === 'spelling' || (['review','review-spelling'].includes(this.todayFlow.stage) && !this.todayFlow.learn.length && (this.todayFlow.stage === 'review-spelling' || !Domain.spellingWords(this.todayFlow.review).length)))) {
       try {
         const travel = await api('/api/adventure/campaign/complete-day', { method:'POST', body:{book_id:this.bookId} });
+        if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
         $('#adventureDayClear')?.remove();
         if(travel.ok)$('#desktopDoneJourney').insertAdjacentHTML('beforeend', `<p id="adventureDayClear">今日旅程 · 第 ${travel.stage} 关已通过。<a href="/adventure/journey.html">展开旅行地图 →</a></p>`);
       } catch(error) { console.info('旅程校验未通过或暂未保存：',error.message); }
@@ -2342,6 +2357,7 @@ const Study = {
     showPageLoading('正在确认今日卡牌奖励状态…');
     try {
       const cd = await api('/api/cards');
+      if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
       clearPageStatus();
       if (cd.drawn_today || (cd.reward_words ?? cd.today_answered) < cd.draw_target) {
         btn.classList.add('hidden');
@@ -2350,6 +2366,7 @@ const Study = {
         btn.onclick = () => { Cards._preview = false; Cards.draw(); };
       }
     } catch (error) {
+      if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
       btn.classList.add('hidden');
       showPageError(`本轮已完成，但卡牌状态暂时无法读取：${error.message}`, () => this.finish());
     }
@@ -2437,9 +2454,17 @@ const Mistakes = {
   },
 
   async study(mode, bookId = null) {
+    // A same-hash "continue" button also starts a brand-new round. Invalidate
+    // delayed callbacks and old completion-summary responses before fetching.
+    Study.runToken++;
     this.studyScopeBookId = !IS_ANDROID_APP && Number.isSafeInteger(bookId) && bookId > 0 ? bookId : null;
     // Mistake drills are separate from Today's SQLite-owned daily route.
     Study.todayFlow = null;
+    Study.mistakeDrill = IS_ANDROID_APP ? null : {
+      bookId: this.studyScopeBookId, mode,
+    };
+    Study.guidedRun = false;
+    Study.guidedSpellWords = null;
     Study.mode = mode;
     Study.bookId = null;
     show('study');
@@ -2465,6 +2490,48 @@ const Mistakes = {
       }
     } catch (error) {
       showPageError(`错题练习加载失败：${error.message}`, () => this.study(mode, bookId));
+    }
+  },
+
+  async renderRoundOutcome(drill, run) {
+    if (IS_ANDROID_APP || !drill) return;
+    const host = $('#desktopMistakeOutcome');
+    const scoped = Number.isSafeInteger(drill.bookId) && drill.bookId > 0;
+    const url = scoped ? `/api/mistakes?book_id=${drill.bookId}` : '/api/mistakes';
+    const expectedHash = scoped
+      ? `#/mistakes-study/${drill.mode}?book_id=${drill.bookId}`
+      : `#/mistakes-study/${drill.mode}`;
+    host.classList.remove('hidden');
+    host.innerHTML = '<p>正在核对仍需回炉的单词…</p>';
+    try {
+      const remaining = await api(url);
+      if (Study.runToken !== run || location.hash !== expectedHash || $('#studyDone').classList.contains('hidden')) return;
+      const n = remaining.length;
+      const scope = scoped ? '这本词库' : '全部词库';
+      host.innerHTML = `<p class="mistake-outcome-eyebrow">REVIEW STATUS · 错题状态</p>
+        <div class="mistake-outcome-line">
+          <strong class="numeric">${n}</strong>
+          <span>${scope}仍需回炉的单词</span>
+        </div>
+        <p>${n === 0
+          ? '当前范围已经没有需要回炉的错题了，之后仍需按到期日继续复习。'
+          : '这里是完成本轮后仍在错题本中的实际数量。答对一次不等于完全掌握；需要按原有规则继续巩固。'}</p>`;
+      if (n === 0) {
+        $('#doneAgain').textContent = '返回错题本查看成果';
+        $('#doneAgain').onclick = () => {
+          location.hash = scoped ? `#/mistakes?book_id=${drill.bookId}` : '#/mistakes';
+        };
+      } else {
+        $('#doneAgain').textContent = `继续回炉剩余 ${n} 个错词 →`;
+        $('#doneAgain').onclick = () => this.study(drill.mode, drill.bookId);
+      }
+      $('#doneBack').textContent = scoped ? '返回当前词库错题' : '返回全部错题';
+      $('#doneBack').onclick = () => {
+        location.hash = scoped ? `#/mistakes?book_id=${drill.bookId}` : '#/mistakes';
+      };
+    } catch (error) {
+      if (Study.runToken !== run || location.hash !== expectedHash) return;
+      host.textContent = `本轮答题已保存，但暂时无法读取剩余错题数量：${error.message}。仍可返回错题本核对。`;
     }
   },
 
@@ -2766,15 +2833,17 @@ $('#importForm').addEventListener('submit', async (e) => {
    ============================================================ */
 const Stats = {
   requestToken: 0,
+  renderToken: 0,
   scope: 'all',
 
   async render() {
+    const renderToken = ++this.renderToken;
     show('stats');
     if (!IS_ANDROID_APP) {
       showPageLoading('正在加载学习统计范围…');
       try {
         const books = await api('/api/books');
-        if (location.hash !== '#/stats') return;
+        if (this.renderToken !== renderToken || location.hash !== '#/stats') return;
         const select = $('#desktopStatsBookSelect');
         const preferred = Home.selectedBookId || Number(localStorage.getItem('wordmaster_selected_book') || 0);
         select.innerHTML = '<option value="all">全部词库</option>' + books.map(book =>
@@ -2787,7 +2856,9 @@ const Stats = {
         };
         await this.loadScoped(books);
       } catch (error) {
-        showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+        if (this.renderToken === renderToken && location.hash === '#/stats') {
+          showPageError(`学习数据加载失败：${error.message}`, () => this.render());
+        }
       }
       return;
     }
@@ -2827,6 +2898,9 @@ const Stats = {
   renderToday(ov) {
     const t = ov.today;
     const allBooks = !IS_ANDROID_APP && this.scope === 'all';
+    const answerCount = Number(ov.total.total_correct || 0) + Number(ov.total.total_wrong || 0);
+    // A missing history is unknown, never a real zero-percent result.
+    const allTimeAccuracy = !IS_ANDROID_APP && answerCount === 0 ? '—' : ov.accuracy;
     const newText = allBooks || (!IS_ANDROID_APP && t.daily_new_quota === 0)
       ? `<b class="numeric">${t.new_today}</b><span>今日新学词数</span>`
       : `<b class="metric-fraction numeric"><span class="metric-current">${t.new_today}</span><span class="metric-divider">/</span><span class="metric-target">${t.daily_new_quota}</span></b><span>今日新词进度</span>`;
@@ -2835,7 +2909,7 @@ const Stats = {
       <div class="today-cell"><b class="numeric">${t.due_review}</b><span>待复习单词</span></div>
       <div class="today-cell">${newText}</div>
       <div class="today-cell"><b class="numeric">${ov.total.today_reviewed}</b><span>今日已作答</span></div>
-      <div class="today-cell"><b class="metric-percent-value numeric">${!IS_ANDROID_APP && !ov.total.total_correct && !ov.total.total_wrong ? '<span>—</span>' : `<span>${ov.accuracy}</span><i>%</i>`}</b><span>累计作答正确率</span></div>
+      <div class="today-cell"><b class="metric-percent-value numeric"><span>${allTimeAccuracy}</span><i>${allTimeAccuracy === '—' ? '' : '%'}</i></b><span>${allTimeAccuracy === '—' ? '累计作答正确率 · 暂无记录' : '累计作答正确率'}</span></div>
       <div class="today-cell"><b class="numeric">${ov.total.mastered}</b><span>已巩固单词（连续答对 ≥3 次）</span></div>`;
   },
 

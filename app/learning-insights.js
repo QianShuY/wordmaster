@@ -34,7 +34,7 @@ function explainWord(word) {
   };
 }
 
-function recommend({ scope, bookId, dueWords, mistakeWords, newWords, startedWords, recent }) {
+function recommend({ scope, bookId, dueWords, mistakeWords, unseenWords, newWordsToday, startedWords, recent }) {
   const scoped = scope === 'book' && Number.isSafeInteger(Number(bookId));
   if (dueWords) {
     return {
@@ -52,12 +52,19 @@ function recommend({ scope, bookId, dueWords, mistakeWords, newWords, startedWor
       button: scoped ? '查看当前词库错题 →' : '前往错题本（全部词库） →',
     };
   }
-  if (newWords) {
+  if (newWordsToday) {
     return {
-      kind: 'new', title: `还有 ${newWords} 个新词等待认识`,
-      explanation: '这部分单词尚未开始学习；每日任务量仍由学习计划计算。',
+      kind: 'new', title: `今天还可学习 ${newWordsToday} 个新词`,
+      explanation: '这里只计算本日学习计划允许的新词数量，剩余未学词数不会直接变成今天的任务。',
       action: scoped ? 'today' : 'choose_book',
       button: scoped ? '开始当前词库的今日任务 →' : '回到今日选择词库 →',
+    };
+  }
+  if (unseenWords) {
+    return {
+      kind: 'plan_done', title: '今天没有需要继续的新词任务',
+      explanation: `词库中仍有 ${unseenWords} 个未开始的词，但今天的配额已完成或当前学习计划未安排新词。下一步按计划继续。`,
+      action: 'choose_book', button: '返回今日查看计划 →',
     };
   }
   if (startedWords) {
@@ -90,6 +97,7 @@ function buildInsights({
   const dueWords = count(counts.due_words);
   const mistakeWords = count(counts.mistake_words);
   const unseen = Math.max(0, total - started);
+  const newWordsToday = Math.min(unseen, count(counts.today_new_remaining));
   const now = accuracy(recent);
   const before = accuracy(previous);
   const pct = total ? Math.min(100, Math.round(started / total * 100)) : 0;
@@ -101,13 +109,15 @@ function buildInsights({
       mastered_words: mastered, started_percent: pct,
     },
     review: { due_words: dueWords, mistake_words: mistakeWords },
+    today: { new_words_remaining: newWordsToday },
     last7: now,
     previous7: before,
     change_points: now.percentage === null || before.percentage === null
       ? null : now.percentage - before.percentage,
     focus_words: candidates.slice(0, 5).map(explainWord),
     recommendation: recommend({
-      scope, bookId, dueWords, mistakeWords, newWords: unseen, startedWords: started, recent: now,
+      scope, bookId, dueWords, mistakeWords, unseenWords: unseen,
+      newWordsToday, startedWords: started, recent: now,
     }),
     disclaimer: '基于本机真实学习记录的规则建议；掌握数与新词覆盖率不同，不预测记忆概率。',
   };

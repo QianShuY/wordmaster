@@ -40,5 +40,5 @@ for(const [owner,accept] of Object.entries(owners)){
  worker.progress_claimed_rows=(progress?.tasks||[]).reduce((n,t)=>n+(Number(t.processed_rows)||0),0);
  report.workers.push(worker);
 }
-const file=path.join(root,'output/refinement/model-worker-progress-20261016.json');fs.writeFileSync(file,JSON.stringify(report,null,2)+'\n');
+const file=path.join(root,'output/refinement/model-worker-progress-20261016.json');fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({file,workers:report.workers.map(({tasks,identity_mismatches,original_mismatches,...w})=>({...w,identity_mismatches:identity_mismatches.length,original_mismatches:original_mismatches.length}))},null,2));
