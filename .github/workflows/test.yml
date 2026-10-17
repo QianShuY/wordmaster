@@ -36,6 +36,8 @@ jobs:
         run: npm run abc:reuse
       - name: Search cross-book ABC proposals for alternative example candidates
         run: npm run abc:crossbook
+      - name: Merge ABC candidate coverage and prioritize remaining work
+        run: npm run abc:coverage
       - name: Upload complete A/B/C work packets
         uses: actions/upload-artifact@v4
         with:
