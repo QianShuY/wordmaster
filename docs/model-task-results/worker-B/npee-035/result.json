@@ -1844,18 +1844,34 @@
         "example": "",
         "example_translation": ""
       },
-      "selected_sense": null,
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "n. 处罚、制裁（可数，常用复数 sanctions）"
+      },
       "proposed": {
         "pos": "n./v.",
         "meaning": "批准；同意；支持；认可；处罚，制裁",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "The school imposed a sanction for repeated cheating.",
+        "example_translation": "学校对屡次作弊行为实施了处罚。",
+        "teaching_note": "sanction 名词既可能表示官方批准，也可能表示惩罚，本例仅为处罚义；完整释义与动词义尚未审核。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/sanction_1",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "official order limiting trade; official permission; legal or disciplinary penalty",
+          "checked_uk_ipa": "ˈsæŋkʃn",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
-        "sanction 可表示官方批准，也可表示惩罚/制裁，意义方向相反；现有词库将其合并，需主审拆分，暂不编写例句或音标。"
+        "sanction 可表示官方批准，也可表示惩罚/制裁，意义方向相反；现有词库将其合并，需主审拆分，暂不编写例句或音标。",
+        {
+          "code": "multi-sense-review-pending",
+          "message": "所选义项已在原词典直接核实，但其他释义、词性及用法敏感性尚未完整审核，禁止入库。"
+        }
       ],
       "change_reason": "核对词典词性、义项和英式音标；敏感或证据不足的词条留待复核。",
       "verification": "needs-review",
@@ -2502,18 +2518,34 @@
         "example": "",
         "example_translation": ""
       },
-      "selected_sense": null,
+      "selected_sense": {
+        "pos": "adjective",
+        "meaning": "a. 凶猛的、攻击性强的"
+      },
       "proposed": {
         "pos": "a.",
         "meaning": "野蛮的；凶恶的，残暴的；（n.）野人，未开化的人",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "The hikers kept their distance from the savage dog.",
+        "example_translation": "徒步者与那只凶猛的狗保持了距离。",
+        "teaching_note": "本例仅用凶猛动物义，不把 savage 用作描述民族或人群的旧式贬义称呼；历史名词义需保留语用风险标记。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/savage_1",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "checked_sense": "aggressive and violent; strong criticism; old-fashioned offensive use about people/groups",
+          "checked_uk_ipa": "ˈsævɪdʒ",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
-        "未取得词典页面及英式 IPA。savage 用于描述人群时带强烈贬义或殖民历史色彩，不提供脱离语境例句，需主审决定标注或处理旧义。"
+        "未取得词典页面及英式 IPA。savage 用于描述人群时带强烈贬义或殖民历史色彩，不提供脱离语境例句，需主审决定标注或处理旧义。",
+        {
+          "code": "multi-sense-review-pending",
+          "message": "所选义项已在原词典直接核实，但其他释义、词性及用法敏感性尚未完整审核，禁止入库。"
+        }
       ],
       "change_reason": "核对词典词性、义项和英式音标；敏感或证据不足的词条留待复核。",
       "verification": "needs-review",
