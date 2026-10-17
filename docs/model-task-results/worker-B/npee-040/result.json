@@ -873,8 +873,8 @@
         "example_translation": ""
       },
       "selected_sense": {
-        "pos": "a.",
-        "meaning": "v. 简化"
+        "pos": "vt.",
+        "meaning": "v. 简化；使效率更高"
       },
       "proposed": {
         "pos": "a.",
@@ -887,7 +887,11 @@
       "evidence": [],
       "issues": [
         "尚未直接核对权威词典，词性、原中文释义、英式IPA、例句自然性与全义项均待独立审核。",
-        "源词性 a.，例句是动词 streamline，词性须经来源复核和纠正。"
+        "源词性 a.，例句是动词 streamline，词性须经来源复核和纠正。",
+        {
+          "code": "candidate-pos-or-sense-correction",
+          "message": "source_raw 同时记录形容词及 vt.，示例取动词义；候选 selected_sense.pos 必须准确反映实际用法，原词条字段不变。"
+        }
       ],
       "change_reason": "接续 B 考研词库输入，保留原始来源字段并新增例句候选，未更新正式 seed。",
       "verification": "needs-review",
