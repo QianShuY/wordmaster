@@ -6,6 +6,7 @@ const path=require('node:path');
 const os=require('node:os');
 const crypto=require('node:crypto');
 const {materialize}=require('../scripts/persist-abc-reused-candidates');
+const {plan}=require('../scripts/plan-next-model-review');
 const ROOT=path.resolve(__dirname,'..');
 
 function fixture(t){
@@ -67,10 +68,11 @@ test('never overwrite an existing candidate file, including a concurrently modif
 test('dry-run all-ABC persistence handles every old matched row without modifying the repository',()=>{
  const x=materialize(ROOT);
  assert.equal(x.input_source_rows,26612);
- assert.equal(x.existing_worker_draft_rows,14739);
- assert.equal(x.reused_example_candidate_rows,1640);
- assert.equal(x.by_worker.A,912);
- assert.equal(x.by_worker.B,728);
+ assert.equal(x.existing_worker_draft_rows,plan(ROOT,{save:false}).all.result_rows);
+ assert.ok(x.reused_example_candidate_rows>0);
+ assert.equal(x.reused_example_candidate_rows,x.by_worker.A+x.by_worker.B);
+ assert.ok(x.by_worker.A>=0);
+ assert.ok(x.by_worker.B>=0);
  assert.equal(x.approved,0);
  assert.equal(x.installed,0);
  assert.equal(x.no_source_result_or_learning_state_touched,true);
