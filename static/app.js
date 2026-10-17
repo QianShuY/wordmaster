@@ -431,6 +431,7 @@ const DesktopHub = {
     }
 
     const book = chosenBook;
+    $('#hubReviewLabel').textContent=book.unfinished_count?'待完成巩固':'到期复习';
     $('#hubLearnedWords').href=`#/book/${book.id}?status=learned`;
     const plan = book.plan || {};
     const total = Math.max(0, Number(book.word_count) || 0);
@@ -490,15 +491,17 @@ const DesktopHub = {
       ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
       : due > 0 ? '今天到期的复习会全部优先安排。'
       : '认识新词 → 选择巩固 → 拼写回忆，完成同一批词的三轮学习。';
-    const checkpoint = DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey(), Home.instanceId);
+    const checkpoint = DesktopCheckpoint.resumePendingSpelling(DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey(), Home.instanceId));
     const resume = $('#hubResumeNote');
     resume.classList.toggle('hidden', !checkpoint);
     if (checkpoint) {
       this.guidedStart = false;
       const progress = DesktopCheckpoint.progress(checkpoint);
-      const stageNames = { review: '到期复习', learn: '新词学习', choice: '选择巩固', spelling: '巩固默写' };
+      const stageNames = { review: checkpoint.flow.resumingUnfinished?'巩固强化':'到期复习', 'review-spelling':checkpoint.flow.resumingUnfinished?'拼写强化':'复习拼写',learn: '新词学习', choice: '选择巩固', spelling: '巩固默写' };
       const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
-      const remainingDue = Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
+      const spellingPending=checkpoint.stage==='review-spelling';
+      const remainingDue = spellingPending?Math.max(0,checkpoint.total-checkpoint.done):Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
+      $('#hubReviewLabel').textContent=spellingPending?'待完成拼写':checkpoint.flow.resumingUnfinished?'待完成巩固':'到期复习';
       const remainingNew = Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
       // Live SQLite counts can include newly introduced (now instantly due)
       // words. While resuming, present the *same* original task manifest.
@@ -511,7 +514,7 @@ const DesktopHub = {
       // A word that failed and is waiting to be retried stays in the
       // checkpoint queue even if live "due" counts temporarily differ.
       $('#hubActionSummary').textContent =
-        `接续上次的任务：还需完成 ${remainingDue} 个复习词（含待回炉词）和 ${remainingNew} 个新词。实时到期数可能与本次队列不同。`;
+        spellingPending?`还需完成 ${remainingDue} 个词的拼写${checkpoint.flow.resumingUnfinished?'强化':''}；词义已通过，不必重新选择。`:`接续上次的任务：还需完成 ${remainingDue} 个${checkpoint.flow.resumingUnfinished?'巩固':'复习'}词（含待回炉词）和 ${remainingNew} 个新词。`;
       resume.textContent = `✓ 学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;
@@ -1142,23 +1145,29 @@ const Study = {
       if (location.hash !== expectedHash) return;
       if(unfinishedOnly){payload.review=payload.unfinished_total?payload.review:[];payload.learn=[];payload.learn_has_more=false;payload.review_has_more=payload.unfinished_total>payload.review.length;}
       clearPageStatus();
+      const reviewPlan=DesktopCheckpoint.reviewPlan(payload.review);
+      const resumeSpelling=payload.review.length>0&&!reviewPlan.meaning.length&&reviewPlan.spelling.length>0;
       this.todayFlow = {
         bookId, day: Domain.localDayKey(),
-        stage: payload.review.length ? 'review' : 'learn',
+        stage: payload.review.length ? (resumeSpelling?'review-spelling':'review') : 'learn',
         reviewCycleId: makeRequestId(),
         review: payload.review,
         learn: payload.learn,
         reviewTotal: payload.review.length,
+        reviewMeaningSkipped: payload.review.length-reviewPlan.meaning.length,
+        reviewSpellingSkipped: Domain.spellingWords(payload.review).length-reviewPlan.spelling.length,
+        skippedSpellingIds: Domain.spellingWords(payload.review).filter(w=>!reviewPlan.spelling.some(x=>x.id===w.id)).map(w=>w.id),
         learnTotal: payload.learn.length,
         learnGroupSize: 10, learnGroupStart: 0,
         resumingUnfinished: Boolean(payload.unfinished_total),
-        completed: { review: 0, learn: 0, choice: 0, spelling: 0 }, deferred: [],
+        completed: { review: payload.review.length-reviewPlan.meaning.length, learn: 0, choice: 0, spelling: 0 }, deferred: [],
         reviewHasMore: payload.review_has_more,
         learnHasMore: payload.learn_has_more,
       };
-      this.mode = payload.review.length ? 'meaning' : 'learn';
+      this.mode = payload.review.length ? (resumeSpelling?'spelling':'meaning') : 'learn';
       if(payload.unfinished_total)toast(`先接着巩固之前没完成的 ${payload.unfinished_total} 个词，已学记录都在。`);
       $('#studyModeTag').textContent = payload.review.length ? (payload.unfinished_total?'接续上次 · 未完成巩固':'今日任务 · 到期复习') : '第一轮 · 认识新词';
+      if(resumeSpelling)$('#studyModeTag').textContent='接续上次 · 拼写强化';
       if (!payload.review.length && !payload.learn.length) {
         $('#studyStage').innerHTML = `<div class="quiz-card">
           <p class="quiz-kicker">TODAY COMPLETE</p>
@@ -1170,7 +1179,7 @@ const Study = {
         this.renderTodayJourney();
         return;
       }
-      this.begin(payload.review.length ? payload.review : DesktopCheckpoint.learnGroup(this.todayFlow));
+      this.begin(payload.review.length ? (resumeSpelling?reviewPlan.spelling:reviewPlan.meaning) : DesktopCheckpoint.learnGroup(this.todayFlow));
     } catch (error) {
       showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId,unfinishedOnly));
     }
@@ -1191,6 +1200,9 @@ const Study = {
         learnGroupSize: this.todayFlow.learnGroupSize,
         learnGroupStart: this.todayFlow.learnGroupStart,
         resumingUnfinished: this.todayFlow.resumingUnfinished,
+        reviewMeaningSkipped: this.todayFlow.reviewMeaningSkipped,
+        reviewSpellingSkipped: this.todayFlow.reviewSpellingSkipped,
+        skippedSpellingIds: this.todayFlow.skippedSpellingIds,
         completed: { ...this.todayFlow.completed },
         reviewHasMore: this.todayFlow.reviewHasMore,
         learnHasMore: this.todayFlow.learnHasMore,
@@ -1246,6 +1258,7 @@ const Study = {
       const refresh=words=>words.map(word=>({...word,...byId.get(word.id)}));
       snapshot.flow.review=refresh(snapshot.flow.review);snapshot.flow.learn=refresh(snapshot.flow.learn);
       snapshot.roundWords=refresh(snapshot.roundWords);snapshot.queue=refresh(snapshot.queue);
+      snapshot=DesktopCheckpoint.resumePendingSpelling(snapshot);
     } catch (error) {
       showPageError(`恢复词页内容失败：${error.message}`,()=>this.restoreToday(snapshot));return;
     }
@@ -1269,7 +1282,7 @@ const Study = {
     }
     $('#studyModeTag').textContent = this.mode === 'meaning'
       ? (snapshot.stage === 'choice' ? '接着学 · 选择巩固' : snapshot.flow.resumingUnfinished?'接续上次 · 未完成巩固':'接着学 · 到期复习') : this.mode === 'learn'
-        ? '接着学 · 新词学习' : '接着学 · 拼写回忆';
+        ? '接着学 · 新词学习' : snapshot.flow.resumingUnfinished?'接续巩固 · 拼写强化':'接着学 · 拼写回忆';
     $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
     this.updateProgress();
     if (snapshot.phaseDone) {
@@ -1326,7 +1339,7 @@ const Study = {
     if (stage === 'review-spelling') {
       this.mode = 'spelling';
       $('#studyModeTag').textContent = this.todayFlow.resumingUnfinished?'接续巩固 · 看中文拼写':'旧词复习 · 看中文拼写';
-      this.begin(Domain.spellingWords(this.todayFlow.review).filter(word => !(this.todayFlow.deferred || []).some(item => item.id === word.id)).map(word => ({...word,is_new:0})));
+      this.begin(Domain.spellingWords(this.todayFlow.review).filter(word => !(this.todayFlow.skippedSpellingIds||[]).includes(word.id)&&!(this.todayFlow.deferred || []).some(item => item.id === word.id)).map(word => ({...word,is_new:0})));
     } else if (stage === 'learn') {
       this.mode = 'learn';
       $('#studyModeTag').textContent = '第一轮 · 认识新词';
@@ -1621,7 +1634,7 @@ const Study = {
 
     if (!IS_ANDROID_APP && ['meaning', 'spelling', 'pos'].includes(this.mode)) {
       const state = window.WordMasterReinforcement.answer(this.reinforcement[wordId], payload.correct);
-      if (['review','review-spelling'].includes(this.todayFlow?.stage)) {
+      if (['review','review-spelling','choice','spelling'].includes(this.todayFlow?.stage)) {
         const savedStep = result.memory?.recall_cycle?.[this.mode];
         state.errors = savedStep?.errors ?? state.errors;
         state.streak = savedStep?.streak ?? state.streak;
@@ -2241,6 +2254,7 @@ const Study = {
       const needsMore = flow.reviewHasMore || flow.learnHasMore;
       $('#desktopDoneEyebrow').classList.remove('hidden');
       const titles = { review: '词义已回忆，再试拼写', 'review-spelling': '旧词两步回忆，本轮结束', learn: '今日新词，已认识', choice: '选择巩固，本轮结束', spelling: '拼写回忆，本轮结束' };
+      if(flow.resumingUnfinished){titles.review='词义已核对，接着完成巩固';titles['review-spelling']='拼写强化已完成';}
       $('#studyDoneTitle').textContent = titles[flow.stage];
       const stepCopy = flow.stage === 'review-spelling' ? '旧词复习 · 拼写回忆' : flow.stage === 'review' ? '旧词复习 · 词义回忆'
         : flow.stage === 'learn' ? '第一轮 · 新词认识' : flow.stage === 'choice' ? '第二轮 · 选择巩固' : '第三轮 · 拼写回忆';
@@ -2263,7 +2277,7 @@ const Study = {
         DesktopCheckpoint.clear(localStorage, this.bookId);
         void this.startToday(this.bookId);
       };
-      if (flow.stage === 'review' && Domain.spellingWords(flow.review).some(word => !(flow.deferred || []).some(item => item.id === word.id))) {
+      if (flow.stage === 'review' && Domain.spellingWords(flow.review).some(word => !(flow.skippedSpellingIds||[]).includes(word.id)&&!(flow.deferred || []).some(item => item.id === word.id))) {
         $('#doneSummary').textContent = '词义已核对。接下来看中文，独立拼写这批旧词；通过后才延长复习间隔。';
         $('#doneAgain').textContent = '继续旧词复习 · 拼写回忆 →';
         $('#doneAgain').onclick = () => this.continueToday('review-spelling');

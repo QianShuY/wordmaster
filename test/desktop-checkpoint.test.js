@@ -34,6 +34,19 @@ function makeStorage() {
   };
 }
 
+test('unfinished spelling resumes without repeating a passed meaning; completed past reviews still start normally',()=>{
+ const word={id:1,word:'acquaint',memory:{recall_cycle:{meaning:{streak:1,errors:0},spelling:{streak:1,errors:1},complete:false}}};
+ const plan=Checkpoint.reviewPlan([word]);assert.equal(plan.meaning.length,0);assert.equal(plan.spelling.length,1);
+ const original=makeSnapshot({flow:{...makeSnapshot().flow,review:[word],reviewTotal:1},roundWords:[word],queue:[word],total:1});
+ const fixed=Checkpoint.resumePendingSpelling(original);assert.equal(fixed.stage,'review-spelling');assert.equal(fixed.flow.completed.review,1);assert.deepEqual(fixed.queue,[word]);assert.equal(Checkpoint.sane(fixed),true);
+ assert.equal(Checkpoint.progress(fixed).achieved,0,'passed meanings alone are not completed review words');
+ assert.equal(Checkpoint.progress({...fixed,done:1}).achieved,1);
+ assert.equal(original.stage,'review');
+ const completed={...word,memory:{recall_cycle:{...word.memory.recall_cycle,complete:true}}};
+ assert.equal(Checkpoint.reviewPlan([completed]).meaning.length,1,'a completed previous cycle is not credit for a later due review');
+ assert.equal(Checkpoint.resumePendingSpelling({...original,flow:{...original.flow,review:[completed]}}).stage,'review');
+});
+
 test('second-group checkpoints retain cumulative progress and resume only unanswered words',()=>{
  const learn=Array.from({length:23},(_,i)=>({id:i+1,word:'word'+String.fromCharCode(97+i)}));
  const snapshot=makeSnapshot({stage:'learn',total:10,done:4,roundWords:learn.slice(10,20),queue:learn.slice(14,20),

@@ -28,6 +28,8 @@
     && natural(value.flow.reviewTotal) && natural(value.flow.learnTotal)
     && (value.flow.learnGroupSize === undefined || value.flow.learnGroupSize === 10)
     && (value.flow.learnGroupStart === undefined || (natural(value.flow.learnGroupStart) && value.flow.learnGroupStart <= value.flow.learn.length && value.flow.learnGroupStart % 10 === 0))
+    && ['reviewMeaningSkipped','reviewSpellingSkipped'].every(k=>value.flow[k]===undefined||natural(value.flow[k]))
+    && (value.flow.skippedSpellingIds===undefined||(Array.isArray(value.flow.skippedSpellingIds)&&value.flow.skippedSpellingIds.length<=200&&value.flow.skippedSpellingIds.every(id=>Number.isSafeInteger(id)&&id>0)))
     && typeof value.flow.reviewHasMore === 'boolean'
     && typeof value.flow.learnHasMore === 'boolean'
     && value.flow.completed && ['review', 'learn', 'spelling'].every(k => natural(value.flow.completed[k]))
@@ -89,7 +91,9 @@
     const completed = { ...flow.completed };
     if (!snapshot.phaseDone) completed[snapshot.stage] = stageOffset(flow,snapshot.stage) + Math.min(snapshot.total, snapshot.done);
     const expected = Math.max(0, flow.reviewTotal + flow.learnTotal);
-    const achieved = Math.min(expected, Math.min(flow.reviewTotal, completed.review)
+    const spellable=Domain.spellingWords(flow.review).length;
+    const reviewed=spellable?(completed['review-spelling']||0)+Math.min(flow.reviewTotal-spellable,completed.review||0):completed.review;
+    const achieved = Math.min(expected, Math.min(flow.reviewTotal, reviewed)
       + Math.min(flow.learnTotal, completed.learn));
     return { achieved, expected, stage: snapshot.stage, phaseDone: snapshot.phaseDone,
       steps: completed };
@@ -113,9 +117,24 @@
     return flow.learnGroupSize===10 ? flow.learn.slice(flow.learnGroupStart||0,(flow.learnGroupStart||0)+10) : flow.learn.slice();
   }
   function stageOffset(flow,stage) {
+    if(stage==='review')return flow.reviewMeaningSkipped||0;
+    if(stage==='review-spelling')return flow.reviewSpellingSkipped||0;
     if(flow.learnGroupSize!==10||!['learn','choice','spelling'].includes(stage))return 0;
     const prior=flow.learn.slice(0,flow.learnGroupStart||0);
     return stage==='spelling'?Domain.spellingWords(prior).filter(w=>!(flow.deferred||[]).some(x=>x.id===w.id)).length:prior.length;
   }
-  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest, learnGroup, stageOffset });
+  function reviewPlan(words) {
+    const passed=(word,mode)=>{const cycle=word.memory?.recall_cycle,step=cycle?.[mode];return cycle&&!cycle.complete&&step&&step.streak>=(step.errors?2:1);};
+    const spellable=Domain.spellingWords(words);
+    return {meaning:words.filter(w=>!passed(w,'meaning')),spelling:spellable.filter(w=>!passed(w,'spelling'))};
+  }
+  function resumePendingSpelling(snapshot) {
+    if(!snapshot||snapshot.stage!=='review'||!snapshot.flow?.review?.length)return snapshot;
+    const plan=reviewPlan(snapshot.flow.review);
+    if(plan.meaning.length||!plan.spelling.length)return snapshot;
+    return {...snapshot,stage:'review-spelling',phaseDone:false,queue:plan.spelling.slice(),roundWords:plan.spelling.slice(),total:plan.spelling.length,done:0,
+      flow:{...snapshot.flow,resumingUnfinished:true,reviewMeaningSkipped:snapshot.flow.review.length,reviewSpellingSkipped:Domain.spellingWords(snapshot.flow.review).length-plan.spelling.length,completed:{...snapshot.flow.completed,review:snapshot.flow.review.length}},
+      reinforcement:{},deferredIds:[],roundXp:0,counters:{correctCount:0,firstCorrectCount:0,retryCorrectCount:0,wrongCount:0,abandonedCount:0,retryCount:0},attemptedWordIds:[],retryWordIds:[],learnAgainIds:[],learnCompletedIds:[]};
+  }
+  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest, learnGroup, stageOffset,reviewPlan,resumePendingSpelling });
 });

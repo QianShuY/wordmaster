@@ -29,18 +29,21 @@ test('meaning alone cannot advance; spelling failure resets and requires two cor
  await post('meaning',true);assert.equal(progress().next_due,due);
  assert.equal(db.prepare('SELECT COUNT(*) n FROM review_log').get().n,5);
 });
-test('desktop recall waits for the server-required second correct answer after one failure',async()=>{
+test('new-word consolidation and old recall both wait for the server-required second correct answer after one failure',async()=>{
  const vm=require('node:vm'),source=fs.readFileSync(require.resolve('../static/app.js'),'utf8');
- let streak=1;
+ let streak=1,mode='spelling';
  const context=vm.createContext({Set,IS_ANDROID_APP:false,
-  api:async()=>({outcome:'retry_correct',memory:{recall_cycle:{spelling:{errors:1,streak}}}}),
+  api:async()=>({outcome:'retry_correct',memory:{recall_cycle:{[mode]:{errors:1,streak}}}}),
   window:{WordMasterReinforcement:require('../shared/reinforcement')},$:()=>null});
  const start=source.indexOf('const Study = {'),end=source.indexOf('\n};',start)+3;
  vm.runInContext(source.slice(start,end)+';globalThis.study=Study;',context);
  const study=context.study,word={id:1,word:'bridge'};
- Object.assign(study,{todayFlow:{stage:'review-spelling'},mode:'spelling',current:word,total:1,done:0,queue:[],reinforcement:{},renderMemory(){},updateProgress(){},saveTodayCheckpoint(){}});
+ for(const stage of ['review-spelling','spelling','choice','review']){
+ streak=1;mode=['review','choice'].includes(stage)?'meaning':'spelling';
+ Object.assign(study,{todayFlow:{stage},mode,current:word,total:1,done:0,queue:[],reinforcement:{},renderMemory(){},updateProgress(){},saveTodayCheckpoint(){}});
  await study.report({word_id:1,correct:true,outcome:'retry_correct'});
  assert.equal(study.done,0);assert.equal(study.reinforcement[1].required,2);assert.equal(study.queue.length,1);
  streak=2;await study.report({word_id:1,correct:true,outcome:'retry_correct'});
  assert.equal(study.done,1);assert.equal(study.queue.length,0);
+ }
 });
