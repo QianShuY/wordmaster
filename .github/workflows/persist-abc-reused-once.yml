@@ -1,0 +1,56 @@
+name: Persist verified-identity ABC candidate sidecars (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/persist-abc-reused-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  persist_review_candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out existing handoff branch without rewriting history
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Check persistence safety and entire test suite
+        run: npm test
+      - name: Materialize all old source-matched candidate suggestions
+        run: node scripts/persist-abc-reused-candidates.js --apply
+      - name: Stage and commit ONLY non-approved candidate sidecars
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- docs/model-task-results
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "All sidecars already match. Nothing to commit."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/*/reused-candidates.json|docs/model-task-results/worker-B/*/reused-candidates.json)
+                ;;
+              *)
+                echo "Refusing to commit a non-candidate path: $file" >&2
+                exit 1
+                ;;
+            esac
+          done <<< "$staged"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content(ABC): persist exact-source and PDF-POS matched review-only examples"
+          git push origin HEAD:feat/moci-web-handoff-20261016
