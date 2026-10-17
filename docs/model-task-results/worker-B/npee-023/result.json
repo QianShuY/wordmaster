@@ -3977,19 +3977,23 @@
     {
       "proposed": {
         "pos": "a.",
-        "example_translation": null,
-        "teaching_note": "",
-        "example": null,
+        "example_translation": "博物馆保存着描述该地区传教活动的信件。",
+        "teaching_note": "Merriam-Webster 官方词典将 missionary 分列形容词与名词；所选句中 missionary 修饰 work，是形容词。源 n. 传教士需单独例句与义项审核。",
+        "example": "The museum preserves letters describing missionary work in the region.",
         "meaning": "教会的,传教(士)的 n.传教士",
-        "phonetic": "ˈmɪʃənəri"
+        "phonetic": null
       },
       "change_reason": "现有证据未能核实词库所列的主要词性或词义，按任务要求保留待核字段。",
       "selected_sense": {
-        "meaning": null,
-        "pos": "noun"
+        "pos": "adjective",
+        "meaning": "与宗教传教活动有关的"
       },
       "issues": [
-        "检索到的 Oxford 页面支持名词 missionary（传教士），本词库主词性为形容词；未取得支持形容词用法的词条页，需主代理确认。"
+        "检索到的 Oxford 页面支持名词 missionary（传教士），本词库主词性为形容词；未取得支持形容词用法的词条页，需主代理确认。",
+        {
+          "code": "full-sense-approval-blocked",
+          "message": "both adjective and noun require separate sense reviews."
+        }
       ],
       "full_dictionary_senses_reviewed": false,
       "evidence": [
@@ -3999,6 +4003,15 @@
           "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/missionary",
           "accessed": true,
           "checked_sense": "a person who is sent to a foreign country to teach people about religion"
+        },
+        {
+          "url": "https://www.merriam-webster.com/dictionary/missionary",
+          "accessed": true,
+          "source_retrieval": "original-page-opened-2026-10-17",
+          "checked_pos": "adjective",
+          "checked_sense": "与宗教传教活动有关的",
+          "checked_uk_ipa": null,
+          "independent_primary_page_review": true
         }
       ],
       "identity": {
