@@ -39,3 +39,15 @@
 3. 逐行独立词典审查**全部 26,612 条**的词义、词性、英式读音、例句和原中文，严格分开“有草稿”“有素材”和“审核通过”。历史 worker `source-checked` 不是最终验收。
 
 工具本轮**没有写入 `result.json` 的剩余 11,873 行**，也**没有修改正式 seed、Windows 应用、SQLite 学习/收藏/计划历史**；工作包是提交真实候选与审核任务的可追溯基础，不能对用户宣称 ABC 全量完成。
+
+## 持久化更新（同日续作）
+
+交接分支提交 [`b357c6e935af`](https://github.com/QianShuY/wordmaster/commit/b357c6e935afd953faecc44b287bfba84a2de3f5) 已经**真正写入 34 份 `reused-candidates.json`**，并非仅放在会过期的 CI 下载包。
+
+- A：912 条；B：728 条；合计 1,640 条。每条保留原任务 `task_id`、任务输入 SHA256、原行下标和原词条 `identity`、`original`，并附已有例句与历史来源。
+- 这批持久化候选全部显式标记 `needs-review`、`external_human_review=false`、`full_dictionary_senses_reviewed=false` 和 `authoritative_dictionary_sense_validation=false`。B 组跨高考 PDF 来源只能视为词头/词性匹配线索，**不能直接合并为已审核义项**。
+- 批量写入由一次性专用 GitHub Actions 任务执行，仅可提交 `reused-candidates.json` 路径。实际执行完成并提交，没有动 `result.json`、主词库 seed、学习 SQLite 或收藏。
+- 执行前运行 **205 项 Node 24 测试，全数通过**。后续追加 `test/abc-sidecar-integrity.test.js`，用于独立验证所有候选对应原任务行以及 C 组实词义修订。
+- C 的 `tem-125` 原有四条名/动词混写的 `selected_sense` 已独立查阅 Oxford 词典修正：`question`、`shuttle`、`sneak`、`travel`；仍然是局部义项审核，完整词条未获批准。
+
+**实际完整 worker 草稿行数仍是 14,739；另外 1,640 条是独立保存在仓库的审校候选侧车，并非增加到 `result.json` 的完成行。完整 `accepted` 和 `installed` 均为 0。**
