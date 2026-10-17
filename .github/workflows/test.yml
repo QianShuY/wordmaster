@@ -25,3 +25,7 @@ jobs:
         run: npm test
       - name: Check browser script syntax
         run: node --check static/app.js
+      - name: Inspect model worker proposals without approving content
+        run: node scripts/audit-model-evidence.js
+      - name: Print safe next-worker continuation queue
+        run: node scripts/plan-next-model-review.js
