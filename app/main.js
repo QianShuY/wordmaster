@@ -10,6 +10,7 @@ const DesktopJourney = require('./desktop-journey');
 const LearningInsights = require('./learning-insights');
 const BattlePool = require('./battle-pool');
 const ReviewCycle = require('./review-cycle');
+const {unfinishedWords}=require('./unfinished-learning');
 const WordMemory = require('./word-memory').createWordMemory(db);
 const VocabularyHistory = require('./vocabulary-history').create(db);
 const Campaign = require('./campaign').createCampaign(db,planFor);
@@ -245,6 +246,7 @@ app.get('/api/books', (req, res) => {
     .filter(b=>req.query.include_history==='1'||!b.read_only);
   for (const b of books) {
     b.plan = planFor(b);
+    if(!b.read_only)b.unfinished_count=unfinishedWords(db,b.id).length;
     const build = db.prepare('SELECT content_version,audit_json FROM vocabulary_builds WHERE book_id=?').get(b.id);
     if (build) {
       const audit = JSON.parse(build.audit_json);
@@ -316,7 +318,7 @@ app.get('/api/desktop/books/:id/words', (req, res) => {
 
   const keyword = String(req.query.search || '').trim();
   const status = String(req.query.status || 'all');
-  const allowed = new Set(['all', 'new', 'due', 'mistakes', 'mastered']);
+  const allowed = new Set(['all', 'new', 'due', 'mistakes', 'mastered','learned','yesterday','unfinished']);
   if (keyword.length > 80) return res.status(400).json({ error: '搜索内容不能超过 80 个字符' });
   if (!allowed.has(status)) return res.status(400).json({ error: '无效的学习状态筛选' });
   const requestedPage = Number(req.query.page || 1);
@@ -328,12 +330,16 @@ app.get('/api/desktop/books/:id/words', (req, res) => {
     return res.status(400).json({ error: '每页数量须在 1–100 之间' });
   }
 
+  const unfinishedIds=new Set(['learned','yesterday','unfinished'].includes(status)?unfinishedWords(db,bookId).map(w=>w.id):[]);
   const filters = {
     all: '',
     new: ' AND p.word_id IS NULL',
     due: " AND p.next_due IS NOT NULL AND p.next_due <= datetime('now', 'localtime')",
     mistakes: ' AND p.wrong > 0 AND p.streak < 3',
     mastered: ' AND p.streak >= 3',
+    learned: ' AND p.first_studied IS NOT NULL',
+    yesterday: " AND date(p.first_studied)=date('now','localtime','-1 day')",
+    unfinished: ' AND w.id IN ('+([...unfinishedIds].join(',')||'NULL')+')',
   };
   // instr() handles literal percent/underscore without interpreting LIKE wildcards.
   const matchSql = keyword ? ' AND (instr(lower(w.word), lower(?)) > 0 OR instr(lower(w.meaning), lower(?)) > 0)' : '';
@@ -345,11 +351,11 @@ app.get('/api/desktop/books/:id/words', (req, res) => {
   const total = db.prepare('SELECT COUNT(*) AS total ' + from + where).get(...args).total;
   const pages = Math.max(1, Math.ceil(total / requestedSize));
   const page = Math.min(requestedPage, pages);
-  const rows = db.prepare(`SELECT w.*, p.streak, p.correct, p.wrong, p.next_due
+  const rows = db.prepare(`SELECT w.*, p.streak, p.correct, p.wrong, p.next_due,p.first_studied
     ${from}${where} ORDER BY w.word COLLATE NOCASE, w.id LIMIT ? OFFSET ?`)
     .all(...args, requestedSize, (page - 1) * requestedSize);
   res.set('Cache-Control', 'no-store').json({
-    items: presentWords(rows, book), total, page, page_size: requestedSize, pages,
+    items: presentWords(rows, book).map(w=>({...w,unfinished:unfinishedIds.has(w.id)})), total, page, page_size: requestedSize, pages,
     search: keyword, status,
   });
 });
@@ -492,7 +498,12 @@ app.get('/api/desktop/books/:id/today', (req, res) => {
   const dueTotal = db.prepare(`SELECT COUNT(*) AS total FROM words w JOIN progress p
     ON p.word_id = w.id WHERE w.book_id = ? AND p.next_due IS NOT NULL
     AND p.next_due <= datetime('now', 'localtime')`).get(bookId).total;
-  const due = q.dueWords.all(bookId, Math.min(200, dueTotal));
+  const unfinished=unfinishedWords(db,bookId),pendingIds=new Set(unfinished.map(w=>w.id));
+  const pending=unfinished.slice(0,10);
+  const ordinaryDue=q.dueWords.all(bookId,200).filter(w=>!pendingIds.has(w.id));
+  const due = pending.length?pending:ordinaryDue;
+  const currentTime=db.prepare("SELECT datetime('now','localtime') now").get().now;
+  const allReviewTotal=unfinished.length+Math.max(0,dueTotal-unfinished.filter(w=>w.next_due&&w.next_due<=currentTime).length);
   const newRemaining = Math.min(plan.remaining_new, Math.max(0, plan.daily_quota - newToday));
   const fresh = q.newWords.all(bookId, Math.min(200, newRemaining));
   attachChoices(due);
@@ -501,9 +512,10 @@ app.get('/api/desktop/books/:id/today', (req, res) => {
     book_id: bookId,
     review: presentWords(due, book),
     learn: presentWords(fresh, book),
-    due_total: dueTotal,
+    due_total: allReviewTotal,
+    unfinished_total: unfinished.length,
     new_remaining: newRemaining,
-    review_has_more: dueTotal > due.length,
+    review_has_more: allReviewTotal > due.length,
     learn_has_more: newRemaining > fresh.length,
   });
 });

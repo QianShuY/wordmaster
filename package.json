@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "scripts": {
     "start": "node app/main.js",
-    "test": "node --test",
+    "test": "node --test test/*.test.js android-g0/test/*.test.mjs android-g0/test/*.test.js",
     "audit:vocabulary": "node scripts/audit-vocabulary.js",
     "audit:content": "node scripts/content-quality.js",
     "measure:api": "node scripts/measure-readonly-api.js"

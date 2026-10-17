@@ -33,3 +33,11 @@ test('group slices preserve the original manifest and legacy sessions keep their
  flow.learn[0]={id:1,word:'test 1',answer_word:'test'};
  assert.equal(Checkpoint.stageOffset(flow,'spelling'),10,'spelling uses the reviewed answer word');
 });
+test('explicit unfinished route bypasses the current-day checkpoint and loads previous unfinished words',async()=>{
+ const elements=new Map(),$=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',textContent:'',classList:{add(){},remove(){}}});return elements.get(key);};
+ const requests=[],context=vm.createContext({Set,Domain,IS_ANDROID_APP:false,$,show(){},showPageLoading(){},clearPageStatus(){},toast(){},makeRequestId:()=> 'unfinished-cycle-id',localStorage:{},location:{hash:'#/unfinished-study/1'},DesktopCheckpoint:{...Checkpoint,read:()=>({stage:'learn',flow:{learn:[{id:2,word:'fresh'}]}})},api:async url=>{requests.push(url);return url.includes('identity')?{instance_id:'isolated-instance'}:{review:[{id:1,word:'bridge'}],learn:[{id:2,word:'fresh'}],unfinished_total:1};}});
+ const source=fs.readFileSync(require.resolve('../static/app.js'),'utf8'),start=source.indexOf('const Study = {'),end=source.indexOf('\n};',start)+3;
+ vm.runInContext(source.slice(start,end)+';globalThis.study=Study;',context);
+ let started;context.study.begin=words=>{started=words.map(w=>w.id);};context.study.restoreToday=()=>{throw Error('Must not resume unrelated new words');};
+ await context.study.startToday(1,true);assert.deepEqual(Array.from(started),[1]);assert.equal(context.study.todayFlow.learn.length,0);assert.equal(requests.length,2);
+});

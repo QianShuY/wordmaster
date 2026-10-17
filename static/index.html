@@ -122,6 +122,7 @@
             <p class="hub-route-preview" id="hubRoutePreview">到期复习 → 新词学习 → 巩固默写</p>
             <button type="button" class="btn btn-primary hub-start" id="hubStart">开始今日学习 <span aria-hidden="true">→</span></button>
             <button type="button" class="hub-mistakes hidden" id="hubMistakes">错题回炉 <span aria-hidden="true">↗</span></button>
+            <p><a id="hubLearnedWords" href="#/books">查看已学单词 ↗</a> · <a id="hubUnfinishedWords" href="#/books">未完成巩固 ↗</a></p>
             <p class="hub-action-help" id="hubActionHelp">每天只需沿着这一条路线走下去。</p>
             <p class="hub-resume-note hidden" id="hubResumeNote" aria-live="polite"></p>
           </aside>
@@ -239,12 +240,16 @@
         <select id="manageStatus">
           <option value="all">全部单词</option>
           <option value="new">尚未学习</option>
+          <option value="learned">已学单词</option>
+          <option value="yesterday">昨日学过</option>
+          <option value="unfinished">未完成巩固</option>
           <option value="due">待复习</option>
           <option value="mistakes">待回炉错题</option>
           <option value="mastered">已巩固（连续答对 ≥3 次）</option>
         </select>
       </label>
       <button type="button" class="btn btn-ghost manage-reset" id="manageReset">清除筛选</button>
+      <button type="button" class="btn btn-primary hidden" id="manageResumeUnfinished">继续未完成的巩固 →</button>
     </div>
     <div class="manage-result-bar hidden" id="desktopManageResult" role="status" aria-live="polite"></div>
     <div class="word-table-wrap">

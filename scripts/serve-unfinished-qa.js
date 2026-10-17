@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const directory=fs.mkdtempSync(path.join(os.tmpdir(),'moci-unfinished-ui-'));
+process.env.WORDMASTER_DB_PATH=path.join(directory,'qa.db');
+const {app,db}=require('../app/main');
+db.exec(`INSERT INTO wordbooks(id,name,daily_new) VALUES(1,'昨日词页验收',10);
+ INSERT INTO words(id,book_id,word,meaning,pos) VALUES(1,1,'summon','召唤','v.'),(2,1,'pumpkin','南瓜','n.'),(3,1,'forest','森林','n.'),(4,1,'bridge','桥','n.');
+ INSERT INTO progress(word_id,correct,wrong,first_studied,next_due) VALUES(1,1,0,datetime('now','localtime','-1 day'),datetime('now','localtime','+1 day')),(2,0,0,datetime('now','localtime','-1 day'),datetime('now','localtime')),(3,2,0,datetime('now','localtime','-1 day'),datetime('now','localtime','+1 day'));
+ INSERT INTO review_log(word_id,correct,practice_mode) VALUES(1,1,'meaning'),(3,1,'meaning'),(3,1,'spelling');`);
+const server=app.listen(0,'127.0.0.1',()=>console.log('UNFINISHED_QA http://127.0.0.1:'+server.address().port));
+process.on('SIGINT',()=>server.close(()=>db.close()));

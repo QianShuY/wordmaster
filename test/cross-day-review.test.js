@@ -10,7 +10,9 @@ const {app,db}=require('../app/main');
 // paths remain identical; a separate SQLite connection evaluates modifiers.
 const sqlClock=new DatabaseSync(':memory:');
 for(const name of ['date','datetime'])db.function(name,{varargs:true},(...args)=>{
- const values=args.map(v=>v==='now'?new NativeDate(instant).toISOString():v);
+ // The fixture uses fixed +08:00 timestamps. Windows SQLite may retain the OS
+ // timezone even after Node's TZ changes, so make the test clock explicit.
+ const values=args.map(v=>v==='now'?new NativeDate(instant).toISOString():v==='localtime'?'+8 hours':v);
  return sqlClock.prepare(`SELECT ${name}(${values.map(()=>'?').join(',')}) value`).get(...values).value;
 });
 test('cross-day due reviews, reinforcement, retry identity and capped intervals through real APIs',async t=>{

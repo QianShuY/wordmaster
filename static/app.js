@@ -233,12 +233,14 @@ function route() {
   const hash = location.hash || '#/';
   const studyM = hash.match(/^#\/study\/(\d+)\/(\w+)/);
   const todayStudyM = !IS_ANDROID_APP && hash.match(/^#\/today-study\/(\d+)$/);
+  const unfinishedStudyM = !IS_ANDROID_APP && hash.match(/^#\/unfinished-study\/(\d+)$/);
   const guidedM = hash.match(/^#\/guided-spelling\/(\d+)/);
   const manageM = hash.match(/^#\/book\/(\d+)/);
   const mStudy = hash.match(/^#\/mistakes-study\/(\w+)/);
   Study.runToken++;
   Study.leave();
-  if (todayStudyM) Study.startToday(Number(todayStudyM[1]));
+  if (unfinishedStudyM) Study.startToday(Number(unfinishedStudyM[1]),true);
+  else if (todayStudyM) Study.startToday(Number(todayStudyM[1]));
   else if (guidedM) Study.startGuidedSpelling(Number(guidedM[1]));
   else if (studyM) {
     const query = new URLSearchParams(hash.split('?')[1] || '');
@@ -429,12 +431,15 @@ const DesktopHub = {
     }
 
     const book = chosenBook;
+    $('#hubLearnedWords').href=`#/book/${book.id}?status=learned`;
+    $('#hubUnfinishedWords').href=`#/book/${book.id}?status=unfinished`;
+    $('#hubUnfinishedWords').textContent=`未完成巩固 ${book.unfinished_count||0} 词 ↗`;
     const plan = book.plan || {};
     const total = Math.max(0, Number(book.word_count) || 0);
     const remaining = Math.max(0, Number(plan.remaining_new) || 0);
     const started = Math.max(0, total - remaining);
     const pct = total ? Math.min(100, Math.round(started / total * 100)) : 0;
-    const due = Math.max(0, Number(book.due_review) || 0);
+    const due = Math.max(0, Number(book.due_review) || 0,Number(book.unfinished_count)||0);
     const quota = Math.max(0, Number(plan.daily_quota) || 0);
     const learned = Math.max(0, Number(book.new_today) || 0);
     const upcoming = Math.min(remaining, Math.max(0, quota - learned));
@@ -1104,8 +1109,9 @@ const Study = {
     }
   },
 
-  async startToday(bookId) {
+  async startToday(bookId,unfinishedOnly=false) {
     if (IS_ANDROID_APP) return;
+    const expectedHash=location.hash;
     this.todayFlow = null;
     this.mistakeDrill = null;
     this.bookId = bookId;
@@ -1121,21 +1127,22 @@ const Study = {
     // origin as the user's real installation. Never restore its checkpoints.
     try {
       const identity = await api('/api/desktop/identity');
-      if (location.hash !== `#/today-study/${bookId}`) return;
+      if (location.hash !== expectedHash) return;
       this.instanceId = identity.instance_id;
     } catch (error) {
-      showPageError(`无法验证当前词库的数据身份：${error.message}`, () => this.startToday(bookId));
+      showPageError(`无法验证当前词库的数据身份：${error.message}`, () => this.startToday(bookId,unfinishedOnly));
       return;
     }
     const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId);
-    if (cached) {
+    if (cached&&!unfinishedOnly) {
       this.restoreToday(cached);
       return;
     }
     showPageLoading('正在准备完整的今日任务…');
     try {
       const payload = await api(`/api/desktop/books/${bookId}/today`);
-      if (location.hash !== `#/today-study/${bookId}`) return;
+      if (location.hash !== expectedHash) return;
+      if(unfinishedOnly){payload.review=payload.unfinished_total?payload.review:[];payload.learn=[];payload.learn_has_more=false;payload.review_has_more=payload.unfinished_total>payload.review.length;}
       clearPageStatus();
       this.todayFlow = {
         bookId, day: Domain.localDayKey(),
@@ -1151,6 +1158,7 @@ const Study = {
         learnHasMore: payload.learn_has_more,
       };
       this.mode = payload.review.length ? 'meaning' : 'learn';
+      if(payload.unfinished_total)toast(`先接着巩固之前没完成的 ${payload.unfinished_total} 个词，已学记录都在。`);
       $('#studyModeTag').textContent = payload.review.length ? '今日任务 · 到期复习' : '第一轮 · 认识新词';
       if (!payload.review.length && !payload.learn.length) {
         $('#studyStage').innerHTML = `<div class="quiz-card">
@@ -1165,7 +1173,7 @@ const Study = {
       }
       this.begin(payload.review.length ? payload.review : DesktopCheckpoint.learnGroup(this.todayFlow));
     } catch (error) {
-      showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId));
+      showPageError(`今日任务加载失败：${error.message}`, () => this.startToday(bookId,unfinishedOnly));
     }
   },
 
@@ -1595,7 +1603,7 @@ const Study = {
       session_id: this.sessionId,
       outcome,
       judgement_mode: this.mode,
-      ...(!IS_ANDROID_APP && ['review','review-spelling'].includes(this.todayFlow?.stage) ? {review_cycle: this.todayFlow.reviewCycleId ||= makeRequestId()} : {}),
+      ...(!IS_ANDROID_APP && ['review','review-spelling','choice','spelling'].includes(this.todayFlow?.stage) ? {review_cycle: this.todayFlow.reviewCycleId ||= makeRequestId()} : {}),
       answer_value: String(answerValue ?? ''),
     };
   },
@@ -2585,6 +2593,8 @@ const Manage = {
     $('#addWordBtn').disabled=true;$('#importBtn').disabled=true;
     $('#manageReadOnlyNotice').classList.add('hidden');
     this.page = 1; this.pages = 1; this.query = ''; this.status = 'all';
+    const requestedStatus=new URLSearchParams(location.hash.split('?')[1]||'').get('status');
+    if(!IS_ANDROID_APP&&['learned','yesterday','unfinished'].includes(requestedStatus))this.status=requestedStatus;
     this.requestToken++;
     clearTimeout(this.searchTimer);
     show('manage', 'books');
@@ -2592,7 +2602,7 @@ const Manage = {
     $('#desktopManageResult').classList.toggle('hidden', IS_ANDROID_APP);
     $('#desktopManagePages').classList.toggle('hidden', IS_ANDROID_APP);
     $('#manageSearch').value = '';
-    $('#manageStatus').value = 'all';
+    $('#manageStatus').value = this.status;
     showPageLoading('正在打开词库…');
     try {
       const books = await api(IS_ANDROID_APP?'/api/books':'/api/books?include_history=1');
@@ -2663,6 +2673,9 @@ const Manage = {
     $('#managePageInfo').textContent = `第 ${this.page} / ${this.pages} 页`;
     $('#managePrev').disabled = this.page <= 1;
     $('#manageNext').disabled = this.page >= this.pages;
+    const resume=$('#manageResumeUnfinished');
+    resume.classList.toggle('hidden',this.status!=='unfinished'||!this.total||this.readOnly);
+    resume.onclick=()=>{location.hash=`#/unfinished-study/${this.bookId}`;};
   },
 
   renderTable() {
@@ -2674,7 +2687,7 @@ const Manage = {
     $('#wordTableBody').innerHTML = this.words.map(w => `
       <tr>
         <td class="w">${esc(wordHeadword(w))}<button class="speak-btn" data-speak="${esc(wordSpeech(w))}" aria-label="播放 ${esc(wordHeadword(w))} 的发音">${speakerIconMarkup}</button>${w.sense_label ? `<small class="word-sense-label">${esc(w.sense_label)}</small>` : ''}</td>
-        <td class="ph">${esc(w.phonetic_display || (w.phonetic ? `[${w.phonetic}]` : ''))}</td>
+        <td class="ph">${esc(w.phonetic_display || (w.phonetic ? `[${w.phonetic}]` : ''))}${w.first_studied?`<small class="table-example-translation">初学 ${esc(w.first_studied.slice(0,10))}${w.unfinished?' · 巩固未完成':''}</small>`:''}</td>
         <td class="pos">${esc(w.pos)}</td>
         <td>${wordMeaningMarkup(w, 'table-word-meaning')}</td>
         <td class="ex"><span lang="en">${esc(w.example)}</span>${w.example_translation ? `<small class="table-example-translation">${esc(w.example_translation)}</small>` : ''}</td>
