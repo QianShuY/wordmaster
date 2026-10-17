@@ -6,6 +6,7 @@ const os=require('node:os');
 const path=require('node:path');
 const {createHash}=require('node:crypto');
 const {candidates}=require('../scripts/transfer-abc-crossbook-examples');
+const {plan}=require('../scripts/plan-next-model-review');
 const repoRoot=path.resolve(__dirname,'..');
 function fixture(t) {
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'moci-crossbook-'));
@@ -96,9 +97,11 @@ test('crossbook aborts if previously drafted original data was changed',t=>{
 test('full repository crossbook indexes verified worker proposals without acceptance',()=>{
   const out=candidates(repoRoot,{save:false});
   assert.equal(out.summary.input_rows,26612);
-  assert.equal(out.summary.rows_without_worker_proposal,11873);
+  const current=plan(repoRoot,{save:false});
+ assert.equal(out.summary.rows_without_worker_proposal,current.all.rows_not_yet_drafted);
   assert.ok(out.summary.matching_rows>0);
-  assert.equal(out.summary.matching_rows+out.summary.unmatched_rows,11873);
+  assert.equal(out.summary.matching_rows+out.summary.unmatched_rows,
+  current.all.rows_not_yet_drafted);
   assert.equal(out.summary.accepted,0);
   assert.equal(out.summary.installed,0);
   assert.ok(out.matched.every(x=>x.options.length>0 && x.options.length<=4));
