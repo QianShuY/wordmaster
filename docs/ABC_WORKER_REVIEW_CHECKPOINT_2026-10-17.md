@@ -33,6 +33,7 @@ A 的 `cet4-017` 和 B 的 `npee-038` 原前缀均保留，分别由 82/100 和 
 
 - B 的 `npee-001` 原 9 条 `evidence` 使用单对象而非数组，已逐条**保留原对象**并转换为单元素数组，不凭此提高审核级别。涉及 academy、accelerate、acceptable、acceptance、accessory、accidental、acclaim、accommodate、accomplish。
 - A 的 canvas 先前自报引用 Oxford .co.uk 域名（旧审计工具不识别）；已独立核对其官方 .com 词典来源，并把新条目追加到 evidence，保留旧证据。
+- A 的 `cet4-014`、`015`、`016`、`017` 合计 **299 个 issues: [null] 占位符**已移除：分别 74、76、79、70 个，不触碰实际有内容的 issue，且同步调整 `progress.json` 真实问题行数（15、24、21、30）。历史原稿仍可追溯于 Git 提交记录；移除空占位不代表条目语言审核通过。
 - C 逐文件扫描全部 89 份，发现此前 `image`、`ruffle`、`ruthless` 3 个缺双语例句的条目，已经补齐并保留 needs-review。
 
 ## B 仍有 9 条主动阻断的空例句
