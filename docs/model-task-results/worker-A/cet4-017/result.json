@@ -3602,6 +3602,97 @@
       "verification": "source-checked",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 2523,
+        "word": "moisture",
+        "headword": "moisture",
+        "homograph": null,
+        "source_raw": "moisture [ˈmɔist∫ə] n.潮湿，湿气；温度"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "潮湿，湿气；温度",
+        "phonetic": "ˈmɔistʃə",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "small drops or traces of water in the air, a material, or on a surface"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "水分；湿气；潮气（原“温度”疑为误植）",
+        "phonetic": "ˈmɔɪstʃə",
+        "example": "The dry soil needs more moisture before planting.",
+        "example_translation": "播种前，这片干燥的土壤需要更多水分。",
+        "teaching_note": "原释义末尾“温度”与所核对义项不符，等待其余来源核验后才可替换。"
+      },
+      "evidence": [
+        {
+          "url": "https://dictionary.cambridge.org/dictionary/english/moisture",
+          "checked_pos": "noun [U]",
+          "checked_sense": "water in tiny drops in air, material or on a surface",
+          "checked_uk_ipa": "/ˈmɔɪs.tʃə(r)/",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "原文的“温度”不是 moisture 所选义项，不得直接据此删除未经审定的其他释义。",
+        "英式音标按 Cambridge 页核对，尾 r 随连读语境而变化。"
+      ],
+      "change_reason": "主代理已打开对应 Cambridge Dictionary 页面，核对所选义项、词性及 UK 发音；例句与译文为原创。其他义项保持待审，不代表整词审核完成。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 2524,
+        "word": "molecule",
+        "headword": "molecule",
+        "homograph": null,
+        "source_raw": "molecule [ˈmɔlikjuːl] n.分子，克分子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "分子，克分子",
+        "phonetic": "ˈmɔlikjuːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "selected_sense": {
+        "pos": "noun",
+        "meaning": "the smallest unit of a chemical substance"
+      },
+      "proposed": {
+        "pos": "n.",
+        "meaning": "分子；克分子（旧术语，待单独核对）",
+        "phonetic": "ˈmɒlɪkjuːl",
+        "example": "A water molecule contains two hydrogen atoms.",
+        "example_translation": "一个水分子含有两个氢原子。",
+        "teaching_note": "仅核对化学中的“分子”义；原“克分子”不是本次所核对义项，不擅自删除。"
+      },
+      "evidence": [
+        {
+          "url": "https://dictionary.cambridge.org/dictionary/english/molecule",
+          "checked_pos": "noun [C]",
+          "checked_sense": "smallest unit of a chemical substance",
+          "checked_uk_ipa": "/ˈmɒl.ɪ.kjuːl/",
+          "accessed": true
+        }
+      ],
+      "issues": [
+        "原条目的“克分子”需另查化学术语来源，不能用本次 molecule 释义核对代替。"
+      ],
+      "change_reason": "主代理已打开对应 Cambridge Dictionary 页面，核对所选义项、词性及 UK 发音；例句与译文为原创。其他义项保持待审，不代表整词审核完成。",
+      "verification": "source-checked",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
     }
   ]
 }
