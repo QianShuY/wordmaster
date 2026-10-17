@@ -280,20 +280,24 @@
       },
       "selected_sense": {
         "pos": "n.",
-        "meaning": "n. 北方（需要词性核对）"
+        "meaning": "n. 北方"
       },
       "proposed": {
         "pos": "n.",
         "meaning": "北，北方 a.北方的",
         "phonetic": null,
-        "example": "We drove north for two hours.",
-        "example_translation": "我们向北开了两个小时的车。",
+        "example": "The hills lie to the north of the city.",
+        "example_translation": "群山位于这座城市的北面。",
         "teaching_note": "当前仅演示所选词义；完整多义项、词性、来源与音标均须单独核实。"
       },
       "evidence": [],
       "issues": [
         "原创例句候选，尚未逐项打开原词典校验词性、全义项、英式音标与中译；禁止直接安装。",
-        "例句为 north 的副词用法，但原词条主词性 n.，需要换用匹配的例句或后续多词性审核。"
+        "例句为 north 的副词用法，但原词条主词性 n.，需要换用匹配的例句或后续多词性审核。",
+        {
+          "code": "candidate-pos-or-sense-correction",
+          "message": "此前例句的 north 是副词；现改为介词短语中的名词 north，与源主词性匹配。"
+        }
       ],
       "change_reason": "继续 A 四级词库新任务的原创例句候选，保持原始输入与源内容不变。",
       "verification": "needs-review",
@@ -576,8 +580,8 @@
         "example_translation": ""
       },
       "selected_sense": {
-        "pos": "n.",
-        "meaning": "pron. 什么也没有（源词性待核）"
+        "pos": "pron.",
+        "meaning": "pron. 什么也没有"
       },
       "proposed": {
         "pos": "n.",
@@ -590,7 +594,11 @@
       "evidence": [],
       "issues": [
         "原创例句候选，尚未逐项打开原词典校验词性、全义项、英式音标与中译；禁止直接安装。",
-        "原词条将 nothing 标为 n.，常见词性为代词，此处不能自动通过。"
+        "原词条将 nothing 标为 n.，常见词性为代词，此处不能自动通过。",
+        {
+          "code": "candidate-pos-or-sense-correction",
+          "message": "源条目将 nothing 标作 n.，常见语法为不定代词；只修正候选的目标词性，不更改 original 或正式 seed。"
+        }
       ],
       "change_reason": "继续 A 四级词库新任务的原创例句候选，保持原始输入与源内容不变。",
       "verification": "needs-review",
@@ -3576,20 +3584,24 @@
       },
       "selected_sense": {
         "pos": "n.",
-        "meaning": "n. 橙子"
+        "meaning": "n. 橙树"
       },
       "proposed": {
         "pos": "n.",
         "meaning": "橙(树)；柑(树)",
         "phonetic": null,
-        "example": "He peeled an orange for his daughter.",
-        "example_translation": "他给女儿剥了一个橙子。",
+        "example": "An orange tree grows beside the house.",
+        "example_translation": "房子旁边长着一棵橙树。",
         "teaching_note": "当前仅演示所选词义；完整多义项、词性、来源与音标均须单独核实。"
       },
       "evidence": [],
       "issues": [
         "原创例句候选，尚未逐项打开原词典校验词性、全义项、英式音标与中译；禁止直接安装。",
-        "原释义仅列橙树/柑树，例句使用果实义，完整释义需扩充后核对。"
+        "原释义仅列橙树/柑树，例句使用果实义，完整释义需扩充后核对。",
+        {
+          "code": "candidate-pos-or-sense-correction",
+          "message": "此前例句为橙子果实义而原中文只有树义；改为源中文实际描述的橙树义，待字典审校。"
+        }
       ],
       "change_reason": "继续 A 四级词库新任务的原创例句候选，保持原始输入与源内容不变。",
       "verification": "needs-review",
