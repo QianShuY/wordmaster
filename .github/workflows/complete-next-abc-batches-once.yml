@@ -1,0 +1,68 @@
+name: Finish next two A/B bilingual draft batches (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/complete-next-abc-batches-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finish_abc_200:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out content handoff without changing main
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Set up Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify code, old data and candidate previews before writing
+        run: |
+          node --check scripts/complete-next-abc-batches.js
+          npm test
+          node scripts/complete-next-abc-batches.js
+      - name: Create two 100-row review-only result sets
+        run: node scripts/complete-next-abc-batches.js --apply
+      - name: Test committed-shape results and source identities
+        run: |
+          node --test test/abc-next-completion.test.js
+          node scripts/plan-next-model-review.js
+          node scripts/audit-model-evidence.js
+      - name: Commit only the two result and progress files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-task-results/worker-A/cet4-023/result.json
+          git add -- docs/model-task-results/worker-B/npee-044/result.json
+          git add -- docs/model-task-results/worker-A/progress.json
+          git add -- docs/model-task-results/worker-B/progress.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "Already committed."
+            exit 0
+          fi
+          count="$(printf '%s\n' "$staged" | wc -l)"
+          if [ "$count" -ne 4 ]; then
+            echo "Unexpected stage count: $count" >&2
+            exit 1
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/cet4-023/result.json|docs/model-task-results/worker-B/npee-044/result.json|docs/model-task-results/worker-A/progress.json|docs/model-task-results/worker-B/progress.json) ;;
+              *) echo "Unexpected modified path: $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content(ABC): complete next 200 CET4/NPEE bilingual proposals without approvals"
+          git push origin HEAD:feat/moci-web-handoff-20261016
