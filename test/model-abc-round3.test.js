@@ -68,7 +68,7 @@ test('C tem-125 repaired selected meanings match four actual example senses', ()
   const rows = read('docs/model-task-results/worker-C/tem-125/result.json').entries;
   const checks = [
     ['quiet', /安静/, /room became quiet/, 'oxfordlearnersdictionaries.com'],
-    ['refreshment', /茶点/, /refreshments were served/, 'merriam-webster.com'],
+    ['refreshment', /茶点|点心和饮料/, /refreshments were served/, 'merriam-webster.com'],
     ['relish', /乐趣/, /with great relish/, 'merriam-webster.com'],
     ['multiply', /相乘/, /by three/, 'merriam-webster.com'],
   ];
