@@ -432,8 +432,6 @@ const DesktopHub = {
 
     const book = chosenBook;
     $('#hubLearnedWords').href=`#/book/${book.id}?status=learned`;
-    $('#hubUnfinishedWords').href=`#/book/${book.id}?status=unfinished`;
-    $('#hubUnfinishedWords').textContent=`未完成巩固 ${book.unfinished_count||0} 词 ↗`;
     const plan = book.plan || {};
     const total = Math.max(0, Number(book.word_count) || 0);
     const remaining = Math.max(0, Number(plan.remaining_new) || 0);
@@ -1153,13 +1151,14 @@ const Study = {
         reviewTotal: payload.review.length,
         learnTotal: payload.learn.length,
         learnGroupSize: 10, learnGroupStart: 0,
+        resumingUnfinished: Boolean(payload.unfinished_total),
         completed: { review: 0, learn: 0, choice: 0, spelling: 0 }, deferred: [],
         reviewHasMore: payload.review_has_more,
         learnHasMore: payload.learn_has_more,
       };
       this.mode = payload.review.length ? 'meaning' : 'learn';
       if(payload.unfinished_total)toast(`先接着巩固之前没完成的 ${payload.unfinished_total} 个词，已学记录都在。`);
-      $('#studyModeTag').textContent = payload.review.length ? '今日任务 · 到期复习' : '第一轮 · 认识新词';
+      $('#studyModeTag').textContent = payload.review.length ? (payload.unfinished_total?'接续上次 · 未完成巩固':'今日任务 · 到期复习') : '第一轮 · 认识新词';
       if (!payload.review.length && !payload.learn.length) {
         $('#studyStage').innerHTML = `<div class="quiz-card">
           <p class="quiz-kicker">TODAY COMPLETE</p>
@@ -1191,6 +1190,7 @@ const Study = {
         learnTotal: this.todayFlow.learnTotal,
         learnGroupSize: this.todayFlow.learnGroupSize,
         learnGroupStart: this.todayFlow.learnGroupStart,
+        resumingUnfinished: this.todayFlow.resumingUnfinished,
         completed: { ...this.todayFlow.completed },
         reviewHasMore: this.todayFlow.reviewHasMore,
         learnHasMore: this.todayFlow.learnHasMore,
@@ -1268,7 +1268,7 @@ const Study = {
       this[field] = new Set(snapshot[field].map(String));
     }
     $('#studyModeTag').textContent = this.mode === 'meaning'
-      ? (snapshot.stage === 'choice' ? '接着学 · 选择巩固' : '接着学 · 到期复习') : this.mode === 'learn'
+      ? (snapshot.stage === 'choice' ? '接着学 · 选择巩固' : snapshot.flow.resumingUnfinished?'接续上次 · 未完成巩固':'接着学 · 到期复习') : this.mode === 'learn'
         ? '接着学 · 新词学习' : '接着学 · 拼写回忆';
     $('#studyStage').classList.toggle('dictionary-stage', this.mode === 'learn');
     this.updateProgress();
@@ -1289,8 +1289,8 @@ const Study = {
     const completed = { ...flow.completed };
     if (flow.stage && this.total) completed[flow.stage] = Math.max(completed[flow.stage] || 0, DesktopCheckpoint.stageOffset(flow,flow.stage)+this.done);
     const steps = [
-      { id: 'review', title: '旧词 · 回忆词义', target: flow.reviewTotal },
-      { id: 'review-spelling', title: '旧词 · 拼写回忆', target: Domain.spellingWords(flow.review).filter(word => !(flow.deferred || []).some(item => item.id === word.id)).length },
+      { id: 'review', title: flow.resumingUnfinished?'接续巩固 · 回忆词义':'旧词 · 回忆词义', target: flow.reviewTotal },
+      { id: 'review-spelling', title: flow.resumingUnfinished?'接续巩固 · 拼写回忆':'旧词 · 拼写回忆', target: Domain.spellingWords(flow.review).filter(word => !(flow.deferred || []).some(item => item.id === word.id)).length },
       { id: 'learn', title: '学习新词', target: flow.learnTotal },
       { id: 'choice', title: '选择巩固', target: flow.learnTotal },
       { id: 'spelling', title: '拼写回忆', target: Domain.spellingWords(flow.learn).filter(word => !(flow.deferred || []).some(item => item.id === word.id)).length },
@@ -1325,7 +1325,7 @@ const Study = {
     this.todayFlow.stage = stage;
     if (stage === 'review-spelling') {
       this.mode = 'spelling';
-      $('#studyModeTag').textContent = '旧词复习 · 看中文拼写';
+      $('#studyModeTag').textContent = this.todayFlow.resumingUnfinished?'接续巩固 · 看中文拼写':'旧词复习 · 看中文拼写';
       this.begin(Domain.spellingWords(this.todayFlow.review).filter(word => !(this.todayFlow.deferred || []).some(item => item.id === word.id)).map(word => ({...word,is_new:0})));
     } else if (stage === 'learn') {
       this.mode = 'learn';

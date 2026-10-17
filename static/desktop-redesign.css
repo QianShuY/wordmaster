@@ -204,6 +204,10 @@ html:not(.is-android-app) .today-page > .first-run-guide {
   cursor: pointer;
 }
 .hub-mistakes span { margin-left: 8px; }
+.hub-learning-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin: 12px 0 0; padding-top: 13px; border-top: 1px solid rgba(249,244,231,.2); }
+.hub-learning-links a, .hub-learning-links a:visited { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 7px 10px; border: 1px solid transparent; border-radius: 3px; color: #f3e8d2; font: inherit; font-size: 12px; line-height: 1.5; text-decoration: none; }
+.hub-learning-links a:hover { background: rgba(249,244,231,.09); border-color: rgba(249,244,231,.22); color: #fffaf0; }
+.hub-learning-links a:focus-visible { outline: 2px solid #f3d9a3; outline-offset: 3px; }
 .hub-action-help { margin-top: auto; padding-top: 15px; color: rgba(249,244,231,.61); font-size: 11px; line-height: 1.6; text-align: center; }
 
 /* Main editor: generous canvas and immediate, honest pacing feedback. */
