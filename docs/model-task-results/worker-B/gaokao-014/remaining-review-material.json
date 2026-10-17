@@ -1,0 +1,5648 @@
+{
+  "task_id": "gaokao-014",
+  "input_sha256": "e48fdf7d8cb9fca17ebb7385cf7fa040ff9c2e515107791eaa66d0138c903336",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": null,
+      "original": null,
+      "source_entry": "reward**",
+      "headword": "reward",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 51,
+          "word": "reward",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(for)报酬,赏金 v.(for)酬劳;酬谢",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "something that you are given because you have done something good, worked hard, etc."
+          },
+          "example": "The volunteers received a reward for their efforts.",
+          "translation": "志愿者们因付出努力而获得了奖励。",
+          "source_file": "npee.txt",
+          "source_line": 4135,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 42,
+          "word": "reward",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 报酬，报答 2. 赏金，酬金 v. 给(某人)报酬或奖赏",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to give something to someone because they have done something good"
+          },
+          "example": "The school will reward students who improve their reading.",
+          "translation": "学校将奖励阅读能力有所提高的学生。",
+          "source_file": "tem.txt",
+          "source_line": 9631,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": null,
+      "original": null,
+      "source_entry": "rhyme**",
+      "headword": "rhyme",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 49,
+          "word": "rhyme",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "韵，韵脚，同韵词，押韵词 v. 1. 押韵 2. 使押韵",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a short poem or song with lines that end in the same sound"
+          },
+          "example": "The children learned a rhyme about the days of the week.",
+          "translation": "孩子们学了一首关于星期几的押韵儿歌。",
+          "source_file": "tem.txt",
+          "source_line": 9638,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": null,
+      "original": null,
+      "source_entry": "rhythm*",
+      "headword": "rhythm",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 52,
+          "word": "rhythm",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "节奏,韵律",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a strong regular repeated pattern of sounds or movements"
+          },
+          "example": "The song has a strong rhythm.",
+          "translation": "这首歌的节奏感很强。",
+          "source_file": "npee.txt",
+          "source_line": 4136,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 50,
+          "word": "rhythm",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 节奏，韵律 2. 有规律的重复",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a regular pattern of sounds or movements"
+          },
+          "example": "The dancers moved in time with the rhythm of the drums.",
+          "translation": "舞者们跟着鼓点的节奏移动。",
+          "source_file": "tem.txt",
+          "source_line": 9639,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": null,
+      "original": null,
+      "source_entry": "rice",
+      "headword": "rice",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 55,
+          "word": "rice",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "稻,米",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a type of grain that is grown in warm wet areas and is used for food"
+          },
+          "example": "Rice is a staple food in many countries.",
+          "translation": "在许多国家，米饭是主食。",
+          "source_file": "npee.txt",
+          "source_line": 4139,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 56,
+          "word": "rice",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "稻，米，米饭",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the small white or brown seeds of a plant eaten as food"
+          },
+          "example": "Rice is the main food in many parts of the world.",
+          "translation": "大米是世界许多地区的主食。",
+          "source_file": "tem.txt",
+          "source_line": 9645,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 4,
+      "identity": null,
+      "original": null,
+      "source_entry": "rich",
+      "headword": "rich",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 56,
+          "word": "rich",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "富的,有钱的;富饶的;(in)充足的,丰富的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "containing or providing a large supply of something"
+          },
+          "example": "The soil is rich in minerals.",
+          "translation": "这种土壤富含矿物质。",
+          "source_file": "npee.txt",
+          "source_line": 4140,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 5,
+      "identity": null,
+      "original": null,
+      "source_entry": "riddle**",
+      "headword": "riddle",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 58,
+          "word": "riddle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "谜,谜语",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a question that is difficult to understand, and that has a surprising answer, that you ask somebody as a game"
+          },
+          "example": "The children tried to solve the riddle.",
+          "translation": "孩子们试着解开这个谜语。",
+          "source_file": "npee.txt",
+          "source_line": 4142,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 62,
+          "word": "riddle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "谜，谜语",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a question or statement that is difficult to understand but has a clever answer"
+          },
+          "example": "The children solved a riddle about a key.",
+          "translation": "孩子们解开了一个关于钥匙的谜语。",
+          "source_file": "tem.txt",
+          "source_line": 9651,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 6,
+      "identity": null,
+      "original": null,
+      "source_entry": "ride",
+      "headword": "ride",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 63,
+          "word": "ride",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "骑(马、自行  车、摩托车等) ||  ride rough-shod over粗暴地对待，欺凌 n. (骑牲口或乘车等的)旅游，旅程",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to sit on and control a bicycle, horse, or similar vehicle"
+          },
+          "example": "She learned to ride a bicycle when she was six.",
+          "translation": "她六岁时学会了骑自行车。",
+          "source_file": "tem.txt",
+          "source_line": 9652,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": null,
+      "original": null,
+      "source_entry": "right",
+      "headword": "right",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 63,
+          "word": "right",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "右的,正确的 n.右,权利ad.在右边,正确地",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "on or towards the side of your body that is to the east when you are facing north"
+          },
+          "example": "Turn right at the next street.",
+          "translation": "在下一条街向右转。",
+          "source_file": "npee.txt",
+          "source_line": 4147,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": null,
+      "original": null,
+      "source_entry": "rigid**",
+      "headword": "rigid",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 64,
+          "word": "rigid",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "刚性的;刻板的;严厉的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "that cannot be changed or adapted"
+          },
+          "example": "The rules are too rigid for a small team.",
+          "translation": "这套规则对小团队而言过于僵化。",
+          "source_file": "npee.txt",
+          "source_line": 4148,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 78,
+          "word": "rigid",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 僵硬的，坚挺的 2. 严厉的，刻板的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "stiff and not able to bend or move easily"
+          },
+          "example": "The frame is rigid and will not bend easily.",
+          "translation": "这个框架很坚硬，不容易弯曲。",
+          "source_file": "tem.txt",
+          "source_line": 9667,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": null,
+      "original": null,
+      "source_entry": "ring",
+      "headword": "ring",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 67,
+          "word": "ring",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "戒指;环;铃声;(打)电话 v.按(铃),敲(钟)",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a piece of jewellery that you wear on your finger"
+          },
+          "example": "She wore a silver ring on her finger.",
+          "translation": "她手指上戴着一枚银戒指。",
+          "source_file": "npee.txt",
+          "source_line": 4151,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 10,
+      "identity": null,
+      "original": null,
+      "source_entry": "ripe**",
+      "headword": "ripe",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 70,
+          "word": "ripe",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "熟的,成熟的;(for)时机成熟的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "(of fruit or crops) fully grown and ready to be eaten"
+          },
+          "example": "The peaches are ripe and ready to eat.",
+          "translation": "桃子熟了，可以吃了。",
+          "source_file": "npee.txt",
+          "source_line": 4154,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 88,
+          "word": "ripe",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 熟的，成熟的，成熟的 2. 时机成熟的，准备好的 3. 成年的，年高而老练的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "to become ripe"
+          },
+          "example": "The tomatoes will ripen in the sun.",
+          "translation": "西红柿会在阳光下成熟。",
+          "source_file": "tem.txt",
+          "source_line": 9677,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": null,
+      "original": null,
+      "source_entry": "rise",
+      "headword": "rise",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 71,
+          "word": "rise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "升起;起立;上涨;起义 n.上涨,增高;起源",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to come or go upwards"
+          },
+          "example": "The sun rises over the hills each morning.",
+          "translation": "太阳每天早晨从山后升起。",
+          "source_file": "npee.txt",
+          "source_line": 4155,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 92,
+          "word": "rise",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (数量、价格等)增加，升高，增长 2. 兴起，增强 3. (太阳的)升起 || give  rise to引起，使发生 v. 1. 升起，上升，升高 2. 起立，站起 3. 突出，高出 4. 起来反抗 || rise up升起",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the possibility that something bad may happen"
+          },
+          "example": "There is a risk of ice on the roads tonight.",
+          "translation": "今晚道路可能结冰，有一定危险。",
+          "source_file": "tem.txt",
+          "source_line": 9681,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": null,
+      "original": null,
+      "source_entry": "risk",
+      "headword": "risk",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 72,
+          "word": "risk",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "冒…的危险 n.冒险;风险",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to put something valuable or important in a dangerous situation"
+          },
+          "example": "Do not risk leaving valuables in the car.",
+          "translation": "不要冒险把贵重物品留在车里。",
+          "source_file": "npee.txt",
+          "source_line": 4156,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 93,
+          "word": "risk",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "风险，危险 v. 1. 使冒危险 2. 冒…之险",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "involving the possibility of danger or failure"
+          },
+          "example": "It is risky to leave the door unlocked.",
+          "translation": "不锁门是有风险的。",
+          "source_file": "tem.txt",
+          "source_line": 9682,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": null,
+      "original": null,
+      "source_entry": "rival**",
+      "headword": "rival",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 74,
+          "word": "rival",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "竞争者,对手 v.竞争,对抗 a.竞争的",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person, company or thing that competes with another in sport, business, etc."
+          },
+          "example": "The two rivals met again in the final.",
+          "translation": "两位对手在决赛中再次相遇。",
+          "source_file": "npee.txt",
+          "source_line": 4158,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 14,
+      "identity": null,
+      "original": null,
+      "source_entry": "river",
+      "headword": "river",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 24,
+          "word": "river",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "江，河",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large natural flow of water"
+          },
+          "example": "The river flows through the center of the town.",
+          "translation": "这条河流穿过小镇的中心。",
+          "source_file": "tem.txt",
+          "source_line": 9688,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": null,
+      "original": null,
+      "source_entry": "road",
+      "headword": "road",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 75,
+          "word": "road",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "路,道路,途径",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a hard surface built for vehicles to travel on"
+          },
+          "example": "The road to the village follows the river.",
+          "translation": "通往村庄的道路沿着河流延伸。",
+          "source_file": "npee.txt",
+          "source_line": 4160,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 0,
+          "word": "road",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 路，公路，道路 2. 途径，方法 || on the road在旅途中",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a hard surface built for vehicles to travel on"
+          },
+          "example": "The road winds through the forest.",
+          "translation": "这条路蜿蜒穿过森林。",
+          "source_file": "tem.txt",
+          "source_line": 9691,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": null,
+      "original": null,
+      "source_entry": "roast**",
+      "headword": "roast",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 77,
+          "word": "roast",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "烤,炙,烘",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to cook food, especially meat, in an oven or over a fire"
+          },
+          "example": "Roast the vegetables until they are tender.",
+          "translation": "把蔬菜烤至软嫩。",
+          "source_file": "npee.txt",
+          "source_line": 4162,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 5,
+          "word": "roast",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 烤，炙 2. 加热，烘  n. 一大块烤肉",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to cook food in an oven or over a fire"
+          },
+          "example": "They roasted vegetables with olive oil and herbs.",
+          "translation": "他们用橄榄油和香草烤蔬菜。",
+          "source_file": "tem.txt",
+          "source_line": 9696,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": null,
+      "original": null,
+      "source_entry": "robot",
+      "headword": "robot",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 80,
+          "word": "robot",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "机器人,自动机械",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a machine that can perform a complicated series of tasks automatically"
+          },
+          "example": "The factory uses a robot to move heavy boxes.",
+          "translation": "工厂使用机器人搬运沉重的箱子。",
+          "source_file": "npee.txt",
+          "source_line": 4165,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 18,
+      "identity": null,
+      "original": null,
+      "source_entry": "rock",
+      "headword": "rock",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 82,
+          "word": "rock",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "岩石,石块 v.摇,摇动",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the hard solid material that forms part of the surface of the earth"
+          },
+          "example": "A large rock blocked the path.",
+          "translation": "一块大石头挡住了小路。",
+          "source_file": "npee.txt",
+          "source_line": 4167,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": null,
+      "original": null,
+      "source_entry": "rocket",
+      "headword": "rocket",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 83,
+          "word": "rocket",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "火箭",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a spacecraft without people in it that is shaped like a tube"
+          },
+          "example": "The rocket carried a weather satellite into space.",
+          "translation": "火箭把一颗气象卫星送入太空。",
+          "source_file": "npee.txt",
+          "source_line": 4168,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 16,
+          "word": "rocket",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "火箭 v. 突然急速上升，火箭式上升",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a vehicle that travels in space"
+          },
+          "example": "The rocket lifted off just after sunrise.",
+          "translation": "火箭在日出后不久升空。",
+          "source_file": "tem.txt",
+          "source_line": 9707,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": null,
+      "original": null,
+      "source_entry": "role",
+      "headword": "role",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 85,
+          "word": "role",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "角色,作用,任务,职责",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the function or position that somebody has or is expected to have in an organization, in society or in a relationship"
+          },
+          "example": "She played an important role in the project.",
+          "translation": "她在这个项目中发挥了重要作用。",
+          "source_file": "npee.txt",
+          "source_line": 4170,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 22,
+          "word": "role",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 角色 2. 作用，任务",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the character played by an actor in a film or play"
+          },
+          "example": "She played the role of a detective in the school production.",
+          "translation": "她在学校演出中扮演一名侦探。",
+          "source_file": "tem.txt",
+          "source_line": 9713,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 21,
+      "identity": null,
+      "original": null,
+      "source_entry": "roll*",
+      "headword": "roll",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 86,
+          "word": "roll",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "滚动;使摇摆;卷,卷起 n.卷,卷形物;名单",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to move or make something move by turning over and over"
+          },
+          "example": "The ball rolled under the table.",
+          "translation": "球滚到了桌子下面。",
+          "source_file": "npee.txt",
+          "source_line": 4171,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 23,
+          "word": "roll",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 卷形物，一卷 2. 名单，名簿 3. 滚动，摇摆 v. 1. (使)滚动，转动 2. 卷，搓，卷制(某物) 3. (使)摇晃或摇动，摇晃而行 4. (指眼睛) (使)左右转动，溜转 || roll over滚过，压过",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a long piece of something rolled up or wound around itself"
+          },
+          "example": "The paper came in a large roll.",
+          "translation": "这种纸以大卷形式供应。",
+          "source_file": "tem.txt",
+          "source_line": 9714,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 22,
+      "identity": null,
+      "original": null,
+      "source_entry": "romantic*",
+      "headword": "romantic",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 88,
+          "word": "romantic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "浪漫的,传奇式的;不切实际的,好幻想的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "connected with love or a sexual relationship"
+          },
+          "example": "They planned a romantic dinner by the sea.",
+          "translation": "他们计划在海边共进浪漫晚餐。",
+          "source_file": "npee.txt",
+          "source_line": 4173,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 29,
+          "word": "romantic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 幻想的 2. 传奇的，浪漫的 3. 不切实际的，虚构的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "showing feelings of love"
+          },
+          "example": "He planned a romantic weekend by the sea.",
+          "translation": "他计划在海边度过一个浪漫的周末。",
+          "source_file": "tem.txt",
+          "source_line": 9720,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": null,
+      "original": null,
+      "source_entry": "roof**",
+      "headword": "roof",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 89,
+          "word": "roof",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "屋顶,顶",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the structure that covers or forms the top of a building or vehicle"
+          },
+          "example": "The workers repaired the roof after the storm.",
+          "translation": "暴风雨过后，工人们修好了屋顶。",
+          "source_file": "npee.txt",
+          "source_line": 4174,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 32,
+          "word": "roof",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (建筑物，车辆等的)顶 2. 最高点 v. 给…盖顶，为…之顶",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the outside covering on the top of a building"
+          },
+          "example": "The roof was covered with red tiles.",
+          "translation": "屋顶铺着红瓦。",
+          "source_file": "tem.txt",
+          "source_line": 9723,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": null,
+      "original": null,
+      "source_entry": "room",
+      "headword": "room",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 90,
+          "word": "room",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "房间,室,空间,地方;余地",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the space inside a building or a room that can be used for a particular purpose"
+          },
+          "example": "There is room for one more chair.",
+          "translation": "还可以再放一把椅子。",
+          "source_file": "npee.txt",
+          "source_line": 4175,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 34,
+          "word": "room",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 室，房间 2. 空间，空位 3. 余地，机会 || make room for sb (sth)给某人(某物)让出地方",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "space that is available for someone or something"
+          },
+          "example": "There is not enough room for another chair.",
+          "translation": "这里没有足够的空间再放一把椅子。",
+          "source_file": "tem.txt",
+          "source_line": 9725,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 25,
+      "identity": null,
+      "original": null,
+      "source_entry": "root**",
+      "headword": "root",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 91,
+          "word": "root",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "根,根部;根本,根源 v.(使)生根,(使)扎根",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the part of a plant that grows under the ground and takes in water and minerals"
+          },
+          "example": "The tree's roots spread beneath the path.",
+          "translation": "这棵树的根在小路下方蔓延。",
+          "source_file": "npee.txt",
+          "source_line": 4176,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 37,
+          "word": "root",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 植物的根，根茎 2. 根部 3. 根源，起因，原因 v. 1. (使)生根，(使)扎根 2. 根绝，根除",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the part of a plant that grows under the ground"
+          },
+          "example": "The tree’s roots reached deep into the soil.",
+          "translation": "这棵树的根深深扎进土壤里。",
+          "source_file": "tem.txt",
+          "source_line": 9728,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": null,
+      "original": null,
+      "source_entry": "rope",
+      "headword": "rope",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 92,
+          "word": "rope",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "绳,索",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "very strong thick string made by twisting thinner strings, wires, etc. together"
+          },
+          "example": "They tied the boxes together with a rope.",
+          "translation": "他们用绳子把箱子捆在一起。",
+          "source_file": "npee.txt",
+          "source_line": 4177,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 38,
+          "word": "rope",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "绳索，粗绳",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a strong thick cord made by twisting together smaller strands"
+          },
+          "example": "They secured the boat with a thick rope.",
+          "translation": "他们用一根粗绳把船固定住。",
+          "source_file": "tem.txt",
+          "source_line": 9729,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": null,
+      "original": null,
+      "source_entry": "rose",
+      "headword": "rose",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 93,
+          "word": "rose",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "玫瑰,蔷薇",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a flower with a sweet smell that grows on a bush with thorns"
+          },
+          "example": "A red rose grew beside the gate.",
+          "translation": "大门旁长着一朵红玫瑰。",
+          "source_file": "npee.txt",
+          "source_line": 4178,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 39,
+          "word": "rose",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 蔷薇花，玫瑰花 2. 玫瑰色，玫瑰红",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a bush or flower with thorns and large fragrant blooms"
+          },
+          "example": "A red rose bloomed beside the gate.",
+          "translation": "大门旁开着一朵红玫瑰。",
+          "source_file": "tem.txt",
+          "source_line": 9730,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": null,
+      "original": null,
+      "source_entry": "rough**",
+      "headword": "rough",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 98,
+          "word": "rough",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "粗糙的;粗略的,大致的;粗野的,粗暴的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "not exact; not including all details"
+          },
+          "example": "We made a rough plan for the weekend.",
+          "translation": "我们为周末做了一个粗略计划。",
+          "source_file": "npee.txt",
+          "source_line": 4183,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 51,
+          "word": "rough",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 表面粗糙的，崎岖不平的，2. 粗暴的，粗野的 3. 约略的，概略的 4. 艰难的，困难的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not smooth or even"
+          },
+          "example": "The path was rough and difficult to walk on.",
+          "translation": "这条小路崎岖难行。",
+          "source_file": "tem.txt",
+          "source_line": 9742,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 29,
+      "identity": null,
+      "original": null,
+      "source_entry": "round",
+      "headword": "round",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 99,
+          "word": "round",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "圆的prep.围绕ad.在周围v.绕行n.(一)回合",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "shaped like a circle or a ball"
+          },
+          "example": "They sat around a round table.",
+          "translation": "他们围坐在一张圆桌旁。",
+          "source_file": "npee.txt",
+          "source_line": 4184,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 55,
+          "word": "round",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 圆的，球形的 2. 旋转的，回旋的 3. 整个的，完全的  adv. 1. 回转地，旋转地 2. 围绕，环绕 3. 朝反方向，转过来 4. 往各处 || all round从头到尾循环一周地，处处 prep. 1. 围绕 2. 在…的周围 3. 在…各处，向…四周 4. 绕过 5. 在…的附近 n. 1. 一圈，一周 2. 一局，一回合 v. 1. 绕过，环绕而行 2. 使成圆形",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "shaped like a circle or sphere"
+          },
+          "example": "The children sat around a round table.",
+          "translation": "孩子们围坐在一张圆桌旁。",
+          "source_file": "tem.txt",
+          "source_line": 9746,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": null,
+      "original": null,
+      "source_entry": "route**",
+      "headword": "route",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 2,
+          "word": "route",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "路线,路程",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a large bag with no handles, made of strong rough material or strong paper or plastic"
+          },
+          "example": "They filled a sack with potatoes.",
+          "translation": "他们把一袋袋土豆装进麻袋。",
+          "source_file": "npee.txt",
+          "source_line": 4187,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 60,
+          "word": "route",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "路线，路程",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a way from one place to another"
+          },
+          "example": "The bus followed a route through the city centre.",
+          "translation": "公交车沿着一条路线穿过市中心。",
+          "source_file": "tem.txt",
+          "source_line": 9751,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 31,
+      "identity": null,
+      "original": null,
+      "source_entry": "routine**",
+      "headword": "routine",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 61,
+          "word": "routine",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 常规，惯例 2. 例行公事，刻板的工作  adj. 1. 例行的，惯常的 2. 枯燥的，平淡的",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the usual series of things that you do regularly"
+          },
+          "example": "He follows the same morning routine every day.",
+          "translation": "他每天都遵循同样的晨间惯例。",
+          "source_file": "tem.txt",
+          "source_line": 9752,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": null,
+      "original": null,
+      "source_entry": "row",
+      "headword": "row",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 4,
+          "word": "row",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(一)排,(一)行;吵嚷 v.划(船等),荡桨",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of giving up something that is valuable or important to you in order to help somebody/something else"
+          },
+          "example": "The team made sacrifices to finish the project on time.",
+          "translation": "团队作出了牺牲以按时完成项目。",
+          "source_file": "npee.txt",
+          "source_line": 4189,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 64,
+          "word": "row",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "一行，一列，一排 || in a row连续，一连串 v. 划(船)，荡桨",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a line of people or things"
+          },
+          "example": "The children stood in a row for the class photo.",
+          "translation": "孩子们排成一排拍班级合照。",
+          "source_file": "tem.txt",
+          "source_line": 9755,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 33,
+      "identity": null,
+      "original": null,
+      "source_entry": "royal**",
+      "headword": "royal",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 5,
+          "word": "royal",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "王室的,皇家的;第一流的,高贵的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "unhappy or showing unhappiness"
+          },
+          "example": "She felt sad when her friend moved away.",
+          "translation": "朋友搬走时，她感到难过。",
+          "source_file": "npee.txt",
+          "source_line": 4190,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 67,
+          "word": "royal",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 王室的，皇家的 2. 威严的，高贵的，盛大的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "connected with a king or queen"
+          },
+          "example": "The royal family attended the ceremony.",
+          "translation": "王室成员出席了仪式。",
+          "source_file": "tem.txt",
+          "source_line": 9758,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": null,
+      "original": null,
+      "source_entry": "rubber**",
+      "headword": "rubber",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 71,
+          "word": "rubber",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 橡胶 2. 橡皮",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a strong substance made from the liquid of certain trees"
+          },
+          "example": "The gloves are made of natural rubber.",
+          "translation": "这些手套由天然橡胶制成。",
+          "source_file": "tem.txt",
+          "source_line": 9762,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": null,
+      "original": null,
+      "source_entry": "rubbish",
+      "headword": "rubbish",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 9,
+          "word": "rubbish",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "垃圾,废物;废话",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the state of being safe and protected from danger or harm"
+          },
+          "example": "The company takes safety seriously.",
+          "translation": "这家公司十分重视安全。",
+          "source_file": "npee.txt",
+          "source_line": 4194,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 72,
+          "word": "rubbish",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 废物，垃圾 2. 废话，胡说八道",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "things that are no longer wanted and have been thrown away"
+          },
+          "example": "The bin was full of rubbish after the picnic.",
+          "translation": "野餐后垃圾桶里装满了垃圾。",
+          "source_file": "tem.txt",
+          "source_line": 9763,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": null,
+      "original": null,
+      "source_entry": "rude**",
+      "headword": "rude",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 79,
+          "word": "rude",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 粗鲁的，粗野的 2. 狂暴的，骇人听闻的 3. 原始的，粗鄙的 4. 粗制的，简单的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not polite; offensive"
+          },
+          "example": "It was rude to interrupt while she was speaking.",
+          "translation": "她讲话时打断她是不礼貌的。",
+          "source_file": "tem.txt",
+          "source_line": 9770,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 37,
+      "identity": null,
+      "original": null,
+      "source_entry": "rugby**",
+      "headword": "rugby",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 87,
+          "word": "rugby",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(英式)橄榄球(运动)(= rugger)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a game played by two teams who carry or kick an oval ball"
+          },
+          "example": "They watched a rugby match on television.",
+          "translation": "他们在电视上观看了一场橄榄球比赛。",
+          "source_file": "tem.txt",
+          "source_line": 9778,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": null,
+      "original": null,
+      "source_entry": "ruin**",
+      "headword": "ruin",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 90,
+          "word": "ruin",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 毁灭，破坏  2. 切 l)废墟 3. 毁灭、败坏的原因 v. 1. 使毁灭，使败坏 2. 使破产",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the state of being damaged or destroyed"
+          },
+          "example": "The building fell into ruin after years of neglect.",
+          "translation": "这栋建筑多年失修后变成了废墟。",
+          "source_file": "tem.txt",
+          "source_line": 9781,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 39,
+      "identity": null,
+      "original": null,
+      "source_entry": "rule",
+      "headword": "rule",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 92,
+          "word": "rule",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 规则，法规 2. 惯常的事，习惯 3. 统治，管理 || as a rule通常，多半 v. 1. 统治，管理 2. 裁决",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an official instruction about what is allowed or not allowed"
+          },
+          "example": "The school introduced a new rule about mobile phones.",
+          "translation": "学校出台了一条关于手机的新规定。",
+          "source_file": "tem.txt",
+          "source_line": 9783,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 40,
+      "identity": null,
+      "original": null,
+      "source_entry": "ruler",
+      "headword": "ruler",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 15,
+          "word": "ruler",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "统治者,支配者;尺,直尺",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "money that employees receive for doing their job, especially professional employees or people working in an office, usually paid every month"
+          },
+          "example": "The position offers a competitive salary.",
+          "translation": "这个职位提供有竞争力的薪水。",
+          "source_file": "npee.txt",
+          "source_line": 4200,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 93,
+          "word": "ruler",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 统治者 2. 尺，界尺",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a straight strip of wood or plastic used for measuring"
+          },
+          "example": "The ruler marked the length of the table.",
+          "translation": "尺子标出了桌子的长度。",
+          "source_file": "tem.txt",
+          "source_line": 9784,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": null,
+      "original": null,
+      "source_entry": "run",
+      "headword": "run",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-086",
+          "row_index": 98,
+          "word": "run",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 跑，奔 2. 逃，逃走 3. (使)运转、转动 4. (使)迅速移动 5. 管理，经营 6. 延伸，扩展，经过 7. 竞选 || run across偶然碰见，邂逅 [run after①追②追求] run a-way逃跑 [run away with卷逃，拐走，偷] run down①撞到② 耗尽，变弱 [run into①偶遇 ②陷入③到达] run off印刷，复印 [run on①继续谈②流逝] run out用光，耗尽 [run o-ver①(车辆等)辗过②匆匆读一遍] run up to达及(某数) n. 1. 跑，跑步 2. 远足，游览 3. 行程，航线 4. 一段时间，连续 || in the long run最终地，终极地",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to manage or operate a business"
+          },
+          "example": "They run a small bakery on the high street.",
+          "translation": "他们在商业街经营一家小面包店。",
+          "source_file": "tem.txt",
+          "source_line": 9790,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 42,
+      "identity": null,
+      "original": null,
+      "source_entry": "rural**",
+      "headword": "rural",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 5,
+          "word": "rural",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "乡村的，有乡村特色的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "relating to the countryside rather than towns or cities"
+          },
+          "example": "They bought a small house in a rural village.",
+          "translation": "他们在一个乡村买了一栋小房子。",
+          "source_file": "tem.txt",
+          "source_line": 9797,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": null,
+      "original": null,
+      "source_entry": "rush",
+      "headword": "rush",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 19,
+          "word": "rush",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)冲;奔n.冲,急速行进 a.(交通)繁忙的",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to show respect for somebody/something by raising your hand to your head"
+          },
+          "example": "The guards saluted the visiting officer.",
+          "translation": "卫兵向来访的军官敬礼。",
+          "source_file": "npee.txt",
+          "source_line": 4204,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 6,
+          "word": "rush",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 冲，突进 2. 匆忙，急忙 3. 急需 4. 高峰期，热潮  v. 1. 冲，奔，使急行 2. 匆促处理，匆忙地做 3. 突发，突现",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a sudden quick movement toward something"
+          },
+          "example": "There was a rush of people toward the exit.",
+          "translation": "人群一窝蜂地涌向出口。",
+          "source_file": "tem.txt",
+          "source_line": 9798,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 44,
+      "identity": null,
+      "original": null,
+      "source_entry": "sacrifice**",
+      "headword": "sacrifice",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 24,
+          "word": "sacrifice",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "牺牲,牺牲品;祭品 v.(for,to)牺牲,献出",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of giving up something valuable to help somebody/something else"
+          },
+          "example": "The team made sacrifices to finish the project on time.",
+          "translation": "团队作出了牺牲以按时完成项目。",
+          "source_file": "npee.txt",
+          "source_line": 4209,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 25,
+          "word": "sacrifice",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 供奉，祭祀，祭品 2. 牺牲(品) v. 1. 供奉，祭祀 2. 牺牲",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to give up something important or valuable"
+          },
+          "example": "She sacrificed her free time to help the new students.",
+          "translation": "她牺牲了自己的空闲时间来帮助新生。",
+          "source_file": "tem.txt",
+          "source_line": 9818,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": null,
+      "original": null,
+      "source_entry": "sad",
+      "headword": "sad",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 25,
+          "word": "sad",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "悲哀的,忧愁的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "unhappy or showing unhappiness"
+          },
+          "example": "She felt sad when her friend moved away.",
+          "translation": "朋友搬走时，她感到难过。",
+          "source_file": "npee.txt",
+          "source_line": 4210,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 27,
+          "word": "sad",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 伤心的，悲哀的 2. 糟透的，可叹的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "unhappy or showing unhappiness"
+          },
+          "example": "The sad news made everyone quiet.",
+          "translation": "这个悲伤的消息让所有人都安静了下来。",
+          "source_file": "tem.txt",
+          "source_line": 9820,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": null,
+      "original": null,
+      "source_entry": "safe",
+      "headword": "safe",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 27,
+          "word": "safe",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "安全的,牢靠的;谨慎的,可靠的 n.保险箱",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "protected from any danger, harm or loss"
+          },
+          "example": "Keep your passport in a safe place.",
+          "translation": "把护照放在安全的地方。",
+          "source_file": "npee.txt",
+          "source_line": 4212,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 32,
+          "word": "safe",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 安全的，无危险的 2. 平安的，未受伤害的 3. 保险的，稳妥的 4. 小心的，谨慎的 n. 保险箱",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not in danger or likely to be harmed"
+          },
+          "example": "The children were safe inside the house.",
+          "translation": "孩子们在屋里很安全。",
+          "source_file": "tem.txt",
+          "source_line": 9826,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": null,
+      "original": null,
+      "source_entry": "safety",
+      "headword": "safety",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 29,
+          "word": "safety",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "安全,保险;安全设备,保险装置",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the state of being safe and protected from danger or harm"
+          },
+          "example": "The company takes safety seriously.",
+          "translation": "这家公司十分重视安全。",
+          "source_file": "npee.txt",
+          "source_line": 4214,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 34,
+          "word": "safety",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "安全，平安，稳妥",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the state of being safe from danger or harm"
+          },
+          "example": "The company takes safety seriously at every work site.",
+          "translation": "公司认真对待每个工地的安全问题。",
+          "source_file": "tem.txt",
+          "source_line": 9828,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": null,
+      "original": null,
+      "source_entry": "sail**",
+      "headword": "sail",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 30,
+          "word": "sail",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "帆,航行 v.航行",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a sheet of material fixed to a pole on a boat to catch the wind"
+          },
+          "example": "The boat's sail caught the wind.",
+          "translation": "船帆迎风鼓了起来。",
+          "source_file": "npee.txt",
+          "source_line": 4215,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 40,
+          "word": "sail",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 帆 2. 乘船旅行 3. 帆船 v. 1. 航行，乘船旅行 2. 起航，开船",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large piece of cloth that catches the wind to move a boat"
+          },
+          "example": "The sailors raised the sail when the wind picked up.",
+          "translation": "风力增强时，水手们升起了帆。",
+          "source_file": "tem.txt",
+          "source_line": 9835,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 49,
+      "identity": null,
+      "original": null,
+      "source_entry": "salad",
+      "headword": "salad",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 34,
+          "word": "salad",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "色拉,凉拌菜",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a mixture of raw vegetables, usually including lettuce, eaten cold"
+          },
+          "example": "We ordered a green salad to share.",
+          "translation": "我们点了一份蔬菜沙拉一起吃。",
+          "source_file": "npee.txt",
+          "source_line": 4219,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 45,
+          "word": "salad",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "生菜，色拉",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a mixture of raw vegetables, often served with a dressing"
+          },
+          "example": "We ordered a green salad with our lunch.",
+          "translation": "我们午餐点了一份蔬菜沙拉。",
+          "source_file": "tem.txt",
+          "source_line": 9840,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": null,
+      "original": null,
+      "source_entry": "salary**",
+      "headword": "salary",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 35,
+          "word": "salary",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "薪金,薪水",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "money employees receive for doing their job, usually paid every month"
+          },
+          "example": "The position offers a competitive salary.",
+          "translation": "这个职位提供有竞争力的薪水。",
+          "source_file": "npee.txt",
+          "source_line": 4220,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 46,
+          "word": "salary",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "薪水，薪金，薪俸",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a fixed amount of money paid regularly for work"
+          },
+          "example": "The company pays her a monthly salary.",
+          "translation": "公司每月支付她薪水。",
+          "source_file": "tem.txt",
+          "source_line": 9841,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": null,
+      "original": null,
+      "source_entry": "sale",
+      "headword": "sale",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 36,
+          "word": "sale",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "出售,上市;贱卖,廉价出售;销售额",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an occasion when a shop sells goods at reduced prices"
+          },
+          "example": "The shop has a sale on winter coats.",
+          "translation": "这家商店正在廉价出售冬季外套。",
+          "source_file": "npee.txt",
+          "source_line": 4221,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 47,
+          "word": "sale",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 销售，贩卖 2. 贱卖，廉售 || for sale出售，待售 /on sale降价销售中，大拍卖",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a period when a shop sells goods at lower prices"
+          },
+          "example": "The shop has a winter sale next week.",
+          "translation": "这家商店下周举行冬季促销。",
+          "source_file": "tem.txt",
+          "source_line": 9842,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": null,
+      "original": null,
+      "source_entry": "salesman/saleswoman**",
+      "headword": "salesman",
+      "pdf_page": 119,
+      "handling": "split-headwords",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 37,
+          "word": "salesman",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "售货员,推销员",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a man whose job is to sell a company's goods"
+          },
+          "example": "The salesman explained the different models.",
+          "translation": "售货员介绍了不同型号。",
+          "source_file": "npee.txt",
+          "source_line": 4222,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 51,
+          "word": "salesman",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "店员，售货员",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a man whose job is to sell a company’s products"
+          },
+          "example": "The salesman demonstrated the vacuum cleaner.",
+          "translation": "男售货员演示了吸尘器。",
+          "source_file": "tem.txt",
+          "source_line": 9846,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": null,
+      "original": null,
+      "source_entry": "salesman/saleswoman**",
+      "headword": "saleswoman",
+      "pdf_page": 119,
+      "handling": "split-headwords",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 54,
+      "identity": null,
+      "original": null,
+      "source_entry": "salt",
+      "headword": "salt",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 38,
+          "word": "salt",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "盐,盐,类 v.腌,盐渍",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a white substance that is used to add taste to food"
+          },
+          "example": "Add a pinch of salt to the soup.",
+          "translation": "在汤里加一小撮盐。",
+          "source_file": "npee.txt",
+          "source_line": 4223,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 63,
+          "word": "salt",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 盐，食盐 2. 盐类  v. 加盐于，用盐腌",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a white substance used to flavour food"
+          },
+          "example": "Add a little salt to the soup.",
+          "translation": "往汤里加一点盐。",
+          "source_file": "tem.txt",
+          "source_line": 9858,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 55,
+      "identity": null,
+      "original": null,
+      "source_entry": "salty**",
+      "headword": "salty",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 64,
+          "word": "salty",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 含盐的，咸的 2. (指才智、言语等)活泼的，生动的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "containing or tasting of salt"
+          },
+          "example": "The sauce was too salty for the children.",
+          "translation": "这种酱对孩子们来说太咸了。",
+          "source_file": "tem.txt",
+          "source_line": 9859,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": null,
+      "original": null,
+      "source_entry": "same",
+      "headword": "same",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 41,
+          "word": "same",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "相同的 pron.相同的人(或物) ad.同样地",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "exactly the one or ones referred to or mentioned; not different"
+          },
+          "example": "We took the same train as yesterday.",
+          "translation": "我们乘坐了和昨天同一班火车。",
+          "source_file": "npee.txt",
+          "source_line": 4226,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 71,
+          "word": "same",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "同样的，相同的，同一的 prop. 同样的人或物 adv. 同样地，相同地 || all the same然而，仍然",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not different from something else"
+          },
+          "example": "I bought the same book as my sister.",
+          "translation": "我买了和姐姐一样的书。",
+          "source_file": "tem.txt",
+          "source_line": 9866,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": null,
+      "original": null,
+      "source_entry": "sample**",
+      "headword": "sample",
+      "pdf_page": 119,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 42,
+          "word": "sample",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "样品,实例,标本,抽样检查 v.取样,采样",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a number of people or things taken from a larger group and used in tests"
+          },
+          "example": "The shop gave us a sample of the new tea.",
+          "translation": "商店给了我们一份新茶样品。",
+          "source_file": "npee.txt",
+          "source_line": 4227,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 73,
+          "word": "sample",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "样品，样本，货样 v. 取…的样品，尝试",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small amount of something that is tested or examined"
+          },
+          "example": "The lab tested a sample of the river water.",
+          "translation": "实验室检测了河水样本。",
+          "source_file": "tem.txt",
+          "source_line": 9868,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": null,
+      "original": null,
+      "source_entry": "sand",
+      "headword": "sand",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 44,
+          "word": "sand",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "沙;(pl.)沙滩,沙地",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a substance that consists of very small fine grains of rock"
+          },
+          "example": "The children built a castle in the sand.",
+          "translation": "孩子们用沙子堆了一座城堡。",
+          "source_file": "npee.txt",
+          "source_line": 4229,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 80,
+          "word": "sand",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 沙 2. (pl)沙地",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a substance consisting of very small grains of rock"
+          },
+          "example": "The children played in the sand on the beach.",
+          "translation": "孩子们在海滩的沙地上玩耍。",
+          "source_file": "tem.txt",
+          "source_line": 9875,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 59,
+      "identity": null,
+      "original": null,
+      "source_entry": "sandwich",
+      "headword": "sandwich",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 45,
+          "word": "sandwich",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "三明治,夹肉面包 v.夹入,挤进",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "two slices of bread with meat, cheese, etc. between them"
+          },
+          "example": "I made a cheese sandwich for lunch.",
+          "translation": "我做了一个奶酪三明治当午餐。",
+          "source_file": "npee.txt",
+          "source_line": 4230,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-087",
+          "row_index": 82,
+          "word": "sandwich",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "三明治，夹心面包",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "two pieces of bread with food between them"
+          },
+          "example": "He packed a sandwich for lunch.",
+          "translation": "他为午餐准备了一个三明治。",
+          "source_file": "tem.txt",
+          "source_line": 9878,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 60,
+      "identity": null,
+      "original": null,
+      "source_entry": "satellite**",
+      "headword": "satellite",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 48,
+          "word": "satellite",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "卫星,人造卫星;附属物",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an electronic device sent into space that moves around the earth or another planet"
+          },
+          "example": "The satellite sends images back to Earth.",
+          "translation": "卫星将图像传回地球。",
+          "source_file": "npee.txt",
+          "source_line": 4233,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 4,
+          "word": "satellite",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 卫星 2. 人造卫星",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a machine that is sent into space and moves around a planet"
+          },
+          "example": "The satellite sends weather images back to Earth.",
+          "translation": "卫星把天气图像传回地球。",
+          "source_file": "tem.txt",
+          "source_line": 9900,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 61,
+      "identity": null,
+      "original": null,
+      "source_entry": "satisfaction*",
+      "headword": "satisfaction",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 50,
+          "word": "satisfaction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "满足,满意;乐事,愉快",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the good feeling that you have when you have achieved something"
+          },
+          "example": "She felt satisfaction after finishing the difficult task.",
+          "translation": "完成这项困难任务后，她感到很满足。",
+          "source_file": "npee.txt",
+          "source_line": 4235,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 11,
+          "word": "satisfaction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 满意，满足 2. 令人满意的事物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the good feeling you have when you have achieved something or when something is as you wanted it to be"
+          },
+          "example": "The customer expressed satisfaction with the service.",
+          "translation": "顾客对这项服务表示满意。",
+          "source_file": "tem.txt",
+          "source_line": 9908,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": null,
+      "original": null,
+      "source_entry": "satisfy",
+      "headword": "satisfy",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 52,
+          "word": "satisfy",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "满意,使满意,使相信,说服",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make somebody pleased by doing or giving them what they want"
+          },
+          "example": "The explanation did not satisfy the committee.",
+          "translation": "这个解释没有让委员会满意。",
+          "source_file": "npee.txt",
+          "source_line": 4237,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 14,
+          "word": "satisfy",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 使满意 2. 满足 3. 符合 4. 使确信 || be satisfied with对…满意",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make someone feel pleased by doing or giving them what they want"
+          },
+          "example": "The meal should satisfy everyone’s appetite.",
+          "translation": "这顿饭应该能满足每个人的食欲。",
+          "source_file": "tem.txt",
+          "source_line": 9911,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 63,
+      "identity": null,
+      "original": null,
+      "source_entry": "sauce*",
+      "headword": "sauce",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 55,
+          "word": "sauce",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "酱汁,调味汁",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a thick liquid that is eaten with food to add flavour"
+          },
+          "example": "Serve the vegetables with a tomato sauce.",
+          "translation": "蔬菜搭配番茄酱汁食用。",
+          "source_file": "npee.txt",
+          "source_line": 4240,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 19,
+          "word": "sauce",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "调味汁，酱油",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a thick liquid served with food to add flavour"
+          },
+          "example": "He poured tomato sauce over the pasta.",
+          "translation": "他把番茄酱浇在意大利面上。",
+          "source_file": "tem.txt",
+          "source_line": 9916,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": null,
+      "original": null,
+      "source_entry": "saucer**",
+      "headword": "saucer",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 56,
+          "word": "saucer",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "茶托,碟子",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a small shallow dish that a cup stands on"
+          },
+          "example": "She placed the cup on its saucer.",
+          "translation": "她把杯子放在茶托上。",
+          "source_file": "npee.txt",
+          "source_line": 4241,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 21,
+          "word": "saucer",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "茶托，茶碟",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small flat plate that a cup is placed on"
+          },
+          "example": "She placed her teacup on the saucer.",
+          "translation": "她把茶杯放在茶托上。",
+          "source_file": "tem.txt",
+          "source_line": 9918,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": null,
+      "original": null,
+      "source_entry": "sausage**",
+      "headword": "sausage",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 57,
+          "word": "sausage",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "香肠,腊肠",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a mixture of meat and spices made into a long tube"
+          },
+          "example": "We grilled sausages for dinner.",
+          "translation": "我们晚餐烤了香肠。",
+          "source_file": "npee.txt",
+          "source_line": 4242,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 24,
+          "word": "sausage",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "香肠",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a mixture of meat and spices in a long narrow skin"
+          },
+          "example": "The children ate sausage and beans for lunch.",
+          "translation": "孩子们午餐吃了香肠和豆子。",
+          "source_file": "tem.txt",
+          "source_line": 9921,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 66,
+      "identity": null,
+      "original": null,
+      "source_entry": "save",
+      "headword": "save",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 59,
+          "word": "save",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "救,拯救;储蓄,贮存;节省",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to keep somebody/something safe from death, harm or loss"
+          },
+          "example": "The lifeguard saved the swimmer from the strong current.",
+          "translation": "救生员把游泳者从湍急的水流中救了上来。",
+          "source_file": "npee.txt",
+          "source_line": 4244,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 67,
+      "identity": null,
+      "original": null,
+      "source_entry": "saving**",
+      "headword": "saving",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 60,
+          "word": "saving",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "挽救,救助,节约,储蓄;(pl.)储蓄金,存款",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an amount of something that you do not use or spend"
+          },
+          "example": "The new heating system results in energy savings.",
+          "translation": "新的供暖系统能节省能源。",
+          "source_file": "npee.txt",
+          "source_line": 4245,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": null,
+      "original": null,
+      "source_entry": "say",
+      "headword": "say",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 62,
+          "word": "say",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "说,讲;说明;比如说 vi.说,发表意见",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to speak or tell somebody something, using words"
+          },
+          "example": "She said that she would arrive at noon.",
+          "translation": "她说她中午会到。",
+          "source_file": "npee.txt",
+          "source_line": 4247,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 35,
+          "word": "say",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 说，讲 2. 假定，比方说，姑且说 n. 发言权，决定权",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to use words to express something"
+          },
+          "example": "“I’ll call you tomorrow,” she said.",
+          "translation": "她说：“我明天给你打电话。”",
+          "source_file": "tem.txt",
+          "source_line": 9934,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": null,
+      "original": null,
+      "source_entry": "saying**",
+      "headword": "saying",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 36,
+          "word": "saying",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "谚语，格言",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a well-known short statement that expresses a general truth"
+          },
+          "example": "The saying “Practice makes perfect” is easy to remember.",
+          "translation": "“熟能生巧”这句格言很容易记住。",
+          "source_file": "tem.txt",
+          "source_line": 9935,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": null,
+      "original": null,
+      "source_entry": "scale*",
+      "headword": "scale",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 63,
+          "word": "scale",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "刻度;天平,磅秤;比例尺;规模;音阶;鱼鳞",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the relation between actual size and size on a map or diagram"
+          },
+          "example": "Use the scale on the map to estimate the distance.",
+          "translation": "使用地图上的比例尺估算距离。",
+          "source_file": "npee.txt",
+          "source_line": 4248,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": null,
+      "original": null,
+      "source_entry": "scan*",
+      "headword": "scan",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 64,
+          "word": "scan",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "细看,审视;浏览;扫描 n.扫描",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to look quickly but not very carefully at a document"
+          },
+          "example": "She scanned the page for her name.",
+          "translation": "她浏览这一页寻找自己的名字。",
+          "source_file": "npee.txt",
+          "source_line": 4249,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 46,
+          "word": "scan",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 审视，扫描 2. 浏览 3. (指诗句)符合韵律 n. 审视，扫描",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to look at something quickly but not very carefully"
+          },
+          "example": "She scanned the document for her name.",
+          "translation": "她浏览文件寻找自己的名字。",
+          "source_file": "tem.txt",
+          "source_line": 9945,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 72,
+      "identity": null,
+      "original": null,
+      "source_entry": "scare",
+      "headword": "scare",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 58,
+          "word": "scare",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使吃惊，使惊恐 n. 惊恐，害怕",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make someone feel frightened"
+          },
+          "example": "The sudden noise scared the cat.",
+          "translation": "突然的噪声吓到了那只猫。",
+          "source_file": "tem.txt",
+          "source_line": 9957,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 73,
+      "identity": null,
+      "original": null,
+      "source_entry": "scarf",
+      "headword": "scarf",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 70,
+          "word": "scarf",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "围巾,头巾,领巾,领带",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a piece of cloth worn around the neck"
+          },
+          "example": "He wrapped a warm scarf around his neck.",
+          "translation": "他把一条暖和的围巾围在脖子上。",
+          "source_file": "npee.txt",
+          "source_line": 4255,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 60,
+          "word": "scarf",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "围巾，头巾，披巾",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a piece of cloth worn around the neck for warmth or decoration"
+          },
+          "example": "She wrapped a warm scarf around her neck.",
+          "translation": "她在脖子上围了一条暖和的围巾。",
+          "source_file": "tem.txt",
+          "source_line": 9959,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 74,
+      "identity": null,
+      "original": null,
+      "source_entry": "scene*",
+      "headword": "scene",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 72,
+          "word": "scene",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "景色,景象,舞台;(戏)一场",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a part of a play or film in which action stays in one place"
+          },
+          "example": "The final scene takes place in a garden.",
+          "translation": "最后一场戏发生在花园里。",
+          "source_file": "npee.txt",
+          "source_line": 4257,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 69,
+          "word": "scene",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 出事地点，场景 2. 情景，实况 3. 风景，景象 4. (戏剧或电影的)一场，一景 5. 道具布置，布景 6. 吵闹，斗气 ||  behind the scenes秘密地，私下",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the place where an event or action happens"
+          },
+          "example": "The police arrived at the scene of the accident.",
+          "translation": "警方到达了事故现场。",
+          "source_file": "tem.txt",
+          "source_line": 9968,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 75,
+      "identity": null,
+      "original": null,
+      "source_entry": "schedule*",
+      "headword": "schedule",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 75,
+          "word": "schedule",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "时间表,进度表 v.安排,预定",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a plan that lists work and when each thing must be done"
+          },
+          "example": "The train schedule is posted at the station.",
+          "translation": "车站张贴着火车时刻表。",
+          "source_file": "npee.txt",
+          "source_line": 4260,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 75,
+          "word": "schedule",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 进度表，计划 2. 时刻表，班次表 v. 预定，排定，安排",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a plan that lists the times when events or activities will happen"
+          },
+          "example": "The class schedule changed because of the holiday.",
+          "translation": "由于假期，课程安排有所变动。",
+          "source_file": "tem.txt",
+          "source_line": 9974,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 76,
+      "identity": null,
+      "original": null,
+      "source_entry": "scholarship**",
+      "headword": "scholarship",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 78,
+          "word": "scholarship",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "奖学金;学问,学识",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "money given to help pay for somebody's education"
+          },
+          "example": "She received a scholarship to study engineering.",
+          "translation": "她获得了工程学奖学金。",
+          "source_file": "npee.txt",
+          "source_line": 4263,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 82,
+          "word": "scholarship",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "奖学金",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an amount of money given to someone to help pay for their education"
+          },
+          "example": "He received a scholarship to study engineering.",
+          "translation": "他获得了一笔工程学奖学金。",
+          "source_file": "tem.txt",
+          "source_line": 9981,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": null,
+      "original": null,
+      "source_entry": "school",
+      "headword": "school",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 79,
+          "word": "school",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "学校,(大学里的)学院;上学,学业;学派",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a place where children go to be educated"
+          },
+          "example": "The children walk to school together.",
+          "translation": "孩子们一起步行去学校。",
+          "source_file": "npee.txt",
+          "source_line": 4264,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 84,
+          "word": "school",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 学校 2. 大学的院、系、研究所 3. 学派 4. 上课，上学 || at school上课，上学 /come (go ) to school上学",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where children go to learn"
+          },
+          "example": "The school is closed for the summer holiday.",
+          "translation": "学校暑假期间关闭。",
+          "source_file": "tem.txt",
+          "source_line": 9983,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 78,
+      "identity": null,
+      "original": null,
+      "source_entry": "schoolbag",
+      "headword": "schoolbag",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 79,
+      "identity": null,
+      "original": null,
+      "source_entry": "science",
+      "headword": "science",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 80,
+          "word": "science",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "科学;学科",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "knowledge about the structure and behaviour of the natural and physical world, based on facts that you can prove"
+          },
+          "example": "She is studying science at university.",
+          "translation": "她正在大学学习科学。",
+          "source_file": "npee.txt",
+          "source_line": 4265,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 90,
+          "word": "science",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 科学，科学研究 2. 某门科学",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the study of the physical and natural world"
+          },
+          "example": "Science helps us understand the natural world.",
+          "translation": "科学帮助我们理解自然世界。",
+          "source_file": "tem.txt",
+          "source_line": 9989,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 80,
+      "identity": null,
+      "original": null,
+      "source_entry": "scientific**",
+      "headword": "scientific",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 81,
+          "word": "scientific",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "科学上的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "involving science; connected with science"
+          },
+          "example": "The team used scientific methods to test the idea.",
+          "translation": "团队用科学方法检验了这个想法。",
+          "source_file": "npee.txt",
+          "source_line": 4266,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 91,
+          "word": "scientific",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "科学的，合乎科学原则的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "based on the methods and principles of science"
+          },
+          "example": "The team followed a scientific method during the experiment.",
+          "translation": "团队在实验中遵循了科学方法。",
+          "source_file": "tem.txt",
+          "source_line": 9990,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 81,
+      "identity": null,
+      "original": null,
+      "source_entry": "scientist",
+      "headword": "scientist",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 82,
+          "word": "scientist",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "科学家",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who studies one or more of the natural sciences"
+          },
+          "example": "The scientist explained the results to the public.",
+          "translation": "科学家向公众解释了这些结果。",
+          "source_file": "npee.txt",
+          "source_line": 4267,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 92,
+          "word": "scientist",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "科学家",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who studies or works in science"
+          },
+          "example": "The scientist recorded the results of the experiment.",
+          "translation": "科学家记录了实验结果。",
+          "source_file": "tem.txt",
+          "source_line": 9991,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 82,
+      "identity": null,
+      "original": null,
+      "source_entry": "scissors",
+      "headword": "scissors",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 83,
+          "word": "scissors",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "剪子",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a tool for cutting paper or cloth, made of two sharp blades joined together"
+          },
+          "example": "Use scissors to cut along the dotted line.",
+          "translation": "用剪刀沿着虚线剪开。",
+          "source_file": "npee.txt",
+          "source_line": 4268,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-088",
+          "row_index": 94,
+          "word": "scissors",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "剪刀",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a tool with two sharp blades joined together"
+          },
+          "example": "She cut the paper carefully with scissors.",
+          "translation": "她用剪刀仔细地剪纸。",
+          "source_file": "tem.txt",
+          "source_line": 9993,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 83,
+      "identity": null,
+      "original": null,
+      "source_entry": "score",
+      "headword": "score",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 86,
+          "word": "score",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "得分,分数;二十 v.得(分),记(…的)分数",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the number of points that somebody gets in a game or test"
+          },
+          "example": "She scored the highest score on the quiz.",
+          "translation": "她在测验中得分最高。",
+          "source_file": "npee.txt",
+          "source_line": 4271,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 3,
+          "word": "score",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 得分，得点，得分记录 2. 乐谱 3. 二十 || scores of很多 v. 1. 得分，获分 2. 记下，记住，计算 3. 记入总谱，作成管弦乐",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the number of points a person or team gets in a game"
+          },
+          "example": "The team celebrated its highest score of the season.",
+          "translation": "球队庆祝了本赛季的最高得分。",
+          "source_file": "tem.txt",
+          "source_line": 10002,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 84,
+      "identity": null,
+      "original": null,
+      "source_entry": "scream**",
+      "headword": "scream",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 25,
+          "word": "scream",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 尖声叫喊 2. (指风、机器等)呼啸，发尖锐声 n. 尖叫声",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make a loud high cry"
+          },
+          "example": "The crowd screamed when the lights went out.",
+          "translation": "灯熄灭时，人群尖叫起来。",
+          "source_file": "tem.txt",
+          "source_line": 10024,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 85,
+      "identity": null,
+      "original": null,
+      "source_entry": "screen",
+      "headword": "screen",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 94,
+          "word": "screen",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "屏幕,屏风;帘 v.掩蔽,包庇;筛选",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the flat surface at the front of a television, computer, etc. on which pictures or information appear"
+          },
+          "example": "The presentation appeared on the large screen.",
+          "translation": "演示内容显示在大屏幕上。",
+          "source_file": "npee.txt",
+          "source_line": 4279,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 27,
+          "word": "screen",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 屏，幕，帘，帐，隔板 2. 银幕，荧光屏 v. 1. 遮蔽，隐藏，掩护 2. 甄别，选拔 3. 放映或播放(影片或电视节目)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the flat surface on which pictures or words are shown"
+          },
+          "example": "A fly landed on the television screen.",
+          "translation": "一只苍蝇落在电视屏幕上。",
+          "source_file": "tem.txt",
+          "source_line": 10026,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 86,
+      "identity": null,
+      "original": null,
+      "source_entry": "sculpture**",
+      "headword": "sculpture",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 98,
+          "word": "sculpture",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "雕刻(术),雕塑(术);雕刻作品",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the art of making figures or objects by carving or shaping wood, stone, clay, metal, etc."
+          },
+          "example": "The gallery displays a modern sculpture in the entrance hall.",
+          "translation": "画廊在入口大厅展出一件现代雕塑。",
+          "source_file": "npee.txt",
+          "source_line": 4283,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 47,
+          "word": "sculpture",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 雕刻术，雕刻，雕塑 2. 雕刻品，雕塑品",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a work of art made by shaping stone, wood, metal, or another material"
+          },
+          "example": "The gallery displays a sculpture made from recycled metal.",
+          "translation": "美术馆展出了一件用再生金属制作的雕塑。",
+          "source_file": "tem.txt",
+          "source_line": 10047,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 87,
+      "identity": null,
+      "original": null,
+      "source_entry": "sea",
+      "headword": "sea",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-035",
+          "row_index": 99,
+          "word": "sea",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "海,海洋,大量",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the salt water that covers most of the earth's surface"
+          },
+          "example": "The children spent the afternoon by the sea.",
+          "translation": "孩子们在海边度过了整个下午。",
+          "source_file": "npee.txt",
+          "source_line": 4284,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 55,
+          "word": "sea",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 海，海水，海洋 2. (用于专有名词中的)海 || the Yellow Sea黄海 [at sea 在海上] go to sea当水手 /on the sea在海边，在海滨",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large area of salt water"
+          },
+          "example": "The sea was calm in the morning.",
+          "translation": "早上海面很平静。",
+          "source_file": "tem.txt",
+          "source_line": 10055,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 88,
+      "identity": null,
+      "original": null,
+      "source_entry": "search",
+      "headword": "search",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 63,
+          "word": "search",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 搜寻，查究，搜查 2. 探查，探索，追溯  n. 1. 搜寻，搜查 2. 调查，探究 || in search of搜寻，搜查",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "an attempt to find someone or something"
+          },
+          "example": "The search for the missing hikers continued overnight.",
+          "translation": "搜寻失踪徒步者的行动持续了一整夜。",
+          "source_file": "tem.txt",
+          "source_line": 10063,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 89,
+      "identity": null,
+      "original": null,
+      "source_entry": "season",
+      "headword": "season",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 4,
+          "word": "season",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "季,季节,时节",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "one of the four periods of the year"
+          },
+          "example": "The rainy season begins in June.",
+          "translation": "雨季从六月开始。",
+          "source_file": "npee.txt",
+          "source_line": 4289,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 69,
+          "word": "season",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 季节(四季之一) 2. (特定的)时期，活动期 || in season(指食物)上市，当令，在旺季 /out of season未上市，下市，在淡季 v. 1. 调味，为…加味 2. 使适用，变为适用",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "one of the four main periods of the year"
+          },
+          "example": "Summer is my favourite season.",
+          "translation": "夏天是我最喜欢的季节。",
+          "source_file": "tem.txt",
+          "source_line": 10069,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 90,
+      "identity": null,
+      "original": null,
+      "source_entry": "seat",
+      "headword": "seat",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 5,
+          "word": "seat",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "座位,底座;所在地,场所 v.使坐下",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a place for one person to sit"
+          },
+          "example": "Please take a seat near the window.",
+          "translation": "请坐在窗边。",
+          "source_file": "npee.txt",
+          "source_line": 4290,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 71,
+          "word": "seat",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 座位 2. 席位，席次 3. 臀部 || take a seat 坐下 v. 1. 使坐下 2. 可容纳 / be seated坐着，坐下",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where you can sit"
+          },
+          "example": "There was an empty seat beside the window.",
+          "translation": "窗边有一个空座位。",
+          "source_file": "tem.txt",
+          "source_line": 10071,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 91,
+      "identity": null,
+      "original": null,
+      "source_entry": "secondary**",
+      "headword": "secondary",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 7,
+          "word": "secondary",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "次要的,二级的;中级的,第二的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "less important than something else"
+          },
+          "example": "The main road is closed, so use a secondary route.",
+          "translation": "主干道封闭了，请走次要道路。",
+          "source_file": "npee.txt",
+          "source_line": 4292,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 80,
+          "word": "secondary",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "第二的，从属的，次要的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "less important than something else"
+          },
+          "example": "English is a secondary subject for her this term.",
+          "translation": "英语是她这学期的第二学科。",
+          "source_file": "tem.txt",
+          "source_line": 10080,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 92,
+      "identity": null,
+      "original": null,
+      "source_entry": "secret",
+      "headword": "secret",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 8,
+          "word": "secret",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "秘密的,机密的 n.秘密",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "known about by only a few people; kept hidden from others"
+          },
+          "example": "They held a secret meeting after work.",
+          "translation": "他们下班后举行了一场秘密会议。",
+          "source_file": "npee.txt",
+          "source_line": 4293,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 84,
+          "word": "secret",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 秘密的 2. (指地方)幽僻的 3. 私下的，秘而不宣的 n. 1. 秘密，机密 2. 秘诀，窍门 3. 奥秘，神秘的事物 || in secret暗地的，偷偷的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "something that is known about by only a few people"
+          },
+          "example": "She kept the recipe a secret from her friends.",
+          "translation": "她对朋友们保守了这个食谱的秘密。",
+          "source_file": "tem.txt",
+          "source_line": 10084,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 93,
+      "identity": null,
+      "original": null,
+      "source_entry": "secretary*",
+      "headword": "secretary",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 9,
+          "word": "secretary",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "秘书,书记;部长,大臣",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who works in an office, working for another person and dealing with letters and telephone calls"
+          },
+          "example": "The secretary arranged the meeting for Monday.",
+          "translation": "秘书把会议安排在星期一。",
+          "source_file": "npee.txt",
+          "source_line": 4294,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 87,
+          "word": "secretary",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 秘书，书记 2. 大臣，部长 3. 干事，文书",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who works in an office, writing letters and arranging meetings"
+          },
+          "example": "The secretary arranged the appointments for the director.",
+          "translation": "秘书为主任安排了预约。",
+          "source_file": "tem.txt",
+          "source_line": 10087,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 94,
+      "identity": null,
+      "original": null,
+      "source_entry": "section*",
+      "headword": "section",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 10,
+          "word": "section",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "章节,部分;地区,部门,科;截面,剖面",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a separate part of a structure, piece of furniture, document, etc."
+          },
+          "example": "Read the final section of the report.",
+          "translation": "请阅读报告的最后一部分。",
+          "source_file": "npee.txt",
+          "source_line": 4295,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 92,
+          "word": "section",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 部分，片段 2. 部件，零件 3. (书、文件等的)节，款，项，段 4. (组  织机构中的)处，科，组等 5. (城镇、国家或社会的内)地区，区域",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "one of the parts into which something is divided"
+          },
+          "example": "Read the final section of the report.",
+          "translation": "请阅读报告的最后一节。",
+          "source_file": "tem.txt",
+          "source_line": 10092,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 95,
+      "identity": null,
+      "original": null,
+      "source_entry": "secure**",
+      "headword": "secure",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 12,
+          "word": "secure",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "(from,against)安全的,放心的v.得到;防护",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "protected against attack, damage or loss"
+          },
+          "example": "Store your passport in a secure place.",
+          "translation": "请把护照存放在安全的地方。",
+          "source_file": "npee.txt",
+          "source_line": 4297,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 95,
+          "word": "secure",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 安全的，保险的 2. 稳固的，牢靠的 v. 1. 使安全，使可靠 2. 获得，取得",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "safe from danger or attack"
+          },
+          "example": "Store the tools in a secure place.",
+          "translation": "把工具存放在安全的地方。",
+          "source_file": "tem.txt",
+          "source_line": 10095,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 96,
+      "identity": null,
+      "original": null,
+      "source_entry": "security**",
+      "headword": "security",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 13,
+          "word": "security",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "安全(感),防御(物),保证(人),(pl.)证券",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the state of being protected from danger or harm"
+          },
+          "example": "The new lock provides extra security for the office.",
+          "translation": "这把新锁为办公室提供了额外安全保障。",
+          "source_file": "npee.txt",
+          "source_line": 4298,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-089",
+          "row_index": 96,
+          "word": "security",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 安全，平安 2. 治安防卫(部门) 3. 债券，股票",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the activities involved in protecting a place"
+          },
+          "example": "Airport security checked our bags.",
+          "translation": "机场安检检查了我们的行李。",
+          "source_file": "tem.txt",
+          "source_line": 10096,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": null,
+      "original": null,
+      "source_entry": "see",
+      "headword": "see",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 14,
+          "word": "see",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "看见;会面;探望;知道,获悉;送行",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to become aware of somebody/something by using your eyes"
+          },
+          "example": "I saw a fox near the river this morning.",
+          "translation": "我今天早上在河边看见一只狐狸。",
+          "source_file": "npee.txt",
+          "source_line": 4299,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-090",
+          "row_index": 3,
+          "word": "see",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 看见 2. 了解，领会，明白 3. 会见，访问，接见 4. 想，思考 5. 经历，阅历 6. 留神，当心 || see about处理，安排 [see sb off为某人送行] see through sb (sth)识破，看穿 /see to sth留意，照料",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to notice or become aware of someone or something by using your eyes"
+          },
+          "example": "I can see the mountains from my window.",
+          "translation": "我从窗户可以看到群山。",
+          "source_file": "tem.txt",
+          "source_line": 10103,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 98,
+      "identity": null,
+      "original": null,
+      "source_entry": "seed**",
+      "headword": "seed",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 15,
+          "word": "seed",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "种子 v.播种;结实,结籽",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the part of a plant from which a new plant can grow"
+          },
+          "example": "Plant the seeds in moist soil.",
+          "translation": "把种子种在湿润的土壤里。",
+          "source_file": "npee.txt",
+          "source_line": 4300,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-090",
+          "row_index": 4,
+          "word": "seed",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 种，种子 2. 根源，起因，开端 v. 播种",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the small hard part produced by a plant from which a new plant can grow"
+          },
+          "example": "She planted the seeds in a sunny part of the garden.",
+          "translation": "她把种子种在花园里阳光充足的地方。",
+          "source_file": "tem.txt",
+          "source_line": 10104,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": null,
+      "original": null,
+      "source_entry": "seek*",
+      "headword": "seek",
+      "pdf_page": 120,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-036",
+          "row_index": 16,
+          "word": "seek",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(after,for)寻找,探索;试图,企图",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to look for something/somebody"
+          },
+          "example": "They are seeking a solution to the problem.",
+          "translation": "他们正在寻找解决这个问题的办法。",
+          "source_file": "npee.txt",
+          "source_line": 4301,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-090",
+          "row_index": 7,
+          "word": "seek",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 寻找，觅求 2. 请求，要求 || seek after (for)试图获得",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to try to find or get something"
+          },
+          "example": "They seek advice from an experienced teacher.",
+          "translation": "他们向一位有经验的老师征求意见。",
+          "source_file": "tem.txt",
+          "source_line": 10107,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    }
+  ]
+}

@@ -1,0 +1,4161 @@
+{
+  "task_id": "tem-029",
+  "input_sha256": "2f14157e861d29b51e17bde3d767218516877a80933bb7aec1c6604c3cf98760",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3768,
+        "word": "entertain",
+        "headword": "entertain",
+        "homograph": null,
+        "source_raw": "entertain [ˌentəˈteɪn] v. 1. 招待，款待 2. 使欢乐，给…娱乐 3. 接受，容纳"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 招待，款待 2. 使欢乐，给…娱乐 3. 接受，容纳",
+        "phonetic": "ˌentəˈteɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 47,
+          "word": "entertain",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "使欢乐；招待",
+          "selected_sense": {
+            "meaning": "to interest somebody or make them laugh in order to please them; to invite people to eat or drink as guests; to consider an idea or hope",
+            "pos": "verb"
+          },
+          "example": "The host entertained the guests with stories.",
+          "translation": "主人讲故事招待客人。",
+          "source_file": "cet4.txt",
+          "source_line": 1311,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 0,
+          "word": "entertain",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "招待,款待;使娱乐;使欢乐;容纳,接受",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "使人感到愉快"
+          },
+          "example": "The host entertained the guests with stories.",
+          "translation": "主人讲故事让客人们感到愉快。",
+          "source_file": "npee.txt",
+          "source_line": 1658,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3769,
+        "word": "entertainer",
+        "headword": "entertainer",
+        "homograph": null,
+        "source_raw": "entertainer [ˌentəˈteɪnə] n. 演艺人员，专业演员，款待者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "演艺人员，专业演员，款待者",
+        "phonetic": "ˌentəˈteɪnə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3770,
+        "word": "entertaining",
+        "headword": "entertaining",
+        "homograph": null,
+        "source_raw": "entertaining [ˌentəˈteɪnɪŋ] adj. 使人得到娱乐的，有趣的，使人愉快的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "使人得到娱乐的，有趣的，使人愉快的",
+        "phonetic": "ˌentəˈteɪnɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3771,
+        "word": "entertainment",
+        "headword": "entertainment",
+        "homograph": null,
+        "source_raw": "entertainment [ˌentəˈteɪnmənt] n. 1. 招待，款待 2. 娱乐，乐趣，文娱节目"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 招待，款待 2. 娱乐，乐趣，文娱节目",
+        "phonetic": "ˌentəˈteɪnmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 1,
+          "word": "entertainment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "招待,款待;表演文娱节目",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "用于娱乐人们的电影、音乐等"
+          },
+          "example": "Live entertainment followed the dinner.",
+          "translation": "晚宴后有现场文娱表演。",
+          "source_file": "npee.txt",
+          "source_line": 1659,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3772,
+        "word": "enthral enthrall",
+        "headword": "enthral enthrall",
+        "homograph": null,
+        "source_raw": "enthral enthrall [ɪnˈθrɔːl] v. 使迷住，吸引住"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使迷住，吸引住",
+        "phonetic": "ɪnˈθrɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3773,
+        "word": "enthrone",
+        "headword": "enthrone",
+        "homograph": null,
+        "source_raw": "*enthrone [ɪnˈθrəʊn] v. 使(国王等)登位，立…为国王"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使(国王等)登位，立…为国王",
+        "phonetic": "ɪnˈθrəʊn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3774,
+        "word": "enthusiasm",
+        "headword": "enthusiasm",
+        "homograph": null,
+        "source_raw": "enthusiasm [ɪnˈθjuːzɪæzəm] n. 热情，热心，热诚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "热情，热心，热诚",
+        "phonetic": "ɪnˈθjuːzɪæzəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 48,
+          "word": "enthusiasm",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "热情/心，热忱",
+          "selected_sense": {
+            "meaning": "a strong feeling of excitement and interest in something and a desire to become involved in it",
+            "pos": "noun"
+          },
+          "example": "She spoke about the project with great enthusiasm.",
+          "translation": "她满怀热情地谈起这个项目。",
+          "source_file": "cet4.txt",
+          "source_line": 1312,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 2,
+          "word": "enthusiasm",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "热情,热心;狂热;积极性(for)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "对某事强烈感兴趣并希望参与的感受"
+          },
+          "example": "Her enthusiasm for science inspired the younger students.",
+          "translation": "她对科学的热情激励了年幼的学生。",
+          "source_file": "npee.txt",
+          "source_line": 1660,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3775,
+        "word": "enthusiast",
+        "headword": "enthusiast",
+        "homograph": null,
+        "source_raw": "enthusiast [ɪnˈθjuːziæst] n. 热心者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "热心者",
+        "phonetic": "ɪnˈθjuːziæst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3776,
+        "word": "enthusiastic",
+        "headword": "enthusiastic",
+        "homograph": null,
+        "source_raw": "enthusiastic [ɪnˌθjuːziˈæstɪk] adj. 热情的，热心的，热烈的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "热情的，热心的，热烈的",
+        "phonetic": "ɪnˌθjuːziˈæstɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 49,
+          "word": "enthusiastic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "热情的，热心的",
+          "selected_sense": {
+            "meaning": "feeling or showing a lot of excitement and interest about somebody or something",
+            "pos": "adjective"
+          },
+          "example": "The volunteers were enthusiastic about helping.",
+          "translation": "志愿者们热心参与帮忙。",
+          "source_file": "cet4.txt",
+          "source_line": 1313,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 3,
+          "word": "enthusiastic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "热情的,热心的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "对某人或某事表现出强烈兴趣"
+          },
+          "example": "The volunteers were enthusiastic about the project.",
+          "translation": "志愿者们对这个项目很有热情。",
+          "source_file": "npee.txt",
+          "source_line": 1661,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3777,
+        "word": "entice",
+        "headword": "entice",
+        "homograph": null,
+        "source_raw": "*entice [ɪnˈtaɪs] v. 引诱，怂，教唆"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "引诱，怂，教唆",
+        "phonetic": "ɪnˈtaɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3778,
+        "word": "entire",
+        "headword": "entire",
+        "homograph": null,
+        "source_raw": "entire [ɪnˈtaɪə] adj. 完全的，整个的，全部的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "完全的，整个的，全部的",
+        "phonetic": "ɪnˈtaɪə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 50,
+          "word": "entire",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "全部的，整个的",
+          "selected_sense": {
+            "meaning": "including everything, everyone or every part",
+            "pos": "adjective"
+          },
+          "example": "The entire team attended the final meeting.",
+          "translation": "整个团队都参加了最后一次会议。",
+          "source_file": "cet4.txt",
+          "source_line": 1314,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 4,
+          "word": "entire",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "完全的,全部的,完整的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "包括所有人、事物或部分的"
+          },
+          "example": "She spent the entire afternoon in the library.",
+          "translation": "她整个下午都在图书馆里。",
+          "source_file": "npee.txt",
+          "source_line": 1662,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3779,
+        "word": "entirely",
+        "headword": "entirely",
+        "homograph": null,
+        "source_raw": "entirely [ɪnˈtaɪəlɪ] adv. 全部地，完全地，彻底地"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "全部地，完全地，彻底地",
+        "phonetic": "ɪnˈtaɪəlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3780,
+        "word": "entitle",
+        "headword": "entitle",
+        "homograph": null,
+        "source_raw": "entitle [ɪnˈtaɪtl] v. 1. 定标题，定名称，称呼 2. 给权利，给…资格"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 定标题，定名称，称呼 2. 给权利，给…资格",
+        "phonetic": "ɪnˈtaɪtl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 51,
+          "word": "entitle",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "给…权利(或资格)",
+          "selected_sense": {
+            "meaning": "to give somebody the right to have or do something; to give a title to a book or play",
+            "pos": "verb"
+          },
+          "example": "This pass entitles you to enter the exhibition.",
+          "translation": "这张通行证让你有资格进入展览。",
+          "source_file": "cet4.txt",
+          "source_line": 1315,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 5,
+          "word": "entitle",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "给以权利(或资格);给…称号(题名);授权",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "使某人有权获得某物"
+          },
+          "example": "This pass entitles you to one free entry.",
+          "translation": "这张通行证让你有权免费入场一次。",
+          "source_file": "npee.txt",
+          "source_line": 1663,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3781,
+        "word": "entity",
+        "headword": "entity",
+        "homograph": null,
+        "source_raw": "*entity [ˈentɪtɪ] n. 独立存在体，实体"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "独立存在体，实体",
+        "phonetic": "ˈentɪtɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 6,
+          "word": "entity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "实体;存在(物);组织,机构;本质",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "独立于其他事物、具有自身身份的存在物"
+          },
+          "example": "Each department operates as a separate legal entity.",
+          "translation": "每个部门都作为独立的法律实体运作。",
+          "source_file": "npee.txt",
+          "source_line": 1664,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3782,
+        "word": "entourage",
+        "headword": "entourage",
+        "homograph": null,
+        "source_raw": "*entourage [ˌɒntʊˈrɑːʒ] n. 随从人员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "随从人员",
+        "phonetic": "ˌɒntʊˈrɑːʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3783,
+        "word": "entrance 1",
+        "headword": "entrance",
+        "homograph": 1,
+        "source_raw": "entrance 1 [ˈentrəns] n. 1. 入口，进口，门 2. 进入，上场，入学 3. 进入权，入场权 4. 计算机回车键"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 入口，进口，门 2. 进入，上场，入学 3. 进入权，入场权 4. 计算机回车键",
+        "phonetic": "ˈentrəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3784,
+        "word": "entrance 2",
+        "headword": "entrance",
+        "homograph": 2,
+        "source_raw": "entrance 2 [ɪnˈtrɑːns] v. 使狂喜，使着迷"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使狂喜，使着迷",
+        "phonetic": "ɪnˈtrɑːns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3785,
+        "word": "entrant",
+        "headword": "entrant",
+        "homograph": null,
+        "source_raw": "entrant [ˈentrənt] n. 参加比赛者，新就业者，新学员，新成员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "参加比赛者，新就业者，新学员，新成员",
+        "phonetic": "ˈentrənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3786,
+        "word": "entreat",
+        "headword": "entreat",
+        "homograph": null,
+        "source_raw": "*entreat [ɪnˈtriːt] v. 恳求，哀求，请求"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "恳求，哀求，请求",
+        "phonetic": "ɪnˈtriːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3787,
+        "word": "entree",
+        "headword": "entree",
+        "homograph": null,
+        "source_raw": "*entree [ˈɒntreɪ] n. 1. 入场许可，进入权 2. (BrE)(主菜上桌前的)小菜(开胃菜)，(AmE)主菜，正菜"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 入场许可，进入权 2. (BrE)(主菜上桌前的)小菜(开胃菜)，(AmE)主菜，正菜",
+        "phonetic": "ˈɒntreɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3788,
+        "word": "entrepot",
+        "headword": "entrepot",
+        "homograph": null,
+        "source_raw": "entrepot [ˈɒntrəpəʊ] n. 仓库，贸易中心，货物集散地"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "仓库，贸易中心，货物集散地",
+        "phonetic": "ˈɒntrəpəʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3789,
+        "word": "entrepreneur",
+        "headword": "entrepreneur",
+        "homograph": null,
+        "source_raw": "entrepreneur [ˌɒntrəprəˈnɜː] n. 企业家，创业者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "企业家，创业者",
+        "phonetic": "ˌɒntrəprəˈnɜː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 8,
+          "word": "entrepreneur",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "[法]企业家, 主办人",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "通过创办/经营企业赚钱并承担财务风险的人"
+          },
+          "example": "The entrepreneur launched a small online business.",
+          "translation": "这位企业家创办了一家小型网络企业。",
+          "source_file": "npee.txt",
+          "source_line": 1666,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3790,
+        "word": "entrust",
+        "headword": "entrust",
+        "homograph": null,
+        "source_raw": "*entrust [ɪnˈtrʌst] v. 委托，交托，托"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "委托，交托，托",
+        "phonetic": "ɪnˈtrʌst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3791,
+        "word": "entry",
+        "headword": "entry",
+        "homograph": null,
+        "source_raw": "entry [ˈentrɪ] n. 1. 入场，进入，入口处 2. 参加者 3. 登记，登录 4. (列入的)项目，账目，词条"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 入场，进入，入口处 2. 参加者 3. 登记，登录 4. (列入的)项目，账目，词条",
+        "phonetic": "ˈentrɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 53,
+          "word": "entry",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "入口处；登记；进入",
+          "selected_sense": {
+            "meaning": "an act of going into a place; the right or opportunity to enter; a competition submission; written information; recording information",
+            "pos": "noun"
+          },
+          "example": "I found the word in a dictionary entry.",
+          "translation": "我在一条词典词条中找到了这个词。",
+          "source_file": "cet4.txt",
+          "source_line": 1317,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 9,
+          "word": "entry",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "进入,入口;通道;记载,条目",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "进入某地或获准进入的机会"
+          },
+          "example": "Entry to the garden is free on Sundays.",
+          "translation": "花园周日免费开放。",
+          "source_file": "npee.txt",
+          "source_line": 1667,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3792,
+        "word": "entwine",
+        "headword": "entwine",
+        "homograph": null,
+        "source_raw": "*entwine [ɪnˈtwaɪn] v. 盘绕，使缠绕，使交错"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "盘绕，使缠绕，使交错",
+        "phonetic": "ɪnˈtwaɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3793,
+        "word": "enumerate",
+        "headword": "enumerate",
+        "homograph": null,
+        "source_raw": "*enumerate [ɪˈnjuːməreɪt] v. 列举，枚举"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "列举，枚举",
+        "phonetic": "ɪˈnjuːməreɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3794,
+        "word": "envelop",
+        "headword": "envelop",
+        "homograph": null,
+        "source_raw": "envelop [ɪnˈveləp] v. 1. 包住，裹住，遮盖 2. 围绕，包围"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 包住，裹住，遮盖 2. 围绕，包围",
+        "phonetic": "ɪnˈveləp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3795,
+        "word": "envelope",
+        "headword": "envelope",
+        "homograph": null,
+        "source_raw": "envelope [ˈenvələʊp] n. 信封，封套"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "信封，封套",
+        "phonetic": "ˈenvələʊp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 54,
+          "word": "envelope",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "信封；封套；封皮",
+          "selected_sense": {
+            "meaning": "a flat paper container used for sending letters; a flat plastic container for keeping papers",
+            "pos": "noun"
+          },
+          "example": "She placed the signed form in an envelope.",
+          "translation": "她把签好字的表格放进信封里。",
+          "source_file": "cet4.txt",
+          "source_line": 1318,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 10,
+          "word": "envelope",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "信封,信皮;封套",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "用于装信件的扁平纸袋"
+          },
+          "example": "She put the invitation in an envelope.",
+          "translation": "她把邀请函装进信封。",
+          "source_file": "npee.txt",
+          "source_line": 1668,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3796,
+        "word": "enviable",
+        "headword": "enviable",
+        "homograph": null,
+        "source_raw": "*enviable [ˈenvɪəbl] adj. 令人羡慕的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "令人羡慕的",
+        "phonetic": "ˈenvɪəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3797,
+        "word": "envious",
+        "headword": "envious",
+        "homograph": null,
+        "source_raw": "envious [ˈenvɪəs] adj. 羡慕的，嫉妒的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "羡慕的，嫉妒的",
+        "phonetic": "ˈenvɪəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3798,
+        "word": "environment",
+        "headword": "environment",
+        "homograph": null,
+        "source_raw": "environment [ɪnˈvaɪərənmənt] n. 环境，周围状况"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "环境，周围状况",
+        "phonetic": "ɪnˈvaɪərənmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 55,
+          "word": "environment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "环境，外界；围绕",
+          "selected_sense": {
+            "meaning": "the natural world in which people, animals and plants live; the conditions in which a person, animal or plant lives or operates",
+            "pos": "noun"
+          },
+          "example": "The school provides a safe learning environment.",
+          "translation": "这所学校提供安全的学习环境。",
+          "source_file": "cet4.txt",
+          "source_line": 1319,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 11,
+          "word": "environment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "环境,外界",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "人、动物和植物生活的自然世界"
+          },
+          "example": "Plastic waste can harm the marine environment.",
+          "translation": "塑料废弃物会危害海洋环境。",
+          "source_file": "npee.txt",
+          "source_line": 1669,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3799,
+        "word": "environmental",
+        "headword": "environmental",
+        "homograph": null,
+        "source_raw": "environmental [ɪnˌvaɪrənˈmentəl] adj. 环境的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "环境的",
+        "phonetic": "ɪnˌvaɪrənˈmentəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3800,
+        "word": "environmentalism",
+        "headword": "environmentalism",
+        "homograph": null,
+        "source_raw": "environmentalism [ɪnˌvaɪərənˈmentəlɪzəm] n. 环境论，环境保护主义"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "环境论，环境保护主义",
+        "phonetic": "ɪnˌvaɪərənˈmentəlɪzəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3801,
+        "word": "environmentalist",
+        "headword": "environmentalist",
+        "homograph": null,
+        "source_raw": "environmentalist [ɪnˌvaɪrənˈmentəlɪst] n. 环境保护工作者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "环境保护工作者",
+        "phonetic": "ɪnˌvaɪrənˈmentəlɪst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3802,
+        "word": "envisage",
+        "headword": "envisage",
+        "homograph": null,
+        "source_raw": "envisage [ɪnˈvɪzɪdʒ] v. 1. 想象，设想 2. 正视，面对"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 想象，设想 2. 正视，面对",
+        "phonetic": "ɪnˈvɪzɪdʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 12,
+          "word": "envisage",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "想象,设想,展望,正视",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "想象未来可能发生的事情"
+          },
+          "example": "The team envisages a new park on the empty site.",
+          "translation": "团队设想在这块空地上建一座新公园。",
+          "source_file": "npee.txt",
+          "source_line": 1670,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3803,
+        "word": "envision",
+        "headword": "envision",
+        "homograph": null,
+        "source_raw": "envision [ɪnˈvɪʒən] v. 想象，展望"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "想象，展望",
+        "phonetic": "ɪnˈvɪʒən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3804,
+        "word": "envoy",
+        "headword": "envoy",
+        "homograph": null,
+        "source_raw": "envoy [ˈenvɔɪ] n. 1. 使者，代表 2. 使节，(全权)公使"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 使者，代表 2. 使节，(全权)公使",
+        "phonetic": "ˈenvɔɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3805,
+        "word": "envy",
+        "headword": "envy",
+        "homograph": null,
+        "source_raw": "envy [ˈenvɪ] v. &n. 妒忌，羡慕"
+      },
+      "original": {
+        "pos": "v.&n.",
+        "meaning": "妒忌，羡慕",
+        "phonetic": "ˈenvɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3806,
+        "word": "enzyme",
+        "headword": "enzyme",
+        "homograph": null,
+        "source_raw": "enzyme [ˈenzaɪm] n. 酶，酵素"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "酶，酵素",
+        "phonetic": "ˈenzaɪm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3807,
+        "word": "eon",
+        "headword": "eon",
+        "homograph": null,
+        "source_raw": "*eon [ˈiːən] n. 极漫长的时期，万古"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "极漫长的时期，万古",
+        "phonetic": "ˈiːən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3808,
+        "word": "ephemeral",
+        "headword": "ephemeral",
+        "homograph": null,
+        "source_raw": "*ephemeral [ɪˈfemərəl] adj. 短暂的，短命的，朝生暮死的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "短暂的，短命的，朝生暮死的",
+        "phonetic": "ɪˈfemərəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3809,
+        "word": "epic",
+        "headword": "epic",
+        "homograph": null,
+        "source_raw": "epic [ˈepɪk] n. (描写神、伟人事迹的)长诗(电影)，史诗  adj. (小说)史诗般的，英勇的，壮丽的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(描写神、伟人事迹的)长诗(电影)，史诗  adj. (小说)史诗般的，英勇的，壮丽的",
+        "phonetic": "ˈepɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3810,
+        "word": "epidemic",
+        "headword": "epidemic",
+        "homograph": null,
+        "source_raw": "epidemic [ˌepɪˈdemɪk] adj. 流行性的，传染的，流传极广的 n. 1. 流行病 2. (流行病的)迅速传播"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "流行性的，传染的，流传极广的 n. 1. 流行病 2. (流行病的)迅速传播",
+        "phonetic": "ˌepɪˈdemɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3811,
+        "word": "epigram",
+        "headword": "epigram",
+        "homograph": null,
+        "source_raw": "*epigram [ˈepɪɡræm] n. 诙谐短诗，警句"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "诙谐短诗，警句",
+        "phonetic": "ˈepɪɡræm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3813,
+        "word": "episode",
+        "headword": "episode",
+        "homograph": null,
+        "source_raw": "episode [ˈepɪsəʊd] n. 插曲，(文艺作品中)一段情节，(一系列事件中的)一个事件"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "插曲，(文艺作品中)一段情节，(一系列事件中的)一个事件",
+        "phonetic": "ˈepɪsəʊd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 15,
+          "word": "episode",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "一段情节;片断;(连续剧的)一集",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "连续播放的故事中的一部分"
+          },
+          "example": "We watched the final episode together.",
+          "translation": "我们一起看了最后一集。",
+          "source_file": "npee.txt",
+          "source_line": 1673,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3814,
+        "word": "epitaph",
+        "headword": "epitaph",
+        "homograph": null,
+        "source_raw": "*epitaph [ˈepɪtɑːf] n. 墓志铭"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "墓志铭",
+        "phonetic": "ˈepɪtɑːf",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3815,
+        "word": "epitome",
+        "headword": "epitome",
+        "homograph": null,
+        "source_raw": "*epitome [ɪˈpɪtəmɪ] n. 1. 缩影，梗概 2. 典型，摘要"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 缩影，梗概 2. 典型，摘要",
+        "phonetic": "ɪˈpɪtəmɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3817,
+        "word": "epoch",
+        "headword": "epoch",
+        "homograph": null,
+        "source_raw": "epoch [ˈiːpɒk] n. 时代，纪元，重要时期"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "时代，纪元，重要时期",
+        "phonetic": "ˈiːpɒk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 16,
+          "word": "epoch",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "新纪元;时代;时期;【地质】世,纪,期",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "历史上发生重要事件或变化的一段时期"
+          },
+          "example": "The invention marked a new epoch in communication.",
+          "translation": "这项发明标志着通信领域进入了一个新时代。",
+          "source_file": "npee.txt",
+          "source_line": 1674,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3818,
+        "word": "epoch-making",
+        "headword": "epoch-making",
+        "homograph": null,
+        "source_raw": "epoch-making [ˈiːpɒk ˈmeɪkɪŋ] adj. 划时代的，开创新纪元的，轰动一时的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "划时代的，开创新纪元的，轰动一时的",
+        "phonetic": "ˈiːpɒk ˈmeɪkɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3819,
+        "word": "equivocal",
+        "headword": "equivocal",
+        "homograph": null,
+        "source_raw": "*equivocal [ɪˈkwɪvəkəl] adj. 有歧义的，模棱两可的，含糊的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有歧义的，模棱两可的，含糊的",
+        "phonetic": "ɪˈkwɪvəkəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3820,
+        "word": "equable",
+        "headword": "equable",
+        "homograph": null,
+        "source_raw": "*equable [ˈekwəbl] adj. 稳定的，均匀的，平和的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "稳定的，均匀的，平和的",
+        "phonetic": "ˈekwəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3821,
+        "word": "equal",
+        "headword": "equal",
+        "homograph": null,
+        "source_raw": "equal [ˈiːkwəl] adj. 1. 相等的，相同的，均等的 2. 平等的 3. 胜任的，合适的 n. 相等物，匹敌者 v. 1. 等于 2. 比得上，敌得过"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 相等的，相同的，均等的 2. 平等的 3. 胜任的，合适的 n. 相等物，匹敌者 v. 1. 等于 2. 比得上，敌得过",
+        "phonetic": "ˈiːkwəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 57,
+          "word": "equal",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "相等的；平等的",
+          "selected_sense": {
+            "meaning": "the same in size, quantity or value; having the same rights or treatment as other people",
+            "pos": "adjective"
+          },
+          "example": "Everyone should have an equal chance to succeed.",
+          "translation": "每个人都应该有平等的成功机会。",
+          "source_file": "cet4.txt",
+          "source_line": 1321,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3822,
+        "word": "equality",
+        "headword": "equality",
+        "homograph": null,
+        "source_raw": "equality [ɪˈkwɒlɪtɪ] n. 平等，同等，相同"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "平等，同等，相同",
+        "phonetic": "ɪˈkwɒlɪtɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 58,
+          "word": "equality",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "等同，平等；相等",
+          "selected_sense": {
+            "meaning": "the fact of being equal in rights, status or advantages",
+            "pos": "noun"
+          },
+          "example": "The organization works to promote equality in education.",
+          "translation": "该组织致力于促进教育平等。",
+          "source_file": "cet4.txt",
+          "source_line": 1322,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 18,
+          "word": "equality",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "同等;平等;相等;等式;等同性",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "在权利、地位或优势方面平等的事实"
+          },
+          "example": "The policy aims to promote equality in the workplace.",
+          "translation": "这项政策旨在促进职场平等。",
+          "source_file": "npee.txt",
+          "source_line": 1676,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3823,
+        "word": "equally",
+        "headword": "equally",
+        "homograph": null,
+        "source_raw": "equally [ˈiːkwəlɪ] adv. 相等地，平等地，平均地"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "相等地，平等地，平均地",
+        "phonetic": "ˈiːkwəlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3824,
+        "word": "equate",
+        "headword": "equate",
+        "homograph": null,
+        "source_raw": "*equate [ɪˈkweɪt] v. 等同，使相等"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "等同，使相等",
+        "phonetic": "ɪˈkweɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3825,
+        "word": "equation",
+        "headword": "equation",
+        "homograph": null,
+        "source_raw": "equation [ɪˈkweɪʒən] n. 方程式，等式"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "方程式，等式",
+        "phonetic": "ɪˈkweɪʒən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 59,
+          "word": "equation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "方程(式)；等式",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a statement showing that two amounts or values are equal; the act of making or considering something equal"
+          },
+          "example": "We solved the equation together.",
+          "translation": "我们一起解出了这个方程。",
+          "source_file": "cet4.txt",
+          "source_line": 1323,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 19,
+          "word": "equation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(数学)等式,方程式;(with)相等;均衡",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "表明两个数值相等的陈述"
+          },
+          "example": "The equation has two possible solutions.",
+          "translation": "这个方程有两个可能的解。",
+          "source_file": "npee.txt",
+          "source_line": 1677,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3826,
+        "word": "equator",
+        "headword": "equator",
+        "homograph": null,
+        "source_raw": "equator [ɪˈkweɪtə] n. 赤道  equatorial"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "赤道  equatorial",
+        "phonetic": "ɪˈkweɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 20,
+          "word": "equator",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "赤道",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "绕地球一周、与南北极距离相等的假想线"
+          },
+          "example": "The equator passes through several countries.",
+          "translation": "赤道穿过多个国家。",
+          "source_file": "npee.txt",
+          "source_line": 1678,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3827,
+        "word": "equiangular",
+        "headword": "equiangular",
+        "homograph": null,
+        "source_raw": "*equiangular [iːkwˈQnɡʊlə] adj. 等角的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "等角的",
+        "phonetic": "iːkwˈQnɡʊlə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3828,
+        "word": "equidistant",
+        "headword": "equidistant",
+        "homograph": null,
+        "source_raw": "*equidistant [ˌiːkwɪˈdɪstənt] adj. 等距的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "等距的",
+        "phonetic": "ˌiːkwɪˈdɪstənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3829,
+        "word": "equilateral",
+        "headword": "equilateral",
+        "homograph": null,
+        "source_raw": "*equilateral [ˌiːkwɪˈlætərəl] adj. 等边的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "等边的",
+        "phonetic": "ˌiːkwɪˈlætərəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3830,
+        "word": "equilibrium",
+        "headword": "equilibrium",
+        "homograph": null,
+        "source_raw": "*equilibrium [ˌiːkwɪˈlɪbriəm] n. 平衡，均势"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "平衡，均势",
+        "phonetic": "ˌiːkwɪˈlɪbriəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3831,
+        "word": "equinox",
+        "headword": "equinox",
+        "homograph": null,
+        "source_raw": "*equinox [ˈiːkwɪnɒks] n. 春分，秋分"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "春分，秋分",
+        "phonetic": "ˈiːkwɪnɒks",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3832,
+        "word": "equip",
+        "headword": "equip",
+        "homograph": null,
+        "source_raw": "equip [ɪˈkwɪp] v. 配备，装备，使有准备"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "配备，装备，使有准备",
+        "phonetic": "ɪˈkwɪp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 60,
+          "word": "equip",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "装备，配备",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to provide somebody or something with the things needed for a purpose; to prepare somebody for an activity or task"
+          },
+          "example": "The school equipped the science lab with new microscopes.",
+          "translation": "学校为科学实验室配备了新显微镜。",
+          "source_file": "cet4.txt",
+          "source_line": 1324,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 21,
+          "word": "equip",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(with)装备,配备;训练",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "为某人提供所需设备"
+          },
+          "example": "The lab is equipped with modern safety tools.",
+          "translation": "实验室配备了现代安全工具。",
+          "source_file": "npee.txt",
+          "source_line": 1679,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3833,
+        "word": "equipment",
+        "headword": "equipment",
+        "homograph": null,
+        "source_raw": "equipment [ɪˈkwɪpmənt] n. 1. 装备，配备 2. 设备，器械 3. 知识，享赋"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 装备，配备 2. 设备，器械 3. 知识，享赋",
+        "phonetic": "ɪˈkwɪpmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 61,
+          "word": "equipment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "装备，设备，配备",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the things needed for a particular purpose or activity"
+          },
+          "example": "All the camping equipment fitted into the car.",
+          "translation": "所有露营装备都装进了汽车。",
+          "source_file": "cet4.txt",
+          "source_line": 1325,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 22,
+          "word": "equipment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "设备,器材,装置;才能",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "为特定目的或活动所需的物品"
+          },
+          "example": "The climbing equipment was checked before the trip.",
+          "translation": "出行前检查了攀登装备。",
+          "source_file": "npee.txt",
+          "source_line": 1680,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3834,
+        "word": "equitable",
+        "headword": "equitable",
+        "homograph": null,
+        "source_raw": "*equitable [ˈekwɪtəbl] adj. 公平合理的，公正的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "公平合理的，公正的",
+        "phonetic": "ˈekwɪtəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3835,
+        "word": "equity",
+        "headword": "equity",
+        "homograph": null,
+        "source_raw": "equity [ˈekwətɪ] n. 1. 公平，公正 2. (pl)(利息不定的)普通股"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 公平，公正 2. (pl)(利息不定的)普通股",
+        "phonetic": "ˈekwətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3836,
+        "word": "equivalence",
+        "headword": "equivalence",
+        "homograph": null,
+        "source_raw": "equivalence [ɪˈkwɪvələns] n. 等效，等值，等量，相当"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "等效，等值，等量，相当",
+        "phonetic": "ɪˈkwɪvələns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3837,
+        "word": "equivalent",
+        "headword": "equivalent",
+        "homograph": null,
+        "source_raw": "equivalent [ɪˈkwɪvələnt] adj. 相等的，相当的，等价的  n. 相等物，等价物"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "相等的，相当的，等价的  n. 相等物，等价物",
+        "phonetic": "ɪˈkwɪvələnt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 62,
+          "word": "equivalent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "相等的；等量的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "equal in value, amount, meaning or importance"
+          },
+          "example": "One litre is equivalent to 1,000 millilitres.",
+          "translation": "一升相当于一千毫升。",
+          "source_file": "cet4.txt",
+          "source_line": 1326,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3838,
+        "word": "era",
+        "headword": "era",
+        "homograph": null,
+        "source_raw": "era [ˈɪərə] n. 时代，年代，纪元"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "时代，年代，纪元",
+        "phonetic": "ˈɪərə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 63,
+          "word": "era",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "时代，年代；纪元",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a period of time, usually in history, that is different from other periods because of particular characteristics or events"
+          },
+          "example": "The invention marked the beginning of a new era.",
+          "translation": "这项发明标志着一个新时代的开始。",
+          "source_file": "cet4.txt",
+          "source_line": 1327,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 24,
+          "word": "era",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "时代,年代,阶段,纪元",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "具有特定特征或重大事件的历史时期"
+          },
+          "example": "The invention began a new era of communication.",
+          "translation": "这项发明开启了通信的新纪元。",
+          "source_file": "npee.txt",
+          "source_line": 1682,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3839,
+        "word": "eradicate",
+        "headword": "eradicate",
+        "homograph": null,
+        "source_raw": "eradicate [ɪˈrædɪkeɪt] v. 根除，消灭，杜绝"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "根除，消灭，杜绝",
+        "phonetic": "ɪˈrædɪkeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3840,
+        "word": "erase",
+        "headword": "erase",
+        "homograph": null,
+        "source_raw": "erase [ɪˈreɪz] v. 擦除，抹掉，清除"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "擦除，抹掉，清除",
+        "phonetic": "ɪˈreɪz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 25,
+          "word": "erase",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "擦掉;删去;消磁",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "彻底移除某物"
+          },
+          "example": "Please erase the old notes from the board.",
+          "translation": "请把黑板上的旧笔记擦掉。",
+          "source_file": "npee.txt",
+          "source_line": 1683,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3841,
+        "word": "eraser",
+        "headword": "eraser",
+        "homograph": null,
+        "source_raw": "eraser [ɪˈreɪzə] n. 擦除器，消磁器"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "擦除器，消磁器",
+        "phonetic": "ɪˈreɪzə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3842,
+        "word": "erasure",
+        "headword": "erasure",
+        "homograph": null,
+        "source_raw": "*erasure [ɪˈreɪʒə] n. 擦掉，消除，涂擦的痕迹"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "擦掉，消除，涂擦的痕迹",
+        "phonetic": "ɪˈreɪʒə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3843,
+        "word": "erect",
+        "headword": "erect",
+        "homograph": null,
+        "source_raw": "erect [ɪˈrekt] adj. 直立的，竖起的 v. 建造，竖立，使直起"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "直立的，竖起的 v. 建造，竖立，使直起",
+        "phonetic": "ɪˈrekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3844,
+        "word": "erection",
+        "headword": "erection",
+        "homograph": null,
+        "source_raw": "erection [ɪˈrekʃən] n. 1. 建立，树立 2. 建筑物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 建立，树立 2. 建筑物",
+        "phonetic": "ɪˈrekʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3845,
+        "word": "erode",
+        "headword": "erode",
+        "homograph": null,
+        "source_raw": "erode [ɪˈrəʊd] v. 腐蚀，侵蚀，磨损"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "腐蚀，侵蚀，磨损",
+        "phonetic": "ɪˈrəʊd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3846,
+        "word": "erosion",
+        "headword": "erosion",
+        "homograph": null,
+        "source_raw": "erosion [ɪˈrəʊʒən] n. 侵蚀，腐蚀"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "侵蚀，腐蚀",
+        "phonetic": "ɪˈrəʊʒən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 27,
+          "word": "erosion",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "腐蚀,磨损;削弱,减少",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "风雨等逐渐破坏物体表面的过程"
+          },
+          "example": "The coastline is threatened by erosion from the waves.",
+          "translation": "海岸线受到海浪侵蚀的威胁。",
+          "source_file": "npee.txt",
+          "source_line": 1685,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3847,
+        "word": "erotic",
+        "headword": "erotic",
+        "homograph": null,
+        "source_raw": "*erotic [ɪˈrɒtɪk] adj. 性爱的， 性欲的，色情的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "性爱的， 性欲的，色情的",
+        "phonetic": "ɪˈrɒtɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3848,
+        "word": "err",
+        "headword": "err",
+        "homograph": null,
+        "source_raw": "err [ɜː] v. 1. 犯错误，出差错  2. 作恶，犯罪"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 犯错误，出差错  2. 作恶，犯罪",
+        "phonetic": "ɜː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3849,
+        "word": "errand",
+        "headword": "errand",
+        "homograph": null,
+        "source_raw": "errand [ˈerənd] n. (小)差事，(简单的)差使"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(小)差事，(简单的)差使",
+        "phonetic": "ˈerənd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3850,
+        "word": "errant",
+        "headword": "errant",
+        "homograph": null,
+        "source_raw": "*errant [ˈerənt] adj. 误入歧途的，离正途的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "误入歧途的，离正途的",
+        "phonetic": "ˈerənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3851,
+        "word": "erratic",
+        "headword": "erratic",
+        "homograph": null,
+        "source_raw": "*erratic [ɪˈrætɪk] adj. 反复无常的，古怪的，不规则的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "反复无常的，古怪的，不规则的",
+        "phonetic": "ɪˈrætɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3852,
+        "word": "erroneous",
+        "headword": "erroneous",
+        "homograph": null,
+        "source_raw": "erroneous [ɪˈrəʊnɪəs] adj. 错误的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "错误的",
+        "phonetic": "ɪˈrəʊnɪəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 28,
+          "word": "erroneous",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "错误的,不正确的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "不正确、基于错误信息的"
+          },
+          "example": "The article contained an erroneous date.",
+          "translation": "文章中有一个错误的日期。",
+          "source_file": "npee.txt",
+          "source_line": 1686,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3853,
+        "word": "error",
+        "headword": "error",
+        "homograph": null,
+        "source_raw": "error [ˈerə] n. 错误，差错，谬误"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "错误，差错，谬误",
+        "phonetic": "ˈerə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 65,
+          "word": "error",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "错误，谬误；差错",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a mistake, especially one that causes problems or affects a result"
+          },
+          "example": "A small calculation error changed the final result.",
+          "translation": "一个小小的计算错误改变了最终结果。",
+          "source_file": "cet4.txt",
+          "source_line": 1329,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 29,
+          "word": "error",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "错误,过失",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "可能引发问题或影响结果的错误"
+          },
+          "example": "A typing error changed the meaning of the sentence.",
+          "translation": "一个打字错误改变了句子的含义。",
+          "source_file": "npee.txt",
+          "source_line": 1687,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3854,
+        "word": "erudite",
+        "headword": "erudite",
+        "homograph": null,
+        "source_raw": "*erudite [ˈeruːdaɪt] adj. 博学的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "博学的",
+        "phonetic": "ˈeruːdaɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3855,
+        "word": "erupt",
+        "headword": "erupt",
+        "homograph": null,
+        "source_raw": "erupt [ɪˈrʌpt] v. 1. (火山、喷泉等)喷发，喷出，迸发 2. 爆发，突然发生"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (火山、喷泉等)喷发，喷出，迸发 2. 爆发，突然发生",
+        "phonetic": "ɪˈrʌpt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 30,
+          "word": "erupt",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(尤指火山)爆发",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "火山向外喷出熔岩、灰烬等"
+          },
+          "example": "The volcano erupted after weeks of small tremors.",
+          "translation": "数周小震后，火山喷发了。",
+          "source_file": "npee.txt",
+          "source_line": 1688,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3856,
+        "word": "eruption",
+        "headword": "eruption",
+        "homograph": null,
+        "source_raw": "eruption [ɪˈrʌpʃən] n. 喷发，喷出物，(战争、情感等)爆发"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "喷发，喷出物，(战争、情感等)爆发",
+        "phonetic": "ɪˈrʌpʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3857,
+        "word": "escalate",
+        "headword": "escalate",
+        "homograph": null,
+        "source_raw": "*escalate [ˈeskəleɪt] v. (使)逐步升级，(使)更紧张，(使)越发严重"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)逐步升级，(使)更紧张，(使)越发严重",
+        "phonetic": "ˈeskəleɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 31,
+          "word": "escalate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)逐步增长(或发展),(使)逐步升级",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "冲突或问题逐渐变得更严重"
+          },
+          "example": "The argument escalated when more people joined in.",
+          "translation": "更多人加入后，争论升级了。",
+          "source_file": "npee.txt",
+          "source_line": 1689,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3858,
+        "word": "escalator",
+        "headword": "escalator",
+        "homograph": null,
+        "source_raw": "escalator [ˈeskəleɪtə] n. (BrE)自动楼梯"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(BrE)自动楼梯",
+        "phonetic": "ˈeskəleɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3859,
+        "word": "escape",
+        "headword": "escape",
+        "homograph": null,
+        "source_raw": "escape [ɪˈskeɪp] v. 1. 逃跑，逃脱，脱离 2. 漏出，逃逸 3. 逃避"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 逃跑，逃脱，脱离 2. 漏出，逃逸 3. 逃避",
+        "phonetic": "ɪˈskeɪp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3860,
+        "word": "escapee",
+        "headword": "escapee",
+        "homograph": null,
+        "source_raw": "escapee [ɪˌskeɪˈpiː] n. 越狱犯"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "越狱犯",
+        "phonetic": "ɪˌskeɪˈpiː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3861,
+        "word": "eschew",
+        "headword": "eschew",
+        "homograph": null,
+        "source_raw": "*eschew [ɪsˈtʃuː] v. 避开，远离"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "避开，远离",
+        "phonetic": "ɪsˈtʃuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3862,
+        "word": "escort",
+        "headword": "escort",
+        "homograph": null,
+        "source_raw": "escort [ˈeskɔːt] n. 护卫队，护送者，陪伴 v. 护送，护卫，护航"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "护卫队，护送者，陪伴 v. 护送，护卫，护航",
+        "phonetic": "ˈeskɔːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3863,
+        "word": "Eskimo",
+        "headword": "Eskimo",
+        "homograph": null,
+        "source_raw": "*Eskimo [ˈeskɪməʊ] n. 爱斯基摩人(语)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "爱斯基摩人(语)",
+        "phonetic": "ˈeskɪməʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3864,
+        "word": "esoteric",
+        "headword": "esoteric",
+        "homograph": null,
+        "source_raw": "*esoteric [ˌesəʊˈterɪk] adj. 只有内行才懂的，难懂的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "只有内行才懂的，难懂的",
+        "phonetic": "ˌesəʊˈterɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3865,
+        "word": "especial",
+        "headword": "especial",
+        "homograph": null,
+        "source_raw": "especial [ɪˈspeʃəl] adj. 特别的，特殊的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "特别的，特殊的",
+        "phonetic": "ɪˈspeʃəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3866,
+        "word": "especially",
+        "headword": "especially",
+        "homograph": null,
+        "source_raw": "especially [ɪˈspeʃəlɪ] adv. 特别，尤其，格外"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "特别，尤其，格外",
+        "phonetic": "ɪˈspeʃəlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-006",
+          "row_index": 67,
+          "word": "especially",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "特别，尤其，格外",
+          "selected_sense": {
+            "pos": "adverb",
+            "meaning": "more with one person or thing than with others; for a particular purpose or person; very much or to a particular degree"
+          },
+          "example": "The park is especially beautiful in autumn.",
+          "translation": "这个公园在秋天尤其美丽。",
+          "source_file": "cet4.txt",
+          "source_line": 1331,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-010",
+          "row_index": 34,
+          "word": "especially",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "特别,尤其,格外;专门地,主要地",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "比其他事物更突出地，或在某些情形中特别"
+          },
+          "example": "I enjoy outdoor activities, especially hiking.",
+          "translation": "我喜欢户外活动，尤其是徒步。",
+          "source_file": "npee.txt",
+          "source_line": 1692,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3867,
+        "word": "Esperanto",
+        "headword": "Esperanto",
+        "homograph": null,
+        "source_raw": "Esperanto [ˌespəˈræntəʊ] n. 世界语"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "世界语",
+        "phonetic": "ˌespəˈræntəʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3868,
+        "word": "espionage",
+        "headword": "espionage",
+        "homograph": null,
+        "source_raw": "*espionage [ˈespɪənɑːʒ] n. 间谍活动"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "间谍活动",
+        "phonetic": "ˈespɪənɑːʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3869,
+        "word": "espouse",
+        "headword": "espouse",
+        "homograph": null,
+        "source_raw": "*espouse [ɪˈspaʊz] v. 支持，拥护 espousal"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "支持，拥护 espousal",
+        "phonetic": "ɪˈspaʊz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    }
+  ]
+}

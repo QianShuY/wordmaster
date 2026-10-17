@@ -1,0 +1,4115 @@
+{
+  "task_id": "tem-017",
+  "input_sha256": "2d0e95bcf52ead124d02684149f2cee3598b1eac284fd9a1a4b0acf40154260c",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2270,
+        "word": "contingent 2",
+        "headword": "contingent",
+        "homograph": 2,
+        "source_raw": "*contingent 2 [kənˈtɪndʒənt] n. 1. (军队、船只等的)分遣队，小分队 2. (集会中的某一)代表团"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (军队、船只等的)分遣队，小分队 2. (集会中的某一)代表团",
+        "phonetic": "kənˈtɪndʒənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2273,
+        "word": "continuity",
+        "headword": "continuity",
+        "homograph": null,
+        "source_raw": "continuity [kɒntɪˈnjuːətɪ] n. 连贯性，连续性，持续性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "连贯性，连续性，持续性",
+        "phonetic": "kɒntɪˈnjuːətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2274,
+        "word": "continuous",
+        "headword": "continuous",
+        "homograph": null,
+        "source_raw": "continuous [kənˈtɪnjʊəs] adj. 持续的，不间断的，连续的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "持续的，不间断的，连续的",
+        "phonetic": "kənˈtɪnjʊəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 28,
+          "word": "continuous",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "连续不断的，持续的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "happening or existing for a period of time without being interrupted; spreading without spaces"
+          },
+          "example": "The machine makes a continuous low hum while it is running.",
+          "translation": "机器运转时会持续发出低沉的嗡嗡声。",
+          "source_file": "cet4.txt",
+          "source_line": 855,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 40,
+          "word": "continuous",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "连续的,持续的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "一段时间内没有中断地发生或存在"
+          },
+          "example": "The machine needs a continuous supply of clean water.",
+          "translation": "这台机器需要持续供应清洁水。",
+          "source_file": "npee.txt",
+          "source_line": 1063,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2275,
+        "word": "continuum",
+        "headword": "continuum",
+        "homograph": null,
+        "source_raw": "*continuum [kənˈtɪnjʊəm] n. 连续统一体"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "连续统一体",
+        "phonetic": "kənˈtɪnjʊəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2276,
+        "word": "contort",
+        "headword": "contort",
+        "homograph": null,
+        "source_raw": "*contort  [kənˈtɔːt] v. 扭曲，歪曲"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "扭曲，歪曲",
+        "phonetic": "kənˈtɔːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2277,
+        "word": "contour",
+        "headword": "contour",
+        "homograph": null,
+        "source_raw": "*contour [ˈkɒntʊə] n. 1. 轮廓，外形，海岸线 2. 等高线，地形线"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 轮廓，外形，海岸线 2. 等高线，地形线",
+        "phonetic": "ˈkɒntʊə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2278,
+        "word": "contraception",
+        "headword": "contraception",
+        "homograph": null,
+        "source_raw": "contraception [ˌkɒntrəˈsepʃən] n. 避孕(法)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "避孕(法)",
+        "phonetic": "ˌkɒntrəˈsepʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2279,
+        "word": "contraceptive",
+        "headword": "contraceptive",
+        "homograph": null,
+        "source_raw": "*contraceptive [ˌkɒntrəˈseptɪv] n. &adj. 避孕药(的)，避孕用具(的)，避孕(的)"
+      },
+      "original": {
+        "pos": "n.&adj.",
+        "meaning": "避孕药(的)，避孕用具(的)，避孕(的)",
+        "phonetic": "ˌkɒntrəˈseptɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2281,
+        "word": "contraction",
+        "headword": "contraction",
+        "homograph": null,
+        "source_raw": "contraction [kənˈtrækʃən] n. 1. 收缩，缩小 2. 缩略字，缩写词"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 收缩，缩小 2. 缩略字，缩写词",
+        "phonetic": "kənˈtrækʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2282,
+        "word": "contractor",
+        "headword": "contractor",
+        "homograph": null,
+        "source_raw": "contractor [kənˈtræktə] n. 承包商，承建商"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "承包商，承建商",
+        "phonetic": "kənˈtræktə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2283,
+        "word": "contradict",
+        "headword": "contradict",
+        "homograph": null,
+        "source_raw": "contradict [ˌkɒntrəˈdɪkt] v. 1. 否定 2. 与…矛盾"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 否定 2. 与…矛盾",
+        "phonetic": "ˌkɒntrəˈdɪkt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 41,
+          "word": "contradict",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "反驳;同…矛盾,同…抵触",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "表示他人所说内容错误并提出相反说法"
+          },
+          "example": "The witness contradicted the earlier statement.",
+          "translation": "证人的说法与先前陈述相矛盾。",
+          "source_file": "npee.txt",
+          "source_line": 1065,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2284,
+        "word": "contradiction",
+        "headword": "contradiction",
+        "homograph": null,
+        "source_raw": "contradiction [ˌkɒntrəˈdɪkʃən] n. 矛盾"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "矛盾",
+        "phonetic": "ˌkɒntrəˈdɪkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 29,
+          "word": "contradiction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "矛盾，不一致；否认",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a lack of agreement between facts, opinions or actions; the act of saying that a statement is wrong or untrue"
+          },
+          "example": "There is a clear contradiction between the two accounts.",
+          "translation": "这两种说法之间存在明显矛盾。",
+          "source_file": "cet4.txt",
+          "source_line": 857,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 42,
+          "word": "contradiction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "反驳,否认;矛盾,不一致",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "事实、观点或行为之间缺乏一致"
+          },
+          "example": "There is a contradiction between the two reports.",
+          "translation": "两份报告之间存在矛盾。",
+          "source_file": "npee.txt",
+          "source_line": 1066,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2288,
+        "word": "contribute",
+        "headword": "contribute",
+        "homograph": null,
+        "source_raw": "contribute [kənˈtrɪbjuːt] v.  1. 捐助，捐赠 2. 投稿  3. 贡献，对…作出贡献"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 捐助，捐赠 2. 投稿  3. 贡献，对…作出贡献",
+        "phonetic": "kənˈtrɪbjuːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 30,
+          "word": "contribute",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "捐献，捐助；投稿",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to give something, especially money or goods, to help; to write for a publication; to help cause something or add to it"
+          },
+          "example": "Several local businesses contributed money to the new library.",
+          "translation": "几家当地企业为新图书馆捐了款。",
+          "source_file": "cet4.txt",
+          "source_line": 860,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 43,
+          "word": "contribute",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(to)贡献,捐助,捐献;投稿",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "向共同工作或事业提供帮助/资源"
+          },
+          "example": "Everyone contributed an idea to the discussion.",
+          "translation": "每个人都为讨论贡献了一个想法。",
+          "source_file": "npee.txt",
+          "source_line": 1069,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2290,
+        "word": "contributor",
+        "headword": "contributor",
+        "homograph": null,
+        "source_raw": "contributor [kənˈtrɪbjʊtə] n. 投稿者，捐助者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "投稿者，捐助者",
+        "phonetic": "kənˈtrɪbjʊtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2291,
+        "word": "contrive",
+        "headword": "contrive",
+        "homograph": null,
+        "source_raw": "*contrive [kənˈtraɪv] v. 发明， 设计，设法做到"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "发明， 设计，设法做到",
+        "phonetic": "kənˈtraɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 44,
+          "word": "contrive",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "谋划,策划;设法做到;设计,想出",
+          "selected_sense": {
+            "pos": "vt.",
+            "meaning": "尽管有困难仍设法做到某事"
+          },
+          "example": "They contrived to finish the repairs before winter.",
+          "translation": "他们设法在冬天到来前完成了维修。",
+          "source_file": "npee.txt",
+          "source_line": 1071,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2294,
+        "word": "controversy",
+        "headword": "controversy",
+        "homograph": null,
+        "source_raw": "controversy [ˈkɒntrəvɜːsɪ, kənˈtrɒvəsɪ] n. 争论，辩论"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "争论，辩论",
+        "phonetic": "ˈkɒntrəvɜːsɪ, kənˈtrɒvəsɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 46,
+          "word": "controversy",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "争论,辩论,争吵",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "公众对引起强烈分歧或不满的事物进行讨论和争辩"
+          },
+          "example": "The new law caused controversy across the country.",
+          "translation": "这项新法律在全国引发争议。",
+          "source_file": "npee.txt",
+          "source_line": 1074,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2295,
+        "word": "conurbation",
+        "headword": "conurbation",
+        "homograph": null,
+        "source_raw": "*conurbation [ˌkɒnɜːˈbeɪʃən] n. 连带卫星城镇和市郊的大都市"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "连带卫星城镇和市郊的大都市",
+        "phonetic": "ˌkɒnɜːˈbeɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2296,
+        "word": "convene",
+        "headword": "convene",
+        "homograph": null,
+        "source_raw": "*convene [kənˈviːn] v. 召集会议"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "召集会议",
+        "phonetic": "kənˈviːn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2297,
+        "word": "convenience",
+        "headword": "convenience",
+        "homograph": null,
+        "source_raw": "convenience [kənˈviːnjəns] n. 1. 便利，方便 2. 方便的时候，适当的机会 3. 便利设施"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 便利，方便 2. 方便的时候，适当的机会 3. 便利设施",
+        "phonetic": "kənˈviːnjəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 31,
+          "word": "convenience",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "便利,方便；厕所",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the quality of being useful, easy or suitable; something useful that makes life easier; public convenience: a public building containing toilets"
+          },
+          "example": "The hotel is popular for its location and convenience.",
+          "translation": "这家酒店因地理位置便利而很受欢迎。",
+          "source_file": "cet4.txt",
+          "source_line": 862,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 47,
+          "word": "convenience",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "便利,方便;(pl.)便利设备",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "有用、容易或适合某人的性质"
+          },
+          "example": "For your convenience, the form is available online.",
+          "translation": "为方便起见，这份表格可在线填写。",
+          "source_file": "npee.txt",
+          "source_line": 1075,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2299,
+        "word": "convention",
+        "headword": "convention",
+        "homograph": null,
+        "source_raw": "convention [kənˈvenʃən] n. 1. (传统性的)习惯  2. 代表大会，定期大会"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (传统性的)习惯  2. 代表大会，定期大会",
+        "phonetic": "kənˈvenʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 32,
+          "word": "convention",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "习俗，惯例；公约",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a way of doing something that most people in a society expect; a large meeting; an official agreement between countries"
+          },
+          "example": "Removing your shoes before entering the home is a local convention.",
+          "translation": "进屋前脱鞋是当地的一种习俗。",
+          "source_file": "cet4.txt",
+          "source_line": 864,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 48,
+          "word": "convention",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "大会,会议;惯例,常规,习俗;公约,协定",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "社会多数人认为礼貌或合宜的做法"
+          },
+          "example": "It is a convention to remove your shoes before entering this home.",
+          "translation": "进入这户人家前脱鞋是一种惯例。",
+          "source_file": "npee.txt",
+          "source_line": 1077,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2301,
+        "word": "converge",
+        "headword": "converge",
+        "homograph": null,
+        "source_raw": "*converge [kənˈvɜːdʒ] v. 聚集， 集中一点，汇合"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "聚集， 集中一点，汇合",
+        "phonetic": "kənˈvɜːdʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2302,
+        "word": "conversant",
+        "headword": "conversant",
+        "homograph": null,
+        "source_raw": "*conversant [kənˈvɜːsənt] adj. 精通的，内行的，熟知"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "精通的，内行的，熟知",
+        "phonetic": "kənˈvɜːsənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2304,
+        "word": "converse 1",
+        "headword": "converse",
+        "homograph": 1,
+        "source_raw": "converse 1 [kənˈvɜːs] v. 交谈"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "交谈",
+        "phonetic": "kənˈvɜːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2305,
+        "word": "converse 2",
+        "headword": "converse",
+        "homograph": 2,
+        "source_raw": "converse 2 [ˈkɒnvɜːs] adj. 相反的，逆的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "相反的，逆的",
+        "phonetic": "ˈkɒnvɜːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2306,
+        "word": "converse 3",
+        "headword": "converse",
+        "homograph": 3,
+        "source_raw": "converse 3 [ˈkɒnvɜːs] n. 相反事物，相反词"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "相反事物，相反词",
+        "phonetic": "ˈkɒnvɜːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2307,
+        "word": "conversion",
+        "headword": "conversion",
+        "homograph": null,
+        "source_raw": "conversion [kənˈvɜːʃən] n. 1. 转变，变换 2. 信仰的改变 3. 兑换"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 转变，变换 2. 信仰的改变 3. 兑换",
+        "phonetic": "kənˈvɜːʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 34,
+          "word": "conversion",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "转变，转化；改变",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act or process of changing something from one form, use or system to another; a change of religion or beliefs"
+          },
+          "example": "The old factory underwent conversion into a community arts centre.",
+          "translation": "这座旧工厂被改造成了社区艺术中心。",
+          "source_file": "cet4.txt",
+          "source_line": 868,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 50,
+          "word": "conversion",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "转变,转换;信仰的改变;",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "把某物从一种形式、用途或系统改变成另一种的过程"
+          },
+          "example": "The conversion of the warehouse into homes took a year.",
+          "translation": "把仓库改建成住宅花了一年。",
+          "source_file": "npee.txt",
+          "source_line": 1081,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2308,
+        "word": "convert",
+        "headword": "convert",
+        "homograph": null,
+        "source_raw": "convert [kənˈvɜːt] v. 1. 改变，转变 2. 改变…的信仰 3. 兑换 n. 改变信仰的人，皈依者"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 改变，转变 2. 改变…的信仰 3. 兑换 n. 改变信仰的人，皈依者",
+        "phonetic": "kənˈvɜːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 35,
+          "word": "convert",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "使转变；使改变",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to change or make something change from one form, purpose or system to another"
+          },
+          "example": "The charity converted an empty shop into a food bank.",
+          "translation": "这家慈善机构把一间空店铺改成了食品救济站。",
+          "source_file": "cet4.txt",
+          "source_line": 869,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 51,
+          "word": "convert",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "变换,转换;改变(信仰等);兑换(钱)",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "把某物改成另一种形式或用途"
+          },
+          "example": "They converted the old barn into a studio.",
+          "translation": "他们把旧谷仓改成了工作室。",
+          "source_file": "npee.txt",
+          "source_line": 1082,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2309,
+        "word": "convertible",
+        "headword": "convertible",
+        "homograph": null,
+        "source_raw": "*convertible [kənˈvɜːtəbl] adj. 可改变的，可转换的，可兑换的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "可改变的，可转换的，可兑换的",
+        "phonetic": "kənˈvɜːtəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2310,
+        "word": "convex",
+        "headword": "convex",
+        "homograph": null,
+        "source_raw": "convex [kɒnˈveks] adj. 凸圆的，凸面的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "凸圆的，凸面的",
+        "phonetic": "kɒnˈveks",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2312,
+        "word": "convict",
+        "headword": "convict",
+        "homograph": null,
+        "source_raw": "convict [kənˈvɪkt] v. 证明、宣判…有罪，定罪 n. 被判入狱的罪犯"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "证明、宣判…有罪，定罪 n. 被判入狱的罪犯",
+        "phonetic": "kənˈvɪkt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2313,
+        "word": "conviction",
+        "headword": "conviction",
+        "homograph": null,
+        "source_raw": "conviction [kənˈvɪkʃən] n. 1. 定罪 2. 信念，坚信"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 定罪 2. 信念，坚信",
+        "phonetic": "kənˈvɪkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 53,
+          "word": "conviction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "深信,确信;定罪,判罪;",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "法院判定某人有罪的行为/事实"
+          },
+          "example": "The conviction was overturned on appeal.",
+          "translation": "上诉后，原定罪被撤销。",
+          "source_file": "npee.txt",
+          "source_line": 1085,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2315,
+        "word": "convincing",
+        "headword": "convincing",
+        "homograph": null,
+        "source_raw": "convincing [kənˈvɪnsɪŋ] adj. 有说服力的，令人信服的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有说服力的，令人信服的",
+        "phonetic": "kənˈvɪnsɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2316,
+        "word": "convoy",
+        "headword": "convoy",
+        "homograph": null,
+        "source_raw": "*convoy [ˈkɒnvɔɪ] v. 护送，护卫，护航 n. 1. 护送，护卫 2. 护送队"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "护送，护卫，护航 n. 1. 护送，护卫 2. 护送队",
+        "phonetic": "ˈkɒnvɔɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2317,
+        "word": "convulse",
+        "headword": "convulse",
+        "homograph": null,
+        "source_raw": "*convulse [kənˈvʌls] v. 1. 使震动，使震撼 2. 使抽筋"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 使震动，使震撼 2. 使抽筋",
+        "phonetic": "kənˈvʌls",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2319,
+        "word": "cooker",
+        "headword": "cooker",
+        "homograph": null,
+        "source_raw": "cooker [ˈkʊkə] n. 炊事用具(炉、锅等)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "炊事用具(炉、锅等)",
+        "phonetic": "ˈkʊkə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2320,
+        "word": "cookery",
+        "headword": "cookery",
+        "homograph": null,
+        "source_raw": "cookery [ˈkʊkərɪ] n. 烹调术，烹饪法"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "烹调术，烹饪法",
+        "phonetic": "ˈkʊkərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2323,
+        "word": "cooler",
+        "headword": "cooler",
+        "homograph": null,
+        "source_raw": "cooler [ˈkuːlə] n. 1. 冷却器，冷却剂 2. 冷饮品"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 冷却器，冷却剂 2. 冷饮品",
+        "phonetic": "ˈkuːlə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2324,
+        "word": "coop",
+        "headword": "coop",
+        "homograph": null,
+        "source_raw": "*coop [kuːp] n. (饲养小动物的)笼，栏  v. 将…禁锢在狭小空间，拘禁"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(饲养小动物的)笼，栏  v. 将…禁锢在狭小空间，拘禁",
+        "phonetic": "kuːp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2326,
+        "word": "cooperation",
+        "headword": "cooperation",
+        "homograph": null,
+        "source_raw": "cooperation [kəʊˌɒpəˈreɪʃən] n. 合作，协力，合作的意愿"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "合作，协力，合作的意愿",
+        "phonetic": "kəʊˌɒpəˈreɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2327,
+        "word": "cooperative",
+        "headword": "cooperative",
+        "homograph": null,
+        "source_raw": "cooperative [kəʊˈɒpərətɪv] n. 合作社，合作商店(企业等) adj. 1. 合作的，协作的 2. 有合作意向的，乐意合作的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "合作社，合作商店(企业等) adj. 1. 合作的，协作的 2. 有合作意向的，乐意合作的",
+        "phonetic": "kəʊˈɒpərətɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2328,
+        "word": "coordinate",
+        "headword": "coordinate",
+        "homograph": null,
+        "source_raw": "coordinate [kəʊˈɔːdɪneɪt] v. 调节，协调，统筹"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "调节，协调，统筹",
+        "phonetic": "kəʊˈɔːdɪneɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 36,
+          "word": "coordinate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "使协调，调节",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to organize different parts of an activity and the people involved so that it works well; to make parts of the body work well together"
+          },
+          "example": "A project manager will coordinate the work of the two teams.",
+          "translation": "项目经理将协调两个团队的工作。",
+          "source_file": "cet4.txt",
+          "source_line": 875,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2329,
+        "word": "cop",
+        "headword": "cop",
+        "homograph": null,
+        "source_raw": "cop [kɒp] n. 警察"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "警察",
+        "phonetic": "kɒp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 58,
+          "word": "cop",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "警察(slang 俚语)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "警察"
+          },
+          "example": "A cop directed traffic around the closed street.",
+          "translation": "一名警察在封闭街道周围指挥交通。",
+          "source_file": "npee.txt",
+          "source_line": 1093,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2330,
+        "word": "cope",
+        "headword": "cope",
+        "homograph": null,
+        "source_raw": "cope [kəʊp] v. (成功地)对付，应付"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(成功地)对付，应付",
+        "phonetic": "kəʊp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 37,
+          "word": "cope",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "对付，应付",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to deal successfully with something difficult"
+          },
+          "example": "She learned to cope with the pressure of her new job.",
+          "translation": "她学会了应对新工作的压力。",
+          "source_file": "cet4.txt",
+          "source_line": 876,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 59,
+          "word": "cope",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(with)竞争,对抗;(with)对付,妥善处理",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "成功处理困难的事"
+          },
+          "example": "She learned to cope with stress by taking short walks.",
+          "translation": "她学会通过短途散步来应对压力。",
+          "source_file": "npee.txt",
+          "source_line": 1094,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2331,
+        "word": "copier",
+        "headword": "copier",
+        "homograph": null,
+        "source_raw": "copier [kɒpiə] n. 复印机"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "复印机",
+        "phonetic": "kɒpiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2332,
+        "word": "copper",
+        "headword": "copper",
+        "homograph": null,
+        "source_raw": "copper [ˈkɒpə] n. 1. 铜 2. 铜币"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 铜 2. 铜币",
+        "phonetic": "ˈkɒpə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 38,
+          "word": "copper",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "铜；铜币，铜制器",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a chemical element that is a soft red-brown metal; in British English, low-value brown coins"
+          },
+          "example": "The old house has copper pipes beneath the kitchen floor.",
+          "translation": "这栋老房子的厨房地板下装有铜管。",
+          "source_file": "cet4.txt",
+          "source_line": 877,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 60,
+          "word": "copper",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "铜;铜币,铜制器",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "一种化学元素"
+          },
+          "example": "Copper is used in many electrical wires.",
+          "translation": "铜用于许多电线中。",
+          "source_file": "npee.txt",
+          "source_line": 1095,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2333,
+        "word": "copy",
+        "headword": "copy",
+        "homograph": null,
+        "source_raw": "copy [ˈkɒpɪ] n. 1. 抄本，复制本，副本 2. (书的)一本，(报纸的)一份 3. 复制品 v. 1. 抄写，复写 2. 仿制，仿效"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 抄本，复制本，副本 2. (书的)一本，(报纸的)一份 3. 复制品 v. 1. 抄写，复写 2. 仿制，仿效",
+        "phonetic": "ˈkɒpɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2334,
+        "word": "copyright",
+        "headword": "copyright",
+        "homograph": null,
+        "source_raw": "copyright [ˈkɒpɪraɪt] n. 版权，著作权"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "版权，著作权",
+        "phonetic": "ˈkɒpɪraɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2335,
+        "word": "coral",
+        "headword": "coral",
+        "homograph": null,
+        "source_raw": "coral [ˈkɒrəl] n. 珊瑚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "珊瑚",
+        "phonetic": "ˈkɒrəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2336,
+        "word": "cord",
+        "headword": "cord",
+        "homograph": null,
+        "source_raw": "cord [kɔːd] n. 1. 绳索，带子 2. 小电线 3. 键 4. 灯芯绒"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 绳索，带子 2. 小电线 3. 键 4. 灯芯绒",
+        "phonetic": "kɔːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 40,
+          "word": "cord",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "细绳，粗线，索",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "strong thick string or thin rope; a piece of it"
+          },
+          "example": "Tie the parcel securely with a length of cord.",
+          "translation": "用一段细绳把包裹牢牢系好。",
+          "source_file": "cet4.txt",
+          "source_line": 879,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 63,
+          "word": "cord",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "绳,索",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "结实的粗线或细绳"
+          },
+          "example": "He tied the package with a strong cord.",
+          "translation": "他用一根结实的绳子捆好包裹。",
+          "source_file": "npee.txt",
+          "source_line": 1098,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2337,
+        "word": "cordial",
+        "headword": "cordial",
+        "homograph": null,
+        "source_raw": "cordial [ˈkɔːdɪəl] adj. 热情友好的，热诚的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "热情友好的，热诚的",
+        "phonetic": "ˈkɔːdɪəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 41,
+          "word": "cordial",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "真诚的，诚恳的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "pleasant and friendly"
+          },
+          "example": "The two leaders exchanged cordial greetings before the meeting.",
+          "translation": "会议开始前，两位领导人亲切地互相问候。",
+          "source_file": "cet4.txt",
+          "source_line": 880,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 64,
+          "word": "cordial",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "诚恳的,亲切的,热诚的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "令人愉快且友好的"
+          },
+          "example": "They exchanged cordial greetings at the conference.",
+          "translation": "他们在会议上亲切地互相问候。",
+          "source_file": "npee.txt",
+          "source_line": 1099,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2338,
+        "word": "corduroy",
+        "headword": "corduroy",
+        "homograph": null,
+        "source_raw": "corduroy [ˈkɔːdərɔɪ] n. 1灯芯绒 2. (pl)灯芯绒裤子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1灯芯绒 2. (pl)灯芯绒裤子",
+        "phonetic": "ˈkɔːdərɔɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2340,
+        "word": "cork",
+        "headword": "cork",
+        "homograph": null,
+        "source_raw": "cork [kɔːk] n. 软木，软木塞"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "软木，软木塞",
+        "phonetic": "kɔːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2342,
+        "word": "cornea",
+        "headword": "cornea",
+        "homograph": null,
+        "source_raw": "cornea [ˈkɔːnɪə] n. 角膜"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "角膜",
+        "phonetic": "ˈkɔːnɪə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2344,
+        "word": "cornerstone",
+        "headword": "cornerstone",
+        "homograph": null,
+        "source_raw": "cornerstone [ˈkɔːnəstəʊn] n. 1. 基石，奠基石 2. 基础"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 基石，奠基石 2. 基础",
+        "phonetic": "ˈkɔːnəstəʊn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2345,
+        "word": "cornet",
+        "headword": "cornet",
+        "homograph": null,
+        "source_raw": "*cornet [ˈkɔːnɪt] n. 1. 短号  2. (盛冰淇淋的)圆锥形蛋卷"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 短号  2. (盛冰淇淋的)圆锥形蛋卷",
+        "phonetic": "ˈkɔːnɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2346,
+        "word": "corollary",
+        "headword": "corollary",
+        "homograph": null,
+        "source_raw": "*corollary [kəˈrɒlərɪ] n. 必然结果，推论"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "必然结果，推论",
+        "phonetic": "kəˈrɒlərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2347,
+        "word": "coronation",
+        "headword": "coronation",
+        "homograph": null,
+        "source_raw": "*coronation [ˌkɒrəˈneɪʃən] n. 加冕礼，即位典礼"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "加冕礼，即位典礼",
+        "phonetic": "ˌkɒrəˈneɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2348,
+        "word": "coroner",
+        "headword": "coroner",
+        "homograph": null,
+        "source_raw": "*coroner [ˈkɒrənə] n. 验尸官"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "验尸官",
+        "phonetic": "ˈkɒrənə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2349,
+        "word": "corporal",
+        "headword": "corporal",
+        "homograph": null,
+        "source_raw": "corporal [ˈkɔːpərəl] adj. 肉体的，身体的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "肉体的，身体的",
+        "phonetic": "ˈkɔːpərəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2351,
+        "word": "corporation",
+        "headword": "corporation",
+        "homograph": null,
+        "source_raw": "corporation [ˌkɔːpəˈreɪʃən] n. 1. (AmE)有限公司，公司，企业 2. 社团，法人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (AmE)有限公司，公司，企业 2. 社团，法人",
+        "phonetic": "ˌkɔːpəˈreɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 42,
+          "word": "corporation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "公司，企业；社团",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a large business company; an organization recognized by law as a single unit"
+          },
+          "example": "The corporation opened a new research centre in the city.",
+          "translation": "这家公司在该市开设了一家新的研究中心。",
+          "source_file": "cet4.txt",
+          "source_line": 884,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 65,
+          "word": "corporation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "市镇自治机关;法人;公司,企业",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "法律承认的单一组织实体"
+          },
+          "example": "The corporation opened a new office in Leeds.",
+          "translation": "这家公司在利兹开设了新办公室。",
+          "source_file": "npee.txt",
+          "source_line": 1103,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2352,
+        "word": "corps",
+        "headword": "corps",
+        "homograph": null,
+        "source_raw": "*corps [kɔː] n. 1. 特种部队，军团 2. 共同工作、活动的一群人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 特种部队，军团 2. 共同工作、活动的一群人",
+        "phonetic": "kɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2353,
+        "word": "corpse",
+        "headword": "corpse",
+        "homograph": null,
+        "source_raw": "corpse [kɔːps] n. 尸体"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "尸体",
+        "phonetic": "kɔːps",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2354,
+        "word": "corpulent",
+        "headword": "corpulent",
+        "homograph": null,
+        "source_raw": "*corpulent [ˈkɔːpjʊlənt] adj. 肥胖的，臃肿的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "肥胖的，臃肿的",
+        "phonetic": "ˈkɔːpjʊlənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2355,
+        "word": "corpus",
+        "headword": "corpus",
+        "homograph": null,
+        "source_raw": "*corpus [ˈkɔːpəs] n. 文集，资料，汇编"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "文集，资料，汇编",
+        "phonetic": "ˈkɔːpəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2357,
+        "word": "correction",
+        "headword": "correction",
+        "homograph": null,
+        "source_raw": "correction [kəˈrekʃən] n. 1. 订正，修正 2. 惩戒"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 订正，修正 2. 惩戒",
+        "phonetic": "kəˈrekʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 43,
+          "word": "correction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "改正，纠正，修改",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a change that makes something more accurate; the act or process of correcting something"
+          },
+          "example": "The editor issued a correction to the article the next day.",
+          "translation": "编辑第二天就这篇文章发布了一则更正。",
+          "source_file": "cet4.txt",
+          "source_line": 886,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2358,
+        "word": "correlate",
+        "headword": "correlate",
+        "homograph": null,
+        "source_raw": "*correlate [ˈkɒrəleɪt] n. 有相互关系的东西，相关物 v. 使有相互关系，互相有关系"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "有相互关系的东西，相关物 v. 使有相互关系，互相有关系",
+        "phonetic": "ˈkɒrəleɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2361,
+        "word": "correspondent",
+        "headword": "correspondent",
+        "homograph": null,
+        "source_raw": "correspondent [ˌkɒrɪˈspɒndənt] n. 通信者，(新闻)通讯员，记者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "通信者，(新闻)通讯员，记者",
+        "phonetic": "ˌkɒrɪˈspɒndənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 44,
+          "word": "correspondent",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "通信者;通讯员",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who reports news from a particular place or on a subject; a person who writes letters or emails to another person"
+          },
+          "example": "The newspaper sent its foreign correspondent to cover the election.",
+          "translation": "这家报社派出驻外记者报道这场选举。",
+          "source_file": "cet4.txt",
+          "source_line": 888,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 68,
+          "word": "correspondent",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "记者,通讯员;通信者",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "为媒体报道某国或某主题新闻的人"
+          },
+          "example": "The correspondent reported live from the capital.",
+          "translation": "这名记者从首都进行现场报道。",
+          "source_file": "npee.txt",
+          "source_line": 1108,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2362,
+        "word": "corridor",
+        "headword": "corridor",
+        "homograph": null,
+        "source_raw": "corridor [ˈkɒrɪdɔː] n. 走廊，通道"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "走廊，通道",
+        "phonetic": "ˈkɒrɪdɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 46,
+          "word": "corridor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "走廊，回廊，通路",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a long narrow passage in a building; a long narrow piece of land or airspace that provides a route"
+          },
+          "example": "A quiet corridor connects the two parts of the library.",
+          "translation": "一条安静的走廊连接着图书馆的两个部分。",
+          "source_file": "cet4.txt",
+          "source_line": 890,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 70,
+          "word": "corridor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "走廊,通道",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "建筑物中两侧有房门的狭长通道"
+          },
+          "example": "The meeting room is at the end of the corridor.",
+          "translation": "会议室在走廊尽头。",
+          "source_file": "npee.txt",
+          "source_line": 1110,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2363,
+        "word": "corroborate",
+        "headword": "corroborate",
+        "homograph": null,
+        "source_raw": "*corroborate [kəˈrɒbəreɪt] v. 证实，支持(某种说法、信仰、理论等)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "证实，支持(某种说法、信仰、理论等)",
+        "phonetic": "kəˈrɒbəreɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2364,
+        "word": "corrode",
+        "headword": "corrode",
+        "homograph": null,
+        "source_raw": "*corrode [kəˈrəʊd] v. (使)腐蚀，侵蚀"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)腐蚀，侵蚀",
+        "phonetic": "kəˈrəʊd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 71,
+          "word": "corrode",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(受)腐蚀,侵蚀",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "化学作用缓慢破坏金属、石材或其他材料"
+          },
+          "example": "Salt water can corrode metal over time.",
+          "translation": "海水会随着时间腐蚀金属。",
+          "source_file": "npee.txt",
+          "source_line": 1111,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2365,
+        "word": "corrosion",
+        "headword": "corrosion",
+        "homograph": null,
+        "source_raw": "*corrosion [kəˈrəʊʒən] n. 腐蚀"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "腐蚀",
+        "phonetic": "kəˈrəʊʒən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2366,
+        "word": "corrugated",
+        "headword": "corrugated",
+        "homograph": null,
+        "source_raw": "*corrugated [ˈkɒrəɡeɪtɪd] adj. 起皱的，波纹的，有瓦楞的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "起皱的，波纹的，有瓦楞的",
+        "phonetic": "ˈkɒrəɡeɪtɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2367,
+        "word": "corrupt",
+        "headword": "corrupt",
+        "homograph": null,
+        "source_raw": "corrupt [kəˈrʌpt] adj. 1. 腐败的，贪污的 2. 腐烂的，污浊的 v. 1. 使败坏，腐蚀，使腐坏  2. 贿赂"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 腐败的，贪污的 2. 腐烂的，污浊的 v. 1. 使败坏，腐蚀，使腐坏  2. 贿赂",
+        "phonetic": "kəˈrʌpt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2368,
+        "word": "corruption",
+        "headword": "corruption",
+        "homograph": null,
+        "source_raw": "corruption [kəˈrʌpʃən] n. 1. 贪污，腐败 2. 讹误"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 贪污，腐败 2. 讹误",
+        "phonetic": "kəˈrʌpʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2369,
+        "word": "cosmetic",
+        "headword": "cosmetic",
+        "homograph": null,
+        "source_raw": "cosmetic [kɒzˈmetɪk] n. 化妆品 adj. 化妆用的，装点门面的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "化妆品 adj. 化妆用的，装点门面的",
+        "phonetic": "kɒzˈmetɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2370,
+        "word": "cosmic",
+        "headword": "cosmic",
+        "homograph": null,
+        "source_raw": "cosmic [ˈkɒzmɪk] adj. 宇宙的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "宇宙的",
+        "phonetic": "ˈkɒzmɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 73,
+          "word": "cosmic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "宇宙的;无比巨大的,无穷尽的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "与整个宇宙有关的"
+          },
+          "example": "The telescope revealed cosmic dust around the star.",
+          "translation": "望远镜发现恒星周围有宇宙尘埃。",
+          "source_file": "npee.txt",
+          "source_line": 1113,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2371,
+        "word": "cosmopolitan",
+        "headword": "cosmopolitan",
+        "homograph": null,
+        "source_raw": "cosmopolitan [ˌkɒzməˈpɒlɪtən] adj. 1. 世界主义的  2. 全世界的，全世界各地都有的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 世界主义的  2. 全世界的，全世界各地都有的",
+        "phonetic": "ˌkɒzməˈpɒlɪtən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2372,
+        "word": "cosmos",
+        "headword": "cosmos",
+        "homograph": null,
+        "source_raw": "cosmos [ˈkɒzmɒs] n. 宇宙"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "宇宙",
+        "phonetic": "ˈkɒzmɒs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2374,
+        "word": "costly",
+        "headword": "costly",
+        "homograph": null,
+        "source_raw": "costly [ˈkɒstlɪ] adj. 1. 昂贵的，代价高的 2. 价值高的，豪华的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 昂贵的，代价高的 2. 价值高的，豪华的",
+        "phonetic": "ˈkɒstlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 47,
+          "word": "costly",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "昂贵的；价值高的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "costing a lot of money; causing problems or the loss of something"
+          },
+          "example": "Replacing the damaged equipment proved costly for the small company.",
+          "translation": "更换损坏的设备对这家小公司来说代价高昂。",
+          "source_file": "cet4.txt",
+          "source_line": 892,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 74,
+          "word": "costly",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "昂贵的,价值高的,豪华的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "花费很多钱，尤其超过预期"
+          },
+          "example": "Replacing the roof proved costly.",
+          "translation": "更换屋顶结果花费很高。",
+          "source_file": "npee.txt",
+          "source_line": 1115,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2377,
+        "word": "cot",
+        "headword": "cot",
+        "homograph": null,
+        "source_raw": "cot [kɒt] n. 1. 幼儿床(通常设有栏杆) 2. 简易床(如行军床)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 幼儿床(通常设有栏杆) 2. 简易床(如行军床)",
+        "phonetic": "kɒt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2380,
+        "word": "couch",
+        "headword": "couch",
+        "homograph": null,
+        "source_raw": "couch [kaʊtʃ] n. 睡椅，长沙发椅"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "睡椅，长沙发椅",
+        "phonetic": "kaʊtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2381,
+        "word": "cough",
+        "headword": "cough",
+        "homograph": null,
+        "source_raw": "cough [kɒf] n. &v. 咳嗽"
+      },
+      "original": {
+        "pos": "n.&v.",
+        "meaning": "咳嗽",
+        "phonetic": "kɒf",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2382,
+        "word": "could",
+        "headword": "could",
+        "homograph": null,
+        "source_raw": "could [kəd; kʊd] aux. v. 1. can的过去式 2. 在转述句中代替 can使用 3. 表示有可能的事 4. 用来表示请求"
+      },
+      "original": {
+        "pos": "aux.",
+        "meaning": "v. 1. can的过去式 2. 在转述句中代替 can使用 3. 表示有可能的事 4. 用来表示请求",
+        "phonetic": "kəd; kʊd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2385,
+        "word": "counsel",
+        "headword": "counsel",
+        "homograph": null,
+        "source_raw": "counsel [ˈkaʊnsəl] n. 1. 辩护律师 2. (专业)意见，忠告，劝告 v. 劝告，提供意见"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 辩护律师 2. (专业)意见，忠告，劝告 v. 劝告，提供意见",
+        "phonetic": "ˈkaʊnsəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2388,
+        "word": "countable",
+        "headword": "countable",
+        "homograph": null,
+        "source_raw": "countable [ˈkaʊntəbəl] adj. 可数的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "可数的",
+        "phonetic": "ˈkaʊntəbəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2389,
+        "word": "countenance",
+        "headword": "countenance",
+        "homograph": null,
+        "source_raw": "*countenance [ˈkaʊntənəns] n. 1. 面部表情，面容 2. 赞成，支持 v. 支持，鼓励"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 面部表情，面容 2. 赞成，支持 v. 支持，鼓励",
+        "phonetic": "ˈkaʊntənəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2390,
+        "word": "counter",
+        "headword": "counter",
+        "homograph": null,
+        "source_raw": "counter [ˈkaʊntə] n. 1. 柜台 2. 筹码 adj. 1. 相反的，对立的 2. 反对的，敌意的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 柜台 2. 筹码 adj. 1. 相反的，对立的 2. 反对的，敌意的",
+        "phonetic": "ˈkaʊntə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 49,
+          "word": "counter",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "柜台；计数器",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a long flat surface over which goods are sold; an electronic device for counting something"
+          },
+          "example": "She paid for the book at the counter.",
+          "translation": "她在柜台付了这本书的钱。",
+          "source_file": "cet4.txt",
+          "source_line": 899,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2391,
+        "word": "counteract",
+        "headword": "counteract",
+        "homograph": null,
+        "source_raw": "*counteract [ˌkaʊntəˈrækt] v. 抵消，中和，消解，抵制"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "抵消，中和，消解，抵制",
+        "phonetic": "ˌkaʊntəˈrækt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2392,
+        "word": "counterattack",
+        "headword": "counterattack",
+        "homograph": null,
+        "source_raw": "counterattack [ˈkaʊntərəˌtæk] v. 反攻，反击"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "反攻，反击",
+        "phonetic": "ˈkaʊntərəˌtæk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2393,
+        "word": "counterbalance",
+        "headword": "counterbalance",
+        "homograph": null,
+        "source_raw": "*counterbalance [ˌkaʊntəˈbæləns] v. 使平衡，弥补，抵消  [ˈkaʊntəbæləns] n. 平衡(力)，抗衡(力)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使平衡，弥补，抵消  [ˈkaʊntəbæləns] n. 平衡(力)，抗衡(力)",
+        "phonetic": "ˌkaʊntəˈbæləns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2394,
+        "word": "counterdrug",
+        "headword": "counterdrug",
+        "homograph": null,
+        "source_raw": "counterdrug [ˈkaʊntədrʌɡ] n. 解瘾药，起相反作用的药"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "解瘾药，起相反作用的药",
+        "phonetic": "ˈkaʊntədrʌɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2395,
+        "word": "counterfeit",
+        "headword": "counterfeit",
+        "homograph": null,
+        "source_raw": "*counterfeit [ˈkaʊntəfɪt] adj. 伪造的，仿造的 n. 伪造物，假冒物，仿制品  v. 伪造，仿制"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "伪造的，仿造的 n. 伪造物，假冒物，仿制品  v. 伪造，仿制",
+        "phonetic": "ˈkaʊntəfɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2396,
+        "word": "counterpart",
+        "headword": "counterpart",
+        "homograph": null,
+        "source_raw": "counterpart [ˈkaʊntəpɑːt] n. 相对应的人(物)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "相对应的人(物)",
+        "phonetic": "ˈkaʊntəpɑːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 81,
+          "word": "counterpart",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "对应的人(或物)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "在不同地点或情境中职位/功能相同的人或物"
+          },
+          "example": "The minister met with her counterpart from Canada.",
+          "translation": "部长会见了她的加拿大 counterpart（对应职务官员）。",
+          "source_file": "npee.txt",
+          "source_line": 1127,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2397,
+        "word": "countess",
+        "headword": "countess",
+        "homograph": null,
+        "source_raw": "countess [ˈkaʊntɪs] n. 1. 女伯爵 2. 伯爵夫人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 女伯爵 2. 伯爵夫人",
+        "phonetic": "ˈkaʊntɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2398,
+        "word": "countless",
+        "headword": "countless",
+        "homograph": null,
+        "source_raw": "countless [ˈkaʊntlɪs] adj. 无数的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "无数的",
+        "phonetic": "ˈkaʊntlɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2402,
+        "word": "coup",
+        "headword": "coup",
+        "homograph": null,
+        "source_raw": "*coup [kuː] n. 砰然的一击，妙计，出乎意料的行动"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "砰然的一击，妙计，出乎意料的行动",
+        "phonetic": "kuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2405,
+        "word": "coupon",
+        "headword": "coupon",
+        "homograph": null,
+        "source_raw": "coupon [ˈkuːpɒn] n. 优惠券，赠券，票证"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "优惠券，赠券，票证",
+        "phonetic": "ˈkuːpɒn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 82,
+          "word": "coupon",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "证明持券人有某种权利的卡片,票证,赠券",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "可兑换物品或以较低价格购买商品的纸质凭证/电子码"
+          },
+          "example": "Use this coupon to get a discount on the book.",
+          "translation": "使用这张优惠券购买这本书可以打折。",
+          "source_file": "npee.txt",
+          "source_line": 1132,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2407,
+        "word": "courageous",
+        "headword": "courageous",
+        "homograph": null,
+        "source_raw": "courageous [kəˈreɪdʒəs] adj. 勇敢的，有胆量的，无畏"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "勇敢的，有胆量的，无畏",
+        "phonetic": "kəˈreɪdʒəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2408,
+        "word": "courier",
+        "headword": "courier",
+        "homograph": null,
+        "source_raw": "*courier [ˈkʊrɪə] n. 1. 特别信使 2. 向导，旅游服务员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 特别信使 2. 向导，旅游服务员",
+        "phonetic": "ˈkʊrɪə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2411,
+        "word": "courteous",
+        "headword": "courteous",
+        "homograph": null,
+        "source_raw": "courteous [ˈkɜːtjəs] adj. 有礼貌的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有礼貌的",
+        "phonetic": "ˈkɜːtjəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    }
+  ]
+}

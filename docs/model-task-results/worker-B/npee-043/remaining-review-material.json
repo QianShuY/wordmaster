@@ -1,0 +1,5210 @@
+{
+  "task_id": "npee-043",
+  "input_sha256": "69c81a3500578f73d0aff019690200bf2282a1de1eda4b4bb5d6215d72b54aca",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4989,
+        "word": "thrust",
+        "headword": "thrust",
+        "homograph": null,
+        "source_raw": "thrust [θrʌst] vt.插入;猛推 n.插,推力 vi.刺,戳,冲"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "插入;猛推 n.插,推力 vi.刺,戳,冲",
+        "phonetic": "θrʌst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 12,
+          "word": "thrust",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 插，刺，戳 2. 刺进，插入 3. 用力推，推进，冲 n. 1. 推，刺，戳 2. 推进力",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "a forceful push or movement"
+          },
+          "example": "The knife’s thrust pierced the shield.",
+          "translation": "刀的一刺穿透了盾牌。",
+          "source_file": "tem.txt",
+          "source_line": 11652,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4990,
+        "word": "thumb",
+        "headword": "thumb",
+        "homograph": null,
+        "source_raw": "thumb [θʌm] n.拇指 v.示意要求搭车;迅速翻阅"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "拇指 v.示意要求搭车;迅速翻阅",
+        "phonetic": "θʌm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 15,
+          "word": "thumb",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "大拇指 || all thumbs笨手笨脚 v. 1. 以拇指翻动(书页等) 2. 翘起拇指要求搭便车",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the short thick finger on the side of your hand"
+          },
+          "example": "He held the baby’s hand with his thumb.",
+          "translation": "他用拇指握着婴儿的手。",
+          "source_file": "tem.txt",
+          "source_line": 11655,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4991,
+        "word": "thunder",
+        "headword": "thunder",
+        "homograph": null,
+        "source_raw": "thunder [ˈθʌndə] n.雷(声);轰隆声 v.打雷;大声说,吼叫"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "雷(声);轰隆声 v.打雷;大声说,吼叫",
+        "phonetic": "ˈθʌndə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 18,
+          "word": "thunder",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 雷，雷声 2. 似雷的响声，轰响 v. 1. 打雷 2. 轰轰作响 3. 大声说，吼叫，强烈谴责",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the loud noise that you hear after a flash of lightning"
+          },
+          "example": "Thunder shook the windows during the storm.",
+          "translation": "风暴期间，雷声震动了窗户。",
+          "source_file": "tem.txt",
+          "source_line": 11658,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4992,
+        "word": "Thursday",
+        "headword": "Thursday",
+        "homograph": null,
+        "source_raw": "Thursday [ðʌs] n.星期四"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "星期四",
+        "phonetic": "ðʌs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 22,
+          "word": "Thursday",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "星期四",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the day of the week between Wednesday and Friday"
+          },
+          "example": "The library is closed on Thursday.",
+          "translation": "图书馆星期四闭馆。",
+          "source_file": "tem.txt",
+          "source_line": 11662,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4993,
+        "word": "thus",
+        "headword": "thus",
+        "homograph": null,
+        "source_raw": "thus [ðʌs] ad.如此;像这样;于是;因此"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "如此;像这样;于是;因此",
+        "phonetic": "ðʌs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 23,
+          "word": "thus",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "1. 如此，这样 2. 因此，于是 3. 到这地步，到这程度",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "as a result of something just mentioned"
+          },
+          "example": "The roads were icy, and thus the school closed early.",
+          "translation": "道路结冰了，因此学校提前关闭。",
+          "source_file": "tem.txt",
+          "source_line": 11663,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4994,
+        "word": "tick",
+        "headword": "tick",
+        "homograph": null,
+        "source_raw": "tick [tik] n.滴答声;勾号 v.滴答响;打勾号于"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "滴答声;勾号 v.滴答响;打勾号于",
+        "phonetic": "tik",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 27,
+          "word": "tick",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 滴答声(尤指钟表的) 2. 核对记号，勾号 v. 1. (指钟等)作滴答声 2. 用记号标出",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a short light sound"
+          },
+          "example": "The clock makes a soft tick every second.",
+          "translation": "钟每秒发出轻轻的滴答声。",
+          "source_file": "tem.txt",
+          "source_line": 11668,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4995,
+        "word": "ticket",
+        "headword": "ticket",
+        "homograph": null,
+        "source_raw": "ticket [ˈtikit] n.票,入场券;票签;(交通违章)罚款传票"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "票,入场券;票签;(交通违章)罚款传票",
+        "phonetic": "ˈtikit",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 28,
+          "word": "ticket",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 票，入场券 2. 标签 3. 交通违例通知单",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a printed or electronic pass that allows you to enter a place"
+          },
+          "example": "Please show your ticket at the entrance.",
+          "translation": "请在入口处出示你的票。",
+          "source_file": "tem.txt",
+          "source_line": 11669,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4996,
+        "word": "tide",
+        "headword": "tide",
+        "homograph": null,
+        "source_raw": "tide [taid] n.潮,潮汐;潮流,趋势"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "潮,潮汐;潮流,趋势",
+        "phonetic": "taid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 31,
+          "word": "tide",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 潮水，潮汐 2. 浪潮 3. 潮流，趋势",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the regular rise and fall of the level of the sea"
+          },
+          "example": "The tide was high when we arrived at the beach.",
+          "translation": "我们到达海滩时正值涨潮。",
+          "source_file": "tem.txt",
+          "source_line": 11672,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4997,
+        "word": "tidy",
+        "headword": "tidy",
+        "homograph": null,
+        "source_raw": "tidy [ˈtaidi] a.整洁的,整齐的 v.整理,收拾"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "整洁的,整齐的 v.整理,收拾",
+        "phonetic": "ˈtaidi",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 32,
+          "word": "tidy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 整洁的，整齐的，有条不紊的 2. 相当大的，可观的 v. 使整洁，整理， 收拾",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "to make a place neat and organized"
+          },
+          "example": "She tidied the desk before leaving the office.",
+          "translation": "离开办公室前，她整理了桌面。",
+          "source_file": "tem.txt",
+          "source_line": 11673,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4998,
+        "word": "tie",
+        "headword": "tie",
+        "homograph": null,
+        "source_raw": "tie [tai] n.领带;联系,关系,纽带;束缚 v.扎,系,捆"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "领带;联系,关系,纽带;束缚 v.扎,系,捆",
+        "phonetic": "tai",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 33,
+          "word": "tie",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 绳索，带子，线，结 2. 领带 3. (pl)缘分，关系 4. (竞赛的)同分，平手 5. 束缚，累赘 v. 1. 捆绑，系，拴 2. 打(结等) 3. 系上或系牢",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a long narrow piece of cloth worn around the neck"
+          },
+          "example": "He wore a tie with a blue pattern.",
+          "translation": "他打了一条蓝色图案的领带。",
+          "source_file": "tem.txt",
+          "source_line": 11674,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 4999,
+        "word": "tiger",
+        "headword": "tiger",
+        "homograph": null,
+        "source_raw": "tiger [ˈtaiɡə] n.虎;老虎"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "虎;老虎",
+        "phonetic": "ˈtaiɡə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 36,
+          "word": "tiger",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "老虎",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large wild cat with orange fur and black stripes"
+          },
+          "example": "A tiger walked quietly through the tall grass.",
+          "translation": "一只老虎悄悄穿过高高的草丛。",
+          "source_file": "tem.txt",
+          "source_line": 11677,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5000,
+        "word": "tight",
+        "headword": "tight",
+        "homograph": null,
+        "source_raw": "tight [tait] a.紧的;紧身的,装紧的;密封的 ad.紧紧地"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "紧的;紧身的,装紧的;密封的 ad.紧紧地",
+        "phonetic": "tait",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 37,
+          "word": "tight",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 紧的，牢固的 2. 紧身的，紧贴的 3. 紧密的，密封的 4. 紧凑的，装满的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "held or fastened firmly in place"
+          },
+          "example": "The knots must be pulled tight before lifting the box.",
+          "translation": "抬箱子前必须把绳结拉紧。",
+          "source_file": "tem.txt",
+          "source_line": 11678,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5001,
+        "word": "tile",
+        "headword": "tile",
+        "homograph": null,
+        "source_raw": "tile [tail] n.瓦片,瓷砖 vt.铺瓦于,贴砖于"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "瓦片,瓷砖 vt.铺瓦于,贴砖于",
+        "phonetic": "tail",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 39,
+          "word": "tile",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "瓦，瓷砖",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a flat piece of baked clay or other material used for covering a surface"
+          },
+          "example": "The kitchen floor is covered in blue tile.",
+          "translation": "厨房地面铺着蓝色瓷砖。",
+          "source_file": "tem.txt",
+          "source_line": 11680,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5002,
+        "word": "till",
+        "headword": "till",
+        "homograph": null,
+        "source_raw": "till [til] prep.直到,直到…为止,与until意思相同"
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "直到,直到…为止,与until意思相同",
+        "phonetic": "til",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5003,
+        "word": "tilt",
+        "headword": "tilt",
+        "homograph": null,
+        "source_raw": "tilt [tilt] v.(使)倾侧;(使)倾斜 n.倾侧;倾斜"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)倾侧;(使)倾斜 n.倾侧;倾斜",
+        "phonetic": "tilt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 42,
+          "word": "tilt",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)倾斜，(使) 翘起 n. 倾斜，斜坡 || at full tilt全速地",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to move into a sloping position"
+          },
+          "example": "The boat tilted sharply in the wind.",
+          "translation": "船在风中剧烈倾斜。",
+          "source_file": "tem.txt",
+          "source_line": 11683,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5004,
+        "word": "timber",
+        "headword": "timber",
+        "homograph": null,
+        "source_raw": "timber [ˈtimbə] n.木材,木料"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "木材,木料",
+        "phonetic": "ˈtimbə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 43,
+          "word": "timber",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 木材，木料 2. 树木",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "wood used for building"
+          },
+          "example": "The carpenter ordered timber for the new roof.",
+          "translation": "木匠为新屋顶订购了木材。",
+          "source_file": "tem.txt",
+          "source_line": 11684,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5005,
+        "word": "time",
+        "headword": "time",
+        "homograph": null,
+        "source_raw": "time [taim] n.时间,时刻;次,回;时代,时期;倍,乘"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "时间,时刻;次,回;时代,时期;倍,乘",
+        "phonetic": "taim",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 44,
+          "word": "time",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 时刻 2. 时间，期间 3. 次，回 4. 时候 5. 时代 6. 倍 7. 节拍 || at the same time同时 [all the times 一直] be in time for…赶得上，及时 [for a long time长时间] for the first time初次，首次 [for the time being暂时] from time to time时常 [have a good time过得很愉快] in no time立即 [in time①来得及②不久] keep good (bad) time(钟表)时间准确(不准确) [keep time使合拍] last time 上一次 /on time准时，按时  v. 1. 安排…的时间 2. 测定…的时间",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the thing that is measured in minutes, hours, days, etc."
+          },
+          "example": "We arrived on time for the concert.",
+          "translation": "我们准时到达了音乐会现场。",
+          "source_file": "tem.txt",
+          "source_line": 11685,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5006,
+        "word": "timely",
+        "headword": "timely",
+        "homograph": null,
+        "source_raw": "timely [ˈtaimli] a.及时的,适时的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "及时的,适时的",
+        "phonetic": "ˈtaimli",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 45,
+          "word": "timely",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "及时的，适时的，合时宜的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "happening at exactly the right time"
+          },
+          "example": "The timely warning helped everyone leave safely.",
+          "translation": "及时的警告帮助大家安全离开。",
+          "source_file": "tem.txt",
+          "source_line": 11686,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5007,
+        "word": "timid",
+        "headword": "timid",
+        "homograph": null,
+        "source_raw": "timid [ˈtimid] a.胆怯的,怯懦的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "胆怯的,怯懦的",
+        "phonetic": "ˈtimid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 47,
+          "word": "timid",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "胆小的，羞怯的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "shy and easily frightened"
+          },
+          "example": "The timid puppy hid behind its owner.",
+          "translation": "这只胆怯的小狗躲在主人身后。",
+          "source_file": "tem.txt",
+          "source_line": 11688,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5008,
+        "word": "tin",
+        "headword": "tin",
+        "homograph": null,
+        "source_raw": "tin [tin] n.罐头;锡 a.锡制的 vt.镀锡于"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "罐头;锡 a.锡制的 vt.镀锡于",
+        "phonetic": "tin",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 49,
+          "word": "tin",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 锡 2. 洋铁罐  v. 把…装罐",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a thin sheet of metal"
+          },
+          "example": "The roof was made of tin.",
+          "translation": "屋顶是用锡皮做的。",
+          "source_file": "tem.txt",
+          "source_line": 11690,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5009,
+        "word": "tiny",
+        "headword": "tiny",
+        "homograph": null,
+        "source_raw": "tiny [ˈtaini] a.极小的,微小的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "极小的,微小的",
+        "phonetic": "ˈtaini",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 57,
+          "word": "tiny",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "微小的，渺小的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "very small"
+          },
+          "example": "The puppy was tiny enough to fit in my hand.",
+          "translation": "这只小狗小得可以放在我的手掌里。",
+          "source_file": "tem.txt",
+          "source_line": 11698,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5010,
+        "word": "tip",
+        "headword": "tip",
+        "homograph": null,
+        "source_raw": "tip [tip] n.尖端;末端;小费 n./v.轻击;倾斜;给小费"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "尖端;末端;小费 n./v.轻击;倾斜;给小费",
+        "phonetic": "tip",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5011,
+        "word": "tire",
+        "headword": "tire",
+        "homograph": null,
+        "source_raw": "tire [ˈtaiə] v.(使)疲倦,(使)厌倦 n.(=tyre)轮胎,车胎"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)疲倦,(使)厌倦 n.(=tyre)轮胎,车胎",
+        "phonetic": "ˈtaiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 63,
+          "word": "tire",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. (使)疲倦 2. (使)厌倦",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make someone feel that they need to rest"
+          },
+          "example": "The long drive began to tire the children.",
+          "translation": "长途驾驶开始让孩子们感到疲倦。",
+          "source_file": "tem.txt",
+          "source_line": 11704,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5012,
+        "word": "tired",
+        "headword": "tired",
+        "homograph": null,
+        "source_raw": "tired a.疲劳的;厌倦的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "疲劳的;厌倦的",
+        "phonetic": "ˈtaɪəd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 64,
+          "word": "tired",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 疲倦的，疲乏的 2. 厌倦的，厌烦的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "needing rest or sleep"
+          },
+          "example": "I felt tired after carrying the boxes upstairs.",
+          "translation": "把箱子搬上楼后，我感到很累。",
+          "source_file": "tem.txt",
+          "source_line": 11705,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5013,
+        "word": "tiresome",
+        "headword": "tiresome",
+        "homograph": null,
+        "source_raw": "tiresome [ˈtaiəsəm] a.使人厌倦的,讨厌的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "使人厌倦的,讨厌的",
+        "phonetic": "ˈtaiəsəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 65,
+          "word": "tiresome",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "令人厌倦的，讨人嫌的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "making you feel annoyed or bored"
+          },
+          "example": "The repeated delays became tiresome.",
+          "translation": "反复的延误让人厌烦。",
+          "source_file": "tem.txt",
+          "source_line": 11706,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5014,
+        "word": "tissue",
+        "headword": "tissue",
+        "homograph": null,
+        "source_raw": "tissue [ˈtiʃjuː, -sjuː] n.织物,薄绢,纸巾;(动,植物的)组织"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "织物,薄绢,纸巾;(动,植物的)组织",
+        "phonetic": "ˈtiʃjuː, -sjuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 66,
+          "word": "tissue",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (任何种类的)织物 2. (动植物的)组织 3. 薄纸，面纸",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "soft thin paper used for blowing your nose or cleaning"
+          },
+          "example": "She cleaned the table with a tissue.",
+          "translation": "她用纸巾擦了擦桌子。",
+          "source_file": "tem.txt",
+          "source_line": 11707,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5015,
+        "word": "title",
+        "headword": "title",
+        "homograph": null,
+        "source_raw": "title [ˈtaitl] n.书名,标题;头衔,称号"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "书名,标题;头衔,称号",
+        "phonetic": "ˈtaitl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 69,
+          "word": "title",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 名称，标题 2. 称号，头衔 3. 权利，资格 4. (某些比赛的)冠军",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the name of a book, film, or other work"
+          },
+          "example": "The book has a short title.",
+          "translation": "这本书的标题很短。",
+          "source_file": "tem.txt",
+          "source_line": 11710,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5016,
+        "word": "to",
+        "headword": "to",
+        "homograph": null,
+        "source_raw": "to [tuː, 弱 tu] prep.(表示方向)到;向;(表示间接关系)给."
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "(表示方向)到;向;(表示间接关系)给.",
+        "phonetic": "tuː, 弱 tu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 70,
+          "word": "to",
+          "part_of_speech": "preposition",
+          "homograph": null,
+          "original_pos": "prep.",
+          "original_meaning": "1. 向，往 2. 到，到达 3. 为了 4. 引起，致使 5. 比 6. 按照，符合",
+          "selected_sense": {
+            "pos": "prep.",
+            "meaning": "used to show movement in a particular direction"
+          },
+          "example": "She walked to the shop to buy milk.",
+          "translation": "她步行去商店买牛奶。",
+          "source_file": "tem.txt",
+          "source_line": 11711,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5017,
+        "word": "toast",
+        "headword": "toast",
+        "homograph": null,
+        "source_raw": "toast [ˈtəust] n.烤面包,吐司;祝酒(词)v.烘,烤;(向…)祝酒"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "烤面包,吐司;祝酒(词)v.烘,烤;(向…)祝酒",
+        "phonetic": "ˈtəust",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 72,
+          "word": "toast",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 烤面包片，吐司 2. 祝酒辞，敬酒 . 1. 烤，烘 2. 使暖和 3. 为…举杯祝酒，为…干杯",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "bread made brown and crisp by heating"
+          },
+          "example": "He had toast and eggs for breakfast.",
+          "translation": "他早餐吃了烤面包和鸡蛋。",
+          "source_file": "tem.txt",
+          "source_line": 11713,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5018,
+        "word": "tobacco",
+        "headword": "tobacco",
+        "homograph": null,
+        "source_raw": "tobacco [təˈbækəu] n.烟草,烟叶"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "烟草,烟叶",
+        "phonetic": "təˈbækəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 73,
+          "word": "tobacco",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 烟草，烟叶 2. 烟草制品",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the dried leaves of a plant used for smoking"
+          },
+          "example": "Tobacco is grown in several regions of the country.",
+          "translation": "这个国家的几个地区种植烟草。",
+          "source_file": "tem.txt",
+          "source_line": 11714,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5019,
+        "word": "today",
+        "headword": "today",
+        "homograph": null,
+        "source_raw": "today [təˈdei] ad.在今天;现今,在当代 n.今天;现在"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "在今天;现今,在当代 n.今天;现在",
+        "phonetic": "təˈdei",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5020,
+        "word": "toe",
+        "headword": "toe",
+        "homograph": null,
+        "source_raw": "toe [təu] n.脚趾,足尖"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "脚趾,足尖",
+        "phonetic": "təu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 77,
+          "word": "toe",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 脚趾，足尖 2. (鞋、袜的)足尖部",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "one of the five parts at the end of your foot"
+          },
+          "example": "A small stone was stuck under his toe.",
+          "translation": "他脚趾下面卡了一颗小石子。",
+          "source_file": "tem.txt",
+          "source_line": 11718,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5021,
+        "word": "together",
+        "headword": "together",
+        "homograph": null,
+        "source_raw": "together [təˈɡeðə] ad.共同,一起;合起来,集拢地"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "共同,一起;合起来,集拢地",
+        "phonetic": "təˈɡeðə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 80,
+          "word": "together",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "1. 一起地，共同地  2. 相互，彼此 || together…with与…一起",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "with or near another person or group"
+          },
+          "example": "The two groups worked together on the project.",
+          "translation": "两个小组一起完成了这个项目。",
+          "source_file": "tem.txt",
+          "source_line": 11721,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5022,
+        "word": "toilet",
+        "headword": "toilet",
+        "homograph": null,
+        "source_raw": "toilet [ˈtɔilit] n.厕所,盥洗室"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "厕所,盥洗室",
+        "phonetic": "ˈtɔilit",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 82,
+          "word": "toilet",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 盥洗室，厕所 2. 梳洗，化妆",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a room or building containing a toilet"
+          },
+          "example": "The train stopped near the public toilet.",
+          "translation": "火车停在公共厕所附近。",
+          "source_file": "tem.txt",
+          "source_line": 11723,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5023,
+        "word": "token",
+        "headword": "token",
+        "homograph": null,
+        "source_raw": "token [ˈtəukən] n.表示;标志;记号;代用硬币 a.象征性的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "表示;标志;记号;代用硬币 a.象征性的",
+        "phonetic": "ˈtəukən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 31,
+          "word": "token",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 标记，象征 2. 代币，辅币 3. 代价券，礼券",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small object or mark representing something; a coin or voucher"
+          },
+          "example": "Please accept this gift as a token of our gratitude.",
+          "translation": "请收下这份礼物，以表我们的谢意。",
+          "source_file": "tem.txt",
+          "source_line": 11724,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5024,
+        "word": "tolerance",
+        "headword": "tolerance",
+        "homograph": null,
+        "source_raw": "tolerance [ˈtɔlərəns] n.宽容;容忍,忍受;耐药力;公差"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "宽容;容忍,忍受;耐药力;公差",
+        "phonetic": "ˈtɔlərəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 84,
+          "word": "tolerance",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 容忍，宽容 2. 韧性，耐心 3. 容许的偏差，偏差，容限",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the willingness to accept something unpleasant or different"
+          },
+          "example": "The new policy allows less tolerance for late work.",
+          "translation": "新政策对迟交作业的容忍度更低。",
+          "source_file": "tem.txt",
+          "source_line": 11726,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5025,
+        "word": "tolerant",
+        "headword": "tolerant",
+        "homograph": null,
+        "source_raw": "tolerant [ˈtɔlərənt] a.容忍的,宽容的;有耐药力的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "容忍的,宽容的;有耐药力的",
+        "phonetic": "ˈtɔlərənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 85,
+          "word": "tolerant",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "容忍的，宽容的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "willing to accept behaviour or opinions that are different from your own"
+          },
+          "example": "The teacher was tolerant of mistakes while students were learning.",
+          "translation": "学生们学习时，老师对错误很宽容。",
+          "source_file": "tem.txt",
+          "source_line": 11727,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5026,
+        "word": "tolerate",
+        "headword": "tolerate",
+        "homograph": null,
+        "source_raw": "tolerate [ˈtɔləreit] vt.容忍,默许;对(药物、毒品等)有耐力"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "容忍,默许;对(药物、毒品等)有耐力",
+        "phonetic": "ˈtɔləreit",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 86,
+          "word": "tolerate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 容忍，宽容 2. 忍受",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to allow someone to do something that you do not like or agree with"
+          },
+          "example": "I cannot tolerate loud music late at night.",
+          "translation": "我无法忍受深夜的大声音乐。",
+          "source_file": "tem.txt",
+          "source_line": 11728,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5027,
+        "word": "toll",
+        "headword": "toll",
+        "homograph": null,
+        "source_raw": "toll [təul, tɔl] n.(道路、桥等的)通行费;牺牲;死伤人数"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(道路、桥等的)通行费;牺牲;死伤人数",
+        "phonetic": "təul, tɔl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5028,
+        "word": "tomato",
+        "headword": "tomato",
+        "homograph": null,
+        "source_raw": "tomato [təˈmɑːtəu, -ˈmei-] n.西红柿"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "西红柿",
+        "phonetic": "təˈmɑːtəu, -ˈmei-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 91,
+          "word": "tomato",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "番茄，西红柿",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a soft red fruit eaten as a vegetable"
+          },
+          "example": "She sliced a fresh tomato for the salad.",
+          "translation": "她为沙拉切了一个新鲜番茄。",
+          "source_file": "tem.txt",
+          "source_line": 11733,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5029,
+        "word": "tomb",
+        "headword": "tomb",
+        "homograph": null,
+        "source_raw": "tomb [tuːm] n.坟,冢"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "坟,冢",
+        "phonetic": "tuːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 92,
+          "word": "tomb",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "坟墓，陵墓",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where a dead person is buried"
+          },
+          "example": "The family visited the ancient tomb.",
+          "translation": "一家人参观了这座古墓。",
+          "source_file": "tem.txt",
+          "source_line": 11734,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5030,
+        "word": "tomorrow",
+        "headword": "tomorrow",
+        "homograph": null,
+        "source_raw": "tomorrow [təˈmɔrəu, -ˈmɔː-] n.明天;来日,未来 ad.在明天,在明日"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "明天;来日,未来 ad.在明天,在明日",
+        "phonetic": "təˈmɔrəu, -ˈmɔː-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5031,
+        "word": "ton",
+        "headword": "ton",
+        "homograph": null,
+        "source_raw": "ton [tʌn, tuŋ] n.吨;(pl.)大量,许多"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "吨;(pl.)大量,许多",
+        "phonetic": "tʌn, tuŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 94,
+          "word": "ton",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "吨",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a unit for measuring weight"
+          },
+          "example": "The truck carried a ton of sand.",
+          "translation": "卡车运了一吨沙子。",
+          "source_file": "tem.txt",
+          "source_line": 11736,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5032,
+        "word": "tone",
+        "headword": "tone",
+        "homograph": null,
+        "source_raw": "tone [təun] n.音调,音色;风气,气氛;腔调,语气;色调"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "音调,音色;风气,气氛;腔调,语气;色调",
+        "phonetic": "təun",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 96,
+          "word": "tone",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 声音，音调 2. 语调，语气 3. 风格，气度 4. 色调 v. 用某种调子说，定调 || tone down缓和，减弱",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the quality of someone’s voice or the way it sounds"
+          },
+          "example": "Her tone sounded calm despite the difficult news.",
+          "translation": "尽管消息很糟，她的语气听起来仍很平静。",
+          "source_file": "tem.txt",
+          "source_line": 11738,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5033,
+        "word": "tongue",
+        "headword": "tongue",
+        "homograph": null,
+        "source_raw": "tongue [tʌŋ] n.舌;语言"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "舌;语言",
+        "phonetic": "tʌŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-105",
+          "row_index": 98,
+          "word": "tongue",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 舌，舌头 2. 语言，口语 3. 舌状物 4. 口才 || hold one's tongue一言不发",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the soft part inside the mouth used for tasting and speaking"
+          },
+          "example": "She bit her tongue to stop herself from interrupting.",
+          "translation": "她咬住舌头，不让自己打断别人。",
+          "source_file": "tem.txt",
+          "source_line": 11740,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5034,
+        "word": "tonight",
+        "headword": "tonight",
+        "homograph": null,
+        "source_raw": "tonight [təˈnait] ad.在今晚;在今夜 n.今晚,今夜"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "在今晚;在今夜 n.今晚,今夜",
+        "phonetic": "təˈnait",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 0,
+          "word": "tonight",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "今晚",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "during the night of today"
+          },
+          "example": "I will call you tonight after the meeting.",
+          "translation": "我今晚开完会后给你打电话。",
+          "source_file": "tem.txt",
+          "source_line": 11742,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5035,
+        "word": "too",
+        "headword": "too",
+        "homograph": null,
+        "source_raw": "too [tuː] ad.也,还;太,过于;很,非常"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "也,还;太,过于;很,非常",
+        "phonetic": "tuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 2,
+          "word": "too",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "1. 也，而且 2. 太，过分 || all too太 [too… for someone to do something 太…以致某人不能做某事] cannot be too…无论…也不过分 /only too…非常",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "more than is needed or wanted"
+          },
+          "example": "It was too cold to go swimming.",
+          "translation": "天气太冷，不适合去游泳。",
+          "source_file": "tem.txt",
+          "source_line": 11744,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5036,
+        "word": "tool",
+        "headword": "tool",
+        "homograph": null,
+        "source_raw": "tool [tuːl] n.工具,用具;方法,手段"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工具,用具;方法,手段",
+        "phonetic": "tuːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 3,
+          "word": "tool",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 工具，器具 2. 走狗，傀儡",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an object used for doing work"
+          },
+          "example": "She used a special tool to open the panel.",
+          "translation": "她用一件专用工具打开了面板。",
+          "source_file": "tem.txt",
+          "source_line": 11745,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5037,
+        "word": "tooth",
+        "headword": "tooth",
+        "homograph": null,
+        "source_raw": "tooth [tuːθ] n.(pl.teeth)牙齿;齿状物;"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(pl.teeth)牙齿;齿状物;",
+        "phonetic": "tuːθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 4,
+          "word": "tooth",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 牙齿 2. 齿状物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "one of the hard white objects in the mouth used for biting and chewing"
+          },
+          "example": "Brush each tooth gently for two minutes.",
+          "translation": "每颗牙齿都要轻轻刷两分钟。",
+          "source_file": "tem.txt",
+          "source_line": 11746,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5038,
+        "word": "top",
+        "headword": "top",
+        "homograph": null,
+        "source_raw": "top [tɔp] n.顶,顶端;首位;顶点 a.最高的;顶上的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "顶,顶端;首位;顶点 a.最高的;顶上的",
+        "phonetic": "tɔp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 8,
+          "word": "top",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 顶，巅 2. 上表面，上边 3. 首位，首席 4. 顶点，极点 || on top of在…的上方 v. 1. 达于…的顶峰 2. 超越",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the highest part of something"
+          },
+          "example": "The cat jumped onto the top of the wall.",
+          "translation": "猫跳到了墙顶上。",
+          "source_file": "tem.txt",
+          "source_line": 11750,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5039,
+        "word": "topic",
+        "headword": "topic",
+        "homograph": null,
+        "source_raw": "topic [ˈtɔpik] n.话题,主题,题目"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "话题,主题,题目",
+        "phonetic": "ˈtɔpik",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 9,
+          "word": "topic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "话题，题目",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a subject that you talk, write, or learn about"
+          },
+          "example": "The class discussed the topic of climate change.",
+          "translation": "全班讨论了气候变化这个话题。",
+          "source_file": "tem.txt",
+          "source_line": 11751,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5040,
+        "word": "torch",
+        "headword": "torch",
+        "homograph": null,
+        "source_raw": "torch [tɔːtʃ] n.手电筒;火炬,火把"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "手电筒;火炬,火把",
+        "phonetic": "tɔːtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 13,
+          "word": "torch",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 火炬，火把 2. (BrE)手电筒=(AmE) flashlight",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small electric light that you can carry"
+          },
+          "example": "He carried a torch to see in the dark.",
+          "translation": "他拿着手电筒在黑暗中照明。",
+          "source_file": "tem.txt",
+          "source_line": 11755,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5041,
+        "word": "torment",
+        "headword": "torment",
+        "homograph": null,
+        "source_raw": "torment [tɔːˈment, ˈtɔːm-] n.折磨;令人痛苦的东西(人)vt.折磨;纠缠"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "折磨;令人痛苦的东西(人)vt.折磨;纠缠",
+        "phonetic": "tɔːˈment, ˈtɔːm-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 14,
+          "word": "torment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 痛苦，折磨 2. 令人痛苦或烦恼的人或物 v. 1. 使痛苦，使烦恼 2. 折磨",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "extreme physical or mental suffering"
+          },
+          "example": "The injury caused him great torment.",
+          "translation": "这次受伤给他带来了极大的痛苦。",
+          "source_file": "tem.txt",
+          "source_line": 11756,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5042,
+        "word": "torrent",
+        "headword": "torrent",
+        "homograph": null,
+        "source_raw": "torrent [ˈtɔrənt, ˈtɔː-] n.激流,洪流;爆发,(话语等的)连发"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "激流,洪流;爆发,(话语等的)连发",
+        "phonetic": "ˈtɔrənt, ˈtɔː-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 17,
+          "word": "torrent",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 急流，湍流 2. (感情等的)爆发，(言语、质问等的)迸发",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large amount of water moving quickly"
+          },
+          "example": "A torrent of rain poured down the hillside.",
+          "translation": "暴雨倾泻下山坡。",
+          "source_file": "tem.txt",
+          "source_line": 11759,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5043,
+        "word": "torture",
+        "headword": "torture",
+        "homograph": null,
+        "source_raw": "torture [ˈtɔːtʃə] v.拷问,拷打;折磨,磨难 n.拷问;折磨,痛苦"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拷问,拷打;折磨,磨难 n.拷问;折磨,痛苦",
+        "phonetic": "ˈtɔːtʃə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5044,
+        "word": "toss",
+        "headword": "toss",
+        "homograph": null,
+        "source_raw": "toss [tɔs, tɔːs] vt.向上掷/扔;摇摆,颠簸 n.投,扔;摇动"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "向上掷/扔;摇摆,颠簸 n.投,扔;摇动",
+        "phonetic": "tɔs, tɔːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 26,
+          "word": "toss",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 投，扔，抛 2. (使)颠簸，(使)摇摆 3. (指身体部分)突然举起，突然抬起 4. 轻拌 5. 掷(钱币)(看其正反)以决定某事  n. 1. 投，扔，抛 2. 一点点，丝毫",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to throw something lightly or carelessly"
+          },
+          "example": "She tossed the keys onto the table.",
+          "translation": "她把钥匙扔到桌上。",
+          "source_file": "tem.txt",
+          "source_line": 11768,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5045,
+        "word": "total",
+        "headword": "total",
+        "homograph": null,
+        "source_raw": "total [ˈtəutəl] n.总数,合计 a.总的,全部的 v.合计,总数达"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "总数,合计 a.总的,全部的 v.合计,总数达",
+        "phonetic": "ˈtəutəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5046,
+        "word": "touch",
+        "headword": "touch",
+        "homograph": null,
+        "source_raw": "touch [tʌtʃ] v.触,碰,摸;感动;涉及 n.触动,碰到;少许"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "触,碰,摸;感动;涉及 n.触动,碰到;少许",
+        "phonetic": "tʌtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 31,
+          "word": "touch",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 接触，触摸 2. 轻击 3. 触动，感动 4. 涉及，提到 || touch on…略微论及 n. 1. 触，接触 2. 触觉  3. 一笔，笔画 4. 少许 5. 联系 || get in touch with sb与…取得联系 [keep in touch with sb 与…保持联系] lose touch失去联系",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to put your hand or another part of your body on something"
+          },
+          "example": "The paint was still wet, so do not touch it.",
+          "translation": "油漆还没干，所以不要碰。",
+          "source_file": "tem.txt",
+          "source_line": 11773,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5047,
+        "word": "tough",
+        "headword": "tough",
+        "homograph": null,
+        "source_raw": "tough [tʌf] a.坚韧的,棘手的;强健的,吃苦耐劳的;粗暴的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "坚韧的,棘手的;强健的,吃苦耐劳的;粗暴的",
+        "phonetic": "tʌf",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 34,
+          "word": "tough",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. (物体)坚韧的，坚硬的 2. (肉等)硬的，咬不动的 3. (身体)强壮的，结实的 4. 顽固的，不屈不挠的 5. (工作等)费力的，棘手的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "difficult to do or deal with"
+          },
+          "example": "The hikers faced a tough climb in the snow.",
+          "translation": "徒步者们在雪地里遇到了一段艰难的攀登。",
+          "source_file": "tem.txt",
+          "source_line": 11776,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5048,
+        "word": "tour",
+        "headword": "tour",
+        "homograph": null,
+        "source_raw": "tour [tuə] n.旅游,旅行;巡回演出/比赛 v.旅游"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "旅游,旅行;巡回演出/比赛 v.旅游",
+        "phonetic": "tuə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 35,
+          "word": "tour",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 旅行，游览 2. 观摩，参观 3. 巡回演出 4. 公差 v. 1. 旅行，游历 2. 巡回演出",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a journey made for pleasure, during which you visit several places"
+          },
+          "example": "We took a guided tour of the old castle.",
+          "translation": "我们参加了古堡导览。",
+          "source_file": "tem.txt",
+          "source_line": 11777,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5049,
+        "word": "tourist",
+        "headword": "tourist",
+        "homograph": null,
+        "source_raw": "tourist [ˈtuərist] n.旅游者,观光客;巡回比赛的运动员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "旅游者,观光客;巡回比赛的运动员",
+        "phonetic": "ˈtuərist",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 37,
+          "word": "tourist",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "旅游者",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who is travelling or visiting a place for pleasure"
+          },
+          "example": "The tourist asked for directions to the museum.",
+          "translation": "游客询问了去博物馆的路线。",
+          "source_file": "tem.txt",
+          "source_line": 11779,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5050,
+        "word": "tow",
+        "headword": "tow",
+        "homograph": null,
+        "source_raw": "tow [təu] vt.(用绳、链等)拖(车、船等) n.拖,牵引"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "(用绳、链等)拖(车、船等) n.拖,牵引",
+        "phonetic": "təu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5051,
+        "word": "toward",
+        "headword": "toward",
+        "homograph": null,
+        "source_raw": "toward [təˈwɔːd] prep.(towards)朝,向;将近;对于;为了"
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "(towards)朝,向;将近;对于;为了",
+        "phonetic": "təˈwɔːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5052,
+        "word": "towel",
+        "headword": "towel",
+        "homograph": null,
+        "source_raw": "towel [ˈtauəl] n.毛巾 vt.用毛巾擦或擦干"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "毛巾 vt.用毛巾擦或擦干",
+        "phonetic": "ˈtauəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 41,
+          "word": "towel",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "毛巾，手巾",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a piece of cloth used for drying yourself"
+          },
+          "example": "She dried her hair with a soft towel.",
+          "translation": "她用柔软的毛巾擦干头发。",
+          "source_file": "tem.txt",
+          "source_line": 11784,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5053,
+        "word": "tower",
+        "headword": "tower",
+        "homograph": null,
+        "source_raw": "tower [ˈtauə] n.塔 v.高耸"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "塔 v.高耸",
+        "phonetic": "ˈtauə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 42,
+          "word": "tower",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 塔，高楼 2. (作发射信号、广播等用)铁塔  v. 高耸，屹立",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a tall narrow building or structure"
+          },
+          "example": "The tower can be seen from the motorway.",
+          "translation": "从高速公路上可以看到这座塔。",
+          "source_file": "tem.txt",
+          "source_line": 11785,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5054,
+        "word": "town",
+        "headword": "town",
+        "homograph": null,
+        "source_raw": "town [taun] n.市镇;市民;城市商业区,闹市区"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "市镇;市民;城市商业区,闹市区",
+        "phonetic": "taun",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 43,
+          "word": "town",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 城镇，市镇 2. 闹市，市中心",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where people live and work, smaller than a city"
+          },
+          "example": "The town holds a market every Saturday.",
+          "translation": "这个城镇每周六都会举办集市。",
+          "source_file": "tem.txt",
+          "source_line": 11786,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5055,
+        "word": "toxic",
+        "headword": "toxic",
+        "homograph": null,
+        "source_raw": "toxic [ˈtɔksik] a.有毒的;中毒的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有毒的;中毒的",
+        "phonetic": "ˈtɔksik",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 47,
+          "word": "toxic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "有毒(性)的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "poisonous or harmful"
+          },
+          "example": "Some household cleaners contain toxic chemicals.",
+          "translation": "一些家用清洁剂含有有毒化学物质。",
+          "source_file": "tem.txt",
+          "source_line": 11790,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5056,
+        "word": "toy",
+        "headword": "toy",
+        "homograph": null,
+        "source_raw": "toy [tɔi] n.玩具 vi.(with)漫不经心地考虑;摆弄"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "玩具 vi.(with)漫不经心地考虑;摆弄",
+        "phonetic": "tɔi",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 48,
+          "word": "toy",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "玩具 v. 1. (以…)自娱，不太认真地考虑 2. 玩弄",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an object for children to play with"
+          },
+          "example": "The child left her favourite toy on the sofa.",
+          "translation": "孩子把她最喜欢的玩具留在了沙发上。",
+          "source_file": "tem.txt",
+          "source_line": 11791,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5057,
+        "word": "trace",
+        "headword": "trace",
+        "homograph": null,
+        "source_raw": "trace [treis] n.痕迹,踪迹;极少量 v.描绘;跟踪,追踪"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "痕迹,踪迹;极少量 v.描绘;跟踪,追踪",
+        "phonetic": "treis",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5058,
+        "word": "track",
+        "headword": "track",
+        "homograph": null,
+        "source_raw": "track [træk] n.跑道,小路;轨迹,轮迹 v.跟踪,追踪"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "跑道,小路;轨迹,轮迹 v.跟踪,追踪",
+        "phonetic": "træk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 50,
+          "word": "track",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 小径，小道 2. 跑道，田径运动 3. 铁轨，轨道 4. 履带  v. 1. 跟踪，尾随 2. 走过",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a rough path or road"
+          },
+          "example": "We walked along a track through the forest.",
+          "translation": "我们沿着森林中的一条小路行走。",
+          "source_file": "tem.txt",
+          "source_line": 11793,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5059,
+        "word": "tractor",
+        "headword": "tractor",
+        "homograph": null,
+        "source_raw": "tractor [ˈtræktə] n.拖拉机,牵引车"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "拖拉机,牵引车",
+        "phonetic": "ˈtræktə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 53,
+          "word": "tractor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "拖拉机",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a powerful vehicle used on farms"
+          },
+          "example": "The tractor pulled a trailer full of hay.",
+          "translation": "拖拉机拉着一辆装满干草的拖车。",
+          "source_file": "tem.txt",
+          "source_line": 11796,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5060,
+        "word": "trade",
+        "headword": "trade",
+        "homograph": null,
+        "source_raw": "trade [treid] n.贸易,商业;职业,行业 v.经商,交易"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "贸易,商业;职业,行业 v.经商,交易",
+        "phonetic": "treid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 54,
+          "word": "trade",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 交易，买卖 2. 行业 3. 贸易额，交易量 4．职业，手艺 || trade union 工会  v. 1. 买卖，经商 2. 交换 [trade in折价换取] trade off 权衡，比较",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to buy and sell things"
+          },
+          "example": "The two countries trade goods across the border.",
+          "translation": "两国在边境进行商品贸易。",
+          "source_file": "tem.txt",
+          "source_line": 11797,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5061,
+        "word": "trademark",
+        "headword": "trademark",
+        "homograph": null,
+        "source_raw": "trademark [ˈtreidmɑːk] n.商标;特征 vt.注册的…商标"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "商标;特征 vt.注册的…商标",
+        "phonetic": "ˈtreidmɑːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 55,
+          "word": "trademark",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "商标",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a name or symbol used by a company for its products"
+          },
+          "example": "The logo is a registered trademark.",
+          "translation": "这个标志是注册商标。",
+          "source_file": "tem.txt",
+          "source_line": 11798,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5062,
+        "word": "tradition",
+        "headword": "tradition",
+        "homograph": null,
+        "source_raw": "tradition [trəˈdiʃən] n.传统; 惯例; 传说"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "传统; 惯例; 传说",
+        "phonetic": "trəˈdiʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 57,
+          "word": "tradition",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 传统 2. 惯例，规矩",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a custom or belief that has existed for a long time"
+          },
+          "example": "The town preserves its tradition of holding a summer fair.",
+          "translation": "这个镇保留着举办夏季集市的传统。",
+          "source_file": "tem.txt",
+          "source_line": 11800,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5063,
+        "word": "traffic",
+        "headword": "traffic",
+        "homograph": null,
+        "source_raw": "traffic [ˈtræfik] n.交通,交通量"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "交通,交通量",
+        "phonetic": "ˈtræfik",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 59,
+          "word": "traffic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 交通，运输，通行 2. (尤指非法物品的)交易，买卖 3. 运输业 4. 交通量，运输量",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the vehicles moving along a road or street"
+          },
+          "example": "Traffic was heavy near the stadium.",
+          "translation": "体育场附近交通拥堵。",
+          "source_file": "tem.txt",
+          "source_line": 11802,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5064,
+        "word": "tragedy",
+        "headword": "tragedy",
+        "homograph": null,
+        "source_raw": "tragedy [ˈtrædʒidi] n.悲剧;惨事,灾难"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "悲剧;惨事,灾难",
+        "phonetic": "ˈtrædʒidi",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 62,
+          "word": "tragedy",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 悲剧，悲剧性作品 2. 惨事，惨案",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a very sad event or situation"
+          },
+          "example": "The play tells the tragedy of a family divided by war.",
+          "translation": "这部戏讲述了一个被战争分裂的家庭的悲剧。",
+          "source_file": "tem.txt",
+          "source_line": 11805,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5065,
+        "word": "tragic",
+        "headword": "tragic",
+        "homograph": null,
+        "source_raw": "tragic [ˈtrædʒik] a.悲剧的,悲惨的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "悲剧的,悲惨的",
+        "phonetic": "ˈtrædʒik",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 63,
+          "word": "tragic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 悲 J渗的，不幸的 2. 悲剧的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "causing great sadness, especially because someone has died or suffered"
+          },
+          "example": "The community mourned the victims of the tragic accident.",
+          "translation": "社区为这起悲惨事故的遇难者哀悼。",
+          "source_file": "tem.txt",
+          "source_line": 11806,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5066,
+        "word": "trail",
+        "headword": "trail",
+        "homograph": null,
+        "source_raw": "trail [treil] n.踪迹,痕迹;小路 v.追踪,跟踪;拖,拖曳;"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "踪迹,痕迹;小路 v.追踪,跟踪;拖,拖曳;",
+        "phonetic": "treil",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 64,
+          "word": "trail",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 足迹，踪迹 2. 小径，小路 3. (人流、车流等)一股，(烟、尘等)一缕 v. 1. 拖，拖曳 2. 跟踪，尾随 3. (植物)蔓生",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a path through the countryside or forest"
+          },
+          "example": "The hikers followed a narrow trail along the ridge.",
+          "translation": "徒步者们沿着山脊上的一条狭窄小径前行。",
+          "source_file": "tem.txt",
+          "source_line": 11807,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5067,
+        "word": "train",
+        "headword": "train",
+        "homograph": null,
+        "source_raw": "train [trein] n.列车;行列,系列,一串 v.训练,培养"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "列车;行列,系列,一串 v.训练,培养",
+        "phonetic": "trein",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5068,
+        "word": "training",
+        "headword": "training",
+        "homograph": null,
+        "source_raw": "training [ˈtreiniŋ] n.训练,培养"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "训练,培养",
+        "phonetic": "ˈtreiniŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 68,
+          "word": "training",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "锻炼，训练，培养",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the process of learning the skills needed for a job or activity"
+          },
+          "example": "Training for the new role starts next month.",
+          "translation": "新职位的培训下个月开始。",
+          "source_file": "tem.txt",
+          "source_line": 11811,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5069,
+        "word": "trait",
+        "headword": "trait",
+        "homograph": null,
+        "source_raw": "trait [trei, treit] n.特征,特点,特性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "特征,特点,特性",
+        "phonetic": "trei, treit",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 69,
+          "word": "trait",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(人的)个性，显著的特点",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a particular quality in someone’s character"
+          },
+          "example": "Patience is an important trait for a teacher.",
+          "translation": "耐心是教师的重要特质。",
+          "source_file": "tem.txt",
+          "source_line": 11812,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5070,
+        "word": "traitor",
+        "headword": "traitor",
+        "homograph": null,
+        "source_raw": "traitor [ˈtreitə] n.叛徒,卖国贼"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "叛徒,卖国贼",
+        "phonetic": "ˈtreitə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 70,
+          "word": "traitor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "叛徒，卖国贼",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who is not loyal to their country or group"
+          },
+          "example": "The traitor was caught while trying to leave the country.",
+          "translation": "这名叛徒在试图离境时被抓获。",
+          "source_file": "tem.txt",
+          "source_line": 11813,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5071,
+        "word": "tram",
+        "headword": "tram",
+        "homograph": null,
+        "source_raw": "tram [træm] n.有轨电车"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "有轨电车",
+        "phonetic": "træm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 71,
+          "word": "tram",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(BrE)(有轨)电车=(AmE) streetcar",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a passenger vehicle that runs on rails along city streets"
+          },
+          "example": "We rode the tram through the city centre.",
+          "translation": "我们乘有轨电车穿过市中心。",
+          "source_file": "tem.txt",
+          "source_line": 11814,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5072,
+        "word": "tramp",
+        "headword": "tramp",
+        "homograph": null,
+        "source_raw": "tramp [træmp] n./v步行;沉重的脚步声(走)v.践踏n.流浪者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "/v步行;沉重的脚步声(走)v.践踏n.流浪者",
+        "phonetic": "træmp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 72,
+          "word": "tramp",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 流浪汉，漂泊者 2. 长途徒步旅行 3. 重步声 v. 1. 用沉重的脚步行走 2. 跋涉",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person with no home who travels from place to place"
+          },
+          "example": "The tramp walked along the road carrying his belongings.",
+          "translation": "流浪汉带着自己的物品沿着道路走。",
+          "source_file": "tem.txt",
+          "source_line": 11815,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5073,
+        "word": "transaction",
+        "headword": "transaction",
+        "homograph": null,
+        "source_raw": "transaction [trænˈzækʃən] n.办理,处理;交易,事务;(pl.)会报,学报"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "办理,处理;交易,事务;(pl.)会报,学报",
+        "phonetic": "trænˈzækʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 77,
+          "word": "transaction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 办理，处理 2. 业务，交易 3. (pl)(学术团体会议的)议事录，公报",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a business deal or action, such as buying or selling something"
+          },
+          "example": "The bank recorded the transaction on the same day.",
+          "translation": "银行当天记录了这笔交易。",
+          "source_file": "tem.txt",
+          "source_line": 11820,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5074,
+        "word": "transcend",
+        "headword": "transcend",
+        "homograph": null,
+        "source_raw": "transcend [trænˈsend, trɑːn-] vt.超出,超越(经验、知识、能力的范围等)"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "超出,超越(经验、知识、能力的范围等)",
+        "phonetic": "trænˈsend, trɑːn-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 78,
+          "word": "transcend",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 超出(超越) …的范围 2. 优于(胜过)某人(事物)",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to go beyond the usual limits of something"
+          },
+          "example": "The artist’s work transcends cultural boundaries.",
+          "translation": "这位艺术家的作品超越了文化界限。",
+          "source_file": "tem.txt",
+          "source_line": 11821,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5075,
+        "word": "transfer",
+        "headword": "transfer",
+        "homograph": null,
+        "source_raw": "transfer vt./n.转移;转换;转让;过户;迁移;改乘"
+      },
+      "original": {
+        "pos": "vt./n.",
+        "meaning": "v. 转移；转换；转让；迁移；改乘 [ˈtrænsfɜː(r)] n. 转移；转让；过户；换乘",
+        "phonetic": "trænsˈfɜː(r)",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5076,
+        "word": "transform",
+        "headword": "transform",
+        "homograph": null,
+        "source_raw": "transform [trænsˈfɔːm, trænz-] vt.改变,变换;变压;转化;改造,改造"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "改变,变换;变压;转化;改造,改造",
+        "phonetic": "trænsˈfɔːm, trænz-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 85,
+          "word": "transform",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使完全改变，使改观",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to change the form, appearance, or character of something"
+          },
+          "example": "The renovation transformed the old warehouse into a theatre.",
+          "translation": "翻修把旧仓库改造成了一座剧院。",
+          "source_file": "tem.txt",
+          "source_line": 11828,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5077,
+        "word": "transient",
+        "headword": "transient",
+        "homograph": null,
+        "source_raw": "transient [ˈtrænziənt, -si-] a.短暂的,转瞬即逝的;临时的,暂住的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "短暂的,转瞬即逝的;临时的,暂住的",
+        "phonetic": "ˈtrænziənt, -si-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 88,
+          "word": "transient",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "短暂的，转瞬即逝的 n. 仅短暂在某地停留或工作的人",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "lasting for only a short time"
+          },
+          "example": "The pain was transient and soon disappeared.",
+          "translation": "疼痛是暂时的，很快就消失了。",
+          "source_file": "tem.txt",
+          "source_line": 11831,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5078,
+        "word": "transistor",
+        "headword": "transistor",
+        "homograph": null,
+        "source_raw": "transistor [trænˈsistə] n.晶体管;晶体管收音机"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "晶体管;晶体管收音机",
+        "phonetic": "trænˈsistə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 89,
+          "word": "transistor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 晶体管 2. 晶体管收音机",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small electronic device that controls the flow of electricity"
+          },
+          "example": "The radio uses a small transistor to amplify the signal.",
+          "translation": "这台收音机使用一个小晶体管来放大信号。",
+          "source_file": "tem.txt",
+          "source_line": 11832,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5079,
+        "word": "transition",
+        "headword": "transition",
+        "homograph": null,
+        "source_raw": "transition [trænˈsiʒən, -ˈziʃən] n.转变,变迁,过渡(时期)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "转变,变迁,过渡(时期)",
+        "phonetic": "trænˈsiʒən, -ˈziʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 91,
+          "word": "transition",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "转变，过渡，变迁",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the process of changing from one state or situation to another"
+          },
+          "example": "The transition from school to university can be challenging.",
+          "translation": "从中学到大学的过渡可能颇具挑战。",
+          "source_file": "tem.txt",
+          "source_line": 11834,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5080,
+        "word": "translate",
+        "headword": "translate",
+        "homograph": null,
+        "source_raw": "translate v.翻译,解释;转化,"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "翻译,解释;转化,",
+        "phonetic": "trænzˈleɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 94,
+          "word": "translate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 翻译 2. 解释，阐明 3. 变换，转化 || translate sth into sth把…译成…，使以另一种形式出现",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to change words into a different language"
+          },
+          "example": "The student translated the paragraph into Spanish.",
+          "translation": "学生把这段话翻译成了西班牙语。",
+          "source_file": "tem.txt",
+          "source_line": 11837,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5081,
+        "word": "translation",
+        "headword": "translation",
+        "homograph": null,
+        "source_raw": "translation [trænsˈleiʃən, trænz-] n.翻译;译文,译本"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "翻译;译文,译本",
+        "phonetic": "trænsˈleiʃən, trænz-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 95,
+          "word": "translation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 翻译，译文，译本 2. 转变，变化",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the process or result of changing words into another language"
+          },
+          "example": "The translation of the poem keeps its original rhythm.",
+          "translation": "这首诗的译文保留了原有的节奏。",
+          "source_file": "tem.txt",
+          "source_line": 11838,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5082,
+        "word": "transmission",
+        "headword": "transmission",
+        "homograph": null,
+        "source_raw": "transmission [trænzˈmiʃən, træns-] n.播送,发射;传动,传送"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "播送,发射;传动,传送",
+        "phonetic": "trænzˈmiʃən, træns-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 98,
+          "word": "transmission",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 传送，中转 2. 电视或无线电播送",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the process of sending out signals or information"
+          },
+          "example": "The transmission of the message was delayed by the storm.",
+          "translation": "信息传送因暴风雨而延迟。",
+          "source_file": "tem.txt",
+          "source_line": 11841,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5083,
+        "word": "transmit",
+        "headword": "transmit",
+        "homograph": null,
+        "source_raw": "transmit [trænzˈmit, træns-] vt.传输/导;转送;发射 vi.发射信号;发报"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "传输/导;转送;发射 vi.发射信号;发报",
+        "phonetic": "trænzˈmit, træns-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-106",
+          "row_index": 99,
+          "word": "transmit",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 播送，传送 2. 转送，传达 3. 传染，传播 4. 传导，传动",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to send or pass something from one person or place to another"
+          },
+          "example": "The device can transmit data over long distances.",
+          "translation": "该设备可以远距离传输数据。",
+          "source_file": "tem.txt",
+          "source_line": 11842,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5084,
+        "word": "transparent",
+        "headword": "transparent",
+        "homograph": null,
+        "source_raw": "transparent [trænsˈpærənt,-ˈpεə-] a.透明的,透光的;易理解的;明显的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "透明的,透光的;易理解的;明显的",
+        "phonetic": "trænsˈpærənt,-ˈpεə-",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-107",
+          "row_index": 2,
+          "word": "transparent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 透明的，透光的 2. 易懂的 3. 显而易见的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "allowing light to pass through; easy to understand; obvious or easy to see through"
+          },
+          "example": "The transparent glass let sunlight fill the room.",
+          "translation": "透明的玻璃让阳光照满了房间。",
+          "source_file": "tem.txt",
+          "source_line": 11846,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5085,
+        "word": "transplant",
+        "headword": "transplant",
+        "homograph": null,
+        "source_raw": "transplant [trænsˈplɑːnt] n./v.移植(植物;组织,器官等);迁移;"
+      },
+      "original": {
+        "pos": "n./v.",
+        "meaning": "移植(植物;组织,器官等);迁移;",
+        "phonetic": "trænsˈplɑːnt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5086,
+        "word": "transport",
+        "headword": "transport",
+        "homograph": null,
+        "source_raw": "transport v.运输,运送,搬运n.运输;运输系统,运载工具"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "运输，运送，搬运 [ˈtrænspɔːt] n. 运输；运输系统；运载工具",
+        "phonetic": "trænˈspɔːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-107",
+          "row_index": 5,
+          "word": "transport",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 运输，输送 2. 放逐，流放 n. 1. 运输 2. 运输工具",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to carry people or goods from one place to another"
+          },
+          "example": "The company transports fresh fruit to nearby shops.",
+          "translation": "这家公司把新鲜水果运送到附近商店。",
+          "source_file": "tem.txt",
+          "source_line": 11849,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5087,
+        "word": "trap",
+        "headword": "trap",
+        "homograph": null,
+        "source_raw": "trap [træp] n.陷阱,圈套 vt.诱捕;使中圈套 vi.设圈套"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "陷阱,圈套 vt.诱捕;使中圈套 vi.设圈套",
+        "phonetic": "træp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-107",
+          "row_index": 9,
+          "word": "trap",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 捕捉器，陷阱 2. 诡计，圈套 v. 1. 设陷阱捕捉 2. 诱骗，使堕入圈套 3. 使陷入困境",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a device used to catch animals; a trick or difficult situation"
+          },
+          "example": "The mouse avoided the trap by staying close to the wall.",
+          "translation": "那只老鼠贴着墙边走，躲开了捕鼠器。",
+          "source_file": "tem.txt",
+          "source_line": 11853,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "npee.txt",
+        "source_line": 5088,
+        "word": "trash",
+        "headword": "trash",
+        "homograph": null,
+        "source_raw": "trash [træʃ] n.垃圾;拙劣的作品;渣滓,败类"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "垃圾;拙劣的作品;渣滓,败类",
+        "phonetic": "træʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-107",
+          "row_index": 10,
+          "word": "trash",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 废话，糟粕 2. 垃圾=(AmE) rubbish",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "waste material; very bad or worthless things"
+          },
+          "example": "Please put the empty boxes in the trash.",
+          "translation": "请把空箱子扔进垃圾桶。",
+          "source_file": "tem.txt",
+          "source_line": 11854,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    }
+  ]
+}

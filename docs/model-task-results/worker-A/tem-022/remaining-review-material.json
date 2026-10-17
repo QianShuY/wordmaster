@@ -1,0 +1,3886 @@
+{
+  "task_id": "tem-022",
+  "input_sha256": "5c6f34fed7e7e9388c64fc0a7642145a8861c25936d76735bcc273a598b0464f",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2914,
+        "word": "desperation",
+        "headword": "desperation",
+        "homograph": null,
+        "source_raw": "desperation [ˌdespəˈreɪʃən] n. 绝望，拼命，铤而走险"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "绝望，拼命，铤而走险",
+        "phonetic": "ˌdespəˈreɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2915,
+        "word": "despicable",
+        "headword": "despicable",
+        "homograph": null,
+        "source_raw": "*despicable [ˈdespɪkəbl] adj. 可鄙的，卑劣的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "可鄙的，卑劣的",
+        "phonetic": "ˈdespɪkəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2916,
+        "word": "despise",
+        "headword": "despise",
+        "homograph": null,
+        "source_raw": "despise [dɪˈspaɪz] v. 鄙视，蔑视，轻视"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "鄙视，蔑视，轻视",
+        "phonetic": "dɪˈspaɪz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 11,
+          "word": "despise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "鄙视，蔑视",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to dislike somebody or something and have no respect for them"
+          },
+          "example": "She despised the practice of taking credit for work done by someone else.",
+          "translation": "她鄙视把别人完成的工作成果据为己有这种做法。",
+          "source_file": "cet4.txt",
+          "source_line": 1056,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 89,
+          "word": "despise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "轻视,蔑视",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "认为某人/某事毫无价值、不值得尊重"
+          },
+          "example": "He despised dishonesty in any form.",
+          "translation": "他蔑视任何形式的不诚实。",
+          "source_file": "npee.txt",
+          "source_line": 1326,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2917,
+        "word": "despite",
+        "headword": "despite",
+        "homograph": null,
+        "source_raw": "despite [dɪˈspaɪt] n. 1. 侮辱，伤害 2. 恶意，怨恨 prep. 尽管，不顾，虽然"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 侮辱，伤害 2. 恶意，怨恨 prep. 尽管，不顾，虽然",
+        "phonetic": "dɪˈspaɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2918,
+        "word": "despoil",
+        "headword": "despoil",
+        "homograph": null,
+        "source_raw": "*despoil [dɪˈspɔɪl] v. 抢劫，掠夺"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "抢劫，掠夺",
+        "phonetic": "dɪˈspɔɪl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2919,
+        "word": "despot",
+        "headword": "despot",
+        "homograph": null,
+        "source_raw": "despot [ˈdespɒt] n. 有至高无上权力的统治者，暴君"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "有至高无上权力的统治者，暴君",
+        "phonetic": "ˈdespɒt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2920,
+        "word": "despotism",
+        "headword": "despotism",
+        "homograph": null,
+        "source_raw": "*despotism [ˈdespətɪzəm] n. 专制君主的统治，暴政"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "专制君主的统治，暴政",
+        "phonetic": "ˈdespətɪzəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2923,
+        "word": "destine",
+        "headword": "destine",
+        "homograph": null,
+        "source_raw": "destine [ˈdestɪn] v. 命定，注定，指定"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "命定，注定，指定",
+        "phonetic": "ˈdestɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2924,
+        "word": "destined",
+        "headword": "destined",
+        "homograph": null,
+        "source_raw": "destined [ˈdestɪnd] adj. 命中注定的，预定的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "命中注定的，预定的",
+        "phonetic": "ˈdestɪnd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2925,
+        "word": "destiny",
+        "headword": "destiny",
+        "homograph": null,
+        "source_raw": "destiny [ˈdestɪnɪ] n. 命运，天命"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "命运，天命",
+        "phonetic": "ˈdestɪnɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 90,
+          "word": "destiny",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "命运;天数,天命",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "某人未来将发生的事情，尤指无法改变/避免的事"
+          },
+          "example": "She felt that music was her destiny.",
+          "translation": "她觉得音乐就是自己的命运。",
+          "source_file": "npee.txt",
+          "source_line": 1330,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2926,
+        "word": "destitute",
+        "headword": "destitute",
+        "homograph": null,
+        "source_raw": "*destitute [ˈdestɪtjuːt] adj. 1. 贫困的，赤贫的 2. 缺少的，毫无…的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 贫困的，赤贫的 2. 缺少的，毫无…的",
+        "phonetic": "ˈdestɪtjuːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2928,
+        "word": "destroyer",
+        "headword": "destroyer",
+        "homograph": null,
+        "source_raw": "destroyer [dɪˈstrɔɪə] n. 1. 破坏者 2. 驱逐舰"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 破坏者 2. 驱逐舰",
+        "phonetic": "dɪˈstrɔɪə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2929,
+        "word": "destruction",
+        "headword": "destruction",
+        "homograph": null,
+        "source_raw": "destruction [dɪˈstrʌkʃən] n. 毁坏， 毁灭，消灭"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "毁坏， 毁灭，消灭",
+        "phonetic": "dɪˈstrʌkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 12,
+          "word": "destruction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "破坏，毁灭，消灭",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of destroying something; the process of being destroyed"
+          },
+          "example": "The storm caused widespread destruction along the coast.",
+          "translation": "暴风雨对沿海地区造成了大范围破坏。",
+          "source_file": "cet4.txt",
+          "source_line": 1060,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 91,
+          "word": "destruction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "毁坏,毁灭(的原因)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "破坏某物的行为或被破坏的过程"
+          },
+          "example": "The fire caused the destruction of several old buildings.",
+          "translation": "火灾毁坏了几栋旧建筑。",
+          "source_file": "npee.txt",
+          "source_line": 1332,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2930,
+        "word": "destructive",
+        "headword": "destructive",
+        "homograph": null,
+        "source_raw": "destructive [dɪˈstrʌktɪv] adj. 破坏(性)的，毁灭(性)的，非建设性的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "破坏(性)的，毁灭(性)的，非建设性的",
+        "phonetic": "dɪˈstrʌktɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 92,
+          "word": "destructive",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "破坏性",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "造成破坏或损害的"
+          },
+          "example": "The storm had a destructive effect on the coastline.",
+          "translation": "风暴对海岸线造成了破坏性影响。",
+          "source_file": "npee.txt",
+          "source_line": 1333,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2931,
+        "word": "detach",
+        "headword": "detach",
+        "homograph": null,
+        "source_raw": "detach [dɪˈtætʃ] v. 拆卸，使分离，派遣"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拆卸，使分离，派遣",
+        "phonetic": "dɪˈtætʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2932,
+        "word": "detachable",
+        "headword": "detachable",
+        "homograph": null,
+        "source_raw": "*detachable [dɪˈtætʃəbl] adj. 可拆卸的，可分开的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "可拆卸的，可分开的",
+        "phonetic": "dɪˈtætʃəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2933,
+        "word": "detached",
+        "headword": "detached",
+        "homograph": null,
+        "source_raw": "detached [dɪˈtætʃt] adj. 1. (住宅)独立式的 2. 不带私人感情的，公正的，超然的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. (住宅)独立式的 2. 不带私人感情的，公正的，超然的",
+        "phonetic": "dɪˈtætʃt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2934,
+        "word": "detachment",
+        "headword": "detachment",
+        "homograph": null,
+        "source_raw": "detachment [dɪˈtætʃmənt] n. 1. 超然，公正，不偏不倚 2. 分遣队，支队"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 超然，公正，不偏不倚 2. 分遣队，支队",
+        "phonetic": "dɪˈtætʃmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2936,
+        "word": "detain",
+        "headword": "detain",
+        "homograph": null,
+        "source_raw": "detain  [dɪˈteɪn] v. 拘留，扣押，耽搁"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "拘留，扣押，耽搁",
+        "phonetic": "dɪˈteɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 94,
+          "word": "detain",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "耽搁;扣押,拘留",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "暂时阻止某人离开"
+          },
+          "example": "Police detained the suspect for questioning.",
+          "translation": "警方拘留嫌疑人以进行询问。",
+          "source_file": "npee.txt",
+          "source_line": 1336,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2939,
+        "word": "detector",
+        "headword": "detector",
+        "homograph": null,
+        "source_raw": "detector [dɪˈtektə] n. 1. 发现者，探测者 2. 探测器，检验器，检波器"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 发现者，探测者 2. 探测器，检验器，检波器",
+        "phonetic": "dɪˈtektə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 95,
+          "word": "detector",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "发现者,侦察器,探测器,检波器,检电器",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "发现某物（如金属、烟雾或爆炸物）的设备"
+          },
+          "example": "A smoke detector sounded during the drill.",
+          "translation": "演习期间烟雾探测器响了。",
+          "source_file": "npee.txt",
+          "source_line": 1339,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2940,
+        "word": "detention",
+        "headword": "detention",
+        "homograph": null,
+        "source_raw": "detention [dɪˈtenʃən] n. 阻止，滞留，监禁  || detention centre拘留所"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "阻止，滞留，监禁  || detention centre拘留所",
+        "phonetic": "dɪˈtenʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2941,
+        "word": "deter",
+        "headword": "deter",
+        "homograph": null,
+        "source_raw": "deter [dɪˈtɜː] v. 1. 威慑住，吓住 2. 阻止，防止"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 威慑住，吓住 2. 阻止，防止",
+        "phonetic": "dɪˈtɜː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2942,
+        "word": "detergent",
+        "headword": "detergent",
+        "homograph": null,
+        "source_raw": "detergent [dɪˈtɜːdʒənt] n. 洗涤剂，去污剂 adj. 洗涤的，去污的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "洗涤剂，去污剂 adj. 洗涤的，去污的",
+        "phonetic": "dɪˈtɜːdʒənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2943,
+        "word": "deteriorate",
+        "headword": "deteriorate",
+        "homograph": null,
+        "source_raw": "deteriorate [dɪˈtɪərɪəreɪt] v. 恶化，(使)变坏，退化"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "恶化，(使)变坏，退化",
+        "phonetic": "dɪˈtɪərɪəreɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 96,
+          "word": "deteriorate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)恶化,(使)变坏",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "质量、状况或能力逐渐变差"
+          },
+          "example": "The road deteriorated after years without repairs.",
+          "translation": "多年未维修后，道路状况恶化了。",
+          "source_file": "npee.txt",
+          "source_line": 1340,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2944,
+        "word": "determination",
+        "headword": "determination",
+        "homograph": null,
+        "source_raw": "determination [dɪˌtɜːmɪˈneɪʃən] n. 1. 坚定，果断， 毅力 2. 决心， 决定， 规定 3. 确定，测定"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 坚定，果断， 毅力 2. 决心， 决定， 规定 3. 确定，测定",
+        "phonetic": "dɪˌtɜːmɪˈneɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 14,
+          "word": "determination",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "决心/定;确定",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the quality that makes somebody continue trying; the process of deciding something officially; the act of finding out or calculating something"
+          },
+          "example": "Her determination to finish the course kept her going through difficult weeks.",
+          "translation": "她完成课程的决心支撑着她度过了艰难的几周。",
+          "source_file": "cet4.txt",
+          "source_line": 1064,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2946,
+        "word": "determiner",
+        "headword": "determiner",
+        "homograph": null,
+        "source_raw": "*determiner [dɪˈtɜːmɪnə] n. 限定词"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "限定词",
+        "phonetic": "dɪˈtɜːmɪnə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2947,
+        "word": "deterrent",
+        "headword": "deterrent",
+        "homograph": null,
+        "source_raw": "*deterrent [dɪˈterənt] n. 阻碍物，制止物 adj. 威慑的，遏制的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "阻碍物，制止物 adj. 威慑的，遏制的",
+        "phonetic": "dɪˈterənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2948,
+        "word": "detest",
+        "headword": "detest",
+        "homograph": null,
+        "source_raw": "*detest [dɪˈtest] v. 厌恶，憎恶，讨厌"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "厌恶，憎恶，讨厌",
+        "phonetic": "dɪˈtest",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2949,
+        "word": "detonate",
+        "headword": "detonate",
+        "homograph": null,
+        "source_raw": "*detonate [ˈdetəneɪt] v. 引爆，起爆，爆炸"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "引爆，起爆，爆炸",
+        "phonetic": "ˈdetəneɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2950,
+        "word": "detour",
+        "headword": "detour",
+        "homograph": null,
+        "source_raw": "*detour [ˈdiːtʊə]  n. 弯路，兜圈子，离题 v. 绕道，绕过，使离题"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "弯路，兜圈子，离题 v. 绕道，绕过，使离题",
+        "phonetic": "ˈdiːtʊə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2951,
+        "word": "detract",
+        "headword": "detract",
+        "homograph": null,
+        "source_raw": "*detract [dɪˈtrækt] v. 贬低，诋毁，减损"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "贬低，诋毁，减损",
+        "phonetic": "dɪˈtrækt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2952,
+        "word": "detriment",
+        "headword": "detriment",
+        "homograph": null,
+        "source_raw": "detriment [ˈdetrɪmənt] n. 损害，伤害"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "损害，伤害",
+        "phonetic": "ˈdetrɪmənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2953,
+        "word": "detrimental",
+        "headword": "detrimental",
+        "homograph": null,
+        "source_raw": "detrimental [ˌdetrɪˈmentəl] adj. 有害的，不利的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有害的，不利的",
+        "phonetic": "ˌdetrɪˈmentəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2954,
+        "word": "devastate",
+        "headword": "devastate",
+        "homograph": null,
+        "source_raw": "*devastate [ˈdevəsteɪt] v. 摧毁，破坏，毁灭"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "摧毁，破坏，毁灭",
+        "phonetic": "ˈdevəsteɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2957,
+        "word": "deviant",
+        "headword": "deviant",
+        "homograph": null,
+        "source_raw": "*deviant [ˈdiːvɪənt] adj. 偏离正道的，不正常的，越轨的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "偏离正道的，不正常的，越轨的",
+        "phonetic": "ˈdiːvɪənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2958,
+        "word": "deviate",
+        "headword": "deviate",
+        "homograph": null,
+        "source_raw": "*deviate [ˈdiːvɪeɪt] v. 背离，偏离，越(轨)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "背离，偏离，越(轨)",
+        "phonetic": "ˈdiːvɪeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 97,
+          "word": "deviate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(from)背离,偏离",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "与事物不同或以不同于惯常/预期的方式行动"
+          },
+          "example": "The results deviate slightly from the original forecast.",
+          "translation": "结果与最初预测略有偏差。",
+          "source_file": "npee.txt",
+          "source_line": 1343,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2959,
+        "word": "deviation",
+        "headword": "deviation",
+        "homograph": null,
+        "source_raw": "*deviation [ˌdiːvɪˈeɪʃən] n. 背离，偏离，偏差"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "背离，偏离，偏差",
+        "phonetic": "ˌdiːvɪˈeɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2961,
+        "word": "devil",
+        "headword": "devil",
+        "homograph": null,
+        "source_raw": "devil [ˈdevəl] n. 1. 恶魔，魔鬼，恶棍 2. 家伙，淘气鬼，冒失鬼 || a devil of非常糟糕的，极麻烦的，异常的 [go to the devil①完蛋，毁灭②滚开，见鬼去] Talk of the devil; Speak of the devil (and he will appear)说到曹操，曹操就到"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 恶魔，魔鬼，恶棍 2. 家伙，淘气鬼，冒失鬼 || a devil of非常糟糕的，极麻烦的，异常的 [go to the devil①完蛋，毁灭②滚开，见鬼去] Talk of the devil; Speak of the devil (and he will appear)说到曹操，曹操就到",
+        "phonetic": "ˈdevəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 15,
+          "word": "devil",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "魔鬼，恶魔",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the powerful evil being in several religions; an evil spirit; informally, a badly behaved person, especially a child"
+          },
+          "example": "In the story, the villagers believed a devil lived in the cave.",
+          "translation": "故事里，村民们相信洞穴中住着一个魔鬼。",
+          "source_file": "cet4.txt",
+          "source_line": 1069,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 98,
+          "word": "devil",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "魔鬼",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "被认为最强大的邪恶存在"
+          },
+          "example": "The story describes a battle between an angel and the devil.",
+          "translation": "故事描写了一场天使与魔鬼之间的战斗。",
+          "source_file": "npee.txt",
+          "source_line": 1345,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2962,
+        "word": "devilish",
+        "headword": "devilish",
+        "homograph": null,
+        "source_raw": "devilish [ˈdevəlɪʃ] adj. 恶魔似的，坏透的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "恶魔似的，坏透的",
+        "phonetic": "ˈdevəlɪʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2963,
+        "word": "devious",
+        "headword": "devious",
+        "homograph": null,
+        "source_raw": "*devious [ˈdiːvɪəs] adj. 1. 迂回的，曲折的 2. 不坦率的，不大老实的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 迂回的，曲折的 2. 不坦率的，不大老实的",
+        "phonetic": "ˈdiːvɪəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2964,
+        "word": "devise",
+        "headword": "devise",
+        "homograph": null,
+        "source_raw": "devise [dɪˈvaɪz] v. 计划，发明，设计"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "计划，发明，设计",
+        "phonetic": "dɪˈvaɪz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 16,
+          "word": "devise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "设计，发明",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to invent something new or a new way of doing something"
+          },
+          "example": "The engineers devised a safer way to transport the equipment.",
+          "translation": "工程师们设计了一种更安全的设备运输方法。",
+          "source_file": "cet4.txt",
+          "source_line": 1070,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 99,
+          "word": "devise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "设计;发明;图谋;作出(计划);想出(办法)",
+          "selected_sense": {
+            "pos": "vt.",
+            "meaning": "发明新事物或新的做事方法"
+          },
+          "example": "The engineers devised a safer way to store the batteries.",
+          "translation": "工程师们设计出一种更安全的电池储存方法。",
+          "source_file": "npee.txt",
+          "source_line": 1346,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2965,
+        "word": "devoid",
+        "headword": "devoid",
+        "homograph": null,
+        "source_raw": "*devoid [dɪˈvɔɪd] adj. 缺少…的，没有…的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "缺少…的，没有…的",
+        "phonetic": "dɪˈvɔɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2966,
+        "word": "devolve",
+        "headword": "devolve",
+        "homograph": null,
+        "source_raw": "*devolve [dɪˈvɒlv] v. 把(权力、职责等)移交给"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "把(权力、职责等)移交给",
+        "phonetic": "dɪˈvɒlv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2968,
+        "word": "devotion",
+        "headword": "devotion",
+        "homograph": null,
+        "source_raw": "devotion [dɪˈvəʊʃən] n. 1. 献身，奉献，忠实 2. 热爱，专用，专心 3. 虔诚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 献身，奉献，忠实 2. 热爱，专用，专心 3. 虔诚",
+        "phonetic": "dɪˈvəʊʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2969,
+        "word": "devour",
+        "headword": "devour",
+        "homograph": null,
+        "source_raw": "devour [dɪˈvaʊə] v. 1. 吞噬，吞食，耗尽 2. 狼吞虎咽地吃(光) 3. 贪婪地看(听、读等) 4. 占据…的全部注意力，充满"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 吞噬，吞食，耗尽 2. 狼吞虎咽地吃(光) 3. 贪婪地看(听、读等) 4. 占据…的全部注意力，充满",
+        "phonetic": "dɪˈvaʊə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2970,
+        "word": "devout",
+        "headword": "devout",
+        "homograph": null,
+        "source_raw": "*devout [dɪˈvaʊt] adj. 虔诚的， 诚挚的，衷心的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "虔诚的， 诚挚的，衷心的",
+        "phonetic": "dɪˈvaʊt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2971,
+        "word": "dew",
+        "headword": "dew",
+        "homograph": null,
+        "source_raw": "dew [djuː] n. 露，露水，小水珠"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "露，露水，小水珠",
+        "phonetic": "djuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 17,
+          "word": "dew",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "露，露水",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the very small drops of water that form on the ground during the night"
+          },
+          "example": "The grass was covered with dew in the early morning.",
+          "translation": "清晨，草地上覆盖着露水。",
+          "source_file": "cet4.txt",
+          "source_line": 1072,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 0,
+          "word": "dew",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "露水",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "夜间在地面等处形成的小水滴"
+          },
+          "example": "Dew covered the grass early in the morning.",
+          "translation": "清晨，草地上覆盖着露水。",
+          "source_file": "npee.txt",
+          "source_line": 1348,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2972,
+        "word": "dewdrop",
+        "headword": "dewdrop",
+        "homograph": null,
+        "source_raw": "dewdrop [ˈdjuːdrɒp] n. 露珠"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "露珠",
+        "phonetic": "ˈdjuːdrɒp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2973,
+        "word": "dexterity",
+        "headword": "dexterity",
+        "homograph": null,
+        "source_raw": "*dexterity [dekˈsterətɪ] n. 灵巧，熟练，机敏"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "灵巧，熟练，机敏",
+        "phonetic": "dekˈsterətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2974,
+        "word": "diabetes",
+        "headword": "diabetes",
+        "homograph": null,
+        "source_raw": "*diabetes [ˌdaɪəˈbiːtiːz] n. 糖尿病"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "糖尿病",
+        "phonetic": "ˌdaɪəˈbiːtiːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2975,
+        "word": "diagnose",
+        "headword": "diagnose",
+        "homograph": null,
+        "source_raw": "diagnose [ˈdaɪəɡnəʊz] v. 诊断(疾病)，判断，调查分析(问题等的)原因(性质)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "诊断(疾病)，判断，调查分析(问题等的)原因(性质)",
+        "phonetic": "ˈdaɪəɡnəʊz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 1,
+          "word": "diagnose",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "诊断(疾病);判断(问题)",
+          "selected_sense": {
+            "pos": "vt.",
+            "meaning": "识别疾病或问题的性质"
+          },
+          "example": "The mechanic diagnosed the cause of the engine noise.",
+          "translation": "技师诊断出了发动机噪声的原因。",
+          "source_file": "npee.txt",
+          "source_line": 1349,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2976,
+        "word": "diagnosis",
+        "headword": "diagnosis",
+        "homograph": null,
+        "source_raw": "diagnosis [ˌdaɪəɡˈnəʊsɪs] n. 诊断(结论),调查分析，判断"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "诊断(结论),调查分析，判断",
+        "phonetic": "ˌdaɪəɡˈnəʊsɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2977,
+        "word": "diagnostic",
+        "headword": "diagnostic",
+        "homograph": null,
+        "source_raw": "diagnostic [ˌdaɪəɡˈnɒstɪk] adj. 诊断的，判断的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "诊断的，判断的",
+        "phonetic": "ˌdaɪəɡˈnɒstɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2978,
+        "word": "diagonal",
+        "headword": "diagonal",
+        "homograph": null,
+        "source_raw": "*diagonal [daɪˈæɡənəl] adj. 1. 对角的，对角线的 2. 倾斜的，斜线的 n. 对角线，斜线"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 对角的，对角线的 2. 倾斜的，斜线的 n. 对角线，斜线",
+        "phonetic": "daɪˈæɡənəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2980,
+        "word": "dial",
+        "headword": "dial",
+        "homograph": null,
+        "source_raw": "dial [ˈdaɪəl] n. 1. (仪表等)刻度盘，钟面，表盘 2. (电话机的)拨号盘，转盘 v. 1. 调频道，收听(看)  2. 拨(电话号码)，与…通电话"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (仪表等)刻度盘，钟面，表盘 2. (电话机的)拨号盘，转盘 v. 1. 调频道，收听(看)  2. 拨(电话号码)，与…通电话",
+        "phonetic": "ˈdaɪəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2981,
+        "word": "dialect",
+        "headword": "dialect",
+        "homograph": null,
+        "source_raw": "dialect [ˈdaɪəlekt] n. 方言，土话，行话"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "方言，土话，行话",
+        "phonetic": "ˈdaɪəlekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 19,
+          "word": "dialect",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "方言，土语，地方话",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a form of a language spoken in one area, with grammar, words and pronunciation that may differ from other forms"
+          },
+          "example": "The novel uses words from a local dialect.",
+          "translation": "这部小说使用了一些当地的方言词。",
+          "source_file": "cet4.txt",
+          "source_line": 1075,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 3,
+          "word": "dialect",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "方言",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "某一地区使用的语言形式，在语法、词汇或发音上与其他形式不同"
+          },
+          "example": "The novel includes dialogue written in the local dialect.",
+          "translation": "这部小说包含用当地方言写的对话。",
+          "source_file": "npee.txt",
+          "source_line": 1352,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2984,
+        "word": "diameter",
+        "headword": "diameter",
+        "homograph": null,
+        "source_raw": "diameter [daɪˈæmɪtə] n. 直径，径，放大率"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "直径，径，放大率",
+        "phonetic": "daɪˈæmɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 21,
+          "word": "diameter",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "直径",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a straight line going from one side of a circle or round object to the other through its centre"
+          },
+          "example": "The tree trunk has a diameter of nearly one metre.",
+          "translation": "这棵树的树干直径将近一米。",
+          "source_file": "cet4.txt",
+          "source_line": 1077,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 5,
+          "word": "diameter",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "直径",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "穿过圆心、连接圆周两侧的直线长度"
+          },
+          "example": "The circle has a diameter of ten centimetres.",
+          "translation": "这个圆的直径是十厘米。",
+          "source_file": "npee.txt",
+          "source_line": 1354,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2985,
+        "word": "diametrically",
+        "headword": "diametrically",
+        "homograph": null,
+        "source_raw": "*diametrically [ˌdaɪəˈmetrɪklɪ] adv. 完全，全然"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "完全，全然",
+        "phonetic": "ˌdaɪəˈmetrɪklɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2989,
+        "word": "dice",
+        "headword": "dice",
+        "homograph": null,
+        "source_raw": "*dice [daɪs] n. 骰子，色子 v. 1. 用骰子赌博 2. 把(肉、蔬菜等)切成丁"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "骰子，色子 v. 1. 用骰子赌博 2. 把(肉、蔬菜等)切成丁",
+        "phonetic": "daɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2990,
+        "word": "dichotomy",
+        "headword": "dichotomy",
+        "homograph": null,
+        "source_raw": "*dichotomy [daɪˈkɒtəmɪ] n. 一分为二，二分法，对分"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "一分为二，二分法，对分",
+        "phonetic": "daɪˈkɒtəmɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2991,
+        "word": "dictate",
+        "headword": "dictate",
+        "homograph": null,
+        "source_raw": "dictate [dɪkˈteɪt] v. 1. 口述，(使)听写 2. 命令，强行规定  3. 支配，驱使"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 口述，(使)听写 2. 命令，强行规定  3. 支配，驱使",
+        "phonetic": "dɪkˈteɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2992,
+        "word": "dictation",
+        "headword": "dictation",
+        "homograph": null,
+        "source_raw": "dictation [dɪkˈteɪʃən] n. 口授，听写，命令"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "口授，听写，命令",
+        "phonetic": "dɪkˈteɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 23,
+          "word": "dictation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "口授笔录，听写",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of speaking or reading so that somebody can write the words down; a test in which students write what is read to them"
+          },
+          "example": "The class began with a short dictation exercise.",
+          "translation": "这堂课以一项简短的听写练习开始。",
+          "source_file": "cet4.txt",
+          "source_line": 1081,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 7,
+          "word": "dictation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "听写,口述;命令",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "说话者朗读、由他人写下或录音的行为"
+          },
+          "example": "The class practised dictation for ten minutes.",
+          "translation": "全班练习了十分钟听写。",
+          "source_file": "npee.txt",
+          "source_line": 1358,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2993,
+        "word": "dictator",
+        "headword": "dictator",
+        "homograph": null,
+        "source_raw": "dictator [dɪkˈteɪtə] n. 1. 独裁者，专制者 2. 口授者 3. (左右风尚时装等的)权威"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 独裁者，专制者 2. 口授者 3. (左右风尚时装等的)权威",
+        "phonetic": "dɪkˈteɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2994,
+        "word": "dictatorship",
+        "headword": "dictatorship",
+        "homograph": null,
+        "source_raw": "dictatorship [dɪkˈteɪtəʃɪp] n. 独裁，独裁国家，专政"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "独裁，独裁国家，专政",
+        "phonetic": "dɪkˈteɪtəʃɪp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2995,
+        "word": "diction",
+        "headword": "diction",
+        "homograph": null,
+        "source_raw": "diction [ˈdɪkʃən] n. 措词，用语，发音(法)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "措词，用语，发音(法)",
+        "phonetic": "ˈdɪkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2997,
+        "word": "dictum",
+        "headword": "dictum",
+        "homograph": null,
+        "source_raw": "*dictum [ˈdɪktəm] n. 正式声明，断言，格言"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "正式声明，断言，格言",
+        "phonetic": "ˈdɪktəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2998,
+        "word": "didactic",
+        "headword": "didactic",
+        "homograph": null,
+        "source_raw": "*didactic [dɪˈdæktɪk] adj. 教诲的，说教的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "教诲的，说教的",
+        "phonetic": "dɪˈdæktɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2999,
+        "word": "diddle",
+        "headword": "diddle",
+        "homograph": null,
+        "source_raw": "*diddle [ˈdɪdl] v. 欺骗"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "欺骗",
+        "phonetic": "ˈdɪdl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3001,
+        "word": "diehard",
+        "headword": "diehard",
+        "homograph": null,
+        "source_raw": "*diehard [ˈdaɪhɑːd] n. 死硬派，老顽固"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "死硬派，老顽固",
+        "phonetic": "ˈdaɪhɑːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3002,
+        "word": "diesel",
+        "headword": "diesel",
+        "homograph": null,
+        "source_raw": "diesel [ˈdiːzəl] n. 柴油，内燃机车，柴油车"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "柴油，内燃机车，柴油车",
+        "phonetic": "ˈdiːzəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3004,
+        "word": "dietary",
+        "headword": "dietary",
+        "homograph": null,
+        "source_raw": "dietary [ˈdaɪətərɪ] adj. 饮食的，有关饮食的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "饮食的，有关饮食的",
+        "phonetic": "ˈdaɪətərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3009,
+        "word": "differential",
+        "headword": "differential",
+        "homograph": null,
+        "source_raw": "differential [ˌdɪfəˈrenʃəl] adj. 差别的，差额的，独特的  n. (同类人、物间的)差异，差额，差价"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "差别的，差额的，独特的  n. (同类人、物间的)差异，差额，差价",
+        "phonetic": "ˌdɪfəˈrenʃəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3010,
+        "word": "differentiate",
+        "headword": "differentiate",
+        "homograph": null,
+        "source_raw": "*differentiate [ˌdɪfəˈrenʃɪeɪt] v. 区分，(使)不同，构成…间的差别"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "区分，(使)不同，构成…间的差别",
+        "phonetic": "ˌdɪfəˈrenʃɪeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 8,
+          "word": "differentiate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "区分,区别;(使)不同",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "辨别两个事物之间的差异"
+          },
+          "example": "The label helps users differentiate the two products.",
+          "translation": "标签帮助用户区分这两种产品。",
+          "source_file": "npee.txt",
+          "source_line": 1365,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3013,
+        "word": "diffidence",
+        "headword": "diffidence",
+        "homograph": null,
+        "source_raw": "*diffidence [ˈdɪfɪdəns] n. 缺乏自信，胆怯，羞怯"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "缺乏自信，胆怯，羞怯",
+        "phonetic": "ˈdɪfɪdəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3014,
+        "word": "diffident",
+        "headword": "diffident",
+        "homograph": null,
+        "source_raw": "*diffident [ˈdɪfɪdənt] adj. 缺乏自信的，胆怯的，羞怯的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "缺乏自信的，胆怯的，羞怯的",
+        "phonetic": "ˈdɪfɪdənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3015,
+        "word": "diffuse",
+        "headword": "diffuse",
+        "homograph": null,
+        "source_raw": "diffuse [dɪˈfjuːz] v. 1. 扩散，(使)四散，弥漫 2. 传播，散步 adj. 1. 弥漫的，四散的 2. (文章等)冗长的"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 扩散，(使)四散，弥漫 2. 传播，散步 adj. 1. 弥漫的，四散的 2. (文章等)冗长的",
+        "phonetic": "dɪˈfjuːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3018,
+        "word": "digestible",
+        "headword": "digestible",
+        "homograph": null,
+        "source_raw": "digestible [dɪˈdʒestəbl] adj. 易消化的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "易消化的",
+        "phonetic": "dɪˈdʒestəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3019,
+        "word": "digestion",
+        "headword": "digestion",
+        "homograph": null,
+        "source_raw": "digestion [dɪˈdʒestʃən] n. 1. 消化(作用)，消化力 2. 领悟，理解"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 消化(作用)，消化力 2. 领悟，理解",
+        "phonetic": "dɪˈdʒestʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3020,
+        "word": "digestive",
+        "headword": "digestive",
+        "homograph": null,
+        "source_raw": "digestive [dɪˈdʒestɪv] adj. 消化的，助消化的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "消化的，助消化的",
+        "phonetic": "dɪˈdʒestɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3021,
+        "word": "digit",
+        "headword": "digit",
+        "homograph": null,
+        "source_raw": "digit [ˈdɪdʒɪt] n. 1. (0到 9中的任何一个)数字，数位 2. 手指，脚趾"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (0到 9中的任何一个)数字，数位 2. 手指，脚趾",
+        "phonetic": "ˈdɪdʒɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3023,
+        "word": "dignified",
+        "headword": "dignified",
+        "homograph": null,
+        "source_raw": "dignified [ˈdɪɡnɪfaɪd] adj. 有尊严的，庄严的，高贵的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有尊严的，庄严的，高贵的",
+        "phonetic": "ˈdɪɡnɪfaɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3024,
+        "word": "dignify",
+        "headword": "dignify",
+        "homograph": null,
+        "source_raw": "dignify [ˈdɪɡnɪfaɪ] v. 1. 使有尊严，使变得庄严，给…增光 2. 抬高…的身价"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 使有尊严，使变得庄严，给…增光 2. 抬高…的身价",
+        "phonetic": "ˈdɪɡnɪfaɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3025,
+        "word": "dignitary",
+        "headword": "dignitary",
+        "homograph": null,
+        "source_raw": "*dignitary [ˈdɪɡnɪtərɪ] n. 显贵，要人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "显贵，要人",
+        "phonetic": "ˈdɪɡnɪtərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3027,
+        "word": "digress",
+        "headword": "digress",
+        "homograph": null,
+        "source_raw": "*digress [daɪˈɡres] v. 离题"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "离题",
+        "phonetic": "daɪˈɡres",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3029,
+        "word": "dilapidated",
+        "headword": "dilapidated",
+        "homograph": null,
+        "source_raw": "*dilapidated [dɪˈlæpɪdeɪtɪd] adj. 倒塌的，荒废的，破旧的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "倒塌的，荒废的，破旧的",
+        "phonetic": "dɪˈlæpɪdeɪtɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3030,
+        "word": "dilate",
+        "headword": "dilate",
+        "homograph": null,
+        "source_raw": "*dilate [daɪˈleɪt] v. 张大，扩大"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "张大，扩大",
+        "phonetic": "daɪˈleɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3031,
+        "word": "dilemma",
+        "headword": "dilemma",
+        "homograph": null,
+        "source_raw": "dilemma [dɪˈlemə] n. (进退两难的)窘境，困境，进退维谷"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(进退两难的)窘境，困境，进退维谷",
+        "phonetic": "dɪˈlemə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 10,
+          "word": "dilemma",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(进退两难的)窘境,困境",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "常需在同等重要事项间作困难选择的情形"
+          },
+          "example": "She faced a dilemma between accepting the job and staying near family.",
+          "translation": "她面临两难选择：接受这份工作还是留在家人身边。",
+          "source_file": "npee.txt",
+          "source_line": 1373,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3032,
+        "word": "dilettante",
+        "headword": "dilettante",
+        "homograph": null,
+        "source_raw": "*dilettante [ˌdɪlɪˈtæntɪ] n. 浮泛的涉猎者，业余爱好者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "浮泛的涉猎者，业余爱好者",
+        "phonetic": "ˌdɪlɪˈtæntɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3033,
+        "word": "diligence",
+        "headword": "diligence",
+        "homograph": null,
+        "source_raw": "diligence [ˈdɪlɪdʒəns] n. 勤奋，用功"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "勤奋，用功",
+        "phonetic": "ˈdɪlɪdʒəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3034,
+        "word": "diligent",
+        "headword": "diligent",
+        "homograph": null,
+        "source_raw": "diligent [ˈdɪlɪdʒənt] adj. 勤勉的，勤奋的，坚持不懈的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "勤勉的，勤奋的，坚持不懈的",
+        "phonetic": "ˈdɪlɪdʒənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 25,
+          "word": "diligent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "勤勉的，勤奋的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "showing care and effort in your work or duties"
+          },
+          "example": "The diligent student reviewed her notes every evening.",
+          "translation": "这名勤奋的学生每天晚上都复习笔记。",
+          "source_file": "cet4.txt",
+          "source_line": 1092,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 11,
+          "word": "diligent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "勤奋的,用功的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "在工作或职责中认真努力的"
+          },
+          "example": "He was diligent about checking every reference.",
+          "translation": "他认真核查了每一条参考资料。",
+          "source_file": "npee.txt",
+          "source_line": 1374,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3035,
+        "word": "dilute",
+        "headword": "dilute",
+        "homograph": null,
+        "source_raw": "dilute [daɪˈljuːt] v. 1. 稀释，冲淡 2. 削弱，减轻 adj. 经稀释的，淡的，减弱了的"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 稀释，冲淡 2. 削弱，减轻 adj. 经稀释的，淡的，减弱了的",
+        "phonetic": "daɪˈljuːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3036,
+        "word": "dim",
+        "headword": "dim",
+        "homograph": null,
+        "source_raw": "dim [dɪm] adj. 1. 暗淡的，昏暗的 2. 模糊不清的，朦胧的  3. 迟钝的，愚蠢的 v. 使暗淡，(使)变模糊，(使)失去光泽"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 暗淡的，昏暗的 2. 模糊不清的，朦胧的  3. 迟钝的，愚蠢的 v. 使暗淡，(使)变模糊，(使)失去光泽",
+        "phonetic": "dɪm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-005",
+          "row_index": 26,
+          "word": "dim",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "昏暗的；朦胧的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "not bright; difficult to see because there is little light; not easy to remember clearly"
+          },
+          "example": "We could just make out the dim outline of the mountain.",
+          "translation": "我们只能勉强看见山的模糊轮廓。",
+          "source_file": "cet4.txt",
+          "source_line": 1093,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3037,
+        "word": "dime",
+        "headword": "dime",
+        "homograph": null,
+        "source_raw": "dime [daɪm] n. (美国、加拿大等国的货币单位)一角，十分钱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(美国、加拿大等国的货币单位)一角，十分钱",
+        "phonetic": "daɪm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3039,
+        "word": "dimensional",
+        "headword": "dimensional",
+        "homograph": null,
+        "source_raw": "dimensional [dɪˈmenʃənəl] adj. 尺寸的，(构成复合词) …维的，…度的  || three-dimensional三维的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "尺寸的，(构成复合词) …维的，…度的  || three-dimensional三维的",
+        "phonetic": "dɪˈmenʃənəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3040,
+        "word": "diminish",
+        "headword": "diminish",
+        "homograph": null,
+        "source_raw": "diminish [dɪˈmɪnɪʃ] v. 1. 减少，(使)减小，降低 2. 贬低，使降级，削弱"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 减少，(使)减小，降低 2. 贬低，使降级，削弱",
+        "phonetic": "dɪˈmɪnɪʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 14,
+          "word": "diminish",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "缩小,减少,递减",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "逐渐变少或变弱"
+          },
+          "example": "The noise diminished as the train moved away.",
+          "translation": "火车驶远后，噪声渐渐减弱。",
+          "source_file": "npee.txt",
+          "source_line": 1378,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3041,
+        "word": "dimple",
+        "headword": "dimple",
+        "homograph": null,
+        "source_raw": "*dimple [ˈdɪmpl] n. 酒窝，窝"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "酒窝，窝",
+        "phonetic": "ˈdɪmpl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3042,
+        "word": "din 1",
+        "headword": "din",
+        "homograph": 1,
+        "source_raw": "*din 1 [dɪn] n. 喧闹声，嘈杂声"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "喧闹声，嘈杂声",
+        "phonetic": "dɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3043,
+        "word": "din 2",
+        "headword": "din",
+        "homograph": 2,
+        "source_raw": "*din 2 [dɪn] v. 再三叮嘱，反复强调，三番五次告诫"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "再三叮嘱，反复强调，三番五次告诫",
+        "phonetic": "dɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3044,
+        "word": "dine",
+        "headword": "dine",
+        "homograph": null,
+        "source_raw": "dine [daɪn] v. 进正餐，用膳，宴请"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "进正餐，用膳，宴请",
+        "phonetic": "daɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-008",
+          "row_index": 15,
+          "word": "dine",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "吃饭,进餐",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "吃晚餐"
+          },
+          "example": "We dined at a small restaurant near the harbour.",
+          "translation": "我们在港口附近的一家小餐馆吃了晚餐。",
+          "source_file": "npee.txt",
+          "source_line": 1379,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3045,
+        "word": "diner",
+        "headword": "diner",
+        "homograph": null,
+        "source_raw": "diner [ˈdaɪnə] n. 1. 就餐者，餐馆顾客 2. 餐车 3. (公路边的)小饭馆"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 就餐者，餐馆顾客 2. 餐车 3. (公路边的)小饭馆",
+        "phonetic": "ˈdaɪnə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    }
+  ]
+}

@@ -1,0 +1,3729 @@
+{
+  "task_id": "tem-018",
+  "input_sha256": "db5f0e0b3f043774b1eb930858d6e2522836db948291fc4ecf73101e7d0cd6e7",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2413,
+        "word": "courtship",
+        "headword": "courtship",
+        "homograph": null,
+        "source_raw": "*courtship [ˈkɔːtʃɪp] n. 求爱，求婚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "求爱，求婚",
+        "phonetic": "ˈkɔːtʃɪp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2414,
+        "word": "courtyard",
+        "headword": "courtyard",
+        "homograph": null,
+        "source_raw": "courtyard [ˈkɔːtjɑːd] n. 庭院，院子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "庭院，院子",
+        "phonetic": "ˈkɔːtjɑːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 84,
+          "word": "courtyard",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "院子,庭院,天井",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "部分或全部被建筑围起来的露天空间"
+          },
+          "example": "The hotel rooms open onto a quiet courtyard.",
+          "translation": "酒店的房间都通向一个安静的庭院。",
+          "source_file": "npee.txt",
+          "source_line": 1137,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2416,
+        "word": "covenant",
+        "headword": "covenant",
+        "homograph": null,
+        "source_raw": "*covenant [ˈkʌvənənt] n. 契约，盟约"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "契约，盟约",
+        "phonetic": "ˈkʌvənənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2419,
+        "word": "covert",
+        "headword": "covert",
+        "homograph": null,
+        "source_raw": "*covert [ˈkʌvət] adj. 秘密的，隐秘的，暗地的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "秘密的，隐秘的，暗地的",
+        "phonetic": "ˈkʌvət",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2420,
+        "word": "covet",
+        "headword": "covet",
+        "homograph": null,
+        "source_raw": "*covet [ˈkʌvɪt] v. 垂涎，觊觎，贪图"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "垂涎，觊觎，贪图",
+        "phonetic": "ˈkʌvɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2421,
+        "word": "cow 1",
+        "headword": "cow",
+        "homograph": 1,
+        "source_raw": "cow 1 [kaʊ] n. 1. 母牛 2. (指大动物的)母兽"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 母牛 2. (指大动物的)母兽",
+        "phonetic": "kaʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2422,
+        "word": "cow 2",
+        "headword": "cow",
+        "homograph": 2,
+        "source_raw": "cow 2 [kaʊ] v. 使害怕，恐吓"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使害怕，恐吓",
+        "phonetic": "kaʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2423,
+        "word": "coward",
+        "headword": "coward",
+        "homograph": null,
+        "source_raw": "coward [ˈkaʊəd] n. 怯懦，胆怯者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "怯懦，胆怯者",
+        "phonetic": "ˈkaʊəd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 50,
+          "word": "coward",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "懦夫；胆怯者",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who is not brave or who lacks the courage to do things that are not especially difficult"
+          },
+          "example": "He felt like a coward for not speaking up when it mattered.",
+          "translation": "在关键时刻没有站出来说话，他觉得自己像个懦夫。",
+          "source_file": "cet4.txt",
+          "source_line": 910,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 85,
+          "word": "coward",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "懦夫,胆怯者",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "缺乏勇气去做别人认为并不特别困难之事的人"
+          },
+          "example": "He called himself a coward for not speaking up.",
+          "translation": "他因为没有站出来说话而称自己是懦夫。",
+          "source_file": "npee.txt",
+          "source_line": 1141,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2424,
+        "word": "cowardice",
+        "headword": "cowardice",
+        "homograph": null,
+        "source_raw": "*cowardice [ˈkaʊədɪs] n. 胆小，怯懦"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "胆小，怯懦",
+        "phonetic": "ˈkaʊədɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2425,
+        "word": "cowardly",
+        "headword": "cowardly",
+        "homograph": null,
+        "source_raw": "cowardly [ˈkaʊədlɪ] adj. 怯懦的，胆小的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "怯懦的，胆小的",
+        "phonetic": "ˈkaʊədlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2426,
+        "word": "cowboy",
+        "headword": "cowboy",
+        "homograph": null,
+        "source_raw": "cowboy [ˈkaʊbɔɪ] n. 牧童，牛仔"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "牧童，牛仔",
+        "phonetic": "ˈkaʊbɔɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2427,
+        "word": "coy",
+        "headword": "coy",
+        "homograph": null,
+        "source_raw": "*coy [kɔɪ] adj. 害羞的，腼腆的，忸怩的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "害羞的，腼腆的，忸怩的",
+        "phonetic": "kɔɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2428,
+        "word": "crab",
+        "headword": "crab",
+        "homograph": null,
+        "source_raw": "crab [kræb] n. 螃蟹"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "螃蟹",
+        "phonetic": "kræb",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 86,
+          "word": "crab",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "螃蟹,蟹肉",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "有硬壳、八条腿和两只螯的海洋动物"
+          },
+          "example": "We shared a plate of fresh crab at lunch.",
+          "translation": "午餐时我们分吃了一盘新鲜蟹肉。",
+          "source_file": "npee.txt",
+          "source_line": 1142,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2429,
+        "word": "crack",
+        "headword": "crack",
+        "homograph": null,
+        "source_raw": "crack [kræk] v. 1. (使)裂开，(使)破裂 2. (使)发出噼啪声 3. 撬开，砸开 4. (嗓子)变粗 || crack down镇压，取缔，扫荡 5. 解开(密码)等 n. 1. 裂缝，裂口 2. 爆裂声，轰隆 3. 猛烈的一击 4. (嗓子)突然失声，变粗"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (使)裂开，(使)破裂 2. (使)发出噼啪声 3. 撬开，砸开 4. (嗓子)变粗 || crack down镇压，取缔，扫荡 5. 解开(密码)等 n. 1. 裂缝，裂口 2. 爆裂声，轰隆 3. 猛烈的一击 4. (嗓子)突然失声，变粗",
+        "phonetic": "kræk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2430,
+        "word": "cracker",
+        "headword": "cracker",
+        "homograph": null,
+        "source_raw": "cracker [ˈkrækə] n. 1. 爆竹(=firecracker) 2. (AmE)一种薄脆饼干"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 爆竹(=firecracker) 2. (AmE)一种薄脆饼干",
+        "phonetic": "ˈkrækə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2431,
+        "word": "crackle",
+        "headword": "crackle",
+        "homograph": null,
+        "source_raw": "*crackle [ˈkrækl] v. 发轻微的爆裂声(如干柴燃烧时的响声)，发噼啪声"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "发轻微的爆裂声(如干柴燃烧时的响声)，发噼啪声",
+        "phonetic": "ˈkrækl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2432,
+        "word": "cradle",
+        "headword": "cradle",
+        "homograph": null,
+        "source_raw": "cradle [ˈkreɪdl] n. 1. 摇篮  2. 策源地，发源地"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 摇篮  2. 策源地，发源地",
+        "phonetic": "ˈkreɪdl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2434,
+        "word": "craftsman",
+        "headword": "craftsman",
+        "homograph": null,
+        "source_raw": "craftsman [ˈkrɑːftsmən] (pl craftsmen) n. 工匠，手艺精巧的人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工匠，手艺精巧的人",
+        "phonetic": "ˈkrɑːftsmən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2435,
+        "word": "crafty",
+        "headword": "crafty",
+        "homograph": null,
+        "source_raw": "crafty [ˈkrɑːftɪ] adj. 狡猾的，狡诈的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "狡猾的，狡诈的",
+        "phonetic": "ˈkrɑːftɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2436,
+        "word": "crag",
+        "headword": "crag",
+        "homograph": null,
+        "source_raw": "crag [kræɡ] n. 悬崖，峭壁"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "悬崖，峭壁",
+        "phonetic": "kræɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2437,
+        "word": "cram",
+        "headword": "cram",
+        "homograph": null,
+        "source_raw": "*cram [kræm] v. 1. 把…塞进，把…塞满(装满)，挤满 2. 临时死记硬背记功课"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 把…塞进，把…塞满(装满)，挤满 2. 临时死记硬背记功课",
+        "phonetic": "kræm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2438,
+        "word": "cramp",
+        "headword": "cramp",
+        "homograph": null,
+        "source_raw": "*cramp [kræmp] n. 痉挛  v. 1. 使痉挛 2. 束缚，约束，妨碍发育、发展 3. 妨碍某人充分发挥才能"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "痉挛  v. 1. 使痉挛 2. 束缚，约束，妨碍发育、发展 3. 妨碍某人充分发挥才能",
+        "phonetic": "kræmp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2439,
+        "word": "crane",
+        "headword": "crane",
+        "homograph": null,
+        "source_raw": "crane [kreɪn] n. 1. 鹤 2. 吊车，起重机"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 鹤 2. 吊车，起重机",
+        "phonetic": "kreɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 52,
+          "word": "crane",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "起重机，摄影升降机",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a tall machine with a long arm, used to lift and move heavy objects"
+          },
+          "example": "The crane lifted the steel beam onto the roof.",
+          "translation": "起重机把钢梁吊到了屋顶上。",
+          "source_file": "cet4.txt",
+          "source_line": 913,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 89,
+          "word": "crane",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "起重机,鹤",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "用于吊起和移动建筑材料/重物的高型机器"
+          },
+          "example": "A crane lifted the steel beams into place.",
+          "translation": "起重机把钢梁吊到指定位置。",
+          "source_file": "npee.txt",
+          "source_line": 1146,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2440,
+        "word": "cranky",
+        "headword": "cranky",
+        "homograph": null,
+        "source_raw": "*cranky [ˈkræŋkɪ] adj. 1. 古怪的人、念头 2. (指机器等)靠不住的，摇晃的，不稳的 3. 脾气坏的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 古怪的人、念头 2. (指机器等)靠不住的，摇晃的，不稳的 3. 脾气坏的",
+        "phonetic": "ˈkræŋkɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2441,
+        "word": "crap",
+        "headword": "crap",
+        "homograph": null,
+        "source_raw": "*crap [kræp] n. 胡扯，废话"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "胡扯，废话",
+        "phonetic": "kræp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2443,
+        "word": "crate",
+        "headword": "crate",
+        "homograph": null,
+        "source_raw": "crate [kreɪt] n. 柳条箱，木(板条)箱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "柳条箱，木(板条)箱",
+        "phonetic": "kreɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2444,
+        "word": "crater",
+        "headword": "crater",
+        "homograph": null,
+        "source_raw": "*crater [ˈkreɪtə] n. 1. 火山口 2. 弹坑"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 火山口 2. 弹坑",
+        "phonetic": "ˈkreɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2445,
+        "word": "crave",
+        "headword": "crave",
+        "homograph": null,
+        "source_raw": "*crave [kreɪv] v. 热望，渴望"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "热望，渴望",
+        "phonetic": "kreɪv",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2446,
+        "word": "craven",
+        "headword": "craven",
+        "homograph": null,
+        "source_raw": "*craven [ˈkreɪvən] adj. 怯懦的，胆小的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "怯懦的，胆小的",
+        "phonetic": "ˈkreɪvən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2447,
+        "word": "crawl",
+        "headword": "crawl",
+        "homograph": null,
+        "source_raw": "crawl [krɔːl] v. 1. 爬，爬行，甸甸前进 2. 缓慢地移动，徐徐前进 n. 1. 爬，爬行，甸甸前进 2. 缓慢的行进"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 爬，爬行，甸甸前进 2. 缓慢地移动，徐徐前进 n. 1. 爬，爬行，甸甸前进 2. 缓慢的行进",
+        "phonetic": "krɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 53,
+          "word": "crawl",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "爬，爬行",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to move forward on your hands and knees or with your body close to the ground; to move forward very slowly"
+          },
+          "example": "The toddler crawled across the carpet toward her toy.",
+          "translation": "那个幼儿爬过地毯去拿她的玩具。",
+          "source_file": "cet4.txt",
+          "source_line": 915,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2448,
+        "word": "crayon",
+        "headword": "crayon",
+        "homograph": null,
+        "source_raw": "crayon [ˈkreɪən] n. 彩色蜡笔(粉笔)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "彩色蜡笔(粉笔)",
+        "phonetic": "ˈkreɪən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2449,
+        "word": "craze",
+        "headword": "craze",
+        "homograph": null,
+        "source_raw": "craze [kreɪz] n. 时尚，时髦的东西，狂热"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "时尚，时髦的东西，狂热",
+        "phonetic": "kreɪz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2451,
+        "word": "creak",
+        "headword": "creak",
+        "homograph": null,
+        "source_raw": "*creak [kriːk] v. &n. 吱吱作响，吱吱声"
+      },
+      "original": {
+        "pos": "v.&n.",
+        "meaning": "吱吱作响，吱吱声",
+        "phonetic": "kriːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2453,
+        "word": "creamy",
+        "headword": "creamy",
+        "homograph": null,
+        "source_raw": "creamy [ˈkriːmɪ] adj. 1. 乳脂状的 2. 多乳脂的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 乳脂状的 2. 多乳脂的",
+        "phonetic": "ˈkriːmɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2454,
+        "word": "crease",
+        "headword": "crease",
+        "homograph": null,
+        "source_raw": "*crease [kriːs] n. 1. 折痕，皱褶，皱纹 2. (球赛场地上划的)界线 v. (使)起折痕，(使)起皱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 折痕，皱褶，皱纹 2. (球赛场地上划的)界线 v. (使)起折痕，(使)起皱",
+        "phonetic": "kriːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2456,
+        "word": "creation",
+        "headword": "creation",
+        "homograph": null,
+        "source_raw": "creation [kriːˈeɪʃən] n. 1. 创造，创作 2. 作品"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 创造，创作 2. 作品",
+        "phonetic": "kriːˈeɪʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2458,
+        "word": "creativity",
+        "headword": "creativity",
+        "homograph": null,
+        "source_raw": "creativity [ˌkriːeɪˈtɪvətɪ] n. 创造力，创造"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "创造力，创造",
+        "phonetic": "ˌkriːeɪˈtɪvətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2459,
+        "word": "creator",
+        "headword": "creator",
+        "homograph": null,
+        "source_raw": "creator [kriːˈeɪtə] n. 人，动物，生物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "人，动物，生物",
+        "phonetic": "kriːˈeɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2461,
+        "word": "credentials",
+        "headword": "credentials",
+        "homograph": null,
+        "source_raw": "*credentials [krɪˈdenʃəlz] n. 1. 资格证书，国书 2. (个人能力及信用的)证明书，证件"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 资格证书，国书 2. (个人能力及信用的)证明书，证件",
+        "phonetic": "krɪˈdenʃəlz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2462,
+        "word": "credibility",
+        "headword": "credibility",
+        "homograph": null,
+        "source_raw": "*credibility [ˌkredɪˈbɪlɪtɪ] n. 可靠性，可信性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "可靠性，可信性",
+        "phonetic": "ˌkredɪˈbɪlɪtɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2463,
+        "word": "credible",
+        "headword": "credible",
+        "homograph": null,
+        "source_raw": "credible [ˈkredəbl] adj. 可信的，可靠的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "可信的，可靠的",
+        "phonetic": "ˈkredəbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2465,
+        "word": "creditor",
+        "headword": "creditor",
+        "homograph": null,
+        "source_raw": "creditor [ˈkredɪtə] n. 债权人，债主"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "债权人，债主",
+        "phonetic": "ˈkredɪtə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2466,
+        "word": "credulous",
+        "headword": "credulous",
+        "homograph": null,
+        "source_raw": "credulous [ˈkredjʊləs] adj. 轻信的，易受骗的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "轻信的，易受骗的",
+        "phonetic": "ˈkredjʊləs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2467,
+        "word": "creed",
+        "headword": "creed",
+        "homograph": null,
+        "source_raw": "creed [kriːd] n. (宗教)信条，教义"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(宗教)信条，教义",
+        "phonetic": "kriːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2468,
+        "word": "creek",
+        "headword": "creek",
+        "homograph": null,
+        "source_raw": "creek [kriːk] n. 小溪，小河"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "小溪，小河",
+        "phonetic": "kriːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2469,
+        "word": "creep",
+        "headword": "creep",
+        "homograph": null,
+        "source_raw": "creep [kriːp] v. 1. 爬行 2. 蹑手蹑脚地走，悄悄地走"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 爬行 2. 蹑手蹑脚地走，悄悄地走",
+        "phonetic": "kriːp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 54,
+          "word": "creep",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "爬行；缓慢地行进",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to move slowly, quietly and carefully so as not to be seen or heard; in North American English, to move with the body close to the ground"
+          },
+          "example": "The cat crept quietly toward the open door.",
+          "translation": "猫悄悄地朝着敞开的门慢慢靠近。",
+          "source_file": "cet4.txt",
+          "source_line": 922,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 94,
+          "word": "creep",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "爬,爬行;(植物)蔓延",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "缓慢、安静地移动以免被察觉"
+          },
+          "example": "The cat crept toward the bird without making a sound.",
+          "translation": "猫悄无声息地向小鸟爬去。",
+          "source_file": "npee.txt",
+          "source_line": 1156,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2470,
+        "word": "cremate",
+        "headword": "cremate",
+        "homograph": null,
+        "source_raw": "*cremate [krɪˈmeɪt] v. 火化，火葬"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "火化，火葬",
+        "phonetic": "krɪˈmeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2471,
+        "word": "crematorium",
+        "headword": "crematorium",
+        "homograph": null,
+        "source_raw": "*crematorium [ˌkreməˈtɔːrɪəm] n. 火葬场"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "火葬场",
+        "phonetic": "ˌkreməˈtɔːrɪəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2472,
+        "word": "creole",
+        "headword": "creole",
+        "homograph": null,
+        "source_raw": "*creole [ˈkriːəʊl] n. 1. (usu cap)混合语(由不同语言混合而成，用作某群体的主要语言)  2. (西印度群岛的或通用西班牙语的美洲国家的)克里奥尔人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (usu cap)混合语(由不同语言混合而成，用作某群体的主要语言)  2. (西印度群岛的或通用西班牙语的美洲国家的)克里奥尔人",
+        "phonetic": "ˈkriːəʊl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2473,
+        "word": "crescent",
+        "headword": "crescent",
+        "homograph": null,
+        "source_raw": "*crescent [ˈkresnt] n. 1. 新月，弯月，上、下弦月 2. 新月形的物体(如新月形的街道)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 新月，弯月，上、下弦月 2. 新月形的物体(如新月形的街道)",
+        "phonetic": "ˈkresnt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2474,
+        "word": "crest",
+        "headword": "crest",
+        "homograph": null,
+        "source_raw": "crest [krest] n. 1. 鸟冠，鸡冠，冠毛 2. (头盔上的)羽饰，翎毛 3. 山顶，顶点，顶峰 4. (信纸等上面的)纹章，饰章"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 鸟冠，鸡冠，冠毛 2. (头盔上的)羽饰，翎毛 3. 山顶，顶点，顶峰 4. (信纸等上面的)纹章，饰章",
+        "phonetic": "krest",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2476,
+        "word": "crib",
+        "headword": "crib",
+        "homograph": null,
+        "source_raw": "crib [krɪb] n. 1. 饲料槽 2. 马厩图(如基督教会圣诞节所陈列的马厩模型，展示耶稣在伯利恒诞生之情景)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 饲料槽 2. 马厩图(如基督教会圣诞节所陈列的马厩模型，展示耶稣在伯利恒诞生之情景)",
+        "phonetic": "krɪb",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2477,
+        "word": "cricket 1",
+        "headword": "cricket",
+        "homograph": 1,
+        "source_raw": "cricket 1 [ˈkrɪkɪt] n. 蟋蟀"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "蟋蟀",
+        "phonetic": "ˈkrɪkɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2478,
+        "word": "cricket 2",
+        "headword": "cricket",
+        "homograph": 2,
+        "source_raw": "cricket 2 [ˈkrɪkɪt] n. 板球，曲棍球"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "板球，曲棍球",
+        "phonetic": "ˈkrɪkɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2480,
+        "word": "criminal",
+        "headword": "criminal",
+        "homograph": null,
+        "source_raw": "criminal [ˈkrɪmɪnl] adj. 犯罪的，刑事的 n. 罪犯，犯人"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "犯罪的，刑事的 n. 罪犯，犯人",
+        "phonetic": "ˈkrɪmɪnl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2481,
+        "word": "crimson",
+        "headword": "crimson",
+        "homograph": null,
+        "source_raw": "crimson [ˈkrɪmzn] n. 深红，绯红 adj. 深红色的，绯红色的 v. (使)变绯红色"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "深红，绯红 adj. 深红色的，绯红色的 v. (使)变绯红色",
+        "phonetic": "ˈkrɪmzn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2482,
+        "word": "cringe",
+        "headword": "cringe",
+        "homograph": null,
+        "source_raw": "*cringe [krɪndʒ] v. 1. 畏缩，退缩 2. 奉承，卑躬屈膝"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 畏缩，退缩 2. 奉承，卑躬屈膝",
+        "phonetic": "krɪndʒ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2483,
+        "word": "crinkle",
+        "headword": "crinkle",
+        "homograph": null,
+        "source_raw": "*crinkle [ˈkrɪŋkl] n. 皱纹 v. (使)起皱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "皱纹 v. (使)起皱",
+        "phonetic": "ˈkrɪŋkl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2484,
+        "word": "cripple",
+        "headword": "cripple",
+        "homograph": null,
+        "source_raw": "cripple [ˈkrɪpl] n. 跛足的人，残废人 v. 1. 使…残废 2. 使…受损害，使…丧失活动能力"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "跛足的人，残废人 v. 1. 使…残废 2. 使…受损害，使…丧失活动能力",
+        "phonetic": "ˈkrɪpl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 57,
+          "word": "cripple",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "跛子；残废的人",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an old-fashioned and offensive word for a person who is physically disabled"
+          },
+          "example": "The old novel uses a term for a disabled person that is now considered offensive.",
+          "translation": "这部旧小说使用了一个如今被认为具有冒犯性的残障者称谓。",
+          "source_file": "cet4.txt",
+          "source_line": 927,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2486,
+        "word": "crisp",
+        "headword": "crisp",
+        "homograph": null,
+        "source_raw": "crisp  [krɪsp] adj. 1. 脆的，硬而易碎的 2. 清新的，爽快的 3. 干脆明确的(态度等)"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 脆的，硬而易碎的 2. 清新的，爽快的 3. 干脆明确的(态度等)",
+        "phonetic": "krɪsp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 98,
+          "word": "crisp",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "脆的,易碎的;简明扼要的;(空气)清爽的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "口感干脆、坚硬且干燥"
+          },
+          "example": "The apple was crisp and sweet.",
+          "translation": "苹果又脆又甜。",
+          "source_file": "npee.txt",
+          "source_line": 1163,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2488,
+        "word": "critic",
+        "headword": "critic",
+        "homograph": null,
+        "source_raw": "critic [ˈkrɪtɪk] n. 批评家，评论家"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "批评家，评论家",
+        "phonetic": "ˈkrɪtɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 58,
+          "word": "critic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "批评家，爱挑剔的人",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who expresses opinions about the good and bad qualities of books, music or other subjects; a person who publicly expresses dislike of something"
+          },
+          "example": "The critic praised the film for its quiet humour.",
+          "translation": "这位影评人称赞了这部电影含蓄的幽默。",
+          "source_file": "cet4.txt",
+          "source_line": 929,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-006",
+          "row_index": 99,
+          "word": "critic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "批评家,评论家",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "对书籍、音乐等优缺点发表意见的人"
+          },
+          "example": "The critic praised the film's careful writing.",
+          "translation": "评论家称赞了这部电影严谨的剧本。",
+          "source_file": "npee.txt",
+          "source_line": 1165,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2490,
+        "word": "criticism",
+        "headword": "criticism",
+        "homograph": null,
+        "source_raw": "criticism [ˈkrɪtɪsɪzəm]  n. 1. 评论文章，评论 2. 批评，指责，非难"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 评论文章，评论 2. 批评，指责，非难",
+        "phonetic": "ˈkrɪtɪsɪzəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 59,
+          "word": "criticism",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "批评；批判；评论",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of expressing disapproval and opinions about faults; the activity of making careful judgments about the qualities of a work"
+          },
+          "example": "The proposal received criticism from several community groups.",
+          "translation": "这项提案受到了几个社区团体的批评。",
+          "source_file": "cet4.txt",
+          "source_line": 931,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 0,
+          "word": "criticism",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "评论性的文章,评论;批评,指责,非难",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "表达不赞成的行为"
+          },
+          "example": "The proposal faced criticism from local residents.",
+          "translation": "这项提议遭到当地居民批评。",
+          "source_file": "npee.txt",
+          "source_line": 1167,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2492,
+        "word": "critique",
+        "headword": "critique",
+        "homograph": null,
+        "source_raw": "*critique [krɪˈtiːk] n. 评论性文章(书籍)，评论"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "评论性文章(书籍)，评论",
+        "phonetic": "krɪˈtiːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2493,
+        "word": "croak",
+        "headword": "croak",
+        "homograph": null,
+        "source_raw": "*croak [krəʊk] v. &n. 1. (作)蛙鸣声，(发出)哑声 2. 用低沉沙哑的声音说话"
+      },
+      "original": {
+        "pos": "v.&n.",
+        "meaning": "1. (作)蛙鸣声，(发出)哑声 2. 用低沉沙哑的声音说话",
+        "phonetic": "krəʊk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2494,
+        "word": "crockery",
+        "headword": "crockery",
+        "homograph": null,
+        "source_raw": "*crockery [ˈkrɒkərɪ] n. (杯、碟等)瓦器，陶器"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(杯、碟等)瓦器，陶器",
+        "phonetic": "ˈkrɒkərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2495,
+        "word": "crocodile",
+        "headword": "crocodile",
+        "homograph": null,
+        "source_raw": "crocodile [ˈkrɒkədaɪl] n. 1. 鳄鱼，鳄鱼皮 2. 双列队行进的学童"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 鳄鱼，鳄鱼皮 2. 双列队行进的学童",
+        "phonetic": "ˈkrɒkədaɪl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2496,
+        "word": "crook",
+        "headword": "crook",
+        "homograph": null,
+        "source_raw": "*crook [krʊk] n. 1. 小偷，贼，坏蛋 2. 弯曲(处)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 小偷，贼，坏蛋 2. 弯曲(处)",
+        "phonetic": "krʊk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2497,
+        "word": "crooked",
+        "headword": "crooked",
+        "homograph": null,
+        "source_raw": "*crooked [ˈkrʊkɪd] adj. 1. 弯曲的，扭曲的 2. 不诚实的，行为不端的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 弯曲的，扭曲的 2. 不诚实的，行为不端的",
+        "phonetic": "ˈkrʊkɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2499,
+        "word": "cross",
+        "headword": "cross",
+        "homograph": null,
+        "source_raw": "cross [krɒs] n. 1. 十字形、叉形记号、十字架等 2. 杂交，杂种 v. 1. 越过，穿过，渡过  2. 交叉，相交 || cross out划掉"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 十字形、叉形记号、十字架等 2. 杂交，杂种 v. 1. 越过，穿过，渡过  2. 交叉，相交 || cross out划掉",
+        "phonetic": "krɒs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2500,
+        "word": "crossbow",
+        "headword": "crossbow",
+        "homograph": null,
+        "source_raw": "*crossbow [ˈkrɒsbəʊ] n. 石弓，弩"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "石弓，弩",
+        "phonetic": "ˈkrɒsbəʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2501,
+        "word": "crosscheck",
+        "headword": "crosscheck",
+        "homograph": null,
+        "source_raw": "crosscheck [ˈkrɒstʃek] v. 反复核对、查证"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "反复核对、查证",
+        "phonetic": "ˈkrɒstʃek",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2502,
+        "word": "cross-examine",
+        "headword": "cross-examine",
+        "homograph": null,
+        "source_raw": "*cross-examine [ˌkrɒs ɪɡˈzæmɪn] v. 1. (用于法律)严诘，盘问(某人) 2. 追问，详询(某人)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (用于法律)严诘，盘问(某人) 2. 追问，详询(某人)",
+        "phonetic": "ˌkrɒs ɪɡˈzæmɪn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2503,
+        "word": "crossing",
+        "headword": "crossing",
+        "homograph": null,
+        "source_raw": "crossing [ˈkrɒsɪŋ] n. 1. 横渡，横穿 2. 交叉，交叉点，十字路口 3. 渡口"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 横渡，横穿 2. 交叉，交叉点，十字路口 3. 渡口",
+        "phonetic": "ˈkrɒsɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2504,
+        "word": "crossroads",
+        "headword": "crossroads",
+        "homograph": null,
+        "source_raw": "crossroads [ˈkrɒsrəʊdz] n. 十字路口"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "十字路口",
+        "phonetic": "ˈkrɒsrəʊdz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2505,
+        "word": "crossword",
+        "headword": "crossword",
+        "homograph": null,
+        "source_raw": "crossword [ˈkrɒswɜːd] n. 纵横字谜，填字游戏"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "纵横字谜，填字游戏",
+        "phonetic": "ˈkrɒswɜːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2506,
+        "word": "crotch",
+        "headword": "crotch",
+        "homograph": null,
+        "source_raw": "*crotch [krɒtʃ] n. 胯(人体两腿分叉处)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "胯(人体两腿分叉处)",
+        "phonetic": "krɒtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2507,
+        "word": "crouch",
+        "headword": "crouch",
+        "homograph": null,
+        "source_raw": "crouch [kraʊtʃ] n. 蹲伏，蜷缩，屈(膝)，(低)头"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "蹲伏，蜷缩，屈(膝)，(低)头",
+        "phonetic": "kraʊtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2508,
+        "word": "crow",
+        "headword": "crow",
+        "homograph": null,
+        "source_raw": "crow [krəʊ] n. 1. 鸦，乌鸦 2. 鸡啼 v. 1. (雄鸡)啼 2. 吹嘘，得意洋洋"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 鸦，乌鸦 2. 鸡啼 v. 1. (雄鸡)啼 2. 吹嘘，得意洋洋",
+        "phonetic": "krəʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2510,
+        "word": "crown",
+        "headword": "crown",
+        "homograph": null,
+        "source_raw": "crown [kraʊn] n. 1. 王冠，冕 2. 君王，王权，王国政府 3. 头顶，顶部，顶峰 v.  1. 为…加冕 2. 使圆满完成"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 王冠，冕 2. 君王，王权，王国政府 3. 头顶，顶部，顶峰 v.  1. 为…加冕 2. 使圆满完成",
+        "phonetic": "kraʊn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 62,
+          "word": "crown",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "王冠，冕；花冠",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an object usually made of gold and precious stones worn by a monarch; a circle of flowers or leaves worn on the head; the top part of a tree"
+          },
+          "example": "The queen wore a gold crown during the ceremony.",
+          "translation": "女王在仪式上戴着一顶金色王冠。",
+          "source_file": "cet4.txt",
+          "source_line": 937,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2512,
+        "word": "crucify",
+        "headword": "crucify",
+        "homograph": null,
+        "source_raw": "*crucify [ˈkruːsɪfaɪ] v. 1. 钉在十字架上处死 2. (公开地)虐待，迫害，折磨"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 钉在十字架上处死 2. (公开地)虐待，迫害，折磨",
+        "phonetic": "ˈkruːsɪfaɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2513,
+        "word": "crude",
+        "headword": "crude",
+        "homograph": null,
+        "source_raw": "crude [kruːd] adj. 1. 天然的，未加工的 2. 粗糙的，简陋的 3. 粗野的，未加修饰的，赤裸裸的  n. 原油"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 天然的，未加工的 2. 粗糙的，简陋的 3. 粗野的，未加修饰的，赤裸裸的  n. 原油",
+        "phonetic": "kruːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 63,
+          "word": "crude",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "简陋的；天然的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "in its natural state before being processed; simply made and not showing much skill or attention to detail"
+          },
+          "example": "The first shelter was a crude structure made from branches.",
+          "translation": "最初的庇护所是用树枝搭成的简陋结构。",
+          "source_file": "cet4.txt",
+          "source_line": 938,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 5,
+          "word": "crude",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "天然的,未加工的;未熟的;粗鲁的,粗野的",
+          "selected_sense": {
+            "pos": "a.",
+            "meaning": "处于天然状态、未经加工或提炼的"
+          },
+          "example": "The plant processes crude oil into fuel.",
+          "translation": "这家工厂把原油加工成燃料。",
+          "source_file": "npee.txt",
+          "source_line": 1175,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2515,
+        "word": "cruelty",
+        "headword": "cruelty",
+        "homograph": null,
+        "source_raw": "cruelty [ˈkrʊəltɪ] n. 1. 残忍，残酷 2. (pl)残酷的行为"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 残忍，残酷 2. (pl)残酷的行为",
+        "phonetic": "ˈkrʊəltɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2516,
+        "word": "cruise",
+        "headword": "cruise",
+        "homograph": null,
+        "source_raw": "cruise [kruːz] v. 1. 巡航，游弋 2. 旅行，漫游"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 巡航，游弋 2. 旅行，漫游",
+        "phonetic": "kruːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2517,
+        "word": "cruiser",
+        "headword": "cruiser",
+        "homograph": null,
+        "source_raw": "cruiser [ˈkruːzə] n. 1. 巡洋舰 2. 有船舱的游艇"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 巡洋舰 2. 有船舱的游艇",
+        "phonetic": "ˈkruːzə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2518,
+        "word": "crumb",
+        "headword": "crumb",
+        "homograph": null,
+        "source_raw": "crumb [krʌm] n. 面包屑"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "面包屑",
+        "phonetic": "krʌm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2519,
+        "word": "crumble",
+        "headword": "crumble",
+        "homograph": null,
+        "source_raw": "crumble [ˈkrʌmbl] v. 1. 弄碎，粉碎 2. 崩溃，瓦解"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 弄碎，粉碎 2. 崩溃，瓦解",
+        "phonetic": "ˈkrʌmbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2520,
+        "word": "crunch",
+        "headword": "crunch",
+        "homograph": null,
+        "source_raw": "*crunch [krʌntʃ] v. 1. (嘎吱作响的)啃，咬，嚼 2. 在…上嘎吱作响地走  n. 嘎吱声"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (嘎吱作响的)啃，咬，嚼 2. 在…上嘎吱作响地走  n. 嘎吱声",
+        "phonetic": "krʌntʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2521,
+        "word": "crusade",
+        "headword": "crusade",
+        "homograph": null,
+        "source_raw": "crusade [kruːˈseɪd] n. 1. (usu cap)十字军东征 2. 运动，斗争  v. 介入，参与(运动)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (usu cap)十字军东征 2. 运动，斗争  v. 介入，参与(运动)",
+        "phonetic": "kruːˈseɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2523,
+        "word": "crust",
+        "headword": "crust",
+        "homograph": null,
+        "source_raw": "crust [krʌst] n. 1. (面包等)皮，外壳 2. 硬外皮，外壳"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (面包等)皮，外壳 2. 硬外皮，外壳",
+        "phonetic": "krʌst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 65,
+          "word": "crust",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "面包皮；硬外皮",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the hard outer surface of bread; a layer of pastry, especially on top of a pie; a hard layer or surface around something"
+          },
+          "example": "He cut the crusts off the sandwiches for the children.",
+          "translation": "他把三明治的面包边切下来给孩子们。",
+          "source_file": "cet4.txt",
+          "source_line": 941,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 8,
+          "word": "crust",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "外皮,壳;地壳",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "面包外层坚硬部分"
+          },
+          "example": "He cut the crust off the sandwich for the child.",
+          "translation": "他把三明治的面包皮切下来给孩子。",
+          "source_file": "npee.txt",
+          "source_line": 1179,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2524,
+        "word": "crutch",
+        "headword": "crutch",
+        "homograph": null,
+        "source_raw": "crutch [krʌtʃ] n. 1. 拐杖，丁字形的拐杖 2. 支柱，支架"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 拐杖，丁字形的拐杖 2. 支柱，支架",
+        "phonetic": "krʌtʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2525,
+        "word": "crux",
+        "headword": "crux",
+        "homograph": null,
+        "source_raw": "*crux [krʌks] n. 关键，问题的症结"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "关键，问题的症结",
+        "phonetic": "krʌks",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2527,
+        "word": "crypt",
+        "headword": "crypt",
+        "homograph": null,
+        "source_raw": "*crypt [krɪpt] n. 地窖，教堂的地下室"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "地窖，教堂的地下室",
+        "phonetic": "krɪpt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2528,
+        "word": "cryptic",
+        "headword": "cryptic",
+        "homograph": null,
+        "source_raw": "*cryptic [ˈkrɪptɪk] adj. 隐藏的， 隐义的，神秘的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "隐藏的， 隐义的，神秘的",
+        "phonetic": "ˈkrɪptɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2529,
+        "word": "crystal",
+        "headword": "crystal",
+        "homograph": null,
+        "source_raw": "crystal [ˈkrɪstl] n. 1. 水晶  2. 结晶"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 水晶  2. 结晶",
+        "phonetic": "ˈkrɪstl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 66,
+          "word": "crystal",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "水晶，结晶体；晶粒",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a small piece of a substance with even sides formed naturally when it becomes solid; a clear mineral such as quartz; high-quality glass"
+          },
+          "example": "Tiny salt crystals formed around the edge of the dish.",
+          "translation": "盘子边缘形成了细小的盐晶体。",
+          "source_file": "cet4.txt",
+          "source_line": 943,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2530,
+        "word": "cub",
+        "headword": "cub",
+        "homograph": null,
+        "source_raw": "*cub [kʌb] n. 幼兽"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "幼兽",
+        "phonetic": "kʌb",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2531,
+        "word": "cube",
+        "headword": "cube",
+        "homograph": null,
+        "source_raw": "cube [kjuːb] n. 1. 立方体，正六面体 2. 立方"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 立方体，正六面体 2. 立方",
+        "phonetic": "kjuːb",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 67,
+          "word": "cube",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "立方形；立方",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a solid or an object with six equal square sides; the third power of a number"
+          },
+          "example": "Cut the cheese into small cubes before serving.",
+          "translation": "上桌前把奶酪切成小方块。",
+          "source_file": "cet4.txt",
+          "source_line": 944,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-007",
+          "row_index": 11,
+          "word": "cube",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "立方形,立方体;立方,三次幂",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "六个面均为正方形的立体"
+          },
+          "example": "The box is shaped like a cube.",
+          "translation": "这个盒子是立方体形状。",
+          "source_file": "npee.txt",
+          "source_line": 1182,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2532,
+        "word": "cubic",
+        "headword": "cubic",
+        "homograph": null,
+        "source_raw": "cubic [ˈkjuːbɪk] adj. 1. 立方体的，立方形的 2. 三次的，立方的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 立方体的，立方形的 2. 三次的，立方的",
+        "phonetic": "ˈkjuːbɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-004",
+          "row_index": 68,
+          "word": "cubic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "立方形的；立方的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "used to show that a measurement is the volume of something; having the shape of a cube"
+          },
+          "example": "The tank holds five cubic metres of water.",
+          "translation": "这个水箱能装五立方米的水。",
+          "source_file": "cet4.txt",
+          "source_line": 945,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2533,
+        "word": "cuckoo",
+        "headword": "cuckoo",
+        "homograph": null,
+        "source_raw": "*cuckoo [ˈkʊkuː] n. 布谷鸟，杜鹃"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "布谷鸟，杜鹃",
+        "phonetic": "ˈkʊkuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2535,
+        "word": "cuddle",
+        "headword": "cuddle",
+        "homograph": null,
+        "source_raw": "*cuddle [ˈkʌdl] v. 1. 搂抱，拥抱 2. 依偎着睡，蜷着身体睡  n. 拥抱，紧抱"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 搂抱，拥抱 2. 依偎着睡，蜷着身体睡  n. 拥抱，紧抱",
+        "phonetic": "ˈkʌdl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2536,
+        "word": "cudgel",
+        "headword": "cudgel",
+        "homograph": null,
+        "source_raw": "*cudgel [ˈkʌdʒəl] n. 棒，短棍"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "棒，短棍",
+        "phonetic": "ˈkʌdʒəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    }
+  ]
+}

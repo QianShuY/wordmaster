@@ -1,0 +1,5595 @@
+{
+  "task_id": "gaokao-013",
+  "input_sha256": "a4d06c2bc475b088166e9975bbdf745f8c5f57b7ec7dd2a7836debde5e279322",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": null,
+      "original": null,
+      "source_entry": "ray**",
+      "headword": "ray",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 53,
+          "word": "ray",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "光线,射线",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a narrow line of light, heat or other energy"
+          },
+          "example": "A ray of sunlight came through the window.",
+          "translation": "一缕阳光透过窗户照了进来。",
+          "source_file": "npee.txt",
+          "source_line": 3933,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 7,
+          "word": "ray",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "光束，光线",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a narrow line of light"
+          },
+          "example": "A ray of sunlight crossed the kitchen floor.",
+          "translation": "一道阳光穿过厨房地板。",
+          "source_file": "tem.txt",
+          "source_line": 9187,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": null,
+      "original": null,
+      "source_entry": "reach",
+      "headword": "reach",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 55,
+          "word": "reach",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "抵达;(out)伸手,够到 n.能达到的范围",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to arrive at the place that you have been travelling to"
+          },
+          "example": "We reached the station just before the train left.",
+          "translation": "我们在火车开走前赶到了车站。",
+          "source_file": "npee.txt",
+          "source_line": 3935,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 9,
+          "word": "reach",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 到达 2. 伸出，延伸  n. 可及的范围",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to arrive at a place"
+          },
+          "example": "We reached the village just before sunset.",
+          "translation": "日落前我们到达了村庄。",
+          "source_file": "tem.txt",
+          "source_line": 9189,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": null,
+      "original": null,
+      "source_entry": "react**",
+      "headword": "react",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 56,
+          "word": "react",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "反应,起作用;(against)反对,起反作用",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to behave in a particular way or have a particular feeling in response to something"
+          },
+          "example": "How did the audience react to the announcement?",
+          "translation": "观众对这项公告有何反应？",
+          "source_file": "npee.txt",
+          "source_line": 3936,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 10,
+          "word": "react",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 反应 2. 反抗，反对 3. 起化学反应",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to behave or change in response to something"
+          },
+          "example": "The new rule caused people to react angrily.",
+          "translation": "新规定引起了人们的愤怒反应。",
+          "source_file": "tem.txt",
+          "source_line": 9190,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": null,
+      "original": null,
+      "source_entry": "reaction*",
+      "headword": "reaction",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 11,
+          "word": "reaction",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 反应，回应 2. 反动，复古 3. (化学、物理)反应 4. 反作用",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "something that you do, feel, or think because of something that has happened"
+          },
+          "example": "Her reaction to the news was calm.",
+          "translation": "她对这个消息的反应很平静。",
+          "source_file": "tem.txt",
+          "source_line": 9191,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 4,
+      "identity": null,
+      "original": null,
+      "source_entry": "read",
+      "headword": "read",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 57,
+          "word": "read",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "朗读;阅读 vt.辨认,观察 vi.读到,获悉",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to look at and understand the meaning of written or printed words or symbols"
+          },
+          "example": "She reads a chapter before bed each night.",
+          "translation": "她每天晚上睡前读一章。",
+          "source_file": "npee.txt",
+          "source_line": 3937,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 14,
+          "word": "read",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 阅读，朗读 2. 领会，了解 3. 攻读，研究 4. (计量器等)显示 5. 可读(做…)，写着… || read aloud 朗读 /read out读出声来",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to look at and understand written words"
+          },
+          "example": "I read the instructions twice before assembling the chair.",
+          "translation": "组装椅子前，我把说明读了两遍。",
+          "source_file": "tem.txt",
+          "source_line": 9194,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 5,
+      "identity": null,
+      "original": null,
+      "source_entry": "ready",
+      "headword": "ready",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 61,
+          "word": "ready",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "(for)准备好的,现成的;甘心的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "fully prepared for something"
+          },
+          "example": "The documents are ready for collection.",
+          "translation": "文件已准备好，可以领取。",
+          "source_file": "npee.txt",
+          "source_line": 3941,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 19,
+          "word": "ready",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 准备好的 2. 愿意的，乐意的 3. 敏捷的，迅速的 4. 在手边的，现成的 || get ready(使)准备好 [make ready准备好] be ready(for) (为…)准备好 /ready-made现成的，预先制成的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "prepared for something or willing to do something"
+          },
+          "example": "The rescue team was ready to leave at dawn.",
+          "translation": "救援队准备在黎明时出发。",
+          "source_file": "tem.txt",
+          "source_line": 9199,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 6,
+      "identity": null,
+      "original": null,
+      "source_entry": "real",
+      "headword": "real",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 62,
+          "word": "real",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "真的,真实的;实际的,现实的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "actually existing or happening and not imagined or pretended"
+          },
+          "example": "The film is based on a real story.",
+          "translation": "这部电影取材于真实故事。",
+          "source_file": "npee.txt",
+          "source_line": 3942,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 21,
+          "word": "real",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 真实的，真正的 2. 完全的，十足的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "actually existing or happening"
+          },
+          "example": "The story is based on a real event.",
+          "translation": "这个故事是根据真实事件改编的。",
+          "source_file": "tem.txt",
+          "source_line": 9201,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": null,
+      "original": null,
+      "source_entry": "realise (realize)",
+      "headword": "realise",
+      "pdf_page": 117,
+      "handling": "spelling-variant",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 63,
+          "word": "realise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(realize)认识到,体会到;实现",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to understand or become aware of a particular fact or situation"
+          },
+          "example": "I did not realise how late it was.",
+          "translation": "我没有意识到已经这么晚了。",
+          "source_file": "npee.txt",
+          "source_line": 3943,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": null,
+      "original": null,
+      "source_entry": "realistic**",
+      "headword": "realistic",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 64,
+          "word": "realistic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "现实(主义)的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "accepting in a sensible way what it is actually possible to do or achieve"
+          },
+          "example": "They set a realistic target for the first year.",
+          "translation": "他们为第一年设定了一个现实可行的目标。",
+          "source_file": "npee.txt",
+          "source_line": 3944,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 24,
+          "word": "realistic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 现实主义的，现实主义者的 2. 现实的，实际的，逼真的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "showing things as they really are"
+          },
+          "example": "The film gives a realistic picture of life in the city.",
+          "translation": "这部电影真实地展现了城市生活。",
+          "source_file": "tem.txt",
+          "source_line": 9204,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": null,
+      "original": null,
+      "source_entry": "reality**",
+      "headword": "reality",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 65,
+          "word": "reality",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "现实,实际;真实",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the true situation and the problems that actually exist in life, in contrast to how you would like life to be"
+          },
+          "example": "The reality of the situation was hard to accept.",
+          "translation": "这种情况的现实令人难以接受。",
+          "source_file": "npee.txt",
+          "source_line": 3945,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 25,
+          "word": "reality",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 现实，真相 2. 实际存在的事物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the true situation and the facts about it"
+          },
+          "example": "It took time for her to accept the reality of the situation.",
+          "translation": "她花了一些时间才接受现实情况。",
+          "source_file": "tem.txt",
+          "source_line": 9205,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 10,
+      "identity": null,
+      "original": null,
+      "source_entry": "really",
+      "headword": "really",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 66,
+          "word": "really",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "确实,实在,真正地,果然",
+          "selected_sense": {
+            "pos": "adverb",
+            "meaning": "used to emphasize an adjective or adverb"
+          },
+          "example": "I really enjoyed the concert.",
+          "translation": "我真的很喜欢这场音乐会。",
+          "source_file": "npee.txt",
+          "source_line": 3946,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": null,
+      "original": null,
+      "source_entry": "reason",
+      "headword": "reason",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 70,
+          "word": "reason",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "原因,理性,理智 v.推理,说服,辩论,讨论",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a cause or an explanation for something that has happened or that somebody has done"
+          },
+          "example": "The main reason for the delay was a broken signal.",
+          "translation": "延误的主要原因是信号故障。",
+          "source_file": "npee.txt",
+          "source_line": 3950,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 36,
+          "word": "reason",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 理由，原因 2. 理性，判断力 3. 道理，常识 || by reason of由于，因为 /by reason that因为…，由于… v. 1. 推理，思考 2. 论证，辩论，劝说",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a cause or explanation for something"
+          },
+          "example": "There is no reason to delay the decision.",
+          "translation": "没有理由推迟这个决定。",
+          "source_file": "tem.txt",
+          "source_line": 9217,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": null,
+      "original": null,
+      "source_entry": "recall**",
+      "headword": "recall",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 75,
+          "word": "recall",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "回忆,回想;撤消,收回",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to remember something"
+          },
+          "example": "I recall meeting her at a conference.",
+          "translation": "我记得在一次会议上见过她。",
+          "source_file": "npee.txt",
+          "source_line": 3955,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 51,
+          "word": "recall",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 忆起，想起 2. 召回，收回 n. 1. 回忆，回想 2. 召回，收回",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to remember something"
+          },
+          "example": "I cannot recall where I left my umbrella.",
+          "translation": "我想不起来把伞落在哪里了。",
+          "source_file": "tem.txt",
+          "source_line": 9232,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": null,
+      "original": null,
+      "source_entry": "receipt**",
+      "headword": "receipt",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 77,
+          "word": "receipt",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "收据,收条;收到,接到",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a piece of paper that proves that money, goods or information has been received"
+          },
+          "example": "Please keep the receipt in case you need to return the item.",
+          "translation": "请保留收据，以便需要退货时使用。",
+          "source_file": "npee.txt",
+          "source_line": 3957,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 54,
+          "word": "receipt",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 收到 2. 收据，收条 3. (pl)进款，收入",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a piece of paper that shows you have paid for something"
+          },
+          "example": "Please keep your receipt in case you need to return the shoes.",
+          "translation": "请保留收据，以便需要退鞋时使用。",
+          "source_file": "tem.txt",
+          "source_line": 9235,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 14,
+      "identity": null,
+      "original": null,
+      "source_entry": "receive",
+      "headword": "receive",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 78,
+          "word": "receive",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "收到,接到;遭受,受到;接待,接见",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to get or accept something that somebody gives or sends to you"
+          },
+          "example": "We received your letter yesterday.",
+          "translation": "我们昨天收到了你的信。",
+          "source_file": "npee.txt",
+          "source_line": 3958,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 55,
+          "word": "receive",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 收到，领到，受到 2. 接待，接收…为成员 3. 收听，收看",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to get or accept something that someone sends or gives you"
+          },
+          "example": "The office receives hundreds of applications each month.",
+          "translation": "办公室每个月都会收到数百份申请。",
+          "source_file": "tem.txt",
+          "source_line": 9236,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": null,
+      "original": null,
+      "source_entry": "recent",
+      "headword": "recent",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 79,
+          "word": "recent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "新近的,近来的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "that happened, began or was done not long ago"
+          },
+          "example": "Recent studies support the same conclusion.",
+          "translation": "近期研究支持同样的结论。",
+          "source_file": "npee.txt",
+          "source_line": 3959,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 57,
+          "word": "recent",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "最近的，近来的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "happening or starting a short time ago"
+          },
+          "example": "There have been several recent changes to the timetable.",
+          "translation": "时间表最近发生了几处变化。",
+          "source_file": "tem.txt",
+          "source_line": 9238,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": null,
+      "original": null,
+      "source_entry": "recently*",
+      "headword": "recently",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 58,
+          "word": "recently",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "最近，近来",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "not long ago"
+          },
+          "example": "I saw her recently at the market.",
+          "translation": "我最近在市场见过她。",
+          "source_file": "tem.txt",
+          "source_line": 9239,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": null,
+      "original": null,
+      "source_entry": "receptionist**",
+      "headword": "receptionist",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 60,
+          "word": "receptionist",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "接待员，招待员",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person whose job is to welcome visitors and answer the phone"
+          },
+          "example": "The receptionist booked a room for the visitors.",
+          "translation": "接待员为访客预订了一间房。",
+          "source_file": "tem.txt",
+          "source_line": 9241,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 18,
+      "identity": null,
+      "original": null,
+      "source_entry": "recipe**",
+      "headword": "recipe",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 81,
+          "word": "recipe",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "烹饪法,食谱;诀窍,方法",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a set of instructions that tells you how to cook something and the ingredients you need"
+          },
+          "example": "I followed a recipe for vegetable soup.",
+          "translation": "我按照食谱做了蔬菜汤。",
+          "source_file": "npee.txt",
+          "source_line": 3961,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 64,
+          "word": "recipe",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "烹饪法，食谱",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a set of instructions for cooking a particular dish"
+          },
+          "example": "The recipe calls for two eggs and a cup of flour.",
+          "translation": "这个食谱需要两个鸡蛋和一杯面粉。",
+          "source_file": "tem.txt",
+          "source_line": 9245,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": null,
+      "original": null,
+      "source_entry": "recite**",
+      "headword": "recite",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 84,
+          "word": "recite",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "背诵,朗诵",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to say a poem, piece of literature, etc. that you have learned, especially to an audience"
+          },
+          "example": "The students recited the poem together.",
+          "translation": "学生们一起背诵了这首诗。",
+          "source_file": "npee.txt",
+          "source_line": 3964,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 71,
+          "word": "recite",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 朗诵，背诵 2. 评述，列举",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to say a piece of writing from memory"
+          },
+          "example": "He recited the first lines of the poem.",
+          "translation": "他背诵了这首诗的开头几行。",
+          "source_file": "tem.txt",
+          "source_line": 9252,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": null,
+      "original": null,
+      "source_entry": "recognition**",
+      "headword": "recognition",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 88,
+          "word": "recognition",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "认出,辨认;承认",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of remembering who somebody is when you see them, or of identifying what something is"
+          },
+          "example": "She smiled in recognition when she saw her old friend.",
+          "translation": "看到老朋友时，她认出了对方并微笑起来。",
+          "source_file": "npee.txt",
+          "source_line": 3968,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 76,
+          "word": "recognition",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 认出，识别 2. 承认，认可",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act of accepting that something exists or is true"
+          },
+          "example": "The award was given in recognition of her work.",
+          "translation": "这个奖项是对她工作的认可。",
+          "source_file": "tem.txt",
+          "source_line": 9257,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 21,
+      "identity": null,
+      "original": null,
+      "source_entry": "recommend",
+      "headword": "recommend",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 91,
+          "word": "recommend",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "推荐,介绍;劝告,建议",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to tell somebody that something is good or useful, or that somebody would be suitable for a particular job, etc."
+          },
+          "example": "Can you recommend a good book about astronomy?",
+          "translation": "你能推荐一本关于天文学的好书吗？",
+          "source_file": "npee.txt",
+          "source_line": 3971,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 81,
+          "word": "recommend",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 推荐，介绍 2. 劝告，建议",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to tell someone that something is good or useful"
+          },
+          "example": "I recommend this book to anyone interested in history.",
+          "translation": "我向所有对历史感兴趣的人推荐这本书。",
+          "source_file": "tem.txt",
+          "source_line": 9262,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 22,
+      "identity": null,
+      "original": null,
+      "source_entry": "record",
+      "headword": "record",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 93,
+          "word": "record",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "记录;最高记录;履历;唱片v.记录;录音",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the best performance or most remarkable event of its kind that has ever been measured or recorded"
+          },
+          "example": "The athlete set a new world record.",
+          "translation": "这名运动员创造了一项新的世界纪录。",
+          "source_file": "npee.txt",
+          "source_line": 3973,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 88,
+          "word": "record",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 记录，记载，存证 2. 最好成绩，最高记录 3. 唱片 4. 履历，经历 || break (beat, cut) the record打破记录 [hold the record of  保持…的记录 ] off the record非正式的，不供引用的 [on record记录在案的，公开宣布的] rɪˈkɔːd /v. 记录，记载 2. 录音，录影",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to store sound or pictures for later use"
+          },
+          "example": "The studio will record the concert tonight.",
+          "translation": "录音室今晚将录制这场音乐会。",
+          "source_file": "tem.txt",
+          "source_line": 9269,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": null,
+      "original": null,
+      "source_entry": "recording**",
+      "headword": "recording",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 90,
+          "word": "recording",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "记录，录制",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act of making a sound or picture record"
+          },
+          "example": "The recording of the song took three hours.",
+          "translation": "这首歌的录制花了三个小时。",
+          "source_file": "tem.txt",
+          "source_line": 9271,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": null,
+      "original": null,
+      "source_entry": "recover*",
+      "headword": "recover",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 25,
+      "identity": null,
+      "original": null,
+      "source_entry": "recreation**",
+      "headword": "recreation",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 96,
+          "word": "recreation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "娱乐,消遣",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the fact of people doing things for enjoyment, when they are not working"
+          },
+          "example": "Reading is her favourite form of recreation.",
+          "translation": "阅读是她最喜欢的消遣方式。",
+          "source_file": "npee.txt",
+          "source_line": 3977,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-081",
+          "row_index": 98,
+          "word": "recreation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "娱乐，消遣",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "activities that people do for enjoyment when they are not working"
+          },
+          "example": "Cycling is a popular form of recreation in the town.",
+          "translation": "骑行是这个镇上很受欢迎的一种休闲活动。",
+          "source_file": "tem.txt",
+          "source_line": 9279,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": null,
+      "original": null,
+      "source_entry": "recycle",
+      "headword": "recycle",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 9,
+          "word": "recycle",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "再循环，再生利用",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to treat used materials so that they can be used again"
+          },
+          "example": "The city encourages residents to recycle glass and paper.",
+          "translation": "市政府鼓励居民回收玻璃和纸张。",
+          "source_file": "tem.txt",
+          "source_line": 9290,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": null,
+      "original": null,
+      "source_entry": "red",
+      "headword": "red",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 10,
+          "word": "red",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "红的，红色的 n. 红色，红颜料 || Red Cross 红十字(会) [red-handed正在 犯罪的，手沾满鲜血的] red tape繁文褥节",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "having the colour of blood or fire"
+          },
+          "example": "He wore a red scarf in the snow.",
+          "translation": "他在雪地里戴着一条红围巾。",
+          "source_file": "tem.txt",
+          "source_line": 9291,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": null,
+      "original": null,
+      "source_entry": "reduce",
+      "headword": "reduce",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 22,
+          "word": "reduce",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 减少，缩减，降低 2. 使…变为(某个状态)，使成为 3. 减肥，节食",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make something smaller or less in amount, size, or number"
+          },
+          "example": "We need to reduce the amount of plastic we use.",
+          "translation": "我们需要减少塑料的使用量。",
+          "source_file": "tem.txt",
+          "source_line": 9303,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 29,
+      "identity": null,
+      "original": null,
+      "source_entry": "refer*",
+      "headword": "refer",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 32,
+          "word": "refer",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 谈到，提及 2. 呈交，托付 3. 查阅，参考 || refer to①提及②参考",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to send someone to another person or place for help or information"
+          },
+          "example": "The doctor referred her to a specialist.",
+          "translation": "医生把她转诊给了一位专科医生。",
+          "source_file": "tem.txt",
+          "source_line": 9313,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": null,
+      "original": null,
+      "source_entry": "reference**",
+      "headword": "reference",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 9,
+          "word": "reference",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "提及,涉及;参考,参考书目;证明书(人)",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a piece of old, often torn, cloth that is used for cleaning things"
+          },
+          "example": "He wiped the table with an old rag.",
+          "translation": "他用一块旧抹布擦桌子。",
+          "source_file": "npee.txt",
+          "source_line": 3990,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 34,
+          "word": "reference",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 谈到，提及 2. 参照，参考 3. 附注，旁注 4. 证明书，推荐人",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a mention of something"
+          },
+          "example": "She included a reference to the article in her essay.",
+          "translation": "她在作文中引用了这篇文章。",
+          "source_file": "tem.txt",
+          "source_line": 9315,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 31,
+      "identity": null,
+      "original": null,
+      "source_entry": "reflect*",
+      "headword": "reflect",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 11,
+          "word": "reflect",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "反射,反映,表现,反省,沉思",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to send back light, heat, sound, etc. from a surface"
+          },
+          "example": "The mirror reflects light into the hallway.",
+          "translation": "镜子把光反射到走廊里。",
+          "source_file": "npee.txt",
+          "source_line": 3992,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 40,
+          "word": "reflect",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 反射，反映 2. 表达，表现 3. 考虑，思考",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to send back light, heat, or sound from a surface"
+          },
+          "example": "The lake reflected the mountains in its still water.",
+          "translation": "湖面倒映着群山。",
+          "source_file": "tem.txt",
+          "source_line": 9321,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": null,
+      "original": null,
+      "source_entry": "reform**",
+      "headword": "reform",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": null,
+      "original": null,
+      "source_entry": "refresh**",
+      "headword": "refresh",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 15,
+          "word": "refresh",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)精神振作,(使)精力恢复",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make somebody feel less tired or less hot"
+          },
+          "example": "A short walk refreshed us after lunch.",
+          "translation": "午饭后散了会儿步，我们精神好了些。",
+          "source_file": "npee.txt",
+          "source_line": 3996,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 46,
+          "word": "refresh",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使精神振作，使神清气爽，给予新力量",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make someone feel less tired or more energetic"
+          },
+          "example": "A short walk in the fresh air refreshed him.",
+          "translation": "在新鲜空气中短暂散步让他精神振作起来。",
+          "source_file": "tem.txt",
+          "source_line": 9327,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": null,
+      "original": null,
+      "source_entry": "refuse",
+      "headword": "refuse",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 21,
+          "word": "refuse",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "拒绝,谢绝 n.废物,垃圾",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to say that you will not do something that somebody has asked you to do"
+          },
+          "example": "She refused to answer the question.",
+          "translation": "她拒绝回答这个问题。",
+          "source_file": "npee.txt",
+          "source_line": 4002,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 53,
+          "word": "refuse",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "拒绝，推辞，推却",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to say that you will not do or accept something"
+          },
+          "example": "She refused to sign the document without reading it.",
+          "translation": "她没有读文件就拒绝签字。",
+          "source_file": "tem.txt",
+          "source_line": 9335,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": null,
+      "original": null,
+      "source_entry": "regard*",
+      "headword": "regard",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 23,
+          "word": "regard",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(as)把…看作为;考虑n.(pl.)敬重,问候",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to think about somebody/something in a particular way"
+          },
+          "example": "The committee regards safety as its top priority.",
+          "translation": "委员会将安全视为首要任务。",
+          "source_file": "npee.txt",
+          "source_line": 4004,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 58,
+          "word": "regard",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 视为，认作 2. 注重，尊敬 n. 1. 注意之点，关系 2. 关心，顾虑 3. 敬重，尊敬 4. 问候，致意 || in (with) regard to关于 [regard sth (sb) as sth (sb)把…当作…] with regards谨此致意(用于信结尾)",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to think about or consider someone or something in a particular way"
+          },
+          "example": "I regard her as one of the best teachers in the school.",
+          "translation": "我认为她是学校里最优秀的教师之一。",
+          "source_file": "tem.txt",
+          "source_line": 9340,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": null,
+      "original": null,
+      "source_entry": "regardless**",
+      "headword": "regardless",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": null,
+      "original": null,
+      "source_entry": "region*",
+      "headword": "region",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 27,
+          "word": "region",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "地区,地带,行政区,(科学等)领域",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a large area of land, usually without exact borders or limits"
+          },
+          "example": "The region is famous for its vineyards.",
+          "translation": "该地区以葡萄园闻名。",
+          "source_file": "npee.txt",
+          "source_line": 4008,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 67,
+          "word": "region",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 地区，区域 2. 领域，范围",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large area of land with particular features"
+          },
+          "example": "The region is famous for its vineyards.",
+          "translation": "这个地区以葡萄园闻名。",
+          "source_file": "tem.txt",
+          "source_line": 9349,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": null,
+      "original": null,
+      "source_entry": "register**",
+      "headword": "register",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 68,
+          "word": "register",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 记录，注册 2. 登记簿，名簿 v. 1. 登记，注册 2. (邮件)挂号",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to put information on an official list"
+          },
+          "example": "Please register your name at the front desk.",
+          "translation": "请在前台登记姓名。",
+          "source_file": "tem.txt",
+          "source_line": 9350,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 39,
+      "identity": null,
+      "original": null,
+      "source_entry": "regret",
+      "headword": "regret",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 75,
+          "word": "regret",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "懊悔，悔恨，遗憾 n. 懊悔，悔恨，遗憾",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to feel sorry about something you have done or failed to do"
+          },
+          "example": "I regret not taking the earlier train.",
+          "translation": "我后悔没有乘坐更早的一班火车。",
+          "source_file": "tem.txt",
+          "source_line": 9357,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 40,
+      "identity": null,
+      "original": null,
+      "source_entry": "regular*",
+      "headword": "regular",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 30,
+          "word": "regular",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "有规律的;整齐的,匀称的,正规的,正式的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "happening or doing something often"
+          },
+          "example": "She goes for a regular walk after dinner.",
+          "translation": "她晚饭后定期散步。",
+          "source_file": "npee.txt",
+          "source_line": 4011,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 76,
+          "word": "regular",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 规则的，固定的 2. 整齐的，对称的 3. 合格的，正规的 4. 平常  的，普通的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "happening or doing something often and at the same time"
+          },
+          "example": "The bus follows a regular route through the village.",
+          "translation": "公交车沿着固定路线穿过村庄。",
+          "source_file": "tem.txt",
+          "source_line": 9358,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": null,
+      "original": null,
+      "source_entry": "reinforce**",
+      "headword": "reinforce",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 36,
+          "word": "reinforce",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "增援,加强",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make a feeling, an idea, etc. stronger"
+          },
+          "example": "The team added more staff to reinforce customer support.",
+          "translation": "团队增加了人手以加强客户支持。",
+          "source_file": "npee.txt",
+          "source_line": 4017,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 87,
+          "word": "reinforce",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 增强，加强，加固 2. 增兵，增援",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make a structure or object stronger"
+          },
+          "example": "Extra beams will reinforce the roof.",
+          "translation": "额外的横梁将加固屋顶。",
+          "source_file": "tem.txt",
+          "source_line": 9369,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 42,
+      "identity": null,
+      "original": null,
+      "source_entry": "reject**",
+      "headword": "reject",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 37,
+          "word": "reject",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "拒绝,抵制,丢弃,排斥,退掉 n.落选者",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to refuse to accept or consider something"
+          },
+          "example": "The editor rejected the article because it lacked sources.",
+          "translation": "编辑因文章缺少来源而拒绝采用。",
+          "source_file": "npee.txt",
+          "source_line": 4018,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 90,
+          "word": "reject",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 抛弃，丢弃 2. 拒绝，不接受 n. 1. 被抛弃的东西，次品，废品 2. 被弃者",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to refuse to accept or consider something"
+          },
+          "example": "The shop rejected the damaged delivery.",
+          "translation": "商店拒收了受损的货物。",
+          "source_file": "tem.txt",
+          "source_line": 9372,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": null,
+      "original": null,
+      "source_entry": "rejuvenate**",
+      "headword": "rejuvenate",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 93,
+          "word": "rejuvenate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使返老还童，使回春",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make someone or something feel or look younger or more energetic"
+          },
+          "example": "A weekend in the countryside helped rejuvenate her.",
+          "translation": "在乡下度过的周末让她恢复了活力。",
+          "source_file": "tem.txt",
+          "source_line": 9375,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 44,
+      "identity": null,
+      "original": null,
+      "source_entry": "relate**",
+      "headword": "relate",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 39,
+          "word": "relate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "叙述,讲述;使互相关联",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to tell a story or describe a series of events"
+          },
+          "example": "She related the events in the order they happened.",
+          "translation": "她按事情发生的顺序讲述了经过。",
+          "source_file": "npee.txt",
+          "source_line": 4020,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 95,
+          "word": "relate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 叙述，讲 2. 使…有关联 3. 与…有关",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to show or make a connection between two things"
+          },
+          "example": "The report relates air pollution to health problems.",
+          "translation": "报告将空气污染与健康问题联系起来。",
+          "source_file": "tem.txt",
+          "source_line": 9377,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": null,
+      "original": null,
+      "source_entry": "relationship",
+      "headword": "relationship",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 41,
+          "word": "relationship",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "关系,联系",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the way in which two people, groups or countries behave towards each other or deal with each other"
+          },
+          "example": "The study examines the relationship between diet and sleep.",
+          "translation": "这项研究考察饮食与睡眠之间的关系。",
+          "source_file": "npee.txt",
+          "source_line": 4022,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 97,
+          "word": "relationship",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 关系，联系 2. 亲戚关系",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the way in which two or more people or things are connected"
+          },
+          "example": "Their relationship improved after they began talking openly.",
+          "translation": "他们开始坦诚交谈后，关系有所改善。",
+          "source_file": "tem.txt",
+          "source_line": 9379,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": null,
+      "original": null,
+      "source_entry": "relative",
+      "headword": "relative",
+      "pdf_page": 117,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 42,
+          "word": "relative",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "相对的,比较的,有关系的 n.亲戚,关系词",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "considered and judged by being compared with something else"
+          },
+          "example": "The cost is low relative to the benefits.",
+          "translation": "与收益相比，这项成本较低。",
+          "source_file": "npee.txt",
+          "source_line": 4023,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-082",
+          "row_index": 98,
+          "word": "relative",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "家人，亲人，亲戚 adj. 1. 比较的，相对的 2. 与…有关的",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a member of your family"
+          },
+          "example": "A relative is coming to stay with us this weekend.",
+          "translation": "一位亲戚这个周末要来我们家住。",
+          "source_file": "tem.txt",
+          "source_line": 9380,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": null,
+      "original": null,
+      "source_entry": "relax",
+      "headword": "relax",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 44,
+          "word": "relax",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)松驰,放松",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to rest while you are doing something that you enjoy, especially after work or effort"
+          },
+          "example": "A warm bath helped him relax after work.",
+          "translation": "一个热水澡让他下班后放松下来。",
+          "source_file": "npee.txt",
+          "source_line": 4025,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 0,
+          "word": "relax",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 使放松，轻松 2. 使缓和，减轻 3. 放宽，松懈",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make your body or mind less tense"
+          },
+          "example": "Try to relax your shoulders while you breathe slowly.",
+          "translation": "慢慢呼吸时，试着放松肩膀。",
+          "source_file": "tem.txt",
+          "source_line": 9382,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": null,
+      "original": null,
+      "source_entry": "relay**",
+      "headword": "relay",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 45,
+          "word": "relay",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "中继,转播,接力 n.接替人员,替班",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to receive and send on information, news, etc."
+          },
+          "example": "The station will relay the concert live.",
+          "translation": "电台将现场直播转播这场音乐会。",
+          "source_file": "npee.txt",
+          "source_line": 4026,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 2,
+          "word": "relay",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 补充物资，接替人员，替班 2. 中继器，继电器 3. 中继，转播 4. 接力赛，转播的无线电节目(= relay race) v. 重新放置，再铺设",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a race between teams in which each member runs part of the distance"
+          },
+          "example": "The runners took turns in a relay race.",
+          "translation": "跑步者们轮流参加接力赛。",
+          "source_file": "tem.txt",
+          "source_line": 9384,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 49,
+      "identity": null,
+      "original": null,
+      "source_entry": "release**",
+      "headword": "release",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 46,
+          "word": "release",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "释放,解放;发表,发行 n.释放,豁免,放松",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to let somebody/something come out of a place where they have been kept or trapped"
+          },
+          "example": "The wildlife centre released the bird back into the forest.",
+          "translation": "野生动物救助中心将这只鸟放归森林。",
+          "source_file": "npee.txt",
+          "source_line": 4027,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 3,
+          "word": "release",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 释放，免除 2. 放出，发射 3. 发行，发表，发售 n. 1. 释放，免除 2. 放出，发射",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make a film, recording, or other product available to the public"
+          },
+          "example": "The publisher will release the album next month.",
+          "translation": "出版公司下个月将发行这张专辑。",
+          "source_file": "tem.txt",
+          "source_line": 9385,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": null,
+      "original": null,
+      "source_entry": "relevant**",
+      "headword": "relevant",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 47,
+          "word": "relevant",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "有关的,中肯的,相应的,实质性的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "closely connected with the subject you are discussing or the situation you are thinking about"
+          },
+          "example": "Please include only relevant details in your answer.",
+          "translation": "回答中请只包含相关细节。",
+          "source_file": "npee.txt",
+          "source_line": 4028,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 8,
+          "word": "relevant",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "有关的，适宜的，切题的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "closely connected with the subject you are discussing"
+          },
+          "example": "Please include only relevant details in your answer.",
+          "translation": "请在答案中只包含相关细节。",
+          "source_file": "tem.txt",
+          "source_line": 9390,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": null,
+      "original": null,
+      "source_entry": "reliable**",
+      "headword": "reliable",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 48,
+          "word": "reliable",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "可靠的,可信赖的,确实的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "that can be trusted to do something well"
+          },
+          "example": "We need reliable information before making a decision.",
+          "translation": "作出决定前，我们需要可靠的信息。",
+          "source_file": "npee.txt",
+          "source_line": 4029,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 9,
+          "word": "reliable",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "可靠的，可信赖的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "able to be trusted or depended on"
+          },
+          "example": "The reliable bus service runs every fifteen minutes.",
+          "translation": "可靠的公交服务每十五分钟一班。",
+          "source_file": "tem.txt",
+          "source_line": 9391,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": null,
+      "original": null,
+      "source_entry": "relief*",
+      "headword": "relief",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 50,
+          "word": "relief",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(痛苦等)减轻,解除;援救,救济",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the feeling of happiness that you have when something unpleasant stops or does not happen"
+          },
+          "example": "The medicine brought relief from the pain.",
+          "translation": "药物缓解了疼痛。",
+          "source_file": "npee.txt",
+          "source_line": 4031,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 13,
+          "word": "relief",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (痛苦、困苦、忧虑等的)减轻，解除 2. 救济，救援，救济物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the feeling of happiness that something unpleasant has not happened"
+          },
+          "example": "She sighed with relief when the plane landed safely.",
+          "translation": "飞机安全着陆时，她松了一口气。",
+          "source_file": "tem.txt",
+          "source_line": 9395,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": null,
+      "original": null,
+      "source_entry": "relieve*",
+      "headword": "relieve",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 51,
+          "word": "relieve",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "减轻,解除,援救,救济,换班",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to reduce somebody's pain or unpleasant feelings"
+          },
+          "example": "The medicine helped relieve her headache.",
+          "translation": "这种药有助于缓解她的头痛。",
+          "source_file": "npee.txt",
+          "source_line": 4032,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 14,
+          "word": "relieve",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 减轻，解除(痛苦或困难)  2. 救助，救济 3. 换班，接替",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to reduce or remove pain or a problem"
+          },
+          "example": "The medicine helped relieve his pain.",
+          "translation": "这种药帮助他缓解了疼痛。",
+          "source_file": "tem.txt",
+          "source_line": 9396,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 54,
+      "identity": null,
+      "original": null,
+      "source_entry": "religion*",
+      "headword": "religion",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 52,
+          "word": "religion",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "宗教,信仰",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the belief in the existence of a god or gods, and the activities that are connected with the worship of them"
+          },
+          "example": "The museum displays objects from several religions.",
+          "translation": "博物馆展出了来自几种宗教的物品。",
+          "source_file": "npee.txt",
+          "source_line": 4033,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 15,
+          "word": "religion",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 宗教信仰 2. 宗教",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "belief in and worship of a god or gods"
+          },
+          "example": "Religion plays an important role in the community.",
+          "translation": "宗教在这个社区中发挥着重要作用。",
+          "source_file": "tem.txt",
+          "source_line": 9397,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 55,
+      "identity": null,
+      "original": null,
+      "source_entry": "rely**",
+      "headword": "rely",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 56,
+          "word": "rely",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(on)依赖,依靠;信赖,信任",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to need or depend on somebody/something"
+          },
+          "example": "You can rely on Maya to keep the information private.",
+          "translation": "你可以相信玛雅会对这条信息保密。",
+          "source_file": "npee.txt",
+          "source_line": 4037,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 20,
+          "word": "rely",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 信任，信赖 2. 依赖，依靠 || rely on依赖，指望",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to trust or depend on someone or something"
+          },
+          "example": "You can rely on this website for accurate information.",
+          "translation": "你可以依靠这个网站获取准确的信息。",
+          "source_file": "tem.txt",
+          "source_line": 9403,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": null,
+      "original": null,
+      "source_entry": "remain",
+      "headword": "remain",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 57,
+          "word": "remain",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "剩下,余留;留待,尚须;仍然是,依旧是",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to continue to be something; to be still in the same state or condition"
+          },
+          "example": "Only two seats remain at the back.",
+          "translation": "后排只剩两个座位。",
+          "source_file": "npee.txt",
+          "source_line": 4038,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 21,
+          "word": "remain",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 停留，留下 2. 仍然是，保持",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to continue to exist or be present after others have gone"
+          },
+          "example": "Only a few seats remain in the hall.",
+          "translation": "大厅里只剩下几个座位了。",
+          "source_file": "tem.txt",
+          "source_line": 9404,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": null,
+      "original": null,
+      "source_entry": "remarkable**",
+      "headword": "remarkable",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 61,
+          "word": "remarkable",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "值得注意的;显著的,异常的,非凡的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "unusual or surprising in a way that causes people to take notice"
+          },
+          "example": "The team made remarkable progress in one year.",
+          "translation": "这个团队在一年内取得了显著进步。",
+          "source_file": "npee.txt",
+          "source_line": 4042,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 24,
+          "word": "remarkable",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "不平常的，杰出的，值得注意的，显著的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "unusual or surprising in a way that people notice"
+          },
+          "example": "The discovery was remarkable for its accuracy.",
+          "translation": "这项发现因其准确性而引人注目。",
+          "source_file": "tem.txt",
+          "source_line": 9408,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": null,
+      "original": null,
+      "source_entry": "remember",
+      "headword": "remember",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 21,
+          "word": "remember",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 记得，忆及 2. 问候，致意",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to recall something; to send greetings to someone"
+          },
+          "example": "I still remember the first word I learned.",
+          "translation": "我仍然记得自己学会的第一个单词。",
+          "source_file": "tem.txt",
+          "source_line": 9411,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 59,
+      "identity": null,
+      "original": null,
+      "source_entry": "remind",
+      "headword": "remind",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 63,
+          "word": "remind",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(of)提醒,使想起",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to help somebody remember something that they must do"
+          },
+          "example": "Please remind me to call the dentist tomorrow.",
+          "translation": "请提醒我明天给牙医打电话。",
+          "source_file": "npee.txt",
+          "source_line": 4045,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 60,
+      "identity": null,
+      "original": null,
+      "source_entry": "remote**",
+      "headword": "remote",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 65,
+          "word": "remote",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "远的,遥远的,疏远的,偏僻的,细微的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "far away from places where other people live"
+          },
+          "example": "They live in a remote village in the mountains.",
+          "translation": "他们住在山中的一个偏远村庄。",
+          "source_file": "npee.txt",
+          "source_line": 4047,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 38,
+          "word": "remote",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 遥远的，时间久远的 2. 距离很大的，关系很远的 3. 疏远的，冷淡的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "far away from places where other people live"
+          },
+          "example": "They live in a remote village in the mountains.",
+          "translation": "他们住在山里的一个偏远村庄。",
+          "source_file": "tem.txt",
+          "source_line": 9424,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 61,
+      "identity": null,
+      "original": null,
+      "source_entry": "remove*",
+      "headword": "remove",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 67,
+          "word": "remove",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "移动,脱掉,调动,免职",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to take something/somebody away from a place"
+          },
+          "example": "Please remove your shoes before entering.",
+          "translation": "进入前请脱鞋。",
+          "source_file": "npee.txt",
+          "source_line": 4049,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 41,
+          "word": "remove",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 取去，移动 2. 除去，消除 3. 免职，开除 4. 移居",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to take something away from a place"
+          },
+          "example": "Please remove your shoes before entering the room.",
+          "translation": "进入房间前请脱鞋。",
+          "source_file": "tem.txt",
+          "source_line": 9427,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": null,
+      "original": null,
+      "source_entry": "rent**",
+      "headword": "rent",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 72,
+          "word": "rent",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "租,租赁 n.租金",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to regularly pay money to somebody so that you can use something that they own, such as a house, car or piece of land"
+          },
+          "example": "They rent a flat near the university.",
+          "translation": "他们在大学附近租了一套公寓。",
+          "source_file": "npee.txt",
+          "source_line": 4054,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 57,
+          "word": "rent",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "租费，租金",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the money that you pay regularly to use a house or room"
+          },
+          "example": "The monthly rent includes heating and water.",
+          "translation": "月租包括暖气和水费。",
+          "source_file": "tem.txt",
+          "source_line": 9443,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 63,
+      "identity": null,
+      "original": null,
+      "source_entry": "repair",
+      "headword": "repair",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 73,
+          "word": "repair",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "修理,修补 v.补救,纠正;修理",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act or process of repairing something"
+          },
+          "example": "The car needs a minor repair.",
+          "translation": "这辆车需要做一点小修理。",
+          "source_file": "npee.txt",
+          "source_line": 4055,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 62,
+          "word": "repair",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 修补，修理 2. 补救，纠正 n. 修补，修理 || make repairs修理，修补",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to fix something that is damaged or broken"
+          },
+          "example": "They repaired the fence after the storm.",
+          "translation": "暴风雨后，他们修好了篱笆。",
+          "source_file": "tem.txt",
+          "source_line": 9448,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": null,
+      "original": null,
+      "source_entry": "repeat",
+      "headword": "repeat",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 23,
+          "word": "repeat",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "重说，重做，重复 n. 重复，重演",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to say or do something again"
+          },
+          "example": "Could you repeat the last sentence, please?",
+          "translation": "请你重复一下最后一句话，好吗？",
+          "source_file": "tem.txt",
+          "source_line": 9454,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": null,
+      "original": null,
+      "source_entry": "replace*",
+      "headword": "replace",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 79,
+          "word": "replace",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "取代,替换,代替,把...放回原处",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to be used instead of something/somebody else; to do something instead of somebody/something else"
+          },
+          "example": "Please replace the books on the shelf when you finish.",
+          "translation": "读完后请把书放回书架。",
+          "source_file": "npee.txt",
+          "source_line": 4062,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 79,
+          "word": "replace",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 放回，置于原处 2. 代替，取代 3. 替换，更换",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to put something new in the place of something that is old or broken"
+          },
+          "example": "Please replace the empty bottle with a full one.",
+          "translation": "请把空瓶换成满的。",
+          "source_file": "tem.txt",
+          "source_line": 9466,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 66,
+      "identity": null,
+      "original": null,
+      "source_entry": "reply",
+      "headword": "reply",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 67,
+      "identity": null,
+      "original": null,
+      "source_entry": "report",
+      "headword": "report",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 86,
+          "word": "report",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 报道，报告，记事 2. 传闻，谣言，闲话 v. 报道，报告",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a written or spoken description of a situation or event"
+          },
+          "example": "The newspaper published a report on the new bridge.",
+          "translation": "报纸刊登了一篇关于新桥的报道。",
+          "source_file": "tem.txt",
+          "source_line": 9473,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": null,
+      "original": null,
+      "source_entry": "represent*",
+      "headword": "represent",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 84,
+          "word": "represent",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "描述,表示;代表,代理;阐明,说明",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to be a sign or symbol of something"
+          },
+          "example": "The blue line represents the river on the map.",
+          "translation": "地图上的蓝线表示这条河。",
+          "source_file": "npee.txt",
+          "source_line": 4067,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 89,
+          "word": "represent",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 代表 2. 描绘，表现 3. 象征，表示 4. 意味着，相当于…",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to show or describe something"
+          },
+          "example": "The diagram represents the flow of water through the system.",
+          "translation": "这张图示意了水在系统中的流动。",
+          "source_file": "tem.txt",
+          "source_line": 9476,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": null,
+      "original": null,
+      "source_entry": "representative**",
+      "headword": "representative",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 85,
+          "word": "representative",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "代表,代理人 a.(of)典型的,有代表性的",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who has been chosen to speak or vote for somebody else or for a group"
+          },
+          "example": "A representative from the company answered our questions.",
+          "translation": "公司的一位代表回答了我们的问题。",
+          "source_file": "npee.txt",
+          "source_line": 4068,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-083",
+          "row_index": 91,
+          "word": "representative",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 典型的，具有代表 性的 2. 代议政治的，代议制的 n. 1. 例子，典型 2. 代表，代理",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "a person chosen to speak or act for others"
+          },
+          "example": "She was elected as the workers’ representative.",
+          "translation": "她被选为工人代表。",
+          "source_file": "tem.txt",
+          "source_line": 9478,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": null,
+      "original": null,
+      "source_entry": "republic*",
+      "headword": "republic",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 90,
+          "word": "republic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "共和国,共和政体",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a country that is governed by a president and politicians elected by the people and where there is no king or queen"
+          },
+          "example": "The country became a republic in the twentieth century.",
+          "translation": "这个国家在二十世纪成为共和国。",
+          "source_file": "npee.txt",
+          "source_line": 4073,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 3,
+          "word": "republic",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "共和国 || the People’s Republic of China中华人民共和国",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a country governed by elected representatives"
+          },
+          "example": "The republic elects its president every four years.",
+          "translation": "这个共和国每四年选举一次总统。",
+          "source_file": "tem.txt",
+          "source_line": 9490,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": null,
+      "original": null,
+      "source_entry": "reputation**",
+      "headword": "reputation",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 92,
+          "word": "reputation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "名誉,名声,声望",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the opinion that people have about what somebody/something is like, based on what has happened in the past"
+          },
+          "example": "The restaurant has a reputation for excellent service.",
+          "translation": "这家餐馆以服务出色闻名。",
+          "source_file": "npee.txt",
+          "source_line": 4075,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 11,
+          "word": "reputation",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "名誉，名声",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the opinion that people have about what someone or something is like"
+          },
+          "example": "The restaurant has a good reputation for fresh food.",
+          "translation": "这家餐馆以新鲜食物享有良好声誉。",
+          "source_file": "tem.txt",
+          "source_line": 9498,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 72,
+      "identity": null,
+      "original": null,
+      "source_entry": "request*",
+      "headword": "request",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 13,
+          "word": "request",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 请求，要求 2. 需要 v. 请求，要求",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an act of asking for something"
+          },
+          "example": "They sent a request for more information.",
+          "translation": "他们发出请求，要求提供更多信息。",
+          "source_file": "tem.txt",
+          "source_line": 9500,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 73,
+      "identity": null,
+      "original": null,
+      "source_entry": "require",
+      "headword": "require",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 94,
+          "word": "require",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "需要;(of)要求,命令",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to need something; to depend on somebody/something"
+          },
+          "example": "This task requires careful attention.",
+          "translation": "这项任务需要仔细处理。",
+          "source_file": "npee.txt",
+          "source_line": 4077,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 15,
+          "word": "require",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 需要 2. 要求，命令",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to need or make necessary"
+          },
+          "example": "The job requires a degree in engineering.",
+          "translation": "这份工作要求具有工程学学位。",
+          "source_file": "tem.txt",
+          "source_line": 9502,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 74,
+      "identity": null,
+      "original": null,
+      "source_entry": "rescue**",
+      "headword": "rescue",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": null,
+      "original": null,
+      "source_entry": "research",
+      "headword": "research",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 20,
+          "word": "research",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "研究，调查，探索  v. 调查研究",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a careful study of a subject to discover new facts"
+          },
+          "example": "The students carried out research on local wildlife.",
+          "translation": "学生们对当地野生动物进行了研究。",
+          "source_file": "tem.txt",
+          "source_line": 9507,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 76,
+      "identity": null,
+      "original": null,
+      "source_entry": "reserve**",
+      "headword": "reserve",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 2,
+          "word": "reserve",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "储备(物),储备金;缄默 v.保留,储备;预定",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a supply of something that is kept to be used if it is needed"
+          },
+          "example": "The country keeps an emergency reserve of fuel.",
+          "translation": "这个国家保有应急燃料储备。",
+          "source_file": "npee.txt",
+          "source_line": 4085,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 28,
+          "word": "reserve",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 储备物，保存物 2. 储藏，保留 || in reserve储存备用 3. 缄默，含蓄 v. 1. 储备，保存 2. 保留，留作专用 3. 预定",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a supply of something kept for future use"
+          },
+          "example": "They stored a reserve of bottled water in the cellar.",
+          "translation": "他们在地窖里储存了一批瓶装水备用。",
+          "source_file": "tem.txt",
+          "source_line": 9515,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": null,
+      "original": null,
+      "source_entry": "resident**",
+      "headword": "resident",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 5,
+          "word": "resident",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "居民,常住者 a.居住的",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person who lives in a particular place"
+          },
+          "example": "Local residents attended the meeting.",
+          "translation": "当地居民参加了会议。",
+          "source_file": "npee.txt",
+          "source_line": 4088,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 35,
+          "word": "resident",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "居住的，居留的  n. 居民，居住者",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "a person who lives in a particular place"
+          },
+          "example": "Every resident received a letter about the roadworks.",
+          "translation": "每位居民都收到了一封关于道路施工的信。",
+          "source_file": "tem.txt",
+          "source_line": 9522,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 78,
+      "identity": null,
+      "original": null,
+      "source_entry": "resign**",
+      "headword": "resign",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 6,
+          "word": "resign",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "辞去,辞职,使听从(于),使顺从",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to officially tell somebody that you are leaving your job, an organization, etc."
+          },
+          "example": "She resigned from her position last month.",
+          "translation": "她上个月辞去了职务。",
+          "source_file": "npee.txt",
+          "source_line": 4089,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 38,
+          "word": "resign",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 放弃，辞去 2. 使听任，使顺从 || resign oneself to sth听任，顺从",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to officially leave a job or position"
+          },
+          "example": "She resigned from her post to care for her family.",
+          "translation": "她辞去职务照顾家人。",
+          "source_file": "tem.txt",
+          "source_line": 9525,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 79,
+      "identity": null,
+      "original": null,
+      "source_entry": "resistance**",
+      "headword": "resistance",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 8,
+          "word": "resistance",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(to)抵抗,反抗;抵抗力,阻力;电阻",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the act of using force to oppose somebody/something"
+          },
+          "example": "The plants have a natural resistance to disease.",
+          "translation": "这些植物对疾病有天然抵抗力。",
+          "source_file": "npee.txt",
+          "source_line": 4091,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 45,
+          "word": "resistance",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 抵抗，抵抗力 2. 阻力 3. 敌对，反对",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the ability not to be affected or harmed by something"
+          },
+          "example": "The material offers resistance to heat.",
+          "translation": "这种材料具有耐热性。",
+          "source_file": "tem.txt",
+          "source_line": 9532,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 80,
+      "identity": null,
+      "original": null,
+      "source_entry": "resolution**",
+      "headword": "resolution",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 11,
+          "word": "resolution",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "坚决,决心;决定,决议",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a formal statement of an opinion agreed on by a committee or a council"
+          },
+          "example": "The council passed a resolution on public transport.",
+          "translation": "市议会通过了一项关于公共交通的决议。",
+          "source_file": "npee.txt",
+          "source_line": 4094,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 49,
+          "word": "resolution",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 坚决，果断 2. 决议，提案 3. 决心，决定 4. 解决",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a formal decision made by a group"
+          },
+          "example": "The council passed a resolution to protect the wetlands.",
+          "translation": "市议会通过了一项保护湿地的决议。",
+          "source_file": "tem.txt",
+          "source_line": 9536,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 81,
+      "identity": null,
+      "original": null,
+      "source_entry": "resolve**",
+      "headword": "resolve",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 12,
+          "word": "resolve",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "决心;(使)分解,溶解;决议 n.解决;决心",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make a firm decision to do something"
+          },
+          "example": "The team resolved to finish the work before Friday.",
+          "translation": "团队决心在星期五前完成工作。",
+          "source_file": "npee.txt",
+          "source_line": 4095,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 50,
+          "word": "resolve",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 决定，下决心 2. 解决 n. 决心，决定",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make a firm decision to do something"
+          },
+          "example": "The team resolved to finish the work before Friday.",
+          "translation": "团队下定决心在星期五前完成工作。",
+          "source_file": "tem.txt",
+          "source_line": 9537,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 82,
+      "identity": null,
+      "original": null,
+      "source_entry": "resource*",
+      "headword": "resource",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 14,
+          "word": "resource",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(pl.)资源,财力;办法,智谋;应变之才",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a supply of something that a country, an organization or a person has and can use"
+          },
+          "example": "The team used local resources to rebuild the playground.",
+          "translation": "团队利用当地资源重建了游乐场。",
+          "source_file": "npee.txt",
+          "source_line": 4097,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 54,
+          "word": "resource",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (pl))资源，富源 2. 机智，策略，智谋 3. (pl)必要时可给予帮助、安慰或支持的事物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "something such as land, minerals, or energy that a country or person can use"
+          },
+          "example": "The region has valuable natural resources.",
+          "translation": "这个地区拥有宝贵的自然资源。",
+          "source_file": "tem.txt",
+          "source_line": 9541,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 83,
+      "identity": null,
+      "original": null,
+      "source_entry": "respect",
+      "headword": "respect",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 56,
+          "word": "respect",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 尊敬，尊重 2. 考虑，关心 3. 方面，着眼点 4. 关系，有关 || with respect to关于，谈到 v. 1. 尊敬，尊重 2. 仔细考虑，顾及",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "to have a good opinion of someone or something"
+          },
+          "example": "We should respect the rules of the park.",
+          "translation": "我们应该尊重公园的规定。",
+          "source_file": "tem.txt",
+          "source_line": 9543,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 84,
+      "identity": null,
+      "original": null,
+      "source_entry": "respective**",
+      "headword": "respective",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 16,
+          "word": "respective",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "各自的,各个的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "belonging or relating separately to each of the people or things already mentioned"
+          },
+          "example": "The students returned to their respective classrooms.",
+          "translation": "学生们各自回到了自己的教室。",
+          "source_file": "npee.txt",
+          "source_line": 4099,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 60,
+          "word": "respective",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "各自的，各个的，个别的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "belonging or relating separately to each of two or more people or things"
+          },
+          "example": "The students returned to their respective classrooms.",
+          "translation": "学生们回到了各自的教室。",
+          "source_file": "tem.txt",
+          "source_line": 9547,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 85,
+      "identity": null,
+      "original": null,
+      "source_entry": "respond*",
+      "headword": "respond",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 17,
+          "word": "respond",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "回答,响应,作出反应",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to give a spoken or written answer to somebody/something"
+          },
+          "example": "The company responded quickly to the complaint.",
+          "translation": "公司迅速回应了投诉。",
+          "source_file": "npee.txt",
+          "source_line": 4100,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 64,
+          "word": "respond",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 作答，回答 2. 反应，回应",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to say or do something as a reaction to something that has been said or done"
+          },
+          "example": "She responded quickly to the email.",
+          "translation": "她很快回复了这封邮件。",
+          "source_file": "tem.txt",
+          "source_line": 9551,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 86,
+      "identity": null,
+      "original": null,
+      "source_entry": "response*",
+      "headword": "response",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 18,
+          "word": "response",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "回答,响应,反应",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a spoken or written answer"
+          },
+          "example": "We received a positive response to the invitation.",
+          "translation": "我们收到了对邀请的积极答复。",
+          "source_file": "npee.txt",
+          "source_line": 4101,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 66,
+          "word": "response",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 回答 2. 反应",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "something that is said or done as a reaction"
+          },
+          "example": "His response to the invitation was enthusiastic.",
+          "translation": "他对邀请的回应很热情。",
+          "source_file": "tem.txt",
+          "source_line": 9553,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 87,
+      "identity": null,
+      "original": null,
+      "source_entry": "responsibility**",
+      "headword": "responsibility",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 19,
+          "word": "responsibility",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "责任,责任心;职责,任务",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a duty to deal with or take care of somebody/something"
+          },
+          "example": "It is your responsibility to lock the door.",
+          "translation": "锁门是你的责任。",
+          "source_file": "npee.txt",
+          "source_line": 4102,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 67,
+          "word": "responsibility",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 责任，负责 2. 职责，任务",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a duty to deal with something or take care of someone"
+          },
+          "example": "Parents have a responsibility to keep children safe.",
+          "translation": "父母有责任保障孩子的安全。",
+          "source_file": "tem.txt",
+          "source_line": 9554,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 88,
+      "identity": null,
+      "original": null,
+      "source_entry": "responsible",
+      "headword": "responsible",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 20,
+          "word": "responsible",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "(for,to)应负责的;可靠的;责任重大的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "having the job or duty of doing something or taking care of somebody/something"
+          },
+          "example": "She is responsible for training new staff.",
+          "translation": "她负责培训新员工。",
+          "source_file": "npee.txt",
+          "source_line": 4103,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 68,
+          "word": "responsible",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 责任的，应负责的 2. 可靠的，可信赖的 3. (指职位)责任重大的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "having the job or duty of doing something"
+          },
+          "example": "She is responsible for organizing the annual meeting.",
+          "translation": "她负责组织年度会议。",
+          "source_file": "tem.txt",
+          "source_line": 9555,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 89,
+      "identity": null,
+      "original": null,
+      "source_entry": "rest",
+      "headword": "rest",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 21,
+          "word": "rest",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "休息;剩余部分 v.休息;睡;放,靠,搁",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the remaining part of something"
+          },
+          "example": "The rest of the cake is in the fridge.",
+          "translation": "剩下的蛋糕在冰箱里。",
+          "source_file": "npee.txt",
+          "source_line": 4104,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 70,
+          "word": "rest",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 休息，歇息 2. 支撑物，支持物 || at rest① 安静的，宁静的②过世了的 3. (usu the rest)剩余部分，余留者 /have a rest休息一下 v. 1. (使)休息，(使)静止 2. (使)支撑，(使)倚靠，(使)安放 3. 安息，长眠",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a period of relaxing or sleeping"
+          },
+          "example": "We took a short rest after the long walk.",
+          "translation": "长途步行后，我们短暂休息了一下。",
+          "source_file": "tem.txt",
+          "source_line": 9557,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 90,
+      "identity": null,
+      "original": null,
+      "source_entry": "restaurant",
+      "headword": "restaurant",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 22,
+          "word": "restaurant",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "餐馆,饭店",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a place where you can buy and eat a meal"
+          },
+          "example": "We booked a table at a small restaurant.",
+          "translation": "我们在一家小餐馆订了桌位。",
+          "source_file": "npee.txt",
+          "source_line": 4105,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 71,
+          "word": "restaurant",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "餐馆，饭店，酒楼",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where you can buy and eat a meal"
+          },
+          "example": "The restaurant serves lunch until three o’clock.",
+          "translation": "这家餐馆午餐供应到三点。",
+          "source_file": "tem.txt",
+          "source_line": 9558,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 91,
+      "identity": null,
+      "original": null,
+      "source_entry": "restore**",
+      "headword": "restore",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 24,
+          "word": "restore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "恢复,使回复;归还,交还;修复,重建",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to bring back a situation or feeling that existed before"
+          },
+          "example": "Volunteers helped restore the old garden.",
+          "translation": "志愿者帮助修复了这座旧花园。",
+          "source_file": "npee.txt",
+          "source_line": 4107,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 76,
+          "word": "restore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 归还，交还 2. 恢复，复兴 3. 修复，重建 4. 使复职或复位",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to repair something that is old or damaged"
+          },
+          "example": "Experts restored the damaged statue.",
+          "translation": "专家们修复了受损的雕像。",
+          "source_file": "tem.txt",
+          "source_line": 9563,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 92,
+      "identity": null,
+      "original": null,
+      "source_entry": "restrict**",
+      "headword": "restrict",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 27,
+          "word": "restrict",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "限制,约束",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to limit the size, amount or range of something"
+          },
+          "example": "The pass restricts access to staff areas.",
+          "translation": "这张通行证限制进入员工区域。",
+          "source_file": "npee.txt",
+          "source_line": 4110,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 79,
+          "word": "restrict",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "限制，限定",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to limit or control the size, amount, or range of something"
+          },
+          "example": "The law restricts the sale of alcohol to minors.",
+          "translation": "法律限制向未成年人出售酒类。",
+          "source_file": "tem.txt",
+          "source_line": 9566,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 93,
+      "identity": null,
+      "original": null,
+      "source_entry": "result",
+      "headword": "result",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 28,
+          "word": "result",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "结果,成绩 v.结果,致使,导致,由…而造成",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "something that is caused or produced by something else"
+          },
+          "example": "The result of the test was available the next day.",
+          "translation": "测试结果第二天就出来了。",
+          "source_file": "npee.txt",
+          "source_line": 4111,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 81,
+          "word": "result",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 结果，效果，成绩 2. 计算的结果，答案 || as a result of作为…的结果 v. 1. 发生，起因于 2. 致使，导致",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "something that happens because of something else"
+          },
+          "example": "The result of the experiment surprised the students.",
+          "translation": "实验结果让学生们感到惊讶。",
+          "source_file": "tem.txt",
+          "source_line": 9568,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 94,
+      "identity": null,
+      "original": null,
+      "source_entry": "retire*",
+      "headword": "retire",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 34,
+          "word": "retire",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "退休,引退;退却,撤退;就寝",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to stop doing your job, especially because you have reached a particular age"
+          },
+          "example": "He retired from teaching last year.",
+          "translation": "他去年从教职上退休了。",
+          "source_file": "npee.txt",
+          "source_line": 4117,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-084",
+          "row_index": 98,
+          "word": "retire",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 退休，退职 2. 退却，撤退",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to stop doing your job, especially because you have reached a particular age"
+          },
+          "example": "She plans to retire from teaching next year.",
+          "translation": "她计划明年从教学岗位退休。",
+          "source_file": "tem.txt",
+          "source_line": 9587,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 95,
+      "identity": null,
+      "original": null,
+      "source_entry": "return",
+      "headword": "return",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 8,
+          "word": "return",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 回来，归还 2. 回报，报答 || in return 作为回报 /in return for作为对…的回报 v. 1. 回来，回去，回归 2. 送回，归还",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act of giving something back"
+          },
+          "example": "The return of the keys marked the end of the rental.",
+          "translation": "归还钥匙标志着租期结束。",
+          "source_file": "tem.txt",
+          "source_line": 9597,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 96,
+      "identity": null,
+      "original": null,
+      "source_entry": "reveal*",
+      "headword": "reveal",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 39,
+          "word": "reveal",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "展现,显示,揭示,揭露,告诉,泄露",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make something known to somebody"
+          },
+          "example": "The report revealed a gap in the safety checks.",
+          "translation": "报告揭示了安全检查中的一个漏洞。",
+          "source_file": "npee.txt",
+          "source_line": 4123,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 13,
+          "word": "reveal",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "展现，显露，揭露",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to make something known that was previously secret or unknown"
+          },
+          "example": "The report revealed a serious safety problem.",
+          "translation": "报告揭示了一个严重的安全问题。",
+          "source_file": "tem.txt",
+          "source_line": 9602,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": null,
+      "original": null,
+      "source_entry": "review",
+      "headword": "review",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 44,
+          "word": "review",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "回顾,复习 n.回顾,复习;评论",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to carefully examine or consider something again"
+          },
+          "example": "The team reviewed its progress at the end of the month.",
+          "translation": "团队在月底回顾了进展。",
+          "source_file": "npee.txt",
+          "source_line": 4128,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 28,
+          "word": "review",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 复习，回顾 2. 考察，检阅 3. 写评论 n. 1. 回顾，温习 2. 检阅，检查 3. 书评，评论",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "an article giving an opinion about a book, film, play, or other work"
+          },
+          "example": "The magazine published a review of the new play.",
+          "translation": "这本杂志刊登了一篇对这部新戏的评论。",
+          "source_file": "tem.txt",
+          "source_line": 9617,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 98,
+      "identity": null,
+      "original": null,
+      "source_entry": "revise*",
+      "headword": "revise",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 45,
+          "word": "revise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "修订,校订;修正,修改",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to change something, such as a book or an estimate, in order to correct or improve it"
+          },
+          "example": "The editor revised the article before publication.",
+          "translation": "编辑在发表前修订了这篇文章。",
+          "source_file": "npee.txt",
+          "source_line": 4129,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 29,
+          "word": "revise",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 校订，修订 2. 修正，改变(看法、意向等) 3. (BrE)温习(尤指在考试前)",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to change something in order to improve it"
+          },
+          "example": "The editor revised the report before publication.",
+          "translation": "编辑在报告发表前对其进行了修订。",
+          "source_file": "tem.txt",
+          "source_line": 9618,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": null,
+      "original": null,
+      "source_entry": "revolution*",
+      "headword": "revolution",
+      "pdf_page": 118,
+      "handling": "single-headword",
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 48,
+          "word": "revolution",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "革命;旋转,转数",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a complete change in ways of thinking, methods of working, etc."
+          },
+          "example": "The industrial revolution changed how goods were made.",
+          "translation": "工业革命改变了商品的生产方式。",
+          "source_file": "npee.txt",
+          "source_line": 4132,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-085",
+          "row_index": 37,
+          "word": "revolution",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 旋转，环绕 2. 革命，改革",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a complete change in political or social conditions"
+          },
+          "example": "The revolution changed the country’s political system.",
+          "translation": "这场革命改变了该国的政治制度。",
+          "source_file": "tem.txt",
+          "source_line": 9626,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense",
+        "gaokao-pdf-source-review-required"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    }
+  ]
+}

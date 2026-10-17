@@ -1,0 +1,4302 @@
+{
+  "task_id": "tem-032",
+  "input_sha256": "b0a7faddbd7a15361efcbd7954d302cf1ece76db7e037e7c8c427277a635f4ea",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4082,
+        "word": "exterminate",
+        "headword": "exterminate",
+        "homograph": null,
+        "source_raw": "*exterminate [ɪkˈstɜːmɪneɪt] v. 彻底毁灭，根除，灭绝"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "彻底毁灭，根除，灭绝",
+        "phonetic": "ɪkˈstɜːmɪneɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4083,
+        "word": "external",
+        "headword": "external",
+        "homograph": null,
+        "source_raw": "external [ɪkˈstɜːnəl] adj. 1. 外部的，外面的，外表的 2. 外来的，外界的，对外的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 外部的，外面的，外表的 2. 外来的，外界的，对外的",
+        "phonetic": "ɪkˈstɜːnəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 50,
+          "word": "external",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "外部的，外面的",
+          "selected_sense": {
+            "meaning": "connected with or located on the outside; happening or coming from outside an organization or situation",
+            "pos": "adjective"
+          },
+          "example": "External factors affected the project schedule.",
+          "translation": "外部因素影响了项目进度。",
+          "source_file": "cet4.txt",
+          "source_line": 1418,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 38,
+          "word": "external",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "外部的;客观的;外国的;表面的;[医]外用的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "relating to or located on the outside of something"
+          },
+          "example": "The building has external staircases.",
+          "translation": "这栋建筑设有外部楼梯。",
+          "source_file": "npee.txt",
+          "source_line": 1798,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4084,
+        "word": "extinct",
+        "headword": "extinct",
+        "homograph": null,
+        "source_raw": "extinct [ɪkˈstɪŋkt] adj. 1. 灭绝的，绝种的 2. (火山)死的，熄灭的 3. 消亡的，破灭的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 灭绝的，绝种的 2. (火山)死的，熄灭的 3. 消亡的，破灭的",
+        "phonetic": "ɪkˈstɪŋkt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 39,
+          "word": "extinct",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "灭绝的;熄灭了的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "no longer existing"
+          },
+          "example": "The species became extinct thousands of years ago.",
+          "translation": "这个物种数千年前就灭绝了。",
+          "source_file": "npee.txt",
+          "source_line": 1799,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4085,
+        "word": "extinction",
+        "headword": "extinction",
+        "homograph": null,
+        "source_raw": "extinction [ɪkˈstɪŋkʃən] n. 消灭，熄灭，绝种"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "消灭，熄灭，绝种",
+        "phonetic": "ɪkˈstɪŋkʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4086,
+        "word": "extinguish",
+        "headword": "extinguish",
+        "homograph": null,
+        "source_raw": "extinguish [ɪkˈstɪŋɡwɪʃ] v. 1. 熄灭，扑灭 2. 破灭，幻灭，使消亡 3. 压制，压抑"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 熄灭，扑灭 2. 破灭，幻灭，使消亡 3. 压制，压抑",
+        "phonetic": "ɪkˈstɪŋɡwɪʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 40,
+          "word": "extinguish",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "熄灭;消灭;结束;压制;使黯然失色;偿清",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make a fire stop burning"
+          },
+          "example": "Firefighters extinguished the fire before it reached the house.",
+          "translation": "消防员在火势蔓延到房屋前扑灭了大火。",
+          "source_file": "npee.txt",
+          "source_line": 1800,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4087,
+        "word": "extinguisher",
+        "headword": "extinguisher",
+        "homograph": null,
+        "source_raw": "extinguisher [ɪkˈstɪŋɡwɪʃə] n. 灭火器，熄灭者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "灭火器，熄灭者",
+        "phonetic": "ɪkˈstɪŋɡwɪʃə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4089,
+        "word": "extort",
+        "headword": "extort",
+        "homograph": null,
+        "source_raw": "*extort [ɪkˈstɔːt] v. 强索，勒索，敲诈"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "强索，勒索，敲诈",
+        "phonetic": "ɪkˈstɔːt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4090,
+        "word": "extortionate",
+        "headword": "extortionate",
+        "homograph": null,
+        "source_raw": "*extortionate [ɪkˈstɔːʃənət] adj. 勒索的，(要求、价格等)很高的，过分的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "勒索的，(要求、价格等)很高的，过分的",
+        "phonetic": "ɪkˈstɔːʃənət",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4091,
+        "word": "extra",
+        "headword": "extra",
+        "homograph": null,
+        "source_raw": "extra [ˈekstrə] adj. 1. 额外的，外加的，特别的 2. 特佳的，上好的 adv. 特别地，非常 n. 1. 额外的东西，外加费用 2. 额外人手 3. 号外"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 额外的，外加的，特别的 2. 特佳的，上好的 adv. 特别地，非常 n. 1. 额外的东西，外加费用 2. 额外人手 3. 号外",
+        "phonetic": "ˈekstrə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 41,
+          "word": "extra",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "额外的,附加的 n.附加物,额外的东西",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "more than is usual or already available"
+          },
+          "example": "We need extra chairs for the guests.",
+          "translation": "我们需要为客人多准备几把椅子。",
+          "source_file": "npee.txt",
+          "source_line": 1801,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4092,
+        "word": "extract 1",
+        "headword": "extract",
+        "homograph": 1,
+        "source_raw": "*extract 1 [ɪkˈstrækt] v. 1. 拔出，拉出，得到 2. 榨取，提取，吸取，提取物，精，汁"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 拔出，拉出，得到 2. 榨取，提取，吸取，提取物，精，汁",
+        "phonetic": "ɪkˈstrækt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4093,
+        "word": "extract 2",
+        "headword": "extract",
+        "homograph": 2,
+        "source_raw": "*extract 2 [ˈekstrækt] n. 节录，引文，选段"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "节录，引文，选段",
+        "phonetic": "ˈekstrækt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4094,
+        "word": "extraction",
+        "headword": "extraction",
+        "homograph": null,
+        "source_raw": "*extraction [ɪkˈstrækʃən] n. 1. 取出，拔出，强索 2. 拔牙 3. 血统，出身，家世"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 取出，拔出，强索 2. 拔牙 3. 血统，出身，家世",
+        "phonetic": "ɪkˈstrækʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4095,
+        "word": "extractor",
+        "headword": "extractor",
+        "homograph": null,
+        "source_raw": "*extractor [ɪkˈstræktə] n. 榨取者，榨汁机，榨油机"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "榨取者，榨汁机，榨油机",
+        "phonetic": "ɪkˈstræktə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4096,
+        "word": "extracurricular",
+        "headword": "extracurricular",
+        "homograph": null,
+        "source_raw": "extracurricular [ˌekstrəkəˈrɪkjʊlə] adj. 课外的，课程以外的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "课外的，课程以外的",
+        "phonetic": "ˌekstrəkəˈrɪkjʊlə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4097,
+        "word": "extradite",
+        "headword": "extradite",
+        "homograph": null,
+        "source_raw": "*extradite [ˈekstrədaɪt] v. 引渡(罪犯)"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "引渡(罪犯)",
+        "phonetic": "ˈekstrədaɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4098,
+        "word": "extraneous",
+        "headword": "extraneous",
+        "homograph": null,
+        "source_raw": "*extraneous [ɪkˈstreɪnɪəs] adj. 非直接关联的，与正题无关的，外来的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "非直接关联的，与正题无关的，外来的",
+        "phonetic": "ɪkˈstreɪnɪəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4099,
+        "word": "extraordinary",
+        "headword": "extraordinary",
+        "homograph": null,
+        "source_raw": "extraordinary [ɪkˈstrɔːdənəri] adj. 1. 非常的，特别的，破例的 2. 离奇的，使人惊奇的，非凡的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 非常的，特别的，破例的 2. 离奇的，使人惊奇的，非凡的",
+        "phonetic": "ɪkˈstrɔːdənəri",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 52,
+          "word": "extraordinary",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "非同寻常的，特别的",
+          "selected_sense": {
+            "meaning": "unexpected, surprising or strange; not normal or ordinary; greater or better than usual",
+            "pos": "adjective"
+          },
+          "example": "She showed extraordinary courage during the rescue.",
+          "translation": "她在救援过程中表现出非凡的勇气。",
+          "source_file": "cet4.txt",
+          "source_line": 1420,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 43,
+          "word": "extraordinary",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "非常的;格外的;意外的;离奇的;临时的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "very unusual or surprising"
+          },
+          "example": "The team made an extraordinary discovery.",
+          "translation": "这个团队有了一项非同寻常的发现。",
+          "source_file": "npee.txt",
+          "source_line": 1803,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4100,
+        "word": "extrapolate",
+        "headword": "extrapolate",
+        "homograph": null,
+        "source_raw": "*extrapolate [ɪkˈstræpəleɪt] v. 推断，推知，推测"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "推断，推知，推测",
+        "phonetic": "ɪkˈstræpəleɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4101,
+        "word": "extraterrestrial",
+        "headword": "extraterrestrial",
+        "homograph": null,
+        "source_raw": "*extraterrestrial [ˌekstrətəˈrestrɪəl] adj. 地球之外的，来自外星的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "地球之外的，来自外星的",
+        "phonetic": "ˌekstrətəˈrestrɪəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4102,
+        "word": "extravagance",
+        "headword": "extravagance",
+        "homograph": null,
+        "source_raw": "extravagance [ɪkˈstrævəɡəns] n. 浪费，奢侈，无节制"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "浪费，奢侈，无节制",
+        "phonetic": "ɪkˈstrævəɡəns",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4103,
+        "word": "extravagant",
+        "headword": "extravagant",
+        "homograph": null,
+        "source_raw": "extravagant [ɪkˈstrævəɡənt] adj. 1. 浪费的，奢侈的 2. 过度的，放肆的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 浪费的，奢侈的 2. 过度的，放肆的",
+        "phonetic": "ɪkˈstrævəɡənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 44,
+          "word": "extravagant",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "奢侈的;过分的;(言行等)放肆的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "spending more money or using more than is necessary"
+          },
+          "example": "They bought an extravagant house they could barely afford.",
+          "translation": "他们买了一栋价格奢侈、几乎负担不起的房子。",
+          "source_file": "npee.txt",
+          "source_line": 1804,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4104,
+        "word": "extreme",
+        "headword": "extreme",
+        "homograph": null,
+        "source_raw": "extreme [ɪkˈstriːm] adj. 1. 末端的，极端的，尽头的 2. 极度的，偏激的，过分的  n. 极端，极度(状态)，过分"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 末端的，极端的，尽头的 2. 极度的，偏激的，过分的  n. 极端，极度(状态)，过分",
+        "phonetic": "ɪkˈstriːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 53,
+          "word": "extreme",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "极度的；尽头的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "very great in degree; not ordinary or usual; far from what is considered normal or reasonable"
+          },
+          "example": "The region can experience extreme temperatures.",
+          "translation": "该地区可能会出现极端气温。",
+          "source_file": "cet4.txt",
+          "source_line": 1421,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 45,
+          "word": "extreme",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "末端的,尽头的;极度的 n.极端;最大程度",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "very great in degree"
+          },
+          "example": "The hikers faced extreme weather on the mountain.",
+          "translation": "徒步者在山上遭遇了极端天气。",
+          "source_file": "npee.txt",
+          "source_line": 1805,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4105,
+        "word": "extremely",
+        "headword": "extremely",
+        "homograph": null,
+        "source_raw": "extremely [ɪkˈstriːmlɪ] adv. 非常，极其，极端"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "非常，极其，极端",
+        "phonetic": "ɪkˈstriːmlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 54,
+          "word": "extremely",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "极端，极其，非常",
+          "selected_sense": {
+            "pos": "adverb",
+            "meaning": "to a very high degree"
+          },
+          "example": "The instructions were extremely clear.",
+          "translation": "这些说明非常清楚。",
+          "source_file": "cet4.txt",
+          "source_line": 1422,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4106,
+        "word": "extremism",
+        "headword": "extremism",
+        "homograph": null,
+        "source_raw": "*extremism [ɪkˈstriːmɪzəm] n. (政治上)极端主义，过激论"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(政治上)极端主义，过激论",
+        "phonetic": "ɪkˈstriːmɪzəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4107,
+        "word": "extremist",
+        "headword": "extremist",
+        "homograph": null,
+        "source_raw": "extremist [ɪkˈstriːmɪst] n. 偏激的人，极端主义者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "偏激的人，极端主义者",
+        "phonetic": "ɪkˈstriːmɪst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4108,
+        "word": "extremities",
+        "headword": "extremities",
+        "homograph": null,
+        "source_raw": "*extremities [ɪkˈstremɪtɪs] n. 1. (人的)肢体，手足 2. 极端残暴的行为"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (人的)肢体，手足 2. 极端残暴的行为",
+        "phonetic": "ɪkˈstremɪtɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4109,
+        "word": "extremity",
+        "headword": "extremity",
+        "homograph": null,
+        "source_raw": "*extremity [ɪkˈstremɪtɪ] n. 极端，末端，极限，尽头"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "极端，末端，极限，尽头",
+        "phonetic": "ɪkˈstremɪtɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4110,
+        "word": "extricate",
+        "headword": "extricate",
+        "homograph": null,
+        "source_raw": "*extricate [ˈekstrɪkeɪt] v. 解救，使摆脱，释放"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "解救，使摆脱，释放",
+        "phonetic": "ˈekstrɪkeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4112,
+        "word": "exuberant",
+        "headword": "exuberant",
+        "homograph": null,
+        "source_raw": "*exuberant [ɪɡˈzjuːbərənt] adj. 生气勃勃的，兴高采烈的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "生气勃勃的，兴高采烈的",
+        "phonetic": "ɪɡˈzjuːbərənt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4113,
+        "word": "exude",
+        "headword": "exude",
+        "homograph": null,
+        "source_raw": "*exude [ɪɡˈzjuːd] v. (使)渗出，缓慢流出，分泌出"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)渗出，缓慢流出，分泌出",
+        "phonetic": "ɪɡˈzjuːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4114,
+        "word": "exult",
+        "headword": "exult",
+        "homograph": null,
+        "source_raw": "*exult [ɪɡˈzʌlt] v. 狂喜，欢腾"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "狂喜，欢腾",
+        "phonetic": "ɪɡˈzʌlt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4115,
+        "word": "eye",
+        "headword": "eye",
+        "homograph": null,
+        "source_raw": "eye [aɪ] n. 1. 眼睛 2. 眼力，视力 3. 环，孔，(针)眼 || catch one’s eye引某人注意 [cry one’s eyes out痛哭，大哭] in someone’s eyes在…心目中，在…看来 [keep an eye on 留神，密切注意，照看] see eye to eye (with sb)(与某人)看法完全一致 [set eyes on看，望着] turn a blind eye to对…熟视无睹 /up to one’s eyes in 忙于 v. 注视"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 眼睛 2. 眼力，视力 3. 环，孔，(针)眼 || catch one’s eye引某人注意 [cry one’s eyes out痛哭，大哭] in someone’s eyes在…心目中，在…看来 [keep an eye on 留神，密切注意，照看] see eye to eye (with sb)(与某人)看法完全一致 [set eyes on看，望着] turn a blind eye to对…熟视无睹 /up to one’s eyes in 忙于 v. 注视",
+        "phonetic": "aɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 55,
+          "word": "eye",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "眼睛；眼力；鉴赏力",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "either of the two organs used for seeing; the ability to see; a particular way of seeing something"
+          },
+          "example": "She has a good eye for colour and design.",
+          "translation": "她对色彩和设计很有眼光。",
+          "source_file": "cet4.txt",
+          "source_line": 1423,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 46,
+          "word": "eye",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "眼(睛);视力;眼力;监督vt.看,审视",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "one of the organs on the face used for seeing"
+          },
+          "example": "Dust got into my left eye.",
+          "translation": "灰尘进了我的左眼。",
+          "source_file": "npee.txt",
+          "source_line": 1806,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4116,
+        "word": "eyeball",
+        "headword": "eyeball",
+        "homograph": null,
+        "source_raw": "eyeball [ˈaɪbɔːl] n. 眼球"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "眼球",
+        "phonetic": "ˈaɪbɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4117,
+        "word": "eyebrow",
+        "headword": "eyebrow",
+        "homograph": null,
+        "source_raw": "eyebrow [ˈaɪbraʊ] n. 眉毛，眉宇"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "眉毛，眉宇",
+        "phonetic": "ˈaɪbraʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 47,
+          "word": "eyebrow",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "眉毛",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the line of hair above an eye"
+          },
+          "example": "She raised an eyebrow in surprise.",
+          "translation": "她惊讶地挑起了一边眉毛。",
+          "source_file": "npee.txt",
+          "source_line": 1807,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4118,
+        "word": "eye-catching",
+        "headword": "eye-catching",
+        "homograph": null,
+        "source_raw": "*eye-catching [aɪ ˈkætʃɪŋ] adj. 引人注目的，动人的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "引人注目的，动人的",
+        "phonetic": "aɪ ˈkætʃɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4119,
+        "word": "eyeglass",
+        "headword": "eyeglass",
+        "homograph": null,
+        "source_raw": "eyeglass [ˈaɪɡlɑːs] n. 镜片"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "镜片",
+        "phonetic": "ˈaɪɡlɑːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4120,
+        "word": "eyelash",
+        "headword": "eyelash",
+        "homograph": null,
+        "source_raw": "eyelash [ˈaɪlæʃ] n. 睫毛"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "睫毛",
+        "phonetic": "ˈaɪlæʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4121,
+        "word": "eyeless",
+        "headword": "eyeless",
+        "homograph": null,
+        "source_raw": "eyeless [ˈaɪlɪs] adj. 无眼的，无视力的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "无眼的，无视力的",
+        "phonetic": "ˈaɪlɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4122,
+        "word": "eyelid",
+        "headword": "eyelid",
+        "homograph": null,
+        "source_raw": "eyelid [ˈaɪlɪd] n. 眼皮，眼睑"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "眼皮，眼睑",
+        "phonetic": "ˈaɪlɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4123,
+        "word": "eye-opener",
+        "headword": "eye-opener",
+        "homograph": null,
+        "source_raw": "eye-opener [aɪˈəʊpənə] n. 使人大开眼界的事物，令人瞠目的事物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "使人大开眼界的事物，令人瞠目的事物",
+        "phonetic": "aɪˈəʊpənə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4124,
+        "word": "eyesight",
+        "headword": "eyesight",
+        "homograph": null,
+        "source_raw": "eyesight [ˈaɪsaɪt] n. 视力，视觉，目光"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "视力，视觉，目光",
+        "phonetic": "ˈaɪsaɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 56,
+          "word": "eyesight",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "视力，目力",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the ability to see"
+          },
+          "example": "His eyesight has improved since the operation.",
+          "translation": "手术后他的视力有所改善。",
+          "source_file": "cet4.txt",
+          "source_line": 1424,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 48,
+          "word": "eyesight",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "视力",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the ability to see"
+          },
+          "example": "His eyesight became weaker with age.",
+          "translation": "他的视力随着年龄增长而减弱。",
+          "source_file": "npee.txt",
+          "source_line": 1808,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4125,
+        "word": "eyesore",
+        "headword": "eyesore",
+        "homograph": null,
+        "source_raw": "eyesore [ˈaɪsɔː] n. 难看的东西，丑陋的物品"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "难看的东西，丑陋的物品",
+        "phonetic": "ˈaɪsɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4126,
+        "word": "eyewash",
+        "headword": "eyewash",
+        "homograph": null,
+        "source_raw": "*eyewash [ˈaɪwɒʃ] n. 1. 洗眼药水 2. 胡说八道，瞎说，弄虚作假"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 洗眼药水 2. 胡说八道，瞎说，弄虚作假",
+        "phonetic": "ˈaɪwɒʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4127,
+        "word": "eyewitness",
+        "headword": "eyewitness",
+        "homograph": null,
+        "source_raw": "eyewitness [ˈaɪˌwɪtnEs] n. 目击者(=witness)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "目击者(=witness)",
+        "phonetic": "ˈaɪˌwɪtnEs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4128,
+        "word": "fable",
+        "headword": "fable",
+        "homograph": null,
+        "source_raw": "fable [ˈfeɪbl] n. 1. 寓言 2. 虚构的故事 3. 传说，神话"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 寓言 2. 虚构的故事 3. 传说，神话",
+        "phonetic": "ˈfeɪbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 57,
+          "word": "fable",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "寓言；虚构的故事",
+          "selected_sense": {
+            "meaning": "a traditional short story that teaches a moral lesson, often with animals; an untrue statement or account",
+            "pos": "noun"
+          },
+          "example": "The children read a fable about a clever fox.",
+          "translation": "孩子们读了一则关于聪明狐狸的寓言。",
+          "source_file": "cet4.txt",
+          "source_line": 1428,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 49,
+          "word": "fable",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "寓言",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a traditional short story that teaches a moral lesson"
+          },
+          "example": "The children read a fable about a clever fox.",
+          "translation": "孩子们读了一个关于聪明狐狸的寓言。",
+          "source_file": "npee.txt",
+          "source_line": 1809,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4129,
+        "word": "fabric",
+        "headword": "fabric",
+        "homograph": null,
+        "source_raw": "fabric [ˈfæbrɪk] n. 1. 织物，织品 2. 质地，构造，结构"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 织物，织品 2. 质地，构造，结构",
+        "phonetic": "ˈfæbrɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 58,
+          "word": "fabric",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "织物，纺织品；结构",
+          "selected_sense": {
+            "meaning": "material made by weaving wool, cotton, silk, etc.; the basic structure of a society or building",
+            "pos": "noun"
+          },
+          "example": "The curtains are made from a durable cotton fabric.",
+          "translation": "这些窗帘是用耐用的棉布做的。",
+          "source_file": "cet4.txt",
+          "source_line": 1429,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 50,
+          "word": "fabric",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "织物;织品;结构;构造;建筑物",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "cloth made by weaving"
+          },
+          "example": "This fabric is soft but strong.",
+          "translation": "这种织物柔软而结实。",
+          "source_file": "npee.txt",
+          "source_line": 1810,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4130,
+        "word": "fabricate",
+        "headword": "fabricate",
+        "homograph": null,
+        "source_raw": "*fabricate [ˈfæbrɪkeɪt] v. 捏造，编造，虚构"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "捏造，编造，虚构",
+        "phonetic": "ˈfæbrɪkeɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 51,
+          "word": "fabricate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "捏造,编造(谎言,借口等);建造,制造",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to invent false information in order to deceive people"
+          },
+          "example": "He fabricated a story to explain his absence.",
+          "translation": "他编造了一个故事来解释自己的缺席。",
+          "source_file": "npee.txt",
+          "source_line": 1811,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4131,
+        "word": "fabulous",
+        "headword": "fabulous",
+        "homograph": null,
+        "source_raw": "fabulous [ˈfæbjʊləs] adj. 1. 寓言中的，难以置信的 2. 很好的，绝佳的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 寓言中的，难以置信的 2. 很好的，绝佳的",
+        "phonetic": "ˈfæbjʊləs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 52,
+          "word": "fabulous",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "极好的;极为巨大的;寓言中的,传说中的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "extremely good"
+          },
+          "example": "We had a fabulous view from the hotel room.",
+          "translation": "我们从酒店房间看到的景色美极了。",
+          "source_file": "npee.txt",
+          "source_line": 1812,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4132,
+        "word": "facade",
+        "headword": "facade",
+        "homograph": null,
+        "source_raw": "*facade [fəˈsɑːd] n. 1. 正面，临街正面 2. 假相，外表"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 正面，临街正面 2. 假相，外表",
+        "phonetic": "fəˈsɑːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4133,
+        "word": "face",
+        "headword": "face",
+        "homograph": null,
+        "source_raw": "face [feɪs] n. 1. 脸，面孔 2. 面容，表情 3. 面子，尊严，自信 4. 正面，表面，外观 || in (the) face of面对，纵然，不顾  [keep a straight face板着面孔 ] make a face;make faces; pull a face; pull faces做鬼脸  /pull a long face拉长脸，愁眉苦脸  v. 1. 朝…，面向… 2. 正视，勇敢面对，面临 || face to face面对面"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 脸，面孔 2. 面容，表情 3. 面子，尊严，自信 4. 正面，表面，外观 || in (the) face of面对，纵然，不顾  [keep a straight face板着面孔 ] make a face;make faces; pull a face; pull faces做鬼脸  /pull a long face拉长脸，愁眉苦脸  v. 1. 朝…，面向… 2. 正视，勇敢面对，面临 || face to face面对面",
+        "phonetic": "feɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 59,
+          "word": "face",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "脸；表面；外表",
+          "selected_sense": {
+            "meaning": "the front part of the head; an expression; a side or surface of something; the ability to see",
+            "pos": "noun"
+          },
+          "example": "His face showed how surprised he was.",
+          "translation": "他的表情显出了他的惊讶。",
+          "source_file": "cet4.txt",
+          "source_line": 1430,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 53,
+          "word": "face",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "脸,面貌;表情;正面 v.面对着;朝,面向",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the front part of the head with the eyes, nose and mouth"
+          },
+          "example": "He washed his face with cold water.",
+          "translation": "他用冷水洗了脸。",
+          "source_file": "npee.txt",
+          "source_line": 1813,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4134,
+        "word": "facet",
+        "headword": "facet",
+        "homograph": null,
+        "source_raw": "*facet [ˈfæsɪt] n. 1. (宝石等的)琢面 2. (事物等的)一面，方面"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (宝石等的)琢面 2. (事物等的)一面，方面",
+        "phonetic": "ˈfæsɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4135,
+        "word": "facial",
+        "headword": "facial",
+        "homograph": null,
+        "source_raw": "facial [ˈfeɪʃəl] adj. 面部的，脸上的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "面部的，脸上的",
+        "phonetic": "ˈfeɪʃəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4136,
+        "word": "facile",
+        "headword": "facile",
+        "homograph": null,
+        "source_raw": "*facile [ˈfæsaɪl] adj. 过简易的，肤浅的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "过简易的，肤浅的",
+        "phonetic": "ˈfæsaɪl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4137,
+        "word": "facilitate",
+        "headword": "facilitate",
+        "homograph": null,
+        "source_raw": "facilitate [fəˈsɪlɪteɪt] v. 使容易，使便利，促进"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使容易，使便利，促进",
+        "phonetic": "fəˈsɪlɪteɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 54,
+          "word": "facilitate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使变得(更)容易;使便利;推动;帮助;处进",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to make an action or process easier"
+          },
+          "example": "The new app facilitates communication between teachers and parents.",
+          "translation": "这款新应用让教师和家长之间的沟通更加便利。",
+          "source_file": "npee.txt",
+          "source_line": 1814,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4138,
+        "word": "facility",
+        "headword": "facility",
+        "homograph": null,
+        "source_raw": "facility [fəˈsɪlətɪ] n. 1. (pl)设备，工具 2. 简易，方便，便利 3. 技能，熟练"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (pl)设备，工具 2. 简易，方便，便利 3. 技能，熟练",
+        "phonetic": "fəˈsɪlətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 60,
+          "word": "facility",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "设备；容易；便利",
+          "selected_sense": {
+            "meaning": "buildings, services or equipment provided for a purpose; a place used for an activity; a special feature; a natural ability",
+            "pos": "noun"
+          },
+          "example": "The centre has excellent facilities for young children.",
+          "translation": "该中心为幼儿提供了完善的设施。",
+          "source_file": "cet4.txt",
+          "source_line": 1431,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 55,
+          "word": "facility",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "灵巧,熟练;(pl.)设备,设施,便利条件",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "buildings, services or equipment provided for a purpose"
+          },
+          "example": "The sports facility is open to the public.",
+          "translation": "这座体育设施向公众开放。",
+          "source_file": "npee.txt",
+          "source_line": 1815,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4139,
+        "word": "facing",
+        "headword": "facing",
+        "homograph": null,
+        "source_raw": "*facing [ˈfeɪsɪŋ] n. 1. (墙壁等的)饰面，面层 2. (衣服等的)镶边，贴边的材料"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (墙壁等的)饰面，面层 2. (衣服等的)镶边，贴边的材料",
+        "phonetic": "ˈfeɪsɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4140,
+        "word": "facsimile",
+        "headword": "facsimile",
+        "homograph": null,
+        "source_raw": "facsimile [fækˈsɪməlɪ] n. 复本，摹(真)本，图文传真"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "复本，摹(真)本，图文传真",
+        "phonetic": "fækˈsɪməlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4141,
+        "word": "fact",
+        "headword": "fact",
+        "homograph": null,
+        "source_raw": "fact [fækt] n. 1. 事实，真相，实情 2. 真实性，实际，细节 || as a matter of fact事实上，其实 /in (actual) fact其实，实际上，确切地说"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 事实，真相，实情 2. 真实性，实际，细节 || as a matter of fact事实上，其实 /in (actual) fact其实，实际上，确切地说",
+        "phonetic": "fækt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 61,
+          "word": "fact",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "事实；实际，实情",
+          "selected_sense": {
+            "meaning": "a thing known to be true, especially when it can be proved",
+            "pos": "noun"
+          },
+          "example": "The report is based on facts, not rumours.",
+          "translation": "这份报告依据的是事实，而不是传闻。",
+          "source_file": "cet4.txt",
+          "source_line": 1432,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 56,
+          "word": "fact",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "事实,实际",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "something known to be true and possible to prove"
+          },
+          "example": "The fact is supported by several independent studies.",
+          "translation": "这一事实得到多项独立研究的支持。",
+          "source_file": "npee.txt",
+          "source_line": 1816,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4142,
+        "word": "faction",
+        "headword": "faction",
+        "homograph": null,
+        "source_raw": "*faction [ˈfækʃən] n. (政党、组织等内部的)派别，宗派"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(政党、组织等内部的)派别，宗派",
+        "phonetic": "ˈfækʃən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4143,
+        "word": "factitious",
+        "headword": "factitious",
+        "homograph": null,
+        "source_raw": "*factitious [fækˈtɪʃəs] adj. 不自然的，人为的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "不自然的，人为的",
+        "phonetic": "fækˈtɪʃəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4144,
+        "word": "factor",
+        "headword": "factor",
+        "homograph": null,
+        "source_raw": "factor [ˈfæktə] n. 因素，要素"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "因素，要素",
+        "phonetic": "ˈfæktə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 62,
+          "word": "factor",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "因素；因子，系数",
+          "selected_sense": {
+            "meaning": "one of several things that cause or influence something; a number that divides another number exactly",
+            "pos": "noun"
+          },
+          "example": "Cost was a major factor in our decision.",
+          "translation": "成本是我们作出决定的一个重要因素。",
+          "source_file": "cet4.txt",
+          "source_line": 1433,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4145,
+        "word": "factory",
+        "headword": "factory",
+        "homograph": null,
+        "source_raw": "factory [ˈfæktərɪ] n. 工厂，制造厂，制造场所"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工厂，制造厂，制造场所",
+        "phonetic": "ˈfæktərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 63,
+          "word": "factory",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "工厂，制造厂",
+          "selected_sense": {
+            "meaning": "a building or group of buildings where goods are made, mainly by machine",
+            "pos": "noun"
+          },
+          "example": "The factory produces parts for electric bicycles.",
+          "translation": "这家工厂生产电动自行车零件。",
+          "source_file": "cet4.txt",
+          "source_line": 1434,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 58,
+          "word": "factory",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "工厂",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a building where goods are made, usually by machines"
+          },
+          "example": "The factory produces parts for electric cars.",
+          "translation": "这家工厂生产电动汽车零件。",
+          "source_file": "npee.txt",
+          "source_line": 1818,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4146,
+        "word": "factual",
+        "headword": "factual",
+        "homograph": null,
+        "source_raw": "factual [ˈfæktʃʊəl] adj. 事实的，真实的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "事实的，真实的",
+        "phonetic": "ˈfæktʃʊəl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4147,
+        "word": "faculty",
+        "headword": "faculty",
+        "homograph": null,
+        "source_raw": "faculty [ˈfækəltɪ] n. 1. 天赋，才能，官能 2. (大学的)系、科，学院 3. (院系的)全体教师，(某一职业的)全体从业人员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 天赋，才能，官能 2. (大学的)系、科，学院 3. (院系的)全体教师，(某一职业的)全体从业人员",
+        "phonetic": "ˈfækəltɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 64,
+          "word": "faculty",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "才能，能力；系，科",
+          "selected_sense": {
+            "meaning": "a department or group of departments at a university; all teachers in a faculty; a physical or mental ability",
+            "pos": "noun"
+          },
+          "example": "She joined the law faculty as a professor.",
+          "translation": "她以教授身份加入了法学院。",
+          "source_file": "cet4.txt",
+          "source_line": 1435,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 59,
+          "word": "faculty",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "才能;学院,系;(学院或系的)全体教学人员",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a department or group of departments at a university"
+          },
+          "example": "She teaches in the faculty of science.",
+          "translation": "她在理学院任教。",
+          "source_file": "npee.txt",
+          "source_line": 1819,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4148,
+        "word": "fad",
+        "headword": "fad",
+        "homograph": null,
+        "source_raw": "*fad [fæd] n. (一时的)狂热，时尚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(一时的)狂热，时尚",
+        "phonetic": "fæd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4149,
+        "word": "fade",
+        "headword": "fade",
+        "homograph": null,
+        "source_raw": "fade [feɪd] v. 1. (使)褪色，(使)枯萎，变衰 2. 逐渐消失"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (使)褪色，(使)枯萎，变衰 2. 逐渐消失",
+        "phonetic": "feɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 65,
+          "word": "fade",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "褪色；逐渐消失",
+          "selected_sense": {
+            "meaning": "to become or make something paler or less bright; to disappear gradually; to stop performing as well",
+            "pos": "verb"
+          },
+          "example": "The bright paint faded after years in the sun.",
+          "translation": "鲜艳的油漆经过多年日晒后褪色了。",
+          "source_file": "cet4.txt",
+          "source_line": 1436,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 60,
+          "word": "fade",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "褪色;衰减,消失n.淡入(出)n.乏味(平淡)的",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to become or make something paler or less bright"
+          },
+          "example": "The red curtains faded in the sunlight.",
+          "translation": "红色窗帘在阳光下褪了色。",
+          "source_file": "npee.txt",
+          "source_line": 1820,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4150,
+        "word": "fag",
+        "headword": "fag",
+        "homograph": null,
+        "source_raw": "*fag [fæɡ] n. 苦工，苦差事"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "苦工，苦差事",
+        "phonetic": "fæɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4151,
+        "word": "Fahrenheit",
+        "headword": "Fahrenheit",
+        "homograph": null,
+        "source_raw": "Fahrenheit [ˈfærənhaɪt] n. 华氏(温度计)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "华氏(温度计)",
+        "phonetic": "ˈfærənhaɪt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4152,
+        "word": "fail",
+        "headword": "fail",
+        "homograph": null,
+        "source_raw": "fail [feɪl] v. 1. 失败，失去作用，(使)不及格 2. 不，不能，忘记 3. 缺乏，不足 4. (健康等)  衰退，减弱，消失 5. 使失望，辜负，破产"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 失败，失去作用，(使)不及格 2. 不，不能，忘记 3. 缺乏，不足 4. (健康等)  衰退，减弱，消失 5. 使失望，辜负，破产",
+        "phonetic": "feɪl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 67,
+          "word": "fail",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "失败；失灵；不能",
+          "selected_sense": {
+            "meaning": "to not be successful; to not pass an exam; to stop working correctly; to not do something expected",
+            "pos": "verb"
+          },
+          "example": "The machine failed during the final test.",
+          "translation": "机器在最后测试时发生故障。",
+          "source_file": "cet4.txt",
+          "source_line": 1438,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 61,
+          "word": "fail",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "失败,不及格;衰退,减弱",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to be unsuccessful in achieving something"
+          },
+          "example": "The first attempt failed, but we tried again.",
+          "translation": "第一次尝试失败了，但我们又试了一次。",
+          "source_file": "npee.txt",
+          "source_line": 1821,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4153,
+        "word": "failing",
+        "headword": "failing",
+        "homograph": null,
+        "source_raw": "*failing [ˈfeɪlɪŋ] n. 弱点，缺点 prep. 如果没有，若无…"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "弱点，缺点 prep. 如果没有，若无…",
+        "phonetic": "ˈfeɪlɪŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4154,
+        "word": "failure",
+        "headword": "failure",
+        "homograph": null,
+        "source_raw": "failure [ˈfeɪljə] n. 1. 失败，失败的人(事) 2. 不履行，没做到 3. 故障，失灵"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 失败，失败的人(事) 2. 不履行，没做到 3. 故障，失灵",
+        "phonetic": "ˈfeɪljə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 68,
+          "word": "failure",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "失败；失败的人",
+          "selected_sense": {
+            "meaning": "lack of success; a person or thing that is not successful; not doing something expected; a state of not working correctly",
+            "pos": "noun"
+          },
+          "example": "The power failure left the building in darkness.",
+          "translation": "停电使大楼陷入一片黑暗。",
+          "source_file": "cet4.txt",
+          "source_line": 1439,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 62,
+          "word": "failure",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "失败,不及格;失败者;故障,失灵;未能",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "lack of success in doing or achieving something"
+          },
+          "example": "The project was a failure despite months of work.",
+          "translation": "尽管花了几个月，这个项目还是失败了。",
+          "source_file": "npee.txt",
+          "source_line": 1822,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4155,
+        "word": "faint",
+        "headword": "faint",
+        "homograph": null,
+        "source_raw": "faint  [feɪnt] adj. 1. 虚弱的，眩晕的，即将昏晕的 2. 无力的，懦弱的，微弱的 3. 不清楚的，暗淡的，模糊的 4. 微少的，渺茫的 v. 昏厥，晕倒"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 虚弱的，眩晕的，即将昏晕的 2. 无力的，懦弱的，微弱的 3. 不清楚的，暗淡的，模糊的 4. 微少的，渺茫的 v. 昏厥，晕倒",
+        "phonetic": "feɪnt",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 69,
+          "word": "faint",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "微弱的；虚弱的",
+          "selected_sense": {
+            "meaning": "not clearly seen, heard or smelled; very small or unlikely; not enthusiastic; feeling weak and likely to become unconscious",
+            "pos": "adjective"
+          },
+          "example": "A faint light appeared at the end of the tunnel.",
+          "translation": "隧道尽头出现了一点微弱的光。",
+          "source_file": "cet4.txt",
+          "source_line": 1440,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 63,
+          "word": "faint",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "微弱的;不明显的;暗淡的 n./v.昏倒;昏晕",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "not clearly seen, heard or smelled"
+          },
+          "example": "We heard a faint sound from the next room.",
+          "translation": "我们听到隔壁房间传来微弱的声音。",
+          "source_file": "npee.txt",
+          "source_line": 1823,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4156,
+        "word": "fainthearted",
+        "headword": "fainthearted",
+        "homograph": null,
+        "source_raw": "*fainthearted [ˌfeɪnt ˈhɑːtɪd] adj. 怯懦的，胆怯的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "怯懦的，胆怯的",
+        "phonetic": "ˌfeɪnt ˈhɑːtɪd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4157,
+        "word": "fair 1",
+        "headword": "fair",
+        "homograph": 1,
+        "source_raw": "fair 1 [feə] n. 定期集市，商品交易会，展览会，博览会"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "定期集市，商品交易会，展览会，博览会",
+        "phonetic": "feə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4158,
+        "word": "fair 2",
+        "headword": "fair",
+        "homograph": 2,
+        "source_raw": "fair 2 [feə] adj. 1. 公平的，合理的 2. (天气)晴朗的，(肤色)淡色的，(头发)金色的 3. 相当的，尚好的，中等的 4. 干净的，清楚的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 公平的，合理的 2. (天气)晴朗的，(肤色)淡色的，(头发)金色的 3. 相当的，尚好的，中等的 4. 干净的，清楚的",
+        "phonetic": "feə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4159,
+        "word": "fairground",
+        "headword": "fairground",
+        "homograph": null,
+        "source_raw": "*fairground [ˈfeəɡraʊnd] n. 游乐场"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "游乐场",
+        "phonetic": "ˈfeəɡraʊnd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4160,
+        "word": "fairly",
+        "headword": "fairly",
+        "homograph": null,
+        "source_raw": "fairly [feəlɪ] adv. 1. 公正地，正当地，诚实地 2. 完全，简直 3. 相当，还算"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "1. 公正地，正当地，诚实地 2. 完全，简直 3. 相当，还算",
+        "phonetic": "feəlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 70,
+          "word": "fairly",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "相当；公平地",
+          "selected_sense": {
+            "meaning": "to some extent but not very; in a fair and reasonable way",
+            "pos": "adverb"
+          },
+          "example": "The instructions are fairly easy to follow.",
+          "translation": "这些说明相当容易理解。",
+          "source_file": "cet4.txt",
+          "source_line": 1443,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 65,
+          "word": "fairly",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "公正地,正当地;相当,还算",
+          "selected_sense": {
+            "pos": "adverb",
+            "meaning": "to some extent but not very"
+          },
+          "example": "The station is fairly close to our hotel.",
+          "translation": "车站离我们的酒店相当近。",
+          "source_file": "npee.txt",
+          "source_line": 1825,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4161,
+        "word": "fairness",
+        "headword": "fairness",
+        "homograph": null,
+        "source_raw": "fairness [ˈfeərnɪs] n. 公平，晴朗，美好，(皮肤)白哲"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "公平，晴朗，美好，(皮肤)白哲",
+        "phonetic": "ˈfeərnɪs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4162,
+        "word": "fairway",
+        "headword": "fairway",
+        "homograph": null,
+        "source_raw": "*fairway [ˈfeəweɪ] n. (高尔夫球场上的)平坦球道"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(高尔夫球场上的)平坦球道",
+        "phonetic": "ˈfeəweɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4163,
+        "word": "fairy",
+        "headword": "fairy",
+        "homograph": null,
+        "source_raw": "fairy [ˈfeərɪ] n. 小妖精，仙人"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "小妖精，仙人",
+        "phonetic": "ˈfeərɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4164,
+        "word": "fairyland",
+        "headword": "fairyland",
+        "homograph": null,
+        "source_raw": "fairyland [ˈfeərɪlænd] n. 仙境，仙乡，仙界"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "仙境，仙乡，仙界",
+        "phonetic": "ˈfeərɪlænd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4165,
+        "word": "faith",
+        "headword": "faith",
+        "homograph": null,
+        "source_raw": "faith [feɪθ] n. 1. 信任，信念 2. 信仰，信条 3. 信义，诚意，忠诚 4. 保证，诺言，约定 || have faith in信任"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 信任，信念 2. 信仰，信条 3. 信义，诚意，忠诚 4. 保证，诺言，约定 || have faith in信任",
+        "phonetic": "feɪθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 71,
+          "word": "faith",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "信任，信心；信仰",
+          "selected_sense": {
+            "meaning": "trust in somebody or something; strong religious belief; a particular religion; an intention to do something right or wrong",
+            "pos": "noun"
+          },
+          "example": "She has faith in her teams ability.",
+          "translation": "她相信自己团队的能力。",
+          "source_file": "cet4.txt",
+          "source_line": 1444,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 67,
+          "word": "faith",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "信任,信用;信仰,信条",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "trust in a person or confidence that a promise will be kept"
+          },
+          "example": "I have faith in the new team.",
+          "translation": "我信任这支新团队。",
+          "source_file": "npee.txt",
+          "source_line": 1827,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4166,
+        "word": "faithful",
+        "headword": "faithful",
+        "homograph": null,
+        "source_raw": "faithful [ˈfeɪθfʊl] adj. 守信的，忠诚的，忠实的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "守信的，忠诚的，忠实的",
+        "phonetic": "ˈfeɪθfʊl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 72,
+          "word": "faithful",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "忠诚的；如实的",
+          "selected_sense": {
+            "meaning": "staying with or supporting somebody or something; true and accurate; able to be trusted",
+            "pos": "adjective"
+          },
+          "example": "The documentary is a faithful account of the expedition.",
+          "translation": "这部纪录片如实讲述了那次探险。",
+          "source_file": "cet4.txt",
+          "source_line": 1445,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 68,
+          "word": "faithful",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "守信的,忠实的,如实的,可靠的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "loyal to or supportive of a person or belief"
+          },
+          "example": "The dog remained faithful to its owner.",
+          "translation": "这只狗始终忠于主人。",
+          "source_file": "npee.txt",
+          "source_line": 1828,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4167,
+        "word": "faithfully",
+        "headword": "faithfully",
+        "homograph": null,
+        "source_raw": "faithfully [ˈfeɪθfʊlɪ] adv. 忠实地，(书信中结尾的客套语)谨启"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "忠实地，(书信中结尾的客套语)谨启",
+        "phonetic": "ˈfeɪθfʊlɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4168,
+        "word": "fake",
+        "headword": "fake",
+        "homograph": null,
+        "source_raw": "fake [feɪk] n. 假货，赝品，骗人诡计 adj. 假的，冒充的 v. 伪造，假装，捏造"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "假货，赝品，骗人诡计 adj. 假的，冒充的 v. 伪造，假装，捏造",
+        "phonetic": "feɪk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 69,
+          "word": "fake",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "假货,赝品 a.假的,冒充的 v.伪造;伪装",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an object that is not genuine but is made to look real"
+          },
+          "example": "The museum quickly identified the painting as a fake.",
+          "translation": "博物馆很快确认这幅画是赝品。",
+          "source_file": "npee.txt",
+          "source_line": 1829,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4169,
+        "word": "falcon",
+        "headword": "falcon",
+        "homograph": null,
+        "source_raw": "*falcon [ˈfɔːlkən] n. 猎鹰"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "猎鹰",
+        "phonetic": "ˈfɔːlkən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4170,
+        "word": "fall 1",
+        "headword": "fall",
+        "homograph": 1,
+        "source_raw": "fall 1 [fɔːl] n. (AmE)秋季"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(AmE)秋季",
+        "phonetic": "fɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4171,
+        "word": "fall 2",
+        "headword": "fall",
+        "homograph": 2,
+        "source_raw": "fall 2 [fɔːl] v. 1. 落下，跌倒，跌落 2. 下降，减弱，下垂 3. 变成(某种状态) 4. 降临，到来 || fall behind落在…的后面，跟不上 [fall flat完全失败] fall for爱上，迷恋，受…的骗 [fall in love (with)爱上] fall ill 病倒 /fall out with与…吵架，争吵"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 落下，跌倒，跌落 2. 下降，减弱，下垂 3. 变成(某种状态) 4. 降临，到来 || fall behind落在…的后面，跟不上 [fall flat完全失败] fall for爱上，迷恋，受…的骗 [fall in love (with)爱上] fall ill 病倒 /fall out with与…吵架，争吵",
+        "phonetic": "fɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4172,
+        "word": "fallacious",
+        "headword": "fallacious",
+        "homograph": null,
+        "source_raw": "*fallacious [fəˈleɪʃəs] adj. 1. 谬误的 2. 靠不住的，虚妄的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 谬误的 2. 靠不住的，虚妄的",
+        "phonetic": "fəˈleɪʃəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4173,
+        "word": "fallacy",
+        "headword": "fallacy",
+        "homograph": null,
+        "source_raw": "*fallacy [ˈfæləsɪ] n. 谬论，谬误推理"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "谬论，谬误推理",
+        "phonetic": "ˈfæləsɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4174,
+        "word": "fallible",
+        "headword": "fallible",
+        "homograph": null,
+        "source_raw": "*fallible [ˈfæləbl] adj. 会犯错误的，易出错的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "会犯错误的，易出错的",
+        "phonetic": "ˈfæləbl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4175,
+        "word": "fallow 1",
+        "headword": "fallow",
+        "homograph": 1,
+        "source_raw": "*fallow 1 [ˈfæləʊ] adj. 休耕的，荒芜的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "休耕的，荒芜的",
+        "phonetic": "ˈfæləʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4176,
+        "word": "fallow 2",
+        "headword": "fallow",
+        "homograph": 2,
+        "source_raw": "*fallow 2 [ˈfæləʊ] adj. 淡棕色的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "淡棕色的",
+        "phonetic": "ˈfæləʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4178,
+        "word": "falsehood",
+        "headword": "falsehood",
+        "homograph": null,
+        "source_raw": "falsehood [ˈfɔːlshʊd] n. 不实之词，谎言，撒谎"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "不实之词，谎言，撒谎",
+        "phonetic": "ˈfɔːlshʊd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4179,
+        "word": "falsetto",
+        "headword": "falsetto",
+        "homograph": null,
+        "source_raw": "*falsetto [fɔːlˈsetəʊ] n. 假声，假(高音)嗓子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "假声，假(高音)嗓子",
+        "phonetic": "fɔːlˈsetəʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4180,
+        "word": "falsify",
+        "headword": "falsify",
+        "homograph": null,
+        "source_raw": "*falsify [ˈfɔːlsɪfaɪ] v. 窜改，伪造"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "窜改，伪造",
+        "phonetic": "ˈfɔːlsɪfaɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4181,
+        "word": "falsity",
+        "headword": "falsity",
+        "homograph": null,
+        "source_raw": "*falsity [ˈfɔːlsətɪ] n. 虚假，虚伪"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "虚假，虚伪",
+        "phonetic": "ˈfɔːlsətɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4182,
+        "word": "falter",
+        "headword": "falter",
+        "homograph": null,
+        "source_raw": "falter [ˈfɔːltə] v. 1. 蹒跚，踉跄 2. 犹豫，动摇 3. 结巴地说，支吾而语"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 蹒跚，踉跄 2. 犹豫，动摇 3. 结巴地说，支吾而语",
+        "phonetic": "ˈfɔːltə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4183,
+        "word": "fame",
+        "headword": "fame",
+        "homograph": null,
+        "source_raw": "fame  [feɪm] n. 名声，名望，声誉"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "名声，名望，声誉",
+        "phonetic": "feɪm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-007",
+          "row_index": 75,
+          "word": "fame",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "名声，名望",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the state of being known and talked about by many people"
+          },
+          "example": "She achieved international fame as a novelist.",
+          "translation": "她作为小说家享有国际声誉。",
+          "source_file": "cet4.txt",
+          "source_line": 1448,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-011",
+          "row_index": 72,
+          "word": "fame",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "名声;名望;传说 vt使出名;传扬…的名",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the state of being known by many people"
+          },
+          "example": "The singer found fame at a young age.",
+          "translation": "这位歌手年纪轻轻就成名了。",
+          "source_file": "npee.txt",
+          "source_line": 1832,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 4184,
+        "word": "famed",
+        "headword": "famed",
+        "homograph": null,
+        "source_raw": "famed  [feɪmd] adj. 有名的，出名的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "有名的，出名的",
+        "phonetic": "feɪmd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    }
+  ]
+}

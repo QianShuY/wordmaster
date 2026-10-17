@@ -1,0 +1,4964 @@
+{
+  "task_id": "cet4-037",
+  "input_sha256": "5814b2bf2e0df0cafc6ff247104a7f413c973fb1fec51d0a809c6632952a5068",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 100,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4585,
+        "word": "whisper",
+        "headword": "whisper",
+        "homograph": null,
+        "source_raw": "whisper [ˈ(h)wispə] vt.低声地讲 vi.低语"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "低声地讲 vi.低语",
+        "phonetic": "ˈ(h)wispə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 63,
+          "word": "whisper",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 低声说，耳语 2. 暗中传说 3. (叶子、风等)发沙沙声，发飒飒声 n. 1. 低语，耳语 2. 谣传",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to speak very quietly; a very quiet voice or rumour"
+          },
+          "example": "She whispered the answer to her friend.",
+          "translation": "她低声把答案告诉了朋友。",
+          "source_file": "tem.txt",
+          "source_line": 12632,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4586,
+        "word": "whistle",
+        "headword": "whistle",
+        "homograph": null,
+        "source_raw": "whistle [(h)wisl] n.口哨 vi.吹口哨"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "口哨 vi.吹口哨",
+        "phonetic": "(h)wisl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 64,
+          "word": "whistle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 哨子，口笛 2. 哨子声，汽笛声，呼啸声 v. 吹口笛，鸣汽笛",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small object used to make a high sound; to make such a sound with the lips"
+          },
+          "example": "The referee blew the whistle.",
+          "translation": "裁判吹响了哨子。",
+          "source_file": "tem.txt",
+          "source_line": 12633,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4587,
+        "word": "white",
+        "headword": "white",
+        "homograph": null,
+        "source_raw": "white [(h)wait] a.白的 n.白色"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "白的 n.白色",
+        "phonetic": "(h)wait",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 65,
+          "word": "white",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 白的，雪白的 2. 苍白的 3. 白种(人)的  n. 1. 白色 2. 白种人 3. 蛋白，蛋清",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "having the colour of fresh snow; pale; a person of European ancestry; the clear part of an egg"
+          },
+          "example": "She wore a white shirt to the interview.",
+          "translation": "她穿着一件白衬衫去面试。",
+          "source_file": "tem.txt",
+          "source_line": 12634,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4588,
+        "word": "whitewash",
+        "headword": "whitewash",
+        "homograph": null,
+        "source_raw": "whitewash [ˈ(h)waitwɔ∫] vt.粉刷，涂白"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "粉刷，涂白",
+        "phonetic": "ˈ(h)waitwɔʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4589,
+        "word": "who",
+        "headword": "who",
+        "homograph": null,
+        "source_raw": "who [huː] pron.谁；…的人"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "谁；…的人",
+        "phonetic": "huː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4590,
+        "word": "whoever",
+        "headword": "whoever",
+        "homograph": null,
+        "source_raw": "whoever [huːˈevə(r)] pron.谁；无论谁"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "谁；无论谁",
+        "phonetic": "huːˈevə(r)",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4591,
+        "word": "whole",
+        "headword": "whole",
+        "homograph": null,
+        "source_raw": "whole [həul] a.完整的 n.全部"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "完整的 n.全部",
+        "phonetic": "həul",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 69,
+          "word": "whole",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "整个的，完全的 n. 全部，整体，全体 || on the whole总的看来",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "complete and including every part; a thing or group considered complete"
+          },
+          "example": "The whole family came to dinner.",
+          "translation": "全家人都来吃晚饭了。",
+          "source_file": "tem.txt",
+          "source_line": 12640,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4592,
+        "word": "wholly",
+        "headword": "wholly",
+        "homograph": null,
+        "source_raw": "wholly [ˈhəuli] ad.完全地，全部"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "完全地，全部",
+        "phonetic": "ˈhəuli",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 72,
+          "word": "wholly",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "完全地，全部地",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "completely or entirely"
+          },
+          "example": "The project was wholly funded by donations.",
+          "translation": "这个项目完全由捐款资助。",
+          "source_file": "tem.txt",
+          "source_line": 12643,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4593,
+        "word": "whom",
+        "headword": "whom",
+        "homograph": null,
+        "source_raw": "whom [huːm] pron.(宾格)谁"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "(宾格)谁",
+        "phonetic": "huːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4594,
+        "word": "whose",
+        "headword": "whose",
+        "homograph": null,
+        "source_raw": "whose [huːz] pron.谁的；哪个人的"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "谁的；哪个人的",
+        "phonetic": "huːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4595,
+        "word": "why",
+        "headword": "why",
+        "homograph": null,
+        "source_raw": "why [(h)wai] ad.为什么"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "为什么",
+        "phonetic": "(h)wai",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 74,
+          "word": "why",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "为什么 int. (表示惊讶、不耐烦等)哎呀，嘿",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "for what reason; used to show surprise or impatience"
+          },
+          "example": "Why did you leave so early?",
+          "translation": "你为什么这么早就走了？",
+          "source_file": "tem.txt",
+          "source_line": 12647,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4596,
+        "word": "wicked",
+        "headword": "wicked",
+        "homograph": null,
+        "source_raw": "wicked [ˈwikid] a.坏的；令人厌恶的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "坏的；令人厌恶的",
+        "phonetic": "ˈwikid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 76,
+          "word": "wicked",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 缺德的，牙区恶的 2. 淘气的，恶作剧的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "evil or morally wrong; mischievous"
+          },
+          "example": "The wicked ruler punished anyone who disagreed.",
+          "translation": "邪恶的统治者惩罚所有持不同意见的人。",
+          "source_file": "tem.txt",
+          "source_line": 12649,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4597,
+        "word": "wide",
+        "headword": "wide",
+        "homograph": null,
+        "source_raw": "wide [waid] a.宽阔的 ad.全部地"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "宽阔的 ad.全部地",
+        "phonetic": "waid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 78,
+          "word": "wide",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 宽的，宽阔的 2. 广大的，广泛的 adv. 完全地，充分地",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "measuring a large distance from side to side; over a large area; fully"
+          },
+          "example": "The road is wide enough for two cars.",
+          "translation": "这条路足够宽，可以并排通过两辆车。",
+          "source_file": "tem.txt",
+          "source_line": 12651,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4598,
+        "word": "widely",
+        "headword": "widely",
+        "homograph": null,
+        "source_raw": "widely [ˈwaidli] ad.广，广泛"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "广，广泛",
+        "phonetic": "ˈwaidli",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4599,
+        "word": "widen",
+        "headword": "widen",
+        "homograph": null,
+        "source_raw": "widen [ˈwaidn] vt.加宽 vi.变宽"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "加宽 vi.变宽",
+        "phonetic": "ˈwaidn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 79,
+          "word": "widen",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "变宽，加宽",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to become or make something wider"
+          },
+          "example": "The council plans to widen the bridge.",
+          "translation": "市政委员会计划拓宽这座桥。",
+          "source_file": "tem.txt",
+          "source_line": 12652,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4600,
+        "word": "widespread",
+        "headword": "widespread",
+        "homograph": null,
+        "source_raw": "widespread [ˈwaidspred] a.分布广/普遍的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "分布广/普遍的",
+        "phonetic": "ˈwaidspred",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 80,
+          "word": "widespread",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "遍及各地的，普及的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "covering a large area; common or affecting many people"
+          },
+          "example": "The new rule caused widespread concern.",
+          "translation": "这项新规引起了广泛关注。",
+          "source_file": "tem.txt",
+          "source_line": 12653,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4601,
+        "word": "widow",
+        "headword": "widow",
+        "homograph": null,
+        "source_raw": "widow [ˈwidəu] n.寡妇"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "寡妇",
+        "phonetic": "ˈwidəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 81,
+          "word": "widow",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "寡妇",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a woman whose husband has died"
+          },
+          "example": "The widow planted a tree in memory of her husband.",
+          "translation": "这位寡妇种了一棵树来纪念她的丈夫。",
+          "source_file": "tem.txt",
+          "source_line": 12654,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4602,
+        "word": "width",
+        "headword": "width",
+        "homograph": null,
+        "source_raw": "width [widθ] n.宽阔，广阔；宽度"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "宽阔，广阔；宽度",
+        "phonetic": "widθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 82,
+          "word": "width",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "宽度",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the distance from one side of something to the other"
+          },
+          "example": "Measure the width of the doorway before buying the desk.",
+          "translation": "买书桌前先量一下门口的宽度。",
+          "source_file": "tem.txt",
+          "source_line": 12655,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4603,
+        "word": "wife",
+        "headword": "wife",
+        "homograph": null,
+        "source_raw": "wife [waif] n.妻子"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "妻子",
+        "phonetic": "waif",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 84,
+          "word": "wife",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "妻子",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a married woman in relation to her spouse"
+          },
+          "example": "His wife works at the local hospital.",
+          "translation": "他的妻子在当地医院工作。",
+          "source_file": "tem.txt",
+          "source_line": 12657,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4604,
+        "word": "wild",
+        "headword": "wild",
+        "homograph": null,
+        "source_raw": "wild [waild] a.野生的；野蛮的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "野生的；野蛮的",
+        "phonetic": "waild",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 87,
+          "word": "wild",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 野的，野生的 2. 野蛮的，凶猛的 3. 狂热的，着迷的 4. 任性的，胡乱的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "living in nature and not controlled by people; uncontrolled or extreme"
+          },
+          "example": "Wild animals need space to roam.",
+          "translation": "野生动物需要有空间活动。",
+          "source_file": "tem.txt",
+          "source_line": 12660,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4605,
+        "word": "will",
+        "headword": "will",
+        "homograph": null,
+        "source_raw": "will [wil] aux.v.将要，会；愿"
+      },
+      "original": {
+        "pos": "aux.",
+        "meaning": "v.将要，会；愿",
+        "phonetic": "wil",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4606,
+        "word": "willing",
+        "headword": "willing",
+        "homograph": null,
+        "source_raw": "willing [ˈwiliŋ] a.愿意的，心甘情愿的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "愿意的，心甘情愿的",
+        "phonetic": "ˈwiliŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4607,
+        "word": "win",
+        "headword": "win",
+        "homograph": null,
+        "source_raw": "win [win] vi.获胜，赢 vt.赢得"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "获胜，赢 vt.赢得",
+        "phonetic": "win",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-114",
+          "row_index": 94,
+          "word": "win",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 赢，获胜 2. 赢得，获得 n. 胜利，成功",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to achieve first place; to get something as a result of effort"
+          },
+          "example": "Their team won the match.",
+          "translation": "他们队赢得了比赛。",
+          "source_file": "tem.txt",
+          "source_line": 12668,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4610,
+        "word": "window",
+        "headword": "window",
+        "homograph": null,
+        "source_raw": "window [ˈwindəu] n.窗子，窗户，窗口"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "窗子，窗户，窗口",
+        "phonetic": "ˈwindəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 0,
+          "word": "window",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "窗，窗户",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an opening in a wall or vehicle that lets in light or air"
+          },
+          "example": "She opened the window to let in fresh air.",
+          "translation": "她打开窗户让新鲜空气进来。",
+          "source_file": "tem.txt",
+          "source_line": 12674,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4611,
+        "word": "wine",
+        "headword": "wine",
+        "homograph": null,
+        "source_raw": "wine [wain] n.葡萄酒，果酒"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "葡萄酒，果酒",
+        "phonetic": "wain",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 3,
+          "word": "wine",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "葡萄酒，酒",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an alcoholic drink made from grapes"
+          },
+          "example": "They served red wine with dinner.",
+          "translation": "晚餐时他们端上了红葡萄酒。",
+          "source_file": "tem.txt",
+          "source_line": 12677,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4612,
+        "word": "wing",
+        "headword": "wing",
+        "homograph": null,
+        "source_raw": "wing [wiŋ] n.翼，翅膀，翅"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "翼，翅膀，翅",
+        "phonetic": "wiŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 4,
+          "word": "wing",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 翅膀 2. 机翼 3. 厢房，侧翼 4. (政党)左翼，右翼 v. 飞行，飞翔",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a part of a bird or insect used for flying; a part of an aircraft; a side part of a building or political group"
+          },
+          "example": "The bird spread its wings and flew away.",
+          "translation": "那只鸟展开翅膀飞走了。",
+          "source_file": "tem.txt",
+          "source_line": 12678,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4613,
+        "word": "winner",
+        "headword": "winner",
+        "homograph": null,
+        "source_raw": "winner [ˈwinə] n.获胜者，优胜者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "获胜者，优胜者",
+        "phonetic": "ˈwinə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 6,
+          "word": "winner",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "胜利者，赢家",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person or thing that wins"
+          },
+          "example": "The winner received a medal.",
+          "translation": "获胜者获得了一枚奖牌。",
+          "source_file": "tem.txt",
+          "source_line": 12680,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4614,
+        "word": "winter",
+        "headword": "winter",
+        "homograph": null,
+        "source_raw": "winter [ˈwintə] n.冬天，冬季"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "冬天，冬季",
+        "phonetic": "ˈwintə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 7,
+          "word": "winter",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "冬季 v. 过冬",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the coldest season of the year; to spend winter somewhere"
+          },
+          "example": "Many birds winter in warmer countries.",
+          "translation": "许多鸟在较温暖的国家过冬。",
+          "source_file": "tem.txt",
+          "source_line": 12681,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4615,
+        "word": "wipe",
+        "headword": "wipe",
+        "homograph": null,
+        "source_raw": "wipe [waip] vt.&n.揩，擦"
+      },
+      "original": {
+        "pos": "vt.&n.",
+        "meaning": "揩，擦",
+        "phonetic": "waip",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4616,
+        "word": "wire",
+        "headword": "wire",
+        "homograph": null,
+        "source_raw": "wire [ˈwaiə] n.金属线；电缆；电信"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "金属线；电缆；电信",
+        "phonetic": "ˈwaiə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 9,
+          "word": "wire",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 金属丝，铁丝，电线 2. (AmE)电报 v. 1. 给…安装线路 2. 用金属丝缚 3. (AmE)打电报给(某人)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a thin piece of metal; a metal cable carrying electricity; to send a telegram"
+          },
+          "example": "The technician checked the wire for damage.",
+          "translation": "技术人员检查了电线是否损坏。",
+          "source_file": "tem.txt",
+          "source_line": 12683,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4617,
+        "word": "wireless",
+        "headword": "wireless",
+        "homograph": null,
+        "source_raw": "wireless [ˈwaiəlis] a.不用电线的，无线的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "不用电线的，无线的",
+        "phonetic": "ˈwaiəlis",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4618,
+        "word": "wisdom",
+        "headword": "wisdom",
+        "homograph": null,
+        "source_raw": "wisdom [ˈwizdəm] n.智慧，才智；名言"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "智慧，才智；名言",
+        "phonetic": "ˈwizdəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 10,
+          "word": "wisdom",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "智慧",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the ability to make good decisions and understand life"
+          },
+          "example": "She thanked her grandmother for her wisdom.",
+          "translation": "她感谢祖母给予的智慧。",
+          "source_file": "tem.txt",
+          "source_line": 12684,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4619,
+        "word": "wise",
+        "headword": "wise",
+        "homograph": null,
+        "source_raw": "wise [waiz] a.有智慧的，聪明的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有智慧的，聪明的",
+        "phonetic": "waiz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 11,
+          "word": "wise",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 聪明的，有智慧的 2. 有学识的，博学的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "showing good judgement and understanding"
+          },
+          "example": "It was wise to save some money for emergencies.",
+          "translation": "留一些钱以备不时之需是明智的。",
+          "source_file": "tem.txt",
+          "source_line": 12685,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4620,
+        "word": "wish",
+        "headword": "wish",
+        "homograph": null,
+        "source_raw": "wish [wi∫] vt.祝；想要 n.希望"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "祝；想要 n.希望",
+        "phonetic": "wiʃ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 12,
+          "word": "wish",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 渴望，意欲 2. 祝，祝愿 n. 愿望",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to want something to happen; a desire or hope"
+          },
+          "example": "I wish you success in your new job.",
+          "translation": "我祝你在新工作中取得成功。",
+          "source_file": "tem.txt",
+          "source_line": 12686,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4621,
+        "word": "wit",
+        "headword": "wit",
+        "homograph": null,
+        "source_raw": "wit [wit] n.智力，才智，智能"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "智力，才智，智能",
+        "phonetic": "wit",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 14,
+          "word": "wit",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 才智，机智，机灵，诙谐 2. 机智的人，才子 || at one's wits' end智穷计尽",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the ability to use words in a clever and funny way"
+          },
+          "example": "Her quick wit made everyone laugh.",
+          "translation": "她机敏风趣的话语逗笑了所有人。",
+          "source_file": "tem.txt",
+          "source_line": 12688,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4622,
+        "word": "with",
+        "headword": "with",
+        "homograph": null,
+        "source_raw": "with [wið] prep.和…一起；具有"
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "和…一起；具有",
+        "phonetic": "wið",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 17,
+          "word": "with",
+          "part_of_speech": "preposition",
+          "homograph": null,
+          "original_pos": "prep.",
+          "original_meaning": "1. 和…在一起 2. 具有，带有 3. 用 4. 至于，关于 5. 随着 6. 与…，跟… 7. 尽管",
+          "selected_sense": {
+            "pos": "prep.",
+            "meaning": "accompanied by; using; having; despite"
+          },
+          "example": "She came with her brother.",
+          "translation": "她和哥哥一起来了。",
+          "source_file": "tem.txt",
+          "source_line": 12691,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4623,
+        "word": "withdraw",
+        "headword": "withdraw",
+        "homograph": null,
+        "source_raw": "withdraw [wiðˈdrɔː] vt.收回；撤回 vi.撤退"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "收回；撤回 vi.撤退",
+        "phonetic": "wiðˈdrɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 18,
+          "word": "withdraw",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 收回，取回 2. (使)撤退，(使)退出",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to take back something; to move back or leave a place"
+          },
+          "example": "The bank let him withdraw cash from the account.",
+          "translation": "银行允许他从账户里取出现金。",
+          "source_file": "tem.txt",
+          "source_line": 12692,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4624,
+        "word": "within",
+        "headword": "within",
+        "homograph": null,
+        "source_raw": "within [wiˈðin] prep.在…里面"
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "在…里面",
+        "phonetic": "wiˈðin",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 22,
+          "word": "within",
+          "part_of_speech": "preposition",
+          "homograph": null,
+          "original_pos": "prep.",
+          "original_meaning": "1. 在…里面，在…内部 2. 在…范围之内，不超过",
+          "selected_sense": {
+            "pos": "prep.",
+            "meaning": "inside a particular place, area, or period of time"
+          },
+          "example": "Please reply within three days.",
+          "translation": "请在三天内回复。",
+          "source_file": "tem.txt",
+          "source_line": 12696,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4625,
+        "word": "without",
+        "headword": "without",
+        "homograph": null,
+        "source_raw": "without [wiðˈaut] prep.无，没有，不"
+      },
+      "original": {
+        "pos": "prep.",
+        "meaning": "无，没有，不",
+        "phonetic": "wiðˈaut",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 23,
+          "word": "without",
+          "part_of_speech": "preposition",
+          "homograph": null,
+          "original_pos": "prep.",
+          "original_meaning": "没有，缺乏，不 || do without没有…也行",
+          "selected_sense": {
+            "pos": "prep.",
+            "meaning": "not having or using something; if something is not present"
+          },
+          "example": "She left without her umbrella.",
+          "translation": "她没带伞就出门了。",
+          "source_file": "tem.txt",
+          "source_line": 12697,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4626,
+        "word": "withstand",
+        "headword": "withstand",
+        "homograph": null,
+        "source_raw": "withstand [wiðˈstænd] vt.抵挡，反抗"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "抵挡，反抗",
+        "phonetic": "wiðˈstænd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 24,
+          "word": "withstand",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "经得起，顶得住",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to remain strong or undamaged despite pressure or force"
+          },
+          "example": "The bridge can withstand strong winds.",
+          "translation": "这座桥能经受强风。",
+          "source_file": "tem.txt",
+          "source_line": 12698,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4627,
+        "word": "witness",
+        "headword": "witness",
+        "homograph": null,
+        "source_raw": "witness [ˈwitnis] n.证据；证人 vt.目击"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "证据；证人 vt.目击",
+        "phonetic": "ˈwitnis",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 25,
+          "word": "witness",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "目击者，证人 v. 1. 目睹，目击 2. 表明，证明，显示",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who sees an event; to see or show that something happens"
+          },
+          "example": "She was a witness to the accident.",
+          "translation": "她是这起事故的目击者。",
+          "source_file": "tem.txt",
+          "source_line": 12699,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4628,
+        "word": "wolf",
+        "headword": "wolf",
+        "homograph": null,
+        "source_raw": "wolf [wulf] n.狼"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "狼",
+        "phonetic": "wulf",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 31,
+          "word": "wolf",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 狼 2. 色狼  || cry wolf发假情报，虚报危情",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large wild animal related to dogs; a sexually aggressive man"
+          },
+          "example": "A wolf howled in the distance.",
+          "translation": "远处传来一声狼嚎。",
+          "source_file": "tem.txt",
+          "source_line": 12705,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4629,
+        "word": "woman",
+        "headword": "woman",
+        "homograph": null,
+        "source_raw": "woman [ˈwumən] n.妇女，女人，女性"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "妇女，女人，女性",
+        "phonetic": "ˈwumən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 32,
+          "word": "woman",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 成年女子，妇女，女性 2. 女性特质",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an adult female person; the quality of being female"
+          },
+          "example": "The book celebrates the achievements of women.",
+          "translation": "这本书颂扬了女性的成就。",
+          "source_file": "tem.txt",
+          "source_line": 12706,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4630,
+        "word": "wonder",
+        "headword": "wonder",
+        "homograph": null,
+        "source_raw": "wonder [ˈwʌndə] n.惊异，惊奇；奇迹"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "惊异，惊奇；奇迹",
+        "phonetic": "ˈwʌndə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 34,
+          "word": "wonder",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 惊奇，惊叹 2. 奇迹，奇观 || do wonders; work wonders创造奇迹  v. 1. 想知道 2. 感到惊异",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a feeling of surprise; something remarkable; to want to know something"
+          },
+          "example": "The children looked at the sculpture in wonder.",
+          "translation": "孩子们惊奇地看着这座雕塑。",
+          "source_file": "tem.txt",
+          "source_line": 12708,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4631,
+        "word": "wonderful",
+        "headword": "wonderful",
+        "homograph": null,
+        "source_raw": "wonderful [ˈwʌndəful] a.惊人的；极好的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "惊人的；极好的",
+        "phonetic": "ˈwʌndəful",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 35,
+          "word": "wonderful",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "绝好的，了不起的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "extremely good or enjoyable"
+          },
+          "example": "We had a wonderful time at the festival.",
+          "translation": "我们在节日庆典上玩得非常开心。",
+          "source_file": "tem.txt",
+          "source_line": 12709,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4632,
+        "word": "wood",
+        "headword": "wood",
+        "homograph": null,
+        "source_raw": "wood [wud] n.树林，森林；木头"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "树林，森林；木头",
+        "phonetic": "wud",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 37,
+          "word": "wood",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 木材，木头 2. 树林，林地",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the hard material that forms the trunk and branches of trees; a group of trees"
+          },
+          "example": "The table is made of oak wood.",
+          "translation": "这张桌子是橡木做的。",
+          "source_file": "tem.txt",
+          "source_line": 12711,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4633,
+        "word": "wooden",
+        "headword": "wooden",
+        "homograph": null,
+        "source_raw": "wooden [ˈwudn] a.木制的；呆板的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "木制的；呆板的",
+        "phonetic": "ˈwudn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 38,
+          "word": "wooden",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 木制的 2. 僵硬的，呆板的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "made of wood; stiff or unnatural in movement or manner"
+          },
+          "example": "The actor’s performance seemed wooden.",
+          "translation": "这位演员的表演显得很僵硬。",
+          "source_file": "tem.txt",
+          "source_line": 12712,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4634,
+        "word": "wool",
+        "headword": "wool",
+        "homograph": null,
+        "source_raw": "wool [wul] n.羊毛；毛线，绒线"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "羊毛；毛线，绒线",
+        "phonetic": "wul",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 39,
+          "word": "wool",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "羊毛，毛线",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the soft hair of sheep or similar animals; yarn made from it"
+          },
+          "example": "She knitted a wool scarf for her brother.",
+          "translation": "她给哥哥织了一条羊毛围巾。",
+          "source_file": "tem.txt",
+          "source_line": 12713,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4635,
+        "word": "woollen",
+        "headword": "woollen",
+        "homograph": null,
+        "source_raw": "woollen [ˈwulin] a.羊毛制的，毛线的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "羊毛制的，毛线的",
+        "phonetic": "ˈwulin",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4636,
+        "word": "word",
+        "headword": "word",
+        "homograph": null,
+        "source_raw": "word [wəːd] n.词；话；消息；语言"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "词；话；消息；语言",
+        "phonetic": "wəːd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4637,
+        "word": "work",
+        "headword": "work",
+        "homograph": null,
+        "source_raw": "work [wəːk] n.工作；职业 vi.工作"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工作；职业 vi.工作",
+        "phonetic": "wəːk",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 41,
+          "word": "work",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 工作，事 2. 职业 3. 作品，著作 || get to work开始工作 [in work有工作的] out of work失业 v. 1. 工作，干活 2. 运转，起作用 3. 使(某人)工作 4. 开动，操作 5. 安排，筹划 || work out①算出，解决(难题)②有…效果，产生…结果③设计，计划 /work up①激怒②(使自己) 逐步激起，产生③逐步发展",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an activity that uses effort; a job or task; to do a job or task"
+          },
+          "example": "She works in a small bookshop.",
+          "translation": "她在一家小书店工作。",
+          "source_file": "tem.txt",
+          "source_line": 12717,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4638,
+        "word": "worker",
+        "headword": "worker",
+        "homograph": null,
+        "source_raw": "worker [ˈwəːkə] n.工人；工作者，人员"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工人；工作者，人员",
+        "phonetic": "ˈwəːkə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 43,
+          "word": "worker",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "工作者，劳动者",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who does a particular job or type of work"
+          },
+          "example": "The workers repaired the road overnight.",
+          "translation": "工人们连夜修好了道路。",
+          "source_file": "tem.txt",
+          "source_line": 12719,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4639,
+        "word": "workman",
+        "headword": "workman",
+        "homograph": null,
+        "source_raw": "workman [ˈwəːkmən] n.工人/匠，劳动者"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "工人/匠，劳动者",
+        "phonetic": "ˈwəːkmən",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 45,
+          "word": "workman",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(特定行业的)工人，工匠，技工",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a man who works in a particular trade or craft"
+          },
+          "example": "A skilled workman restored the old wooden door.",
+          "translation": "一位熟练工匠修复了那扇旧木门。",
+          "source_file": "tem.txt",
+          "source_line": 12721,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4640,
+        "word": "workshop",
+        "headword": "workshop",
+        "homograph": null,
+        "source_raw": "workshop [ˈwəːk∫ɔp] n.车间，工场；创作室"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "车间，工场；创作室",
+        "phonetic": "ˈwəːkʃɔp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 47,
+          "word": "workshop",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 车间，工场 2. 研讨会，进修班",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a room or building where things are made or repaired; a meeting for discussion and practice"
+          },
+          "example": "The repair workshop opens at eight.",
+          "translation": "维修车间八点开门。",
+          "source_file": "tem.txt",
+          "source_line": 12723,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4641,
+        "word": "world",
+        "headword": "world",
+        "homograph": null,
+        "source_raw": "world [wəːld] n.世界；世人；世间"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "世界；世人；世间",
+        "phonetic": "wəːld",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 48,
+          "word": "world",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 世界，宇宙 2. 界，领域，圈 3. 世人，世事 4. 大量，无数 || not for the world绝不 [on top of theworld幸福到极点] worlds apart天壤之别",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the Earth and all its people; a particular area of activity; a great amount"
+          },
+          "example": "She hopes to travel around the world.",
+          "translation": "她希望环游世界。",
+          "source_file": "tem.txt",
+          "source_line": 12724,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4642,
+        "word": "world-wide",
+        "headword": "world-wide",
+        "homograph": null,
+        "source_raw": "world-wide [ˈwəːldwaid] a.遍及全球的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "遍及全球的",
+        "phonetic": "ˈwəːldwaid",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4643,
+        "word": "worm",
+        "headword": "worm",
+        "homograph": null,
+        "source_raw": "worm [wəːm] n.虫，蠕虫"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "虫，蠕虫",
+        "phonetic": "wəːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 49,
+          "word": "worm",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 虫 2. 可怜虫，寄生虫，可鄙的人 v. 蠕动，扭动",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small long animal with a soft body and no legs; a contemptible person"
+          },
+          "example": "A worm appeared in the damp soil.",
+          "translation": "潮湿的土壤里出现了一条虫。",
+          "source_file": "tem.txt",
+          "source_line": 12725,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4644,
+        "word": "worry",
+        "headword": "worry",
+        "homograph": null,
+        "source_raw": "worry [ˈwʌri] vt.使烦恼 vi.发愁"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "使烦恼 vi.发愁",
+        "phonetic": "ˈwʌri",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 51,
+          "word": "worry",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)烦恼，(使)担忧 n. 1. 烦恼，焦虑 2. 令人烦恼的人或事",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to feel anxious; to cause someone to feel anxious"
+          },
+          "example": "Try not to worry about the weather.",
+          "translation": "尽量别为天气担心。",
+          "source_file": "tem.txt",
+          "source_line": 12727,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4645,
+        "word": "worse",
+        "headword": "worse",
+        "homograph": null,
+        "source_raw": "worse [wəːs] a.更坏的 ad.更坏"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "更坏的 ad.更坏",
+        "phonetic": "wəːs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4646,
+        "word": "worship",
+        "headword": "worship",
+        "homograph": null,
+        "source_raw": "worship [ˈwəː∫ip] n.礼拜；崇拜 vt.崇拜"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "礼拜；崇拜 vt.崇拜",
+        "phonetic": "ˈwəːʃip",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4647,
+        "word": "worst",
+        "headword": "worst",
+        "homograph": null,
+        "source_raw": "worst [wəːst] a.最坏的 ad.最坏地"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "最坏的 ad.最坏地",
+        "phonetic": "wəːst",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4648,
+        "word": "worth",
+        "headword": "worth",
+        "homograph": null,
+        "source_raw": "worth [wəːθ] a.值…的 n.价值"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "值…的 n.价值",
+        "phonetic": "wəːθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4649,
+        "word": "worthless",
+        "headword": "worthless",
+        "homograph": null,
+        "source_raw": "worthless [ˈwəːθlis] a.无价值的，无用的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "无价值的，无用的",
+        "phonetic": "ˈwəːθlis",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 54,
+          "word": "worthless",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 无价值的，无用的 2. 卑鄙的，品行不端的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "having no value or use; morally bad"
+          },
+          "example": "The broken phone was worthless without a charger.",
+          "translation": "这部坏手机没有充电器就毫无用处。",
+          "source_file": "tem.txt",
+          "source_line": 12732,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4650,
+        "word": "worthwhile",
+        "headword": "worthwhile",
+        "homograph": null,
+        "source_raw": "worthwhile [ˈwəːðˈ(h)wail] a.值得花时间的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "值得花时间的",
+        "phonetic": "ˈwəːðˈ(h)wail",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 55,
+          "word": "worthwhile",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "值得一试的，值得干的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "worth doing or trying"
+          },
+          "example": "The trip was worthwhile despite the rain.",
+          "translation": "尽管下雨，这次旅行仍然值得。",
+          "source_file": "tem.txt",
+          "source_line": 12733,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4651,
+        "word": "worthy",
+        "headword": "worthy",
+        "homograph": null,
+        "source_raw": "worthy [ˈwəːði] a.有价值的；值得的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "有价值的；值得的",
+        "phonetic": "ˈwəːði",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 56,
+          "word": "worthy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 值得…的，足以…的 2. 值得尊敬的，值得注意的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "deserving respect or attention; having a particular value"
+          },
+          "example": "The charity supports a worthy cause.",
+          "translation": "这家慈善机构支持一项值得赞助的事业。",
+          "source_file": "tem.txt",
+          "source_line": 12734,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4652,
+        "word": "would",
+        "headword": "would",
+        "homograph": null,
+        "source_raw": "would [wud] aux.v.将；愿；总是"
+      },
+      "original": {
+        "pos": "aux.",
+        "meaning": "v.将；愿；总是",
+        "phonetic": "wud",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4653,
+        "word": "wound",
+        "headword": "wound",
+        "homograph": null,
+        "source_raw": "wound [wuːnd] n.创伤，伤 vt.使受伤"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "创伤，伤 vt.使受伤",
+        "phonetic": "wuːnd",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 58,
+          "word": "wound",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "伤口，创伤 v. 伤害，使受伤",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an injury to the body; to injure someone"
+          },
+          "example": "The nurse cleaned the wound carefully.",
+          "translation": "护士仔细清理了伤口。",
+          "source_file": "tem.txt",
+          "source_line": 12736,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4654,
+        "word": "wrap",
+        "headword": "wrap",
+        "homograph": null,
+        "source_raw": "wrap [ræp] vt.裹，包，捆 n.披肩"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "裹，包，捆 n.披肩",
+        "phonetic": "ræp",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 59,
+          "word": "wrap",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "把…包起来，缠，捆 n. 披肩，围巾",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to cover something by folding material around it; a shawl or scarf"
+          },
+          "example": "Wrap the gift in blue paper.",
+          "translation": "用蓝色包装纸把礼物包起来。",
+          "source_file": "tem.txt",
+          "source_line": 12737,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4655,
+        "word": "wreath",
+        "headword": "wreath",
+        "homograph": null,
+        "source_raw": "wreath [riːθ] n.花环，花圈，花冠"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "花环，花圈，花冠",
+        "phonetic": "riːθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 62,
+          "word": "wreath",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "花环，花圈",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a circle of flowers or leaves, often put on a grave"
+          },
+          "example": "They laid a wreath at the memorial.",
+          "translation": "他们在纪念碑前献上了一个花圈。",
+          "source_file": "tem.txt",
+          "source_line": 12740,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4656,
+        "word": "wreck",
+        "headword": "wreck",
+        "homograph": null,
+        "source_raw": "wreck [rek] n.失事；残骸 vt.破坏"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "失事；残骸 vt.破坏",
+        "phonetic": "rek",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 64,
+          "word": "wreck",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 失事的船只，残骸 2. 破灭，毁坏 v. 摧毁，破坏",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a ship or vehicle that has been badly damaged; to destroy or damage something"
+          },
+          "example": "The storm wrecked the fishing boat.",
+          "translation": "暴风雨摧毁了那艘渔船。",
+          "source_file": "tem.txt",
+          "source_line": 12742,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4657,
+        "word": "wrist",
+        "headword": "wrist",
+        "homograph": null,
+        "source_raw": "wrist [rist] n.腕，腕关节"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "腕，腕关节",
+        "phonetic": "rist",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 74,
+          "word": "wrist",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "腕，腕关节",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the joint between the hand and the arm"
+          },
+          "example": "She wore a watch on her left wrist.",
+          "translation": "她左手腕上戴着一块手表。",
+          "source_file": "tem.txt",
+          "source_line": 12752,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4658,
+        "word": "write",
+        "headword": "write",
+        "homograph": null,
+        "source_raw": "write [rait] vt.书写；写 vi.写"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "书写；写 vi.写",
+        "phonetic": "rait",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 75,
+          "word": "write",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 书写，写 2. 填写，开列 3. 写信给",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to form words or numbers on a surface; to complete a form; to send a letter"
+          },
+          "example": "Please write your name at the top of the page.",
+          "translation": "请在页面顶部写上你的名字。",
+          "source_file": "tem.txt",
+          "source_line": 12753,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 72,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4659,
+        "word": "writer",
+        "headword": "writer",
+        "homograph": null,
+        "source_raw": "writer [ˈraitə] n.作者，作家，文学家"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "作者，作家，文学家",
+        "phonetic": "ˈraitə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 76,
+          "word": "writer",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "作者，作家",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who writes books, articles, or other texts"
+          },
+          "example": "The writer signed copies of her new book.",
+          "translation": "这位作家为她的新书签名。",
+          "source_file": "tem.txt",
+          "source_line": 12754,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 73,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4660,
+        "word": "writing",
+        "headword": "writing",
+        "homograph": null,
+        "source_raw": "writing [ˈraitiŋ] n.书写，写；著作"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "书写，写；著作",
+        "phonetic": "ˈraitiŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 78,
+          "word": "writing",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 笔迹，字迹 2. 文章 3. 写作，创作",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act or skill of forming words on paper or a screen; written words"
+          },
+          "example": "Her writing is clear and easy to read.",
+          "translation": "她的字迹清晰易读。",
+          "source_file": "tem.txt",
+          "source_line": 12756,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 74,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4661,
+        "word": "wrong",
+        "headword": "wrong",
+        "homograph": null,
+        "source_raw": "wrong [rɔŋ] a.错误的 ad.错，不对"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "错误的 ad.错，不对",
+        "phonetic": "rɔŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 79,
+          "word": "wrong",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 不正当的，不法的 2. 错误的，不适当的 3. 失常的，有毛病的 n. 1. 邪恶，罪行 2. 不义，不公正的对待 || do wrong to…冤屈…，虐待…",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not correct or suitable; unjust or immoral; a wrong action"
+          },
+          "example": "I realized I had taken the wrong bus.",
+          "translation": "我发现自己坐错了公交车。",
+          "source_file": "tem.txt",
+          "source_line": 12757,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 75,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4665,
+        "word": "X-ray",
+        "headword": "X-ray",
+        "homograph": null,
+        "source_raw": "X-ray [ˈeksˈrei] n.X 射线，X 光"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "X 射线，X 光",
+        "phonetic": "ˈeksˈrei",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 84,
+          "word": "X-ray",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "X射线，X光 adj. X射线的，X光的 v. 用 X光检查",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a form of radiation used to see inside the body; to examine with this radiation"
+          },
+          "example": "The doctor ordered an X-ray of her wrist.",
+          "translation": "医生要求给她的手腕拍一张 X 光片。",
+          "source_file": "tem.txt",
+          "source_line": 12762,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 76,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4671,
+        "word": "yawn",
+        "headword": "yawn",
+        "homograph": null,
+        "source_raw": "yawn [jɔːn] vi.打呵欠 n.呵欠"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "打呵欠 n.呵欠",
+        "phonetic": "jɔːn",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 92,
+          "word": "yawn",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 打哈欠，欠身 2. 裂开，豁开 n. 1. 呵欠 2. 裂口，豁口",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to open the mouth and breathe in deeply when tired; to split open; an act of doing this"
+          },
+          "example": "He began to yawn during the long lecture.",
+          "translation": "听长时间的讲座时，他开始打哈欠。",
+          "source_file": "tem.txt",
+          "source_line": 12771,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4672,
+        "word": "year",
+        "headword": "year",
+        "homograph": null,
+        "source_raw": "year [jəː] n.年；年年"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "年；年年",
+        "phonetic": "jəː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 93,
+          "word": "year",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "年，岁，年度 || all the year round一年到头 /year after year年复一年地/ year in year out年年，岁岁，每年如此",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a period of twelve months; the time the Earth takes to go around the Sun"
+          },
+          "example": "They moved to the city last year.",
+          "translation": "他们去年搬到了这座城市。",
+          "source_file": "tem.txt",
+          "source_line": 12772,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 78,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4673,
+        "word": "yearly",
+        "headword": "yearly",
+        "homograph": null,
+        "source_raw": "yearly [ˈjəːli] a.每年的 ad.一年一度"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "每年的 ad.一年一度",
+        "phonetic": "ˈjəːli",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 94,
+          "word": "yearly",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "一年的，每年的 adv. 一年一次地，每年",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "happening once every year; relating to a year"
+          },
+          "example": "The school holds a yearly music festival.",
+          "translation": "学校每年都会举办音乐节。",
+          "source_file": "tem.txt",
+          "source_line": 12773,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4674,
+        "word": "yell",
+        "headword": "yell",
+        "homograph": null,
+        "source_raw": "yell [jel] vi.叫喊"
+      },
+      "original": {
+        "pos": "vi.",
+        "meaning": "叫喊",
+        "phonetic": "jel",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-115",
+          "row_index": 97,
+          "word": "yell",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "叫喊，叫嚷 n. 叫喊声，呐喊",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to shout loudly; a loud shout"
+          },
+          "example": "The children yelled with excitement.",
+          "translation": "孩子们兴奋地大喊起来。",
+          "source_file": "tem.txt",
+          "source_line": 12776,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4675,
+        "word": "yellow",
+        "headword": "yellow",
+        "homograph": null,
+        "source_raw": "yellow [ˈjeləu] a.黄(色)的 n.黄(色)"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "黄(色)的 n.黄(色)",
+        "phonetic": "ˈjeləu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 81,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4676,
+        "word": "yes",
+        "headword": "yes",
+        "homograph": null,
+        "source_raw": "yes [jes] ad.是，是的"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "是，是的",
+        "phonetic": "jes",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 0,
+          "word": "yes",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "是，是的",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "used to agree, answer yes, or show that something is correct"
+          },
+          "example": "“Are you ready?” “Yes, I am.”",
+          "translation": "“你准备好了吗？”“是的，准备好了。”",
+          "source_file": "tem.txt",
+          "source_line": 12779,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 82,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4677,
+        "word": "yesterday",
+        "headword": "yesterday",
+        "homograph": null,
+        "source_raw": "yesterday [ˈjestədi] n.&ad.昨天，昨日"
+      },
+      "original": {
+        "pos": "n.&ad.",
+        "meaning": "昨天，昨日",
+        "phonetic": "ˈjestədi",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 83,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4678,
+        "word": "yet",
+        "headword": "yet",
+        "homograph": null,
+        "source_raw": "yet [jet] ad.还；已经 conj.而"
+      },
+      "original": {
+        "pos": "ad.",
+        "meaning": "还；已经 conj.而",
+        "phonetic": "jet",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 2,
+          "word": "yet",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "adv.",
+          "original_meaning": "还，尚，仍然 conj. 可是，然而",
+          "selected_sense": {
+            "pos": "adv.",
+            "meaning": "up to now; in spite of that; but"
+          },
+          "example": "Have you finished your homework yet?",
+          "translation": "你作业做完了吗？",
+          "source_file": "tem.txt",
+          "source_line": 12781,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 84,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4679,
+        "word": "yield",
+        "headword": "yield",
+        "homograph": null,
+        "source_raw": "yield [jiːld] vt.&vi.出产 n.产量"
+      },
+      "original": {
+        "pos": "vt.&vi.",
+        "meaning": "出产 n.产量",
+        "phonetic": "jiːld",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4680,
+        "word": "you",
+        "headword": "you",
+        "homograph": null,
+        "source_raw": "you [juː] pron.你，你们"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "你，你们",
+        "phonetic": "juː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 86,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4681,
+        "word": "young",
+        "headword": "young",
+        "homograph": null,
+        "source_raw": "young [jʌŋ] a.年轻的 n.青年们"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "年轻的 n.青年们",
+        "phonetic": "jʌŋ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 6,
+          "word": "young",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "年轻的 n. 年轻人",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "not old; in the early part of life; young people"
+          },
+          "example": "The young tree needs plenty of water.",
+          "translation": "这棵幼树需要充足的水分。",
+          "source_file": "tem.txt",
+          "source_line": 12787,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 87,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4682,
+        "word": "your",
+        "headword": "your",
+        "homograph": null,
+        "source_raw": "your [jɔː] pron.你的，你们的"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "你的，你们的",
+        "phonetic": "jɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 88,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4683,
+        "word": "yours",
+        "headword": "yours",
+        "homograph": null,
+        "source_raw": "yours [jɔːz] pron.你们的(东西)"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "你们的(东西)",
+        "phonetic": "jɔːz",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 89,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4684,
+        "word": "yourself",
+        "headword": "yourself",
+        "homograph": null,
+        "source_raw": "yourself [jɔːˈself] pron.你自己；你亲自"
+      },
+      "original": {
+        "pos": "pron.",
+        "meaning": "你自己；你亲自",
+        "phonetic": "jɔːˈself",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 90,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4685,
+        "word": "youth",
+        "headword": "youth",
+        "homograph": null,
+        "source_raw": "youth [juːθ] n.青春；青年们；青年"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "青春；青年们；青年",
+        "phonetic": "juːθ",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 8,
+          "word": "youth",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 年轻，青春 2. 青(少)年时代，青春时期",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the time when someone is young; the quality of being young"
+          },
+          "example": "She spent her youth in a small coastal town.",
+          "translation": "她在一个海边小镇度过了青春岁月。",
+          "source_file": "tem.txt",
+          "source_line": 12792,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4686,
+        "word": "youthful",
+        "headword": "youthful",
+        "homograph": null,
+        "source_raw": "youthful [ˈjuːθful] a.年轻的，青年的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "年轻的，青年的",
+        "phonetic": "ˈjuːθful",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 9,
+          "word": "youthful",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 年轻的，青年的 2. 具有青年特性的，适于青年的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "having the energy or appearance of a young person"
+          },
+          "example": "He has a youthful enthusiasm for learning.",
+          "translation": "他对学习保持着年轻人般的热情。",
+          "source_file": "tem.txt",
+          "source_line": 12793,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4690,
+        "word": "zeal",
+        "headword": "zeal",
+        "homograph": null,
+        "source_raw": "zeal [ziːl] n.热心，热情，热忱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "热心，热情，热忱",
+        "phonetic": "ziːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 13,
+          "word": "zeal",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "热心，热情",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "great enthusiasm for something"
+          },
+          "example": "She worked on the project with great zeal.",
+          "translation": "她满腔热情地投入这个项目。",
+          "source_file": "tem.txt",
+          "source_line": 12797,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 93,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4691,
+        "word": "zealous",
+        "headword": "zealous",
+        "homograph": null,
+        "source_raw": "zealous [ˈzeləs] a.热心的，热情的"
+      },
+      "original": {
+        "pos": "a.",
+        "meaning": "热心的，热情的",
+        "phonetic": "ˈzeləs",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 15,
+          "word": "zealous",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "热心的，热诚的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "showing great energy and enthusiasm for something"
+          },
+          "example": "The volunteers were zealous in their efforts to help.",
+          "translation": "志愿者们热心地投入援助工作。",
+          "source_file": "tem.txt",
+          "source_line": 12799,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 94,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4692,
+        "word": "zebra",
+        "headword": "zebra",
+        "homograph": null,
+        "source_raw": "zebra [ˈziːbrə] n.斑马"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "斑马",
+        "phonetic": "ˈziːbrə",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 16,
+          "word": "zebra",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "斑马",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large African animal with black and white stripes"
+          },
+          "example": "A zebra stood beside the road.",
+          "translation": "一匹斑马站在路边。",
+          "source_file": "tem.txt",
+          "source_line": 12800,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4693,
+        "word": "zero",
+        "headword": "zero",
+        "homograph": null,
+        "source_raw": "zero [ˈziərəu] n.零；零点，零度"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "零；零点，零度",
+        "phonetic": "ˈziərəu",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 18,
+          "word": "zero",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 零，零位 2. 最低点",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the number 0; the lowest point"
+          },
+          "example": "The temperature fell to zero overnight.",
+          "translation": "夜间气温降到了零度。",
+          "source_file": "tem.txt",
+          "source_line": 12802,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 96,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4694,
+        "word": "zone",
+        "headword": "zone",
+        "homograph": null,
+        "source_raw": "zone [zəun] n.地区，区域，范围"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "地区，区域，范围",
+        "phonetic": "zəun",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 26,
+          "word": "zone",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 地区，区域，范围 2. 地带 3. 邮区，时区",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an area with particular features or uses; a region or band"
+          },
+          "example": "The city has a quiet residential zone.",
+          "translation": "这座城市有一个安静的住宅区。",
+          "source_file": "tem.txt",
+          "source_line": 12810,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 97,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 4695,
+        "word": "zoo",
+        "headword": "zoo",
+        "homograph": null,
+        "source_raw": "zoo [zuː] n.动物园"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "动物园",
+        "phonetic": "zuː",
+        "example": "",
+        "example_translation": ""
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 27,
+          "word": "zoo",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "动物园",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a place where many kinds of animals are kept for people to see"
+          },
+          "example": "The children enjoyed visiting the zoo.",
+          "translation": "孩子们很喜欢参观动物园。",
+          "source_file": "tem.txt",
+          "source_line": 12811,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 7,
+        "word": "abandon",
+        "headword": "abandon",
+        "homograph": null,
+        "source_raw": "abandon [əˈbændən] vt.丢弃；放弃，抛弃"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "丢弃；放弃，抛弃",
+        "phonetic": "əˈbændən",
+        "example": "She refused to abandon her plan.",
+        "example_translation": "她拒绝放弃自己的计划。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "We had to abandon the picnic because of the storm.",
+        "example_translation": "由于暴风雨，我们不得不放弃野餐。",
+        "selected_meaning": "放弃；抛弃",
+        "provenance": [
+          "app/seed/examples-common-a-reviewed-20261014.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 32,
+          "word": "abandon",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 抛弃，放弃 2. 离弃(家园、船只、飞机等) 3. 遗弃(妻、子女等)",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to leave someone or something permanently; to give up an idea or plan"
+          },
+          "example": "She refused to abandon her plan.",
+          "translation": "她拒绝放弃自己的计划。",
+          "source_file": "tem.txt",
+          "source_line": 3,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 8,
+        "word": "ability",
+        "headword": "ability",
+        "homograph": null,
+        "source_raw": "ability [əˈbiliti] n.能力；能耐，本领"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "能力；能耐，本领",
+        "phonetic": "əˈbiliti",
+        "example": "Her ability to explain difficult ideas helped the whole class.",
+        "example_translation": "她解释难懂概念的能力帮助了全班同学。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Her ability to explain difficult ideas helped the whole class.",
+        "example_translation": "她解释难懂概念的能力帮助了全班同学。",
+        "selected_meaning": "能力；本领",
+        "provenance": [
+          "app/seed/examples-common-a-reviewed-20261014.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-116",
+          "row_index": 33,
+          "word": "ability",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 能力 2. 才能，才智 || to the best of one’s ability尽力地",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the power or skill to do something; talent"
+          },
+          "example": "Her ability to explain difficult ideas helped the whole class.",
+          "translation": "她解释难懂概念的能力帮助了全班同学。",
+          "source_file": "tem.txt",
+          "source_line": 18,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    }
+  ]
+}

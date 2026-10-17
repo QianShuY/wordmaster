@@ -1,0 +1,4813 @@
+{
+  "task_id": "cet6-023",
+  "input_sha256": "00aedd133dd5e4dd81d699cf56eafb654628da8280a29829293ac586834773ec",
+  "purpose": "review-only source material for every undrafted A/B/C row",
+  "results_are_not_approved_or_installed": true,
+  "rows": 72,
+  "entries": [
+    {
+      "row_index": 0,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 625,
+        "word": "detail",
+        "headword": "detail",
+        "homograph": null,
+        "source_raw": "detail [ˈdiːteɪl] n. 1. 细节，琐事，详述 2. 分配，(人员的)选派 3. 选派的人(小组、分队等)  || go into detail(s)详细叙述，逐一说明 /in detail①详细地②逐渐地 v. 详细说明，派遣"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 细节，琐事，详述 2. 分配，(人员的)选派 3. 选派的人(小组、分队等)  || go into detail(s)详细叙述，逐一说明 /in detail①详细地②逐渐地 v. 详细说明，派遣",
+        "phonetic": "ˈdiːteɪl",
+        "example": "One small detail on the map helped us find the hidden path.",
+        "example_translation": "地图上的一个小细节帮助我们找到了隐蔽的小路。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "One small detail on the map helped us find the hidden path.",
+        "example_translation": "地图上的一个小细节帮助我们找到了隐蔽的小路。",
+        "selected_meaning": "细节",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 68,
+          "word": "detail",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 细节，琐事，详述 2. 分配，(人员的)选派 3. 选派的人(小组、分队等)  || go into detail(s)详细叙述，逐一说明 /in detail①详细地②逐渐地 v. 详细说明，派遣",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small piece of information; to describe or list information carefully"
+          },
+          "example": "One small detail on the map helped us find the hidden path.",
+          "translation": "地图上的一个小细节帮助我们找到了隐蔽的小路。",
+          "source_file": "tem.txt",
+          "source_line": 2935,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 1,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 627,
+        "word": "detect",
+        "headword": "detect",
+        "homograph": null,
+        "source_raw": "detect [dɪˈtekt] v. 发现，查明，测出"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "发现，查明，测出",
+        "phonetic": "dɪˈtekt",
+        "example": "The sensor can detect smoke before people notice it.",
+        "example_translation": "传感器能在人们注意到之前检测到烟雾。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The sensor can detect smoke before people notice it.",
+        "example_translation": "传感器能在人们注意到之前检测到烟雾。",
+        "selected_meaning": "发现；察觉",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 69,
+          "word": "detect",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "发现，查明，测出",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to notice or discover something that is difficult to see"
+          },
+          "example": "The sensor can detect smoke before people notice it.",
+          "translation": "传感器能在人们注意到之前检测到烟雾。",
+          "source_file": "tem.txt",
+          "source_line": 2937,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 2,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 629,
+        "word": "detective",
+        "headword": "detective",
+        "homograph": null,
+        "source_raw": "detective [dɪˈtektɪv] n. 1. 侦探 2. 发现者，探测者 adj. (关于)侦探的，探测(用)的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 侦探 2. 发现者，探测者 adj. (关于)侦探的，探测(用)的",
+        "phonetic": "dɪˈtektɪv",
+        "example": "The detective examined the footprints beside the gate.",
+        "example_translation": "侦探检查了大门旁的脚印。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The detective examined the footprints beside the gate.",
+        "example_translation": "侦探检查了大门旁的脚印。",
+        "selected_meaning": "侦探",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 70,
+          "word": "detective",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 侦探 2. 发现者，探测者 adj. (关于)侦探的，探测(用)的",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a person who investigates crimes; relating to such investigations"
+          },
+          "example": "The detective examined the footprints beside the gate.",
+          "translation": "侦探检查了大门旁的脚印。",
+          "source_file": "tem.txt",
+          "source_line": 2938,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 3,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 632,
+        "word": "device",
+        "headword": "device",
+        "homograph": null,
+        "source_raw": "device [dɪˈvaɪs] n. 1. 装置，器具，仪器 2. 手段，策略，诡计 3. 手法，技巧，图案 || leave to one’s own devices听任…自便，让…自行发展"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 装置，器具，仪器 2. 手段，策略，诡计 3. 手法，技巧，图案 || leave to one’s own devices听任…自便，让…自行发展",
+        "phonetic": "dɪˈvaɪs",
+        "example": "This small device measures the temperature inside the tent.",
+        "example_translation": "这个小装置测量帐篷里的温度。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "This small device measures the temperature inside the tent.",
+        "example_translation": "这个小装置测量帐篷里的温度。",
+        "selected_meaning": "装置；设备",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 74,
+          "word": "device",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 装置，器具，仪器 2. 手段，策略，诡计 3. 手法，技巧，图案 || leave to one’s own devices听任…自便，让…自行发展",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an object or piece of equipment; a plan or technique"
+          },
+          "example": "This small device measures the temperature inside the tent.",
+          "translation": "这个小装置测量帐篷里的温度。",
+          "source_file": "tem.txt",
+          "source_line": 2960,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 634,
+        "word": "devote",
+        "headword": "devote",
+        "homograph": null,
+        "source_raw": "devote [dɪˈvəʊt] v. 奉献，把…专用于  || devote oneself to 献身于，致力于， 沉溺于"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "奉献，把…专用于  || devote oneself to 献身于，致力于， 沉溺于",
+        "phonetic": "dɪˈvəʊt",
+        "example": "She plans to devote an hour to reading every evening.",
+        "example_translation": "她计划每天晚上投入一个小时阅读。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "She plans to devote an hour to reading every evening.",
+        "example_translation": "她计划每天晚上投入一个小时阅读。",
+        "selected_meaning": "投入；奉献",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 75,
+          "word": "devote",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "奉献，把…专用于  || devote oneself to 献身于，致力于， 沉溺于",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to give time or attention to something; to dedicate oneself to something"
+          },
+          "example": "She plans to devote an hour to reading every evening.",
+          "translation": "她计划每天晚上投入一个小时阅读。",
+          "source_file": "tem.txt",
+          "source_line": 2967,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 5,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 639,
+        "word": "digest",
+        "headword": "digest",
+        "homograph": null,
+        "source_raw": "digest [daɪˈdʒest, dɪˈdʒest] v. 1. 消化(食物) 2. (经反复思考)吸收，领悟，理解 3. 整理，压缩，节略 n. 摘要，文摘，汇编"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 消化(食物) 2. (经反复思考)吸收，领悟，理解 3. 整理，压缩，节略 n. 摘要，文摘，汇编",
+        "phonetic": "daɪˈdʒest, dɪˈdʒest",
+        "example": "Your body needs time to digest a large meal.",
+        "example_translation": "你的身体需要时间来消化一顿大餐。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Your body needs time to digest a large meal.",
+        "example_translation": "你的身体需要时间来消化一顿大餐。",
+        "selected_meaning": "消化",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 88,
+          "word": "digest",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 消化(食物) 2. (经反复思考)吸收，领悟，理解 3. 整理，压缩，节略 n. 摘要，文摘，汇编",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to break down food in the body; to understand information after thinking; a shortened collection"
+          },
+          "example": "Your body needs time to digest a large meal.",
+          "translation": "你的身体需要时间来消化一顿大餐。",
+          "source_file": "tem.txt",
+          "source_line": 3017,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 6,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 640,
+        "word": "dignity",
+        "headword": "dignity",
+        "homograph": null,
+        "source_raw": "dignity [ˈdɪɡnətɪ] n. 1. 尊严，高贵，体面 2. 庄严，端庄 3. 官阶，职位 || beneath one's dignity有失某人身份(体面) /stand on one's dignity坚持受到应有的礼遇，保持尊严"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 尊严，高贵，体面 2. 庄严，端庄 3. 官阶，职位 || beneath one's dignity有失某人身份(体面) /stand on one's dignity坚持受到应有的礼遇，保持尊严",
+        "phonetic": "ˈdɪɡnətɪ",
+        "example": "Every visitor should be treated with dignity and respect.",
+        "example_translation": "每位访客都应得到有尊严且受尊重的对待。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Every visitor should be treated with dignity and respect.",
+        "example_translation": "每位访客都应得到有尊严且受尊重的对待。",
+        "selected_meaning": "尊严",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 90,
+          "word": "dignity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 尊严，高贵，体面 2. 庄严，端庄 3. 官阶，职位 || beneath one's dignity有失某人身份(体面) /stand on one's dignity坚持受到应有的礼遇，保持尊严",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "respect and self-respect; a calm and serious manner"
+          },
+          "example": "Every visitor should be treated with dignity and respect.",
+          "translation": "每位访客都应得到有尊严且受尊重的对待。",
+          "source_file": "tem.txt",
+          "source_line": 3026,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 7,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 645,
+        "word": "dimension",
+        "headword": "dimension",
+        "homograph": null,
+        "source_raw": "dimension [daiˈmenʃәn] n. 维数，尺寸，面积 v. 标出尺寸"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "维数，尺寸，面积 v. 标出尺寸",
+        "phonetic": "daɪˈmenʃn",
+        "example": "The diagram gives the dimension of each side of the frame.",
+        "example_translation": "示意图给出了框架每条边的尺寸。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The diagram gives the dimension of each side of the frame.",
+        "example_translation": "示意图给出了框架每条边的尺寸。",
+        "selected_meaning": "尺寸",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 91,
+          "word": "dimension",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 长(宽，高，厚)度，尺寸 2. (pl)面积，规模，程度 3. (pl)范围，重要性 4. 特点，方面，部分",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a measurement such as length or width; an aspect or extent of something"
+          },
+          "example": "The diagram gives the dimension of each side of the frame.",
+          "translation": "示意图给出了框架每条边的尺寸。",
+          "source_file": "tem.txt",
+          "source_line": 3038,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 8,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 650,
+        "word": "directory",
+        "headword": "directory",
+        "homograph": null,
+        "source_raw": "directory [dɪˈrektərɪ] n. 1. 人名地址录，工商行名录，电话号码簿 2. 董事会 3. 指南"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 人名地址录，工商行名录，电话号码簿 2. 董事会 3. 指南",
+        "phonetic": "dɪˈrektərɪ",
+        "example": "The directory lists local shops and their contact details.",
+        "example_translation": "这份名录列出了当地商店及其联系方式。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The directory lists local shops and their contact details.",
+        "example_translation": "这份名录列出了当地商店及其联系方式。",
+        "selected_meaning": "名录；指南",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-123",
+          "row_index": 97,
+          "word": "directory",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 人名地址录，工商行名录，电话号码簿 2. 董事会 3. 指南",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a book or list containing names and contact information; a guide or index"
+          },
+          "example": "The directory lists local shops and their contact details.",
+          "translation": "这份名录列出了当地商店及其联系方式。",
+          "source_file": "tem.txt",
+          "source_line": 3068,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 652,
+        "word": "disaster",
+        "headword": "disaster",
+        "homograph": null,
+        "source_raw": "disaster [dɪˈzɑːstə] n. 1. 灾难，大祸，大不幸 2. 彻底的失败 3. 祸患"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 灾难，大祸，大不幸 2. 彻底的失败 3. 祸患",
+        "phonetic": "dɪˈzɑːstə",
+        "example": "The town rebuilt the bridge after the disaster.",
+        "example_translation": "灾难过后，小镇重建了这座桥。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The town rebuilt the bridge after the disaster.",
+        "example_translation": "灾难过后，小镇重建了这座桥。",
+        "selected_meaning": "灾难",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 2,
+          "word": "disaster",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 灾难，大祸，大不幸 2. 彻底的失败 3. 祸患",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a very bad event; a complete failure"
+          },
+          "example": "The town rebuilt the bridge after the disaster.",
+          "translation": "灾难过后，小镇重建了这座桥。",
+          "source_file": "tem.txt",
+          "source_line": 3089,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 10,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 657,
+        "word": "discipline",
+        "headword": "discipline",
+        "homograph": null,
+        "source_raw": "discipline [ˈdɪsɪplɪn] n. 1. 训练，纪律，行为准则 2. 克制，规章制度，管教 3. 处罚，惩罚 4. 学科，科目 v. 训练，控制，惩罚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 训练，纪律，行为准则 2. 克制，规章制度，管教 3. 处罚，惩罚 4. 学科，科目 v. 训练，控制，惩罚",
+        "phonetic": "ˈdɪsɪplɪn",
+        "example": "It takes discipline to practise a new skill every day.",
+        "example_translation": "每天练习一项新技能需要自律。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "It takes discipline to practise a new skill every day.",
+        "example_translation": "每天练习一项新技能需要自律。",
+        "selected_meaning": "自律",
+        "provenance": [
+          "app/seed/examples-common-h-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 3,
+          "word": "discipline",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 训练，纪律，行为准则 2. 克制，规章制度，管教 3. 处罚，惩罚 4. 学科，科目 v. 训练，控制，惩罚",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "training and control of behaviour; self-control; an area of study; to train or punish"
+          },
+          "example": "It takes discipline to practise a new skill every day.",
+          "translation": "每天练习一项新技能需要自律。",
+          "source_file": "tem.txt",
+          "source_line": 3103,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 11,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 664,
+        "word": "disease",
+        "headword": "disease",
+        "homograph": null,
+        "source_raw": "disease [dɪˈziːz] n. 疾病，弊病，病害  v. 使有病，使不健全"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "疾病，弊病，病害  v. 使有病，使不健全",
+        "phonetic": "dɪˈziːz",
+        "example": "The researchers collected information about a disease affecting local trees.",
+        "example_translation": "研究人员收集了一种影响当地树木的疾病的信息。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The researchers collected information about a disease affecting local trees.",
+        "example_translation": "研究人员收集了一种影响当地树木的疾病的信息。",
+        "selected_meaning": "疾病",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 9,
+          "word": "disease",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "疾病，弊病，病害  v. 使有病，使不健全",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an illness or medical condition; an unhealthy condition in plants or society"
+          },
+          "example": "The researchers collected information about a disease affecting local trees.",
+          "translation": "研究人员收集了一种影响当地树木的疾病的信息。",
+          "source_file": "tem.txt",
+          "source_line": 3127,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 12,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 668,
+        "word": "dismiss",
+        "headword": "dismiss",
+        "homograph": null,
+        "source_raw": "dismiss [dɪsˈmɪs] v. 1. 免…之职，解雇 2. 让…离开，遣散 3. 不理会，抛弃，不认真考虑"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 免…之职，解雇 2. 让…离开，遣散 3. 不理会，抛弃，不认真考虑",
+        "phonetic": "dɪsˈmɪs",
+        "example": "We should not dismiss an idea before hearing the reasons behind it.",
+        "example_translation": "在听到一个想法背后的理由之前，我们不应将其否定。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "We should not dismiss an idea before hearing the reasons behind it.",
+        "example_translation": "在听到一个想法背后的理由之前，我们不应将其否定。",
+        "selected_meaning": "不予考虑；摒弃",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 11,
+          "word": "dismiss",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 免…之职，解雇 2. 让…离开，遣散 3. 不理会，抛弃，不认真考虑",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to send someone away from a job or place; to decide not to consider something"
+          },
+          "example": "We should not dismiss an idea before hearing the reasons behind it.",
+          "translation": "在听到一个想法背后的理由之前，我们不应将其否定。",
+          "source_file": "tem.txt",
+          "source_line": 3158,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 673,
+        "word": "display",
+        "headword": "display",
+        "homograph": null,
+        "source_raw": "display [dɪˈspleɪ] v. 陈列，展示，展览"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "陈列，展示，展览",
+        "phonetic": "dɪˈspleɪ",
+        "example": "The museum will display the restored map next month.",
+        "example_translation": "博物馆下个月将展示修复后的地图。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The museum will display the restored map next month.",
+        "example_translation": "博物馆下个月将展示修复后的地图。",
+        "selected_meaning": "展示；陈列",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 12,
+          "word": "display",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "陈列，展示，展览",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to show something publicly"
+          },
+          "example": "The museum will display the restored map next month.",
+          "translation": "博物馆下个月将展示修复后的地图。",
+          "source_file": "tem.txt",
+          "source_line": 3175,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 14,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 681,
+        "word": "distinct",
+        "headword": "distinct",
+        "homograph": null,
+        "source_raw": "distinct [dɪˈstɪŋkt] adj. 1. 不同的，个别的，单独的 2. 清晰的，分明的，确实的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 不同的，个别的，单独的 2. 清晰的，分明的，确实的",
+        "phonetic": "dɪˈstɪŋkt",
+        "example": "The two birds have distinct calls that are easy to recognize.",
+        "example_translation": "这两只鸟的叫声明显不同，很容易辨认。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The two birds have distinct calls that are easy to recognize.",
+        "example_translation": "这两只鸟的叫声明显不同，很容易辨认。",
+        "selected_meaning": "明显不同的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 15,
+          "word": "distinct",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 不同的，个别的，单独的 2. 清晰的，分明的，确实的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "different and separate; easy to see or hear clearly"
+          },
+          "example": "The two birds have distinct calls that are easy to recognize.",
+          "translation": "这两只鸟的叫声明显不同，很容易辨认。",
+          "source_file": "tem.txt",
+          "source_line": 3212,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 15,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 682,
+        "word": "distinguish",
+        "headword": "distinguish",
+        "homograph": null,
+        "source_raw": "distinguish [dɪˈstɪŋɡwɪʃ] v. 1. 区分，辨别，认明 2. 看清，发现，听出 3. 使有区别，使具有特色 || distinguish oneself表现杰出，使受人注意"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 区分，辨别，认明 2. 看清，发现，听出 3. 使有区别，使具有特色 || distinguish oneself表现杰出，使受人注意",
+        "phonetic": "dɪˈstɪŋɡwɪʃ",
+        "example": "Can you distinguish the old path from the new one on this map?",
+        "example_translation": "你能在这张地图上区分旧路和新路吗？"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Can you distinguish the old path from the new one on this map?",
+        "example_translation": "你能在这张地图上区分旧路和新路吗？",
+        "selected_meaning": "区分；辨别",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 16,
+          "word": "distinguish",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 区分，辨别，认明 2. 看清，发现，听出 3. 使有区别，使具有特色 || distinguish oneself表现杰出，使受人注意",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to notice or show the difference between things"
+          },
+          "example": "Can you distinguish the old path from the new one on this map?",
+          "translation": "你能在这张地图上区分旧路和新路吗？",
+          "source_file": "tem.txt",
+          "source_line": 3215,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 685,
+        "word": "distribution",
+        "headword": "distribution",
+        "homograph": null,
+        "source_raw": "distribution [ˌdɪstrɪˈbjuːʃən] n. 1. 分发，分配，配给物 2. 散布，分布 3. 销售(量)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 分发，分配，配给物 2. 散布，分布 3. 销售(量)",
+        "phonetic": "ˌdɪstrɪˈbjuːʃən",
+        "example": "The volunteers organized the distribution of food after the storm.",
+        "example_translation": "暴风雨过后，志愿者们组织了食物分发。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The volunteers organized the distribution of food after the storm.",
+        "example_translation": "暴风雨过后，志愿者们组织了食物分发。",
+        "selected_meaning": "分发；分配",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 17,
+          "word": "distribution",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 分发，分配，配给物 2. 散布，分布 3. 销售(量)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act of giving or spreading something; the way something is spread"
+          },
+          "example": "The volunteers organized the distribution of food after the storm.",
+          "translation": "暴风雨过后，志愿者们组织了食物分发。",
+          "source_file": "tem.txt",
+          "source_line": 3224,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 17,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 687,
+        "word": "diverse",
+        "headword": "diverse",
+        "homograph": null,
+        "source_raw": "diverse [daɪˈvɜːs] adj. 不同的，多种多样的，多变化的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "不同的，多种多样的，多变化的",
+        "phonetic": "daɪˈvɜːs",
+        "example": "The festival brings together people from diverse cultural backgrounds.",
+        "example_translation": "这个节日让来自不同文化背景的人们聚集在一起。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The festival brings together people from diverse cultural backgrounds.",
+        "example_translation": "这个节日让来自不同文化背景的人们聚集在一起。",
+        "selected_meaning": "多种多样的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 21,
+          "word": "diverse",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "不同的，多种多样的，多变化的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "very different from each other"
+          },
+          "example": "The festival brings together people from diverse cultural backgrounds.",
+          "translation": "这个节日让来自不同文化背景的人们聚集在一起。",
+          "source_file": "tem.txt",
+          "source_line": 3239,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 18,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 692,
+        "word": "dizzy",
+        "headword": "dizzy",
+        "homograph": null,
+        "source_raw": "dizzy [ˈdɪzɪ] adj. 1. 头晕目眩的，头昏眼花的，使人晕眩的 2. 不知所措的，使人困惑的 3. 愚蠢的，笨的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 头晕目眩的，头昏眼花的，使人晕眩的 2. 不知所措的，使人困惑的 3. 愚蠢的，笨的",
+        "phonetic": "ˈdɪzɪ",
+        "example": "The spinning ride made him feel dizzy.",
+        "example_translation": "旋转的游乐设施让他感到头晕。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The spinning ride made him feel dizzy.",
+        "example_translation": "旋转的游乐设施让他感到头晕。",
+        "selected_meaning": "头晕的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 24,
+          "word": "dizzy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 头晕目眩的，头昏眼花的，使人晕眩的 2. 不知所措的，使人困惑的 3. 愚蠢的，笨的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "feeling that everything is spinning; confused"
+          },
+          "example": "The spinning ride made him feel dizzy.",
+          "translation": "旋转的游乐设施让他感到头晕。",
+          "source_file": "tem.txt",
+          "source_line": 3253,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 19,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 698,
+        "word": "dolphin",
+        "headword": "dolphin",
+        "homograph": null,
+        "source_raw": "dolphin [ˈdɒlfɪn] n. 海豚"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "海豚",
+        "phonetic": "ˈdɒlfɪn",
+        "example": "A dolphin appeared beside the boat and then slipped beneath the waves.",
+        "example_translation": "一只海豚出现在船边，随后潜入波浪之下。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "A dolphin appeared beside the boat and then slipped beneath the waves.",
+        "example_translation": "一只海豚出现在船边，随后潜入波浪之下。",
+        "selected_meaning": "海豚",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 30,
+          "word": "dolphin",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "海豚",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a sea mammal with a long nose"
+          },
+          "example": "A dolphin appeared beside the boat and then slipped beneath the waves.",
+          "translation": "一只海豚出现在船边，随后潜入波浪之下。",
+          "source_file": "tem.txt",
+          "source_line": 3278,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 20,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 699,
+        "word": "domain",
+        "headword": "domain",
+        "homograph": null,
+        "source_raw": "domain [dəʊˈmeɪn] n. 1. 领域，范围，范畴 2. 领土，领地，势力范围"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 领域，范围，范畴 2. 领土，领地，势力范围",
+        "phonetic": "dəʊˈmeɪn",
+        "example": "This question belongs to the domain of environmental science.",
+        "example_translation": "这个问题属于环境科学领域。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "This question belongs to the domain of environmental science.",
+        "example_translation": "这个问题属于环境科学领域。",
+        "selected_meaning": "领域",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 31,
+          "word": "domain",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 领域，范围，范畴 2. 领土，领地，势力范围",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "an area of knowledge or activity; a territory"
+          },
+          "example": "This question belongs to the domain of environmental science.",
+          "translation": "这个问题属于环境科学领域。",
+          "source_file": "tem.txt",
+          "source_line": 3279,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 21,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 701,
+        "word": "domestic",
+        "headword": "domestic",
+        "homograph": null,
+        "source_raw": "domestic [dəˈmestɪk] adj. 1. 家的，家庭的，家用的 2. (动物)非野生的，驯养的 3. 国内的，国产的，自制的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 家的，家庭的，家用的 2. (动物)非野生的，驯养的 3. 国内的，国产的，自制的",
+        "phonetic": "dəˈmestɪk",
+        "example": "The airport has a separate terminal for domestic flights.",
+        "example_translation": "这座机场为国内航班设有单独的航站楼。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The airport has a separate terminal for domestic flights.",
+        "example_translation": "这座机场为国内航班设有单独的航站楼。",
+        "selected_meaning": "国内的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 32,
+          "word": "domestic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 家的，家庭的，家用的 2. (动物)非野生的，驯养的 3. 国内的，国产的，自制的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "relating to the home; kept by people rather than wild; within one country"
+          },
+          "example": "The airport has a separate terminal for domestic flights.",
+          "translation": "这座机场为国内航班设有单独的航站楼。",
+          "source_file": "tem.txt",
+          "source_line": 3281,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 703,
+        "word": "dominate",
+        "headword": "dominate",
+        "homograph": null,
+        "source_raw": "dominate [ˈdɒmɪneɪt] v. 1. 支配，统治，控制 2. 占首要地位 3. 俯视，耸立于"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 支配，统治，控制 2. 占首要地位 3. 俯视，耸立于",
+        "phonetic": "ˈdɒmɪneɪt",
+        "example": "One large company began to dominate the local market.",
+        "example_translation": "一家大公司开始主导当地市场。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "One large company began to dominate the local market.",
+        "example_translation": "一家大公司开始主导当地市场。",
+        "selected_meaning": "支配；占据主导地位",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 33,
+          "word": "dominate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 支配，统治，控制 2. 占首要地位 3. 俯视，耸立于",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to control or have great influence over; to be the most important feature"
+          },
+          "example": "One large company began to dominate the local market.",
+          "translation": "一家大公司开始主导当地市场。",
+          "source_file": "tem.txt",
+          "source_line": 3286,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 23,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 704,
+        "word": "donate",
+        "headword": "donate",
+        "homograph": null,
+        "source_raw": "donate [dəʊˈneɪt] v. 捐赠，赠送"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "捐赠，赠送",
+        "phonetic": "dəʊˈneɪt",
+        "example": "The shop plans to donate warm clothing to the shelter.",
+        "example_translation": "这家商店计划向收容所捐赠保暖衣物。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The shop plans to donate warm clothing to the shelter.",
+        "example_translation": "这家商店计划向收容所捐赠保暖衣物。",
+        "selected_meaning": "捐赠",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 34,
+          "word": "donate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "捐赠，赠送",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to give something, especially money or goods, to help others"
+          },
+          "example": "The shop plans to donate warm clothing to the shelter.",
+          "translation": "这家商店计划向收容所捐赠保暖衣物。",
+          "source_file": "tem.txt",
+          "source_line": 3292,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 24,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 708,
+        "word": "draft",
+        "headword": "draft",
+        "homograph": null,
+        "source_raw": "draft drɑːft /n. 1. 草稿，初稿 2. 汇票 v. 起草，草拟"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 草稿，初稿 2. 汇票 v. 起草，草拟",
+        "phonetic": "drɑːft",
+        "example": "I saved the first draft before making any changes.",
+        "example_translation": "在做任何修改之前，我保存了初稿。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "She read the first draft of the letter before making changes.",
+        "example_translation": "修改前，她读了这封信的初稿。",
+        "selected_meaning": "草稿",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 25,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 709,
+        "word": "drag",
+        "headword": "drag",
+        "homograph": null,
+        "source_raw": "drag [dræɡ] v. 1. 拖，拉，曳 2. 缓慢地移动，拖着脚步走 3. 把…硬拖去"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 拖，拉，曳 2. 缓慢地移动，拖着脚步走 3. 把…硬拖去",
+        "phonetic": "dræɡ",
+        "example": "We had to drag the fallen branch away from the path.",
+        "example_translation": "我们不得不把倒下的树枝拖离小路。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "We had to drag the fallen branch away from the path.",
+        "example_translation": "我们不得不把倒下的树枝拖离小路。",
+        "selected_meaning": "拖；拉",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 39,
+          "word": "drag",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 拖，拉，曳 2. 缓慢地移动，拖着脚步走 3. 把…硬拖去",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to pull something along the ground; to move slowly or with difficulty"
+          },
+          "example": "We had to drag the fallen branch away from the path.",
+          "translation": "我们不得不把倒下的树枝拖离小路。",
+          "source_file": "tem.txt",
+          "source_line": 3343,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 26,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 712,
+        "word": "dramatic",
+        "headword": "dramatic",
+        "homograph": null,
+        "source_raw": "dramatic [drəˈmætɪk] adj.  1. 戏剧(性)的，刺激的，激动人心的 2. 引人注目的，印象深刻的，突然的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 戏剧(性)的，刺激的，激动人心的 2. 引人注目的，印象深刻的，突然的",
+        "phonetic": "drəˈmætɪk",
+        "example": "The new bridge caused a dramatic change in travel times.",
+        "example_translation": "新桥使出行时间发生了显著变化。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The new bridge caused a dramatic change in travel times.",
+        "example_translation": "新桥使出行时间发生了显著变化。",
+        "selected_meaning": "巨大的；显著的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 42,
+          "word": "dramatic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 戏剧(性)的，刺激的，激动人心的 2. 引人注目的，印象深刻的，突然的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "very sudden or striking; relating to drama"
+          },
+          "example": "The new bridge caused a dramatic change in travel times.",
+          "translation": "新桥使出行时间发生了显著变化。",
+          "source_file": "tem.txt",
+          "source_line": 3349,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 27,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 718,
+        "word": "drought",
+        "headword": "drought",
+        "homograph": null,
+        "source_raw": "drought [draʊt] n. 旱灾，干旱"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "旱灾，干旱",
+        "phonetic": "draʊt",
+        "example": "The long drought reduced the water level in the lake.",
+        "example_translation": "长期干旱使湖泊水位下降。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The long drought reduced the water level in the lake.",
+        "example_translation": "长期干旱使湖泊水位下降。",
+        "selected_meaning": "干旱",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 48,
+          "word": "drought",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "旱灾，干旱",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a long period without enough rain"
+          },
+          "example": "The long drought reduced the water level in the lake.",
+          "translation": "长期干旱使湖泊水位下降。",
+          "source_file": "tem.txt",
+          "source_line": 3391,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 28,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 726,
+        "word": "eagle",
+        "headword": "eagle",
+        "homograph": null,
+        "source_raw": "eagle [ˈiːɡl] n. 鹰，雕"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "鹰，雕",
+        "phonetic": "ˈiːɡl",
+        "example": "An eagle circled above the valley in the morning light.",
+        "example_translation": "晨光中，一只鹰在山谷上方盘旋。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "An eagle circled above the valley in the morning light.",
+        "example_translation": "晨光中，一只鹰在山谷上方盘旋。",
+        "selected_meaning": "鹰",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 60,
+          "word": "eagle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "鹰，雕",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a large bird of prey"
+          },
+          "example": "An eagle circled above the valley in the morning light.",
+          "translation": "晨光中，一只鹰在山谷上方盘旋。",
+          "source_file": "tem.txt",
+          "source_line": 3471,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 29,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 730,
+        "word": "ecology",
+        "headword": "ecology",
+        "homograph": null,
+        "source_raw": "ecology [iːˈkɒlədʒɪ] n. 生态(学)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "生态(学)",
+        "phonetic": "iːˈkɒlədʒɪ",
+        "example": "She chose a course in ecology to learn how living things interact.",
+        "example_translation": "她选择了一门生态学课程，了解生物如何相互作用。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "She chose a course in ecology to learn how living things interact.",
+        "example_translation": "她选择了一门生态学课程，了解生物如何相互作用。",
+        "selected_meaning": "生态学",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 68,
+          "word": "ecology",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "生态(学)",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the study of how living things interact with each other and their environment"
+          },
+          "example": "She chose a course in ecology to learn how living things interact.",
+          "translation": "她选择了一门生态学课程，了解生物如何相互作用。",
+          "source_file": "tem.txt",
+          "source_line": 3514,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 30,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 731,
+        "word": "economic",
+        "headword": "economic",
+        "homograph": null,
+        "source_raw": "economic [ˌiːkəˈnɒmɪk] adj. 1. 经济(上)的，经济学的 2. 合算的，有利可图的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 经济(上)的，经济学的 2. 合算的，有利可图的",
+        "phonetic": "ˌiːkəˈnɒmɪk",
+        "example": "The report examines the economic effects of the new railway.",
+        "example_translation": "报告研究了新铁路带来的经济影响。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The report examines the economic effects of the new railway.",
+        "example_translation": "报告研究了新铁路带来的经济影响。",
+        "selected_meaning": "经济的；经济上的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 69,
+          "word": "economic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 经济(上)的，经济学的 2. 合算的，有利可图的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "relating to the economy; profitable or cost-effective"
+          },
+          "example": "The report examines the economic effects of the new railway.",
+          "translation": "报告研究了新铁路带来的经济影响。",
+          "source_file": "tem.txt",
+          "source_line": 3515,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 31,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 733,
+        "word": "economy",
+        "headword": "economy",
+        "homograph": null,
+        "source_raw": "economy [ɪˈkɒnəmɪ] n. 1. 经济(体系) 2. 节约，节省，简练 adj. 便宜的，经济的，二等的"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 经济(体系) 2. 节约，节省，简练 adj. 便宜的，经济的，二等的",
+        "phonetic": "ɪˈkɒnəmɪ",
+        "example": "Tourism plays an important role in the local economy.",
+        "example_translation": "旅游业在当地经济中发挥着重要作用。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Tourism plays an important role in the local economy.",
+        "example_translation": "旅游业在当地经济中发挥着重要作用。",
+        "selected_meaning": "经济；经济体系",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 70,
+          "word": "economy",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 经济(体系) 2. 节约，节省，简练 adj. 便宜的，经济的，二等的",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the system by which a country produces and uses goods and services; careful use of money or resources"
+          },
+          "example": "Tourism plays an important role in the local economy.",
+          "translation": "旅游业在当地经济中发挥着重要作用。",
+          "source_file": "tem.txt",
+          "source_line": 3520,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 32,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 737,
+        "word": "efficient",
+        "headword": "efficient",
+        "homograph": null,
+        "source_raw": "efficient [ɪˈfɪʃənt] adj. 1. 效率高的，有能力的，能胜任的 2. 有效的，直接产生结果的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "效率高的，办事有效率的；有能力的，能胜任的（强调节省时间、精力或资源） || 用法：与 effective（有效的）区分，efficient 强调效率与不浪费资源。",
+        "phonetic": "ɪˈfɪʃənt",
+        "example": "The new system is more efficient because it avoids repeated work.",
+        "example_translation": "新系统避免了重复工作，因此效率更高。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 76,
+          "word": "efficient",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "效率高的，办事有效率的；有能力的，能胜任的（强调节省时间、精力或资源） || 用法：与 effective（有效的）区分，efficient 强调效率与不浪费资源。",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "working well without wasting time, money, or energy"
+          },
+          "example": "The new system is more efficient because it avoids repeated work.",
+          "translation": "新系统避免了重复工作，因此效率更高。",
+          "source_file": "tem.txt",
+          "source_line": 3548,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 33,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 744,
+        "word": "electric",
+        "headword": "electric",
+        "homograph": null,
+        "source_raw": "electric [ɪˈlektrɪk] adj. 1. 电的，导电的，发电的 2. 令人兴奋的，刺激的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 电的；用电的，电动的；导电的，发电的 2. 令人兴奋的，刺激的",
+        "phonetic": "ɪˈlektrɪk",
+        "example": "An electric pump moved water from the tank to the garden.",
+        "example_translation": "一台电动泵把水从水箱送到花园。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 80,
+          "word": "electric",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 电的；用电的，电动的；导电的，发电的 2. 令人兴奋的，刺激的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "using or producing electricity; exciting or intense"
+          },
+          "example": "An electric pump moved water from the tank to the garden.",
+          "translation": "一台电动泵把水从水箱送到花园。",
+          "source_file": "tem.txt",
+          "source_line": 3587,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 34,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 747,
+        "word": "electricity",
+        "headword": "electricity",
+        "homograph": null,
+        "source_raw": "electricity [ɪˌlekˈtrɪsətɪ] n. 1. 电，电气，电学 2. 电流，电力"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 电，电气，电学 2. 电流，电力",
+        "phonetic": "ɪˌlekˈtrɪsətɪ",
+        "example": "The village regained electricity after the workers repaired the line.",
+        "example_translation": "工人们修好线路后，村庄恢复了供电。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The village regained electricity after the workers repaired the line.",
+        "example_translation": "工人们修好线路后，村庄恢复了供电。",
+        "selected_meaning": "电；电能",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 81,
+          "word": "electricity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 电，电气，电学 2. 电流，电力",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a form of energy carried by charged particles; electric power"
+          },
+          "example": "The village regained electricity after the workers repaired the line.",
+          "translation": "工人们修好线路后，村庄恢复了供电。",
+          "source_file": "tem.txt",
+          "source_line": 3590,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 35,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 749,
+        "word": "electronic",
+        "headword": "electronic",
+        "homograph": null,
+        "source_raw": "electronic [ˌɪlekˈtrɒnɪk] adj. 电子的，电子仪器的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "电子的，电子仪器的",
+        "phonetic": "ˌɪlekˈtrɒnɪk",
+        "example": "The students used an electronic dictionary during the exercise.",
+        "example_translation": "学生们在练习中使用了电子词典。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The students used an electronic dictionary during the exercise.",
+        "example_translation": "学生们在练习中使用了电子词典。",
+        "selected_meaning": "电子的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 82,
+          "word": "electronic",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "电子的，电子仪器的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "using or involving electronic devices or circuits"
+          },
+          "example": "The students used an electronic dictionary during the exercise.",
+          "translation": "学生们在练习中使用了电子词典。",
+          "source_file": "tem.txt",
+          "source_line": 3596,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 36,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 750,
+        "word": "elegant",
+        "headword": "elegant",
+        "homograph": null,
+        "source_raw": "elegant [ˈelɪɡənt] adj. 优雅的，精美的，雅致的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "优雅的，精美的，雅致的",
+        "phonetic": "ˈelɪɡənt",
+        "example": "The gallery displayed an elegant wooden chair with simple lines.",
+        "example_translation": "画廊展出了一把线条简洁、造型精美的木椅。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "The gallery displayed an elegant wooden chair with simple lines.",
+        "example_translation": "画廊展出了一把线条简洁、造型精美的木椅。",
+        "selected_meaning": "优雅的；精美的",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 83,
+          "word": "elegant",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "优雅的，精美的，雅致的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "graceful and stylish in appearance or design"
+          },
+          "example": "The gallery displayed an elegant wooden chair with simple lines.",
+          "translation": "画廊展出了一把线条简洁、造型精美的木椅。",
+          "source_file": "tem.txt",
+          "source_line": 3601,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 37,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 751,
+        "word": "element",
+        "headword": "element",
+        "homograph": null,
+        "source_raw": "element [ˈelɪmənt] n. 1. 要素，成分，元素 2. 自然环境，适宜的环境 3. (pl)(学科的)基本原则，原理，基础  || in one’s element很适应，得其所 /out of one’s element不适应，不得其所"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 要素，成分，元素 2. 自然环境，适宜的环境 3. (pl)(学科的)基本原则，原理，基础  || in one’s element很适应，得其所 /out of one’s element不适应，不得其所",
+        "phonetic": "ˈelɪmənt",
+        "example": "Trust is an essential element of a successful team.",
+        "example_translation": "信任是成功团队的一个基本要素。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "Trust is an essential element of a successful team.",
+        "example_translation": "信任是成功团队的一个基本要素。",
+        "selected_meaning": "要素；组成部分",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 84,
+          "word": "element",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 要素，成分，元素 2. 自然环境，适宜的环境 3. (pl)(学科的)基本原则，原理，基础  || in one’s element很适应，得其所 /out of one’s element不适应，不得其所",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a basic part of something; a chemical substance made of one kind of atom"
+          },
+          "example": "Trust is an essential element of a successful team.",
+          "translation": "信任是成功团队的一个基本要素。",
+          "source_file": "tem.txt",
+          "source_line": 3603,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 38,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 756,
+        "word": "eliminate",
+        "headword": "eliminate",
+        "homograph": null,
+        "source_raw": "eliminate [ɪˈlɪmɪneɪt] v. 消除，去除，淘汰"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "消除，去除，淘汰",
+        "phonetic": "ɪˈlɪmɪneɪt",
+        "example": "A careful check can eliminate errors before the report is published.",
+        "example_translation": "仔细检查可以在报告发表前消除错误。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P1-exact-source-unverified",
+      "source_material": {
+        "example": "A careful check can eliminate errors before the report is published.",
+        "example_translation": "仔细检查可以在报告发表前消除错误。",
+        "selected_meaning": "消除；排除",
+        "provenance": [
+          "app/seed/examples-common-i-reviewed-20261015.json"
+        ],
+        "risk_flags": [
+          "same-original-identity",
+          "prior-model-sense-review-only",
+          "selected-sense-recheck"
+        ]
+      },
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 87,
+          "word": "eliminate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "消除，去除，淘汰",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to remove or get rid of something; to remove someone from a competition"
+          },
+          "example": "A careful check can eliminate errors before the report is published.",
+          "translation": "仔细检查可以在报告发表前消除错误。",
+          "source_file": "tem.txt",
+          "source_line": 3615,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck",
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 39,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 855,
+        "word": "explore",
+        "headword": "explore",
+        "homograph": null,
+        "source_raw": "explore [ɪkˈsplɔː] v. 1. 探究，探索 2. 勘探，探险，探测"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 探究，探索 2. 勘探，探险，探测",
+        "phonetic": "ɪkˈsplɔː",
+        "example": "We spent the afternoon exploring the old town.",
+        "example_translation": "我们花了一下午探索这座古镇。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 89,
+          "word": "explore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 探究，探索 2. 勘探，探险，探测",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to travel through an unfamiliar place to learn about it"
+          },
+          "example": "We spent the afternoon exploring the old town.",
+          "translation": "我们花了一下午探索这座古镇。",
+          "source_file": "tem.txt",
+          "source_line": 4054,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 40,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 945,
+        "word": "fragrance",
+        "headword": "fragrance",
+        "homograph": null,
+        "source_raw": "fragrance [ˈfreɪɡrəns] n. 1. 芳香，香味 2. 香料，香水"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 芳香，香味 2. 香料，香水",
+        "phonetic": "ˈfreɪɡrəns",
+        "example": "The fragrance of fresh flowers filled the room.",
+        "example_translation": "鲜花的芳香弥漫了整个房间。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 92,
+          "word": "fragrance",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 芳香，香味 2. 香料，香水",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a pleasant smell; a substance with a pleasant smell"
+          },
+          "example": "The fragrance of fresh flowers filled the room.",
+          "translation": "鲜花的芳香弥漫了整个房间。",
+          "source_file": "tem.txt",
+          "source_line": 4713,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 41,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 987,
+        "word": "glide",
+        "headword": "glide",
+        "homograph": null,
+        "source_raw": "glide [ɡlaɪd] v. &n. 1. 滑动，滑行 2. 滑翔"
+      },
+      "original": {
+        "pos": "v.&n.",
+        "meaning": "1. 滑动，滑行 2. 滑翔",
+        "phonetic": "ɡlaɪd",
+        "example": "We watched the birds glide over the lake.",
+        "example_translation": "我们看着鸟儿在湖面上滑翔。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 990,
+        "word": "gloomy",
+        "headword": "gloomy",
+        "homograph": null,
+        "source_raw": "gloomy [ˈɡluːmɪ] adj. 1. 黑暗的，阴暗的，朦胧的 2. 令人沮丧的 3. 阴郁的，忧闷的，悲观的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 黑暗的，阴暗的，朦胧的 2. 令人沮丧的 3. 阴郁的，忧闷的，悲观的",
+        "phonetic": "ˈɡluːmɪ",
+        "example": "The sky looked gloomy before the storm.",
+        "example_translation": "暴风雨来临前，天空显得阴沉。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-010",
+          "row_index": 19,
+          "word": "gloomy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "黑暗的；令人沮丧的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "nearly dark or badly lit; sad and without hope; without much hope of success or happiness"
+          },
+          "example": "The gloomy forecast made investors cautious.",
+          "translation": "黯淡的预测让投资者变得谨慎。",
+          "source_file": "cet4.txt",
+          "source_line": 1703,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-014",
+          "row_index": 67,
+          "word": "gloomy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "阴暗的,阴沉的,令人沮丧的,阴郁的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "dark or badly lit in a way that feels sad"
+          },
+          "example": "The narrow hall looked gloomy without windows.",
+          "translation": "这条狭窄的走廊没有窗户，显得很阴暗。",
+          "source_file": "npee.txt",
+          "source_line": 2129,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 94,
+          "word": "gloomy",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 黑暗的，阴暗的，朦胧的 2. 令人沮丧的 3. 阴郁的，忧闷的，悲观的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "dark or poorly lit; sad or pessimistic"
+          },
+          "example": "The sky looked gloomy before the storm.",
+          "translation": "暴风雨来临前，天空显得阴沉。",
+          "source_file": "tem.txt",
+          "source_line": 5005,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 43,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1056,
+        "word": "hover",
+        "headword": "hover",
+        "homograph": null,
+        "source_raw": "hover [ˈhɒvə] v. 飞翔，盘旋，徘徊"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "飞翔，盘旋，徘徊",
+        "phonetic": "ˈhɒvə",
+        "example": "The helicopter began to hover above the field.",
+        "example_translation": "直升机开始在田野上方盘旋。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-017",
+          "row_index": 11,
+          "word": "hover",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "(鸟)盘旋,翱翔,(人)逗留在附近徘徊",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to stay in the air in one place"
+          },
+          "example": "A helicopter hovered above the field.",
+          "translation": "一架直升机在田野上空盘旋。",
+          "source_file": "npee.txt",
+          "source_line": 2373,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 95,
+          "word": "hover",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "飞翔，盘旋，徘徊",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to remain in one place in the air; to stay close without moving away"
+          },
+          "example": "The helicopter began to hover above the field.",
+          "translation": "直升机开始在田野上方盘旋。",
+          "source_file": "tem.txt",
+          "source_line": 5750,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 44,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1061,
+        "word": "humanity",
+        "headword": "humanity",
+        "homograph": null,
+        "source_raw": "humanity hjuːˈmænətɪ /n. 1. 人性，人类，人 2. 人道，博爱，仁慈 3. (pl)人文学科"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 人性，人类，人 2. 人道，博爱，仁慈 3. (pl)人文学科",
+        "phonetic": "hjuːˈmænəti",
+        "example": "Clean water is essential for all of humanity.",
+        "example_translation": "清洁的水对全人类都至关重要。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-017",
+          "row_index": 20,
+          "word": "humanity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "人类,人性,人情;(pl.)人文科学",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "people in general"
+          },
+          "example": "The discovery changed the way humanity understood the disease.",
+          "translation": "这项发现改变了人类对这种疾病的认识。",
+          "source_file": "npee.txt",
+          "source_line": 2382,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 45,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1076,
+        "word": "ignore",
+        "headword": "ignore",
+        "homograph": null,
+        "source_raw": "ignore [ɪɡˈnɔː] v. 不理，漠视，忽视"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "不理，漠视，忽视",
+        "phonetic": "ɪɡˈnɔː",
+        "example": "Do not ignore the small details in the instructions.",
+        "example_translation": "不要忽视说明中的小细节。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-012",
+          "row_index": 56,
+          "word": "ignore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "不顾，不理，忽视",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to pay no attention to something; to pretend that you have not seen or heard somebody or something"
+          },
+          "example": "She ignored the warning and continued along the path.",
+          "translation": "她不顾警告，继续沿着小路前行。",
+          "source_file": "cet4.txt",
+          "source_line": 1951,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-017",
+          "row_index": 56,
+          "word": "ignore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "不理,不顾,忽视",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to pay no attention to somebody or something"
+          },
+          "example": "She ignored the warning and entered the room.",
+          "translation": "她没有理会警告，走进了房间。",
+          "source_file": "npee.txt",
+          "source_line": 2420,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 96,
+          "word": "ignore",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "不理，漠视，忽视",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to pay no attention to something or someone"
+          },
+          "example": "Do not ignore the small details in the instructions.",
+          "translation": "不要忽视说明中的小细节。",
+          "source_file": "tem.txt",
+          "source_line": 5885,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 46,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1106,
+        "word": "incline",
+        "headword": "incline",
+        "homograph": null,
+        "source_raw": "incline [ɪnˈklaɪn] v. 1. (使)倾向(于)，意欲 2. 赞同，爱好 3. 趋向，趋势 4. 倾斜，弯腰 n. 斜坡，斜面"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. (使)倾向(于)，意欲 2. 赞同，爱好 3. 趋向，趋势 4. 倾斜，弯腰 n. 斜坡，斜面",
+        "phonetic": "ɪnˈklaɪn",
+        "example": "These findings incline us to reconsider the plan.",
+        "example_translation": "这些发现使我们倾向于重新考虑这个计划。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-018",
+          "row_index": 4,
+          "word": "incline",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)倾斜;(使)倾向于 n.斜坡,斜面",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to tend to think or behave in a particular way"
+          },
+          "example": "I incline to agree with your suggestion.",
+          "translation": "我倾向于赞同你的建议。",
+          "source_file": "npee.txt",
+          "source_line": 2469,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 98,
+          "word": "incline",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. (使)倾向(于)，意欲 2. 赞同，爱好 3. 趋向，趋势 4. 倾斜，弯腰 n. 斜坡，斜面",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to lean or slope; to have a tendency or preference"
+          },
+          "example": "These findings incline us to reconsider the plan.",
+          "translation": "这些发现使我们倾向于重新考虑这个计划。",
+          "source_file": "tem.txt",
+          "source_line": 6048,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 47,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1152,
+        "word": "install",
+        "headword": "install",
+        "homograph": null,
+        "source_raw": "install [ɪnˈstɔːl] v. 1. 安装，设置 2. 安顿，安置 3. 正式任命，任用"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 安装，设置 2. 安顿，安置 3. 正式任命，任用",
+        "phonetic": "ɪnˈstɔːl",
+        "example": "They will install the new windows next week.",
+        "example_translation": "他们下周将安装新窗户。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-013",
+          "row_index": 45,
+          "word": "install",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "安装，设置",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to fix equipment or furniture into position so it can be used; to put a new program onto a computer"
+          },
+          "example": "The technician installed a new security camera above the entrance.",
+          "translation": "技术人员在入口上方安装了一台新的监控摄像机。",
+          "source_file": "cet4.txt",
+          "source_line": 2041,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-018",
+          "row_index": 78,
+          "word": "install",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "(instal)安装,设置,安置;使就职,任命",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to fit equipment into position so it can be used"
+          },
+          "example": "They installed new lights in the hallway.",
+          "translation": "他们在走廊里安装了新灯。",
+          "source_file": "npee.txt",
+          "source_line": 2543,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-124",
+          "row_index": 99,
+          "word": "install",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 安装，设置 2. 安顿，安置 3. 正式任命，任用",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to put equipment or software in place and make it ready for use"
+          },
+          "example": "They will install the new windows next week.",
+          "translation": "他们下周将安装新窗户。",
+          "source_file": "tem.txt",
+          "source_line": 6299,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1192,
+        "word": "intuition",
+        "headword": "intuition",
+        "homograph": null,
+        "source_raw": "intuition [ˌɪntjuːˈɪʃən] h·直觉，直观"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "直觉，直观",
+        "phonetic": "ˌɪntjuˈɪʃn",
+        "example": "Her intuition told her that something was wrong.",
+        "example_translation": "她的直觉告诉她，事情有些不对劲。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-019",
+          "row_index": 38,
+          "word": "intuition",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "直觉,直观;凭直觉而知的事物",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the ability to know something from feelings rather than facts"
+          },
+          "example": "She trusted her intuition when choosing the route.",
+          "translation": "选择路线时，她相信了自己的直觉。",
+          "source_file": "npee.txt",
+          "source_line": 2603,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 49,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1196,
+        "word": "invariably",
+        "headword": "invariably",
+        "homograph": null,
+        "source_raw": "invariably [inˈvєәriәbli] adv. 不变化地，恒定地，始终如一地"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "不变化地，恒定地，始终如一地",
+        "phonetic": "ɪnˈveəriəbli",
+        "example": "He invariably arrives a few minutes early.",
+        "example_translation": "他总会提前几分钟到达。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-019",
+          "row_index": 42,
+          "word": "invariably",
+          "part_of_speech": "adverb",
+          "homograph": null,
+          "original_pos": "ad.",
+          "original_meaning": "不变地,永恒地,总是",
+          "selected_sense": {
+            "pos": "adverb",
+            "meaning": "always"
+          },
+          "example": "He invariably arrives a few minutes early.",
+          "translation": "他总是提前几分钟到。",
+          "source_file": "npee.txt",
+          "source_line": 2607,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 50,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1272,
+        "word": "loyalty",
+        "headword": "loyalty",
+        "homograph": null,
+        "source_raw": "loyalty [ˈlɔɪəltɪ] n. 忠实，忠贞"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "忠实，忠贞",
+        "phonetic": "ˈlɔɪəltɪ",
+        "example": "Her loyalty to her friends never changed.",
+        "example_translation": "她对朋友的忠诚从未改变。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-016",
+          "row_index": 17,
+          "word": "loyalty",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "忠诚，忠心",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the quality of being constant in your support of somebody or something"
+          },
+          "example": "Her loyalty to the team never wavered.",
+          "translation": "她对团队的忠诚从未动摇。",
+          "source_file": "cet4.txt",
+          "source_line": 2343,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "B",
+          "task_id": "npee-022",
+          "row_index": 11,
+          "word": "loyalty",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "忠诚,忠心",
+          "selected_sense": {
+            "meaning": "the quality of being faithful in your support of somebody or something",
+            "pos": "noun"
+          },
+          "example": "The team valued her loyalty and hard work.",
+          "translation": "团队看重她的忠诚和努力。",
+          "source_file": "npee.txt",
+          "source_line": 2880,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 4,
+          "word": "loyalty",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "忠实，忠贞",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "faithfulness or support for someone or something"
+          },
+          "example": "Her loyalty to her friends never changed.",
+          "translation": "她对朋友的忠诚从未改变。",
+          "source_file": "tem.txt",
+          "source_line": 7025,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 51,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1325,
+        "word": "merge",
+        "headword": "merge",
+        "homograph": null,
+        "source_raw": "merge [mɜːdʒ] v. (使)合并，(使)并入"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "(使)合并，(使)并入",
+        "phonetic": "mɜːdʒ",
+        "example": "The two companies plan to merge next year.",
+        "example_translation": "这两家公司计划明年合并。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-023",
+          "row_index": 37,
+          "word": "merge",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)结合,(使)合并,(使)合为一体",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to combine or make two or more things combine to form a single thing"
+          },
+          "example": "The two departments will merge next month.",
+          "translation": "这两个部门下个月将合并。",
+          "source_file": "npee.txt",
+          "source_line": 3007,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 6,
+          "word": "merge",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "(使)合并，(使)并入",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to combine or join together"
+          },
+          "example": "The two companies plan to merge next year.",
+          "translation": "这两家公司计划明年合并。",
+          "source_file": "tem.txt",
+          "source_line": 7344,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 52,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1374,
+        "word": "multiply",
+        "headword": "multiply",
+        "homograph": null,
+        "source_raw": "multiply [ˈmʌltɪplaɪ] v. 1. 使相乘 2. 增多 3. 繁殖，增殖"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 使相乘 2. 增多 3. 繁殖，增殖",
+        "phonetic": "ˈmʌltɪplaɪ",
+        "example": "Multiply the number by three.",
+        "example_translation": "把这个数乘以三。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "A",
+          "task_id": "cet4-018",
+          "row_index": 19,
+          "word": "multiply",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vt.",
+          "original_meaning": "使增加；乘",
+          "selected_sense": {
+            "pos": "vt.",
+            "meaning": "v. 乘"
+          },
+          "example": "Multiply six by four to get twenty-four.",
+          "translation": "六乘以四等于二十四。",
+          "source_file": "cet4.txt",
+          "source_line": 2563,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 8,
+          "word": "multiply",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "1. 使相乘 2. 增多 3. 繁殖，增殖",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "相乘；计算两个数的乘积"
+          },
+          "example": "Multiply the number by three.",
+          "translation": "把这个数乘以三。",
+          "source_file": "tem.txt",
+          "source_line": 7632,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 53,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1549,
+        "word": "plateau",
+        "headword": "plateau",
+        "homograph": null,
+        "source_raw": "plateau / ˈplætəʊ n. 高原"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "高原",
+        "phonetic": "ˈplætəʊ",
+        "example": "The road climbs slowly towards the plateau.",
+        "example_translation": "这条路缓缓爬升，通向高原。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-029",
+          "row_index": 40,
+          "word": "plateau",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "高原,平稳状态[时期]",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "an area of fairly high flat land"
+          },
+          "example": "The road climbs slowly onto the plateau.",
+          "translation": "这条路缓缓爬上高原。",
+          "source_file": "npee.txt",
+          "source_line": 3613,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 54,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1687,
+        "word": "radius",
+        "headword": "radius",
+        "homograph": null,
+        "source_raw": "radius [ˈreɪdɪəs] n. 1. 半径  2. 半径范围"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 半径  2. 半径范围",
+        "phonetic": "ˈreɪdɪəs",
+        "example": "Draw a circle with a radius of five centimeters.",
+        "example_translation": "画一个半径为五厘米的圆。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-032",
+          "row_index": 28,
+          "word": "radius",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "半径,半径范围,有效航程,范围,界限",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a straight line between the centre of a circle and any point on its edge"
+          },
+          "example": "The school is within a five-kilometre radius of the station.",
+          "translation": "学校位于车站五公里范围内。",
+          "source_file": "npee.txt",
+          "source_line": 3907,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 17,
+          "word": "radius",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 半径  2. 半径范围",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the distance from the centre of a circle to its edge"
+          },
+          "example": "Draw a circle with a radius of five centimeters.",
+          "translation": "画一个半径为五厘米的圆。",
+          "source_file": "tem.txt",
+          "source_line": 9111,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 55,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1735,
+        "word": "refreshment",
+        "headword": "refreshment",
+        "homograph": null,
+        "source_raw": "refreshment [rɪˈfreʃmənt] n. 1. 精神爽快，心旷神怡 2. (pl)点心，便餐"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 精神爽快，心旷神怡 2. (pl)点心，便餐",
+        "phonetic": "rɪˈfreʃmənt",
+        "example": "A glass of cold water provided welcome refreshment.",
+        "example_translation": "一杯冷水令人精神为之一振。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 16,
+          "word": "refreshment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "(pl.)点心,饮料;精力恢复,爽快",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a small amount of food or drink that is provided in a public place or at a meeting"
+          },
+          "example": "Light refreshments will be served after the lecture.",
+          "translation": "讲座结束后将提供简单茶点。",
+          "source_file": "npee.txt",
+          "source_line": 3997,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 18,
+          "word": "refreshment",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 精神爽快，心旷神怡 2. (pl)点心，便餐",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "点心和饮料（常用复数 refreshments）"
+          },
+          "example": "Light refreshments were served after the meeting.",
+          "translation": "会议结束后提供了简单的茶点。",
+          "source_file": "tem.txt",
+          "source_line": 9329,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 56,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1761,
+        "word": "relish",
+        "headword": "relish",
+        "homograph": null,
+        "source_raw": "relish [ˈrelɪʃ] n. 1. 风味，美味，开胃小菜，佐餐品 2. 喜好，兴趣"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 风味，美味，开胃小菜，佐餐品 2. 喜好，兴趣",
+        "phonetic": "ˈrelɪʃ",
+        "example": "She read the adventure story with great relish.",
+        "example_translation": "她津津有味地读着这篇冒险故事。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 54,
+          "word": "relish",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "美味,味道,调味品,食欲,乐趣 v.喜欢,品味",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a cold sauce made from vegetables or fruit that have been boiled and pickled"
+          },
+          "example": "The sandwich was served with a spicy relish.",
+          "translation": "三明治配了一种辣味调味酱。",
+          "source_file": "npee.txt",
+          "source_line": 4035,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 19,
+          "word": "relish",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 风味，美味，开胃小菜，佐餐品 2. 喜好，兴趣",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "乐趣；津津有味（with relish）"
+          },
+          "example": "She read the adventure story with great relish.",
+          "translation": "她津津有味地读着这篇冒险故事。",
+          "source_file": "tem.txt",
+          "source_line": 9400,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 57,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1765,
+        "word": "remainder",
+        "headword": "remainder",
+        "homograph": null,
+        "source_raw": "remainder [rɪˈmeɪndə] n. 剩余物，剩下的人或物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "剩余物，剩下的人或物",
+        "phonetic": "rɪˈmeɪndə",
+        "example": "She saved the remainder of the cake for tomorrow.",
+        "example_translation": "她把剩下的蛋糕留到了明天。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 58,
+          "word": "remainder",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "剩余物,剩下的;余数,余项",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "the part of something that is left after the other parts have been used, removed, etc."
+          },
+          "example": "She spent the remainder of the afternoon reading.",
+          "translation": "她把下午剩余的时间都用来读书。",
+          "source_file": "npee.txt",
+          "source_line": 4039,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 20,
+          "word": "remainder",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "剩余物，剩下的人或物",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "what is left after part has been used"
+          },
+          "example": "She saved the remainder of the cake for tomorrow.",
+          "translation": "她把剩下的蛋糕留到了明天。",
+          "source_file": "tem.txt",
+          "source_line": 9406,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 58,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1767,
+        "word": "remnant",
+        "headword": "remnant",
+        "homograph": null,
+        "source_raw": "remnant [ˈremnənt] n. 1. 剩余，残余 2. 零头布"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 剩余，残余 2. 零头布",
+        "phonetic": "ˈremnənt",
+        "example": "A remnant of the old wall still stands near the river.",
+        "example_translation": "河边仍矗立着一段旧墙的残迹。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-033",
+          "row_index": 64,
+          "word": "remnant",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "剩余(物),零料,遗迹[风] a.剩余的,残留的",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a part of something that remains after the rest of it has been used, removed, etc."
+          },
+          "example": "A remnant of the old wall still stands by the road.",
+          "translation": "路旁仍立着一段旧墙残垣。",
+          "source_file": "npee.txt",
+          "source_line": 4046,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 22,
+          "word": "remnant",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 剩余，残余 2. 零头布",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small piece left over from something larger"
+          },
+          "example": "A remnant of the old wall still stands near the river.",
+          "translation": "河边仍矗立着一段旧墙的残迹。",
+          "source_file": "tem.txt",
+          "source_line": 9420,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 59,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1798,
+        "word": "resume 1",
+        "headword": "resume",
+        "homograph": 1,
+        "source_raw": "resume [rɪˈzjuːm] v. 1. 重新开始，恢复 2. 重新占有，取回，收回"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 重新开始，恢复 2. 重新占有，取回，收回",
+        "phonetic": "rɪˈzjuːm",
+        "example": "The meeting will resume after a short break.",
+        "example_translation": "短暂休息后，会议将继续进行。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 60,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1799,
+        "word": "resume 2",
+        "headword": "resume",
+        "homograph": 2,
+        "source_raw": "resume [rɪˈzjuːm] n. 1. 摘要，概要 2. 履历，简历"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 摘要，概要 2. 履历，简历",
+        "phonetic": "ˈrezjuːmeɪ",
+        "example": "Please attach your resume to the application email.",
+        "example_translation": "请将你的简历附在申请邮件中。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P3-author-from-original",
+      "source_material": null,
+      "crossbook_review_options": [],
+      "needs_new_original_example": true,
+      "risk_flags": [],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "new-original-example-required"
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1823,
+        "word": "rival",
+        "headword": "rival",
+        "homograph": null,
+        "source_raw": "rival /ˈraɪvəl n. 竞争者，对手，敌手"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "竞争者，对手",
+        "phonetic": "ˈraɪvl",
+        "example": "Our strongest rival won the final match.",
+        "example_translation": "我们最强的对手赢得了决赛。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-034",
+          "row_index": 74,
+          "word": "rival",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "竞争者,对手 v.竞争,对抗 a.竞争的",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a person, company or thing that competes with another in sport, business, etc."
+          },
+          "example": "The two rivals met again in the final.",
+          "translation": "两位对手在决赛中再次相遇。",
+          "source_file": "npee.txt",
+          "source_line": 4158,
+          "worker_claim": "source-checked"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 62,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1894,
+        "word": "shrewd",
+        "headword": "shrewd",
+        "homograph": null,
+        "source_raw": "shrewd [ʃruːd] adj. 1. 明智的，精明的 2. 狡狯的，明辨的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 明智的，精明的 2. 狡狯的，明辨的",
+        "phonetic": "ʃruːd",
+        "example": "She made a shrewd decision to save the extra money.",
+        "example_translation": "她精明地决定把多余的钱存起来。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-037",
+          "row_index": 13,
+          "word": "shrewd",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "a.",
+          "original_meaning": "机灵的,敏锐的;精明的",
+          "selected_sense": {
+            "pos": "adjective",
+            "meaning": "able to judge people and situations well"
+          },
+          "example": "She made a shrewd investment decision.",
+          "translation": "她作出了一项精明的投资决定。",
+          "source_file": "npee.txt",
+          "source_line": 4399,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 26,
+          "word": "shrewd",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 明智的，精明的 2. 狡狯的，明辨的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "clever and practical in making decisions; shrewd or discerning"
+          },
+          "example": "She made a shrewd decision to save the extra money.",
+          "translation": "她精明地决定把多余的钱存起来。",
+          "source_file": "tem.txt",
+          "source_line": 10361,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 63,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1899,
+        "word": "shuttle",
+        "headword": "shuttle",
+        "homograph": null,
+        "source_raw": "shuttle [ʃʌtl] n. 1. (织布机的)梭 2. 定期的短程往返班机(车) || shuttle diplomacy穿梭外交 /shuttle service穿梭营运(飞机、公共汽车的定期班次)  v. 穿梭般往返"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (织布机的)梭 2. 定期的短程往返班机(车) || shuttle diplomacy穿梭外交 /shuttle service穿梭营运(飞机、公共汽车的定期班次)  v. 穿梭般往返",
+        "phonetic": "ʃʌtl",
+        "example": "The airport shuttle leaves every fifteen minutes.",
+        "example_translation": "机场班车每十五分钟发一班。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-037",
+          "row_index": 18,
+          "word": "shuttle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "往返汽车/列车/飞机;穿梭 v.往返穿梭",
+          "selected_sense": {
+            "pos": "noun",
+            "meaning": "a bus, train or plane that travels regularly between two places"
+          },
+          "example": "A shuttle bus runs between the station and the airport.",
+          "translation": "接驳巴士往返于车站和机场之间。",
+          "source_file": "npee.txt",
+          "source_line": 4404,
+          "worker_claim": "source-checked"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 27,
+          "word": "shuttle",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (织布机的)梭 2. 定期的短程往返班机(车) || shuttle diplomacy穿梭外交 /shuttle service穿梭营运(飞机、公共汽车的定期班次)  v. 穿梭般往返",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "在两地之间按固定班次往返的交通工具（班车、班机等）"
+          },
+          "example": "The airport shuttle leaves every fifteen minutes.",
+          "translation": "机场班车每十五分钟发一班。",
+          "source_file": "tem.txt",
+          "source_line": 10380,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 64,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 1935,
+        "word": "sneak",
+        "headword": "sneak",
+        "homograph": null,
+        "source_raw": "sneak [sniːk] v. 潜行，溜走 n. 怯懦鬼祟的人"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "潜行，溜走 n. 怯懦鬼祟的人",
+        "phonetic": "sniːk",
+        "example": "He tried to sneak out without waking anyone.",
+        "example_translation": "他试着偷偷溜出去，不惊醒任何人。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-038",
+          "row_index": 13,
+          "word": "sneak",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "vi.",
+          "original_meaning": "偷偷地走,溜vt.偷偷地做(或拿、吃)",
+          "selected_sense": {
+            "pos": "verb",
+            "meaning": "to go somewhere secretly, trying to avoid being seen"
+          },
+          "example": "He sneaked out before the meeting ended.",
+          "translation": "会议结束前他悄悄溜了出去。",
+          "source_file": "npee.txt",
+          "source_line": 4499,
+          "worker_claim": "needs-review"
+        },
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 28,
+          "word": "sneak",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "潜行，溜走 n. 怯懦鬼祟的人",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "偷偷地、尽量不被发现地行走或进入某处"
+          },
+          "example": "He tried to sneak out without waking anyone.",
+          "translation": "他试着偷偷溜出去，不惊醒任何人。",
+          "source_file": "tem.txt",
+          "source_line": 10597,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 65,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2081,
+        "word": "tariff",
+        "headword": "tariff",
+        "homograph": null,
+        "source_raw": "tariff [ˈtærɪf] n. 1. 关税 2. (酒店、餐馆等的)价目表"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 关税 2. (酒店、餐馆等的)价目表",
+        "phonetic": "ˈtærɪf",
+        "example": "The government introduced a tariff on imported steel.",
+        "example_translation": "政府对进口钢材征收了关税。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "B",
+          "task_id": "npee-041",
+          "row_index": 90,
+          "word": "tariff",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "关税,税率;(旅馆,饭店等)价目表,收费表",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "关税"
+          },
+          "example": "The government introduced a tariff on imported steel.",
+          "translation": "政府对进口钢材征收了关税。",
+          "source_file": "npee.txt",
+          "source_line": 4877,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 66,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2102,
+        "word": "theft",
+        "headword": "theft",
+        "homograph": null,
+        "source_raw": "theft [θeft] n. 偷窃，盗窃"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "偷窃，盗窃",
+        "phonetic": "θeft",
+        "example": "She reported the theft of her bicycle.",
+        "example_translation": "她报案说自己的自行车被盗了。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 30,
+          "word": "theft",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "偷窃，盗窃",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the act of stealing"
+          },
+          "example": "She reported the theft of her bicycle.",
+          "translation": "她报案说自己的自行车被盗了。",
+          "source_file": "tem.txt",
+          "source_line": 11558,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 67,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2122,
+        "word": "token",
+        "headword": "token",
+        "homograph": null,
+        "source_raw": "token [ˈtəʊkən] n. 1. 标记，象征 2. 代币，辅币 3. 代价券，礼券"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 标记，象征 2. 代币，辅币 3. 代价券，礼券",
+        "phonetic": "ˈtəʊkən",
+        "example": "Please accept this gift as a token of our gratitude.",
+        "example_translation": "请收下这份礼物，以表我们的谢意。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 31,
+          "word": "token",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 标记，象征 2. 代币，辅币 3. 代价券，礼券",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "a small object or mark representing something; a coin or voucher"
+          },
+          "example": "Please accept this gift as a token of our gratitude.",
+          "translation": "请收下这份礼物，以表我们的谢意。",
+          "source_file": "tem.txt",
+          "source_line": 11724,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 68,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2178,
+        "word": "unity",
+        "headword": "unity",
+        "homograph": null,
+        "source_raw": "unity [ˈjuːniti] n. 1. 一致，联合 2. 单一(性)，唯一(性)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 团结，一致 2. 统一，整体；单一性",
+        "phonetic": "ˈjuːnəti",
+        "example": "A shared goal gave the team a sense of unity.",
+        "example_translation": "共同的目标让团队产生了团结感。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-109",
+          "row_index": 91,
+          "word": "unity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. 单一，J准一，统一，一体 2. 统一的事物，统一体，整体 3. (目标、思想、情感等)和谐，协调，和睦，团结，一致",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the state of being joined together; a single whole; agreement or harmony"
+          },
+          "example": "The shared project brought a sense of unity to the class.",
+          "translation": "这个共同项目让全班更有凝聚力。",
+          "source_file": "tem.txt",
+          "source_line": 12140,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 69,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2203,
+        "word": "velocity",
+        "headword": "velocity",
+        "homograph": null,
+        "source_raw": "velocity [vɪˈlɒsətɪ] n. 1. (物理学中的)速度 2. 迅速，快速"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. (物理学中的)速度 2. 迅速，快速",
+        "phonetic": "vɪˈlɒsətɪ",
+        "example": "The velocity of the train increased steadily.",
+        "example_translation": "火车的速度稳步提高。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 34,
+          "word": "velocity",
+          "part_of_speech": "noun",
+          "homograph": null,
+          "original_pos": "n.",
+          "original_meaning": "1. (物理学中的)速度 2. 迅速，快速",
+          "selected_sense": {
+            "pos": "n.",
+            "meaning": "the speed of an object in a particular direction"
+          },
+          "example": "The velocity of the train increased steadily.",
+          "translation": "火车的速度稳步提高。",
+          "source_file": "tem.txt",
+          "source_line": 12321,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 70,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2206,
+        "word": "ventilate",
+        "headword": "ventilate",
+        "homograph": null,
+        "source_raw": "ventilate [ˈventɪleɪt] v. 使通风"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "使通风",
+        "phonetic": "ˈventɪleɪt",
+        "example": "Open the windows to ventilate the room.",
+        "example_translation": "打开窗户，让房间通风。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 35,
+          "word": "ventilate",
+          "part_of_speech": "verb",
+          "homograph": null,
+          "original_pos": "v.",
+          "original_meaning": "使通风",
+          "selected_sense": {
+            "pos": "v.",
+            "meaning": "to provide fresh air in an enclosed space"
+          },
+          "example": "Open the windows to ventilate the room.",
+          "translation": "打开窗户，让房间通风。",
+          "source_file": "tem.txt",
+          "source_line": 12333,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    },
+    {
+      "row_index": 71,
+      "identity": {
+        "source_file": "cet6.txt",
+        "source_line": 2231,
+        "word": "vital",
+        "headword": "vital",
+        "homograph": null,
+        "source_raw": "vital [ˈvaɪtl] adj. 1. 生命的，与生命有关的 2. 紧要的，关系重大的 3. 致命的 4. 生气勃勃的"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "1. 生命的，与生命有关的 2. 紧要的，关系重大的 3. 致命的 4. 生气勃勃的",
+        "phonetic": "ˈvaɪtl",
+        "example": "Clean water is vital to human health.",
+        "example_translation": "洁净的水对人类健康至关重要。"
+      },
+      "source_entry": null,
+      "headword": null,
+      "pdf_page": null,
+      "handling": null,
+      "priority": "P2-crossbook-sense-check-required",
+      "source_material": null,
+      "crossbook_review_options": [
+        {
+          "worker": "C",
+          "task_id": "tem-125",
+          "row_index": 37,
+          "word": "vital",
+          "part_of_speech": "adjective",
+          "homograph": null,
+          "original_pos": "adj.",
+          "original_meaning": "1. 生命的，与生命有关的 2. 紧要的，关系重大的 3. 致命的 4. 生气勃勃的",
+          "selected_sense": {
+            "pos": "adj.",
+            "meaning": "necessary or extremely important; relating to life"
+          },
+          "example": "Clean water is vital to human health.",
+          "translation": "洁净的水对人类健康至关重要。",
+          "source_file": "tem.txt",
+          "source_line": 12450,
+          "worker_claim": "needs-review"
+        }
+      ],
+      "needs_new_original_example": false,
+      "risk_flags": [
+        "cross-book-example-not-sense-verified",
+        "same-spelling-and-POS-not-equal-sense"
+      ],
+      "verification": "needs-review",
+      "human_approved": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "status": "candidate-requires-sense-check"
+    }
+  ]
+}
