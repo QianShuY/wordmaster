@@ -47,7 +47,7 @@ function prepare(root=ROOT,{apply=false}={}) {
     remaining_to_author_or_source:ledger.result.length,
     exact_source_candidate_rows:0,crossbook_candidate_rows:0,
     rows_with_any_bilingual_candidate:0,rows_requiring_new_original_example:0,
-    task_sidecars:0,already_existing:0,new_sidecars:0,
+    task_sidecars:0,already_existing:0,new_sidecars:0,stale_existing_sidecars:0,
     independent_dictionary_reviews_performed:0,approved:0,installed:0,
     workflow:'full-source-coverage-for-human-drafting-not-example-completion'};
   for(const m of manifest.values()){
@@ -107,12 +107,17 @@ function prepare(root=ROOT,{apply=false}={}) {
     };
     const filename=path.join(results,'remaining-review-material.json');
     const body=JSON.stringify(doc,null,2)+'\n';
-    if(fs.existsSync(filename)){
-      if(fs.readFileSync(filename,'utf8')!==body)
-        throw Error('Existing review material differs, refuse overwrite '+filename);
-      stats.already_existing++;
+    const exists=fs.existsSync(filename);
+    if(exists){
+      if(fs.readFileSync(filename,'utf8')!==body){
+        // Earlier sidecars are immutable review snapshots. New donors from
+        // later worker drafts can change the live suggestion index; that is
+        // NOT permission to silently rewrite a human review artifact.
+        stats.stale_existing_sidecars++;
+        if(apply)throw Error('Existing review material differs, refuse overwrite '+filename);
+      }else stats.already_existing++;
     }else stats.new_sidecars++;
-    planned.push({filename,body,exists:fs.existsSync(filename)});
+    planned.push({filename,body,exists});
     stats.task_sidecars++;
   }
   if(stats.rows_with_any_bilingual_candidate+stats.rows_requiring_new_original_example
