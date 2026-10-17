@@ -3,6 +3,8 @@
 // No model output generation, no approval, no seed import and no DB access.
 const fs = require('node:fs');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
+const { isDeepStrictEqual } = require('node:util');
 const { ownerOf } = require('./audit-model-evidence');
 const root = path.resolve(__dirname, '..');
 const tasksRoot = path.join(root, 'docs/model-tasks-20261015');
@@ -27,11 +29,29 @@ function plan(rootDir = root, { save = true } = {}) {
     if (!workerId) continue;
     const worker = plan.workers[workerId];
     const inputPath = path.join(inputRoot, item.file);
-    const input = JSON.parse(fs.readFileSync(inputPath, 'utf8'));
+    const inputBytes = fs.readFileSync(inputPath);
+    if (createHash('sha256').update(inputBytes).digest('hex') !== item.sha256)
+      throw Error('Task input SHA256 mismatch: ' + item.task_id);
+    const input = JSON.parse(inputBytes.toString('utf8'));
+    if (input.task_id !== item.task_id || !Array.isArray(input.entries)
+      || input.entries.length !== item.rows) throw Error('Invalid task input: ' + item.task_id);
     const outputPath = path.join(outputRoot, 'worker-' + workerId, item.task_id, 'result.json');
-    const entries = fs.existsSync(outputPath)
-      ? JSON.parse(fs.readFileSync(outputPath, 'utf8')).entries : [];
-    if (!Array.isArray(entries) || entries.length > item.rows) throw Error('Invalid task prefix: ' + item.task_id);
+    const result = fs.existsSync(outputPath)
+      ? JSON.parse(fs.readFileSync(outputPath, 'utf8')) : null;
+    if (result && (result.task_id !== item.task_id || result.input_sha256 !== item.sha256
+      || result.status !== 'proposal')) throw Error('Task result metadata mismatch: ' + item.task_id);
+    const entries = result ? result.entries : [];
+    if (!Array.isArray(entries) || entries.length > item.rows)
+      throw Error('Invalid task prefix length: ' + item.task_id);
+    for (let i = 0; i < entries.length; i++) {
+      const source = input.entries[i];
+      const identity = source?.identity || Object.fromEntries(
+        ['source_entry', 'headword', 'pdf_page', 'handling', 'accepted_spellings']
+          .map(k => [k, source?.[k]]));
+      if (!isDeepStrictEqual(entries[i]?.identity, identity)
+        || !isDeepStrictEqual(entries[i]?.original, source?.current ?? null))
+        throw Error('Task prefix identity/original mismatch: ' + item.task_id + ':' + i);
+    }
     if (entries.length < item.rows) worker.draft_next.push({
       task_id: item.task_id,
       next_index: entries.length,
