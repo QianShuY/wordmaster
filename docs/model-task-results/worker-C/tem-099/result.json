@@ -1973,17 +1973,26 @@
       },
       "selected_sense": {
         "pos": "n.",
-        "meaning": "to hit; a work stoppage by employees; to make an impression"
+        "meaning": "工人因工资或工作条件争议而集体停工的时期"
       },
       "proposed": {
         "pos": "n.",
         "meaning": "1. 罢工 2. 攻击(指飞机的空袭) || be on strike罢工 /go on strike继续罢工 v. 1. 打，击，敲 2. 攻击，冲击 3. 罢工 4. 给…以印象，使(人)感到 5. (使)发声，(使)鸣，(使)响",
         "phonetic": null,
-        "example": "The workers voted to strike for safer conditions.",
-        "example_translation": "工人们投票决定罢工，争取更安全的条件。",
-        "teaching_note": ""
+        "example": "The teachers began a strike over pay.",
+        "example_translation": "教师们因薪酬问题开始罢工。",
+        "teaching_note": "名词 strike 表示一次罢工；本句不能用动词 to strike 代替名词例句。原条目还含空袭义和多个动词义，暂不视为全义项审核完成。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/strike_2",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "workers stopping work in a dispute over pay or conditions",
+          "checked_uk_ipa": "straɪk",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
@@ -1996,6 +2005,10 @@
         {
           "code": "phonetic-candidate",
           "message": "strike 原音标“straik”疑为错误拼写，拟按读音提供音标待核实。"
+        },
+        {
+          "code": "independent-review-pending",
+          "message": "原有动词例句与名词词性冲突，已纠正为名词例句；动词义、空袭义、相关搭配、原IPA仍需独立全量审校。"
         }
       ],
       "change_reason": "补充原创例句并保留原词性和现有完整释义；词典义项及英式音标待核实。",
@@ -4145,7 +4158,7 @@
       },
       "selected_sense": {
         "pos": "adj.",
-        "meaning": "based on personal feelings or opinions rather than facts"
+        "meaning": "依据个人观点而非客观事实的；主观的"
       },
       "proposed": {
         "pos": "adj.",
@@ -4153,9 +4166,18 @@
         "phonetic": null,
         "example": "The review offers a subjective view of the performance.",
         "example_translation": "这篇评论提供了对这场演出的主观看法。",
-        "teaching_note": ""
+        "teaching_note": "牛津原词典同时列有个人观点、存在于意识中的思想感受，以及语法中的主格用法。源中文义项2缺右括号，原文不改，列为待修订字段。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/subjective",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "checked_sense": "based on personal opinions rather than facts; existing in a person's mind; grammatical subjective case",
+          "checked_uk_ipa": "səbˈdʒektɪv",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
@@ -4168,6 +4190,10 @@
         {
           "code": "source-typo-candidate",
           "message": "subjective 原释义末尾括号未闭合，疑为输入格式问题，暂原样保留待主代理核对。"
+        },
+        {
+          "code": "source-punctuation",
+          "message": "源义项2中文括号未闭合；此条目不直接覆写原始释义，建议后续以白名单补丁修复。"
         }
       ],
       "change_reason": "补充原创例句并保留原词性和现有完整释义；词典义项及英式音标待核实。",
