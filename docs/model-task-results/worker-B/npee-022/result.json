@@ -1609,16 +1609,16 @@
     },
     {
       "selected_sense": {
-        "meaning": null,
-        "pos": ""
+        "pos": "noun",
+        "meaning": "n. （文学用语）未婚的年轻女子"
       },
       "proposed": {
-        "teaching_note": "",
-        "example": null,
+        "teaching_note": "maiden 的这一名词义带文学色彩，不宜直接当作现代对年轻女性的普通称呼；另一板球义项及形容词义需独立核实。",
+        "example": "The old ballad tells of a maiden waiting by the shore.",
         "pos": "n.",
         "meaning": "少女,处女 a.未婚的,纯洁的,无经验的",
         "phonetic": null,
-        "example_translation": null
+        "example_translation": "这首古老的民谣讲述了一位在海边等待的年轻未婚女子。"
       },
       "change_reason": "可访问词典证据未支持词库中的拼写、词性或英式读音，按任务要求保留待核字段，不猜测填补。",
       "identity": {
@@ -1640,9 +1640,22 @@
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
       "issues": [
-        "无法在可访问页面中核实 maiden 的名词义及该词条在本词库的词性组合；避免与 maiden voyage 等形容词搭配混并，释义、音标、例句待核。"
+        "无法在可访问页面中核实 maiden 的名词义及该词条在本词库的词性组合；避免与 maiden voyage 等形容词搭配混并，释义、音标、例句待核。",
+        {
+          "code": "partial-dictionary-review",
+          "message": "原词典已直接访问、例句词性核对，但原多义项与翻译未完整审定，禁止正式导入。"
+        }
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/maiden_1",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "literary unmarried girl or young woman; cricket over with no runs scored",
+          "checked_uk_ipa": "ˈmeɪdn",
+          "independent_primary_page_review": true
+        }
+      ]
     },
     {
       "selected_sense": {
@@ -1736,16 +1749,16 @@
     },
     {
       "selected_sense": {
-        "meaning": null,
-        "pos": ""
+        "pos": "noun",
+        "meaning": "n. 大陆，本土（相对于附近岛屿）"
       },
       "proposed": {
-        "teaching_note": "",
-        "example": null,
+        "teaching_note": "词典以 the mainland 收录名词义项，需核对词头与完整短语的展示及读音。",
+        "example": "The ferry connects the island with the mainland.",
         "pos": "n.",
         "meaning": "大陆,本土",
         "phonetic": null,
-        "example_translation": null
+        "example_translation": "渡轮将这座岛屿与大陆连接起来。"
       },
       "change_reason": "可访问词典证据未支持词库中的拼写、词性或英式读音，按任务要求保留待核字段，不猜测填补。",
       "identity": {
@@ -1767,9 +1780,22 @@
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
       "issues": [
-        "访问到的 Oxford 词条页面分类为形容词，未能支持输入主词性的名词义；不能用该页替代名词证据，待主代理复核词头分类。"
+        "访问到的 Oxford 词条页面分类为形容词，未能支持输入主词性的名词义；不能用该页替代名词证据，待主代理复核词头分类。",
+        {
+          "code": "partial-dictionary-review",
+          "message": "原词典已直接访问、例句词性核对，但原多义项与翻译未完整审定，禁止正式导入。"
+        }
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/the-mainland",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "the main area of land of a country or region excluding nearby islands",
+          "checked_uk_ipa": "ˈmeɪnlənd",
+          "independent_primary_page_review": true
+        }
+      ]
     },
     {
       "proposed": {

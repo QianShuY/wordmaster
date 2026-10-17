@@ -3591,16 +3591,28 @@
         "example": "",
         "example_translation": ""
       },
-      "selected_sense": null,
+      "selected_sense": {
+        "pos": "v.",
+        "meaning": "v. 使表面起皱"
+      },
       "proposed": {
         "pos": "v.",
         "meaning": "1. 使变皱，弄皱 2. 滋扰，惹怒",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "A light breeze ruffled the surface of the pond.",
+        "example_translation": "一阵微风吹皱了池塘的水面。",
+        "teaching_note": "原创例句针对指定词性和义项；来源页面已直接核对，但原文其他义项和中译尚未全部独立验收。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ruffle_1",
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_sense": "disturb a smooth surface; upset or annoy someone",
+          "checked_uk_ipa": "ˈrʌfl",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
@@ -3609,6 +3621,10 @@
         {
           "code": "sense-review",
           "message": "原词条还含其他编号义项或词性；本轮未能逐项核对，主代理需审核完整释义。"
+        },
+        {
+          "code": "independent-review-pending",
+          "message": "已补双语例句并核对原词典所选义项；保留待审核状态，禁止自动并入正式词库。"
         }
       ],
       "change_reason": "源词头与释义疑似错配，需主代理核实后再确定义项和例句。",

@@ -151,21 +151,34 @@
       "external_human_review": false,
       "change_reason": "词典证据或词性范围不足，按任务要求将条目保留待核字段。",
       "full_dictionary_senses_reviewed": false,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/meantime_1",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "in the meantime: in the period between two events; for the meantime: temporarily",
+          "checked_uk_ipa": "ˈmiːntaɪm",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
-        "未能取得可核实的 Oxford meantime 词条页面；meantime 常见于 in the meantime，词性和英式音标留待主代理核实。"
+        "未能取得可核实的 Oxford meantime 词条页面；meantime 常见于 in the meantime，词性和英式音标留待主代理核实。",
+        {
+          "code": "partial-dictionary-review",
+          "message": "原词典已直接访问、例句词性核对，但原多义项与翻译未完整审定，禁止正式导入。"
+        }
       ],
       "proposed": {
-        "example": null,
+        "example": "The repairs will take an hour; in the meantime, we can prepare the next room.",
         "pos": "n.",
-        "teaching_note": "",
+        "teaching_note": "本例是固定短语 in the meantime，并非单独将 meantime 用作任意副词；源旧写法‘ad.同时’另待确认。",
         "phonetic": null,
-        "example_translation": null,
+        "example_translation": "维修需要一个小时；与此同时，我们可以准备下一间房间。",
         "meaning": "(meanwhile)其间,其时 ad.同时,当时"
       },
       "selected_sense": {
-        "meaning": null,
-        "pos": ""
+        "pos": "noun",
+        "meaning": "n. 期间；其间（用于 in the meantime）"
       },
       "original": {
         "pos": "n.",
@@ -503,21 +516,34 @@
       "external_human_review": false,
       "change_reason": "词典证据或词性范围不足，按任务要求将条目保留待核字段。",
       "full_dictionary_senses_reviewed": false,
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/medical_1",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "checked_sense": "related to illness/injury and treatment; nonsurgical treatment",
+          "checked_uk_ipa": "ˈmedɪkl",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
-        "无法取得完整的 Oxford medical 词条页面内容和英式 IPA；本条保留待核，不凭一般知识补证据。"
+        "无法取得完整的 Oxford medical 词条页面内容和英式 IPA；本条保留待核，不凭一般知识补证据。",
+        {
+          "code": "partial-dictionary-review",
+          "message": "原词典已直接访问、例句词性核对，但原多义项与翻译未完整审定，禁止正式导入。"
+        }
       ],
       "proposed": {
-        "example": null,
+        "example": "The village urgently needs better medical care.",
         "pos": "a.",
-        "teaching_note": "",
+        "teaching_note": "牛津词典另有与非手术治疗相关的义项；本句展示常见的医疗相关用法。",
         "phonetic": null,
-        "example_translation": null,
+        "example_translation": "这个村庄迫切需要更好的医疗服务。",
         "meaning": "医学的,医疗的,医药的;内科的"
       },
       "selected_sense": {
-        "meaning": null,
-        "pos": ""
+        "pos": "adjective",
+        "meaning": "a. 医疗的；医学的"
       },
       "original": {
         "pos": "a.",
