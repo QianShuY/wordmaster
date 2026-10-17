@@ -18,7 +18,7 @@ function fixture(t) {
   const entries = [
     { identity: { source_file: 'cet4.txt', source_line: 10, word: 'light' },
       current: { pos: 'n.', meaning: '光', phonetic: 'laɪt', example: '', example_translation: '' } },
-    { identity: { source_file: 'cet4.txt', source_line: 11, word: 'run' },
+    { identity: { source_file: 'cet4.txt', source_line: 11, word: 'run', source_raw: 'run [rʌn] v.跑' },
       current: { pos: 'v.', meaning: '跑', phonetic: 'rʌn', example: '', example_translation: '' } },
     { identity: { source_file: 'cet4.txt', source_line: 12, word: 'kind' },
       current: { pos: 'n.', meaning: '种类', phonetic: 'kaɪnd', example: '', example_translation: '' } },
@@ -57,13 +57,45 @@ test('bulk exports all draft and review items in one call without editing worker
   assert.equal(summary.installed, 0);
   assert.equal(summary.api_keys_required, 0);
   assert.equal(summary.packets, 3);
+  assert.equal(summary.undrafted_candidate_coverage.any_material_rows, 0);
   assert.equal(packets.filter(p => p.stage === 'draft').length, 2);
   assert.equal(packets.filter(p => p.stage === 'review').length, 1);
   const review = packets.find(p => p.stage === 'review').records[0];
   assert.ok(review.risk_flags.includes('worker-source-claim-not-independent-proof'));
+  const drafts = packets.filter(p => p.stage === 'draft').flatMap(p => p.records);
+  assert.ok(drafts.every(row => row.review_material.status === 'unverified-candidate-not-approved'));
+  assert.ok(drafts.every(row => row.hint_priority === 'P3-author-from-original'));
   assert.equal(review.identity.word, 'light');
   assert.deepEqual(fs.readFileSync(f.resultFile), before);
   assert.ok(fs.existsSync(path.join(outDir, 'summary.json')));
+});
+
+test('bulk packets carry source-keyed example with provenance, not an approval', t => {
+  const f = fixture(t);
+  const seedDir = path.join(f.dir, 'app/seed');
+  fs.mkdirSync(seedDir, { recursive: true });
+  fs.writeFileSync(path.join(seedDir, 'examples-common-a-reviewed-20261014.json'),
+    JSON.stringify({ examples: [{
+      source_file: 'cet4.txt', source_line: 11, source_raw: 'run [rʌn] v.跑',
+      word: 'run', pos: 'v.', meaning: '跑',
+      text: 'They run together every morning.', translation: '他们每天早晨一起跑步。',
+      authorship: 'moci-original', review_status: 'sense-reviewed',
+      reviewed_selected_meaning: '跑',
+    }] }));
+  const { summary, packets } = exportBulk(f.dir, { save: false, shardRows: 3 });
+  assert.equal(summary.undrafted_candidate_coverage.exact_source_rows, 1);
+  assert.equal(summary.undrafted_candidate_coverage.any_material_rows, 1);
+  assert.equal(summary.undrafted_candidate_coverage.original_example_needed, 1);
+  const draft = packets.find(p => p.stage === 'draft').records;
+  assert.equal(draft[0].identity.word, 'run', 'exact candidate gets first review slot');
+  assert.equal(draft[0].hint_priority, 'P1-exact-source-unverified');
+  assert.equal(draft[0].review_material.exact_source_candidate.suggested.example,
+    'They run together every morning.');
+  assert.ok(draft[0].review_material.exact_source_candidate.provenance[0]
+    .includes('examples-common-a-reviewed'));
+  assert.equal(draft[0].review_material.status, 'unverified-candidate-not-approved');
+  assert.equal(summary.accepted, 0);
+  assert.equal(summary.installed, 0);
 });
 
 test('bulk refuses altered historical results before exporting any packets', t => {
@@ -81,6 +113,15 @@ test('bulk can plan the entire repository with no API key or database access', (
   assert.equal(summary.rows_assigned, 26612);
   assert.equal(summary.rows_needing_draft + summary.existing_proposals, 26612);
   assert.ok(summary.rows_needing_draft > 0);
+  assert.equal(summary.undrafted_candidate_coverage.exact_source_rows, 1640);
+  assert.ok(summary.undrafted_candidate_coverage.crossbook_option_rows >= 8000);
+  assert.equal(summary.undrafted_candidate_coverage.any_material_rows
+    + summary.undrafted_candidate_coverage.original_example_needed,
+    summary.rows_needing_draft);
+  const drafts = packets.filter(p => p.stage === 'draft').flatMap(p => p.records);
+  assert.equal(drafts.filter(x => x.review_material.exact_source_candidate).length, 1640);
+  assert.ok(drafts.every(x => x.review_material.status === 'unverified-candidate-not-approved'));
+  assert.ok(drafts.every(x => x.hint_priority && x.review_material));
   assert.ok(summary.existing_proposals >= 14739);
   assert.equal(summary.workers.C.pending_draft, 0);
   assert.equal(summary.accepted, 0);
