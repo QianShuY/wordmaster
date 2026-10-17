@@ -21,7 +21,7 @@ const records=[
   please:['The gift will please her very much.','这份礼物会让她非常高兴。','使高兴'],
   Portuguese:['She has been learning Portuguese for two years.','她学习葡萄牙语已经两年了。','葡萄牙语'],
   power:['The council used its power to protect the park.','委员会运用自己的权力保护公园。','权力'],
-  praise:['The coach offered praise after the team's improvement.','球队取得进步后，教练给予了赞扬。','赞扬（名词）'],
+  praise:['The coach offered praise after the team improved.','球队取得进步后，教练给予了赞扬。','赞扬（名词）'],
   pray:['They pray for peace every evening.','他们每晚都祈祷和平。','祈祷（动词）']
  }},
  {worker:'B',task:'npee-043',overrides:{
