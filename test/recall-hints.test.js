@@ -2,8 +2,8 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),Domain=require('../shared/domain');
 const source=fs.readFileSync(require.resolve('../static/app.js'),'utf8');
 function render({isNew=0,errors=0,stage=null,android=false}={}){
- const elements=new Map(),spoken=[];
- const $=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',value:'',isConnected:true,disabled:false,addEventListener(){},classList:{add(){},remove(){}},focus(){},setSelectionRange(){},querySelectorAll(){return [];}});return elements.get(key);};
+ const elements=new Map(),spoken=[],clicks=[],listeners=new Map();
+ const $=key=>{if(!elements.has(key))elements.set(key,{innerHTML:'',value:'',isConnected:true,disabled:false,addEventListener(type,fn){listeners.set(key+':'+type,fn);},click(){clicks.push(key);},classList:{add(){},remove(){}},focus(){},setSelectionRange(){},querySelectorAll(){return [];}});return elements.get(key);};
  const context=vm.createContext({Set,Domain,IS_ANDROID_APP:android,$,esc:String,wordAnswer:w=>w.word,wordHeadword:w=>w.word,wordSpeech:w=>w.word,
   wordPosMarkup:()=>'<span>n.</span>',wordMeaningMarkup:()=>'<p>考试</p>',speakerIconMarkup:'',speak:text=>spoken.push(text),bindTapAction(){},requestAnimationFrame(){},
   window:{requestAnimationFrame(){}},document:{activeElement:null,addEventListener(){}}});
@@ -11,7 +11,9 @@ function render({isNew=0,errors=0,stage=null,android=false}={}){
  vm.runInContext(source.slice(start,end)+';globalThis.study=Study;',context);
  const study=context.study;study.todayFlow=stage?{stage}:null;study.reinforcement={'1':{errors}};
  study.renderSpelling({id:1,word:'test',pos:'n.',meaning:'考试',is_new:isNew});
- return {spoken,markup:$('#studyStage').innerHTML,up(){study.keyHandler({key:'ArrowUp',target:{closest:()=>false},preventDefault(){}});}};
+ return {spoken,clicks,input:$('#spellInput'),markup:$('#studyStage').innerHTML,up(){study.keyHandler({key:'ArrowUp',target:{closest:()=>false},preventDefault(){}});},
+  type(value){$('#spellInput').value=value;$('#spellInput').selectionStart=value.length;listeners.get('#spellInput:input')();},
+  key(key,flags={}){let prevented=false;study.keyHandler({key,target:$('#spellInput'),preventDefault(){prevented=true;},...flags});return prevented;}};
 }
 test('old recall keeps automatic speech and initial letters hidden but permits requested audio hints',()=>{
  for(const options of [{stage:'review-spelling',isNew:1},{isNew:0},{isNew:1,errors:2}]){
@@ -20,6 +22,15 @@ test('old recall keeps automatic speech and initial letters hidden but permits r
  }
  const fresh=render({isNew:1});assert.equal(fresh.spoken.length,1);assert.ok(fresh.markup.includes('首字母 <b>t</b>'));fresh.up();assert.equal(fresh.spoken.length,2);
  const native=render({isNew:0,android:true});assert.equal(native.spoken.length,1);
+});
+
+test('partially typed focused input keeps audio and reveal shortcuts while preserving native editing and composition',()=>{
+ const x=render({stage:'review-spelling'});x.type('te');
+ assert.equal(x.key('ArrowUp'),true);assert.deepEqual(x.spoken,['test']);assert.equal(x.input.value,'te');assert.equal(x.input.selectionStart,2);
+ assert.equal(x.key('ArrowDown'),true);assert.deepEqual(x.clicks,['#spellGiveUp']);
+ for(const key of ['ArrowLeft','ArrowRight','Backspace','Delete','Enter'])assert.equal(x.key(key),false,key);
+ for(const flags of [{isComposing:true},{ctrlKey:true},{metaKey:true},{altKey:true},{shiftKey:true}])assert.equal(x.key('ArrowUp',flags),false);
+ assert.equal(x.spoken.length,1);assert.equal(x.input.value,'te');
 });
 test('desktop speech prefers a British voice, retains an available English fallback and ignores intentional cancellation errors',()=>{
  const make=voices=>{

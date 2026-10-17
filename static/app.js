@@ -1969,7 +1969,16 @@ const Study = {
     };
 
     this.keyHandler = (e) => {
-      if (e.target === spellInput || e.target.closest('button, input, textarea, select, [contenteditable="true"]')) return;
+      if (e.isComposing || state.composing || e.ctrlKey || e.altKey || e.metaKey) return;
+      if (e.target === spellInput) {
+        if (this.locked || state.done || e.shiftKey) return;
+        if (e.key === 'ArrowUp') { e.preventDefault(); speak(wordSpeech(w)); }
+        else if (e.key === 'ArrowDown') { e.preventDefault(); $('#spellGiveUp')?.click(); }
+        // Native text editing (left/right, selection, deletion and Enter) stays
+        // with the input; Enter is handled once by its own listener below.
+        return;
+      }
+      if (e.target.closest('button, input, textarea, select, [contenteditable="true"]')) return;
       if (this.locked || state.done) return;
       const k = e.key;
       if (k === 'Enter') { e.preventDefault(); submit(); return; }
@@ -2022,7 +2031,7 @@ const Study = {
 
     bindTapAction($('#spellSubmit'), submit);
     spellInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter') { e.preventDefault(); submit(); }
+      if (e.key === 'Enter' && !e.isComposing && !state.composing) { e.preventDefault(); submit(); }
     });
     bindTapAction($('#spellSpeak'), () => speak(wordSpeech(w)));
 
