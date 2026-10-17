@@ -591,20 +591,36 @@
         "example": "",
         "example_translation": ""
       },
-      "selected_sense": null,
+      "selected_sense": {
+        "pos": "adj.",
+        "meaning": "adj. 冷酷无情的"
+      },
       "proposed": {
         "pos": "adj.",
         "meaning": "残忍的，无情的",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "The ruthless leader refused to spare his opponents.",
+        "example_translation": "那位冷酷无情的领导者不肯宽恕他的对手。",
+        "teaching_note": "原创例句针对指定词性和义项；来源页面已直接核对，但原文其他义项和中译尚未全部独立验收。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/ruthless",
+          "accessed": true,
+          "checked_pos": "adjective",
+          "checked_sense": "hard and cruel; not caring if others are hurt",
+          "checked_uk_ipa": "ˈruːθləs",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
           "message": "未取得可访问且足以确认此词项所选义项、对应词性与英式音标的原始词典证据；当前释义和例句为待核实建议。"
+        },
+        {
+          "code": "independent-review-pending",
+          "message": "已补双语例句并核对原词典所选义项；保留待审核状态，禁止自动并入正式词库。"
         }
       ],
       "change_reason": "源词头与释义可能不匹配，需主代理确认后再编写例句。",
