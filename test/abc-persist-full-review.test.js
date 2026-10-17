@@ -55,6 +55,7 @@ test('refuses to overwrite a concurrent reviewer edit',t=>{
  const file=path.join(root,'docs/model-task-results/worker-A/cet4-001/remaining-review-material.json');
  fs.mkdirSync(path.dirname(file),{recursive:true});
  fs.writeFileSync(file,'{\"reviewer\":\"touched\"}\n');
+ assert.equal(prepare(root,{apply:false}).stale_existing_sidecars,1,'dry run only reports snapshot drift');
  assert.throws(()=>prepare(root,{apply:true}),/refuse overwrite/);
  assert.equal(fs.readFileSync(file,'utf8'),'{\"reviewer\":\"touched\"}\n');
 });
