@@ -1356,16 +1356,16 @@
         "example_translation": ""
       },
       "selected_sense": {
-        "pos": "noun",
-        "meaning": null
+        "pos": "noun (résumé variant)",
+        "meaning": "个人简历，美国英语可以写作 resume，也可写作 résumé"
       },
       "proposed": {
         "pos": "n.",
         "meaning": "个人简历；（v.）再继续，重新开始；再用，恢复",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "She attached her resume to the internship application.",
+        "example_translation": "她把个人简历附在了实习申请材料中。",
+        "teaching_note": "Merriam-Webster 官方词典明确列 resume 为名词 résumé 的拼写变体；resume（恢复、继续）动词读音与名词 résumé 不同。不得让名词拼写或读音自动覆盖动词。"
       },
       "evidence": [
         {
@@ -1381,10 +1381,23 @@
           "checked_sense": "a short written description of your education, qualifications and previous jobs that you send when you are applying for a job",
           "checked_uk_ipa": "ˈrezjuːmeɪ",
           "accessed": true
+        },
+        {
+          "url": "https://www.merriam-webster.com/dictionary/r%C3%A9sum%C3%A9",
+          "accessed": true,
+          "source_retrieval": "original-page-opened-2026-10-17",
+          "checked_pos": "noun (résumé variant)",
+          "checked_sense": "个人简历，美国英语可以写作 resume，也可写作 résumé",
+          "checked_uk_ipa": null,
+          "independent_primary_page_review": true
         }
       ],
       "issues": [
-        "resume（动词，继续）与 résumé（名词，简历）是不同读音和来源的词项；输入将二者并列，需主审拆分，暂不合并例句或音标。"
+        "resume（动词，继续）与 résumé（名词，简历）是不同读音和来源的词项；输入将二者并列，需主审拆分，暂不合并例句或音标。",
+        {
+          "code": "full-sense-approval-blocked",
+          "message": "separate noun résumé variant and resume verb pronunciation/meaning; requires homograph binding."
+        }
       ],
       "change_reason": "核对词典词性、义项和英式音标，并提供原创例句；未逐项核查的义项记入 issues。",
       "verification": "needs-review",
