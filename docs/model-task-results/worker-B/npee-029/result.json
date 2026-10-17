@@ -1164,18 +1164,35 @@
         "example": "",
         "example_translation": ""
       },
-      "selected_sense": null,
+      "selected_sense": {
+        "pos": "noun (material)",
+        "meaning": "黑色黏稠的焦油状防水材料"
+      },
       "proposed": {
         "pos": "n.",
         "meaning": "沥青；掷；（v.）用沥青覆盖；投掷，扔",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": ""
+        "example": "Workers used pitch to waterproof the wooden boat.",
+        "example_translation": "工人们用沥青给木船做防水处理。",
+        "teaching_note": "Merriam-Webster 官方词典将 pitch 的黑色树脂/沥青名词义，与投掷动词等分列词项；本句仅体现沥青义。禁止让沥青义例句替代投掷义。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.merriam-webster.com/dictionary/pitch",
+          "accessed": true,
+          "source_retrieval": "original-page-opened-2026-10-17",
+          "checked_pos": "noun (material)",
+          "checked_sense": "黑色黏稠的焦油状防水材料",
+          "checked_uk_ipa": null,
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
-        "现有词库将 pitch 的沥青义与投掷相关义合并；本轮查到的 Oxford pitch_1 页面对应运动场等其他义项，不能支持输入所选义，需主审区分同形词并确定来源。"
+        "现有词库将 pitch 的沥青义与投掷相关义合并；本轮查到的 Oxford pitch_1 页面对应运动场等其他义项，不能支持输入所选义，需主审区分同形词并确定来源。",
+        {
+          "code": "full-sense-approval-blocked",
+          "message": "homograph/sense split required; do not install one example against all senses."
+        }
       ],
       "change_reason": "无法将同形词义项与词库释义可靠对应，暂不编写例句或音标。",
       "verification": "needs-review",
