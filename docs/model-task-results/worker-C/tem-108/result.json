@@ -309,7 +309,7 @@
       },
       "selected_sense": {
         "pos": "v.",
-        "meaning": "to put something into a small space; to fold or gather fabric"
+        "meaning": "将某物塞入狭小处，或折起衣物/纸张边缘"
       },
       "proposed": {
         "pos": "v.",
@@ -317,9 +317,18 @@
         "phonetic": null,
         "example": "She tucked the map into her pocket.",
         "example_translation": "她把地图塞进了口袋。",
-        "teaching_note": ""
+        "teaching_note": "原例句表达塞入口袋，对应牛津动词义项2。源中文“打褶桐”疑似错字且牛津当前条目未对应此独立义项，原文保留待核对。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/tuck_1",
+          "accessed": true,
+          "checked_pos": "verb",
+          "checked_sense": "fold the edges of clothes or paper; put something into a small safe space; cover someone comfortably",
+          "checked_uk_ipa": "tʌk",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
@@ -328,6 +337,10 @@
         {
           "code": "source-typo-candidate",
           "message": "原释义末尾“打褶桐”疑为录入错误；暂保留原文并请主代理核对，不据此改写。"
+        },
+        {
+          "code": "unverified-third-sense",
+          "message": "牛津词典直接页面支持折边与塞入、盖严等动词用法；源“打褶桐”疑为源文本损坏，需其他权威来源独立确认。"
         }
       ],
       "change_reason": "补充原创例句并保留原词性和现有完整释义；词典义项及英式音标待核实。",
@@ -3709,17 +3722,26 @@
       },
       "selected_sense": {
         "pos": "adv.",
-        "meaning": "without being aware of what is happening; unexpectedly"
+        "meaning": "出乎意料地；未察觉地"
       },
       "proposed": {
         "pos": "adv.",
         "meaning": "吃惊地，未料到地",
         "phonetic": null,
-        "example": "The children came upon the deer unawares.",
-        "example_translation": "孩子们意外地撞见了那只鹿。",
-        "teaching_note": ""
+        "example": "The sudden announcement caught everyone unawares.",
+        "example_translation": "突如其来的公告让所有人措手不及。",
+        "teaching_note": "常见结构 catch/take somebody unawares（让某人猝不及防）；牛津另列正式用法“未察觉地”。源“吃惊地”不够准确，保留原文待白名单修订。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/unawares",
+          "accessed": true,
+          "checked_pos": "adverb",
+          "checked_sense": "when not expected; without noticing or realizing",
+          "checked_uk_ipa": "ˌʌnəˈweəz",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         {
           "code": "needs-review",
@@ -3732,6 +3754,10 @@
         {
           "code": "meaning-candidate",
           "message": "原中文释义“吃惊地”可能不对应 unawares 的常见用法；本例按“未察觉地、意外地”拟写，待词典核实后再决定修订。"
+        },
+        {
+          "code": "meaning-scope",
+          "message": "原“吃惊地”不适合直接作为 unawares 的常规副词替换译法；候选例句现明确匹配 unexpectedly 用法，完整中文字段仍待复核。"
         }
       ],
       "change_reason": "补充原创例句并保留原词性和现有完整释义；词典义项及英式音标待核实。",
