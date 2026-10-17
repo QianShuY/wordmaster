@@ -1,0 +1,56 @@
+name: Persist complete ABC review materials (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/persist-abc-full-review-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  persist_review_only:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out handoff branch without modifying main
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify worker source identities and data safety
+        run: npm test
+      - name: Save exact-source and cross-book review materials for every pending row
+        run: node scripts/persist-abc-full-review-material.js --apply
+      - name: Commit only explicitly unapproved review material
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- docs/model-task-results
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "Review materials are already present. No commit required."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/*/remaining-review-material.json|docs/model-task-results/worker-B/*/remaining-review-material.json|docs/model-task-results/worker-C/*/remaining-review-material.json)
+                ;;
+              *)
+                echo "Refusing to commit an unexpected file: $file" >&2
+                exit 1
+                ;;
+            esac
+          done <<< "$staged"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content(ABC): persist all pending bilingual review leads and genuine gaps"
+          git push origin HEAD:feat/moci-web-handoff-20261016
