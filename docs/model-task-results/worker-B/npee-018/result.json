@@ -2540,16 +2540,16 @@
         "example_translation": ""
       },
       "selected_sense": {
-        "pos": "a.",
-        "meaning": null
+        "pos": "noun",
+        "meaning": "新计划、倡议；主动性；首先行动的机会"
       },
       "proposed": {
         "pos": "a.",
         "meaning": "创始的,起始的 n.第一步,创始,主动精神",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": "所访问页面仅支持名词，未核实输入主词性的形容词义；例句与英式IPA留空待复核。"
+        "example": "The university launched an initiative to reduce waste.",
+        "example_translation": "这所大学发起了一项减少浪费的倡议。",
+        "teaching_note": "Merriam-Webster 官方词典确实收录 initiative 的形容词‘初步的’，但现代普通教学中名词义更常见。源主词性 a. 不擅自改，待确定能否保留稀见形容词并另立名词义项。"
       },
       "evidence": [
         {
@@ -2558,10 +2558,23 @@
           "checked_sense": "所访问页面仅核验名词“倡议/计划”，未支持输入形容词义",
           "checked_uk_ipa": "ɪˈnɪʃətɪv",
           "accessed": true
+        },
+        {
+          "url": "https://www.merriam-webster.com/dictionary/initiative",
+          "accessed": true,
+          "source_retrieval": "original-page-opened-2026-10-17",
+          "checked_pos": "noun",
+          "checked_sense": "新计划、倡议；主动性；首先行动的机会",
+          "checked_uk_ipa": null,
+          "independent_primary_page_review": true
         }
       ],
       "issues": [
-        "计划/倡议与主动精神为不同义项；输入形容词“创始的”较少用，需核实。"
+        "计划/倡议与主动精神为不同义项；输入形容词“创始的”较少用，需核实。",
+        {
+          "code": "full-sense-approval-blocked",
+          "message": "noun-example-with-source-adjective-pos; source dictionary supports both, do not import without POS mapping."
+        }
       ],
       "change_reason": "已访问Oxford词典initiative名词页，但未找到支持输入主词性“形容词”的义项；不擅自改词性或猜测英式音标，保留待主代理复核。",
       "verification": "needs-review",
