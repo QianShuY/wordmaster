@@ -31,6 +31,7 @@ jobs:
           node --check scripts/complete-next-abc-batches.js
           npm test
           node scripts/complete-next-abc-batches.js
+          node scripts/persist-abc-full-review-material.js
       - name: Create two 100-row review-only result sets
         run: node scripts/complete-next-abc-batches.js --apply
       - name: Test committed-shape results and source identities
