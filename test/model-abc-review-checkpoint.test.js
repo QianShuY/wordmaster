@@ -79,3 +79,14 @@ test('nine B lexical risk entries remain blocked from automated approval', () =>
     assert.notEqual(x.external_human_review, true);
   }
 });
+
+test('A 299 null issue placeholders are normalized without changing source identities', () => {
+  const progress = read('docs/model-task-results/worker-A/progress.json');
+  const tasks = ['cet4-014','cet4-015','cet4-016','cet4-017'];
+  for (const task of tasks) {
+    const rows = result('A', task).entries;
+    assert.equal(rows.filter(e => e.issues.some(i => i === null)).length, 0);
+    const actualIssueRows = rows.filter(e => e.issues.length).length;
+    assert.equal(progress.tasks.find(t => t.task_id === task).issue_count, actualIssueRows);
+  }
+});
