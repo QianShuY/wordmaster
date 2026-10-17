@@ -28,6 +28,7 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Verify code, old data and candidate previews before writing
         run: |
+          node --check scripts/complete-current-abc-batches.js
           npm test
           node scripts/complete-current-abc-batches.js
       - name: Create two 100-row review-only result sets
