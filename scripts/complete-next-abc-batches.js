@@ -45,7 +45,6 @@ const records=[
   twenty:['Twenty seats are still available.','还有二十个座位空着。','二十'],
   twin:['The sisters wore matching twin bracelets.','姐妹俩戴着一对相配的手链。','成双的（形容词）'],
   two:['We bought two tickets for the concert.','我们买了两张音乐会门票。','二'],
-  tramp:['The tramp of heavy boots echoed down the corridor.','沉重的脚步声在走廊里回响。','沉重的脚步声（名词）'],
   ultraviolet:['Ultraviolet light can damage unprotected skin.','紫外线可能损伤没有防护的皮肤。','紫外线的（形容词）'],
   underground:['The city opened a new underground car park.','这座城市开放了一座新的地下停车场。','地下的（形容词）'],
   underlying:['The study examines the underlying causes of the problem.','这项研究调查了问题背后的根本原因。','潜在的；根本的'],
