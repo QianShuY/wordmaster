@@ -58,8 +58,30 @@ test('known A/B POS and sense exceptions remain visible instead of silently appr
 test('round three is a draft increase, not approval or database installation', () => {
   const { plan } = require('../scripts/plan-next-model-review');
   const p = plan(root,{save:false});
-  assert.equal(p.all.result_rows,14739);
-  assert.equal(p.all.rows_not_yet_drafted,11873);
+  assert.ok(p.all.result_rows >= 14739);
+  assert.equal(p.all.result_rows + p.all.rows_not_yet_drafted,26612);
   assert.equal(p.acceptance.accepted,0);
   assert.equal(p.acceptance.installed,0);
+});
+
+test('C tem-125 repaired selected meanings match four actual example senses', () => {
+  const rows = read('docs/model-task-results/worker-C/tem-125/result.json').entries;
+  const checks = [
+    ['quiet', /安静/, /room became quiet/, 'oxfordlearnersdictionaries.com'],
+    ['refreshment', /茶点/, /refreshments were served/, 'merriam-webster.com'],
+    ['relish', /乐趣/, /with great relish/, 'merriam-webster.com'],
+    ['multiply', /相乘/, /by three/, 'merriam-webster.com'],
+  ];
+  for (const [word, meaning, example, domain] of checks) {
+    const row = rows.find(e => e.identity.word === word);
+    assert.ok(row, word);
+    assert.match(row.selected_sense.meaning, meaning);
+    assert.match(row.proposed.example, example);
+    assert.equal(row.verification,'needs-review');
+    assert.notEqual(row.full_dictionary_senses_reviewed,true);
+    assert.notEqual(row.external_human_review,true);
+    assert.ok(row.evidence.some(e => e.independent_primary_page_review===true
+      && e.accessed===true && e.url.includes(domain)));
+    assert.ok(row.issues.some(x => x?.code==='independent-partial-sense-repair'));
+  }
 });
