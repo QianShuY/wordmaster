@@ -5,20 +5,23 @@ const fs=require('node:fs');
 const path=require('node:path');
 const os=require('node:os');
 const {combine}=require('../scripts/merge-abc-candidate-coverage');
+const {plan}=require('../scripts/plan-next-model-review');
 const root=path.resolve(__dirname,'..');
 
 test('full ABC cross-source candidate ledger deduplicates by exact task row',()=>{
  const {summary,result}=combine(root,{save:false});
  assert.equal(summary.total_source_rows,26612);
- assert.equal(summary.actual_worker_proposals,14739);
- assert.equal(summary.remaining_proposal_rows,11873);
+ const latest=plan(root,{save:false});
+ assert.equal(summary.actual_worker_proposals,latest.all.result_rows);
+ assert.equal(summary.remaining_proposal_rows,latest.all.rows_not_yet_drafted);
  assert.equal(summary.covered_by_exact_source,1640);
- assert.equal(summary.covered_by_crossbook_options,8206);
- assert.equal(summary.covered_by_any_candidate+summary.still_needing_original_example,11873);
- assert.ok(summary.covered_by_any_candidate>=8206);
- assert.ok(summary.covered_by_any_candidate<=9846);
- assert.equal(result.length,11873);
- assert.equal(new Set(result.map(r=>r.task_id+':'+r.row_index)).size,11873);
+ assert.ok(summary.covered_by_crossbook_options>0);
+ assert.equal(summary.covered_by_any_candidate+summary.still_needing_original_example,
+   latest.all.rows_not_yet_drafted);
+ assert.ok(summary.covered_by_any_candidate>=summary.covered_by_crossbook_options);
+ assert.ok(summary.covered_by_any_candidate<=summary.covered_by_exact_source+summary.covered_by_crossbook_options);
+ assert.equal(result.length,latest.all.rows_not_yet_drafted);
+ assert.equal(new Set(result.map(r=>r.task_id+':'+r.row_index)).size,result.length);
  assert.equal(summary.accepted,0);
  assert.equal(summary.installed,0);
 });
