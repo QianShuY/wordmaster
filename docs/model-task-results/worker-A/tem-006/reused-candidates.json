@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-006",
+  "input_sha256": "a0d80fe351299fa6318f19e68e8663d84bfa4389cb39474e2b146205c8d7496a",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 95,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 872,
+        "word": "ball 1",
+        "headword": "ball",
+        "homograph": 1,
+        "source_raw": "ball 1 [bɔːl] n. 1. 球 2. 球状物"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 球 2. 球状物",
+        "phonetic": "bɔːl",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The ball rolled under the parked car.",
+        "example_translation": "球滚到了停着的汽车下面。",
+        "selected_meaning": "球"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

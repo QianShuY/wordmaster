@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-016",
+  "input_sha256": "a3f54f09b2f89015c0a57faf4abc4ea52af8db651c9b0bc344c009c7c1aa6874",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 92,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2260,
+        "word": "content 2",
+        "headword": "content",
+        "homograph": 2,
+        "source_raw": "content 2 [ˈkɒntent] n. 1. 容量，含量 2. 内容"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 容量，含量 2. 内容",
+        "phonetic": "ˈkɒntent",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "We discussed the content of the report before changing its title.",
+        "example_translation": "修改标题前，我们讨论了报告的内容。",
+        "selected_meaning": "内容"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

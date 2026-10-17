@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-005",
+  "input_sha256": "1215b17fe092e182777b05c388549a872f010030e05b133fcc125b6e0d6520aa",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 9,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 621,
+        "word": "arm 2",
+        "headword": "arm",
+        "homograph": 2,
+        "source_raw": "arm 2 [ɑːm] n. 1. 手臂 2. 手臂状的东西 || arm in arm手挽手地 /receive with open arms热情而高兴地欢迎"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 手臂 2. 手臂状的东西 || arm in arm手挽手地 /receive with open arms热情而高兴地欢迎",
+        "phonetic": "ɑːm",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "She carried the basket under one arm.",
+        "example_translation": "她把篮子夹在一条胳膊下面。",
+        "selected_meaning": "手臂"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

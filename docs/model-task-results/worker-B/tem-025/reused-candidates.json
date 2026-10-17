@@ -1,0 +1,85 @@
+{
+  "task_id": "tem-025",
+  "input_sha256": "d9d4ff1eb9f1c091c3c2a072436f63bf410cba2f02d086cf30d2b61a035f043d",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 22,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3322,
+        "word": "down 1",
+        "headword": "down",
+        "homograph": 1,
+        "source_raw": "*down 1 [daʊn] adv. 1. 向下，在下面 2. 往南方，在南方 3. 离开重要城市到农村(较小城镇)，往活动中心(商业区) 4. 表示减少(减弱),变稀(薄)  prep. 1. 往(在) …的下面 2. 沿，顺，到 3. …以来  adj. 1. 在下面的，在地上的，倒下的 2. 向下的，下行的 3. 完成的 4. 沮丧的，出故障的，落后的  v. 1. 击倒，战胜 2. (大口)吃下，喝下，放下 3. 下降，倒下 n. 下降，不幸，衰落"
+      },
+      "original": {
+        "pos": "adv.",
+        "meaning": "1. 向下，在下面 2. 往南方，在南方 3. 离开重要城市到农村(较小城镇)，往活动中心(商业区) 4. 表示减少(减弱),变稀(薄)  prep. 1. 往(在) …的下面 2. 沿，顺，到 3. …以来  adj. 1. 在下面的，在地上的，倒下的 2. 向下的，下行的 3. 完成的 4. 沮丧的，出故障的，落后的  v. 1. 击倒，战胜 2. (大口)吃下，喝下，放下 3. 下降，倒下 n. 下降，不幸，衰落",
+        "phonetic": "daʊn",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The rainwater flowed down into the narrow channel.",
+        "example_translation": "雨水向下流入狭窄的水渠。",
+        "selected_meaning": "向下"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    },
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3357,
+        "word": "draw 1",
+        "headword": "draw",
+        "homograph": 1,
+        "source_raw": "draw 1 [drɔː] v. 1. 画，描绘 2. 拉，拖，引导 3. 取出，吸引，吸取 4. 渐渐移动 5. 推断出 6. (比赛等)打成平局"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 画，描绘 2. 拉，拖，引导 3. 取出，吸引，吸取 4. 渐渐移动 5. 推断出 6. (比赛等)打成平局",
+        "phonetic": "drɔː",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "Can you draw a simple map showing the path to the river?",
+        "example_translation": "你能画一张标出河边路线的简图吗？",
+        "selected_meaning": "画；绘制"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

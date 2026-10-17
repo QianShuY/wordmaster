@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-021",
+  "input_sha256": "89d7a720340a6d46691a422fbe811ec91e6ff4d0d8fa94a04740716d77a84994",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 85,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 2896,
+        "word": "desert 2",
+        "headword": "desert",
+        "homograph": 2,
+        "source_raw": "desert 2 [ˈdezət] n. 1. 沙漠不毛之地 2. 荒凉的境地(时期)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 沙漠不毛之地 2. 荒凉的境地(时期)",
+        "phonetic": "ˈdezət",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The travellers crossed the desert with an experienced guide.",
+        "example_translation": "旅人们在一位经验丰富的向导带领下穿过沙漠。",
+        "selected_meaning": "沙漠"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

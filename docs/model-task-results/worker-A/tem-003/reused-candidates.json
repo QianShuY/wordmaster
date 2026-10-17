@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-003",
+  "input_sha256": "88d3945386c2bed4fbc7ff9d1fcb853308e9343082cb723046a5ec0129c3ef4c",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 91,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 456,
+        "word": "angle 1",
+        "headword": "angle",
+        "homograph": 1,
+        "source_raw": "angle 1 [ˈæŋɡl] n. 1. 角 2. 角度，观点(=point of view)"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 角 2. 角度，观点(=point of view)",
+        "phonetic": "ˈæŋɡl",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "Draw an angle of ninety degrees in your notebook.",
+        "example_translation": "在笔记本上画一个九十度的角。",
+        "selected_meaning": "角；角度"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

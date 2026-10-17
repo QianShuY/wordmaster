@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-002",
+  "input_sha256": "6e52d24168dbe217d112b846cb38d4ac8d5b9aacd3dd153346181f7dd0b8587d",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 48,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 231,
+        "word": "affect 1",
+        "headword": "affect",
+        "homograph": 1,
+        "source_raw": "affect 1 [əˈfekt] v. 1. 影响，起作用 2. 感动，激起…的情绪 3. (疾病)侵袭"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 影响，起作用 2. 感动，激起…的情绪 3. (疾病)侵袭",
+        "phonetic": "əˈfekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "Heavy rain may affect the time of our departure.",
+        "example_translation": "大雨可能影响我们的出发时间。",
+        "selected_meaning": "影响"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

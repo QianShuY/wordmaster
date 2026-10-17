@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-010",
+  "input_sha256": "eeec4990cb0ad89e4d37005ad8dd86b9d53335ef1219fbab2aa4c9ebbeadc953",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 77,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 1388,
+        "word": "buffet 2",
+        "headword": "buffet",
+        "homograph": 2,
+        "source_raw": "buffet 2 [ˈbʊfeɪ] n. 自助餐，快餐"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "自助餐，快餐",
+        "phonetic": "ˈbʊfeɪ",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The hotel serves a buffet at lunchtime.",
+        "example_translation": "酒店在午餐时段供应自助餐。",
+        "selected_meaning": "自助餐"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

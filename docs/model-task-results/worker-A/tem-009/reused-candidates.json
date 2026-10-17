@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-009",
+  "input_sha256": "855e9c7b7e4fa847eb070b4ce99f6d0e2c07bcebbf61a75187aa62fecfb6ef55",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 79,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 1262,
+        "word": "bow 1",
+        "headword": "bow",
+        "homograph": 1,
+        "source_raw": "bow 1 [baʊ] v. 1. 鞠躬，点头 2. 屈服，服从 n. 鞠躬，点头"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 鞠躬，点头 2. 屈服，服从 n. 鞠躬，点头",
+        "phonetic": "baʊ",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The actors bow together at the end of the play.",
+        "example_translation": "演出结束时，演员们一起鞠躬。",
+        "selected_meaning": "鞠躬"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

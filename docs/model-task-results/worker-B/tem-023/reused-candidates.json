@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-023",
+  "input_sha256": "4e75b87e9c33488a1e9b81694b65e7cd987cd29a110d0dfa0820136bac343fdc",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 13,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3062,
+        "word": "direct 1",
+        "headword": "direct",
+        "homograph": 1,
+        "source_raw": "direct 1 [dɪˈrekt, daɪˈrekt] v. 1. 监督，管理，指导 2. 指示，命令 3. 给…指路，把…对准某一目标  4. 导演"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 监督，管理，指导 2. 指示，命令 3. 给…指路，把…对准某一目标  4. 导演",
+        "phonetic": "dɪˈrekt, daɪˈrekt",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "Could you direct us to the nearest bus stop?",
+        "example_translation": "你能给我们指一下去最近公交车站的路吗？",
+        "selected_meaning": "给……指路"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

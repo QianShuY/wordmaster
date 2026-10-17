@@ -1,0 +1,123 @@
+{
+  "task_id": "tem-007",
+  "input_sha256": "b5f96395c2917d54f01e45ea73c61981044a511aac6aa7f9aedb6a017e929786",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 16,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 898,
+        "word": "bank 1",
+        "headword": "bank",
+        "homograph": 1,
+        "source_raw": "bank 1 [bæŋk] n. 银行  v. 把(钱)存入银行"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "银行  v. 把(钱)存入银行",
+        "phonetic": "bæŋk",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "He went to the bank to open an account.",
+        "example_translation": "他去银行开了一个账户。",
+        "selected_meaning": "银行"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    },
+    {
+      "row_index": 61,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 954,
+        "word": "bat 1",
+        "headword": "bat",
+        "homograph": 1,
+        "source_raw": "bat 1 [bæt] n. (棒球或板球)球棒，(乒乓球)球拍"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "(棒球或板球)球棒，(乒乓球)球拍",
+        "phonetic": "bæt",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "He held the bat firmly before the next ball.",
+        "example_translation": "下一个球投来之前，他紧紧握住球棒。",
+        "selected_meaning": "球棒"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    },
+    {
+      "row_index": 80,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 980,
+        "word": "bear 1",
+        "headword": "bear",
+        "homograph": 1,
+        "source_raw": "bear 1 [beə] v. 1. 承担，负担，负荷 2. 承受，忍受，容忍 3. 结(果实)，生育"
+      },
+      "original": {
+        "pos": "v.",
+        "meaning": "1. 承担，负担，负荷 2. 承受，忍受，容忍 3. 结(果实)，生育",
+        "phonetic": "beə",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "I cannot bear the sound of that broken alarm.",
+        "example_translation": "我无法忍受那个坏掉的警报器发出的声音。",
+        "selected_meaning": "忍受；承受"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

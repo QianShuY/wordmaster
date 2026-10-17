@@ -1,0 +1,85 @@
+{
+  "task_id": "cet4-037",
+  "input_sha256": "5814b2bf2e0df0cafc6ff247104a7f413c973fb1fec51d0a809c6632952a5068",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 98,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 7,
+        "word": "abandon",
+        "headword": "abandon",
+        "homograph": null,
+        "source_raw": "abandon [əˈbændən] vt.丢弃；放弃，抛弃"
+      },
+      "original": {
+        "pos": "vt.",
+        "meaning": "丢弃；放弃，抛弃",
+        "phonetic": "əˈbændən",
+        "example": "She refused to abandon her plan.",
+        "example_translation": "她拒绝放弃自己的计划。"
+      },
+      "suggested": {
+        "example": "We had to abandon the picnic because of the storm.",
+        "example_translation": "由于暴风雨，我们不得不放弃野餐。",
+        "selected_meaning": "放弃；抛弃"
+      },
+      "provenance": [
+        "app/seed/examples-common-a-reviewed-20261014.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    },
+    {
+      "row_index": 99,
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 8,
+        "word": "ability",
+        "headword": "ability",
+        "homograph": null,
+        "source_raw": "ability [əˈbiliti] n.能力；能耐，本领"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "能力；能耐，本领",
+        "phonetic": "əˈbiliti",
+        "example": "Her ability to explain difficult ideas helped the whole class.",
+        "example_translation": "她解释难懂概念的能力帮助了全班同学。"
+      },
+      "suggested": {
+        "example": "Her ability to explain difficult ideas helped the whole class.",
+        "example_translation": "她解释难懂概念的能力帮助了全班同学。",
+        "selected_meaning": "能力；本领"
+      },
+      "provenance": [
+        "app/seed/examples-common-a-reviewed-20261014.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

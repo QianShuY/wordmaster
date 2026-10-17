@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-027",
+  "input_sha256": "3324ee4e627bac452dcb99b341ca98972896cde148df31074740143d1b11edd5",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 4,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3554,
+        "word": "egg 1",
+        "headword": "egg",
+        "homograph": 1,
+        "source_raw": "*egg 1 [eɡ] n. 卵，蛋 || a bad egg坏蛋，坏家伙"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "卵，蛋 || a bad egg坏蛋，坏家伙",
+        "phonetic": "eɡ",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "She added one egg to the mixture and stirred it slowly.",
+        "example_translation": "她往混合物里加了一个鸡蛋，慢慢搅拌。",
+        "selected_meaning": "蛋；鸡蛋"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}

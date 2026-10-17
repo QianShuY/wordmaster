@@ -1,0 +1,47 @@
+{
+  "task_id": "tem-026",
+  "input_sha256": "9460d1d90e5ebb61f81dafa5fc9fbf61a745eee7fb8d8fd4a45a0ff8e567bbfd",
+  "operation": "previously-authored-examples-for-independent-review",
+  "source": "existing-moci-seed-material-not-new-dictionary-verification",
+  "not_an_installed_or_accepted_vocabulary_result": true,
+  "entries": [
+    {
+      "row_index": 42,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 3472,
+        "word": "ear 1",
+        "headword": "ear",
+        "homograph": 1,
+        "source_raw": "ear 1 [ɪə] n. 1. 耳，耳朵 2. 听觉，欣赏能力 || all ears全神贯注地听 /up to one's ears in 深深卷入，深陷于，忙于"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 耳，耳朵 2. 听觉，欣赏能力 || all ears全神贯注地听 /up to one's ears in 深深卷入，深陷于，忙于",
+        "phonetic": "ɪə",
+        "example": "",
+        "example_translation": ""
+      },
+      "suggested": {
+        "example": "The child held the shell close to one ear.",
+        "example_translation": "孩子把贝壳贴近一只耳朵。",
+        "selected_meaning": "耳朵"
+      },
+      "provenance": [
+        "app/seed/examples-numbered-reviewed-20261015.json"
+      ],
+      "risk_flags": [
+        "same-original-identity",
+        "prior-model-sense-review-only",
+        "selected-sense-recheck"
+      ],
+      "verification": "needs-review",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false,
+      "authoritative_dictionary_sense_validation": false,
+      "issues": [
+        "历史模型对所选义项的初审不等于独立权威词典全义项复核。"
+      ]
+    }
+  ]
+}
