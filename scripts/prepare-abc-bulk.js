@@ -11,6 +11,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { plan } = require('./plan-next-model-review');
 const { ownerOf } = require('./audit-model-evidence');
+const { combine } = require('./merge-abc-candidate-coverage');
 const ROOT = path.resolve(__dirname, '..');
 const DEFAULT_DIR = path.join(ROOT, 'output/refinement/abc-bulk');
 const DEFAULT_ROWS = 500;
@@ -24,6 +25,19 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
   // Fail closed if a worker mutated the original, reorder, hash, or result
   // status since the original handoff. This operation is intentionally read-only.
   const verified = plan(root, { save: false });
+  // Join exact-source examples and cross-book alternatives into the actual
+  // draft packets. They remain unverified REVIEW MATERIAL, not draft results.
+  const { summary: coverage, result: candidates } = combine(root, { save: false });
+  if (coverage.actual_worker_proposals !== verified.all.result_rows
+    || coverage.remaining_proposal_rows !== verified.all.rows_not_yet_drafted) {
+    throw Error('Candidate ledger and worker draft prefixes disagree');
+  }
+  const candidateByRow = new Map(candidates.map(row => [
+    row.task_id + ':' + row.row_index, row,
+  ]));
+  if (candidateByRow.size !== candidates.length) {
+    throw Error('Duplicate identities in candidate ledger');
+  }
   const base = path.join(root, 'docs/model-tasks-20261015');
   const results = path.join(root, 'docs/model-task-results');
   const manifest = JSON.parse(fs.readFileSync(path.join(base, 'manifest.json'), 'utf8'));
@@ -48,11 +62,22 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
     for (let i = 0; i < input.entries.length; i++) {
       const original = input.entries[i];
       if (i >= existing.length) {
+        const hint = candidateByRow.get(file.task_id + ':' + i);
+        if (!hint || hint.input_sha256 !== file.sha256 || hint.worker !== worker) {
+          throw Error('Unmatched or stale candidate identity: ' + file.task_id + ':' + i);
+        }
         packets[worker].draft.push({
           ...key, row_index: i, identity: original.identity ?? null,
           source_entry: original.source_entry ?? null,
           current: original.current ?? null,
-          instruction: 'Propose an original bilingual example, preserve original, cite sources actually opened; never self-approve',
+          hint_priority: hint.priority,
+          review_material: {
+            exact_source_candidate: hint.exact_source_candidate,
+            crossbook_options: hint.crossbook_options,
+            risk_flags: hint.risk_flags,
+            status: 'unverified-candidate-not-approved',
+          },
+          instruction: 'Check full dictionary senses and POS first. Reused examples and same-spelling cross-book alternatives are NOT validated; author a bilingual example where missing. Preserve original, cite sources actually opened; never self-approve.',
         });
         undrafted++; countByWorker[worker].pending_draft++;
         continue;
@@ -107,6 +132,17 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
     }
   }
   for (const worker of ['A', 'B', 'C']) {
+    // Tackle already available source-keyed examples first, then cross-book
+    // alternatives needing sense confirmation, then genuinely blank items.
+    // All three classes still require independent dictionary review.
+    const priorityRank = {
+      'P1-exact-source-unverified': 0,
+      'P2-crossbook-sense-check-required': 1,
+      'P3-author-from-original': 2,
+    };
+    packets[worker].draft.sort((a, b) =>
+      priorityRank[a.hint_priority] - priorityRank[b.hint_priority]
+      || a.task_id.localeCompare(b.task_id) || a.row_index - b.row_index);
     // Sort review by risk, then task/input row, keeping the original identity
     // in each record for deterministic atomic application by a separate reviewer.
     packets[worker].review.sort((a, b) =>
@@ -127,9 +163,16 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
     rows_needing_draft: undrafted, rows_needing_independent_review: toReview,
     claimed_source_checked_not_independently_accepted: verified.all.source_claims_to_independently_verify,
     accepted: 0, installed: 0, requires_human_or_authoritative_dictionary_review: true,
+    undrafted_candidate_coverage: {
+      exact_source_rows: coverage.covered_by_exact_source,
+      crossbook_option_rows: coverage.covered_by_crossbook_options,
+      any_material_rows: coverage.covered_by_any_candidate,
+      original_example_needed: coverage.still_needing_original_example,
+      overlap_rows: coverage.overlap,
+    },
     network_calls: 0, api_keys_required: 0,
     packets: allPackets.length, packet_files: allPackets.map(p => p.packet_id + '.json'), workers: countByWorker,
-    note: 'Packet generation does not draft any examples, validate URLs, review dictionary meanings or modify installed vocabulary.',
+    note: 'Candidate evidence is provided as review hints only. This operation does not draft examples, validate dictionary meanings or modify installed vocabulary.',
   };
   if (save) {
     fs.mkdirSync(outputDir, { recursive: true });
