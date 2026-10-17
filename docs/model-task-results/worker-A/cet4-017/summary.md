@@ -9,3 +9,10 @@
 - 输入 SHA-256：35e080895448a9b503f59f8e8a944f46f41e84c6cf3274b362faef5308c89920
 
 - 下一条身份：moisture
+
+## 2026-10-17 主代理接续核对（原历史进度保留）
+
+- 当前 result.json 现有 **82 / 100** 行，前 80 行保留，接续新增 moisture、molecule 两条原创双语教学稿。
+- 新增依据：Cambridge 对应词条搜索索引文本可见；**未能完整打开词典页面，不能据此标为人工全部义项审核通过**。原 moisture 的“温度”、molecule 的“克分子”保留为待确认问题。
+- 当前进度以 result.json 和 progress.json 的 82 行为准；本页上方原有“80”是旧快照，不是当前总量。下一条输入为 moment。
+- 本批没有写入种子数据或任何学习数据库；来源检查详情见 ../primary-review/WEB_REVIEW_2026-10-17.json。

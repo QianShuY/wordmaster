@@ -1,0 +1,137 @@
+{
+  "kind": "primary-review-ledger",
+  "reviewed_on": "2026-10-17",
+  "target_branch": "feat/moci-web-handoff-20261016",
+  "policy": "The worker outputs remain proposals. Dictionary search-index excerpts are not proof that a live original page was opened. A selected sense alone is not a complete lexical review. No content installed.",
+  "primary_accepted_rows": 0,
+  "dictionary_pages_directly_accessible": 0,
+  "entries": [
+    {
+      "task_id": "cet4-017",
+      "owner": "A",
+      "word": "moisture",
+      "source_line": 2523,
+      "decision": "needs-review",
+      "checked_scope": "noun uncountable water droplets/small amounts; indexed Cambridge page excerpt",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/moisture",
+      "source_retrieval": "search_index_only",
+      "original_problem": "“温度” is unsupported by the selected moisture sense; do not overwrite originals without more checking.",
+      "pending": "Verify direct dictionary page; inspect full original senses and UK IPA; proofread original example and translation."
+    },
+    {
+      "task_id": "cet4-017",
+      "owner": "A",
+      "word": "molecule",
+      "source_line": 2524,
+      "decision": "needs-review",
+      "checked_scope": "noun chemistry unit; indexed Cambridge page excerpt",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/molecule",
+      "source_retrieval": "search_index_only",
+      "original_problem": "“克分子” is an older distinct chemistry term and cannot be removed or approved on this evidence alone.",
+      "pending": "Direct source verification, term/IPA audit and example sense audit."
+    },
+    {
+      "task_id": "npee-038",
+      "owner": "B",
+      "word": "solemn",
+      "source_line": 4526,
+      "decision": "needs-review",
+      "checked_scope": "adjective serious/formal; indexed Cambridge text",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/solemn",
+      "source_retrieval": "search_index_only",
+      "pending": "Check direct source, full adjective sense scope and pronunciation."
+    },
+    {
+      "task_id": "npee-038",
+      "owner": "B",
+      "word": "solid",
+      "source_line": 4527,
+      "decision": "needs-review",
+      "checked_scope": "adjective hard/firm, not the noun meanings",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/solid?q=solids",
+      "source_retrieval": "search_index_only",
+      "pending": "Noun and other adjective senses are untouched and unapproved."
+    },
+    {
+      "task_id": "npee-038",
+      "owner": "B",
+      "word": "solidarity",
+      "source_line": 4528,
+      "decision": "needs-review",
+      "checked_scope": "uncountable noun mutual support, with UK IPA from original indexed result",
+      "dictionary": "https://dictionary.cambridge.org/us/dictionary/english/solidarity",
+      "source_retrieval": "search_index_only",
+      "pending": "Direct full-page check and Chinese translation quality check."
+    },
+    {
+      "task_id": "tem-099",
+      "owner": "C",
+      "word": "subjective",
+      "source_line": 11114,
+      "decision": "needs-review",
+      "checked_scope": "adjective judgments based on personal beliefs; original definition syntax issue",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/subjective",
+      "source_retrieval": "search_index_only",
+      "original_problem": "Second Chinese sense is missing a closing bracket; preserve the raw input for traceability.",
+      "pending": "Check the whole sense inventory and reconcile bracketed Chinese text; current draft only illustrates one sense."
+    },
+    {
+      "task_id": "tem-099",
+      "owner": "C",
+      "word": "strike",
+      "source_line": 11065,
+      "decision": "rejected-proposal",
+      "checked_scope": "Cambridge strike industrial-action noun and verb meanings, based on original dictionary indexed text",
+      "dictionary": "https://dictionary.cambridge.org/us/dictionary/english/strike",
+      "source_retrieval": "search_index_only",
+      "original_problem": "Worker selected_sense.pos is noun but proposed example 'The workers voted to strike...' uses strike as a verb; the example does not illustrate selected noun POS.",
+      "pending": "Choose one noun sense and replace with original noun-use example, or choose a verb sense with matched POS. Separately validate IPA and multi-sense entry. Preserve homographs."
+    },
+    {
+      "task_id": "tem-108",
+      "owner": "C",
+      "word": "tuck",
+      "source_line": 11953,
+      "decision": "needs-review",
+      "checked_scope": "verb tuck something into a small/safe place; indexed Cambridge content",
+      "dictionary": "https://dictionary.cambridge.org/us/dictionary/english/tuck",
+      "source_retrieval": "search_index_only",
+      "original_problem": "“打褶桐” appears to be text corruption. The example matches put-into-pocket sense, not the fold sense.",
+      "pending": "Check direct dictionary page and each source meaning before proposing correction."
+    },
+    {
+      "task_id": "tem-108",
+      "owner": "C",
+      "word": "unawares",
+      "source_line": 12036,
+      "decision": "needs-review",
+      "checked_scope": "adverb without warning or unexpectedly; indexed Cambridge page excerpt",
+      "dictionary": "https://dictionary.cambridge.org/dictionary/english/unawares",
+      "source_retrieval": "search_index_only",
+      "original_problem": "“吃惊地” could misdescribe whose surprise the adverb modifies; proposed 'came upon the deer unawares' is ambiguous without additional context.",
+      "pending": "Rework example toward a natural unambiguous 'catch/take someone unawares' structure and verify direct source/translation."
+    }
+  ],
+  "next_unfinished": {
+    "A": {
+      "task_id": "cet4-017",
+      "next_row_index_zero_based": 82,
+      "next_word": "moment",
+      "result_rows": 82,
+      "expected_rows": 100
+    },
+    "B": {
+      "task_id": "npee-038",
+      "next_row_index_zero_based": 43,
+      "next_word": "solitary",
+      "result_rows": 43,
+      "expected_rows": 100
+    },
+    "C": {
+      "task_id": "tem-037..125",
+      "result_rows": 8839,
+      "source_free_drafts_remaining_majority": true
+    }
+  },
+  "installation_authorized": false
+}
