@@ -8,7 +8,8 @@
     "test": "node --test test/*.test.js android-g0/test/*.test.mjs android-g0/test/*.test.js",
     "audit:vocabulary": "node scripts/audit-vocabulary.js",
     "audit:content": "node scripts/content-quality.js",
-    "measure:api": "node scripts/measure-readonly-api.js"
+    "measure:api": "node scripts/measure-readonly-api.js",
+    "abc:bulk": "node scripts/prepare-abc-bulk.js"
   },
   "dependencies": {
     "express": "^5.1.0"
