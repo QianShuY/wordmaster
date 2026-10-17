@@ -1828,20 +1828,33 @@
       },
       "selected_sense": {
         "pos": "v.",
-        "meaning": "a picture or mental representation of somebody or something"
+        "meaning": "n. 影像，图像"
       },
       "proposed": {
         "pos": "v.",
         "meaning": "1. 映像，影像，(肖)像，偶像 2. (头脑中的)形象，概念，概括印象，意象 3. 酷似的人(物) 4. 典型，象征",
         "phonetic": null,
-        "example": null,
-        "example_translation": null,
-        "teaching_note": "草稿例句，待词典复核。"
+        "example": "The camera captured a clear image of the comet.",
+        "example_translation": "相机拍下了彗星的清晰影像。",
+        "teaching_note": "原创例句针对指定词性和义项；来源页面已直接核对，但原文其他义项和中译尚未全部独立验收。"
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "url": "https://www.oxfordlearnersdictionaries.com/definition/english/image",
+          "accessed": true,
+          "checked_pos": "noun",
+          "checked_sense": "picture of something recorded by a camera or displayed on a device",
+          "checked_uk_ipa": "ˈɪmɪdʒ",
+          "independent_primary_page_review": true
+        }
+      ],
       "issues": [
         "当前为草稿：未取得支持该义项和英式 IPA 的词典页面，需主代理复核释义、词性及读音。",
-        "输入词性为 v.，但现有中文释义均为名词义；未找到与该词性相符的证据，因此未提供例句或音标。"
+        "输入词性为 v.，但现有中文释义均为名词义；未找到与该词性相符的证据，因此未提供例句或音标。",
+        {
+          "code": "independent-review-pending",
+          "message": "已补双语例句并核对原词典所选义项；保留待审核状态，禁止自动并入正式词库。"
+        }
       ],
       "change_reason": "词性与中文释义可能不一致，待核实后再提供建议。",
       "verification": "needs-review",
