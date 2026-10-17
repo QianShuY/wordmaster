@@ -62,10 +62,12 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
       const selected = draft.selected_sense || {};
       const originalPos = String((draft.original || {}).pos || '').toLowerCase().trim();
       const selectedPos = String(selected.pos || '').toLowerCase().trim();
-      const likelyMismatch = (/\b(n\.|noun)\b/.test(originalPos)
+      const nounOnly = /^(n\.|noun)$/.test(originalPos);
+      const adjectiveOnly = /^(a\.|adj\.|adjective)$/.test(originalPos);
+      const selectedVerb = /^(v\.|vi\.|vt\.|verb\b)/.test(selectedPos);
+      const likelyMismatch = (nounOnly
         && /^(to\s+\w+|verb\b)/i.test(String(selected.meaning || '')))
-        || (originalPos === 'n.' && /^v(\.|erb\b)/.test(selectedPos))
-        || (originalPos === 'a.' && /^(v\.|verb\b)/.test(selectedPos));
+        || (nounOnly && selectedVerb) || (adjectiveOnly && selectedVerb);
       const missingExample = !hasText(draft.proposed?.example)
         || !hasText(draft.proposed?.example_translation);
       const issues = Array.isArray(draft.issues) ? draft.issues : [];
@@ -126,11 +128,18 @@ function exportBulk(root = ROOT, { outputDir = path.join(root, 'output/refinemen
     claimed_source_checked_not_independently_accepted: verified.all.source_claims_to_independently_verify,
     accepted: 0, installed: 0, requires_human_or_authoritative_dictionary_review: true,
     network_calls: 0, api_keys_required: 0,
-    packets: allPackets.length, workers: countByWorker,
+    packets: allPackets.length, packet_files: allPackets.map(p => p.packet_id + '.json'), workers: countByWorker,
     note: 'Packet generation does not draft any examples, validate URLs, review dictionary meanings or modify installed vocabulary.',
   };
   if (save) {
     fs.mkdirSync(outputDir, { recursive: true });
+    // Only generated files with this precise naming pattern can be cleaned up.
+    // A rerun must never leave obsolete work packets next to the fresh summary.
+    const currentNames = new Set(summary.packet_files);
+    for (const filename of fs.readdirSync(outputDir)) {
+      if (/^[ABC]-(draft|review)-\d{3,}\.json$/.test(filename)
+        && !currentNames.has(filename)) fs.unlinkSync(path.join(outputDir, filename));
+    }
     for (const pkt of allPackets) {
       fs.writeFileSync(path.join(outputDir, pkt.packet_id + '.json'),
         JSON.stringify(pkt, null, 2) + '\n');
