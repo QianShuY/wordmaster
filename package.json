@@ -11,7 +11,8 @@
     "measure:api": "node scripts/measure-readonly-api.js",
     "abc:bulk": "node scripts/prepare-abc-bulk.js",
     "abc:reuse": "node scripts/reuse-abc-local-examples.js",
-    "abc:crossbook": "node scripts/transfer-abc-crossbook-examples.js"
+    "abc:crossbook": "node scripts/transfer-abc-crossbook-examples.js",
+    "abc:coverage": "node scripts/merge-abc-candidate-coverage.js"
   },
   "dependencies": {
     "express": "^5.1.0"
