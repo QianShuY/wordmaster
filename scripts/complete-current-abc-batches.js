@@ -15,15 +15,14 @@ const {plan}=require('./plan-next-model-review');
 const ROOT=path.resolve(__dirname,'..');
 const records=[
  {worker:'A',task:'cet4-022',overrides:{
-  plastic:['This container is made of plastic.','这个容器是塑料制成的。','塑料（原词条还包含形容词，需复核词性）'],
+  plastic:['The clay remains plastic and easy to shape.','这块黏土仍有可塑性，容易塑形。','可塑的（形容词）'],
   plot:['The family rented a small plot of land to grow vegetables.','这家人租了一小块地来种蔬菜。','小块土地'],
   plunge:['The sudden news plunged the team into confusion.','突如其来的消息使团队陷入混乱。','使陷入'],
   please:['The gift will please her very much.','这份礼物会让她非常高兴。','使高兴'],
   Portuguese:['She has been learning Portuguese for two years.','她学习葡萄牙语已经两年了。','葡萄牙语'],
   power:['The council used its power to protect the park.','委员会运用自己的权力保护公园。','权力'],
   praise:['The coach offered praise after the team's improvement.','球队取得进步后，教练给予了赞扬。','赞扬（名词）'],
-  pray:['They pray for peace every evening.','他们每晚都祈祷和平。','祈祷（动词）'],
-  present:['He presented the award at the ceremony.','他在典礼上颁发了奖项。','颁发（若源词条存在，需严格匹配）']
+  pray:['They pray for peace every evening.','他们每晚都祈祷和平。','祈祷（动词）']
  }},
  {worker:'B',task:'npee-043',overrides:{
   thrust:['She thrust the letter into her coat pocket.','她把信猛地塞进外套口袋。','猛推；猛塞（动词）'],
