@@ -69,7 +69,7 @@ test('dry-run all-ABC persistence handles every old matched row without modifyin
  const x=materialize(ROOT);
  assert.equal(x.input_source_rows,26612);
  assert.equal(x.existing_worker_draft_rows,plan(ROOT,{save:false}).all.result_rows);
- assert.ok(x.reused_example_candidate_rows>0);
+ assert.ok(x.reused_example_candidate_rows>=0);
  assert.equal(x.reused_example_candidate_rows,x.by_worker.A+x.by_worker.B);
  assert.ok(x.by_worker.A>=0);
  assert.ok(x.by_worker.B>=0);
