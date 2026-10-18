@@ -4,9 +4,9 @@
   "missing_pairs": 0,
   "by_method": {
     "historical-proposal-untagged": 15539,
-    "editorial-context-rewrite-needs-review": 679,
-    "crossbook-sense-unverified": 5547,
-    "offline-context-first-draft": 3223,
+    "editorial-context-rewrite-needs-review": 765,
+    "crossbook-sense-unverified": 5540,
+    "offline-context-first-draft": 3144,
     "existing-exact-source-candidate": 1624
   },
   "by_owner": {
@@ -15,392 +15,22 @@
     "C": 8839
   },
   "automatic_review_flags": {
-    "generic-adverb-template": 84,
-    "generic-verb-template": 837,
-    "translation-metalinguistic": 104,
-    "generic-noun-template": 1601,
-    "metalinguistic-nonexample": 62,
-    "generic-adjective-template": 625
+    "generic-verb-template": 809,
+    "translation-metalinguistic": 98,
+    "generic-noun-template": 1577,
+    "generic-adverb-template": 80,
+    "generic-adjective-template": 610,
+    "metalinguistic-nonexample": 60
   },
-  "flagged_unique": 3209,
+  "flagged_unique": 3136,
   "flagged_by_book": {
-    "cet4": 160,
-    "cet6": 271,
+    "cet4": 132,
+    "cet6": 226,
     "npee": 56,
     "tem": 2473,
     "gaokao": 249
   },
   "examples": [
-    {
-      "task_id": "cet4-028",
-      "row_index": 4,
-      "word": "severely",
-      "pos": "ad.",
-      "meaning": "严厉地，严格地",
-      "en": "The instructions were followed severely by the staff.",
-      "cn": "工作人员“严厉地”地遵循了说明。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adverb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 10,
-      "word": "shake",
-      "pos": "vt.",
-      "meaning": "摇，使震动 n.摇动",
-      "en": "The staff were asked to shake the items before noon.",
-      "cn": "工作人员被要求在中午前完成“摇”的操作。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 14,
-      "word": "shampoo",
-      "pos": "vt.",
-      "meaning": "用洗发剂洗 n.洗头",
-      "en": "It may be necessary to shampoo the documents again.",
-      "cn": "可能需要再次对文件进行“用洗发剂洗”的处理。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 16,
-      "word": "share",
-      "pos": "n.",
-      "meaning": "份；份额；股份",
-      "en": "The report includes a discussion of share.",
-      "cn": "报告中包含对“份”的讨论。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 19,
-      "word": "sharply",
-      "pos": "ad.",
-      "meaning": "锐利地，敏锐地",
-      "en": "The instructions were followed sharply by the staff.",
-      "cn": "工作人员“锐利地”地遵循了说明。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adverb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 34,
-      "word": "shiver",
-      "pos": "vi.",
-      "meaning": "颤抖，哆嗦 n.冷颤",
-      "en": "She hoped to shiver before the end of the day.",
-      "cn": "她希望当天结束前能够“颤抖”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 37,
-      "word": "shoot",
-      "pos": "vt.",
-      "meaning": "发射；射中 n.发芽",
-      "en": "We need to shoot the materials carefully.",
-      "cn": "我们需要仔细进行“发射”这项操作。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 49,
-      "word": "shout",
-      "pos": "n.&vi.",
-      "meaning": "呼喊，喊叫",
-      "en": "The report includes a discussion of shout.",
-      "cn": "报告中包含对“呼喊”的讨论。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 50,
-      "word": "show",
-      "pos": "vt.",
-      "meaning": "给…看；表明",
-      "en": "It may be necessary to show the documents again.",
-      "cn": "可能需要再次对文件进行“给…看”的处理。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 60,
-      "word": "sigh",
-      "pos": "n.&vi.",
-      "meaning": "叹气，叹息",
-      "en": "The guide described sigh in detail.",
-      "cn": "讲解员详细介绍了“叹气”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 67,
-      "word": "significant",
-      "pos": "n.",
-      "meaning": "有意义/重要的",
-      "en": "They collected information about significant for the project.",
-      "cn": "他们为项目收集了有关“有意义/重要的”的资料。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 74,
-      "word": "similarly",
-      "pos": "ad.",
-      "meaning": "类似地，相似地",
-      "en": "The instructions were followed similarly by the staff.",
-      "cn": "工作人员“类似地”地遵循了说明。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adverb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 80,
-      "word": "since",
-      "pos": "conj.",
-      "meaning": "从…以来；因为",
-      "en": "The teacher wrote \"since\" on the board.",
-      "cn": "老师在黑板上写下了“since”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "metalinguistic-nonexample"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 82,
-      "word": "sing",
-      "pos": "vi.&vt.",
-      "meaning": "唱，演唱",
-      "en": "We had to sing before the meeting began.",
-      "cn": "我们不得不在会议开始前进行“唱”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 86,
-      "word": "sink",
-      "pos": "vi.",
-      "meaning": "下沉；下垂；降低",
-      "en": "She hoped to sink before the end of the day.",
-      "cn": "她希望当天结束前能够“下沉”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 97,
-      "word": "skate",
-      "pos": "n.",
-      "meaning": "冰鞋；滑冰 vi.滑冰",
-      "en": "The book offers a clear introduction to skate.",
-      "cn": "这本书对“冰鞋”作了清楚的介绍。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 2,
-      "word": "skillful",
-      "pos": "a.",
-      "meaning": "灵巧的，娴熟的",
-      "en": "The final design looked skillful to the reviewers.",
-      "cn": "评审人员认为最终设计显得“灵巧的”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 7,
-      "word": "slam",
-      "pos": "vt.",
-      "meaning": "使劲关，砰地放下",
-      "en": "The team decided to slam the equipment after the inspection.",
-      "cn": "团队决定检查后对设备进行“使劲关”的处理。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 8,
-      "word": "slave",
-      "pos": "n.",
-      "meaning": "奴隶；苦工",
-      "en": "The guide described slave in detail.",
-      "cn": "讲解员详细介绍了“奴隶”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 31,
-      "word": "smile",
-      "pos": "vi.",
-      "meaning": "微笑 n.微笑，笑容",
-      "en": "The students were encouraged to smile during the activity.",
-      "cn": "学生们被鼓励在活动中尝试“微笑”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 35,
-      "word": "smoothly",
-      "pos": "ad.",
-      "meaning": "光滑地；平稳地",
-      "en": "The group responded smoothly to the announcement.",
-      "cn": "小组对公告作出了“光滑地”的回应。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adverb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 39,
-      "word": "snowy",
-      "pos": "a.",
-      "meaning": "雪的，下雪的",
-      "en": "The situation seemed snowy to everyone involved.",
-      "cn": "在场的人都觉得这种情况“雪的”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 43,
-      "word": "sob",
-      "pos": "vi.&n.",
-      "meaning": "啜泣，呜咽",
-      "en": "They agreed to sob after a short break.",
-      "cn": "他们同意短暂休息后进行“啜泣”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 49,
-      "word": "socialist",
-      "pos": "a.",
-      "meaning": "社会主义的",
-      "en": "The group found the proposal socialist.",
-      "cn": "小组认为这份提案“社会主义的”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 62,
-      "word": "some",
-      "pos": "a.&pron.",
-      "meaning": "一些，若干",
-      "en": "The group found the proposal some.",
-      "cn": "小组认为这份提案“一些”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 69,
-      "word": "somewhat",
-      "pos": "pron.",
-      "meaning": "一点儿 ad.有点",
-      "en": "The expression \"somewhat\" appears in the passage.",
-      "cn": "短文中出现了“somewhat”这一表达。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "metalinguistic-nonexample",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 94,
-      "word": "Spanish",
-      "pos": "a.",
-      "meaning": "西班牙的 n.西班牙人",
-      "en": "The final design looked Spanish to the reviewers.",
-      "cn": "评审人员认为最终设计显得“西班牙的”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-029",
-      "row_index": 95,
-      "word": "spare",
-      "pos": "vt.",
-      "meaning": "节约 a.多余的",
-      "en": "The team decided to spare the equipment after the inspection.",
-      "cn": "团队决定检查后对设备进行“节约”的处理。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
     {
       "task_id": "cet4-030",
       "row_index": 23,
@@ -1089,6 +719,375 @@
       "method": "offline-context-first-draft",
       "flags": [
         "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-034",
+      "row_index": 86,
+      "word": "ultimately",
+      "pos": "ad.",
+      "meaning": "最终，最后",
+      "en": "The group responded ultimately to the announcement.",
+      "cn": "小组对公告作出了“最终”的回应。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adverb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-034",
+      "row_index": 93,
+      "word": "unconscious",
+      "pos": "a.",
+      "meaning": "不省人事的",
+      "en": "The final design looked unconscious to the reviewers.",
+      "cn": "评审人员认为最终设计显得“不省人事的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 0,
+      "word": "underneath",
+      "pos": "ad.",
+      "meaning": "在下面，在底下",
+      "en": "She explained the decision underneath during the meeting.",
+      "cn": "她在会议上以“在下面”的方式解释了决定。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adverb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 3,
+      "word": "undertake",
+      "pos": "vt.",
+      "meaning": "从事；承担；保证",
+      "en": "We need to undertake the materials carefully.",
+      "cn": "我们需要仔细进行“从事”这项操作。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 4,
+      "word": "undertaking",
+      "pos": "n.",
+      "meaning": "任务，事业；许诺",
+      "en": "The book offers a clear introduction to undertaking.",
+      "cn": "这本书对“任务”作了清楚的介绍。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 5,
+      "word": "undo",
+      "pos": "vt.",
+      "meaning": "解开，打开；取消",
+      "en": "We need to undo the materials carefully.",
+      "cn": "我们需要仔细进行“解开”这项操作。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 13,
+      "word": "uniform",
+      "pos": "a.",
+      "meaning": "一样的 n.制服",
+      "en": "The results were described as uniform in the report.",
+      "cn": "报告把结果描述为“一样的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 17,
+      "word": "unite",
+      "pos": "vi.",
+      "meaning": "联合 vt.使联合",
+      "en": "The students were encouraged to unite during the activity.",
+      "cn": "学生们被鼓励在活动中尝试“联合”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 29,
+      "word": "unlucky",
+      "pos": "a.",
+      "meaning": "不幸的；不吉的",
+      "en": "The situation seemed unlucky to everyone involved.",
+      "cn": "在场的人都觉得这种情况“不幸的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 32,
+      "word": "unsatisfactory",
+      "pos": "a.",
+      "meaning": "不能令人满意的",
+      "en": "The situation seemed unsatisfactory to everyone involved.",
+      "cn": "在场的人都觉得这种情况“不能令人满意的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 33,
+      "word": "unstable",
+      "pos": "a.",
+      "meaning": "不稳固的；不稳定的",
+      "en": "The group found the proposal unstable.",
+      "cn": "小组认为这份提案“不稳固的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 34,
+      "word": "unsuitable",
+      "pos": "a.",
+      "meaning": "不合适的,不适宜的",
+      "en": "The final design looked unsuitable to the reviewers.",
+      "cn": "评审人员认为最终设计显得“不合适的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 36,
+      "word": "unusually",
+      "pos": "a.",
+      "meaning": "不平常地，非常",
+      "en": "The final design looked unusually to the reviewers.",
+      "cn": "评审人员认为最终设计显得“不平常地”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 43,
+      "word": "upside-down",
+      "pos": "a.",
+      "meaning": "颠倒的，乱七八糟的",
+      "en": "The group found the proposal upside-down.",
+      "cn": "小组认为这份提案“颠倒的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 46,
+      "word": "upward",
+      "pos": "a.",
+      "meaning": "向上的，上升的",
+      "en": "The situation seemed upward to everyone involved.",
+      "cn": "在场的人都觉得这种情况“向上的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 47,
+      "word": "upwards",
+      "pos": "ad.",
+      "meaning": "趋向上升；以上",
+      "en": "She explained the decision upwards during the meeting.",
+      "cn": "她在会议上以“趋向上升”的方式解释了决定。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adverb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 48,
+      "word": "urge",
+      "pos": "vt.",
+      "meaning": "推进；催促 n.冲动",
+      "en": "We need to urge the materials carefully.",
+      "cn": "我们需要仔细进行“推进”这项操作。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 50,
+      "word": "us",
+      "pos": "pron.",
+      "meaning": "(宾格)我们",
+      "en": "The expression \"us\" appears in the passage.",
+      "cn": "短文中出现了“us”这一表达。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "metalinguistic-nonexample",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 72,
+      "word": "vapour",
+      "pos": "n.",
+      "meaning": "汽，蒸气",
+      "en": "The students asked questions about vapour during the lesson.",
+      "cn": "学生们在课上询问了关于“汽”的问题。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-035",
+      "row_index": 85,
+      "word": "venture",
+      "pos": "n.&vi.",
+      "meaning": "冒险 vt.敢于",
+      "en": "The article examines the role of venture in everyday life.",
+      "cn": "这篇文章探讨了“冒险”在日常生活中的作用。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 4,
+      "word": "vigorous",
+      "pos": "a.",
+      "meaning": "朝气蓬勃的",
+      "en": "The situation seemed vigorous to everyone involved.",
+      "cn": "在场的人都觉得这种情况“朝气蓬勃的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 5,
+      "word": "vine",
+      "pos": "n.",
+      "meaning": "葡萄树",
+      "en": "The report includes a discussion of vine.",
+      "cn": "报告中包含对“葡萄树”的讨论。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 15,
+      "word": "visit",
+      "pos": "vt.&n.",
+      "meaning": "访问，参观",
+      "en": "The team decided to visit the equipment after the inspection.",
+      "cn": "团队决定检查后对设备进行“访问”的处理。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 30,
+      "word": "voyage",
+      "pos": "n.&vi.",
+      "meaning": "航海，航空",
+      "en": "The guide described voyage in detail.",
+      "cn": "讲解员详细介绍了“航海”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 31,
+      "word": "waggon",
+      "pos": "n.",
+      "meaning": "四轮运货马车",
+      "en": "They collected information about waggon for the project.",
+      "cn": "他们为项目收集了有关“四轮运货马车”的资料。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 33,
+      "word": "wait",
+      "pos": "vi.",
+      "meaning": "等，等候 n.等待",
+      "en": "We had to wait before the meeting began.",
+      "cn": "我们不得不在会议开始前进行“等”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 35,
+      "word": "wake",
+      "pos": "vi.",
+      "meaning": "醒，醒来 vt.唤醒",
+      "en": "We had to wake before the meeting began.",
+      "cn": "我们不得不在会议开始前进行“醒”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-036",
+      "row_index": 37,
+      "word": "walk",
+      "pos": "vi.&n.",
+      "meaning": "走，步行",
+      "en": "She hoped to walk before the end of the day.",
+      "cn": "她希望当天结束前能够“走”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template"
       ]
     }
   ],
