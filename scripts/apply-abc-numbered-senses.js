@@ -83,4 +83,4 @@ if(require.main===module){
  if(args.some(x=>x!=='--apply'))throw Error('Unknown flag');
  console.log(JSON.stringify(run(ROOT,{apply:args.includes('--apply')}),null,2));
 }
-module.exports={run};
+module.exports={run,FILES};
