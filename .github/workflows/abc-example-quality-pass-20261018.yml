@@ -1,0 +1,67 @@
+name: ABC example quality pass 2026-10-18
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-example-quality-pass-20261018.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  quality_pass:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out source review branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Validate guarded changes and initial quality audit
+        run: |
+          set -euo pipefail
+          node --check scripts/apply-abc-quality-patches.js
+          node --check scripts/audit-abc-example-quality.js
+          node --test test/abc-quality-targeted-20261018.test.js
+          node scripts/apply-abc-quality-patches.js
+          node scripts/audit-abc-example-quality.js
+      - name: Apply only 59 source-keyed editorial replacements
+        run: node scripts/apply-abc-quality-patches.js --apply
+      - name: Scan edited corpus and save flagged review report
+        run: |
+          node scripts/audit-abc-example-quality.js --save
+          npm test
+          node scripts/audit-model-evidence.js --strict
+      - name: Commit only two CET4 and one Gaokao proposal plus audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-task-results/worker-A/cet4-024/result.json
+          git add -- docs/model-task-results/worker-A/cet4-025/result.json
+          git add -- docs/model-task-results/worker-B/gaokao-001/result.json
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "No updates."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/cet4-024/result.json|docs/model-task-results/worker-A/cet4-025/result.json|docs/model-task-results/worker-B/gaokao-001/result.json|docs/model-quality-patches/example-quality-audit-20261018.json) ;;
+              *) echo "Unexpected file staged: $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content(ABC): replace 59 mechanical examples with natural bilingual usage"
+          git push origin HEAD:feat/moci-web-handoff-20261016
