@@ -1,0 +1,66 @@
+name: ABC curated 109 examples full QA (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-curated-109-quality-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  editorial_qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout handoff branch without touching main
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Use Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install exact dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Validate all 109 examples and whole repository
+        run: |
+          set -euo pipefail
+          node --test test/abc-curated-109.test.js
+          npm test
+          node scripts/audit-model-evidence.js --strict
+      - name: Refresh full ABC quality and numbered-source risk snapshots
+        run: |
+          set -euo pipefail
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
+          node - <<'NODE'
+          const fs=require('node:fs');
+          const a=JSON.parse(fs.readFileSync('docs/model-quality-patches/example-quality-audit-20261018.json'));
+          const b=JSON.parse(fs.readFileSync('docs/model-quality-patches/dangerous-example-check.json'));
+          if(a.rows!==26612||a.missing_pairs!==0||b.homograph_number_leaks.length!==0||b.metalinguistic.length!==0)
+            throw Error('Corpus integrity regression');
+          if(a.by_method['offline-context-first-draft']!==2871)
+            throw Error('109 mechanical drafts were not fully replaced');
+          console.log(JSON.stringify({rows:a.rows,missing:a.missing_pairs,
+            mechanically_flagged:a.flagged_unique,
+            offline:a.by_method['offline-context-first-draft'],
+            editorial_rewrites:a.by_method['editorial-context-rewrite-needs-review']},null,2));
+          NODE
+      - name: Commit only recalculated reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs(ABC): update full-corpus example quality metrics after 109 edits'
+          git fetch origin feat/moci-web-handoff-20261016
+          git rebase origin/feat/moci-web-handoff-20261016
+          git push origin HEAD:feat/moci-web-handoff-20261016
