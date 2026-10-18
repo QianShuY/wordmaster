@@ -1,0 +1,61 @@
+name: Refresh ABC quality counts after 103 contextual rewrites (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-audit-refresh-103-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh_quality_report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout isolated review branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Verify entire vocabulary and 103 contextual rewrites
+        run: |
+          set -euo pipefail
+          node --test test/abc-curated-80.test.js test/abc-curated-cet4-23.test.js
+          node scripts/apply-abc-curated-80.js
+          npm test
+          node scripts/audit-model-evidence.js --strict
+      - name: Recalculate full-coverage and mechanical-review metrics
+        run: |
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
+          node - <<'NODE'
+          const fs=require('node:fs');
+          const a=JSON.parse(fs.readFileSync('docs/model-quality-patches/example-quality-audit-20261018.json'));
+          const b=JSON.parse(fs.readFileSync('docs/model-quality-patches/dangerous-example-check.json'));
+          if(a.rows!==26612||a.missing_pairs!==0||b.homograph_number_leaks.length!==0||
+             b.metalinguistic.length!==0)throw Error('Quality regression');
+          console.log(JSON.stringify({flagged:a.flagged_unique,mechanical:a.by_method['offline-context-first-draft'],
+             curated:a.by_method['editorial-context-rewrite-needs-review'],
+             crossed:a.by_method['crossbook-sense-unverified']}));
+          NODE
+      - name: Commit only reproducible metric snapshots
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs(ABC): refresh quality baseline after 103 contextual repairs'
+          git fetch origin feat/moci-web-handoff-20261016
+          git rebase origin/feat/moci-web-handoff-20261016
+          git push origin HEAD:feat/moci-web-handoff-20261016
