@@ -2,31 +2,35 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const {run}=require('../scripts/apply-abc-numbered-senses');
+const {run,FILES}=require('../scripts/apply-abc-numbered-senses');
 const {scan}=require('../scripts/report-abc-dangerous-examples');
-const record=JSON.parse(fs.readFileSync(path.join(root,'docs/model-quality-patches/manual-natural-cet6-numbered-94-20261018.json'),'utf8'));
-test('all CET6 numbered-homograph pair examples are original-context aligned, unapproved and guarded',()=>{
+test('all 274 numbered CET6/TEM sense-specific examples are bilingual and source-bound',()=>{
  const x=run(root,{apply:false});
- assert.equal(x.all,127);
- assert.equal(x.already+x.edited,127);
+ assert.equal(x.all,274);
+ assert.equal(x.already+x.edited,274);
  assert.equal(x.installed,0);
  assert.equal(x.accepted,0);
  assert.equal(x.student_data_touched,false);
- assert.equal(record.entries.length,94);
- for(const p of record.entries){
+ const examples=FILES.flatMap(p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8')).entries);
+ assert.equal(examples.length,274);
+ const unique=new Set();
+ for(const p of examples){
+  const id=p.task_id+':'+p.row_index;
+  assert.equal(unique.has(id),false,id);
+  unique.add(id);
   assert.ok(/[一-鿿]/.test(p.translation));
-  assert.ok(p.example.toLowerCase().includes(p.word.replace(/ \d+$/,'').toLowerCase()));
-  assert.ok(!p.example.toLowerCase().includes(p.word.toLowerCase()));
+  assert.ok(p.example.toLowerCase().includes(p.word.replace(/ \d+$/,'').toLowerCase()),id);
+  assert.ok(!p.example.toLowerCase().includes(p.word.toLowerCase()),id);
  }
 });
-test('when edits land, there are no remaining CET6 homograph number leaks',()=>{
+test('numbered senses are fixed without hiding legitimate homograph source suffixes',()=>{
  const x=run(root,{apply:false});
  const a=scan(root,{save:false});
- if(x.already===127){
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('cet6-')).length,0);
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,147);
- }else{
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('cet6-')).length,94);
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,180);
+ assert.ok(a.all_numbered_headwords>=274);
+ assert.equal(a.metalinguistic.length,0);
+ if(x.already===274)assert.equal(a.homograph_number_leaks.length,0);
+ else {
+  assert.equal(x.already,127);
+  assert.equal(a.homograph_number_leaks.length,147);
  }
 });
