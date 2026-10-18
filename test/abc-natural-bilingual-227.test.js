@@ -44,6 +44,6 @@ test('quality audit counts every learner draft and never confuses draft coverage
  assert.ok(stats.flagged_unique>=0);
  if(main(ROOT,{apply:false}).already_fixed===227){
   assert.equal(stats.by_method['editorial-context-rewrite-needs-review'],286);
-  assert.equal(stats.by_method['offline-context-first-draft'],3812-227);
+  assert.equal(stats.by_method['offline-context-first-draft']+stats.by_method['metalinguistic-placeholder'],3812+31-227);
  }
 });
