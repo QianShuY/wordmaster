@@ -1,0 +1,38 @@
+name: Scan ABC special example risks (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-dangerous-examples-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  special_risks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: |
+          node scripts/report-abc-dangerous-examples.js --save
+          node --test test/abc-natural-bilingual-227.test.js
+      - name: Persist traceable risk list
+        run: |
+          set -euo pipefail
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs(ABC): enumerate every leftover metalinguistic and homograph-number risk'
+            git push origin HEAD:feat/moci-web-handoff-20261016
+          fi
