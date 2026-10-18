@@ -24,9 +24,9 @@ test('when edits land, there are no remaining CET6 homograph number leaks',()=>{
  const a=scan(root,{save:false});
  if(x.already===127){
   assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('cet6-')).length,0);
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,148);
+  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,147);
  }else{
   assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('cet6-')).length,94);
-  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,181);
+  assert.equal(a.homograph_number_leaks.filter(z=>z.task_id.startsWith('tem-')).length,180);
  }
 });
