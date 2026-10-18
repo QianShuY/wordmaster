@@ -4,9 +4,9 @@
   "missing_pairs": 0,
   "by_method": {
     "historical-proposal-untagged": 15539,
-    "editorial-context-rewrite-needs-review": 885,
+    "editorial-context-rewrite-needs-review": 934,
     "crossbook-sense-unverified": 5535,
-    "offline-context-first-draft": 3029,
+    "offline-context-first-draft": 2980,
     "existing-exact-source-candidate": 1624
   },
   "by_owner": {
@@ -15,141 +15,22 @@
     "C": 8839
   },
   "automatic_review_flags": {
-    "generic-adjective-template": 595,
-    "metalinguistic-nonexample": 60,
-    "generic-noun-template": 1542,
-    "generic-adverb-template": 74,
-    "generic-verb-template": 752,
-    "translation-metalinguistic": 89
+    "generic-verb-template": 727,
+    "translation-metalinguistic": 86,
+    "generic-noun-template": 1530,
+    "generic-adjective-template": 592,
+    "generic-adverb-template": 73,
+    "metalinguistic-nonexample": 57
   },
-  "flagged_unique": 3023,
+  "flagged_unique": 2979,
   "flagged_by_book": {
-    "cet4": 99,
-    "cet6": 146,
+    "cet4": 90,
+    "cet6": 111,
     "npee": 56,
     "tem": 2473,
     "gaokao": 249
   },
   "examples": [
-    {
-      "task_id": "cet4-033",
-      "row_index": 5,
-      "word": "these",
-      "pos": "a.&pron.",
-      "meaning": "这些",
-      "en": "The situation seemed these to everyone involved.",
-      "cn": "在场的人都觉得这种情况“这些”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 6,
-      "word": "they",
-      "pos": "pron.",
-      "meaning": "(主格)他(她)们",
-      "en": "The teacher wrote \"they\" on the board.",
-      "cn": "老师在黑板上写下了“they”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "metalinguistic-nonexample"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 8,
-      "word": "thickness",
-      "pos": "n.",
-      "meaning": "厚(度)；密(度)",
-      "en": "The article examines the role of thickness in everyday life.",
-      "cn": "这篇文章探讨了“厚”在日常生活中的作用。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 14,
-      "word": "thirdly",
-      "pos": "ad.",
-      "meaning": "第三",
-      "en": "She explained the decision thirdly during the meeting.",
-      "cn": "她在会议上以“第三”的方式解释了决定。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adverb-template"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 19,
-      "word": "this",
-      "pos": "a.",
-      "meaning": "这；今 pron.这",
-      "en": "The final design looked this to the reviewers.",
-      "cn": "评审人员认为最终设计显得“这”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-adjective-template"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 22,
-      "word": "those",
-      "pos": "pron.",
-      "meaning": "那些",
-      "en": "The teacher wrote \"those\" on the board.",
-      "cn": "老师在黑板上写下了“those”。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "metalinguistic-nonexample"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 29,
-      "word": "threaten",
-      "pos": "vt.&vi.",
-      "meaning": "威胁，恐吓",
-      "en": "We need to threaten the materials carefully.",
-      "cn": "我们需要仔细进行“威胁”这项操作。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 86,
-      "word": "toss",
-      "pos": "vt.&vi.",
-      "meaning": "扔，抛，掷",
-      "en": "The team decided to toss the equipment after the inspection.",
-      "cn": "团队决定检查后对设备进行“扔”的处理。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-verb-template",
-        "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-033",
-      "row_index": 90,
-      "word": "tour",
-      "pos": "n.&vi.",
-      "meaning": "旅行，游历",
-      "en": "They collected information about tour for the project.",
-      "cn": "他们为项目收集了有关“旅行”的资料。",
-      "method": "offline-context-first-draft",
-      "flags": [
-        "generic-noun-template"
-      ]
-    },
     {
       "task_id": "cet4-034",
       "row_index": 5,
@@ -1089,6 +970,125 @@
       "method": "offline-context-first-draft",
       "flags": [
         "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 60,
+      "word": "worst",
+      "pos": "a.",
+      "meaning": "最坏的 ad.最坏地",
+      "en": "The situation seemed worst to everyone involved.",
+      "cn": "在场的人都觉得这种情况“最坏的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 61,
+      "word": "worth",
+      "pos": "a.",
+      "meaning": "值…的 n.价值",
+      "en": "The situation seemed worth to everyone involved.",
+      "cn": "在场的人都觉得这种情况“值…的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 80,
+      "word": "yellow",
+      "pos": "a.",
+      "meaning": "黄(色)的 n.黄(色)",
+      "en": "The results were described as yellow in the report.",
+      "cn": "报告把结果描述为“黄的”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adjective-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 81,
+      "word": "yes",
+      "pos": "ad.",
+      "meaning": "是，是的",
+      "en": "The group responded yes to the announcement.",
+      "cn": "小组对公告作出了“是”的回应。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-adverb-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 82,
+      "word": "yesterday",
+      "pos": "n.&ad.",
+      "meaning": "昨天，昨日",
+      "en": "The article examines the role of yesterday in everyday life.",
+      "cn": "这篇文章探讨了“昨天”在日常生活中的作用。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 84,
+      "word": "yield",
+      "pos": "vt.&vi.",
+      "meaning": "出产 n.产量",
+      "en": "It may be necessary to yield the documents again.",
+      "cn": "可能需要再次对文件进行“出产”的处理。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 85,
+      "word": "you",
+      "pos": "pron.",
+      "meaning": "你，你们",
+      "en": "The teacher wrote \"you\" on the board.",
+      "cn": "老师在黑板上写下了“you”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "metalinguistic-nonexample"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 87,
+      "word": "your",
+      "pos": "pron.",
+      "meaning": "你的，你们的",
+      "en": "The expression \"your\" appears in the passage.",
+      "cn": "短文中出现了“your”这一表达。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "metalinguistic-nonexample",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-037",
+      "row_index": 88,
+      "word": "yours",
+      "pos": "pron.",
+      "meaning": "你们的(东西)",
+      "en": "The teacher wrote \"yours\" on the board.",
+      "cn": "老师在黑板上写下了“yours”。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "metalinguistic-nonexample"
       ]
     }
   ],
