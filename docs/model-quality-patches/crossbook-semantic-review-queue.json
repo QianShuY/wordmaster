@@ -1,16 +1,16 @@
 {
   "total_proposals": 26612,
-  "crossbook_to_review": 5535,
+  "crossbook_to_review": 5518,
   "missing_translation": 0,
   "headword_not_visible": 0,
-  "source_meaning_no_chinese_pairs": 2327,
-  "source_meaning_no_shared_characters": 629,
-  "ranked_rows": 2327,
+  "source_meaning_no_chinese_pairs": 2312,
+  "source_meaning_no_shared_characters": 614,
+  "ranked_rows": 2312,
   "by_book": {
-    "cet4": 1213,
+    "cet4": 1198,
     "cet6": 1571,
     "npee": 201,
-    "tem": 772,
+    "tem": 770,
     "gaokao": 1778
   },
   "high_priority_examples": [
@@ -47,66 +47,6 @@
     {
       "worker": "A",
       "task_id": "cet4-024",
-      "row_index": 27,
-      "word": "radius",
-      "source_pos": "n.",
-      "source_meaning": "半径",
-      "selected_sense": {
-        "pos": "n.",
-        "meaning": "半径"
-      },
-      "example": "The school is within a five-kilometre radius of the station.",
-      "translation": "学校位于车站五公里范围内。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 2,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 1,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-024",
-      "row_index": 35,
-      "word": "rainbow",
-      "source_pos": "n.",
-      "source_meaning": "虹，彩虹",
-      "selected_sense": {
-        "pos": "n.",
-        "meaning": "虹，彩虹"
-      },
-      "example": "“Trainbow” may be a misspelling of “rainbow.”",
-      "translation": "“trainbow”可能是“rainbow”的拼写错误。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 3,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 2,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-024",
       "row_index": 39,
       "word": "range",
       "source_pos": "n.",
@@ -130,36 +70,6 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 5,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-024",
-      "row_index": 40,
-      "word": "rank",
-      "source_pos": "n.",
-      "source_meaning": "排，横行；社会阶层",
-      "selected_sense": {
-        "pos": "n.",
-        "meaning": "排，横行；社会阶层"
-      },
-      "example": "She rose through the ranks to become a manager.",
-      "translation": "她逐步晋升，最终成为经理。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 7,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 6,
         "examples_of_shared_pairs": []
       },
       "approved": false
@@ -400,36 +310,6 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 3,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-025",
-      "row_index": 12,
-      "word": "regular",
-      "source_pos": "a.",
-      "source_meaning": "规则的；整齐的",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "规则的；整齐的"
-      },
-      "example": "The bus follows a regular route through the village.",
-      "translation": "公交车沿着固定路线穿过村庄。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 3,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 2,
         "examples_of_shared_pairs": []
       },
       "approved": false
@@ -737,36 +617,6 @@
     {
       "worker": "A",
       "task_id": "cet4-026",
-      "row_index": 10,
-      "word": "review",
-      "source_pos": "vt.",
-      "source_meaning": "再检查 n.复习",
-      "selected_sense": {
-        "pos": "vt.",
-        "meaning": "再检查 n.复习"
-      },
-      "example": "The magazine published a review of the new play.",
-      "translation": "这本杂志刊登了一篇对这部新戏的评论。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 5,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 4,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-026",
       "row_index": 15,
       "word": "reward",
       "source_pos": "n.",
@@ -787,66 +637,6 @@
       "priority": 6,
       "lexical_similarity": {
         "source_characters": 6,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 4,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-026",
-      "row_index": 21,
-      "word": "rid",
-      "source_pos": "vt.",
-      "source_meaning": "使摆脱，使去掉",
-      "selected_sense": {
-        "pos": "vt.",
-        "meaning": "使摆脱，使去掉"
-      },
-      "example": "She cleared the desk to rid it of dust.",
-      "translation": "她清理桌子上的灰尘。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 4,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 3,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-026",
-      "row_index": 28,
-      "word": "right",
-      "source_pos": "a.",
-      "source_meaning": "正确的 ad.对，正好",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "正确的 ad.对，正好"
-      },
-      "example": "Turn right at the next street.",
-      "translation": "在下一条街向右转。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 5,
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 4,
@@ -1000,36 +790,6 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 5,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-026",
-      "row_index": 76,
-      "word": "run",
-      "source_pos": "vi.",
-      "source_meaning": "跑，奔；行驶；流",
-      "selected_sense": {
-        "pos": "vi.",
-        "meaning": "跑，奔；行驶；流"
-      },
-      "example": "They run a small bakery on the high street.",
-      "translation": "他们在商业街经营一家小面包店。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 5,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 4,
         "examples_of_shared_pairs": []
       },
       "approved": false
@@ -1270,36 +1030,6 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 2,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-027",
-      "row_index": 78,
-      "word": "sense",
-      "source_pos": "n.",
-      "source_meaning": "感官；感觉；见识",
-      "selected_sense": {
-        "pos": "n.",
-        "meaning": "感官；感觉；见识"
-      },
-      "example": "The word has a different sense in this sentence.",
-      "translation": "这个词在这个句子里有不同的含义。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 6,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 5,
         "examples_of_shared_pairs": []
       },
       "approved": false
@@ -2747,36 +2477,6 @@
     {
       "worker": "A",
       "task_id": "cet4-031",
-      "row_index": 28,
-      "word": "strong",
-      "source_pos": "a.",
-      "source_meaning": "强壮的；擅长的",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "强壮的；擅长的"
-      },
-      "example": "A strong wind blew all afternoon.",
-      "translation": "整个下午都刮着大风。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 4,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 3,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-031",
       "row_index": 35,
       "word": "stuff",
       "source_pos": "n.",
@@ -2800,96 +2500,6 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 4,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-031",
-      "row_index": 42,
-      "word": "submit",
-      "source_pos": "vt.",
-      "source_meaning": "使服从 vi.服从",
-      "selected_sense": {
-        "pos": "vt.",
-        "meaning": "使服从 vi.服从"
-      },
-      "example": "Please submit the report by Friday.",
-      "translation": "请在星期五前提交报告。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 2,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 1,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-031",
-      "row_index": 45,
-      "word": "substantial",
-      "source_pos": "a.",
-      "source_meaning": "物质的；坚固的",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "物质的；坚固的"
-      },
-      "example": "The project needs substantial funding.",
-      "translation": "这个项目需要大量资金。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 4,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 3,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-031",
-      "row_index": 66,
-      "word": "suit",
-      "source_pos": "n.",
-      "source_meaning": "起拆，诉讼 vt.适合",
-      "selected_sense": {
-        "pos": "n.",
-        "meaning": "起拆，诉讼 vt.适合"
-      },
-      "example": "He wore a dark suit to the interview.",
-      "translation": "他穿着一套深色西装去面试。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 6,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 5,
         "examples_of_shared_pairs": []
       },
       "approved": false
@@ -3227,36 +2837,6 @@
     {
       "worker": "A",
       "task_id": "cet4-032",
-      "row_index": 80,
-      "word": "terminal",
-      "source_pos": "a.",
-      "source_meaning": "末端的 n.末端",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "末端的 n.末端"
-      },
-      "example": "Passengers waited inside the airport terminal.",
-      "translation": "乘客们在机场航站楼内等候。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 4,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 2,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-032",
       "row_index": 81,
       "word": "terrible",
       "source_pos": "a.",
@@ -3267,36 +2847,6 @@
       },
       "example": "We had terrible weather during the trip.",
       "translation": "旅行期间天气糟透了。",
-      "current_draft_method": "crossbook-sense-unverified",
-      "flags": {
-        "no_bigrams": true,
-        "no_characters": true,
-        "headword_not_visible": false,
-        "translation_empty": false
-      },
-      "priority": 6,
-      "lexical_similarity": {
-        "source_characters": 3,
-        "shared_character_count": 0,
-        "shared_pair_count": 0,
-        "source_pair_count": 2,
-        "examples_of_shared_pairs": []
-      },
-      "approved": false
-    },
-    {
-      "worker": "A",
-      "task_id": "cet4-032",
-      "row_index": 82,
-      "word": "terrific",
-      "source_pos": "a.",
-      "source_meaning": "可怕的；极大的",
-      "selected_sense": {
-        "pos": "a.",
-        "meaning": "可怕的；极大的"
-      },
-      "example": "The band gave a terrific performance at the festival.",
-      "translation": "乐队在音乐节上带来了一场精彩演出。",
       "current_draft_method": "crossbook-sense-unverified",
       "flags": {
         "no_bigrams": true,
@@ -4510,6 +4060,456 @@
         "shared_character_count": 0,
         "shared_pair_count": 0,
         "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-035",
+      "row_index": 93,
+      "word": "veteran",
+      "source_pos": "n.",
+      "source_meaning": "老兵，老手",
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "老兵，老手"
+      },
+      "example": "A veteran pilot led the rescue flight.",
+      "translation": "一位经验丰富的飞行员带领了救援飞行。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 4,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 1,
+      "word": "video",
+      "source_pos": "a.",
+      "source_meaning": "电视的 n.电视",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "电视的 n.电视"
+      },
+      "example": "We watched a short video about wildlife.",
+      "translation": "我们观看了一段关于野生动物的短片。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 4,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 2,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 11,
+      "word": "virtually",
+      "source_pos": "ad.",
+      "source_meaning": "实际上，事实上",
+      "selected_sense": {
+        "pos": "ad.",
+        "meaning": "实际上，事实上"
+      },
+      "example": "The two designs are virtually identical.",
+      "translation": "这两种设计几乎完全相同。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 3,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 2,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 17,
+      "word": "visual",
+      "source_pos": "a.",
+      "source_meaning": "看的；看得见的",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "看的；看得见的"
+      },
+      "example": "The film uses strong visual effects.",
+      "translation": "这部电影使用了强烈的视觉效果。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 4,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 18,
+      "word": "vital",
+      "source_pos": "a.",
+      "source_meaning": "生命的；有生命力的",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "生命的；有生命力的"
+      },
+      "example": "Clean water is vital to human health.",
+      "translation": "洁净的水对人类健康至关重要。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 5,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 40,
+      "word": "wander",
+      "source_pos": "vi.",
+      "source_meaning": "漫游；迷路；离题",
+      "selected_sense": {
+        "pos": "vi.",
+        "meaning": "漫游；迷路；离题"
+      },
+      "example": "We wandered through the old town.",
+      "translation": "我们在老城区闲逛。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 6,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 5,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 41,
+      "word": "want",
+      "source_pos": "vt.",
+      "source_meaning": "要 n.需要；缺乏",
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "要 n.需要；缺乏"
+      },
+      "example": "They want to improve the playground.",
+      "translation": "他们想改善这个游乐场。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 5,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 4,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-036",
+      "row_index": 60,
+      "word": "wealth",
+      "source_pos": "n.",
+      "source_meaning": "财富，财产；丰富",
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "财富，财产；丰富"
+      },
+      "example": "The library contains a wealth of useful information.",
+      "translation": "这座图书馆有大量有用信息。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 6,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 5,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 34,
+      "word": "wit",
+      "source_pos": "n.",
+      "source_meaning": "智力，才智，智能",
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "智力，才智，智能"
+      },
+      "example": "Her quick wit made everyone laugh.",
+      "translation": "她机敏风趣的话语逗笑了所有人。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 6,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 5,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 36,
+      "word": "withdraw",
+      "source_pos": "vt.",
+      "source_meaning": "收回；撤回 vi.撤退",
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "收回；撤回 vi.撤退"
+      },
+      "example": "The bank let him withdraw cash from the account.",
+      "translation": "银行允许他从账户里取出现金。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 6,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 4,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 44,
+      "word": "wonderful",
+      "source_pos": "a.",
+      "source_meaning": "惊人的；极好的",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "惊人的；极好的"
+      },
+      "example": "We had a wonderful time at the festival.",
+      "translation": "我们在节日庆典上玩得非常开心。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 3,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 2,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 46,
+      "word": "wooden",
+      "source_pos": "a.",
+      "source_meaning": "木制的；呆板的",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "木制的；呆板的"
+      },
+      "example": "The actor’s performance seemed wooden.",
+      "translation": "这位演员的表演显得很僵硬。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 4,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 57,
+      "word": "worry",
+      "source_pos": "vt.",
+      "source_meaning": "使烦恼 vi.发愁",
+      "selected_sense": {
+        "pos": "vt.",
+        "meaning": "使烦恼 vi.发愁"
+      },
+      "example": "Try not to worry about the weather.",
+      "translation": "尽量别为天气担心。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 4,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 3,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 62,
+      "word": "worthless",
+      "source_pos": "a.",
+      "source_meaning": "无价值的，无用的",
+      "selected_sense": {
+        "pos": "a.",
+        "meaning": "无价值的，无用的"
+      },
+      "example": "The broken phone was worthless without a charger.",
+      "translation": "这部坏手机没有充电器就毫无用处。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 2,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 1,
+        "examples_of_shared_pairs": []
+      },
+      "approved": false
+    },
+    {
+      "worker": "A",
+      "task_id": "cet4-037",
+      "row_index": 69,
+      "word": "wreck",
+      "source_pos": "n.",
+      "source_meaning": "失事；残骸 vt.破坏",
+      "selected_sense": {
+        "pos": "n.",
+        "meaning": "失事；残骸 vt.破坏"
+      },
+      "example": "The storm wrecked the fishing boat.",
+      "translation": "暴风雨摧毁了那艘渔船。",
+      "current_draft_method": "crossbook-sense-unverified",
+      "flags": {
+        "no_bigrams": true,
+        "no_characters": true,
+        "headword_not_visible": false,
+        "translation_empty": false
+      },
+      "priority": 6,
+      "lexical_similarity": {
+        "source_characters": 5,
+        "shared_character_count": 0,
+        "shared_pair_count": 0,
+        "source_pair_count": 4,
         "examples_of_shared_pairs": []
       },
       "approved": false
