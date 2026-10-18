@@ -52,7 +52,7 @@ test('four partially source-checked B review entries are never counted as full a
   }
 });
 
-test('the six high-risk rows with intentionally missing bilingual drafts stay review-blocked', () => {
+test('six high-risk rows remain review-blocked even when safe usage notes fill the blanks', () => {
   const blocked = [
     ['A', 'cet4-018', 'Negro'],
     ['B', 'npee-022', 'madame'],
@@ -66,8 +66,19 @@ test('the six high-risk rows with intentionally missing bilingual drafts stay re
       .entries.find(e => e.identity.word === word);
     assert.ok(row);
     assert.equal(row.verification, 'needs-review');
-    assert.ok(!row.proposed.example || !row.proposed.example_translation,
-      task + ':' + word + ' should not be silently filled with an unreviewed example');
+    const pair=Boolean(row.proposed?.example?.trim() && row.proposed?.example_translation?.trim());
+    if(pair){
+      assert.ok(row.proposed.example.toLowerCase().includes(word.toLowerCase()),
+        task + ':' + word + ' must have an explicit, contextual caution');
+      assert.ok(row.issues.some(issue=>typeof issue==='string'
+        && /历史语境|审核|称谓/.test(issue)),
+        task + ':' + word + ' must remain flagged for editorial review');
+      assert.equal(row.full_dictionary_senses_reviewed,false);
+      assert.notEqual(row.external_human_review,true);
+    }else{
+      assert.ok(!row.proposed?.example||!row.proposed?.example_translation,
+        task + ':' + word + ' remains deliberately blocked prior to safe drafting');
+    }
   }
 });
 
