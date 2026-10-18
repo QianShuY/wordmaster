@@ -47,10 +47,14 @@ function run(root=ROOT,{apply=false}={}){
   let modified=false;
   for(const edit of rows){
    const idx=edit.row_index,row=proposal.entries[idx],src=source.entries[idx],key=task+':'+idx;
+   const inputIdentity=src?.identity??{
+     source_entry:src?.source_entry,headword:src?.headword,pdf_page:src?.pdf_page,
+     handling:src?.handling,accepted_spellings:src?.accepted_spellings
+   };
    if(!row||!src||!isDeepStrictEqual(row.identity,edit.identity)
     ||!isDeepStrictEqual(row.original,edit.original)
-    ||!isDeepStrictEqual(src.identity,edit.identity)
-    ||!isDeepStrictEqual(src.current,edit.original))
+    ||!isDeepStrictEqual(inputIdentity,edit.identity)
+    ||!isDeepStrictEqual(src.current??null,edit.original))
     throw Error('Identity/original mismatch at '+key);
    if(row.verification!=='needs-review'||row.full_dictionary_senses_reviewed===true
     ||row.external_human_review===true)
