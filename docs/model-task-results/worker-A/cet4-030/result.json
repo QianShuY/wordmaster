@@ -332,11 +332,11 @@
         "example_translation": ""
       },
       "selected_sense": {
-        "pos": "vi.",
+        "pos": "vt.",
         "meaning": "指定，详细说明"
       },
       "proposed": {
-        "pos": "vi.",
+        "pos": "vt.",
         "meaning": "指定，详细说明",
         "phonetic": null,
         "example": "The instructions specify the correct temperature.",
@@ -346,13 +346,15 @@
       "evidence": [],
       "issues": [
         "跨词库候选仅通过词形/词性和粗略释义相似度筛选，不是词典审核；需逐条确认义项。",
-        "语义相似度是汉字重合启发式，并非专业词义比对。"
+        "语义相似度是汉字重合启发式，并非专业词义比对。",
+        "源词表误标 vi.，specify 在此处是及物动词，原始标签保留。",
+        "跨库例句的选定词义或词性已修正；尚未经独立全义项审核。"
       ],
-      "draft_method": "crossbook-sense-unverified",
+      "draft_method": "editorial-context-rewrite-needs-review",
       "verification": "needs-review",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
-      "change_reason": "基于词表原文的未审校例句候选；原词条身份和源文件完全保留。"
+      "change_reason": "修复词性/义项错位的候选例句，原始词表和用户学习状态不变。"
     },
     {
       "identity": {
@@ -768,20 +770,22 @@
         "pos": "vt.",
         "meaning": "纺；使旋转 n.旋转",
         "phonetic": null,
-        "example": "The wheels continued to spin after the engine stopped.",
-        "example_translation": "发动机停下后车轮还在旋转。",
+        "example": "She spun the wheel to select a prize.",
+        "example_translation": "她转动转盘来选择奖品。",
         "teaching_note": "第一轮例句草稿。未审校全部义项、习惯搭配、语态、音标；独立复核前不得进入正式词库。"
       },
       "evidence": [],
       "issues": [
         "跨词库候选仅通过词形/词性和粗略释义相似度筛选，不是词典审核；需逐条确认义项。",
-        "语义相似度是汉字重合启发式，并非专业词义比对。"
+        "语义相似度是汉字重合启发式，并非专业词义比对。",
+        "把不及物的 spin 例句改成与 vt. 一致的“使旋转”。",
+        "跨库例句的选定词义或词性已修正；尚未经独立全义项审核。"
       ],
-      "draft_method": "crossbook-sense-unverified",
+      "draft_method": "editorial-context-rewrite-needs-review",
       "verification": "needs-review",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
-      "change_reason": "基于词表原文的未审校例句候选；原词条身份和源文件完全保留。"
+      "change_reason": "修复词性/义项错位的候选例句，原始词表和用户学习状态不变。"
     },
     {
       "identity": {
@@ -1119,20 +1123,22 @@
         "pos": "n.",
         "meaning": "发起者 vt.发起",
         "phonetic": null,
-        "example": "A local company became the main sponsor of the event.",
-        "example_translation": "当地一家公司成为这场活动的主要赞助商。",
+        "example": "The senator was the sponsor of the new bill.",
+        "example_translation": "这位参议员是新法案的发起人。",
         "teaching_note": "第一轮例句草稿。未审校全部义项、习惯搭配、语态、音标；独立复核前不得进入正式词库。"
       },
       "evidence": [],
       "issues": [
         "跨词库候选仅通过词形/词性和粗略释义相似度筛选，不是词典审核；需逐条确认义项。",
-        "语义相似度是汉字重合启发式，并非专业词义比对。"
+        "语义相似度是汉字重合启发式，并非专业词义比对。",
+        "由“赞助商”改成源义“发起者”。",
+        "跨库例句的选定词义或词性已修正；尚未经独立全义项审核。"
       ],
-      "draft_method": "crossbook-sense-unverified",
+      "draft_method": "editorial-context-rewrite-needs-review",
       "verification": "needs-review",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
-      "change_reason": "基于词表原文的未审校例句候选；原词条身份和源文件完全保留。"
+      "change_reason": "修复词性/义项错位的候选例句，原始词表和用户学习状态不变。"
     },
     {
       "identity": {
@@ -2055,20 +2061,22 @@
         "pos": "n.",
         "meaning": "桩；赌金；奖品",
         "phonetic": null,
-        "example": "The project has a lot at stake if funding is cut.",
-        "example_translation": "如果资金被削减，这个项目将面临很大的风险。",
+        "example": "He drove a wooden stake into the ground.",
+        "example_translation": "他把一根木桩打进地里。",
         "teaching_note": "第一轮例句草稿。未审校全部义项、习惯搭配、语态、音标；独立复核前不得进入正式词库。"
       },
       "evidence": [],
       "issues": [
         "跨词库候选仅通过词形/词性和粗略释义相似度筛选，不是词典审核；需逐条确认义项。",
-        "语义相似度是汉字重合启发式，并非专业词义比对。"
+        "语义相似度是汉字重合启发式，并非专业词义比对。",
+        "由不在源义项中的 at stake 风险含义改为“桩”。",
+        "跨库例句的选定词义或词性已修正；尚未经独立全义项审核。"
       ],
-      "draft_method": "crossbook-sense-unverified",
+      "draft_method": "editorial-context-rewrite-needs-review",
       "verification": "needs-review",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
-      "change_reason": "基于词表原文的未审校例句候选；原词条身份和源文件完全保留。"
+      "change_reason": "修复词性/义项错位的候选例句，原始词表和用户学习状态不变。"
     },
     {
       "identity": {
@@ -2718,20 +2726,22 @@
         "pos": "n.",
         "meaning": "地位，身分",
         "phonetic": null,
-        "example": "You can check the status of your application online.",
-        "example_translation": "你可以在线查询申请状态。",
+        "example": "Her status as a senior researcher gave her access to the lab.",
+        "example_translation": "她作为高级研究员的身份让她得以进入实验室。",
         "teaching_note": "第一轮例句草稿。未审校全部义项、习惯搭配、语态、音标；独立复核前不得进入正式词库。"
       },
       "evidence": [],
       "issues": [
         "跨词库候选仅通过词形/词性和粗略释义相似度筛选，不是词典审核；需逐条确认义项。",
-        "语义相似度是汉字重合启发式，并非专业词义比对。"
+        "语义相似度是汉字重合启发式，并非专业词义比对。",
+        "由申请状态改成源义“地位、身份”。",
+        "跨库例句的选定词义或词性已修正；尚未经独立全义项审核。"
       ],
-      "draft_method": "crossbook-sense-unverified",
+      "draft_method": "editorial-context-rewrite-needs-review",
       "verification": "needs-review",
       "external_human_review": false,
       "full_dictionary_senses_reviewed": false,
-      "change_reason": "基于词表原文的未审校例句候选；原词条身份和源文件完全保留。"
+      "change_reason": "修复词性/义项错位的候选例句，原始词表和用户学习状态不变。"
     },
     {
       "identity": {
