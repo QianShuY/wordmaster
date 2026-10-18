@@ -4,10 +4,9 @@
   "missing_pairs": 0,
   "by_method": {
     "historical-proposal-untagged": 15539,
-    "editorial-context-rewrite-needs-review": 286,
+    "editorial-context-rewrite-needs-review": 315,
     "crossbook-sense-unverified": 5547,
     "offline-context-first-draft": 3587,
-    "metalinguistic-placeholder": 29,
     "existing-exact-source-candidate": 1624
   },
   "by_owner": {
@@ -18,18 +17,18 @@
   "automatic_review_flags": {
     "generic-noun-template": 1779,
     "generic-verb-template": 966,
-    "translation-metalinguistic": 137,
+    "translation-metalinguistic": 119,
     "generic-adjective-template": 673,
     "generic-adverb-template": 91,
-    "metalinguistic-nonexample": 91
+    "metalinguistic-nonexample": 62
   },
-  "flagged_unique": 3600,
+  "flagged_unique": 3571,
   "flagged_by_book": {
-    "cet4": 208,
+    "cet4": 202,
     "cet6": 411,
-    "npee": 61,
-    "tem": 2662,
-    "gaokao": 258
+    "npee": 56,
+    "tem": 2653,
+    "gaokao": 249
   },
   "examples": [
     {
@@ -621,19 +620,6 @@
     },
     {
       "task_id": "cet4-028",
-      "row_index": 11,
-      "word": "shall",
-      "pos": "aux.",
-      "meaning": "v.将要；必须；应",
-      "en": "The teacher wrote \"shall\" on the board.",
-      "cn": "老师在黑板上写下了“shall”。",
-      "method": "metalinguistic-placeholder",
-      "flags": [
-        "metalinguistic-nonexample"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
       "row_index": 14,
       "word": "shampoo",
       "pos": "vt.",
@@ -697,19 +683,6 @@
       "flags": [
         "generic-verb-template",
         "translation-metalinguistic"
-      ]
-    },
-    {
-      "task_id": "cet4-028",
-      "row_index": 47,
-      "word": "should",
-      "pos": "aux.",
-      "meaning": "v.将；万一；就",
-      "en": "The teacher wrote \"should\" on the board.",
-      "cn": "老师在黑板上写下了“should”。",
-      "method": "metalinguistic-placeholder",
-      "flags": [
-        "metalinguistic-nonexample"
       ]
     },
     {
@@ -1092,6 +1065,33 @@
       "meaning": "沾污；给…着色",
       "en": "It may be necessary to stain the documents again.",
       "cn": "可能需要再次对文件进行“沾污”的处理。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-verb-template",
+        "translation-metalinguistic"
+      ]
+    },
+    {
+      "task_id": "cet4-030",
+      "row_index": 53,
+      "word": "stale",
+      "pos": "n.",
+      "meaning": "陈腐的；走了气的",
+      "en": "They collected information about stale for the project.",
+      "cn": "他们为项目收集了有关“陈腐的”的资料。",
+      "method": "offline-context-first-draft",
+      "flags": [
+        "generic-noun-template"
+      ]
+    },
+    {
+      "task_id": "cet4-030",
+      "row_index": 61,
+      "word": "startle",
+      "pos": "vt.",
+      "meaning": "使大吃一惊 n.吃惊",
+      "en": "The team decided to startle the equipment after the inspection.",
+      "cn": "团队决定检查后对设备进行“使大吃一惊”的处理。",
       "method": "offline-context-first-draft",
       "flags": [
         "generic-verb-template",
