@@ -1,4 +1,4 @@
-name: Refresh ABC quality counts after 103 contextual rewrites (one-time)
+name: Refresh ABC quality counts after 152 contextual rewrites (one-time)
 
 on:
   push:
@@ -25,10 +25,10 @@ jobs:
           node-version: '24'
           cache: npm
       - run: npm ci --no-audit --no-fund
-      - name: Verify entire vocabulary and 103 contextual rewrites
+      - name: Verify entire vocabulary and 152 contextual rewrites
         run: |
           set -euo pipefail
-          node --test test/abc-curated-80.test.js test/abc-curated-cet4-23.test.js
+          node --test test/abc-curated-80.test.js test/abc-curated-cet4-23.test.js test/abc-curated-49.test.js
           node scripts/apply-abc-curated-80.js
           npm test
           node scripts/audit-model-evidence.js --strict
@@ -55,7 +55,7 @@ jobs:
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'docs(ABC): refresh quality baseline after 103 contextual repairs'
+          git commit -m 'docs(ABC): refresh quality baseline after 152 contextual repairs'
           git fetch origin feat/moci-web-handoff-20261016
           git rebase origin/feat/moci-web-handoff-20261016
           git push origin HEAD:feat/moci-web-handoff-20261016
