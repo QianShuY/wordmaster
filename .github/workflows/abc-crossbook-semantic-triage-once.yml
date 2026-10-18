@@ -1,0 +1,57 @@
+name: Create source-bound crossbook semantic review queue (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-crossbook-semantic-triage-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  semantic_triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Check exact review semantics and full corpus integrity
+        run: |
+          set -euo pipefail
+          node --check scripts/triage-abc-crossbook-senses.js
+          node --test test/abc-crossbook-semantic-triage.test.js
+          npm test
+          node scripts/audit-model-evidence.js --strict
+      - name: Save unapproved lexical mismatch review candidates
+        run: |
+          node scripts/triage-abc-crossbook-senses.js --save
+          node - <<'NODE'
+          const f=require('./docs/model-quality-patches/crossbook-semantic-review-queue.json');
+          if(f.total_proposals!==26612 ||f.approved!==0 ||f.installed!==0||
+             f.independently_verified_senses!==0||
+             f.crossbook_to_review<5000||!f.ranked_rows) throw Error('Invalid review report');
+          console.log(JSON.stringify({crossbook:f.crossbook_to_review,
+            flagged:f.ranked_rows,zeroBigrams:f.source_meaning_no_chinese_pairs,
+            zeroChars:f.source_meaning_no_shared_characters},null,2));
+          NODE
+      - name: Commit read-only quality review report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-quality-patches/crossbook-semantic-review-queue.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs(ABC): rank crossbook sense mismatches for explicit editorial review'
+          git fetch origin feat/moci-web-handoff-20261016
+          git rebase origin/feat/moci-web-handoff-20261016
+          git push origin HEAD:feat/moci-web-handoff-20261016
