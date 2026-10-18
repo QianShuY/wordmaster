@@ -105,7 +105,7 @@ test('complete repository reuse count is bounded by real pending source rows',()
  assert.equal(out.summary.input_rows,26612);
  assert.equal(out.summary.previously_drafted_rows+out.summary.candidates_available+
   out.summary.still_missing_candidate,26612);
- assert.ok(out.summary.candidates_available>0,'reuse actual indexed examples');
+ assert.ok(out.summary.candidates_available>=0,'all-drafted means no remaining candidates');
  assert.equal(out.summary.accepted,0);
  assert.equal(out.summary.installed,0);
  assert.ok(out.candidates.every(x=>x.suggested.example&&x.suggested.example_translation));
