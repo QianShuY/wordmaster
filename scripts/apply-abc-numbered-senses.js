@@ -9,13 +9,15 @@ const {isDeepStrictEqual}=require('node:util');
 const {ownerOf}=require('./audit-model-evidence');
 const ROOT=path.resolve(__dirname,'..');
 const FILES=['docs/model-quality-patches/manual-natural-cet6-numbered-94-20261018.json',
- 'docs/model-quality-patches/manual-natural-tem-matched-numbered-33-20261018.json'];
+ 'docs/model-quality-patches/manual-natural-tem-matched-numbered-33-20261018.json',
+ 'docs/model-quality-patches/tem-numbered-natural-early-83.json',
+ 'docs/model-quality-patches/tem-numbered-natural-late-64.json'];
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const fromInput=e=>e.identity??Object.fromEntries(['source_entry','headword','pdf_page','handling','accepted_spellings'].map(k=>[k,e[k]]));
 function run(root=ROOT,{apply=false}={}){
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'docs/model-tasks-20261015/manifest.json'),'utf8'));
  const metas=new Map(manifest.files.map(x=>[x.task_id,x]));
- const changes=[],groups=new Map(),unique=new Set(),expectedCount=127;
+ const changes=[],groups=new Map(),unique=new Set(),expectedCount=274;
  for(const file of FILES){
   const bundle=JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
   if(bundle.approved!==false||!Array.isArray(bundle.entries))throw Error('Invalid review-only bundle');
