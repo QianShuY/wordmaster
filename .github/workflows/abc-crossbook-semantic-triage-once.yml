@@ -31,8 +31,10 @@ jobs:
           node --test test/abc-crossbook-semantic-triage.test.js
           npm test
           node scripts/audit-model-evidence.js --strict
-      - name: Save unapproved lexical mismatch review candidates
+      - name: Recalculate complete draft quality and source-bound semantic review
         run: |
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
           node scripts/triage-abc-crossbook-senses.js --save
           node - <<'NODE'
           const f=require('./docs/model-quality-patches/crossbook-semantic-review-queue.json');
@@ -48,10 +50,12 @@ jobs:
         run: |
           set -euo pipefail
           git add -- docs/model-quality-patches/crossbook-semantic-review-queue.json
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'docs(ABC): rank crossbook sense mismatches for explicit editorial review'
+          git commit -m 'docs(ABC): refresh semantic mismatch queue and full 26612-row quality metrics'
           git fetch origin feat/moci-web-handoff-20261016
           git rebase origin/feat/moci-web-handoff-20261016
           git push origin HEAD:feat/moci-web-handoff-20261016
