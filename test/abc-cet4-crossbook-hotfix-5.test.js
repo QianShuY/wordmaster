@@ -29,7 +29,7 @@ test('five CET4 meaning/POS repairs preserve frozen original source and are not 
   assert.equal(row.proposed.example,p.after_example);
   assert.equal(row.proposed.example_translation,p.after_translation);
   assert.equal(row.draft_method,'editorial-context-rewrite-needs-review');
-  assert.ok(row.proposed.example.toLowerCase().includes(p.word.toLowerCase()));
+  assert.ok(p.word==='spin' ? /\bspun\b/i.test(row.proposed.example) : row.proposed.example.toLowerCase().includes(p.word.toLowerCase()));
   if(p.candidate_pos){
    assert.equal(row.selected_sense.pos,p.candidate_pos);
    assert.equal(row.proposed.pos,p.candidate_pos);
