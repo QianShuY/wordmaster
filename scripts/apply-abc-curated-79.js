@@ -60,14 +60,14 @@ function run(root=ROOT,{apply=false}={}){
      &&row.proposed?.example===edit.old_example
      &&row.proposed?.example_translation===edit.old_translation;
    const after=row.draft_method==='editorial-context-rewrite-needs-review'
-     &&row.proposed?.example===edit.example&&row.proposed?.example_translation===edit.translation && (!['significant','somewhat','constant'].includes(edit.word) || (row.selected_sense.pos===({significant:'a.',somewhat:'ad.',constant:'adj.'})[edit.word] && row.proposed.pos===({significant:'a.',somewhat:'ad.',constant:'adj.'})[edit.word]));
+     &&row.proposed?.example===edit.example&&row.proposed?.example_translation===edit.translation && (!['significant','somewhat','constant','correlate'].includes(edit.word) || (row.selected_sense.pos===({significant:'a.',somewhat:'ad.',constant:'adj.',correlate:'v.'})[edit.word] && row.proposed.pos===({significant:'a.',somewhat:'ad.',constant:'adj.',correlate:'v.'})[edit.word]));
    if(!before&&!after)throw Error('Concurrent edit detected '+key);
    if(after){summary.already++;continue;}
    row.proposed.example=edit.example;
    row.proposed.example_translation=edit.translation;
    // Some frozen legacy POS labels are visibly wrong. Correct the editable
    // candidate only and preserve both the original source and input hash.
-   const posFix={significant:'a.',somewhat:'ad.',constant:'adj.'};
+   const posFix={significant:'a.',somewhat:'ad.',constant:'adj.',correlate:'v.'};
    if(posFix[edit.word]){
      row.selected_sense.pos=posFix[edit.word];
      row.proposed.pos=posFix[edit.word];
@@ -76,7 +76,7 @@ function run(root=ROOT,{apply=false}={}){
    row.draft_method='editorial-context-rewrite-needs-review';
    if(!Array.isArray(row.issues))throw Error('Missing issue history '+key);
    row.issues.push('原机械语境已经逐词改写为实际用法，未经独立权威词典审校。');
-   row.issues.push(edit.review_note);
+   row.issues.push(edit.editorial_note);
    row.change_reason='逐词校改英文例句和中文翻译；原词条来源、词性、用户数据不变。';
    summary.edited++;changed++;
   }
