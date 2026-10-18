@@ -1,0 +1,66 @@
+name: ABC 227 natural bilingual examples (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-natural-227-quality-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  quality_rewrite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out handoff branch, never main
+        uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Preview 227 exact-source bilingual fixes
+        run: |
+          set -euo pipefail
+          node --check scripts/apply-abc-manual-natural-batches.js
+          node --test test/abc-natural-bilingual-227.test.js
+          node scripts/apply-abc-manual-natural-batches.js
+      - name: Apply only 227 curated bilingual pairs
+        run: node scripts/apply-abc-manual-natural-batches.js --apply
+      - name: Verify 26612 examples, source identity and zero accepted rows
+        run: |
+          set -euo pipefail
+          npm test
+          node scripts/audit-model-evidence.js --strict
+          node scripts/audit-abc-example-quality.js --save
+      - name: Commit only 3 expected result files and quality report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-task-results/worker-A/tem-001/result.json
+          git add -- docs/model-task-results/worker-A/tem-002/result.json
+          git add -- docs/model-task-results/worker-A/cet6-001/result.json
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "No editorial changes to commit."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/tem-001/result.json|docs/model-task-results/worker-A/tem-002/result.json|docs/model-task-results/worker-A/cet6-001/result.json|docs/model-quality-patches/example-quality-audit-20261018.json) ;;
+              *) echo "Unexpected staged file: $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "content(ABC): replace 227 TEM and CET6 mechanical examples with natural bilingual contexts"
+          git push origin HEAD:feat/moci-web-handoff-20261016
