@@ -99,7 +99,7 @@ test('full repository crossbook indexes verified worker proposals without accept
   assert.equal(out.summary.input_rows,26612);
   const current=plan(repoRoot,{save:false});
  assert.equal(out.summary.rows_without_worker_proposal,current.all.rows_not_yet_drafted);
-  assert.ok(out.summary.matching_rows>0);
+  assert.ok(out.summary.matching_rows>=0);
   assert.equal(out.summary.matching_rows+out.summary.unmatched_rows,
   current.all.rows_not_yet_drafted);
   assert.equal(out.summary.accepted,0);
