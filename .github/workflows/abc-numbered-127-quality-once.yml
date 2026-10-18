@@ -1,0 +1,65 @@
+name: Fix 127 CET6 and TEM numbered homographs (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-numbered-127-quality-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix_numbered:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Verify frozen source and proposed senses before editing
+        run: |
+          set -euo pipefail
+          node --check scripts/apply-abc-numbered-senses.js
+          node --test test/abc-numbered-natural-94.test.js
+          node scripts/apply-abc-numbered-senses.js
+      - name: Replace all 127 numbered homograph example drafts
+        run: node scripts/apply-abc-numbered-senses.js --apply
+      - name: Full integrity, learning-state and quality tests
+        run: |
+          set -euo pipefail
+          npm test
+          node scripts/audit-model-evidence.js --strict
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
+      - name: Commit only numbered-sense proposals and refreshed audit reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- docs/model-task-results
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "No pending changes."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/cet6-*/result.json|docs/model-task-results/worker-A/tem-*/result.json|docs/model-task-results/worker-B/tem-*/result.json|docs/model-quality-patches/example-quality-audit-20261018.json|docs/model-quality-patches/dangerous-example-check.json) ;;
+              *) echo "Unexpected file: $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'content(ABC): repair 127 numbered homograph example pairs with contextual translations'
+          git fetch origin feat/moci-web-handoff-20261016
+          git rebase origin/feat/moci-web-handoff-20261016
+          git push origin HEAD:feat/moci-web-handoff-20261016
