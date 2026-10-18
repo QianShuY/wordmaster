@@ -34,3 +34,22 @@ test('no proposal coverage loss after editorial examples',()=>{
  assert.equal(d.installed,0);
  assert.equal(d.approved,0);
 });
+
+test('noun example grammar and sandboxed sandy source POS correction remain stable',()=>{
+ const b=(task,index)=>JSON.parse(fs.readFileSync(path.join(ROOT,
+  'docs/model-task-results','worker-A',task,'result.json'),'utf8')).entries[index];
+ const sandy=b('cet4-027',6);
+ assert.equal(sandy.identity.word,'sandy');
+ assert.equal(sandy.original.pos,'n.','the frozen source still records its old error');
+ assert.equal(sandy.selected_sense.pos,'a.');
+ assert.equal(sandy.proposed.pos,'a.');
+ assert.match(sandy.proposed.example,/sandy beach/);
+ const catholic=b('cet6-002',28),ceramic=b('cet6-002',34);
+ for(const row of [catholic,ceramic]){
+  assert.equal(row.original.pos,'n.');
+  assert.equal(row.selected_sense.pos,'n.');
+  assert.equal(row.verification,'needs-review');
+ }
+ assert.match(catholic.proposed.example,/a Catholic/);
+ assert.match(ceramic.proposed.example,/a ceramic/);
+});
