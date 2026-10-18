@@ -1,4 +1,4 @@
-name: Fix 127 CET6 and TEM numbered homographs (one-time)
+name: Fix all 274 CET6 and TEM numbered homographs (one-time)
 
 on:
   push:
@@ -30,7 +30,7 @@ jobs:
           node --check scripts/apply-abc-numbered-senses.js
           node --test test/abc-numbered-natural-94.test.js
           node scripts/apply-abc-numbered-senses.js
-      - name: Replace all 127 numbered homograph example drafts
+      - name: Replace all 274 numbered homograph example drafts
         run: node scripts/apply-abc-numbered-senses.js --apply
       - name: Full integrity, learning-state and quality tests
         run: |
@@ -59,7 +59,7 @@ jobs:
           done <<< "$staged"
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'content(ABC): repair 127 numbered homograph example pairs with contextual translations'
+          git commit -m 'content(ABC): repair 274 numbered homograph example pairs with contextual translations'
           git fetch origin feat/moci-web-handoff-20261016
           git rebase origin/feat/moci-web-handoff-20261016
           git push origin HEAD:feat/moci-web-handoff-20261016
