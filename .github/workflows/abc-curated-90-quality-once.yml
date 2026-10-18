@@ -1,0 +1,64 @@
+name: Complete 90 curated CET4/CET6 natural examples (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-curated-90-quality-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  curated_90:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Validate source-locked 90 contextual replacements
+        run: |
+          set -euo pipefail
+          node --check scripts/apply-abc-curated-90.js
+          node --test test/abc-curated-90.test.js
+          node scripts/apply-abc-curated-90.js
+      - name: Apply 90 targeted natural bilingual contexts
+        run: node scripts/apply-abc-curated-90.js --apply
+      - name: Full suite and source audit
+        run: |
+          set -euo pipefail
+          npm test
+          node scripts/audit-model-evidence.js --strict
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
+      - name: Commit only three curated source task results and audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- docs/model-task-results/worker-A/cet4-026/result.json
+          git add -- docs/model-task-results/worker-A/cet4-027/result.json
+          git add -- docs/model-task-results/worker-A/cet6-002/result.json
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then exit 0; fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/cet4-026/result.json|docs/model-task-results/worker-A/cet4-027/result.json|docs/model-task-results/worker-A/cet6-002/result.json|docs/model-quality-patches/example-quality-audit-20261018.json|docs/model-quality-patches/dangerous-example-check.json) ;;
+              *) echo "Unexpected staged file $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'content(ABC): replace 90 CET4/CET6 mechanical examples with usage-context translations'
+          git fetch origin feat/moci-web-handoff-20261016
+          git rebase origin/feat/moci-web-handoff-20261016
+          git push origin HEAD:feat/moci-web-handoff-20261016
