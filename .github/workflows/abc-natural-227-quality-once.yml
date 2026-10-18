@@ -32,6 +32,7 @@ jobs:
           set -euo pipefail
           node --check scripts/apply-abc-manual-natural-batches.js
           node --test test/abc-natural-bilingual-227.test.js
+          # Includes both context-template and metalinguistic draft classifications.
           node scripts/apply-abc-manual-natural-batches.js
       - name: Apply only 227 curated bilingual pairs
         run: node scripts/apply-abc-manual-natural-batches.js --apply
