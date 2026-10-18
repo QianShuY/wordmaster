@@ -1,0 +1,64 @@
+name: Replace 29 mention-only ABC examples (one-time)
+
+on:
+  push:
+    branches: ['feat/moci-web-handoff-20261016']
+    paths:
+      - '.github/workflows/abc-29-special-usage-once.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  usage_rewrite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/moci-web-handoff-20261016
+          persist-credentials: true
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Source-guarded preflight for all 29 special-use words
+        run: |
+          set -euo pipefail
+          node --check scripts/apply-abc-29-special-contexts.js
+          node --test test/abc-29-special-usage.test.js
+          node scripts/apply-abc-29-special-contexts.js
+      - name: Apply 29 manually authored usage examples
+        run: node scripts/apply-abc-29-special-contexts.js --apply
+      - name: Audit and retest all 26612 source-bound examples
+        run: |
+          set -euo pipefail
+          npm test
+          node scripts/audit-model-evidence.js --strict
+          node scripts/audit-abc-example-quality.js --save
+          node scripts/report-abc-dangerous-examples.js --save
+          node --test test/abc-29-special-usage.test.js
+      - name: Commit only expected source-bound result proposals and audit reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A -- docs/model-task-results
+          git add -- docs/model-quality-patches/example-quality-audit-20261018.json
+          git add -- docs/model-quality-patches/dangerous-example-check.json
+          staged="$(git diff --cached --name-only)"
+          if [ -z "$staged" ]; then
+            echo "All 29 examples were already applied."
+            exit 0
+          fi
+          while IFS= read -r file; do
+            case "$file" in
+              docs/model-task-results/worker-A/*/result.json|docs/model-task-results/worker-B/*/result.json|docs/model-quality-patches/example-quality-audit-20261018.json|docs/model-quality-patches/dangerous-example-check.json) ;;
+              *) echo "Unexpected file in special-usage patch: $file" >&2; exit 1 ;;
+            esac
+          done <<< "$staged"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'content(ABC): fix all 29 metalinguistic placeholder sentences'
+          git push origin HEAD:feat/moci-web-handoff-20261016
