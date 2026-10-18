@@ -1,0 +1,141 @@
+{
+  "batch": "cet4-crossbook-sense-hotfix",
+  "approved": false,
+  "entries": [
+    {
+      "task_id": "cet4-030",
+      "worker": "A",
+      "index": 19,
+      "word": "spin",
+      "original": {
+        "pos": "vt.",
+        "meaning": "纺；使旋转 n.旋转",
+        "phonetic": "spin",
+        "example": "",
+        "example_translation": ""
+      },
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 3853,
+        "word": "spin",
+        "headword": "spin",
+        "homograph": null,
+        "source_raw": "spin [spin] vt.纺；使旋转 n.旋转"
+      },
+      "before_example": "The wheels continued to spin after the engine stopped.",
+      "before_translation": "发动机停下后车轮还在旋转。",
+      "after_example": "She spun the wheel to select a prize.",
+      "after_translation": "她转动转盘来选择奖品。",
+      "candidate_pos": null,
+      "note": "把不及物的 spin 例句改成与 vt. 一致的“使旋转”。"
+    },
+    {
+      "task_id": "cet4-030",
+      "worker": "A",
+      "index": 28,
+      "word": "sponsor",
+      "original": {
+        "pos": "n.",
+        "meaning": "发起者 vt.发起",
+        "phonetic": "ˈspɔnsə",
+        "example": "",
+        "example_translation": ""
+      },
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 3862,
+        "word": "sponsor",
+        "headword": "sponsor",
+        "homograph": null,
+        "source_raw": "sponsor [ˈspɔnsə] n.发起者 vt.发起"
+      },
+      "before_example": "A local company became the main sponsor of the event.",
+      "before_translation": "当地一家公司成为这场活动的主要赞助商。",
+      "after_example": "The senator was the sponsor of the new bill.",
+      "after_translation": "这位参议员是新法案的发起人。",
+      "candidate_pos": null,
+      "note": "由“赞助商”改成源义“发起者”。"
+    },
+    {
+      "task_id": "cet4-030",
+      "worker": "A",
+      "index": 52,
+      "word": "stake",
+      "original": {
+        "pos": "n.",
+        "meaning": "桩；赌金；奖品",
+        "phonetic": "steik",
+        "example": "",
+        "example_translation": ""
+      },
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 3890,
+        "word": "stake",
+        "headword": "stake",
+        "homograph": null,
+        "source_raw": "stake [steik] n.桩；赌金；奖品"
+      },
+      "before_example": "The project has a lot at stake if funding is cut.",
+      "before_translation": "如果资金被削减，这个项目将面临很大的风险。",
+      "after_example": "He drove a wooden stake into the ground.",
+      "after_translation": "他把一根木桩打进地里。",
+      "candidate_pos": null,
+      "note": "由不在源义项中的 at stake 风险含义改为“桩”。"
+    },
+    {
+      "task_id": "cet4-030",
+      "worker": "A",
+      "index": 69,
+      "word": "status",
+      "original": {
+        "pos": "n.",
+        "meaning": "地位，身分",
+        "phonetic": "ˈsteitəs",
+        "example": "",
+        "example_translation": ""
+      },
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 3909,
+        "word": "status",
+        "headword": "status",
+        "homograph": null,
+        "source_raw": "status [ˈsteitəs] n.地位，身分"
+      },
+      "before_example": "You can check the status of your application online.",
+      "before_translation": "你可以在线查询申请状态。",
+      "after_example": "Her status as a senior researcher gave her access to the lab.",
+      "after_translation": "她作为高级研究员的身份让她得以进入实验室。",
+      "candidate_pos": null,
+      "note": "由申请状态改成源义“地位、身份”。"
+    },
+    {
+      "task_id": "cet4-030",
+      "worker": "A",
+      "index": 8,
+      "word": "specify",
+      "original": {
+        "pos": "vi.",
+        "meaning": "指定，详细说明",
+        "phonetic": "ˈspesifai",
+        "example": "",
+        "example_translation": ""
+      },
+      "identity": {
+        "source_file": "cet4.txt",
+        "source_line": 3842,
+        "word": "specify",
+        "headword": "specify",
+        "homograph": null,
+        "source_raw": "specify [ˈspesifai] vi.指定，详细说明"
+      },
+      "before_example": "The instructions specify the correct temperature.",
+      "before_translation": "说明书明确规定了正确的温度。",
+      "after_example": "The instructions specify the correct temperature.",
+      "after_translation": "说明书明确规定了正确的温度。",
+      "candidate_pos": "vt.",
+      "note": "源词表误标 vi.，specify 在此处是及物动词，原始标签保留。"
+    }
+  ]
+}
