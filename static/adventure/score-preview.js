@@ -1,6 +1,6 @@
 'use strict';
 (()=>{
- const descriptions={120:'灯已举起。守卫逼近，低弦沉沉压住石桥。',60:'风里透出一线光。熟悉的主题渐渐抬起，旅人稳住脚步。',30:'现在，轮到你向前。铜管展开主题，带着记忆冲破最后的雾。'};
+ const descriptions={120:'灯已举起。清音吉他划过低弦，贝斯藏在桥下的阴影里。',60:'脚步不再后退。失真吉他响起，鼓点托起熟悉的主题。',30:'现在，轮到你向前。主奏吉他与鼓组齐进，带着记忆冲破最后的雾。'};
  let health=120,started=false;
  document.querySelectorAll('[data-hp]').forEach(button=>button.addEventListener('click',()=>{
   health=Number(button.dataset.hp);started=true;

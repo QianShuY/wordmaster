@@ -12,6 +12,15 @@ function setup(saved){
  return {api:window.MociBattleAudio,track:tracks[0],tracks,contexts,events,windowEvents,node,storage,document,frames,blur(){focused=false;windowEvents.blur();},focus(){focused=true;windowEvents.focus();},gesture(){events.pointerdown({isTrusted:true,type:'pointerdown'});},frame(now=2000){for(const [id,fn]of [...frames]){frames.delete(id);fn(now);}}};
 }
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('guitar and bass source samples match their attributed offline manifest',()=>{
+ const {createHash}=require('node:crypto'),folder=path.join(__dirname,'../scripts/audio-samples/fluidr3'),manifest=JSON.parse(fs.readFileSync(path.join(folder,'manifest.json'),'utf8'));
+ assert.equal(manifest.license,'CC BY 3.0');assert.equal(manifest.sample_rate,22050);
+ for(const instrument of ['overdriven_guitar','electric_bass_pick','electric_guitar_clean']){
+  assert.ok(manifest.packs[instrument].notes.length>=8);
+  for(const note of manifest.packs[instrument].notes){assert.equal(path.basename(note.file),note.file);const bytes=fs.readFileSync(path.join(folder,note.file));assert.equal(createHash('sha256').update(bytes).digest('hex'),note.sha256);assert.equal(bytes.toString('ascii',0,4),'RIFF');}
+ }
+ assert.ok(fs.readFileSync(path.join(__dirname,'../static/adventure/assets/AUDIO_CREDITS.md'),'utf8').includes('Benjamin Gleitzman'));
+});
 test('packaged score layers are audible unclipped PCM with the same loop duration',()=>{
  const frames=[];
  for(const name of ['letters-at-the-mist-bridge.wav','mist-bridge-tension.wav','mist-bridge-last-stand.wav']){
