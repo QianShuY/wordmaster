@@ -10,4 +10,8 @@
  }));
  function sync(){if(started)window.MociBattleAudio?.setState('choose',health,document.hidden||!document.hasFocus());}
  window.addEventListener('focus',sync);document.addEventListener('visibilitychange',sync);
+ document.querySelectorAll('[data-impact]').forEach(button=>button.addEventListener('click',async()=>{
+  await window.MociBattleAudio?.previewImpact(button.dataset.impact);
+  document.getElementById('impactPreviewStatus').textContent='正在试听：'+button.textContent;
+ }));
 })();

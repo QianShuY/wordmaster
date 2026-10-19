@@ -12,3 +12,5 @@
 保留来源与变更说明不表示原作者为本项目背书。采样来源、输入文件 SHA-256、每个转换后 WAV 的 SHA-256 见 `scripts/audio-samples/fluidr3/manifest.json`。运行时使用已经渲染好的音乐文件，无需联网加载这些音色。
 
 鼓组、电子脉冲、合成器与弦乐为本地程序合成，无第三方录音采样。
+
+`impact-*-v1.wav` 七份打击音效由 `scripts/render-boss-impacts.js` 原创合成，包括噪声滤波、非谐振动、短空间反射和碎裂层次，无第三方录音采样。

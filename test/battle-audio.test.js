@@ -1,17 +1,41 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
 const script=fs.readFileSync(path.join(__dirname,'../static/adventure/battle-audio.js'),'utf8');
-function setup(saved){
- const nodes=new Map(),events={},windowEvents={},tracks=[],contexts=[],storage=new Map(saved?[['moci-battle-audio-v1',JSON.stringify(saved)]]:[]);let focused=true,frames=new Map(),frameId=0;
+function setup(saved,impacts=false){
+ const nodes=new Map(),events={},windowEvents={},tracks=[],contexts=[],pendingImpacts=new Map(),requests=[],storage=new Map(saved?[['moci-battle-audio-v1',JSON.stringify(saved)]]:[]);let focused=true,frames=new Map(),frameId=0;
  const node=id=>{if(!nodes.has(id))nodes.set(id,{value:'',textContent:'',listeners:{},attrs:{},addEventListener(type,fn){this.listeners[type]=fn;},setAttribute(k,v){this.attrs[k]=v;}});return nodes.get(id);};
  const document={hidden:false,hasFocus:()=>focused,body:{classList:{contains:()=>true}},querySelector:()=>({after(){}}),createElement:()=>({setAttribute(){}}),getElementById:node,addEventListener:(type,fn)=>events[type]=fn};
  class Audio{constructor(){this.volume=0;this.paused=true;this.plays=0;tracks.push(this);}play(){this.plays++;this.paused=false;return this.pending||Promise.resolve();}pause(){this.paused=true;}}
- class Context{constructor(){this.state='running';this.currentTime=0;this.sampleRate=1000;this.oscillators=[];this.buffers=[];contexts.push(this);}createGain(){return {gain:{value:1,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(){}},connect(){},disconnect(){}};}createOscillator(){const node={type:'',stopped:false,frequency:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){},disconnect(){},start(){},stop(){this.stopped=true;}};this.oscillators.push(node);return node;}createBuffer(c,n){return {getChannelData:()=>new Float32Array(n)};}createBufferSource(){const node={connect(){},disconnect(){},start(){},stop(){}};this.buffers.push(node);return node;}createBiquadFilter(){return {frequency:{},connect(){},disconnect(){}};}resume(){this.state='running';return Promise.resolve();}suspend(){this.state='suspended';return Promise.resolve();}close(){this.state='closed';return Promise.resolve();}}
+ class Context{constructor(){this.state='running';this.currentTime=0;this.sampleRate=1000;this.oscillators=[];this.buffers=[];contexts.push(this);}createGain(){return {gain:{value:1,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(){}},connect(){},disconnect(){}};}createOscillator(){const node={type:'',stopped:false,frequency:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){},disconnect(){},start(){},stop(){this.stopped=true;}};this.oscillators.push(node);return node;}createBuffer(c,n){return {getChannelData:()=>new Float32Array(n)};}createBufferSource(){const node={connect(){},disconnect(){},start(at){this.at=at;this.started=true;},stop(){this.stopped=true;}};this.buffers.push(node);return node;}createBiquadFilter(){return {frequency:{},connect(){},disconnect(){}};}resume(){this.state='running';return Promise.resolve();}suspend(){this.state='suspended';return Promise.resolve();}close(){this.state='closed';return Promise.resolve();}}
  const window={AudioContext:Context,addEventListener:(t,f)=>windowEvents[t]=f};
- vm.runInNewContext(script,{window,document,Audio,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},performance:{now:()=>0},requestAnimationFrame:f=>{frames.set(++frameId,f);return frameId;},cancelAnimationFrame:id=>frames.delete(id),console});
- return {api:window.MociBattleAudio,track:tracks[0],tracks,contexts,events,windowEvents,node,storage,document,frames,blur(){focused=false;windowEvents.blur();},focus(){focused=true;windowEvents.focus();},gesture(){events.pointerdown({isTrusted:true,type:'pointerdown'});},frame(now=2000){for(const [id,fn]of [...frames]){frames.delete(id);fn(now);}}};
+ if(impacts)Context.prototype.decodeAudioData=async bytes=>({file:bytes.file});
+ const fetchImpact=impacts?url=>{requests.push(url);return Promise.resolve({ok:true,arrayBuffer:()=>impacts.deferred?new Promise(resolve=>pendingImpacts.set(url,resolve)):Promise.resolve({file:url})});}:undefined;
+ vm.runInNewContext(script,{fetch:fetchImpact,window,document,Audio,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},performance:{now:()=>0},requestAnimationFrame:f=>{frames.set(++frameId,f);return frameId;},cancelAnimationFrame:id=>frames.delete(id),console});
+ return {requests,resolveImpact(name){pendingImpacts.get('assets/impact-'+name+'-v1.wav')?.({file:name});},api:window.MociBattleAudio,track:tracks[0],tracks,contexts,events,windowEvents,node,storage,document,frames,blur(){focused=false;windowEvents.blur();},focus(){focused=true;windowEvents.focus();},gesture(){events.pointerdown({isTrusted:true,type:'pointerdown'});},frame(now=2000){for(const [id,fn]of [...frames]){frames.delete(id);fn(now);}}};
 }
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('a shield break has one composite impact, not a normal hit plus a second break',async()=>{
+ const s=setup(undefined,true);s.api.setState('choose',120,false);s.gesture();await flush();s.frame();assert.equal(s.requests.length,7);assert.equal(s.contexts[0].buffers.length,0,'Warm decode does not play');
+ s.events['moci-boss-state']({detail:'break'});s.api.result({ok:true,spell:'attack',shieldBroken:true,received:0});await flush();
+ assert.equal(s.contexts[0].buffers.length,1);assert.match(s.contexts[0].buffers[0].buffer.file,/impact-break-v1/);
+ await s.api.previewImpact('defend');await flush();assert.equal(s.contexts[0].buffers[0].stopped,true);assert.match(s.contexts[0].buffers.at(-1).buffer.file,/impact-defend-v1/);
+});
+test('contact briefly ducks music, delayed recoil stays distinct, and the music recovers',async()=>{
+ const s=setup(undefined,true);s.api.setState('choose',120,false);s.gesture();await flush();s.frame();const base=s.track.volume;
+ s.api.result({ok:true,spell:'attack',received:8});await flush();const buffers=s.contexts[0].buffers;assert.equal(buffers.length,2);assert.match(buffers[0].buffer.file,/impact-ink/);assert.match(buffers[1].buffer.file,/impact-wound/);assert.ok(buffers[1].at-buffers[0].at>.3);
+ s.frame(300);assert.ok(s.track.volume<base*.6);s.frame(1300);assert.equal(s.track.volume,base);
+ s.node('battleSfx').listeners.click();assert.ok(buffers.every(b=>b.stopped));assert.equal(s.track.volume,base);
+});
+test('an impact decoded after pausing cannot play a ghost hit',async()=>{
+ const s=setup(undefined,{deferred:true});s.api.setState('choose',120,false);s.gesture();await flush();s.api.result({ok:true,spell:'attack'});s.api.setState('question',120,true);s.resolveImpact('ink');await flush();assert.equal(s.contexts[0].buffers.length,0);
+});
+test('packaged impact shots have bounded peaks and distinct attack/debris lengths',()=>{
+ const durations={};for(const name of ['ink','break','defend','wound','slam','sweep','storm']){
+  const b=fs.readFileSync(path.join(__dirname,'../static/adventure/assets/impact-'+name+'-v1.wav'));assert.equal(b.toString('ascii',0,4),'RIFF');assert.equal(b.readUInt16LE(22),2);assert.equal(b.readUInt32LE(40),b.length-44);
+  let peak=0;for(let i=44;i<b.length;i+=2)peak=Math.max(peak,Math.abs(b.readInt16LE(i)));assert.ok(peak>20000&&peak<29000);assert.ok(Math.abs(b.readInt16LE(b.length-2))<100);durations[name]=(b.length-44)/(b.readUInt32LE(24)*4);
+ }
+ assert.ok(durations.break>durations.ink&&durations.slam>durations.wound);
+});
 test('guitar and bass source samples match their attributed offline manifest',()=>{
  const {createHash}=require('node:crypto'),folder=path.join(__dirname,'../scripts/audio-samples/fluidr3'),manifest=JSON.parse(fs.readFileSync(path.join(folder,'manifest.json'),'utf8'));
  assert.equal(manifest.license,'CC BY 3.0');assert.equal(manifest.sample_rate,22050);
