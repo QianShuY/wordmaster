@@ -14,3 +14,5 @@
 鼓组、电子脉冲、合成器与弦乐为本地程序合成，无第三方录音采样。
 
 `impact-*-v1.wav` 七份打击音效由 `scripts/render-boss-impacts.js` 原创合成，包括噪声滤波、非谐振动、短空间反射和碎裂层次，无第三方录音采样。
+
+《雾桥彼岸》（`beyond-the-mist-v1.wav`）为章节结局原创配乐，由 `scripts/render-ending-music.js` 离线渲染。沿用以上 FluidR3 GM 的 clean electric guitar 与 picked electric bass 音色；柔弦、钟音和空间反射为原创合成。未使用外部歌曲录音或旋律转录。
