@@ -7,7 +7,7 @@
  const strip=document.createElement('section');strip.className='battle-score';strip.setAttribute('aria-label','战斗声音');
  strip.innerHTML='<span class="score-name">♫ 雾桥之誓 <small id="battleScorePhase">· 战斗配乐</small></span><button id="battleMusic" type="button">配乐</button><label>音乐<input id="battleMusicVolume" aria-label="战斗配乐音量" type="range" min="0" max="100"><output id="battleMusicValue"></output></label><button id="battleSfx" type="button">音效</button><label>音效<input id="battleSfxVolume" aria-label="战斗音效音量" type="range" min="0" max="100"><output id="battleSfxValue"></output></label><p class="audio-status" id="battleAudioStatus" role="status"></p>';
  heading.after(strip);
- const musicRevision='20261018-continuous3';
+ const musicRevision='20261019-counterattack4';
  const get=id=>document.getElementById(id),track=new Audio('assets/letters-at-the-mist-bridge.wav?v='+musicRevision);track.loop=true;track.preload='none';track.volume=0;
  const stems=['mist-bridge-tension.wav','mist-bridge-last-stand.wav'].map(file=>{const audio=new Audio('assets/'+file+'?v='+musicRevision);audio.loop=true;audio.preload='none';audio.volume=0;return audio;}),tracks=[track,...stems];
  let ctx,master,unlocked=false,phase=battle?'camp':'preview',hp=120,battlePaused=false,disposed=false,version=0,frame=0;
@@ -15,7 +15,9 @@
  const blocked=()=>disposed||document.hidden||!document.hasFocus()||battlePaused;
  const active=()=>!battle||!['camp','won','lost','fallen'].includes(phase);
  const volume=()=>prefs.musicVolume/100*.55;
- const mix=()=>[volume(),hp<=60?volume()*.72:0,hp<=30?volume()*.66:0];
+ // Late battle shifts perspective from the threatening warden to the traveler.
+ // The heroic arrangement replaces the tension layer, avoiding three full lines.
+ const mix=()=>hp<=30?[volume()*.18,0,volume()]:hp<=60?[volume()*.9,volume()*.65,0]:[volume(),0,0];
  function paint(){for(const [id,k,label]of [['battleMusic','music','配乐'],['battleSfx','effects','音效']]){get(id).setAttribute('aria-pressed',String(prefs[k]));get(id).textContent=label+' · '+(prefs[k]?'开':'关');}for(const [id,k,out]of [['battleMusicVolume','musicVolume','battleMusicValue'],['battleSfxVolume','effectsVolume','battleSfxValue']]){get(id).value=prefs[k];get(out).textContent=Math.round(prefs[k])+'%';}}
  function save(){try{localStorage.setItem(key,JSON.stringify(prefs));}catch{}paint();}
  function stopEffects(){for(const node of sources){try{node.stop();}catch{}}sources.clear();}
@@ -53,7 +55,7 @@
   else if(name==='storm'){air(0,1.5,.23,1800);[98,146.83].forEach(f=>tone(f,0,1.3,.12,'triangle'));}
  }
  window.MociBattleAudio={
-  setState(next,bossHp,paused){const previous=phase;phase=next;hp=bossHp;battlePaused=paused===true;get('battleScorePhase').textContent=phase==='won'?'· 雾桥已开':phase==='camp'?'· 静候启程':hp<=30?'· 终章迫近':hp<=60?'· 残页苏醒':'· 守望雾桥';if(previous!==phase){if(phase==='won')cue('victory');if(phase==='fallen'||phase==='lost')cue('fallen');}sync();},
+  setState(next,bossHp,paused){const previous=phase;phase=next;hp=bossHp;battlePaused=paused===true;get('battleScorePhase').textContent=phase==='won'?'· 雾桥已开':phase==='camp'?'· 静候启程':hp<=30?'· 破雾反攻':hp<=60?'· 逆风起势':'· 守望雾桥';if(previous!==phase){if(phase==='won')cue('victory');if(phase==='fallen'||phase==='lost')cue('fallen');}sync();},
   result(r,revive){if(!unlocked||blocked()||!prefs.effects)return;cue(revive?'revive':r.ok?r.spell==='attack'?'ink':r.spell:'wound');if(r.shieldBroken)cue('break');if(r.ok&&r.received)tone(67,.28,.22,.15,'sine',39);}
  };
  for(const [id,k]of [['battleMusic','music'],['battleSfx','effects']])get(id).addEventListener('click',()=>{unlock();if(id==='battleMusic'&&get('battleAudioStatus').textContent){prefs.music=true;get('battleAudioStatus').textContent='';}else prefs[k]=!prefs[k];save();if(!prefs.effects)stopEffects();sync();if(k==='effects'&&prefs.effects)cue('defend');});

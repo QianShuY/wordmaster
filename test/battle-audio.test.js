@@ -19,7 +19,13 @@ test('packaged score layers are audible unclipped PCM with the same loop duratio
   assert.equal(b.toString('ascii',0,4),'RIFF');assert.equal(b.toString('ascii',8,12),'WAVE');assert.equal(b.readUInt16LE(20),1);assert.equal(b.readUInt16LE(34),16);assert.equal(b.readUInt32LE(40),b.length-44);
   let peak=0,power=0;for(let i=44;i<b.length;i+=2){const value=b.readInt16LE(i);peak=Math.max(peak,Math.abs(value));power+=value**2;}
   assert.ok(peak<30000&&peak>10000,name);assert.ok(Math.sqrt(power/((b.length-44)/2))>2000,'Not silence: '+name);
-  for(let channel=0;channel<channels;channel++)assert.ok(Math.abs(b.readInt16LE(44+channel*2)-b.readInt16LE(b.length-channels*2+channel*2))<1500,'No abrupt loop seam: '+name);
+  for(let channel=0;channel<channels;channel++){
+   const samples=(b.length-44)/(channels*2),at=i=>b.readInt16LE(44+i*channels*2+channel*2);
+   // High-register brass has a larger legitimate per-sample slope than a bass.
+   // Compare the seam with its neighboring slopes instead of a fixed bass limit.
+   let localStep=0;for(let i=1;i<=32;i++)localStep=Math.max(localStep,Math.abs(at(i)-at(i-1)),Math.abs(at(samples-i)-at(samples-i-1)));
+   assert.ok(Math.abs(at(0)-at(samples-1))<=Math.max(1500,localStep*1.5),'No abrupt loop seam: '+name);
+  }
   frames.push((b.length-44)/(channels*2));assert.ok(frames.at(-1)/rate>50&&frames.at(-1)/rate<55);
  }
  assert.equal(new Set(frames).size,1,'All health layers must stay on the same bar grid');
@@ -41,9 +47,9 @@ test('a late music play response cannot restart a paused or departed battle',asy
 test('victory ends the battle loop and plays its cadence only once per state transition',async()=>{
  const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.api.setState('won',0,false);await flush();s.frame();assert.equal(s.track.paused,true);const count=s.contexts[0].oscillators.length;assert.equal(count,6);s.api.setState('won',0,false);assert.equal(s.contexts[0].oscillators.length,count);
 });
-test('half health adds tension, quarter health adds the final push, without changing tempo or the base volume',async()=>{
+test('half health opens the theme, low health replaces tension with the heroic arrangement',async()=>{
  const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.frame();const base=s.track.volume;assert.deepEqual(s.tracks.slice(1).map(a=>a.volume),[0,0]);
- s.api.setState('feedback',60,false);await flush();s.frame();assert.equal(s.track.volume,base);assert.ok(s.tracks[1].volume>0);assert.equal(s.tracks[2].volume,0);assert.match(s.node('battleScorePhase').textContent,/残页苏醒/);
- s.api.setState('choose',30,false);await flush();s.frame();assert.ok(s.tracks[2].volume>0);assert.match(s.node('battleScorePhase').textContent,/终章迫近/);
+ s.api.setState('feedback',60,false);await flush();s.frame();assert.ok(s.track.volume<base);assert.ok(s.tracks[1].volume>0);assert.equal(s.tracks[2].volume,0);assert.match(s.node('battleScorePhase').textContent,/逆风起势/);
+ s.api.setState('choose',30,false);await flush();s.frame();assert.equal(s.tracks[2].volume,base);assert.equal(s.tracks[1].volume,0,'Tension yields to the counterattack');assert.ok(s.track.volume<base*.2);assert.match(s.node('battleScorePhase').textContent,/破雾反攻/);
  s.blur();assert.ok(s.tracks.every(a=>a.paused&&a.volume===0));
 });

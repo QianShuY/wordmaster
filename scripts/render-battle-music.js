@@ -1,6 +1,6 @@
 'use strict';
 // Original continuous D-minor battle cue: one legato theme and one pulse grid.
-// Health stems fill gaps in that same grid; they never introduce competing motifs.
+// Half health opens the theme; low health crossfades into its heroic variation.
 // No external recordings or samples.
 // Deterministic, circular synthesis keeps both the music and room tail seamless.
 const fs=require('node:fs'),path=require('node:path');
@@ -33,7 +33,7 @@ function add(midi,at,seconds,level,voice,pan=0){
 }
 // Four-bar harmonic spans, with a single 24-bar melodic arc. No per-bar fanfares.
 const roots=[38,38,34,36,33,38],theme=[50,53,52,50,50,48,52,48,49,52,53,50];
-function legato(notes,beatsPerNote,level,pan,octave=0){
+function legato(notes,beatsPerNote,level,pan,octave=0,voice='strings'){
  const l=Math.sqrt((1-pan)/2),r=Math.sqrt((1+pan)/2),span=beat*beatsPerNote;
  let phase=0,total=0;const steps=new Float64Array(length);
  for(let i=0;i<length;i++){
@@ -48,7 +48,10 @@ function legato(notes,beatsPerNote,level,pan,octave=0){
  for(let i=0;i<length;i++){
   const time=i/SR;phase+=steps[i]-correction;
   const vibrato=.012*Math.sin(2*Math.PI*vibratoCycles*i/length);
-  let y=0;for(let h=1;h<=6;h++)y+=(Math.sin(phase*h+vibrato)+Math.sin(phase*h-vibrato+.4)*.27)*Math.exp(-h/2.7)/h;
+  let y=0;for(let h=1;h<=6;h++){
+   const color=voice==='brass'?Math.exp(-h/2.6)/Math.sqrt(h):Math.exp(-h/2.7)/h;
+   y+=(Math.sin(phase*h+vibrato)+Math.sin(phase*h-vibrato+.4)*.27)*color;
+  }
   const bow=.86+.09*Math.sin(2*Math.PI*time/(bar*2))+.05*Math.sin(2*Math.PI*time/(bar*4));
   left[i]+=y*bow*level*l;right[i]+=y*bow*level*r;
  }
@@ -77,19 +80,25 @@ function writeTrack(filename,mono=false,ceiling=.78){
  console.log(JSON.stringify({target,seconds:length/SR,bytes:buffer.length,peak:ceiling,rms:Math.sqrt(power/(length*2))*gain}));
 }
 writeTrack('letters-at-the-mist-bridge.wav');
-// Synchronized additive stems: identical bar count, tempo, key and loop length.
-// Silent until the corresponding health threshold; these are not faster replays.
+// Same bar count, tempo, harmony and loop length in every health arrangement.
+// Middle health introduces hope without changing the original melodic contour.
 left.fill(0);right.fill(0);
 for(let b=0;b<24;b++){
  const root=roots[Math.floor(b/4)],at=b*bar;
  for(const step of [1,3]){add(root+12,at+step*beat,beat*.83,.036,'pulse',-.18);add(38,at+step*beat,.75,.085,'drum',.06);}
 }
-writeTrack('mist-bridge-tension.wav',true,.43);
+legato(theme,8,.052,.15,12);
+writeTrack('mist-bridge-tension.wav',true,.5);
 left.fill(0);right.fill(0);
+// A single broad rising variation replaces the oppressive bed at low health.
+// Four-bar harmonic spans remain identical so mid-phrase transitions still fit.
+const heroicTheme=[62,65,69,74,72,69,65,69,70,69,65,62,64,67,72,76,73,71,69,76,74,69,65,62];
+legato(roots,16,.082,-.2);legato(roots.map(n=>n+7),16,.027,.3);
+legato(heroicTheme,4,.1,.06,0,'brass');
+legato(heroicTheme,4,.033,-.25,-12);
 for(let b=0;b<24;b++){
  const root=roots[Math.floor(b/4)],at=b*bar;
- for(const step of [.5,1.5,2.5,3.5])add(root+12,at+step*beat,beat*.52,.036,'pulse',-.18);
- // One quiet octave reinforcement of the SAME theme, not another tune.
+ for(let step=0;step<8;step++)add(root+(step%2?19:12),at+step*beat/2,beat*.57,.035,'pulse',step%2?.2:-.2);
+ add(38,at,1.1,.17,'drum',-.08);add(38,at+beat*2,.85,.13,'drum',.08);
 }
-legato(theme,8,.022,.12,12);
-writeTrack('mist-bridge-last-stand.wav',true,.36);
+writeTrack('mist-bridge-last-stand.wav',false,.78);
