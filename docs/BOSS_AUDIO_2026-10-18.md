@@ -22,4 +22,4 @@
 
 Edge 在只提供静态文件的独立服务上完成练习战斗：仅拦截旅程状态与十个测试词，使用真实媒体解码和 Web Audio 节点。记录：配乐时长 61.276599 秒；格挡创建 3 个音调节点；暂停后音量 0、AudioContext suspended；44 血时第二层已响，16 血时第三层已响；胜利后全部配乐暂停；页面异常 0。脚本与截图位于忽略目录 `output/playwright/battle-audio-20261018/`。这证明播放与流程接通，不等同对最终音色的人工试听验收。
 
-早先 245 项测试全过。增加血量分层后一次无限制并发全量检查出现既有启动用例超时，因此最终使用 `--test-concurrency=4` 复查，结果见 `output/refinement/battle-audio-tests-final-20261018.txt`。未修改学习数据，未重新打包 Windows EXE。
+早先 245 项测试全过。增加血量分层后一次无限制并发全量检查出现既有启动用例超时，因此最终使用 `--test-concurrency=4` 复查，该轮 246 项全部通过，结果见 `output/refinement/battle-audio-tests-final-20261018.txt`。随后合并网页版新增的词库内容与四个测试文件，再次全量复查时多项既有词库用例长时间无进展，已终止该次检查，不能把合并后的全量回归记作通过。合并新增测试与本次音效、章节结局的定向复查共 12 项通过，见 `output/refinement/battle-audio-merge-focused-20261018.txt`。未修改学习数据，未重新打包 Windows EXE。
