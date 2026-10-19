@@ -16,7 +16,7 @@ test('yesterday unfinished spelling is restored before new words even when its d
  INSERT INTO review_log(word_id,correct,practice_mode) VALUES(1,1,'meaning'),(3,1,'meaning'),(3,1,'spelling'),(4,1,'meaning');`);
  const before=JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all());
  const today=await get('/api/desktop/books/1/today');
- assert.equal(today.unfinished_total,2);assert.deepEqual(today.review.map(w=>w.id),[1,2]);assert.deepEqual(today.learn.map(w=>w.id),[5]);assert.equal(today.review_has_more,false);
+ assert.equal(today.unfinished_total,2);assert.deepEqual(today.review.map(w=>w.id),[2,1]);assert.deepEqual(today.learn.map(w=>w.id),[5]);assert.equal(today.review_has_more,false);
  const books=await get('/api/books');assert.equal(books.find(b=>b.id===1).unfinished_count,2);
  const learned=await get('/api/desktop/books/1/words?status=learned');assert.equal(learned.total,3);assert.ok(learned.items.every(w=>w.first_studied));
  const yesterday=await get('/api/desktop/books/1/words?status=yesterday');assert.equal(yesterday.total,3);

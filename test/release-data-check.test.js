@@ -2,18 +2,18 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {execFileSync}=require('node:child_process'),{DatabaseSync}=require('node:sqlite');
 const {snapshot,verifyUpgrade}=require('../scripts/release-data-check');
-test('release upgrade permits only schema 11 to 12 metadata and empty new tables; every existing row remains checked',t=>{
+test('release upgrade permits only schema 11 to 13 metadata and empty new tables; every existing row remains checked',t=>{
  const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-release-schema-')),file=path.join(dir,'upgrade.db');
  t.after(()=>fs.rmSync(dir,{recursive:true,force:true}));
  const migrate=()=>execFileSync(process.execPath,['-e',"const {db}=require('./app/db');db.close();"],{cwd:path.resolve(__dirname,'..'),env:{...process.env,WORDMASTER_DB_PATH:file},stdio:'pipe'});
  migrate();const fixture=new DatabaseSync(file);
- fixture.exec("INSERT INTO wordbooks(id,name) VALUES(41,'保留词库');INSERT INTO words(id,book_id,word,meaning) VALUES(77,41,'retain','保留');INSERT INTO progress(word_id,correct,wrong,next_due) VALUES(77,4,2,'2026-11-01');INSERT INTO review_log(word_id,correct) VALUES(77,1);DROP TABLE book_history;DROP TABLE word_answer_policies;UPDATE schema_meta SET schema_version=11 WHERE id=1");
+ fixture.exec("INSERT INTO wordbooks(id,name) VALUES(41,'保留词库');INSERT INTO words(id,book_id,word,meaning) VALUES(77,41,'retain','保留');INSERT INTO progress(word_id,correct,wrong,next_due) VALUES(77,4,2,'2026-11-01');INSERT INTO review_log(word_id,correct) VALUES(77,1);DROP TABLE desktop_daily_workload;DROP TABLE book_history;DROP TABLE word_answer_policies;UPDATE schema_meta SET schema_version=11 WHERE id=1");
  const before=snapshot(fixture);fixture.close();migrate();
  const migrated=new DatabaseSync(file,{readOnly:true}),after=snapshot(migrated);migrated.close();
- assert.deepEqual(verifyUpgrade(before,after).new_tables_empty,['book_history','word_answer_policies']);
+ assert.deepEqual(verifyUpgrade(before,after).new_tables_empty,['book_history','word_answer_policies','desktop_daily_workload']);
  assert.equal(verifyUpgrade(after,after).existing_rows_unchanged,true);
  const change=(mutate,pattern)=>{const wrong=structuredClone(after);mutate(wrong);assert.throws(()=>verifyUpgrade(before,wrong),pattern);};
- change(s=>{s.version=13;},/schema transition/);
+ change(s=>{s.version=14;},/schema transition/);
  change(s=>{s.tables.find(t=>t.name==='progress').rows[0].wrong=0;},/Existing rows changed: progress/);
  change(s=>{s.tables.find(t=>t.name==='words').rows[0].meaning='被覆盖';},/Existing rows changed: words/);
  change(s=>{s.tables.find(t=>t.name==='sqlite_sequence').rows[0].seq=999;},/Existing rows changed: sqlite_sequence/);

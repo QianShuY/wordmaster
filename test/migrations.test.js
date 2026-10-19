@@ -41,7 +41,7 @@ test('legacy database upgrades without changing saved rows or IDs', (t) => {
   }
 
   const upgraded = new DatabaseSync(dbPath, { readOnly: true });
-  assert.equal(upgraded.prepare('SELECT schema_version FROM schema_meta WHERE id = 1').get().schema_version, 12);
+  assert.equal(upgraded.prepare('SELECT schema_version FROM schema_meta WHERE id = 1').get().schema_version, 13);
   assert.equal(upgraded.prepare('SELECT id FROM wordbooks').get().id, 41);
   assert.equal(upgraded.prepare('SELECT id FROM words').get().id, 77);
   assert.deepEqual({ ...upgraded.prepare('SELECT correct, wrong, streak FROM progress WHERE word_id = 77').get() }, { correct: 4, wrong: 2, streak: 1 });

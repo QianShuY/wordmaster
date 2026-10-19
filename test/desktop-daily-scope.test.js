@@ -11,7 +11,7 @@ const temp = mkdtempSync(path.join(os.tmpdir(), 'wordmaster-daily-scope-'));
 process.env.WORDMASTER_DB_PATH = path.join(temp, 'review.db');
 const { app, db } = require('../app/main');
 
-test('daily desk uses 13 due plus 10 planned new words, while charts have an explicit book scope', async t => {
+test('daily desk keeps a 13-word target and serves 10-word review batches plus planned new words, while charts have an explicit book scope', async t => {
   const server = app.listen(0, '127.0.0.1');
   t.after(async () => {
     server.close();
@@ -49,11 +49,11 @@ test('daily desk uses 13 due plus 10 planned new words, while charts have an exp
   assert.equal(mistakeCount.body.count,mistakeList.body.length);
   assert.deepEqual(Object.keys(mistakeCount.body),['count']);
   assert.equal(daily.status, 200);
-  assert.equal(daily.body.review.length, 13, 'review all 13, never cap at 10');
+  assert.equal(daily.body.review.length, 10, 'serve at most ten before the spelling phase');
   assert.equal(daily.body.learn.length, 10, 'also include all planned 10 new words');
   assert.equal(daily.body.due_total, 13);
   assert.equal(daily.body.new_remaining, 10);
-  assert.equal(new Set([...daily.body.review, ...daily.body.learn].map(w => w.id)).size, 23,
+  assert.equal(new Set([...daily.body.review, ...daily.body.learn].map(w => w.id)).size, 20,
     'review and new phases must not duplicate any word');
   assert.ok(daily.body.review.every(w => w.is_new === 0));
   assert.ok(daily.body.learn.every(w => w.is_new === 1));

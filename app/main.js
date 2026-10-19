@@ -13,7 +13,8 @@ const ReviewCycle = require('./review-cycle');
 const {unfinishedWords}=require('./unfinished-learning');
 const WordMemory = require('./word-memory').createWordMemory(db);
 const VocabularyHistory = require('./vocabulary-history').create(db);
-const Campaign = require('./campaign').createCampaign(db,planFor);
+const DailyWorkload = require('./daily-workload').createDailyWorkload(db);
+const Campaign = require('./campaign').createCampaign(db,planFor,(book,plan)=>DailyWorkload.saved(book.id)?DailyWorkload.get(book,plan):null);
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
 function adventurePool(){
@@ -246,6 +247,7 @@ app.get('/api/books', (req, res) => {
     .filter(b=>req.query.include_history==='1'||!b.read_only);
   for (const b of books) {
     b.plan = planFor(b);
+    if(!b.read_only)b.workload={...DailyWorkload.get(b,b.plan),review:undefined,recovery:undefined};
     if(!b.read_only)b.unfinished_count=unfinishedWords(db,b.id).length;
     const build = db.prepare('SELECT content_version,audit_json FROM vocabulary_builds WHERE book_id=?').get(b.id);
     if (build) {
@@ -494,17 +496,16 @@ app.get('/api/desktop/books/:id/today', (req, res) => {
   const book = db.prepare('SELECT * FROM wordbooks WHERE id = ?').get(bookId);
   if (!book) return res.status(404).json({ error: '词库不存在' });
   const plan = planFor(book);
-  const newToday = countNewToday(bookId);
-  const dueTotal = db.prepare(`SELECT COUNT(*) AS total FROM words w JOIN progress p
-    ON p.word_id = w.id WHERE w.book_id = ? AND p.next_due IS NOT NULL
-    AND p.next_due <= datetime('now', 'localtime')`).get(bookId).total;
+  if(req.query.unfinished==='1'){
+    const pending=unfinishedWords(db,bookId),review=pending.slice(0,10);attachChoices(review);
+    return res.set('Cache-Control','no-store').json({book_id:bookId,review:presentWords(review,book),learn:[],due_total:pending.length,unfinished_total:pending.length,new_remaining:0,review_has_more:pending.length>review.length,learn_has_more:false});
+  }
+  const workload=DailyWorkload.get(book,plan,true);
   const unfinished=unfinishedWords(db,bookId),pendingIds=new Set(unfinished.map(w=>w.id));
-  const pending=unfinished.slice(0,10);
-  const ordinaryDue=q.dueWords.all(bookId,200).filter(w=>!pendingIds.has(w.id));
-  const due = pending.length?pending:ordinaryDue;
-  const currentTime=db.prepare("SELECT datetime('now','localtime') now").get().now;
-  const allReviewTotal=unfinished.length+Math.max(0,dueTotal-unfinished.filter(w=>w.next_due&&w.next_due<=currentTime).length);
-  const newRemaining = Math.min(plan.remaining_new, Math.max(0, plan.daily_quota - newToday));
+  const availableReview=[...workload.review,...workload.recovery];
+  const due = availableReview.slice(0,10);
+  const allReviewTotal=workload.due_total;
+  const newRemaining = workload.new_remaining;
   const fresh = q.newWords.all(bookId, Math.min(200, newRemaining));
   attachChoices(due);
   attachChoices(fresh);
@@ -513,9 +514,10 @@ app.get('/api/desktop/books/:id/today', (req, res) => {
     review: presentWords(due, book),
     learn: presentWords(fresh, book),
     due_total: allReviewTotal,
-    unfinished_total: unfinished.length,
+    unfinished_total: due.filter(w=>pendingIds.has(w.id)).length,
+    workload:{...workload,review:undefined,recovery:undefined},
     new_remaining: newRemaining,
-    review_has_more: allReviewTotal > due.length,
+    review_has_more: availableReview.length > due.length,
     learn_has_more: newRemaining > fresh.length,
   });
 });

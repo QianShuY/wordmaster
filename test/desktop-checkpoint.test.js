@@ -171,3 +171,12 @@ test('UI connects saved progress, phase stepper and the daily route without touc
   assert.match(css, /desktop-study-steps/);
   assert.match(css, /html\.is-android-app \.desktop-study-journey/);
 });
+
+test('a legacy seventy-word recall safely becomes a ten-word group without repeating saved meanings',()=>{
+ const words=Array.from({length:70},(_,i)=>({id:i+1,word:'word'+String.fromCharCode(97+i%26),memory:{recall_cycle:{meaning:{streak:1,errors:0},spelling:{streak:0,errors:0},complete:false}}}));
+ const old=makeSnapshot({flow:{...makeSnapshot().flow,review:words,reviewTotal:70,reviewCycleId:'retained-review-cycle'},roundWords:words,queue:words.slice(30),done:30,total:70});
+ const payload={review:words.slice(0,10),learn:[sampleWord(80)],review_has_more:true,learn_has_more:false};
+ const migrated=Checkpoint.rebatchReview(old,payload);assert.equal(Checkpoint.sane(migrated),true);assert.equal(migrated.stage,'review-spelling');assert.equal(migrated.queue.length,10);assert.equal(migrated.flow.reviewTotal,10);assert.equal(migrated.flow.reviewCycleId,'retained-review-cycle');assert.equal(migrated.flow.reviewHasMore,true);assert.equal(migrated.instanceId,old.instanceId);assert.equal(old.flow.review.length,70);
+ const partial={...payload,review:payload.review.map((w,i)=>i<4?w:{...w,memory:null})};
+ const meaning=Checkpoint.rebatchReview(old,partial);assert.equal(meaning.stage,'review');assert.equal(meaning.queue.length,6);assert.equal(meaning.flow.reviewMeaningSkipped,4);assert.equal(meaning.flow.skippedSpellingIds.length,0);
+});

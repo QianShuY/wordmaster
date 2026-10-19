@@ -438,10 +438,10 @@ const DesktopHub = {
     const remaining = Math.max(0, Number(plan.remaining_new) || 0);
     const started = Math.max(0, total - remaining);
     const pct = total ? Math.min(100, Math.round(started / total * 100)) : 0;
-    const due = Math.max(0, Number(book.due_review) || 0,Number(book.unfinished_count)||0);
+    const due = book.workload ? book.workload.review_remaining+book.workload.new_pending : Math.max(0, Number(book.due_review) || 0,Number(book.unfinished_count)||0);
     const quota = Math.max(0, Number(plan.daily_quota) || 0);
     const learned = Math.max(0, Number(book.new_today) || 0);
-    const upcoming = Math.min(remaining, Math.max(0, quota - learned));
+    const upcoming = book.workload ? book.workload.new_remaining : Math.min(remaining, Math.max(0, quota - learned));
     const firstRun = !localStorage.getItem('wordmaster_onboarding_done')
       && !sessionStorage.getItem('wordmaster_onboarding_started')
       && Home.stats && !Home.stats.mastered && !Home.stats.total_correct && !Home.stats.total_wrong;
@@ -467,17 +467,17 @@ const DesktopHub = {
     this.progress(pct);
 
     $('#hubDueCount').innerHTML = `${due} <small>词</small>`;
-    const effectiveNewTarget = Math.max(learned, Math.min(quota, learned + remaining));
+    const effectiveNewTarget = book.workload ? book.workload.new_target : Math.max(learned, Math.min(quota, learned + remaining));
     $('#hubNewProgress').textContent = `${learned} / ${effectiveNewTarget}`;
     $('#hubTotalNumber').innerHTML = `${due + upcoming} <small>词</small>`;
     $('#hubRoutePreview').textContent = due && upcoming
-      ? `复习 ${due} 词 → 学习 ${upcoming} 新词 → 巩固默写`
-      : due ? `完成全部 ${due} 个到期复习词`
+      ? `复习 ${due} 词（每组 10 个，词义 → 拼写）→ 学习 ${upcoming} 新词`
+      : due ? `今日复习 ${due} 词 · 每组最多 10 个，先词义再拼写`
       : upcoming ? `学习 ${upcoming} 个新词 → 巩固默写`
       : '当前词库的今日任务已全部完成。';
     const hasTask = due > 0 || upcoming > 0;
     $('#hubActionSummary').textContent = due > 0
-      ? `今天需要复习 ${due} 个到期词${upcoming ? `，并学习 ${upcoming} 个新词` : ''}。按顺序一次走完。`
+      ? `今天安排复习 ${due} 个词${upcoming ? `，学习 ${upcoming} 个新词` : ''}。每组最多 10 个，做完一组可休息。`
       : upcoming > 0
         ? `今天还可开始学习 ${upcoming} 个新词，之后由复习系统接力。`
         : '这本词库的今日安排已完成，可以换一本词库或查看学习成果。';
@@ -491,6 +491,7 @@ const DesktopHub = {
       ? '从到期复习到新词巩固，按顺序完成一个完整的今日任务。'
       : due > 0 ? '今天到期的复习会全部优先安排。'
       : '认识新词 → 选择巩固 → 拼写回忆，完成同一批词的三轮学习。';
+    if(book.workload?.deferred_total)$('#hubActionHelp').textContent=`另有 ${book.workload.deferred_total} 个待复习词分散安排。按现有记录，近三日预计复习 ${book.workload.forecast.slice(0,3).map(d=>d.review).join(' / ')} 个；次日按作答结果重新估算。`;
     const checkpoint = DesktopCheckpoint.resumePendingSpelling(DesktopCheckpoint.read(localStorage, book.id, Domain.localDayKey(), Home.instanceId));
     const resume = $('#hubResumeNote');
     resume.classList.toggle('hidden', !checkpoint);
@@ -500,16 +501,16 @@ const DesktopHub = {
       const stageNames = { review: checkpoint.flow.resumingUnfinished?'巩固强化':'到期复习', 'review-spelling':checkpoint.flow.resumingUnfinished?'拼写强化':'复习拼写',learn: '新词学习', choice: '选择巩固', spelling: '巩固默写' };
       const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
       const spellingPending=checkpoint.stage==='review-spelling';
-      const remainingDue = spellingPending?Math.max(0,checkpoint.total-checkpoint.done):Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
+      const remainingDue = book.workload ? book.workload.review_remaining+book.workload.new_pending : spellingPending?Math.max(0,checkpoint.total-checkpoint.done):Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
       $('#hubReviewLabel').textContent=spellingPending?'待完成拼写':checkpoint.flow.resumingUnfinished?'待完成巩固':'到期复习';
-      const remainingNew = Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
+      const remainingNew = book.workload ? book.workload.new_remaining : Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
       // Live SQLite counts can include newly introduced (now instantly due)
       // words. While resuming, present the *same* original task manifest.
       $('#hubDueCount').innerHTML = `${remainingDue} <small>词</small>`;
       $('#hubNewProgress').textContent = `${checkpoint.flow.learnTotal - remainingNew} / ${checkpoint.flow.learnTotal}`;
       $('#hubTotalNumber').innerHTML = `${remainingDue + remainingNew} <small>词</small>`;
       $('#hubRoutePreview').textContent = remainingDue + remainingNew
-        ? `本日任务共 ${progress.expected} 词，已有 ${progress.achieved} 词完成 · 继续 ${stageNames[checkpoint.stage]}`
+        ? `本批任务共 ${progress.expected} 词，已有 ${progress.achieved} 词完成 · 继续 ${stageNames[checkpoint.stage]}`
         : '新词和复习已做完，继续完成最后的巩固。';
       // A word that failed and is waiting to be retried stays in the
       // checkpoint queue even if live "due" counts temporarily differ.
@@ -1136,12 +1137,18 @@ const Study = {
     }
     const cached = DesktopCheckpoint.read(localStorage, bookId, Domain.localDayKey(), this.instanceId);
     if (cached&&!unfinishedOnly) {
-      this.restoreToday(cached);
-      return;
+      if(['review','review-spelling'].includes(cached.stage)&&cached.flow.review.length>10){
+        try{
+          const payload=await api(`/api/desktop/books/${bookId}/today`);
+          if(location.hash!==expectedHash)return;
+          if(payload.review.length){this.restoreToday(DesktopCheckpoint.rebatchReview(cached,payload));return;}
+          DesktopCheckpoint.clear(localStorage,bookId);
+        }catch(error){showPageError(`复习分组准备失败：${error.message}`,()=>this.startToday(bookId));return;}
+      }else{this.restoreToday(cached);return;}
     }
     showPageLoading('正在准备完整的今日任务…');
     try {
-      const payload = await api(`/api/desktop/books/${bookId}/today`);
+      const payload = await api(`/api/desktop/books/${bookId}/today${unfinishedOnly?'?unfinished=1':''}`);
       if (location.hash !== expectedHash) return;
       if(unfinishedOnly){payload.review=payload.unfinished_total?payload.review:[];payload.learn=[];payload.learn_has_more=false;payload.review_has_more=payload.unfinished_total>payload.review.length;}
       clearPageStatus();
@@ -1328,8 +1335,8 @@ const Study = {
     const achieved = Math.min(total, Math.min(flow.reviewTotal, reviewed || 0)
       + Math.min(flow.learnTotal, completed.learn));
     const pct = total ? Math.round(achieved * 100 / total) : 100;
-    const groupNote=flow.learnGroupSize===10&&flow.learn.length ? `第 ${Math.floor((flow.learnGroupStart||0)/10)+1} / ${Math.ceil(flow.learn.length/10)} 组 · 每组认识→选择→拼写` : '选择与拼写逐轮完成';
-    $('#desktopStudyOverallText').textContent = `今日认识与复习 ${achieved} / ${total} 词 · ${groupNote}`;
+    const groupNote=['review','review-spelling'].includes(flow.stage)?`本组旧词：词义→拼写${flow.reviewHasMore?' · 完成后可休息，再接下一组':''}`:flow.learnGroupSize===10&&flow.learn.length ? `新词第 ${Math.floor((flow.learnGroupStart||0)/10)+1} / ${Math.ceil(flow.learn.length/10)} 组 · 认识→选择→拼写` : '选择与拼写逐轮完成';
+    $('#desktopStudyOverallText').textContent = `本批任务 ${achieved} / ${total} 词 · ${groupNote}`;
     $('#desktopStudyOverallFill').style.width = `${pct}%`;
   },
 
@@ -2282,8 +2289,8 @@ const Study = {
         $('#doneAgain').textContent = '继续旧词复习 · 拼写回忆 →';
         $('#doneAgain').onclick = () => this.continueToday('review-spelling');
       } else if (['review','review-spelling'].includes(flow.stage) && flow.reviewHasMore) {
-        $('#doneSummary').textContent = `已完成这一批 ${this.total} 个到期复习词，先继续剩余的到期复习，再学习今天的新词。`;
-        $('#doneAgain').textContent = '继续剩余到期复习 →';
+        $('#doneSummary').textContent = `这一组 ${this.total} 个词已完成词义与拼写。可以休息一下，再继续下一组；已保存的进度不会丢。`;
+        $('#doneAgain').textContent = '继续下一组复习 · 最多 10 个 →';
         $('#doneAgain').onclick = continueBatch;
       } else if (['review','review-spelling'].includes(flow.stage) && flow.learn.length) {
         $('#doneSummary').textContent = `到期复习完成 ${this.total} 词。接下来认识 ${flow.learn.length} 个今日新词。`;

@@ -228,6 +228,20 @@ const migrations = [
       );`);
     },
   },
+  {
+    version: 13,
+    name: 'stable balanced desktop daily workload',
+    up() {
+      db.exec(`CREATE TABLE desktop_daily_workload (
+        day TEXT NOT NULL, book_id INTEGER NOT NULL REFERENCES wordbooks(id) ON DELETE CASCADE,
+        review_ids_json TEXT NOT NULL, new_target INTEGER NOT NULL,
+        catchup_until TEXT NOT NULL, forecast_json TEXT NOT NULL, deferred_ids_json TEXT NOT NULL,
+        initial_new_ids_json TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now','localtime')),
+        PRIMARY KEY(day,book_id)
+      )`);
+    },
+  },
 ];
 
 for (const migration of migrations) {

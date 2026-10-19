@@ -59,8 +59,8 @@ async function main(){
   let reconstructedSchema11=false;
   // Only reconstruct an older schema in this disposable copy when the added
   // tables are empty. All existing learning/content rows remain in the fixture.
-  if(sourceSchema===12&&['book_history','word_answer_policies'].every(name=>prepared.prepare('SELECT COUNT(*) n FROM '+name).get().n===0)){
-   prepared.exec('BEGIN; DROP TABLE book_history; DROP TABLE word_answer_policies; UPDATE schema_meta SET schema_version=11 WHERE id=1; COMMIT');
+  if([12,13].includes(sourceSchema)&&['book_history','word_answer_policies',...(sourceSchema===13?['desktop_daily_workload']:[])].every(name=>prepared.prepare('SELECT COUNT(*) n FROM '+name).get().n===0)){
+   prepared.exec('BEGIN; '+(sourceSchema===13?'DROP TABLE desktop_daily_workload; ':'')+'DROP TABLE book_history; DROP TABLE word_answer_policies; UPDATE schema_meta SET schema_version=11 WHERE id=1; COMMIT');
    reconstructedSchema11=true;
   }
   prepared.close();

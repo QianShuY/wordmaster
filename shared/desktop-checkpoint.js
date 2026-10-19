@@ -136,5 +136,16 @@
       flow:{...snapshot.flow,resumingUnfinished:true,reviewMeaningSkipped:snapshot.flow.review.length,reviewSpellingSkipped:Domain.spellingWords(snapshot.flow.review).length-plan.spelling.length,completed:{...snapshot.flow.completed,review:snapshot.flow.review.length}},
       reinforcement:{},deferredIds:[],roundXp:0,counters:{correctCount:0,firstCorrectCount:0,retryCorrectCount:0,wrongCount:0,abandonedCount:0,retryCount:0},attemptedWordIds:[],retryWordIds:[],learnAgainIds:[],learnCompletedIds:[]};
   }
-  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest, learnGroup, stageOffset,reviewPlan,resumePendingSpelling });
+  function rebatchReview(snapshot,payload){
+    if(!sane(snapshot)||!['review','review-spelling'].includes(snapshot.stage)||snapshot.flow.review.length<=10)return snapshot;
+    const review=payload.review.slice(0,10),plan=reviewPlan(review),spellingOnly=!plan.meaning.length&&plan.spelling.length;
+    const queue=spellingOnly?plan.spelling:plan.meaning;
+    return {...snapshot,stage:spellingOnly?'review-spelling':'review',phaseDone:false,queue:queue.slice(),roundWords:queue.slice(),total:queue.length,done:0,
+      flow:{...snapshot.flow,review,reviewTotal:review.length,learn:payload.learn.slice(),learnTotal:payload.learn.length,learnGroupSize:10,learnGroupStart:0,
+        reviewMeaningSkipped:review.length-plan.meaning.length,reviewSpellingSkipped:Domain.spellingWords(review).length-plan.spelling.length,
+        skippedSpellingIds:Domain.spellingWords(review).filter(w=>!plan.spelling.some(x=>x.id===w.id)).map(w=>w.id),
+        completed:{review:review.length-plan.meaning.length,'review-spelling':0,learn:0,choice:0,spelling:0},deferred:[],reviewHasMore:payload.review_has_more,learnHasMore:payload.learn_has_more},
+      reinforcement:{},deferredIds:[],roundXp:0,counters:{correctCount:0,firstCorrectCount:0,retryCorrectCount:0,wrongCount:0,abandonedCount:0,retryCount:0},attemptedWordIds:[],retryWordIds:[],learnAgainIds:[],learnCompletedIds:[]};
+  }
+  return Object.freeze({ VERSION, key, read, write, clear, progress, sane, repairLearnManifest, learnGroup, stageOffset,reviewPlan,resumePendingSpelling,rebatchReview });
 });
