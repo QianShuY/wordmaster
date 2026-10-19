@@ -1,0 +1,57 @@
+{
+  "batch": "two targeted TEM source-sense fixes",
+  "approved": false,
+  "independent_dictionary_review": false,
+  "entries": [
+    {
+      "worker": "A",
+      "task_id": "tem-004",
+      "row_index": 72,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 575,
+        "word": "approximate",
+        "headword": "approximate",
+        "homograph": null,
+        "source_raw": "approximate [əˈprɒksɪmət] adj. 大约，将近"
+      },
+      "original": {
+        "pos": "adj.",
+        "meaning": "大约，将近",
+        "phonetic": "əˈprɒksɪmət",
+        "example": "",
+        "example_translation": ""
+      },
+      "old_example": "The repair will cost an approximate total of £500.",
+      "old_translation": "这次维修的总费用大约为 500 英镑。",
+      "new_example": "The approximate cost of repairing the roof is £500.",
+      "new_translation": "修理屋顶的大致费用是500英镑。",
+      "reason": "旧句 an approximate total 生硬；改用 approximate cost，准确体现形容词“大约的”。"
+    },
+    {
+      "worker": "A",
+      "task_id": "tem-005",
+      "row_index": 90,
+      "identity": {
+        "source_file": "tem.txt",
+        "source_line": 733,
+        "word": "atom",
+        "headword": "atom",
+        "homograph": null,
+        "source_raw": "atom [ˈætəm] n. 1. 原子 2. 微粒 3. 微量"
+      },
+      "original": {
+        "pos": "n.",
+        "meaning": "1. 原子 2. 微粒 3. 微量",
+        "phonetic": "ˈætəm",
+        "example": "",
+        "example_translation": ""
+      },
+      "old_example": "The scientist divided the sample into atoms for the experiment.",
+      "old_translation": "科学家把样本分解成原子用于实验。",
+      "new_example": "A single atom is far too small to see with the naked eye.",
+      "new_translation": "单个原子太小，肉眼根本看不见。",
+      "reason": "旧句“把样本分解成原子用于实验”缺少依据且语义生硬；改为物理上准确、易懂的原子语境。"
+    }
+  ]
+}
