@@ -1,0 +1,37 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
+const script=fs.readFileSync(path.join(__dirname,'../static/adventure/battle-audio.js'),'utf8');
+function setup(saved){
+ const nodes=new Map(),events={},windowEvents={},tracks=[],contexts=[],storage=new Map(saved?[['moci-battle-audio-v1',JSON.stringify(saved)]]:[]);let focused=true,frames=new Map(),frameId=0;
+ const node=id=>{if(!nodes.has(id))nodes.set(id,{value:'',textContent:'',listeners:{},attrs:{},addEventListener(type,fn){this.listeners[type]=fn;},setAttribute(k,v){this.attrs[k]=v;}});return nodes.get(id);};
+ const document={hidden:false,hasFocus:()=>focused,body:{classList:{contains:()=>true}},querySelector:()=>({after(){}}),createElement:()=>({setAttribute(){}}),getElementById:node,addEventListener:(type,fn)=>events[type]=fn};
+ class Audio{constructor(){this.volume=0;this.paused=true;this.plays=0;tracks.push(this);}play(){this.plays++;this.paused=false;return this.pending||Promise.resolve();}pause(){this.paused=true;}}
+ class Context{constructor(){this.state='running';this.currentTime=0;this.sampleRate=1000;this.oscillators=[];this.buffers=[];contexts.push(this);}createGain(){return {gain:{value:1,setValueAtTime(){},exponentialRampToValueAtTime(){},setTargetAtTime(){}},connect(){},disconnect(){}};}createOscillator(){const node={type:'',stopped:false,frequency:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){},disconnect(){},start(){},stop(){this.stopped=true;}};this.oscillators.push(node);return node;}createBuffer(c,n){return {getChannelData:()=>new Float32Array(n)};}createBufferSource(){const node={connect(){},disconnect(){},start(){},stop(){}};this.buffers.push(node);return node;}createBiquadFilter(){return {frequency:{},connect(){},disconnect(){}};}resume(){this.state='running';return Promise.resolve();}suspend(){this.state='suspended';return Promise.resolve();}close(){this.state='closed';return Promise.resolve();}}
+ const window={AudioContext:Context,addEventListener:(t,f)=>windowEvents[t]=f};
+ vm.runInNewContext(script,{window,document,Audio,localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},performance:{now:()=>0},requestAnimationFrame:f=>{frames.set(++frameId,f);return frameId;},cancelAnimationFrame:id=>frames.delete(id),console});
+ return {api:window.MociBattleAudio,track:tracks[0],tracks,contexts,events,windowEvents,node,storage,document,frames,blur(){focused=false;windowEvents.blur();},focus(){focused=true;windowEvents.focus();},gesture(){events.pointerdown({isTrusted:true,type:'pointerdown'});},frame(now=2000){for(const [id,fn]of [...frames]){frames.delete(id);fn(now);}}};
+}
+const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('battle audio waits for a gesture, plays in battle and suspends on pause/background',async()=>{
+ const s=setup();s.api.setState('choose',120,false);assert.equal(s.track.plays,0);s.gesture();await flush();s.frame(-1);assert.ok(s.tracks.every(a=>a.volume>=0));s.frame();assert.equal(s.track.paused,false);assert.ok(s.track.volume>0&&s.track.volume<.15);
+ s.api.result({ok:true,spell:'attack',received:4});assert.ok(s.contexts[0].oscillators.length>=3,'ink attack and recoil both sound');
+ s.api.setState('question',120,true);assert.equal(s.track.paused,true);assert.equal(s.track.volume,0);assert.equal(s.contexts[0].state,'suspended');const count=s.contexts[0].oscillators.length;s.api.result({ok:true,spell:'heal'});assert.equal(s.contexts[0].oscillators.length,count);
+ s.api.setState('question',120,false);await flush();s.frame();assert.equal(s.track.paused,false);s.blur();assert.equal(s.track.paused,true);s.focus();await flush();s.frame();assert.equal(s.track.paused,false);
+ s.windowEvents.pagehide();assert.equal(s.track.paused,true);assert.equal(s.contexts[0].state,'closed');
+});
+test('music and effects can be independently disabled; even recoil stays silent when effects are off',async()=>{
+ const s=setup({music:false,effects:false,musicVolume:0,effectsVolume:0});s.api.setState('choose',120,false);s.gesture();await flush();assert.equal(s.track.plays,0);s.api.result({ok:true,spell:'attack',received:7,shieldBroken:true});assert.equal(s.contexts[0].oscillators.length,0);assert.equal(s.contexts[0].buffers.length,0);
+ s.node('battleMusic').listeners.click();await flush();assert.ok(s.track.plays>0);assert.equal(JSON.parse(s.storage.get('moci-battle-audio-v1')).music,true);assert.equal(s.node('battleSfx').attrs['aria-pressed'],'false');
+});
+test('a late music play response cannot restart a paused or departed battle',async()=>{
+ const s=setup();let resolve;s.track.pending=new Promise(r=>resolve=r);s.api.setState('choose',120,false);s.gesture();s.api.setState('question',120,true);resolve();await flush();assert.equal(s.track.paused,true);assert.equal(s.track.volume,0);assert.equal(s.frames.size,0);
+});
+test('victory ends the battle loop and plays its cadence only once per state transition',async()=>{
+ const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.api.setState('won',0,false);await flush();s.frame();assert.equal(s.track.paused,true);const count=s.contexts[0].oscillators.length;assert.equal(count,6);s.api.setState('won',0,false);assert.equal(s.contexts[0].oscillators.length,count);
+});
+test('half health adds tension, quarter health adds the final push, without changing tempo or the base volume',async()=>{
+ const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.frame();const base=s.track.volume;assert.deepEqual(s.tracks.slice(1).map(a=>a.volume),[0,0]);
+ s.api.setState('feedback',60,false);await flush();s.frame();assert.equal(s.track.volume,base);assert.ok(s.tracks[1].volume>0);assert.equal(s.tracks[2].volume,0);assert.match(s.node('battleScorePhase').textContent,/残页苏醒/);
+ s.api.setState('choose',30,false);await flush();s.frame();assert.ok(s.tracks[2].volume>0);assert.match(s.node('battleScorePhase').textContent,/终章迫近/);
+ s.blur();assert.ok(s.tracks.every(a=>a.paused&&a.volume===0));
+});

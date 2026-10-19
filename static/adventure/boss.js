@@ -17,6 +17,7 @@
     const state=window.MociBossMotion.states[model.state];
     // Replace the state once per transition; CSS restarts only the chosen effect.
     scene.dataset.state=model.state;
+    document.dispatchEvent(new CustomEvent('moci-boss-state',{detail:model.state}));
     document.getElementById('intentText').textContent=state.intent;
     document.getElementById('intentDetail').textContent=state.detail;
     document.getElementById('stateLabel').textContent=state.label;
