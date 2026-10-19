@@ -12,6 +12,17 @@ function setup(saved){
  return {api:window.MociBattleAudio,track:tracks[0],tracks,contexts,events,windowEvents,node,storage,document,frames,blur(){focused=false;windowEvents.blur();},focus(){focused=true;windowEvents.focus();},gesture(){events.pointerdown({isTrusted:true,type:'pointerdown'});},frame(now=2000){for(const [id,fn]of [...frames]){frames.delete(id);fn(now);}}};
 }
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
+test('packaged score layers are audible unclipped PCM with the same loop duration',()=>{
+ const frames=[];
+ for(const name of ['letters-at-the-mist-bridge.wav','mist-bridge-tension.wav','mist-bridge-last-stand.wav']){
+  const b=fs.readFileSync(path.join(__dirname,'../static/adventure/assets',name)),channels=b.readUInt16LE(22),rate=b.readUInt32LE(24);
+  assert.equal(b.toString('ascii',0,4),'RIFF');assert.equal(b.toString('ascii',8,12),'WAVE');assert.equal(b.readUInt16LE(20),1);assert.equal(b.readUInt16LE(34),16);assert.equal(b.readUInt32LE(40),b.length-44);
+  let peak=0,power=0;for(let i=44;i<b.length;i+=2){const value=b.readInt16LE(i);peak=Math.max(peak,Math.abs(value));power+=value**2;}
+  assert.ok(peak<30000&&peak>10000,name);assert.ok(Math.sqrt(power/((b.length-44)/2))>2000,'Not silence: '+name);
+  frames.push((b.length-44)/(channels*2));assert.ok(frames.at(-1)/rate>50&&frames.at(-1)/rate<55);
+ }
+ assert.equal(new Set(frames).size,1,'All health layers must stay on the same bar grid');
+});
 test('battle audio waits for a gesture, plays in battle and suspends on pause/background',async()=>{
  const s=setup();s.api.setState('choose',120,false);assert.equal(s.track.plays,0);s.gesture();await flush();s.frame(-1);assert.ok(s.tracks.every(a=>a.volume>=0));s.frame();assert.equal(s.track.paused,false);assert.ok(s.track.volume>0&&s.track.volume<.15);
  s.api.result({ok:true,spell:'attack',received:4});assert.ok(s.contexts[0].oscillators.length>=3,'ink attack and recoil both sound');
