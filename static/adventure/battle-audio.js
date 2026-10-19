@@ -7,7 +7,7 @@
  const strip=document.createElement('section');strip.className='battle-score';strip.setAttribute('aria-label','战斗声音');
  strip.innerHTML='<span class="score-name">♫ 雾桥之誓 <small id="battleScorePhase">· 战斗配乐</small></span><button id="battleMusic" type="button">配乐</button><label>音乐<input id="battleMusicVolume" aria-label="战斗配乐音量" type="range" min="0" max="100"><output id="battleMusicValue"></output></label><button id="battleSfx" type="button">音效</button><label>音效<input id="battleSfxVolume" aria-label="战斗音效音量" type="range" min="0" max="100"><output id="battleSfxValue"></output></label><p class="audio-status" id="battleAudioStatus" role="status"></p>';
  heading.after(strip);
- const musicRevision='20261018-dark2';
+ const musicRevision='20261018-continuous3';
  const get=id=>document.getElementById(id),track=new Audio('assets/letters-at-the-mist-bridge.wav?v='+musicRevision);track.loop=true;track.preload='none';track.volume=0;
  const stems=['mist-bridge-tension.wav','mist-bridge-last-stand.wav'].map(file=>{const audio=new Audio('assets/'+file+'?v='+musicRevision);audio.loop=true;audio.preload='none';audio.volume=0;return audio;}),tracks=[track,...stems];
  let ctx,master,unlocked=false,phase=battle?'camp':'preview',hp=120,battlePaused=false,disposed=false,version=0,frame=0;
@@ -29,7 +29,7 @@
   try{await track.play();if(request!==version){if(blocked()||!prefs.music||!active())silence();return;}
    // Load stems only after a gesture has enabled music. Muted stems keep the beat
    // ready for health transitions; re-align after focus changes or stalled loads.
-   const results=await Promise.allSettled(stems.map(async audio=>{await audio.play();if(Math.abs(audio.currentTime-track.currentTime)>.12)audio.currentTime=track.currentTime;}));
+   const results=await Promise.allSettled(stems.map(async audio=>{await audio.play();if(Math.abs(audio.currentTime-track.currentTime)>.035)audio.currentTime=track.currentTime;}));
    if(request!==version){if(blocked()||!prefs.music||!active())silence();return;}
    get('battleAudioStatus').textContent=results.some(r=>r.status==='rejected')?'部分配乐层暂未加载，基础配乐继续播放。':'';fade(mix());}
   catch{if(request===version)get('battleAudioStatus').textContent='配乐尚未播放，点击「配乐」重试。';}

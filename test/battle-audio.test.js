@@ -19,6 +19,7 @@ test('packaged score layers are audible unclipped PCM with the same loop duratio
   assert.equal(b.toString('ascii',0,4),'RIFF');assert.equal(b.toString('ascii',8,12),'WAVE');assert.equal(b.readUInt16LE(20),1);assert.equal(b.readUInt16LE(34),16);assert.equal(b.readUInt32LE(40),b.length-44);
   let peak=0,power=0;for(let i=44;i<b.length;i+=2){const value=b.readInt16LE(i);peak=Math.max(peak,Math.abs(value));power+=value**2;}
   assert.ok(peak<30000&&peak>10000,name);assert.ok(Math.sqrt(power/((b.length-44)/2))>2000,'Not silence: '+name);
+  for(let channel=0;channel<channels;channel++)assert.ok(Math.abs(b.readInt16LE(44+channel*2)-b.readInt16LE(b.length-channels*2+channel*2))<1500,'No abrupt loop seam: '+name);
   frames.push((b.length-44)/(channels*2));assert.ok(frames.at(-1)/rate>50&&frames.at(-1)/rate<55);
  }
  assert.equal(new Set(frames).size,1,'All health layers must stay on the same bar grid');

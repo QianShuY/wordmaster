@@ -1,6 +1,6 @@
 'use strict';
 (()=>{
- const descriptions={120:'灯已举起。低沉的弓弦，在石桥下反复回响。',60:'石印松动，残页苏醒。鼓声变得紧密，守卫开始逼近。',30:'只余最后一道关隘。弓弦与重鼓催促着最后的咒语。'};
+ const descriptions={120:'灯已举起。低沉的弓弦，牵着同一条旋律缓缓前行。',60:'石印松动，残页苏醒。同一条旋律中，脉冲渐渐靠近。',30:'只余最后一道关隘。弦乐紧随主题，推动最后的咒语。'};
  let health=120,started=false;
  document.querySelectorAll('[data-hp]').forEach(button=>button.addEventListener('click',()=>{
   health=Number(button.dataset.hp);started=true;
