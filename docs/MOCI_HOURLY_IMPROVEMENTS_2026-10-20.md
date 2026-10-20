@@ -31,3 +31,11 @@
 - 这 55 对仍为 **needs-review 候选**，未声称外部审校或权威词典逐义确认，未改动 `main`、`app/seed`、SQLite、发行包。
 
 下一轮优先检查六级后续批次及 TEM 义项错误，继续以具体自然语境和双语准确性为标准，不把单纯扩量视为正式质量验收。
+
+## 第 3 轮：TEM-004 50 对逐义自然语境改写（2026-10-20）
+
+- 实际修改 `docs/model-task-results/worker-A/tem-004/result.json` 中 **50 对**原本机械、生硬或词性不合的中英例句，涵盖 `annex`、`annihilate`、`anode`、`antiquity`、`antiseptic`、`apace`、`append` 等。
+- 重点处理及物动词缺宾语、名词被硬塞进元语言句、形容词搭配错误和中文引号式硬译。例：`antiseptic` 使用形容词搭配 `antiseptic solution`；`antiquity` 用古罗马文物表示古物义。
+- 只改了候选的 `proposed.example`、`proposed.example_translation`、`draft_method`，保留原始来源身份、原义项、空证据和 `needs-review`，没有声称独立词典或人工审核。
+- 新增 `test/abc-tem-004-natural-50.test.js` 检查全部 50 对的来源身份、例句内容、审校标记和机械模板；本轮 GitHub CI 结果应以对应提交运行记录为准。
+- 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包；不自动合并或发布。
