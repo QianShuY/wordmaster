@@ -13,7 +13,11 @@ test('TEM-006: 56 source-locked bilingual examples remain unverified', () => {
   for (const [index, word, english, chinese] of expected) {
     const row = task.entries[index];
     assert.equal(row.identity.word, word, 'source identity at '+index);
-    assert.equal(row.identity.source_file, undefined === row.identity.source_file ? undefined : row.identity.source_file);
+    assert.equal(row.identity.source_file, 'tem.txt', word);
+    assert.ok(row.identity.source_raw.includes(word.split(' ')[0]), word);
+    assert.ok(Number.isInteger(row.identity.source_line) && row.identity.source_line > 0, word);
+    assert.equal(row.original.example, '', word);
+    assert.equal(row.original.example_translation, '', word);
     assert.equal(row.verification, 'needs-review', word);
     assert.equal(row.external_human_review, false, word);
     assert.equal(row.full_dictionary_senses_reviewed, false, word);
