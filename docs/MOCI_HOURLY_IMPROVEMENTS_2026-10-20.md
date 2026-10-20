@@ -49,3 +49,13 @@
 - 未更改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 正式包，未自动合并或发布。CI 状态需以本次提交对应的 GitHub Actions 为准。
 
 下一轮优先处理 TEM-006 剩余已确认的机械句（如 `baggy`、`ballast`），以及 TEM-007 的高风险词性和语义错误。
+
+## 第 6 轮：TEM-007 50 对候选已暂存，主结果尚未应用（2026-10-21）
+
+- 复核了 TEM-007 的 100 条结果，逐项锁定其中 **50 对**明显机械、词性或搭配失真的例句，完成具体语境的中英改写草案，涵盖 `balmy`（天气）、`bankrupt`（及物动词）、`baptize`（宗教洗礼）、`barbaric`（残暴对待）、`barter`（以物易物）及 `bathe`（冲洗伤口）。
+- **实际已提交的是未合并的候选包**：`docs/model-task-results/worker-A/tem-007/editorial-candidates-20261021.json`。每项记录原行号、原例句、原来源文本、原选定义项、修订句及译文，带有 `unmerged-review-candidates` 标记，明确不是正式结果。
+- 已新增 `test/abc-tem-007-editorial-candidates-50.test.js`，校验候选来源身份、原始字段、义项、机械模板及 `needs-review` 状态；测试允许主结果在安全应用前后两种状态，但绝不把候选当作已发布内容。
+- **未能应用到 `tem-007/result.json`**：完整 JSON 更新被 GitHub 写入安全检查拦截。因此本轮主结果成功改写数量是 **0**，50 对仅为可供安全应用的审校候选；未执行正式入库或发布。后续应用前必须重新比对最新分支及原始行，不能盲目覆盖其他 Agent 的修改。
+- 只在开发分支提交候选和测试，保留 `needs-review`、空证据与未外部审核状态。未触碰 `main`、`app/seed`、SQLite、学习记录或 Windows/Android 安装包。
+
+下一轮优先尝试将这 50 对候选逐条安全合入 `result.json`，核对 CI 后再开始 TEM-008，避免重复堆积未应用的草案。
