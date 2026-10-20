@@ -59,3 +59,11 @@
 - 只在开发分支提交候选和测试，保留 `needs-review`、空证据与未外部审核状态。未触碰 `main`、`app/seed`、SQLite、学习记录或 Windows/Android 安装包。
 
 下一轮优先尝试将这 50 对候选逐条安全合入 `result.json`，核对 CI 后再开始 TEM-008，避免重复堆积未应用的草案。
+
+## 第 7 轮：TEM-008 60 对机械例句逐义改写（2026-10-21）
+
+- 依据当前开发分支逐条检查 `tem-008` 的 100 行候选，选出 **60 对**存在明显机械模板、错误搭配或译文硬套的中英句对。每条先确认 `identity.word`、`source_file`、`selected_sense` 与原例句仍为待审草稿，再改写为具体语境。
+- 示例：`belie` 用声音掩饰焦虑，`bequeath` 用遗嘱遗赠房产，`bilateral` 用双边贸易协定，`blare` 用汽车喇叭刺耳作响；`behead`、`blackmail` 等词使用中立、非鼓励的叙述。
+- 只更改 `docs/model-task-results/worker-A/tem-008/result.json` 中 60 条的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-008-natural-60.test.js`，校验全部 60 条完整句对、源任务身份与原始字段、模板清除、空证据和 `needs-review`。
+- 该批是编辑候选而非独立词典审校结果。未触碰 `main`、`app/seed`、SQLite、学习记录、Windows/Android 发行包，也未自动合并或发布。
+- 验收：GitHub Actions 的完整 CI 需以本轮提交实际结果为准，不将新增测试等同于已通过。
