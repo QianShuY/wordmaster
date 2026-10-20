@@ -21,3 +21,13 @@
 优先按问题严重度检视 `cet6-015` 中 `regulation`（名词错误当动词）、`repay`（缺少宾语）、`reverse`、`retort` 等，和 `cet4-045` 中 `explore`、`prepare`、`recover` 的离线模板。每条严格核对 `source_raw`、`selected_sense` 与原例句；不能只换句式、不能自动升级为 `verified`，不能把草稿覆盖进用户使用中的词库。
 
 `npm test` 和 `node scripts/audit-model-evidence.js --strict` 在提交后需以 CI 实际执行结果为准；不能把新增测试文件等同于测试已通过。
+
+## 第 2 轮：扩大到 55 对，覆盖四级与六级五个任务
+
+- 实际编辑 `cet6-015`（20 对）、`cet4-045`（6 对）、`cet6-016`（12 对）、`cet6-017`（9 对）、`cet6-018`（8 对），合计 **55 对中英例句**。
+- 重点修复 `regulation` 名词误作动词、`repay` 缺少宾语、`therefore` 位置不当，以及 `segregate`、`snatch` 等词被机械套入“鼓励学生练习”的不合适语境。
+- 逐条匹配具体义项：如 `royalty`（版税）、`restraint`（克制）、`tack`（思路）、四级 `recover`（找回）。保留 `regulation` 源词性冲突的审校提示，不擅改源词表。
+- 添加 `test/abc-expanded-natural-55.test.js` 对全部 55 对例句、原身份、审校状态、机械模板扫描做回归检测；结果以随后 GitHub Actions 的实际运行状态为准。
+- 这 55 对仍为 **needs-review 候选**，未声称外部审校或权威词典逐义确认，未改动 `main`、`app/seed`、SQLite、发行包。
+
+下一轮优先检查六级后续批次及 TEM 义项错误，继续以具体自然语境和双语准确性为标准，不把单纯扩量视为正式质量验收。
