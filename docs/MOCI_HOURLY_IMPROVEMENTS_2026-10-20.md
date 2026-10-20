@@ -39,3 +39,13 @@
 - 只改了候选的 `proposed.example`、`proposed.example_translation`、`draft_method`，保留原始来源身份、原义项、空证据和 `needs-review`，没有声称独立词典或人工审核。
 - 新增 `test/abc-tem-004-natural-50.test.js` 检查全部 50 对的来源身份、例句内容、审校标记和机械模板；本轮 GitHub CI 结果应以对应提交运行记录为准。
 - 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包；不自动合并或发布。
+
+## 第 5 轮：TEM-006 56 对机械例句的逐义改写（2026-10-20）
+
+- 本轮从 TEM-006 的 100 条候选中锁定 **56 对**明显机械、缺宾语或语境失真的例句，逐条核对 `identity.word`、`selected_sense` 和原始句，再改写中英文句对；不为凑数量修改未确认问题的条目。
+- 代表性修复：`audible` 不再描述“看起来可听见的设计”；`authorise authorize` 采用真实的英式动词 `authorise` 而非将两个变体拼接为动词；`avail` 使用 `avail oneself of`；`backfire` 以计划适得其反为语境；`austerity` 体现生活简朴。
+- 仅更改 `docs/model-task-results/worker-A/tem-006/result.json` 的 56 条 `proposed.example`、`proposed.example_translation`、`draft_method`，其余原始来源、义项、音标、证据与审核标记保持不变。
+- 添加 `test/abc-tem-006-natural-56.test.js` 逐条锁定 56 个来源词形与完整中英例句，检查模板回归及 `needs-review`、无外部审核状态。该批仍是语言候选，**不等于权威词典逐义审校**。
+- 未更改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 正式包，未自动合并或发布。CI 状态需以本次提交对应的 GitHub Actions 为准。
+
+下一轮优先处理 TEM-006 剩余已确认的机械句（如 `baggy`、`ballast`），以及 TEM-007 的高风险词性和语义错误。
