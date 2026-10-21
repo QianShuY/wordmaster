@@ -11,8 +11,9 @@ const commonH = require('../app/seed/examples-common-h-reviewed-20261015.json');
 const commonI = require('../app/seed/examples-common-i-reviewed-20261015.json');
 const numbered = require('../app/seed/examples-numbered-reviewed-20261015.json');
 const webReviewed = require('../app/seed/examples-cet6-reviewed-20261021.json');
+const cet6Complete = require('../app/seed/examples-cet6-complete-reviewed-20261021.json');
 const {matchesSenseIdentity}=require('./source-sense-binding');
-const bindings = new Map([...batch.examples,...common.examples,...extended.examples,...commonD.examples,...commonE.examples,...commonF.examples,...commonG.examples,...commonH.examples,...commonI.examples,...numbered.examples,...webReviewed.examples].map(item => [`${item.source_file}\0${item.word}`, item]));
+const bindings = new Map([...batch.examples,...common.examples,...extended.examples,...commonD.examples,...commonE.examples,...commonF.examples,...commonG.examples,...commonH.examples,...commonI.examples,...numbered.examples,...webReviewed.examples,...cet6Complete.examples].map(item => [`${item.source_file}\0${item.word}`, item]));
 function reviewedExample(word) {
   const corrected=require('./content-corrections').correctedExample(word);if(corrected)return corrected;
   const item = bindings.get(`${word.source_file}\0${word.word}`);

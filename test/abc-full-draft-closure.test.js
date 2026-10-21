@@ -51,7 +51,7 @@ test('full corpus has exact source-aligned proposals or one-shot plan to fill al
   assert.equal(a.totals.example_pairs_missing,0);
   assert.equal(a.totals.result_files,manifest.files.length);
   assert.equal(a.totals.primary_accepted_rows,0);
-  assert.equal(a.totals.installed_rows,0);
+  assert.equal(a.totals.installed_rows,null, 'source audit cannot infer a learner database installation');
   assert.equal(a.findings.filter(x=>/identity-reordered|original-field-altered|manifest-input-sha-mismatch|progress/.test(x.code)).length,0);
  }
 });

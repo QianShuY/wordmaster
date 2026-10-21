@@ -37,7 +37,8 @@ test('full read-only handoff audit preserves task identities and never approves 
   assert.equal(report.totals.assigned_rows, 26612);
   assert.ok(report.totals.actual_proposal_rows >= 14259);
   assert.equal(report.totals.primary_accepted_rows, 0);
-  assert.equal(report.totals.installed_rows, 0);
+  assert.equal(report.totals.installed_rows, null);
+  assert.equal(report.totals.shipped_selected_example_pairs, 1919);
   assert.equal(report.totals.result_files,
     report.totals.full_length_files + report.totals.partial_files);
   assert.equal(report.totals.claimed_source_checked_rows + report.totals.needs_review_rows,

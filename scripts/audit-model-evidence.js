@@ -48,7 +48,8 @@ function inspect(root = ROOT, { save = true } = {}) {
     source_claims_without_valid_dictionary_url: 0,
     draft_ipa_without_source_check: 0, example_pairs_missing: 0,
     issues_with_null_elements: 0,
-    primary_accepted_rows: 0, installed_rows: 0,
+    primary_accepted_rows: 0, installed_rows: null,
+    shipped_selected_example_pairs: 0,
   };
   const findings = [], perWorker = {};
   const progressByWorker = {};
@@ -160,6 +161,18 @@ function inspect(root = ROOT, { save = true } = {}) {
       } else problem(findings, 'unknown-verification-label', task_id, i);
     }
   }
+  // Separately accepted examples do not certify the worker's full entry.
+  // This source-only audit cannot infer installation in any user's database.
+  const shipped=new Set();
+  for(const name of ['examples-cet6-reviewed-20261021.json','examples-cet6-complete-reviewed-20261021.json']){
+    const file=path.join(root,'app/seed',name);
+    if(!fs.existsSync(file))continue;
+    for(const e of JSON.parse(fs.readFileSync(file,'utf8')).examples||[]){
+      if(e.review_status==='sense-reviewed'&&e.review_scope==='paired-example-only'&&e.candidate)
+        shipped.add(e.candidate.task_id+':'+e.candidate.row_index);
+    }
+  }
+  totals.shipped_selected_example_pairs=shipped.size;
   const report = {
     purpose: 'source-claim and structural audit, NEVER release approval',
     generated_at: new Date().toISOString(),
@@ -167,7 +180,7 @@ function inspect(root = ROOT, { save = true } = {}) {
     totals, workers: perWorker,
     findings, blocking_findings: findings.filter(x =>
       !['malformed-issues-field'].includes(x.code)).length,
-    note: 'A checked URL in a worker result is an unverified worker claim, NOT independent dictionary verification. No result has been promoted to seeds or installed to a database.',
+    note: 'Worker URLs are unverified claims, not independent dictionary verification. Separately reviewed example pairs may be shipped without approving the full worker entry. installed_rows is unknown because this audit never opens a learner database.',
   };
   if (save) {
     const dest = root === ROOT ? REPORT_PATH : path.join(root, 'output/refinement/model-evidence-audit.json');
@@ -188,7 +201,8 @@ if (require.main === module) {
         needs_review: v.needs_review_rows, progress_rows: v.progress_claimed_rows }])),
     findings_count: report.findings.length,
     findings_sample: report.findings.slice(0, 20),
-    approved_or_installed: false,
+    full_worker_entries_approved: false,
+    installation_checked: false,
   }, null, 2));
   if (process.argv.includes('--strict') && report.findings.length) process.exitCode = 1;
 }
