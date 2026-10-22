@@ -8,7 +8,7 @@
  strip.innerHTML='<span class="score-name">♫ 雾桥之誓 <small id="battleScorePhase">· 战斗配乐</small></span><button id="battleMusic" type="button">配乐</button><label>音乐<input id="battleMusicVolume" aria-label="战斗配乐音量" type="range" min="0" max="100"><output id="battleMusicValue"></output></label><button id="battleSfx" type="button">音效</button><label>音效<input id="battleSfxVolume" aria-label="战斗音效音量" type="range" min="0" max="100"><output id="battleSfxValue"></output></label><p class="audio-status" id="battleAudioStatus" role="status"></p>';
  const soundMount=document.getElementById('battleAudioMount');
  if(soundMount&&typeof soundMount.append==='function')soundMount.append(strip);else heading.after(strip);
- const musicRevision='20261022-exclusive1';
+ const musicRevision='20261022-punk-finale2';
  const get=id=>document.getElementById(id),track=new Audio('assets/letters-at-the-mist-bridge.wav?v='+musicRevision);track.loop=true;track.preload='none';track.volume=0;
  const stems=['mist-bridge-tension.wav','mist-bridge-last-stand.wav'].map(file=>{const audio=new Audio('assets/'+file+'?v='+musicRevision);audio.loop=true;audio.preload='none';audio.volume=0;return audio;}),tracks=[track,...stems];
  let ctx,master,unlocked=false,phase=battle?'camp':'preview',hp=120,battlePaused=false,disposed=false,version=0,frame=0,selectedTrack=0;

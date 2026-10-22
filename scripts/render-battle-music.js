@@ -6,6 +6,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const SR=22050, beat=60/140, bar=beat*4, bars=32, duration=bar*bars, length=Math.round(duration*SR);
 const left=new Float64Array(length),right=new Float64Array(length);
+const lastStandOnly=process.argv.includes('--last-stand-only');
 let seed=4187;const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
 function add(midi,at,seconds,level,voice,pan=0){
  const frequency=440*2**((midi-69)/12),start=Math.round(at*SR),n=Math.round(seconds*SR);
@@ -105,6 +106,7 @@ for(let b=0;b<bars;b++){
  for(const step of [0,1,2,3])add(60,at+step*beat,.085,.026,'hat',.25);
 }
 function writeTrack(filename,mono=false,ceiling=.78){
+ if(lastStandOnly&&filename!=='mist-bridge-last-stand.wav')return;
  // The same room on every stem helps new pulses blend into the existing cue.
  const dryL=left.slice(),dryR=right.slice();
  for(const [delay,gain]of [[.113,.13],[.241,.09],[.397,.06],[.631,.035]]){
@@ -138,23 +140,38 @@ for(let b=0;b<bars;b++){
 }
 writeTrack('mist-bridge-tension.wav',false,.64);
 left.fill(0);right.fill(0);
-// A single broad rising variation replaces the oppressive bed at low health.
-// Four-bar harmonic spans remain identical so mid-phrase transitions still fit.
-legato(roots,16,.024,-.2);
+// Original pop-punk counterattack: one four-bar hook, tight downstrokes and a
+// driving rhythm section. Broad genre reference only; no reference-song notes.
+// Preserve the existing harmonic grid so health changes keep their footing.
+legato(roots,16,.011,-.2);
+const hook=[
+ [[0,12,.48],[.5,7,.4],[1,15,.48],[1.5,14,.4],[2.25,12,.45],[2.75,7,.4],[3.25,10,.24],[3.5,12,.44]],
+ [[0,15,.66],[.75,14,.6],[1.5,12,.8],[2.5,7,.4],[3,12,.93]],
+ [[0,12,.48],[.5,7,.4],[1,15,.48],[1.5,14,.4],[2.25,17,.45],[2.75,15,.4],[3.25,14,.24],[3.5,12,.44]],
+ [[0,14,.8],[1,15,.8],[2,12,1.15],[3.5,7,.4]],
+];
 for(let b=0;b<bars;b++){
- const root=roots[Math.floor(b/4)],at=b*bar;
- // Rhythm guitar and bass share the same riff; the lead remains one clear line.
- for(const [step,lengthInBeats]of [[0,.6],[.75,.45],[1.5,.6],[2.5,.4],[3,.8]])powerChord(root+12,at+step*beat,beat*lengthInBeats,.115,b%4!==3);
- for(let step=0;step<8;step++)sampled('electric_bass_pick',root-12+(step===7?7:0),at+step*beat/2,beat*.43,.15,0,true);
- const note=heroicTheme[b],next=heroicTheme[(b+1)%heroicTheme.length],long=b%4===3;
- sampled('overdriven_guitar',note,at,beat*(long?3.75:2.7),.21,-.06);
- sampled('electric_guitar_clean',note,at+.012,beat*(long?3.75:2.7),.07,.2);
- if(!long)sampled('overdriven_guitar',next,at+beat*3.1,beat*.8,.16,-.06);
- // A restrained electronic echo reinforces the theme instead of a second solo.
- for(const step of [0,1.5,2.5])add(note,at+step*beat,beat*.55,.025,'synth',.34);
- for(const step of [0,1.5,2,2.75])add(38,at+step*beat,.4,.23,'kick');
- for(const step of [1,3])add(60,at+step*beat,.26,.19,'snare');
- for(let step=0;step<8;step++)add(60,at+step*beat/2,.08,.032*(step%2?.75:1),'hat',.25);
- if(b%8===0)add(60,at,1.3,.065,'crash',-.25);
+ const block=Math.floor(b/4),root=roots[block],at=b*bar,phrase=b%4,chorus=b>=8&&b<24;
+ // Alternating palm-muted eighths and open chord accents give the riff breath.
+ for(let step=0;step<8;step++){
+  const open=step===0||step===4||phrase===3&&step===6;
+  const space=phrase===3&&step===7;
+  if(!space)powerChord(root+12,at+step*beat/2,beat*(open?.7:.34),open?.085:.066,!open);
+  const bass=root-12+(phrase===3&&step===7?7:0);
+  sampled('electric_bass_pick',bass,at+step*beat/2,beat*.43,.16,0,true);
+ }
+ // The same hook returns with a small answer, rather than unrelated long solos.
+ for(const [step,offset,span]of hook[phrase]){
+  const thirdAdjusted=offset===15&&thirds[block]===4?16:offset;
+  const note=root+24+thirdAdjusted;
+  sampled('overdriven_guitar',note,at+step*beat,beat*span,.145,-.12);
+  sampled('electric_guitar_clean',note,at+step*beat+.009,beat*span,.039,.2);
+  if(chorus&&phrase===3&&step===2)sampled('overdriven_guitar',note+12,at+step*beat+.012,beat*span,.038,.36);
+ }
+ for(const step of [0,1.5,2,2.5])add(38,at+step*beat,.3,.245,'kick');
+ for(const step of [1,3])add(60,at+step*beat,.23,.22,'snare');
+ for(let step=0;step<8;step++)add(60,at+step*beat/2,.075,.033*(step%2?.72:1),'hat',.32);
+ if(phrase===3){add(60,at+beat*3.5,.16,.065,'snare',-.12);add(60,at+beat*3.75,.14,.09,'snare',.12);}
+ if(b%4===0)add(60,at,1,.053,'crash',-.3);
 }
 writeTrack('mist-bridge-last-stand.wav',false,.78);
