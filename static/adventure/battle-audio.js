@@ -6,7 +6,8 @@
  try{const p=JSON.parse(localStorage.getItem(key));for(const k of ['music','effects'])if(typeof p?.[k]==='boolean')prefs[k]=p[k];for(const k of ['musicVolume','effectsVolume'])if(Number.isFinite(p?.[k]))prefs[k]=Math.max(0,Math.min(100,p[k]));}catch{}
  const strip=document.createElement('section');strip.className='battle-score';strip.setAttribute('aria-label','战斗声音');
  strip.innerHTML='<span class="score-name">♫ 雾桥之誓 <small id="battleScorePhase">· 战斗配乐</small></span><button id="battleMusic" type="button">配乐</button><label>音乐<input id="battleMusicVolume" aria-label="战斗配乐音量" type="range" min="0" max="100"><output id="battleMusicValue"></output></label><button id="battleSfx" type="button">音效</button><label>音效<input id="battleSfxVolume" aria-label="战斗音效音量" type="range" min="0" max="100"><output id="battleSfxValue"></output></label><p class="audio-status" id="battleAudioStatus" role="status"></p>';
- heading.after(strip);
+ const soundMount=document.getElementById('battleAudioMount');
+ if(soundMount&&typeof soundMount.append==='function')soundMount.append(strip);else heading.after(strip);
  const musicRevision='20261019-electrorock5';
  const get=id=>document.getElementById(id),track=new Audio('assets/letters-at-the-mist-bridge.wav?v='+musicRevision);track.loop=true;track.preload='none';track.volume=0;
  const stems=['mist-bridge-tension.wav','mist-bridge-last-stand.wav'].map(file=>{const audio=new Audio('assets/'+file+'?v='+musicRevision);audio.loop=true;audio.preload='none';audio.volume=0;return audio;}),tracks=[track,...stems];
