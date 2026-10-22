@@ -8,19 +8,19 @@
  strip.innerHTML='<span class="score-name">♫ 雾桥之誓 <small id="battleScorePhase">· 战斗配乐</small></span><button id="battleMusic" type="button">配乐</button><label>音乐<input id="battleMusicVolume" aria-label="战斗配乐音量" type="range" min="0" max="100"><output id="battleMusicValue"></output></label><button id="battleSfx" type="button">音效</button><label>音效<input id="battleSfxVolume" aria-label="战斗音效音量" type="range" min="0" max="100"><output id="battleSfxValue"></output></label><p class="audio-status" id="battleAudioStatus" role="status"></p>';
  const soundMount=document.getElementById('battleAudioMount');
  if(soundMount&&typeof soundMount.append==='function')soundMount.append(strip);else heading.after(strip);
- const musicRevision='20261019-electrorock5';
+ const musicRevision='20261022-exclusive1';
  const get=id=>document.getElementById(id),track=new Audio('assets/letters-at-the-mist-bridge.wav?v='+musicRevision);track.loop=true;track.preload='none';track.volume=0;
  const stems=['mist-bridge-tension.wav','mist-bridge-last-stand.wav'].map(file=>{const audio=new Audio('assets/'+file+'?v='+musicRevision);audio.loop=true;audio.preload='none';audio.volume=0;return audio;}),tracks=[track,...stems];
- let ctx,master,unlocked=false,phase=battle?'camp':'preview',hp=120,battlePaused=false,disposed=false,version=0,frame=0;
+ let ctx,master,unlocked=false,phase=battle?'camp':'preview',hp=120,battlePaused=false,disposed=false,version=0,frame=0,selectedTrack=0;
  const sources=new Set();
  const impactNames=new Set(['ink','break','defend','wound','slam','sweep','storm']),impactLoads=new Map();
  let effectGeneration=0,duckLevel=1,duckFrame=0,duckStart=0,duckEnd=0,duckFrom=1;const levels=[0,0,0];
  const blocked=()=>disposed||document.hidden||!document.hasFocus()||battlePaused;
  const active=()=>!battle||!['camp','won','lost','fallen'].includes(phase);
  const volume=()=>prefs.musicVolume/100*.55;
- // Late battle shifts perspective from the threatening warden to the traveler.
- // The heroic arrangement replaces the tension layer, avoiding three full lines.
- const mix=()=>hp<=30?[volume()*.18,0,volume()]:hp<=60?[volume()*.9,volume()*.65,0]:[volume(),0,0];
+ // Each file is a complete arrangement, not an additive stem. Only one may play.
+ const musicIndex=()=>hp<=30?2:hp<=60?1:0;
+ const mix=()=>tracks.map((_,i)=>i===selectedTrack?volume():0);
  function paint(){for(const [id,k,label]of [['battleMusic','music','配乐'],['battleSfx','effects','音效']]){get(id).setAttribute('aria-pressed',String(prefs[k]));get(id).textContent=label+' · '+(prefs[k]?'开':'关');}for(const [id,k,out]of [['battleMusicVolume','musicVolume','battleMusicValue'],['battleSfxVolume','effectsVolume','battleSfxValue']]){get(id).value=prefs[k];get(out).textContent=Math.round(prefs[k])+'%';}}
  function save(){try{localStorage.setItem(key,JSON.stringify(prefs));}catch{}paint();}
  function applyLevels(){tracks.forEach((audio,i)=>audio.volume=levels[i]*duckLevel);}
@@ -43,13 +43,18 @@
   if(blocked()){cancelAnimationFrame(frame);silence();stopEffects();if(ctx?.state==='running')ctx.suspend().catch(()=>{});return;}
   if(unlocked&&prefs.effects&&ctx?.state==='suspended')ctx.resume().catch(()=>{});
   if(!unlocked||!prefs.music||!active()){fade(0);return;}
-  try{await track.play();if(request!==version){if(blocked()||!prefs.music||!active())silence();return;}
-   // Load stems only after a gesture has enabled music. Muted stems keep the beat
-   // ready for health transitions; re-align after focus changes or stalled loads.
-   const results=await Promise.allSettled(stems.map(async audio=>{await audio.play();if(Math.abs(audio.currentTime-track.currentTime)>.035)audio.currentTime=track.currentTime;}));
-   if(request!==version){if(blocked()||!prefs.music||!active())silence();return;}
-   get('battleAudioStatus').textContent=results.some(r=>r.status==='rejected')?'部分配乐层暂未加载，基础配乐继续播放。':'';fade(mix());}
-  catch{if(request===version)get('battleAudioStatus').textContent='配乐尚未播放，点击「配乐」重试。';}
+  const index=musicIndex(),audio=tracks[index];
+  if(index!==selectedTrack){
+   const position=Number.isFinite(tracks[selectedTrack].currentTime)?tracks[selectedTrack].currentTime:0;
+   cancelAnimationFrame(frame);silence();selectedTrack=index;
+   // The arrangements share a bar grid. Seek the replacement to the same beat,
+   // but pause the old track before starting it: there is never a layered mix.
+   try{audio.currentTime=position;}catch{}
+  }
+  tracks.forEach((other,i)=>{if(i!==index){other.pause();other.volume=0;levels[i]=0;}});
+  try{await audio.play();if(request!==version){if(blocked()||!prefs.music||!active())silence();else if(selectedTrack!==index){audio.pause();audio.volume=0;levels[index]=0;}return;}
+   get('battleAudioStatus').textContent='';fade(mix());}
+  catch{if(request===version){silence();get('battleAudioStatus').textContent='配乐尚未播放，点击「配乐」重试。';}}
  }
  function unlock(){if(disposed||blocked())return;unlocked=true;const AudioCtx=window.AudioContext||window.webkitAudioContext;if(!ctx&&AudioCtx){try{ctx=new AudioCtx();master=ctx.createGain();master.gain.value=prefs.effectsVolume/100*.5;master.connect(ctx.destination);if(typeof fetch==='function'&&ctx.decodeAudioData)for(const name of impactNames)loadImpact(name).catch(()=>{});}catch{get('battleAudioStatus').textContent='当前设备暂不支持战斗音效。';}}if(ctx?.state==='suspended')ctx.resume().catch(()=>{});}
  function tone(frequency,offset,duration,level=.3,type='sine',endFrequency=frequency){

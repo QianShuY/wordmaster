@@ -80,9 +80,28 @@ test('a late music play response cannot restart a paused or departed battle',asy
 test('victory ends the battle loop and plays its cadence only once per state transition',async()=>{
  const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.api.setState('won',0,false);await flush();s.frame();assert.equal(s.track.paused,true);const count=s.contexts[0].oscillators.length;assert.equal(count,6);s.api.setState('won',0,false);assert.equal(s.contexts[0].oscillators.length,count);
 });
-test('half health opens the theme, low health replaces tension with the heroic arrangement',async()=>{
+test('health stages play exactly one complete arrangement and preserve its musical position',async()=>{
  const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.frame();const base=s.track.volume;assert.deepEqual(s.tracks.slice(1).map(a=>a.volume),[0,0]);
- s.api.setState('feedback',60,false);await flush();s.frame();assert.ok(s.track.volume<base);assert.ok(s.tracks[1].volume>0);assert.equal(s.tracks[2].volume,0);assert.match(s.node('battleScorePhase').textContent,/逆风起势/);
- s.api.setState('choose',30,false);await flush();s.frame();assert.equal(s.tracks[2].volume,base);assert.equal(s.tracks[1].volume,0,'Tension yields to the counterattack');assert.ok(s.track.volume<base*.2);assert.match(s.node('battleScorePhase').textContent,/破雾反攻/);
+ s.track.currentTime=12.5;
+ s.api.setState('feedback',60,false);await flush();s.frame();assert.equal(s.track.volume,0);assert.equal(s.track.paused,true);assert.equal(s.tracks[1].volume,base);assert.equal(s.tracks[1].currentTime,12.5);assert.equal(s.tracks[2].paused,true);assert.match(s.node('battleScorePhase').textContent,/逆风起势/);
+ s.tracks[1].currentTime=26;
+ s.api.setState('choose',30,false);await flush();s.frame();assert.equal(s.tracks[2].volume,base);assert.equal(s.tracks[2].currentTime,26);assert.ok(s.tracks.slice(0,2).every(a=>a.paused&&a.volume===0));assert.match(s.node('battleScorePhase').textContent,/破雾反攻/);
+ assert.equal(s.tracks.filter(a=>!a.paused&&a.volume>0).length,1);
  s.blur();assert.ok(s.tracks.every(a=>a.paused&&a.volume===0));
+});
+
+test('a slow previous arrangement cannot resume over a newer health stage',async()=>{
+ const s=setup();s.api.setState('choose',120,false);s.gesture();await flush();s.frame();
+ let resolve;s.tracks[1].pending=new Promise(r=>resolve=r);
+ s.api.setState('feedback',60,false);s.api.setState('choose',30,false);await flush();s.frame();resolve();await flush();
+ assert.equal(s.tracks[2].paused,false);assert.ok(s.tracks[2].volume>0);
+ assert.ok(s.tracks.slice(0,2).every(a=>a.paused&&a.volume===0));
+ s.api.setState('question',30,true);assert.ok(s.tracks.every(a=>a.paused&&a.volume===0));
+});
+
+test('resuming at half health starts its own score without ever playing the opening cue',async()=>{
+ const s=setup();s.api.setState('feedback',48,false);s.gesture();await flush();s.frame();
+ assert.equal(s.track.plays,0);assert.equal(s.tracks[2].plays,0);assert.ok(s.tracks[1].plays>0);
+ assert.equal(s.tracks.filter(a=>!a.paused&&a.volume>0).length,1);
+ s.windowEvents.pagehide();assert.ok(s.tracks.every(a=>a.paused&&a.volume===0));
 });

@@ -124,8 +124,13 @@ writeTrack('letters-at-the-mist-bridge.wav');
 // Same bar count, tempo, harmony and loop length in every health arrangement.
 // Middle health introduces hope without changing the original melodic contour.
 left.fill(0);right.fill(0);
+// This is now a complete middle-health cue. Bass, kick and a quiet harmonic bed
+// replace the old dependency on playing the opening arrangement underneath it.
+legato(roots,16,.036,-.15);
 for(let b=0;b<bars;b++){
  const root=roots[Math.floor(b/4)],at=b*bar;
+ for(const step of [0,1.5,2.75])sampled('electric_bass_pick',root-12,at+step*beat,beat*.85,.13,0,true);
+ for(const step of [0,2.75])add(38,at+step*beat,.4,.2,'kick');
  for(const step of [0,.75,1.5,2.5,3])powerChord(root+12,at+step*beat,beat*.6,.085);
  for(const step of [.5,1.5,2.5,3.5])add(60,at+step*beat,.085,.028,'hat',.25);
  sampled('electric_guitar_clean',heroicTheme[b],at,beat*3.7,.1,.08);
