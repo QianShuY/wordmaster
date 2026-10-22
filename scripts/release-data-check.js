@@ -34,7 +34,7 @@ function verifyContentUpdate(before,after,{words=[],builds=[]}={}){
  const old=new Map(before.tables.map(t=>[t.name,t])),next=new Map(after.tables.map(t=>[t.name,t]));
  if(old.size!==next.size||!old.has('words')||!old.has('vocabulary_builds'))throw Error('Content update changed table identities');
  for(const [name,table]of old){const updated=next.get(name);if(!updated||table.sql!==updated.sql||hash(table.columns)!==hash(updated.columns))throw Error('Content update changed table structure: '+name);
-  const expected=name==='words'?patchedRows(table,words,'id',['meaning','phonetic','example','example_translation']):name==='vocabulary_builds'?patchedRows(table,builds,'book_id',['content_version','audit_json']):table.rows;
+  const expected=name==='words'?patchedRows(table,words,'id',['pos','meaning','phonetic','example','example_translation']):name==='vocabulary_builds'?patchedRows(table,builds,'book_id',['content_version','audit_json']):table.rows;
   if(hash(expected)!==hash(updated.rows))throw Error('Unexpected content update rows: '+name);
  }
  return {schema:after.version,reviewed_word_ids:words.map(p=>p.id),reviewed_build_ids:builds.map(p=>p.id),all_other_rows_unchanged:true,all_table_structures_unchanged:true};

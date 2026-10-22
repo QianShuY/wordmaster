@@ -14,7 +14,8 @@ function verifyFields(db,before,results,bookIds){
  const after=db.prepare('SELECT * FROM words ORDER BY id').all();if(before.words.length!==after.length)throw Error('Content upgrade changed word identities');
  for(let i=0;i<after.length;i++)for(const key of Object.keys(before.words[i]))if(before.words[i][key]!==after[i][key]){
   const old=before.words[i],next=after[i],items=allowed.get(old.id)||[];
-  const valid=['meaning','phonetic'].includes(key)?items.some(p=>p.field===key&&p.from===old[key]&&p.to===next[key]):
+  const valid=key==='pos'?items.some(p=>p.field===key&&p.from===old[key]&&p.to===next[key])&&require('../shared/lexical-corrections').reviewedLexical(old)?.to.pos===next.pos:
+   ['meaning','phonetic'].includes(key)?items.some(p=>p.field===key&&p.from===old[key]&&p.to===next[key]):
    ['example','example_translation'].includes(key)&&items.some(p=>p.field==='paired-example')&&!String(old.example||'').trim()&&!String(old.example_translation||'').trim()&&reviewedExample(next)?.[key==='example'?'text':'translation']===next[key];
   if(!valid)throw Error('Content upgrade changed an unapproved field');
  }
@@ -39,6 +40,7 @@ async function upgradeContent(db,{databasePath,backupDirectory,backupFn=backup,v
  const before={words:db.prepare('SELECT * FROM words ORDER BY id').all(),builds:db.prepare('SELECT * FROM vocabulary_builds ORDER BY book_id').all(),sequence:db.prepare('SELECT * FROM sqlite_sequence ORDER BY name').all()};
  const result=improve(db,{apply:true,bookIds:ids,verify(context){if(verify)verify(context);verifyFields(db,before,context.results,ids);}});
  const counts=result.results.reduce((s,r)=>({examples:s.examples+(r.examples_added||0),meanings:s.meanings+(r.meanings_patched||0),phonetics:s.phonetics+(r.phonetics_patched||0)}),{examples:0,meanings:0,phonetics:0});
+ const posCount=result.results.reduce((n,r)=>n+(r.parts_of_speech_patched||0),0);if(posCount)counts.parts_of_speech=posCount;
  const report={status:skipped.length?'applied-with-skips':'applied',version:V.VERSION,counts,skipped,edited_rows_preserved:result.results.reduce((n,r)=>n+(r.edited_rows_skipped||0),0),protected_state_unchanged:result.learning_and_plans_unchanged,protected_before:result.protected_before,protected_after:result.protected_after,backup:path.basename(backupFile),receipt_saved:true};
  const receipt=path.join(folder,'content-upgrade-'+V.VERSION+'-'+stamp+'.json');try{fs.writeFileSync(receipt,JSON.stringify(report,null,2)+'\n',{flag:'wx'});}catch(error){report.receipt_saved=false;report.receipt_error=error.code||'write-failed';}
  return {...report,backupFile};

@@ -501,8 +501,10 @@ const DesktopHub = {
       const stageNames = { review: checkpoint.flow.resumingUnfinished?'巩固强化':'到期复习', 'review-spelling':checkpoint.flow.resumingUnfinished?'拼写强化':'复习拼写',learn: '新词学习', choice: '选择巩固', spelling: '巩固默写' };
       const completed = progress ? `${progress.achieved} / ${progress.expected}` : '已保存';
       const spellingPending=checkpoint.stage==='review-spelling';
+      const currentSpellingLeft=spellingPending?Math.max(0,checkpoint.total-checkpoint.done):0;
       const remainingDue = book.workload ? book.workload.review_remaining+book.workload.new_pending : spellingPending?Math.max(0,checkpoint.total-checkpoint.done):Math.max(0, checkpoint.flow.reviewTotal - (progress?.steps.review || 0));
-      $('#hubReviewLabel').textContent=spellingPending?'待完成拼写':checkpoint.flow.resumingUnfinished?'待完成巩固':'到期复习';
+      const laterReviewLeft=spellingPending?Math.max(0,remainingDue-currentSpellingLeft):0;
+      $('#hubReviewLabel').textContent=spellingPending&&!laterReviewLeft?'待完成拼写':checkpoint.flow.resumingUnfinished?'待完成巩固':spellingPending?'待完成复习':'到期复习';
       const remainingNew = book.workload ? book.workload.new_remaining : Math.max(0, checkpoint.flow.learnTotal - (progress?.steps.learn || 0));
       // Live SQLite counts can include newly introduced (now instantly due)
       // words. While resuming, present the *same* original task manifest.
@@ -515,7 +517,7 @@ const DesktopHub = {
       // A word that failed and is waiting to be retried stays in the
       // checkpoint queue even if live "due" counts temporarily differ.
       $('#hubActionSummary').textContent =
-        spellingPending?`还需完成 ${remainingDue} 个词的拼写${checkpoint.flow.resumingUnfinished?'强化':''}；词义已通过，不必重新选择。`:`接续上次的任务：还需完成 ${remainingDue} 个${checkpoint.flow.resumingUnfinished?'巩固':'复习'}词（含待回炉词）和 ${remainingNew} 个新词。`;
+        spellingPending?(currentSpellingLeft?`接着完成本组 ${currentSpellingLeft} 个词的拼写${checkpoint.flow.resumingUnfinished?'强化':''}，本组词义无需重选。`:'本组拼写已完成。')+(laterReviewLeft?`其余 ${laterReviewLeft} 个复习词会另分组，每组最多 10 个，先词义再拼写。`:''):`接续上次的任务：还需完成 ${remainingDue} 个${checkpoint.flow.resumingUnfinished?'巩固':'复习'}词（含待回炉词）和 ${remainingNew} 个新词。`;
       resume.textContent = `✓ 学习断点已保存 · ${stageNames[checkpoint.stage]} · ${completed} 词`;
       $('#hubStart').disabled = false;
       $('#hubStart').innerHTML = `${checkpoint.phaseDone ? '继续下一阶段' : '继续上次学习'} <span aria-hidden="true">→</span>`;

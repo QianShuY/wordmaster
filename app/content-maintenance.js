@@ -4,6 +4,7 @@ const V=require('./vocabulary');
 const {reviewedExample,reviewedPhonetic}=require('../shared/content-batch');
 const {reviewedMeaning}=require('../shared/content-corrections');
 const {reviewedSymbol}=require('../shared/phonetic-symbols');
+const {reviewedLexical}=require('../shared/lexical-corrections');
 const corrections=require('./seed/cet6-corrections.json');
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 // Include all non-content tables, including future chapter saves, and preserve word IDs.
@@ -28,30 +29,38 @@ function improve(db, { apply = false, verify, bookIds } = {}) {
       if(scope&&!scope.has(book.id)){results.push({book:spec.name,skipped:'not-requested'});continue;}
       if (book.source_sha256 !== built.report.sha256) { results.push({ book: spec.name, skipped: 'source-hash-mismatch' }); continue; }
       const source = new Map(built.words.map(w => [w.word, w]));
-      const result = { book: spec.name, examples_added: 0, phonetics_patched: 0, meanings_patched:0, edited_rows_skipped: 0, items: [] };
+      const result = { book: spec.name, examples_added: 0, phonetics_patched: 0, meanings_patched:0, parts_of_speech_patched:0, edited_rows_skipped: 0, items: [] };
       for (const row of db.prepare('SELECT * FROM words WHERE book_id=? ORDER BY id').all(book.id)) {
         const expected = source.get(row.word);
         // An edited phonetic must also block filling a sentence for an unverified row.
         const fix = reviewedPhonetic(row) || corrections.find(f => f.word === row.word && f.from.pos === row.pos && f.from.meaning === row.meaning && f.from.phonetic === row.phonetic);
         let meaningFix=reviewedMeaning(row);
         const symbol=reviewedSymbol({...row,meaning:meaningFix?.to.meaning||row.meaning,phonetic:fix?.to.phonetic||row.phonetic});
-        const finalPhonetic=symbol?.to.phonetic||fix?.to.phonetic||row.phonetic;
+        let finalPhonetic=symbol?.to.phonetic||fix?.to.phonetic||row.phonetic;
         meaningFix=meaningFix||reviewedMeaning({...row,phonetic:finalPhonetic});
-        if (!expected || row.source_file !== spec.file || row.source_raw !== expected.source_raw || row.source_line !== expected.source_line || row.headword !== expected.headword || row.homograph !== expected.homograph || row.pos !== expected.pos || (row.meaning !== expected.meaning && !meaningFix) || finalPhonetic !== expected.phonetic) {
+        const lexical=reviewedLexical({...row,meaning:meaningFix?.to.meaning||row.meaning,phonetic:finalPhonetic});
+        const finalPos=lexical?.to.pos||row.pos;
+        const finalMeaning=lexical?.to.meaning||meaningFix?.to.meaning||row.meaning;
+        finalPhonetic=lexical?.to.phonetic||finalPhonetic;
+        if (!expected || row.source_file !== spec.file || row.source_raw !== expected.source_raw || row.source_line !== expected.source_line || row.headword !== expected.headword || row.homograph !== expected.homograph || finalPos !== expected.pos || finalMeaning !== expected.meaning || finalPhonetic !== expected.phonetic) {
           result.edited_rows_skipped++; continue;
         }
-        const example = reviewedExample({...row,meaning:meaningFix?.to.meaning||row.meaning,phonetic:finalPhonetic});
+        const example = reviewedExample({...row,pos:finalPos,meaning:finalMeaning,phonetic:finalPhonetic});
         if (example && !String(row.example || '').trim() && !String(row.example_translation || '').trim()) {
           result.examples_added++; result.items.push({ id: row.id, word: row.word, field: 'paired-example' });
           if (apply) db.prepare('UPDATE words SET example=?,example_translation=? WHERE id=?').run(example.text, example.translation, row.id);
         }
         if (finalPhonetic !== row.phonetic) {
-          result.phonetics_patched++; result.items.push({ id: row.id, word: row.word, field: 'phonetic', from: row.phonetic, to: finalPhonetic, source: symbol?.source||fix?.source });
+          result.phonetics_patched++; result.items.push({ id: row.id, word: row.word, field: 'phonetic', from: row.phonetic, to: finalPhonetic, source: lexical?.source||symbol?.source||fix?.source });
           if (apply) db.prepare('UPDATE words SET phonetic=? WHERE id=?').run(finalPhonetic, row.id);
         }
-        if(meaningFix&&meaningFix.to.meaning===expected.meaning){
-          result.meanings_patched++;result.items.push({id:row.id,word:row.word,field:'meaning',from:row.meaning,to:meaningFix.to.meaning,source:meaningFix.source});
-          if(apply)db.prepare('UPDATE words SET meaning=? WHERE id=?').run(meaningFix.to.meaning,row.id);
+        if(finalMeaning!==row.meaning){
+          result.meanings_patched++;result.items.push({id:row.id,word:row.word,field:'meaning',from:row.meaning,to:finalMeaning,source:lexical?.source||meaningFix.source});
+          if(apply)db.prepare('UPDATE words SET meaning=? WHERE id=?').run(finalMeaning,row.id);
+        }
+        if(finalPos!==row.pos){
+          result.parts_of_speech_patched++;result.items.push({id:row.id,word:row.word,field:'pos',from:row.pos,to:finalPos,source:lexical.source});
+          if(apply)db.prepare('UPDATE words SET pos=? WHERE id=?').run(finalPos,row.id);
         }
       }
       if (apply) db.prepare('UPDATE vocabulary_builds SET content_version=?,audit_json=? WHERE book_id=?').run(V.VERSION, JSON.stringify(built.report), book.id);

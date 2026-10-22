@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 
-const VERSION = '2026-10-21.2';
+const VERSION = '2026-10-22.1';
 const CATALOG = [
   { name: '中考核心词汇', file: 'zhongkao.txt', label: '中考词表' },
   { name: '四级核心词汇', file: 'cet4.txt', label: '四级词表' },
@@ -79,6 +79,8 @@ function buildBook(spec, seedDir = path.join(__dirname, 'seed')) {
     // Keep both stages exact; do not normalize imports or weaken source guards.
     const subsequentMeaning=require('../shared/content-corrections').reviewedMeaning({...original,...parsed.entry});
     if(subsequentMeaning){parsed.entry.meaning=subsequentMeaning.to.meaning;parsed.corrected=true;}
+    const lexical=require('../shared/lexical-corrections').reviewedLexical({...original,...parsed.entry});
+    if(lexical){Object.assign(parsed.entry,lexical.to);parsed.corrected=true;}
     const suspect = parsed.entry;
     const knownIssue = (['cet6.txt', 'tem.txt'].includes(spec.file) && suspect.word === 'boom 2' && suspect.meaning.includes('帆的下析'))
       ? '抽查发现疑似文字损坏，待核验 nautical 义项'

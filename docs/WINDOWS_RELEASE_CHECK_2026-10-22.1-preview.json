@@ -1,0 +1,89 @@
+{
+  "release": "D:\\工作区\\wordmaster\\output\\releases\\WordMaster-2026-10-22.1-preview",
+  "manifest_files": 844,
+  "actual_windows_exe_tested": true,
+  "headless_launcher_only": true,
+  "real_database_unchanged": true,
+  "results": [
+    {
+      "scenario": "fresh-install-and-double-launch",
+      "first": {
+        "words": 26268,
+        "progress": 0,
+        "schema": 13
+      },
+      "reused": true,
+      "concurrent_launch_reused": true,
+      "default_port_already_serving": false,
+      "selected_port": 3456,
+      "ready_ms": 4181.2202,
+      "repeat_ready_ms": 100.61459999999988,
+      "pages": [
+        "/",
+        "/adventure/index.html",
+        "/adventure/journey.html",
+        "/adventure/camp.html",
+        "/adventure/battle.html",
+        "/adventure/ending.html"
+      ]
+    },
+    {
+      "scenario": "existing-database-upgrade-and-reopen",
+      "source_schema": 13,
+      "reconstructed_schema11_in_disposable_copy": false,
+      "all_existing_rows_unchanged": true,
+      "migration": {
+        "from_schema": 13,
+        "to_schema": 13,
+        "existing_tables_checked": 18,
+        "existing_rows_unchanged": true,
+        "new_tables_empty": []
+      },
+      "integrity": {
+        "integrity_check": "ok"
+      },
+      "foreign_keys": [],
+      "ready_ms": 667.3751000000002,
+      "reopen_ready_ms": 667.7098000000005
+    },
+    {
+      "scenario": "reviewed-content-upgrade-and-reopen",
+      "reverted_reviewed_rows_only": 7,
+      "production_database_untouched": true,
+      "contentMigration": {
+        "schema": 13,
+        "reviewed_word_ids": [
+          49545,
+          53290,
+          53336,
+          53444,
+          53567,
+          54541,
+          54566
+        ],
+        "reviewed_build_ids": [
+          2,
+          3
+        ],
+        "all_other_rows_unchanged": true,
+        "all_table_structures_unchanged": true
+      },
+      "counts": {
+        "examples": 7,
+        "meanings": 4,
+        "phonetics": 2,
+        "parts_of_speech": 6
+      },
+      "one_consistent_backup_and_receipt": true,
+      "reopen_no_changes": true,
+      "ready_ms": 1387.1386999999995,
+      "reopen_ready_ms": 667.8722999999991
+    }
+  ],
+  "remaining": [
+    "Current package browser visual acceptance",
+    "Long-duration use and animation measurements",
+    "Gaokao replacement and full-book language review",
+    "Default-browser interactive desktop acceptance"
+  ]
+}

@@ -15,6 +15,7 @@ const cet6Complete = require('../app/seed/examples-cet6-complete-reviewed-202610
 const {matchesSenseIdentity}=require('./source-sense-binding');
 const bindings = new Map([...batch.examples,...common.examples,...extended.examples,...commonD.examples,...commonE.examples,...commonF.examples,...commonG.examples,...commonH.examples,...commonI.examples,...numbered.examples,...webReviewed.examples,...cet6Complete.examples].map(item => [`${item.source_file}\0${item.word}`, item]));
 function reviewedExample(word) {
+  const lexical=require('./lexical-corrections').lexicalExample(word);if(lexical)return lexical;
   const corrected=require('./content-corrections').correctedExample(word);if(corrected)return corrected;
   const item = bindings.get(`${word.source_file}\0${word.word}`);
   return item && matchesSenseIdentity(item,word) && (item.source_line===undefined||item.source_line===word.source_line)
