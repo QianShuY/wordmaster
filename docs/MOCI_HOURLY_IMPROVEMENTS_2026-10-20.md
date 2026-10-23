@@ -153,3 +153,11 @@
 - 仅修改两份 `docs/model-task-results/worker-A/tem-01{6,7}/result.json` 内被选中行的 `proposed.example`、`proposed.example_translation`、`draft_method`；未改变其他行或字段。新增 `test/abc-tem-016-017-natural-57.test.js`，锁定全部 57 对句子、源行号/源文本、词性义项、任务输入 SHA，并检查两批共 200 行的原始身份与审核状态。
 - `tem-016/constant` 的原始词性标成 `n.` 而义项为形容词，故不强行改写；已经自然的 `crossbook-sense-unverified` 行不重复处理。所有改写仍是 `needs-review` 编辑候选，`evidence=[]`、未外部人工审核，不能视为独立词典审校、正式词库安装或全义项认证。
 - 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 正式包，不自动合并或发布。新 commit 的 CI 以 GitHub Actions 最终状态为准。
+
+## 第 19 轮：TEM-017 56 对语境化例句修订（2026-10-24）
+
+- 写入前核对开发分支 HEAD `239ef2bbe70bd05c6d9bb6ec699ae89c6ceff22e`，早期 TEM-009 的 Actions `39959184869` 和上一轮 TEM-016/017 的 Actions `40031836748` 均已完成且 **success**；历史 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 是快照，不作为实时剩余数。
+- 本轮从 TEM-017 的 100 行中选取 **56 对**仍为 `offline-context-first-draft` 且存在明确机械模板/错误搭配的例句，逐条对照 `identity.source_raw`、`selected_sense.pos` 与 `selected_sense.meaning` 后改写。未重写已编辑或 `crossbook-sense-unverified` 行。
+- 代表性例句：`conversant` 使用 `conversant with`、`convict` 使用 `convict the suspect`、`cooperative` 用合作社名词义、`correlate` 使用相关因素的名词义、`counterbalance` 用底座平衡台灯、`counterattack` 用球赛反击。
+- 只改 `docs/model-task-results/worker-A/tem-017/result.json` 56 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-017-natural-56.test.js` 锁定完整中英句对、100 行原始身份、源义项、输入 SHA、证据和审核状态。保留 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review`、`external_human_review=false` 不变。
+- `counterdrug` 的原始释义与 `coup` 的多义语境需要进一步独立核查，故没有为凑数修改。所有改写只是 **needs-review** 候选，不代表独立词典逐义审校或已进入正式词库；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发布包，也不自动合并/发布。CI 最终状态必须查新提交对应 Actions。
