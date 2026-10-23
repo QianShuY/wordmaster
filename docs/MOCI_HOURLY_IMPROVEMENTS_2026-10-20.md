@@ -93,3 +93,13 @@
 - 仅改 `docs/model-task-results/worker-A/tem-010/result.json` 的 24 条和 `tem-011/result.json` 的 31 条 `proposed.example`、`proposed.example_translation`、`draft_method`。原始来源身份、`original`、`selected_sense`、`input_sha256`、空证据、`needs-review` 与未人工外部审校标记保持原状。
 - 新增 `test/abc-tem-010-011-natural-55.test.js` 锁定来源、完整句对、选定义项及机械模板检查。CI 状态须以本轮 commit 对应 Actions 的最终结论为准。
 - 所有改写仅为待审候选，不代表逐义词典认证或用户词库安装；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发布包，也不自动合并/发布。
+
+## 第 11 轮：TEM-011 遗留 + TEM-012 逐义改写（2026-10-24）
+
+- 已复核上一轮 `75c9709c243ebcfd02e9398d9f79f0325fedf381` 对应 GitHub Actions `39976771033` 为 **success**，前两轮 `39967723199` 与 `39959184869` 也均为 **success**。本轮写入前的 HEAD：`75c9709c243ebcfd02e9398d9f79f0325fedf381`。
+- 逐项检查 TEM-011 剩余机械模板，实际改写 **35 对**；TEM-012 优先处理 **23 对**明显错用词性、无宾语或中文硬译的草稿，总计 **58 对**。原稿多为讨论单词本身的元语言模板，改为具体使用语境。
+- 代表修复：`canvass` 用向居民征询意见，`canopy` 用飞机驾驶舱盖，`capitulate` 用守军在补给耗尽后投降，`carnal` 用肉体欲望，`cartridge` 用电唱机唱头，`catwalk` 用工厂检修走道而非时装秀台。
+- `tem-011/bushy` 原始词性为 `n.` 而义项为形容词，暂不修改，留待独立来源核对。 `tem-010/brusque` 仍存在来源释义疑点。单个例句只展示当前义项的一种自然用法，**不代表全部词义核查完毕**。
+- 仅变更 `docs/model-task-results/worker-A/tem-011/result.json` 与 `tem-012/result.json` 中 58 行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`；`identity`、`original`、`selected_sense`、任务输入 SHA、`evidence=[]`、`needs-review`、未外部审校标记全部保留。
+- 新增 `test/abc-tem-011-012-natural-58.test.js`，锁定所有改写句对、来源行号/原文、原始义项、任务输入 SHA 与审核状态。测试最终状态以本次提交对应的 GitHub Actions 为准，不提前宣称通过。
+- 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 发布包，不合并或发布。
