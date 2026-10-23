@@ -67,3 +67,10 @@
 - 只更改 `docs/model-task-results/worker-A/tem-008/result.json` 中 60 条的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-008-natural-60.test.js`，校验全部 60 条完整句对、源任务身份与原始字段、模板清除、空证据和 `needs-review`。
 - 该批是编辑候选而非独立词典审校结果。未触碰 `main`、`app/seed`、SQLite、学习记录、Windows/Android 发行包，也未自动合并或发布。
 - 验收：GitHub Actions 的完整 CI 需以本轮提交实际结果为准，不将新增测试等同于已通过。
+
+## 第 8 轮：TEM-009 自然语境定向复核（2026-10-23）
+
+- 从开发分支 `972f16d86fd0733bda4cb5dc0ead569bf77be3c4` 读取 `tem-009` 100 条候选，逐条核对来源，改写其中 **57 对**确有明显机械模板/生硬语境的英语例句及中文译文。
+- 代表词条：`blurt`（脱口而出）、`blotter`（吸墨纸）、`bonnet`（英式发动机罩）、`boycott`（抵制）及 `braille`（盲文）。违法/暴力有关词仅用于中立语境，不能作为模仿式教学。
+- 只变更 `docs/model-task-results/worker-A/tem-009/result.json` 中 57 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；保留来源身份、原始字段、义项、任务输入 SHA、空证据、`needs-review` 状态。加入 `test/abc-tem-009-natural-57.test.js` 锁定逐句内容及来源。
+- 这些仍是未独立词典核查的草稿候选，测试结果以提交对应 CI 为准。不修改 `main`、`app/seed`、SQLite、学习进度或发行安装包。
