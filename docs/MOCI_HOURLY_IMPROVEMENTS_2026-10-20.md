@@ -84,3 +84,12 @@
 - 新增 `test/abc-tem-009-010-natural-60.test.js` 逐条锁定 60 对英中句、来源行号/原文、原始义项和输入任务 SHA；这些只是语言编辑候选，不冒称人工词典审校，不覆盖正式词库。CI 需在提交后查对应运行结果。
 - 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包，也不合并或发布。
 
+## 第 10 轮：TEM-010 后半批 + TEM-011 逐义自然例句（2026-10-23）
+
+- 先确认上一轮 `3977a53ce7c07cf19c54162922f211d885f4b2d7` 的 GitHub Actions `39967723199` 为 **success**，更早 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 Actions `39959184869` 也为 **success**。本轮写入基线 HEAD：`3977a53ce7c07cf19c54162922f211d885f4b2d7`。
+- TEM-009 余下 6 条已有具体语境，故不为凑数修改。改写 TEM-010 **24 对**、TEM-011 **31 对**，共 **55 对**明确机械套话或生硬译文的草稿例句。
+- 代表修订：`budge` 用橱柜纹丝不动，`buffer` 用树木作隔离缓冲，`bullish` 用投资者看涨股票，`buoyancy` 用救生衣浮力，`cajole` 用劝说弟弟搬沙发，`cameo` 用浮雕宝石。原稿把词作为“课上讨论的话题”而非真实用法。
+- 源词条 `tem-010/brusque` 的英文词义通常偏“唐突、生硬”，但 `selected_sense` 写“轻率、鲁莽”，暂不改写，留待独立来源核对；`tem-011/bushy` 源词性为名词而释义为形容词，也不擅自覆盖。这些未计入本轮修订数。
+- 仅改 `docs/model-task-results/worker-A/tem-010/result.json` 的 24 条和 `tem-011/result.json` 的 31 条 `proposed.example`、`proposed.example_translation`、`draft_method`。原始来源身份、`original`、`selected_sense`、`input_sha256`、空证据、`needs-review` 与未人工外部审校标记保持原状。
+- 新增 `test/abc-tem-010-011-natural-55.test.js` 锁定来源、完整句对、选定义项及机械模板检查。CI 状态须以本轮 commit 对应 Actions 的最终结论为准。
+- 所有改写仅为待审候选，不代表逐义词典认证或用户词库安装；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发布包，也不自动合并/发布。
