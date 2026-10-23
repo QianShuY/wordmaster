@@ -74,3 +74,13 @@
 - 代表词条：`blurt`（脱口而出）、`blotter`（吸墨纸）、`bonnet`（英式发动机罩）、`boycott`（抵制）及 `braille`（盲文）。违法/暴力有关词仅用于中立语境，不能作为模仿式教学。
 - 只变更 `docs/model-task-results/worker-A/tem-009/result.json` 中 57 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；保留来源身份、原始字段、义项、任务输入 SHA、空证据、`needs-review` 状态。加入 `test/abc-tem-009-natural-57.test.js` 锁定逐句内容及来源。
 - 这些仍是未独立词典核查的草稿候选，测试结果以提交对应 CI 为准。不修改 `main`、`app/seed`、SQLite、学习进度或发行安装包。
+
+## 第 9 轮：TEM-009 遗留 + TEM-010 逐义例句修复（2026-10-23）
+
+- 已核对上轮 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 GitHub Actions **success**，并在新一轮写入前确认开发分支 HEAD 为 `efc88f30c60d3e883904d0dea1111df9507e3fd5`。
+- 从 TEM-009 剩余 22 条未编辑候选中，挑选 **16 对**仍属机械套话/中文硬译的词条；TEM-010 从 100 条中挑选 **44 对**，本轮共 **60 对**。未为了凑数修改原本自然的句子，也未覆盖其他 Agent 处理的词条。
+- 重点示例：`bracket` 选括号义，`braid` 选制服穗带义，`brainwash` 采用不鼓励行为的邪教洗脑语境，`breach` 用背信行为，`brood` 用一窝幼鸡，`buckle` 用安全带搭扣。对源词性/义项不清的条目继续保留原始文本和待审状态。
+- 仅修改 `docs/model-task-results/worker-A/tem-009/result.json` 的 16 行及 `tem-010/result.json` 的 44 行的 `proposed.example`、`proposed.example_translation`、`draft_method`。源 `identity`、`original`、`selected_sense`、`input_sha256`、空 `evidence`、`needs-review` 和未外部审核标记均锁定不变。
+- 新增 `test/abc-tem-009-010-natural-60.test.js` 逐条锁定 60 对英中句、来源行号/原文、原始义项和输入任务 SHA；这些只是语言编辑候选，不冒称人工词典审校，不覆盖正式词库。CI 需在提交后查对应运行结果。
+- 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包，也不合并或发布。
+
