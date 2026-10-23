@@ -145,3 +145,11 @@
 - 只更改 `docs/model-task-results/worker-A/tem-015/result.json` 和 `tem-016/result.json` 里 58 行的 `proposed.example`、`proposed.example_translation` 与 `draft_method`。逐行检查所有其他字段未变，`input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review` 和未外部审校状态保留。
 - 新增 `test/abc-tem-015-016-natural-58.test.js` 锁定所有改写句对、原来源行号/原文、选定义项、输入任务 SHA 以及两批共 200 行的来源身份和审校状态。此为语言编辑草稿，未做外部词典逐义核验，不能视为正式发布或完全审校。
 - 未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并/发布。提交后 CI 状态以对应 Actions 最终结果为准。
+
+## 第 18 轮：TEM-016 遗留 + TEM-017 机械例句定向改写（2026-10-24）
+
+- 写入前核对指定开发分支 HEAD `43b0cb2ed2336c7c7a3f0afd0b7dfd6401ed2dd9`、接力记录、2026-10-18 历史质量报告及最近 Actions。TEM-009 的 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 `39959184869` 已 `success`；上一轮 `43b0cb2ed2336c7c7a3f0afd0b7dfd6401ed2dd9` 对应 `40025576973` 已 `success`。历史质量报告的 2793 个模板标记并非当前实时未处理数。
+- 逐条审阅 TEM-016 与 TEM-017，分别改写 **45 对**和 **12 对**，合计 **57 对**原本明显套话、语法搭配不完整或中文硬译的中英例句。代表词条：`conjure`（变出兔子）、`consent`（拒绝同意使用照片）、`consonant`（辅音）、`contemplate`（认真考虑搬家）、`conurbation`（城市群）和 `converge`（小径汇合）。
+- 仅修改两份 `docs/model-task-results/worker-A/tem-01{6,7}/result.json` 内被选中行的 `proposed.example`、`proposed.example_translation`、`draft_method`；未改变其他行或字段。新增 `test/abc-tem-016-017-natural-57.test.js`，锁定全部 57 对句子、源行号/源文本、词性义项、任务输入 SHA，并检查两批共 200 行的原始身份与审核状态。
+- `tem-016/constant` 的原始词性标成 `n.` 而义项为形容词，故不强行改写；已经自然的 `crossbook-sense-unverified` 行不重复处理。所有改写仍是 `needs-review` 编辑候选，`evidence=[]`、未外部人工审核，不能视为独立词典审校、正式词库安装或全义项认证。
+- 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 正式包，不自动合并或发布。新 commit 的 CI 以 GitHub Actions 最终状态为准。
