@@ -128,3 +128,12 @@
 - 仅更改两份 `docs/model-task-results/worker-A/tem-01{3,4}/result.json` 中 58 行的 `proposed.example`、`proposed.example_translation`、`draft_method`，并新增 `test/abc-tem-013-014-natural-58.test.js`。保留所有 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review`、未外部审校状态；对全部行的源身份及原字段增加回归检查。
 - `tem-013/chlorophyll` 的源释义混入 `chloroplast`，`clamber` 源词性与动词义冲突，`clearway` 释义不确定，均未改写；`tem-014` 中其余跨书义项未核实的条目保留待审，避免数量驱动的误改。
 - 这 58 对仅为 **needs-review 草稿**，没有独立词典核验，也没有进入正式词库；未修改 `main`、`app/seed`、SQLite、学习记录或安装包，未合并/发布。提交后的完整测试结论以对应 GitHub Actions 最终状态为准。
+
+## 第 16 轮：TEM-014 遗留 + TEM-015 逐义例句改写（2026-10-24）
+
+- 开始时核对开发分支 HEAD `b3ca500092f9a6cd8a336b9d2168eeaff4880b74`、接力文档、2026-10-18 质量报告以及 Actions：TEM-009 首批 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 CI `39959184869` 为 **success**；上一轮 `b3ca500092f9a6cd8a336b9d2168eeaff4880b74` 的 CI `40009540728` 也为 **success**。历史质量快照不冒充当前实时剩余量。
+- 本轮挑选 TEM-014 中 **29 对**、TEM-015 中 **29 对**，合计 **58 对**仍明显属于机械模板、缺少真实搭配或中文硬译的草稿，按 `identity.source_raw` 与 `selected_sense` 逐项确认后改写。已由其他 Agent 或前几轮改写的条目全部跳过。
+- 示例：`clockwise` 用顺时针转动旋钮；`commensurate` 用薪酬与经验相称；`commentate` 用为电台解说决赛；`communicable` 用传染病传播；`compel` 用暴风雨迫使徒步者折返；`complement` 用香草给汤增色而非 `compliment` 的赞美义。
+- 仅修改 `docs/model-task-results/worker-A/tem-014/result.json` 与 `tem-015/result.json` 中对应行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`；全部 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review` 与未外部审核标记保持不变。
+- 新增 `test/abc-tem-014-015-natural-58.test.js`，逐行锁定 58 对中英句、原来源行号/文本、选定义项、任务输入 SHA、全部任务源身份和审校状态。提交后须以 Actions 对应运行的最终结果判定测试，不提前宣称通过。
+- TEM-014 `co-ed` 原义项含过时的女性学生称谓，本轮保留待审；TEM-013 `chlorophyll` 源释义混入 `chloroplast` 等风险仍未擅改。所有修订只是 **needs-review** 编辑草稿，非独立词典审核或已覆盖正式词库；未修改 `main`、`app/seed`、SQLite、学习进度及 Windows/Android 发布包，也不自动合并/发布。
