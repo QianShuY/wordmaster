@@ -137,3 +137,11 @@
 - 仅修改 `docs/model-task-results/worker-A/tem-014/result.json` 与 `tem-015/result.json` 中对应行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`；全部 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review` 与未外部审核标记保持不变。
 - 新增 `test/abc-tem-014-015-natural-58.test.js`，逐行锁定 58 对中英句、原来源行号/文本、选定义项、任务输入 SHA、全部任务源身份和审校状态。提交后须以 Actions 对应运行的最终结果判定测试，不提前宣称通过。
 - TEM-014 `co-ed` 原义项含过时的女性学生称谓，本轮保留待审；TEM-013 `chlorophyll` 源释义混入 `chloroplast` 等风险仍未擅改。所有修订只是 **needs-review** 编辑草稿，非独立词典审核或已覆盖正式词库；未修改 `main`、`app/seed`、SQLite、学习进度及 Windows/Android 发布包，也不自动合并/发布。
+
+## 第 17 轮：TEM-015 遗留 + TEM-016 自然例句定向改写（2026-10-24）
+
+- 先确认上轮 `a1fd6de6c476486114bda161ab480bf5a14c3f6d` 的 GitHub Actions `40018054141` 已完成且 `success`，并核实早期 TEM-009 的 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869` 同样 `success`。本轮提交前基线 HEAD：`a1fd6de6c476486114bda161ab480bf5a14c3f6d`，最近一批提交均为 ABC 编辑改写，未覆盖其他 Agent 的内容。
+- 本轮逐项核对 TEM-015 **36 对**与 TEM-016 **22 对**原始词形、词性、义项、`identity.source_raw`、`original` 和草稿状态，实际改写合计 **58 对**机械模板/不自然语境的中英例句，其他已经编辑过或自然的候选未改。示例：`compunction`（毫无愧疚）、`concentric`（同心圆）、`conducive`（有助于）、`conflate`（混淆相关与因果）、`confiscate`（没收）及 `congruent`（全等）。
+- 只更改 `docs/model-task-results/worker-A/tem-015/result.json` 和 `tem-016/result.json` 里 58 行的 `proposed.example`、`proposed.example_translation` 与 `draft_method`。逐行检查所有其他字段未变，`input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review` 和未外部审校状态保留。
+- 新增 `test/abc-tem-015-016-natural-58.test.js` 锁定所有改写句对、原来源行号/原文、选定义项、输入任务 SHA 以及两批共 200 行的来源身份和审校状态。此为语言编辑草稿，未做外部词典逐义核验，不能视为正式发布或完全审校。
+- 未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并/发布。提交后 CI 状态以对应 Actions 最终结果为准。
