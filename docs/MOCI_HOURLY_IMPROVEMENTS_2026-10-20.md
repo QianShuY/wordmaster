@@ -119,3 +119,12 @@
 - 只修改 `docs/model-task-results/worker-A/tem-013/result.json` 的 60 条 `proposed.example`、`proposed.example_translation` 和 `draft_method`，源 `identity`、`original`、`selected_sense`、任务输入 SHA、`evidence=[]`、`needs-review`、未人工外部审核标记不变。
 - 新增 `test/abc-tem-013-natural-60.test.js` 锁定 60 对完整中英例句及来源，并对全部 100 条原始身份和审核状态回归检查。CI 最终状态须在新 commit 对应 GitHub Actions 完成后再判定。
 - 这些仍为语言编辑草稿，未进行独立词典审校，也没有覆盖正式词库、`main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包；不自动合并/发布。
+
+## 第 15 轮：TEM-013 遗留 + TEM-014 定向改写（2026-10-24）
+
+- 写入前 HEAD `9a64eeb7b0bb0e1ba368fd1ec29ffb435f6762e3`。核实 TEM-009 的 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869` 和 TEM-013 上轮 `9a64eeb7b0bb0e1ba368fd1ec29ffb435f6762e3` 对应 Actions `40001648204` 均为 `success`。
+- 仅挑选来源身份、词性、义项及草稿状态可锁定的机械例句，改写 `tem-013` **15 对**、`tem-014` **43 对**，共 **58 对**英文例句与中文译文。针对缺宾语、反常语境、词性搭配和中文生硬直译逐句修订。原例句模板命中数（这两个任务合计）由 90 降至 32，此数字只代表规则命中，不等于全量质量认证。
+- 代表修复：`churlish` 用粗鲁回答冒犯志愿者，`cider` 用酒馆里的干型苹果酒，`cling` 用过马路时抓紧父亲的手，`coerce` 用经理胁迫员工无偿加班，`collude` 用公司串通涨价，`colloquial` 用英语口语与正式写作对照。
+- 仅更改两份 `docs/model-task-results/worker-A/tem-01{3,4}/result.json` 中 58 行的 `proposed.example`、`proposed.example_translation`、`draft_method`，并新增 `test/abc-tem-013-014-natural-58.test.js`。保留所有 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review`、未外部审校状态；对全部行的源身份及原字段增加回归检查。
+- `tem-013/chlorophyll` 的源释义混入 `chloroplast`，`clamber` 源词性与动词义冲突，`clearway` 释义不确定，均未改写；`tem-014` 中其余跨书义项未核实的条目保留待审，避免数量驱动的误改。
+- 这 58 对仅为 **needs-review 草稿**，没有独立词典核验，也没有进入正式词库；未修改 `main`、`app/seed`、SQLite、学习记录或安装包，未合并/发布。提交后的完整测试结论以对应 GitHub Actions 最终状态为准。
