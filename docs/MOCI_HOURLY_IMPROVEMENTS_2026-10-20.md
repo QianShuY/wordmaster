@@ -111,3 +111,11 @@
 - `tem-012/charter` 源义项存在可疑“航海图/制图”混入，`chargeable` 多义容易混淆，`chaste` 与 `chastity` 容易触发不准确的历史/价值语境，本轮保留原样供进一步审核，不为凑数修改。
 - 只更改 `docs/model-task-results/worker-A/tem-012/result.json` 中 50 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-012-natural-50.test.js` 锁定来源、输入 SHA、选定义项、中英句对和审核状态。其余行与所有来源、证据、审核标记均未变。
 - 改写只是 `needs-review` 的编辑草稿，不是独立词典逐义审校或已安装到用户词库。未触碰 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发行包；不自动合并/发布。新提交 CI 需查 Actions 最终状态。
+
+## 第 13 轮：TEM-013 60 对机械模板定向改写（2026-10-24）
+
+- 写入前核实开发分支 HEAD 为 `bfc8b97d2ee4150482a66d580243d822becb04a5`，其 GitHub Actions `39993178013` 为 **success**；TEM-009 首批 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 CI `39959184869` 同样为 **success**。已查质量记录，旧审计快照不视为当前剩余量。
+- 从 `tem-013` 的 100 条候选逐项核对原句、`source_raw`、`selected_sense`、词性及审核状态，选取 **60 对**确实存在机械模板/语境错误的例句重写；未动已经自然的 `crossbook-sense-unverified` 例句。示例：`chime` 用钟声、`checkmate` 用棋局将死、`choppy` 用波涛、`circumstantial` 用间接证据、`clearance` 用起飞许可、`clinch` 用锁定胜局。
+- 只修改 `docs/model-task-results/worker-A/tem-013/result.json` 的 60 条 `proposed.example`、`proposed.example_translation` 和 `draft_method`，源 `identity`、`original`、`selected_sense`、任务输入 SHA、`evidence=[]`、`needs-review`、未人工外部审核标记不变。
+- 新增 `test/abc-tem-013-natural-60.test.js` 锁定 60 对完整中英例句及来源，并对全部 100 条原始身份和审核状态回归检查。CI 最终状态须在新 commit 对应 GitHub Actions 完成后再判定。
+- 这些仍为语言编辑草稿，未进行独立词典审校，也没有覆盖正式词库、`main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包；不自动合并/发布。
