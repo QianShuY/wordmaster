@@ -103,3 +103,11 @@
 - 仅变更 `docs/model-task-results/worker-A/tem-011/result.json` 与 `tem-012/result.json` 中 58 行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`；`identity`、`original`、`selected_sense`、任务输入 SHA、`evidence=[]`、`needs-review`、未外部审校标记全部保留。
 - 新增 `test/abc-tem-011-012-natural-58.test.js`，锁定所有改写句对、来源行号/原文、原始义项、任务输入 SHA 与审核状态。测试最终状态以本次提交对应的 GitHub Actions 为准，不提前宣称通过。
 - 未修改 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 发布包，不合并或发布。
+
+## 第 12 轮：TEM-012 后半批 50 对具体语境改写（2026-10-24）
+
+- 本轮先确认 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869` 及上一轮 `caebaea816a69df5c3070187feeb62b5b920f128` 对应 Actions `39984622709` 均为 **success**。提交前开发分支 HEAD：`caebaea816a69df5c3070187feeb62b5b920f128`。
+- 从 `tem-012` 尚未改写的机械模板中逐条比对源任务的 `identity`、`original`、`selected_sense`、输入 SHA 和审核状态，仅修改 **50 对**确有明显模板问题的英文例句与中文译文。示例：`causal` 使用 `causal link`，`cede` 使用割让岛屿的及物结构，`censor` 使用电影审查员的语境，`certify` 使用证明饮用水安全，`chatter` 使用儿童兴奋交谈。
+- `tem-012/charter` 源义项存在可疑“航海图/制图”混入，`chargeable` 多义容易混淆，`chaste` 与 `chastity` 容易触发不准确的历史/价值语境，本轮保留原样供进一步审核，不为凑数修改。
+- 只更改 `docs/model-task-results/worker-A/tem-012/result.json` 中 50 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-012-natural-50.test.js` 锁定来源、输入 SHA、选定义项、中英句对和审核状态。其余行与所有来源、证据、审核标记均未变。
+- 改写只是 `needs-review` 的编辑草稿，不是独立词典逐义审校或已安装到用户词库。未触碰 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发行包；不自动合并/发布。新提交 CI 需查 Actions 最终状态。
