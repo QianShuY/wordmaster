@@ -18,7 +18,7 @@ const Campaign = require('./campaign').createCampaign(db,planFor,(book,plan)=>Da
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
 function adventurePool(){
- const rows=db.prepare(`SELECT w.*,b.name book_name FROM words w JOIN wordbooks b ON b.id=w.book_id
+ const rows=db.prepare(`SELECT w.*,b.name book_name,p.first_studied battle_first_studied,p.last_review battle_last_review,p.wrong battle_wrong FROM words w JOIN wordbooks b ON b.id=w.book_id
  JOIN progress p ON p.word_id=w.id WHERE b.is_builtin=1 AND p.first_studied IS NOT NULL
  AND NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)
  AND EXISTS(SELECT 1 FROM review_log l WHERE l.word_id=w.id AND (l.outcome IS NULL OR l.outcome IN ('first_correct','retry_correct','wrong')))

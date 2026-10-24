@@ -39,8 +39,8 @@ test('domain transcript rejects forged clocks and premature answers; legacy sess
  const session=service.start(),events=victory(session),at=events.findIndex(e=>e.action==='elapseDomain');assert.ok(at>0);
  for(const ms of [-1,0,1001,0.5,'1000']){const bad=structuredClone(events);bad[at].args=[ms];assert.throws(()=>service.finish(session.id,bad),/无效/);}
  const skipped=events.filter(e=>e.action!=='elapseDomain');assert.throws(()=>service.finish(session.id,skipped),/顺序/);
- const old=service.start();old.initial={...old.initial,version:1,bossHp:120};delete old.initial.domain;db.prepare('UPDATE boss_sessions SET initial_json=? WHERE id=?').run(JSON.stringify(old.initial),old.id);
- assert.equal(service.finish(old.id,victory(old)).ok,true);
+ for(const version of [1,2]){const old=service.start();old.initial={...old.initial,version,bossHp:version===1?120:240};if(version===1)delete old.initial.domain;db.prepare('UPDATE boss_sessions SET initial_json=? WHERE id=?').run(JSON.stringify(old.initial),old.id);
+ assert.equal(service.finish(old.id,victory(old)).ok,true);}
  assert.equal(service.finish(session.id,events).ok,true);
 });
 test('ending API withholds story until clear, route gates sessions, formal first clear appears as 14/14',async t=>{
