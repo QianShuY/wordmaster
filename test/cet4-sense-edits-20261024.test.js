@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,33);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","resume"]);
+ assert.equal(edits.length,42);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -73,4 +73,64 @@ test('CET4 source-specific D/E corrections retain natural bilingual examples and
  assert.deepEqual([byWord.get("excess").text,byWord.get("excess").translation,byWord.get("excess").selected_sense],["An excess of salt can spoil the soup.","盐放得太多会破坏汤的味道。","过量（名词）"]);
  assert.equal(byWord.get('effective').before_text,byWord.get('effective').text);
  assert.notEqual(byWord.get('everything').text,byWord.get('everything').before_text);
+});
+
+
+test('CET4 F-word editorial fixes respect source parts of speech and natural bilingual wording',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+   "exercise": [
+     "Regular exercise helps me sleep better.",
+     "规律锻炼有助于我睡得更好。",
+     "锻炼（名词）"
+   ],
+   "excursion": [
+     "We went on an excursion to the coast.",
+     "我们去海边进行了一次短途旅行。",
+     "短途旅行（名词）"
+   ],
+   "faith": [
+     "She has faith in her team's ability.",
+     "她相信自己团队的能力。",
+     "信任、信心（名词）"
+   ],
+   "fast": [
+     "The fast train reached the station before noon.",
+     "快车在中午前到达了车站。",
+     "快的（形容词）"
+   ],
+   "fate": [
+     "No one knew the fate of the missing crew.",
+     "没有人知道失踪船员的命运。",
+     "命运、结局（名词）"
+   ],
+   "fear": [
+     "Fear of failure kept him from applying.",
+     "对失败的恐惧让他不敢申请。",
+     "害怕、恐惧（名词）"
+   ],
+   "feel": [
+     "She felt the fabric to check its texture.",
+     "她摸了摸布料，感受它的质地。",
+     "触摸（及物动词）"
+   ],
+   "fellow": [
+     "He is a kind fellow who always helps his neighbours.",
+     "他是个善良的人，总是帮助邻居。",
+     "人、家伙（名词）"
+   ],
+   "female": [
+     "In this species, the female lays her eggs in the sand.",
+     "在这个物种中，雌性在沙中产卵。",
+     "雌性动物（名词）"
+   ]
+ };
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+ }
+ assert.equal(byWord.get('faith').text.includes("team's"),true);
+ assert.equal(byWord.get('exercise').text.startsWith('Regular exercise'),true);
+ assert.equal(byWord.get('female').text.includes('the female lays'),true);
 });
