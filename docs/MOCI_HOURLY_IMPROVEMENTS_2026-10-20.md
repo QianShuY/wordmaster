@@ -161,3 +161,12 @@
 - 代表性例句：`conversant` 使用 `conversant with`、`convict` 使用 `convict the suspect`、`cooperative` 用合作社名词义、`correlate` 使用相关因素的名词义、`counterbalance` 用底座平衡台灯、`counterattack` 用球赛反击。
 - 只改 `docs/model-task-results/worker-A/tem-017/result.json` 56 行的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-017-natural-56.test.js` 锁定完整中英句对、100 行原始身份、源义项、输入 SHA、证据和审核状态。保留 `identity`、`original`、`selected_sense`、`input_sha256`、`evidence=[]`、`needs-review`、`external_human_review=false` 不变。
 - `counterdrug` 的原始释义与 `coup` 的多义语境需要进一步独立核查，故没有为凑数修改。所有改写只是 **needs-review** 候选，不代表独立词典逐义审校或已进入正式词库；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 发布包，也不自动合并/发布。CI 最终状态必须查新提交对应 Actions。
+
+## 第 20 轮：TEM-018 59 对机械例句语境化改写（2026-10-24）
+
+- 开始时指定分支 HEAD 为 `85fa5a8016e998591c5ed58400370d219ccb85d3`；早期 TEM-009 的 commit `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869`、上一轮 TEM-017 commit `85fa5a8016e998591c5ed58400370d219ccb85d3` 对应 Actions `40038807190` 均核验为 completed/success。核对 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 历史质量快照，不把旧模板计数当作当前剩余量。写入前再次比对 HEAD，发现其他 Agent 新提交则停止。
+- 本轮对 `docs/model-task-results/worker-A/tem-018/result.json` 的 100 行逐条筛选，实际改写 **59 对**仍属 `offline-context-first-draft` 且有明确机械套话、错误搭配或中文硬译问题的英中例句。逐条检查 `identity.source_raw`、`selected_sense.pos`、`selected_sense.meaning`，未修改已编辑或 `crossbook-sense-unverified` 的条目。
+- 示例：`covet` 用觊觎古董手表；`crackle` 用壁炉木柴噼啪作响；`cram` 用把衣服塞入行李箱；`cranky` 用不可靠的旧发动机；`credentials` 用核验证件；`cross-examine` 用律师盘问证人。
+- 只更改 59 行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`，新增 `test/abc-tem-018-natural-59.test.js` 锁定完整句对、源行号/源原文、义项、输入 SHA 及 100 行的身份与审核状态。所有 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 均不变。
+- `tem-018/creator` 源释义疑似与 headword 不符，`cripple` 含过时伤残称谓，`creole` 含身份/语言双义，`crucify` 含敏感历史语境，均保留待独立核查，不为凑数修改。其他剩余条目继续逐义筛选。
+- 本轮所有例句仍是 **needs-review** 候选，不代表独立词典审核或已进入正式词库；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 正式包，未自动合并/发布。新提交 CI 以对应 Actions 最终结果为准。
