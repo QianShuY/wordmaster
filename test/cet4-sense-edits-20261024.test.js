@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,42);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","resume"]);
+ assert.equal(edits.length,54);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -133,4 +133,79 @@ test('CET4 F-word editorial fixes respect source parts of speech and natural bil
  assert.equal(byWord.get('faith').text.includes("team's"),true);
  assert.equal(byWord.get('exercise').text.startsWith('Regular exercise'),true);
  assert.equal(byWord.get('female').text.includes('the female lays'),true);
+});
+
+
+test('CET4 G-word editorial examples stay aligned to source POS and bilingual senses',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "gas": [
+    "The stove runs on natural gas.",
+    "这台炉灶使用天然气。",
+    "煤气、天然气（名词）"
+  ],
+  "gauge": [
+    "The mechanic gauged the tyre pressure before the trip.",
+    "出发前，机械师测量了轮胎气压。",
+    "测量（及物动词）"
+  ],
+  "general": [
+    "The teacher gave a general introduction to the topic.",
+    "老师对这个主题作了概括介绍。",
+    "总的、概括的（形容词）"
+  ],
+  "giant": [
+    "In the fairy tale, a giant lived in a castle.",
+    "在这则童话中，一个巨人住在城堡里。",
+    "巨人（名词）"
+  ],
+  "glare": [
+    "The driver glared at the cyclist after the argument.",
+    "争执过后，司机怒视着那名骑车人。",
+    "怒视（不及物动词）"
+  ],
+  "glass": [
+    "The window is made of thick glass.",
+    "这扇窗户是用厚玻璃制成的。",
+    "玻璃（名词）"
+  ],
+  "glide": [
+    "The skater glided smoothly across the ice.",
+    "滑冰者平稳地滑过冰面。",
+    "滑行（不及物动词）"
+  ],
+  "glitter": [
+    "The snow glittered in the morning sunlight.",
+    "积雪在清晨的阳光下闪闪发光。",
+    "闪闪发光（不及物动词）"
+  ],
+  "goodness": [
+    "The story reminds us of the goodness in ordinary people.",
+    "这个故事让我们想起普通人身上的善良。",
+    "善良、仁慈（名词）"
+  ],
+  "graduate": [
+    "The new graduate applied for her first job.",
+    "这名刚毕业的学生申请了她的第一份工作。",
+    "毕业生（名词）"
+  ],
+  "grave": [
+    "They placed fresh flowers on her grave.",
+    "他们在她的墓前放上了鲜花。",
+    "坟墓（名词）"
+  ],
+  "grasp": [
+    "She grasped the handle firmly before opening the door.",
+    "开门前，她牢牢握住门把手。",
+    "抓紧、握牢（及物动词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+ }
+ assert.equal(byWord.get('giant').pos,'n.');
+ assert.equal(byWord.get('gauge').pos,'vt.');
+ assert.equal(byWord.get('goodness').meaning.includes('仁慈'),true);
 });
