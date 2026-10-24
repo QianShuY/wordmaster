@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,86);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","resume"]);
+ assert.equal(edits.length,97);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","lively","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -320,4 +320,76 @@ test('CET4 I-word editorial fixes preserve source identities, meanings and trans
   assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
   assert.notEqual(item.text,item.before_text,word);
  }
+});
+
+
+test('CET4 J/K/L targeted sense corrections match source meanings and preserve source-locked drafts',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "keep": [
+    "He kept going despite the heavy rain.",
+    "尽管下着大雨，他还是坚持走了下去。",
+    "坚持（keep going，持续行动）"
+  ],
+  "junior": [
+    "The junior pupils studied in a separate classroom.",
+    "年纪较小的学生在另一间教室上课。",
+    "年少的（形容词）"
+  ],
+  "lazy": [
+    "He was too lazy to wash the dishes.",
+    "他懒得洗碗。",
+    "懒惰的（形容词）"
+  ],
+  "librarian": [
+    "The head librarian announced the library's new opening hours.",
+    "图书馆馆长公布了新的开放时间。",
+    "图书馆馆长（名词，head librarian）"
+  ],
+  "lighten": [
+    "The morning sunlight lightened the dark room.",
+    "清晨的阳光使昏暗的房间亮了起来。",
+    "照亮、使明亮（及物动词）"
+  ],
+  "lively": [
+    "The lively puppy chased a ball across the yard.",
+    "那只活泼的小狗追着球跑过院子。",
+    "活泼的（形容词）"
+  ],
+  "link": [
+    "The blacksmith replaced a broken link in the chain.",
+    "铁匠更换了链条上一个断裂的链环。",
+    "链环（名词）"
+  ],
+  "limb": [
+    "The doctor examined the injured limb carefully.",
+    "医生仔细检查了受伤的肢体。",
+    "肢体（名词）"
+  ],
+  "kilometer": [
+    "The village is about five kilometers from the station.",
+    "这个村庄离车站大约五公里。",
+    "公里（名词，美式拼写）"
+  ],
+  "license": [
+    "You need a license to fish in this river.",
+    "在这条河里钓鱼需要许可证。",
+    "许可证（名词，美式拼写）"
+  ],
+  "likewise": [
+    "She signed the form, and her colleague did likewise.",
+    "她在表格上签了字，同事也照做了。",
+    "同样地、也（副词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+ }
+ assert.equal(byWord.get('kilometer').before_translation,byWord.get('kilometer').translation);
+ assert.equal(byWord.get('license').before_translation,byWord.get('license').translation);
 });
