@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,109);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","lively","loosen","lower","lumber","lump","magic","maintenance","manly","marine","marriage","marvelous","mate","melt","resume"]);
+ assert.equal(edits.length,124);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","neat","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -469,4 +469,97 @@ test('CET4 L/M source-locked corrections retain natural bilingual senses and tar
  }
  assert.doesNotMatch(byWord.get('maintenance').before_text,/maintenance/i);
  assert.doesNotMatch(byWord.get('magic').before_text,/\bmagic\b/i);
+});
+
+
+test('CET4 M/N source-locked examples preserve spelling, noun senses and natural bilingual usage',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "liter": [
+    "The bottle holds one liter of water.",
+    "这个瓶子能装一升水。",
+    "升（名词，美式拼写）"
+  ],
+  "mail": [
+    "Your letter arrived in this morning's mail.",
+    "今天早上的邮件中有你的来信。",
+    "邮件（名词）"
+  ],
+  "maintain": [
+    "Technicians maintain the machines to prevent breakdowns.",
+    "技术人员维护机器，以防发生故障。",
+    "维修、维护（及物动词）"
+  ],
+  "manner": [
+    "His rude manner upset the guests.",
+    "他粗鲁的态度让客人们感到不快。",
+    "态度（名词）"
+  ],
+  "march": [
+    "The soldiers marched through the town at dawn.",
+    "士兵们黎明时分列队穿过城镇。",
+    "行军（不及物动词）"
+  ],
+  "maximum": [
+    "The lift can carry a maximum of eight passengers.",
+    "这部电梯最多可搭载八名乘客。",
+    "最大量（名词）"
+  ],
+  "medium": [
+    "Radio became an important medium for sharing news.",
+    "广播成为传播新闻的重要媒介。",
+    "媒介（名词）"
+  ],
+  "merchant": [
+    "The merchant sold spices to sailors from distant ports.",
+    "这位商人向来自远方港口的水手出售香料。",
+    "商人（名词）"
+  ],
+  "mercury": [
+    "The old thermometer used mercury to measure temperature.",
+    "旧式温度计使用水银测量温度。",
+    "水银（名词）"
+  ],
+  "molecule": [
+    "A water molecule consists of two hydrogen atoms and one oxygen atom.",
+    "一个水分子由两个氢原子和一个氧原子组成。",
+    "分子（名词）"
+  ],
+  "Mister": [
+    "Excuse me, mister, is this your umbrella?",
+    "打扰一下，先生，这是您的雨伞吗？",
+    "先生（名词，称呼语）"
+  ],
+  "mount": [
+    "She mounted the horse and rode toward the gate.",
+    "她骑上马，朝大门方向走去。",
+    "登上（及物动词）"
+  ],
+  "mutter": [
+    "She muttered to herself as she searched for her keys.",
+    "她一边找钥匙，一边低声自言自语。",
+    "低声嘟囔（不及物动词）"
+  ],
+  "neat": [
+    "Her notes were neat and easy to read.",
+    "她的笔记工整清晰，容易阅读。",
+    "整洁、工整（形容词）"
+  ],
+  "mechanically": [
+    "He repeated the answer mechanically without understanding it.",
+    "他不理解答案的意思，只是机械地重复了一遍。",
+    "机械地（副词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+ }
+ assert.equal(byWord.get('liter').source_raw.startsWith('liter ['),true);
+ assert.equal(byWord.get('maximum').pos,'n.');
+ assert.equal(byWord.get('medium').pos,'n.');
 });
