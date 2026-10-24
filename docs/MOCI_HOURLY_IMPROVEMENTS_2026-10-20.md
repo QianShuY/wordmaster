@@ -177,3 +177,11 @@
 - 逐项核对 `identity.source_raw`、`selected_sense.pos/meaning`，仅从 `offline-context-first-draft` 中选取 TEM-018 **19 对**和 TEM-019 **40 对**，共 **59 对**明显机械或中文硬译的句子。例：`cremate` 使用按遗愿火化遗体的适当语境；`crux` 使用问题症结；`culminate` 用 `culminate in`；`curtail` 明确缩减户外活动；`cynical` 表示对承诺持怀疑态度。未重复改写已经编辑过的词条。
 - 仅更改两份 `docs/model-task-results/worker-A/tem-01{8,9}/result.json` 中 59 行的 `proposed.example`、`proposed.example_translation`、`draft_method`，新增 `test/abc-tem-018-019-natural-59.test.js` 锁定中英句对、源行号、原文、词性义项、任务输入 SHA、全部行身份/原字段及审核状态。所有 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 保持不变。
 - `tem-018/creator` 的源释义疑似错误、`creole` 身份与语言多义、`cripple` 过时称谓、`crucify` 历史语境，仍保留待审；TEM-019 其余草稿待逐义挑选。此次仅是 **needs-review** 候选，不是独立词典审校或正式词库发布；未改动 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包，也不合并发布。新提交 CI 以对应 Actions 最终状态为准。
+
+## 第 22 轮：TEM-019 遗留 + TEM-020 定向改写（2026-10-24）
+
+- 本轮写入基线 HEAD：`64e82b6591c85607f69e7c2b9b6ef21fdd3ab65b`；核实 TEM-009 57 对改写 commit `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 GitHub Actions `39959184869` 和上轮 `64e82b6591c85607f69e7c2b9b6ef21fdd3ab65b` 的 Actions `40048835924` 均已 `completed/success`。读取本接力文档和 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 历史快照，不将旧快照计数视为实时剩余量。
+- 逐项对照 `identity.source_raw`、`selected_sense.pos/meaning`，仅选择尚未改写的 `offline-context-first-draft`：TEM-019 **32 对**，TEM-020 **24 对**，共 **56 对**。TEM-009 的 6 条未改写余项已在前轮判断具有具体语境，本轮不重复或为凑数强改。代表改写：`dampen` 用骤雨打击热情；`dapper` 用整洁西装；`daunt` 用陡坡未吓退徒步者；`debit` 用会计借方记录；`decelerate` 用火车进站减速；`decipher` 用破译加密信息。
+- 仅更改 `docs/model-task-results/worker-A/tem-019/result.json` 的 32 行和 `tem-020/result.json` 的 24 行中 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-019-020-natural-56.test.js` 锁定 56 对完整句对、源行号、源原文、选定义项、任务 SHA，以及两批 200 行的源身份、原字段和审核状态。保持 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 不变。
+- `tem-019/deadweight` 涉及航运载重术语与原释义“静止重量，净重”的歧义；`tem-020/decease` 属少见/古旧用法，`decency` 原释义含疑似错字“合家”，`decidedly` 的原义项与现代常见副词义存在疑点，均保留待独立来源审查，不为凑数改写。
+- 以上均为 **needs-review** 编辑候选，不是独立词典审核或正式词库更新；未改动 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并/发布。本轮新提交的 CI 以对应 GitHub Actions 最终结论为准。
