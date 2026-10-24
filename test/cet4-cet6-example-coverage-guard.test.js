@@ -338,11 +338,11 @@ test('CET4/CET6 static source coverage is not confused with 26,612 review-only d
  assert.equal(four.paired+four.missing.length,four.total);
  assert.equal(six.paired+six.missing.length,six.total);
  assert.equal(six.paired,2272,'all six previously held CET6 lexical identities must have real source-bound pairs');
- assert.ok(four.paired>=700&&four.paired<four.total,'CET4 is not yet source-complete');
+ assert.equal(four.paired,4460,'CET4 must now have a complete source-bound bilingual pair for every learnable word');
  console.log('CET4 source-visible bilingual pairs: '+four.paired+'/'+four.total+'; missing: '+four.missing.length);
  console.log('CET6 source-visible bilingual pairs: '+six.paired+'/'+six.total+'; missing: '+six.missing.length);
 });
-test('51 queued CET4 missing-pair candidates retain source identity and remain uninstalled',()=>{
+test('51 formerly missing CET4 candidates retain source identity and are now available to new installations',()=>{
  const four=freshSourceCoverage('cet4.txt');
  const missing=new Set(four.missing);
  const cache=new Map(),seen=new Set();
@@ -361,6 +361,6 @@ test('51 queued CET4 missing-pair candidates retain source identity and remain u
   assert.ok(entry.proposed.example?.trim()&&entry.proposed.example_translation?.trim(),q.word);
   assert.equal(entry.verification,'source-checked');assert.equal(entry.external_human_review,false);
   assert.equal(entry.full_dictionary_senses_reviewed,false);assert.ok(Array.isArray(entry.evidence));
-  assert.ok(missing.has(q.word),'queue must never duplicate a source-visible pair: '+q.word);
+  assert.ok(!missing.has(q.word),'new CET4 source coverage must include the formerly missing pair: '+q.word);
  }
 });
