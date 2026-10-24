@@ -208,3 +208,10 @@
 - 本轮只定向修复 `test/cet6-complete-examples.test.js` 的旧假设：对 `editorial-context-rewrite-needs-review` 行，仍验证源身份、待审状态、冻结批次的原有独立编辑修订及 `reviewedExample` 安装内容，但不把新的待审候选当作已安装例句；对其他行仍保持原有候选/快照一致性检查。没有改动 `app/seed` 或任何正式包。
 - 复查四级/六级候选：较早源核查行、既有定向编辑行和 `crossbook-sense-unverified` 行不可为了凑 40–60 对强行重写；本轮 **新增中英例句 0 对**，优先恢复 CI 可靠性。原 21 对候选仍 `needs-review`，未经外部人工审核。
 - 本轮仅涉及针对性回归测试与本开发接力文档，不触及 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不合并、不发布。CI 结果以本次新 commit 对应 Actions 最终状态为准。
+
+## 第 26 轮：CET-4/CET-6 原来源候选的语境与中译定向修复（2026-10-24）
+
+- 开始时指定开发分支 HEAD 为 `dc8330d1615bd4c2b86aabaa378fa9277e80ae85`；读取本接力记录、2026-10-18 历史质量快照及最近 Actions。TEM-009 的 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869` 为 `completed/success`；上轮 CI 修复 `dc8330d1615bd4c2b86aabaa378fa9277e80ae85` 对应 Actions `40061585519` 为 `completed/success`，而上一轮 21 对改写的原始提交 `f6cede10ceb4d5bac54445fa5d86c5485b838de5` 对应 `40060612460` 为 `completed/failure`（已由后续测试修复）。历史质量快照不等于实时未改写数量。
+- 本轮优先审阅 CET-4 与 CET-6，发现现有机械模板正则在已检查批次中没有未改写的明确模板句。严格跳过 `crossbook-sense-unverified` 和此前 `editorial-context-rewrite-needs-review` 行；只对 6 对仍为 `existing-exact-source-candidate` 且有具体语言问题的句对做改写：CET-4 `commit` 纠正不自然的犯罪时态语境；CET-4/CET-6 的 `dimension` 改为核对门洞尺寸，避免不自然的 `the dimension of each side`；CET-4/CET-6 的 `disease` 从空泛的“收集某疾病信息”改为真菌病害在果园蔓延的实际场景；CET-6 的 `dignity` 消除中文“有尊严且受尊重的对待”的生硬硬译。合计 CET-4 **3 对**、CET-6 **3 对**，不为凑 40–60 对强改其他自然例句。
+- 仅更改 `docs/model-task-results/worker-A/cet4-042/result.json`、`cet4-044/result.json`、`cet6-023/result.json` 中选中行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`。逐行核对任务源 `identity`、`original` 与 manifest 输入 SHA，程序化回滚三类允许字段后与原结果对象一致，确认所有来源、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false`、`full_dictionary_senses_reviewed=false` 未变。
+- 新增 `test/abc-cet4-cet6-source-context-6.test.js` 锁定 6 对英中句、源行号/原文、义项、原例句、任务输入 SHA、全部被修改任务行的源身份与审核状态。独立审校仍未完成，修改仍是 **needs-review** 候选，不代表已进入正式词库；未改动 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并或发布。CI 最终结果以本轮新提交对应 Actions 为准。
