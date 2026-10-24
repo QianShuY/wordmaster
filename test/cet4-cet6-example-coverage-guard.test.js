@@ -355,7 +355,7 @@ test('51 queued CET4 missing-pair candidates retain source identity and remain u
   assert.ok(word,q.word);assert.ok(entry,q.word);
   assert.equal(entry.identity.word,q.word);assert.equal(entry.identity.source_file,'cet4.txt');
   assert.equal(entry.identity.source_line,q.source_line);assert.equal(entry.identity.source_raw,word.source_raw);
-  assert.equal(entry.original.pos,word.pos===entry.original.pos?word.pos:entry.original.pos);
+  assert.equal(entry.original.pos,word.pos,'original POS must match the built-in source row');
   assert.equal(entry.original.example,'');assert.equal(entry.original.example_translation,'');
   assert.equal(normalizePartOfSpeech(entry.selected_sense.pos),normalizePartOfSpeech(entry.original.pos));
   assert.ok(entry.proposed.example?.trim()&&entry.proposed.example_translation?.trim(),q.word);
