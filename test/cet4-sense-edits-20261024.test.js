@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,68);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","resume"]);
+ assert.equal(edits.length,86);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -290,5 +290,34 @@ test('CET4 H-word edits use natural single-sense sentences and matching translat
   assert.ok(item,word);
   assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
   assert.notEqual(item.text,item.before_text,word+' should replace the mechanical draft');
+ }
+});
+
+
+test('CET4 I-word editorial fixes preserve source identities, meanings and translations',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={"ice":["She dropped two ice cubes into the glass.","她往玻璃杯里放了两块冰。","冰、冰块（名词）"],
+"image":["The camera captured a clear image of the moon.","相机拍下了一张清晰的月球图像。","图像（名词）"],
+"imaginary":["The child drew an imaginary island on the map.","孩子在地图上画了一座想象中的岛屿。","想象中的（形容词）"],
+"imagination":["Reading stories can stimulate a child's imagination.","阅读故事可以激发孩子的想象力。","想象力（名词）"],
+"import":["The company imports coffee beans from Brazil.","这家公司从巴西进口咖啡豆。","进口（及物动词）"],
+"in":["The keys are in the top drawer.","钥匙在最上面的抽屉里。","在……里面（介词）"],
+"incline":["The cyclists struggled up the steep incline.","骑行者们艰难地骑上陡坡。","斜坡（名词）"],
+"increase":["The school plans to increase library opening hours.","学校计划延长图书馆的开放时间。","增加（及物动词）"],
+"influence":["Her advice had a strong influence on my decision.","她的建议对我的决定产生了很大影响。","影响（名词）"],
+"insult":["His rude remark was an insult to the volunteers.","他无礼的话是对志愿者的侮辱。","侮辱（名词）"],
+"interest":["She developed an interest in astronomy.","她渐渐对天文学产生了兴趣。","兴趣（名词）"],
+"inward":["The door swung inward when she pushed it.","她一推，门就向内打开了。","向内（副词）"],
+"issue":["The report raises an important issue.","这份报告提出了一个重要问题。","问题、议题（名词）"],
+"intelligent":["The intelligent student solved the puzzle quickly.","这名聪明的学生很快解开了谜题。","聪明的（形容词）"],
+"institution":["Marriage is a social institution in many cultures.","在许多文化中，婚姻是一种社会制度。","制度（名词）"],
+"implication":["His reply carried the implication that he would refuse the offer.","他的回答暗示他会拒绝这项提议。","暗示、言外之意（名词）"],
+"instant":["For an instant, everyone in the room fell silent.","有那么一瞬间，房间里所有人都安静了下来。","瞬间（名词）"],
+"intellectual":["Solving the puzzle required considerable intellectual effort.","解开这道谜题需要付出相当多的脑力。","智力的（形容词）"]};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
  }
 });
