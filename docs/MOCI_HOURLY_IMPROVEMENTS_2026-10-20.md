@@ -200,3 +200,11 @@
 - 只修改 `docs/model-task-results/worker-A/cet4-040/result.json`、`cet4-041/result.json`、`cet6-019/result.json`、`cet6-020/result.json`、`cet6-021/result.json`、`cet6-023/result.json` 中 21 行的 `proposed.example`、`proposed.example_translation`、`draft_method`。逐行对照任务输入和原结果，确认未变更 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false`、`full_dictionary_senses_reviewed=false`；其余行和所有其他字段保持字节语义一致。
 - 新增 `test/abc-cet4-cet6-natural-21.test.js`，逐项锁定 21 对英中句、原来源行号/文本、选定义项、任务 SHA、原始字段和审核状态，并检查通用机械模板回归。历史质量报告 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 是旧快照，不作为实时剩余量。
 - 本轮仅为 **needs-review** 编辑候选，未进行独立词典/外部人工审核，不能视为正式词库发布。未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并或发布。提交后的 CI 状态以新 commit 对应 GitHub Actions 最终结果为准。
+
+## 第 25 轮：CET-4/CET-6 优先，修复上一轮 CI 的候选/正式快照隔离回归（2026-10-24）
+
+- 写入前 HEAD：`f6cede10ceb4d5bac54445fa5d86c5485b838de5`；先核对本接力文档、2026-10-18 历史质量快照、TEM-009 commit `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 Actions `39959184869` 为 `completed/success`。
+- 上轮 CET-4/CET-6 21 对改写 commit `f6cede10ceb4d5bac54445fa5d86c5485b838de5` 的 Actions `40060612460` 已 `completed/failure`，307 项测试中 306 通过、1 失败：`test/cet6-complete-examples.test.js` 将更新后的 **needs-review 候选** 错误地要求与 2026-10-21 已冻结的 CET-6 正式例句快照相同；首个冲突词为 `traverse`。候选例句并未自动发布到正式词库，这正是应保留的隔离边界。
+- 本轮只定向修复 `test/cet6-complete-examples.test.js` 的旧假设：对 `editorial-context-rewrite-needs-review` 行，仍验证源身份、待审状态、冻结批次的原有独立编辑修订及 `reviewedExample` 安装内容，但不把新的待审候选当作已安装例句；对其他行仍保持原有候选/快照一致性检查。没有改动 `app/seed` 或任何正式包。
+- 复查四级/六级候选：较早源核查行、既有定向编辑行和 `crossbook-sense-unverified` 行不可为了凑 40–60 对强行重写；本轮 **新增中英例句 0 对**，优先恢复 CI 可靠性。原 21 对候选仍 `needs-review`，未经外部人工审核。
+- 本轮仅涉及针对性回归测试与本开发接力文档，不触及 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不合并、不发布。CI 结果以本次新 commit 对应 Actions 最终状态为准。

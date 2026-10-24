@@ -21,8 +21,17 @@ test('whole CET6 example set is source-bound, has no template fallbacks and reta
   assert.deepEqual(row.identity,Object.fromEntries(Object.keys(row.identity).map(k=>[k,e[k]])));
   assert.equal(e.pos,w.pos);assert.equal(e.meaning,w.meaning);
   const correction=batch.editorial_revisions.find(r=>r.word===e.word);
-  assert.deepEqual({text:e.text,translation:e.translation},correction?.after||{text:row.proposed.example,translation:row.proposed.example_translation});
-  if(correction)assert.deepEqual(correction.before,{text:row.proposed.example,translation:row.proposed.example_translation});
+  // Later needs-review drafts must not silently change the frozen CET6 install batch.
+  const candidate={text:row.proposed.example,translation:row.proposed.example_translation};
+  if(row.draft_method==='editorial-context-rewrite-needs-review'){
+   assert.equal(row.verification,'needs-review');
+   assert.equal(row.external_human_review,false);
+   assert.equal(row.full_dictionary_senses_reviewed,false);
+   if(correction)assert.deepEqual({text:e.text,translation:e.translation},correction.after);
+  }else{
+   assert.deepEqual({text:e.text,translation:e.translation},correction?.after||candidate);
+   if(correction)assert.deepEqual(correction.before,candidate);
+  }
   assert.ok(e.text&&/[\u3400-\u9fff]/.test(e.translation));
   assert.equal(e.external_human_review,false);assert.equal(e.full_dictionary_senses_reviewed,false);
   assert.ok(!rules.some(r=>r.pattern.test(r.id==='translation-metalinguistic'?e.translation:e.text)),e.word);
