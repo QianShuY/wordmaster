@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,14);
- assert.deepEqual(edits.map(x=>x.word).sort(),['accordingly','approximate','arrival','atom','atomic','bloom','boast','bow','brass','brown','bulb','color','comparative','resume']);
+ assert.equal(edits.length,21);
+ assert.deepEqual(edits.map(x=>x.word).sort(),['accordingly','approximate','arrival','atom','atomic','bloom','boast','bow','brass','brown','bulb','color','comparative','conquest','convenience','crust','dairy','dissolve','drain','drum','resume']);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -43,4 +43,16 @@ test('CET4 noun examples, comparative collocation and nuclear science wording st
  assert.match(byWord.get('atomic').text,/nuclei/);
  assert.match(byWord.get('color').text,/color of the walls/);
  assert.match(byWord.get('comparative').text,/comparative study/);
+});
+
+test('CET4 next batch keeps noun senses, transitive verbs, natural collocations and accurate translations',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ assert.match(byWord.get('conquest').text,/conquest of the city/);
+ assert.match(byWord.get('convenience').text,/For convenience/);
+ assert.equal(byWord.get('crust').text,byWord.get('crust').before_text);
+ assert.match(byWord.get('crust').translation,/为孩子们把三明治的面包边切掉/);
+ assert.match(byWord.get('dairy').text,/runs a small dairy/);
+ assert.match(byWord.get('dissolve').text,/dissolve the sugar/);
+ assert.match(byWord.get('drain').text,/drained the water/);
+ assert.match(byWord.get('drum').text,/played the drum/);
 });
