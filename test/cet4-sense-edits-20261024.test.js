@@ -23,7 +23,7 @@ test('CET4 editorial sense edits are source locked and leave model-worker candid
   assert.equal(draft.text,item.before_text);
   assert.equal(draft.translation,item.before_translation);
   assert.deepEqual(reviewedExample(word),{text:item.text,translation:item.translation});
-  for(const altered of [{source_file:'custom.txt'},{source_line:word.source_line+1},{source_raw:'changed'},{meaning:'different sense'},{pos:'vi.'},{headword:'different'},{homograph:1}]){
+  for(const altered of [{source_file:'custom.txt'},{source_line:word.source_line+1},{source_raw:'changed'},{meaning:'different sense'},{pos:word.pos==='vi.'?'n.':'vi.'},{headword:'different'},{homograph:1}]){
    assert.equal(reviewedExample({...word,...altered}),null,item.word+' '+JSON.stringify(altered));
   }
  }
