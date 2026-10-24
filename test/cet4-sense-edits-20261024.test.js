@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,54);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","resume"]);
+ assert.equal(edits.length,68);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -208,4 +208,87 @@ test('CET4 G-word editorial examples stay aligned to source POS and bilingual se
  assert.equal(byWord.get('giant').pos,'n.');
  assert.equal(byWord.get('gauge').pos,'vt.');
  assert.equal(byWord.get('goodness').meaning.includes('仁慈'),true);
+});
+
+
+test('CET4 H-word edits use natural single-sense sentences and matching translations',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+   "halt": [
+     "The train halted at a red signal.",
+     "火车在红色信号灯前停了下来。",
+     "停止（不及物动词）"
+   ],
+   "hammer": [
+     "She used a hammer to drive a nail into the board.",
+     "她用锤子把一颗钉子钉进木板。",
+     "锤子（名词）"
+   ],
+   "hand": [
+     "She raised her hand to ask a question.",
+     "她举起手来提问。",
+     "手（名词）"
+   ],
+   "handle": [
+     "The door handle was loose, so he tightened the screws.",
+     "门把手松了，于是他拧紧了螺丝。",
+     "把手（名词）"
+   ],
+   "harbour": [
+     "The fishing boats returned to the harbour before sunset.",
+     "渔船在日落前返回了港口。",
+     "港口（名词）"
+   ],
+   "hard": [
+     "The ground was too hard to dig.",
+     "地面太硬，挖不动。",
+     "坚硬的（形容词）"
+   ],
+   "harsh": [
+     "The teacher's harsh criticism upset the student.",
+     "老师严厉的批评让那名学生很难过。",
+     "严厉的（形容词）"
+   ],
+   "hear": [
+     "I could hear footsteps outside the door.",
+     "我能听见门外的脚步声。",
+     "听见（及物动词）"
+   ],
+   "heat": [
+     "The heat from the fire kept us warm.",
+     "火堆散发的热量让我们感到暖和。",
+     "热量（名词）"
+   ],
+   "herd": [
+     "A herd of cattle crossed the road.",
+     "一群牛穿过了公路。",
+     "兽群、牧群（名词）"
+   ],
+   "hire": [
+     "We hired bicycles to explore the town.",
+     "我们租了自行车游览小镇。",
+     "租借（及物动词）"
+   ],
+   "honey": [
+     "She added a spoonful of honey to her tea.",
+     "她往茶里加了一勺蜂蜜。",
+     "蜂蜜（名词）"
+   ],
+   "hook": [
+     "He hung his coat on a hook by the door.",
+     "他把外套挂在门边的挂钩上。",
+     "挂钩（名词）"
+   ],
+   "horizon": [
+     "The sun disappeared below the horizon.",
+     "太阳落到了地平线以下。",
+     "地平线（名词）"
+   ]
+ };
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word+' should replace the mechanical draft');
+ }
 });
