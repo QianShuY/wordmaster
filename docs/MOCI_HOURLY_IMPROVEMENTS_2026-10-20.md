@@ -239,5 +239,5 @@
 
 - 起始 HEAD：`3249a0ee895e0c3d0e73a8bbe14ca82dd076868b`；上一轮最新 Actions `40073700870` 为 `completed/success`，TEM-009 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 的 check-run 为 `completed/success`。检查历史质量快照，区分 26,612 待审草稿和正式词库内容。
 - 本轮根据用户“先给每个词都加例句”的优先级，暂停 TEM 和已有例句润色，**实际新增到应用 0 对**。六级 2026-10-21 记录为 2266/2272，但发现 2026-10-22 已有 6 条精确来源的词性修订及双语例句，故源码应达到 2272/2272，等待新覆盖测试确认；四级历史本机快照 762/4460，当前用户运行时覆盖未知。
-- 新增 `docs/MOCI_CET_EXAMPLE_COVERAGE_2026-10-24.md`：按 `source_raw`、任务 SHA、源词性和草稿内容筛出 **50 条四级仍缺正式例句的待审队列**，未重复生成已存在的候选句。新增 `test/cet4-cet6-example-coverage-guard.test.js`：只读检查新建词库的四级/六级实际来源匹配双语覆盖，并防止这 50 条被误认作已安装。
+- 新增 `docs/MOCI_CET_EXAMPLE_COVERAGE_2026-10-24.md`：按 `source_raw`、任务 SHA、源词性和草稿内容筛出 **51 条四级仍缺正式例句的待审队列**，未重复生成已存在的候选句。新增 `test/cet4-cet6-example-coverage-guard.test.js`：只读检查新建词库的四级/六级实际来源匹配双语覆盖，并防止这 51 条被误认作已安装。
 - 本轮不修改 `app/seed`、用户 SQLite、`main`、学习记录、Windows/Android 包，也不合并发布；此前禁止正式接入的约束仍有效。候选队列不是已安装例句。新 CI 必须在提交后查询最终状态。

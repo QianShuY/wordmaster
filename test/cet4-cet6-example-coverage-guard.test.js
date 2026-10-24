@@ -342,11 +342,11 @@ test('CET4/CET6 static source coverage is not confused with 26,612 review-only d
  console.log('CET4 source-visible bilingual pairs: '+four.paired+'/'+four.total+'; missing: '+four.missing.length);
  console.log('CET6 source-visible bilingual pairs: '+six.paired+'/'+six.total+'; missing: '+six.missing.length);
 });
-test('50 queued CET4 missing-pair candidates retain source identity and remain uninstalled',()=>{
+test('51 queued CET4 missing-pair candidates retain source identity and remain uninstalled',()=>{
  const four=freshSourceCoverage('cet4.txt');
  const missing=new Set(four.missing);
  const cache=new Map(),seen=new Set();
- assert.equal(QUEUE.length,50);
+ assert.equal(QUEUE.length,51);
  for(const q of QUEUE){
   const key=q.task_id+'#'+q.row_index;assert.ok(!seen.has(key));seen.add(key);
   if(!cache.has(q.task_id))cache.set(q.task_id,require('../docs/model-task-results/worker-A/'+q.task_id+'/result.json'));
