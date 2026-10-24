@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,124);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","neat","resume"]);
+ assert.equal(edits.length,133);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organize","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -562,4 +562,68 @@ test('CET4 M/N source-locked examples preserve spelling, noun senses and natural
  assert.equal(byWord.get('liter').source_raw.startsWith('liter ['),true);
  assert.equal(byWord.get('maximum').pos,'n.');
  assert.equal(byWord.get('medium').pos,'n.');
+});
+
+
+test('CET4 N/O source-locked corrections match original senses and natural bilingual usage',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "naturally": [
+    "Her hair curls naturally.",
+    "她的头发天生卷曲。",
+    "天然地（副词）"
+  ],
+  "necessity": [
+    "The accident showed the necessity of regular safety checks.",
+    "这次事故说明了定期安全检查的必要性。",
+    "必要性（名词）"
+  ],
+  "none": [
+    "None of the students knew the answer.",
+    "没有一个学生知道答案。",
+    "没有人（代词）"
+  ],
+  "nod": [
+    "She nodded her approval of the plan.",
+    "她点头表示赞同这项计划。",
+    "点头表示（及物动词）"
+  ],
+  "noble": [
+    "His noble actions earned the respect of the villagers.",
+    "他的高尚行为赢得了村民们的尊敬。",
+    "高尚的（形容词）"
+  ],
+  "operate": [
+    "The surgeon operated for three hours.",
+    "外科医生做了三个小时的手术。",
+    "施行手术（不及物动词）"
+  ],
+  "oral": [
+    "The students took an oral exam in English.",
+    "学生们参加了英语口试。",
+    "口头的（形容词）"
+  ],
+  "orderly": [
+    "The students left the classroom in an orderly manner.",
+    "学生们有秩序地离开了教室。",
+    "有秩序的（形容词）"
+  ],
+  "organize": [
+    "The volunteers organized a charity concert.",
+    "志愿者组织了一场慈善音乐会。",
+    "组织（及物动词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+ }
+ assert.equal(byWord.get('none').pos,'pron.');
+ assert.equal(byWord.get('nod').pos,'vt.');
+ assert.equal(byWord.get('operate').pos,'vi.');
+ assert.equal(byWord.get('organize').pos,'vt.');
 });
