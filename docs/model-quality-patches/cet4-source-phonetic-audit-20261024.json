@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24",
+  "branch": "feat/moci-web-handoff-20261016",
+  "base_commit": "4492deb9ac6d4839087ff02e1a4e74570e253d03",
+  "status": "open-phonetic-verification",
+  "scope": "CET4 source_raw and selected example sense only; do not change original source, user SQLite, or existing reviewed examples",
+  "fixed_by_editorial_overlay": [
+    "bow"
+  ],
+  "unresolved": [
+    {
+      "word": "desert",
+      "source_line": 1048,
+      "source_raw": "desert [diˈzəːt] n.沙漠 vt.离弃；擅离",
+      "current_example": "The travellers crossed the desert with an experienced guide.",
+      "issue": "源行音标对应动词 desert，现有例句使用名词 desert（沙漠）；且该例句已有较早的正式绑定，不能直接覆写。",
+      "next_step": "逐项核对原词表音标与词性后单独提议修订，不直接替换旧例句。"
+    },
+    {
+      "word": "sow",
+      "source_line": 3822,
+      "source_raw": "sow [sau] vt.播(种) vi.播种",
+      "current_example": "Farmers sow the seeds in early spring.",
+      "issue": "播种动词 sow 通常读 /soʊ/；源行 [sau] 疑似混入同形名词读音，例句词义本身正确。",
+      "next_step": "核对权威词典和源文件后再考虑源音标的单独修复。"
+    },
+    {
+      "word": "entrance",
+      "source_line": 1316,
+      "source_raw": "entrance [inˈtrɑːns] n.入口，门口；进入",
+      "current_example": "We waited for the guide at the main entrance.",
+      "issue": "名词 entrance（入口）与源行 [inˈtrɑːns] 的重音/读音可能不匹配；例句词义正确。",
+      "next_step": "核对源词表与权威词典，不以修改正确例句来掩盖音标问题。"
+    }
+  ],
+  "safety": "These are review flags, not verified lexical fixes. No source or pronunciation has been modified."
+}

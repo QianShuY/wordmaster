@@ -15,13 +15,16 @@ const cet6Complete = require('../app/seed/examples-cet6-complete-reviewed-202610
 // Source-locked CET-4 coverage candidates; existing checked bindings take precedence.
 const cet4Provisional=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const provisionalBindings=new Map(cet4Provisional.map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
+// Editorial CET4 sense repairs; checked legacy bindings still win, frozen worker drafts stay untouched.
+const cet4SenseEdits=require('../app/seed/examples-cet4-sense-edits-20261024.json').examples;
+const senseEditBindings=new Map(cet4SenseEdits.filter(item=>item.review_status==='editorial-source-sense-checked').map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
 const {matchesSenseIdentity}=require('./source-sense-binding');
 const bindings = new Map([...batch.examples,...common.examples,...extended.examples,...commonD.examples,...commonE.examples,...commonF.examples,...commonG.examples,...commonH.examples,...commonI.examples,...numbered.examples,...webReviewed.examples,...cet6Complete.examples].map(item => [`${item.source_file}\0${item.word}`, item]));
 function reviewedExample(word) {
   const lexical=require('./lexical-corrections').lexicalExample(word);if(lexical)return lexical;
   const corrected=require('./content-corrections').correctedExample(word);if(corrected)return corrected;
   const key=word.source_file+String.fromCharCode(0)+word.word;
-  for(const item of [bindings.get(key),provisionalBindings.get(key)]){
+  for(const item of [bindings.get(key),senseEditBindings.get(key),provisionalBindings.get(key)]){
     if(item && matchesSenseIdentity(item,word)
       && (item.source_line===undefined||item.source_line===word.source_line)
       && item.pos===word.pos && item.meaning===word.meaning && item.source_raw===word.source_raw

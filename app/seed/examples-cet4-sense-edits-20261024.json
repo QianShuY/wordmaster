@@ -1,0 +1,46 @@
+{
+  "version": "2026-10-24.2-editorial",
+  "note": "Source-locked, targeted editorial corrections for new installs. No independent dictionary/human full-sense approval. Existing user data is never overwritten. Frozen model-worker proposals and all five CET4 coverage packs remain unchanged.",
+  "examples": [
+    {
+      "source_file": "cet4.txt",
+      "source_line": 455,
+      "source_raw": "bow [bau] n.弓；蝴蝶结；鞠躬",
+      "word": "bow",
+      "headword": "bow",
+      "homograph": null,
+      "pos": "n.",
+      "meaning": "弓；蝴蝶结；鞠躬",
+      "selected_sense": "鞠躬（名词，/baʊ/）",
+      "before_text": "She tied a red bow around the gift.",
+      "before_translation": "她在礼物上系了一个红色蝴蝶结。",
+      "text": "The actor took a bow after the final scene.",
+      "translation": "最后一幕结束后，演员鞠躬致意。",
+      "reason": "旧例句的蝴蝶结读 /boʊ/，与源行 [bau] 所指的鞠躬 /baʊ/ 不一致；新句保持 n. 和中文义项。",
+      "review_status": "editorial-source-sense-checked",
+      "review_scope": "single-source-sense-only",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    },
+    {
+      "source_file": "cet4.txt",
+      "source_line": 3407,
+      "source_raw": "resume [riˈzjuːm] vt.恢复；重新开始",
+      "word": "resume",
+      "headword": "resume",
+      "homograph": null,
+      "pos": "vt.",
+      "meaning": "恢复；重新开始",
+      "selected_sense": "恢复（课程，及物动词）",
+      "before_text": "Classes will resume after the holiday.",
+      "before_translation": "假期结束后将恢复上课。",
+      "text": "The school will resume classes after the holiday.",
+      "translation": "学校将在假期结束后恢复上课。",
+      "reason": "旧句以 classes 作主语，resume 用作不及物动词；源行标 vt.，新句明确以 classes 作宾语。",
+      "review_status": "editorial-source-sense-checked",
+      "review_scope": "single-source-sense-only",
+      "external_human_review": false,
+      "full_dictionary_senses_reviewed": false
+    }
+  ]
+}
