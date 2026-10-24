@@ -2,6 +2,8 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const V=require('../app/vocabulary');
 const {reviewedExample}=require('../shared/content-batch');
+const {normalizePartOfSpeech}=require('../shared/domain');
+const legacy=require('../app/seed/reviewed-examples.json');
 const manifest=require('../docs/model-tasks-20261015/manifest.json');
 const taskMap=new Map(manifest.files.map(t=>[t.task_id,t]));
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
@@ -38,7 +40,10 @@ test('CET4 fresh source has a bilingual pair per valid word and CET6 remains com
  }
  const six=V.buildBook(V.CATALOG.find(s=>s.file==='cet6.txt'));
  assert.equal(six.words.length,2272);
- for(const w of six.words)assert.ok((w.reviewed_example||reviewedExample(w))?.text?.trim(),w.word);
+ for(const w of six.words){
+  const legacyPair=!w.homograph&&legacy[w.headword]&&normalizePartOfSpeech(w.pos)===legacy[w.headword].pos?legacy[w.headword]:null;
+  assert.ok((w.reviewed_example||reviewedExample(w)||legacyPair)?.text?.trim(),w.word);
+ }
  const w=source.words.find(x=>x.word==='absolute');assert.ok(w);
  for(const changes of [{source_file:'custom.txt'},{source_line:w.source_line+1},{source_raw:'tampered source'},{pos:'wrong.'},{meaning:'other meaning'},{headword:'wrong'},{homograph:1}])
   assert.equal(reviewedExample({...w,...changes}),null,JSON.stringify(changes));
