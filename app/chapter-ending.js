@@ -25,9 +25,9 @@ function createChapterEnding(db,campaign,getPool,instanceId){
    if(row.result_json){if(row.transcript_sha256!==hash)throw new Error('这场挑战已经结算，手记不可更换');db.exec('COMMIT');return {...JSON.parse(row.result_json),duplicate:true};}
    const pool=JSON.parse(row.pool_json),initial=JSON.parse(row.initial_json),game=Battle.create(pool,initial.instanceId,initial);
    for(const event of events){
-    if(!event||!['teach','start','choose','answer','next','revive'].includes(event.action)||!Array.isArray(event.args))throw new Error('无效的战斗操作');
+    if(!event||!['teach','start','choose','answer','next','revive','elapseDomain'].includes(event.action)||!Array.isArray(event.args))throw new Error('无效的战斗操作');
     const a=event.args,needsText=['teach','choose','answer','revive'].includes(event.action);
-    if(needsText?(typeof a[0]!=='string'||a[0].length>1000||a.length>(event.action==='answer'?2:1)||event.action==='answer'&&a.length===2&&typeof a[1]!=='boolean'):a.length!==0)throw new Error('无效的咒语记录');
+    if(event.action==='elapseDomain'?(a.length!==1||!Number.isInteger(a[0])||a[0]<=0||a[0]>1000):needsText?(typeof a[0]!=='string'||a[0].length>1000||a.length>(event.action==='answer'?2:1)||event.action==='answer'&&a.length===2&&typeof a[1]!=='boolean'):a.length!==0)throw new Error('无效的咒语记录');
     if(game.state.phase==='won'||!game[event.action](...a))throw new Error('战斗操作顺序不成立');
    }
    const s=game.state;if(s.phase!=='won'||s.bossHp!==0)throw new Error('守卫尚未被击败');

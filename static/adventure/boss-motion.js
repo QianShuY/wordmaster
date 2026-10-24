@@ -7,7 +7,7 @@
     sealCharge:{label:'二式 / 举盾',intent:'即将封路 · 石印封路',detail:'守卫沉下重心，石盾蓄势。应对：中文提示默写 → 击破封印。',status:'石印封路：沉肩、举盾蓄势，等待下砸。',duration:2200,next:'sealSlam',seal:'印'},
     sealSlam:{label:'二式 / 盾击',intent:'石印封路 · 墨裂蔓延',detail:'石盾砸向桥面，墨色裂痕沿石缝蔓延。',status:'石盾触地停顿，墨裂散开，石粉落下。',duration:1200,next:'sealed',seal:'封'},
     sealed:{label:'二式 / 封路',intent:'封印持续 · 等待默写破印',detail:'正式战斗中用英文默写破印。此处可点击「石印碎裂」预览破解。',status:'石印保持封路状态，可点击石印碎裂查看破解反馈。',duration:0,next:null,seal:'封'},
-    stormCharge:{label:'三式 / 起势',intent:'第二阶段 · 残页风暴',detail:'残页渐渐浮起，向披风周围聚拢。应对：连续回忆两个不同单词 → 打断风暴。',status:'残页风暴：披风展开，破损纸页由慢至快聚拢。',duration:2600,next:'storm',seal:'风'},
+    stormCharge:{label:'三式 / 起势',intent:'第二阶段 · 残页风暴',detail:'残页渐渐浮起，向披风周围聚拢。应对：进入残页领域，在限时内默写多个不同单词 → 击破封印。',status:'残页风暴：披风展开，破损纸页由慢至快聚拢。',duration:2600,next:'storm',seal:'风'},
     storm:{label:'三式 / 风暴',intent:'残页风暴 · 翻卷散落',detail:'带着字迹的残页翻卷袭来，风势过后，余页飘落桥面。',status:'残页翻卷爆发，近处纸片掠过，余页逐渐落下。',duration:3600,next:'idle',seal:'暴'},
     hit:{label:'04 / 受击',intent:'命中 · 石甲震颤',detail:'英文回忆命中时，墨光穿过雾气，守卫后退。',status:'墨光命中，石甲震颤。',duration:1100,next:'idle',seal:'应'},
     break:{label:'05 / 破盾',intent:'破盾 · 石印崩解',detail:'默写咒语击破石印。护盾消退，守卫露出破绽。',status:'石印碎裂，护盾消退，守卫进入破绽状态。',duration:1500,next:'exposed',seal:'破'},

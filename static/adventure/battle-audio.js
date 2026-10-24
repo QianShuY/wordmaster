@@ -83,6 +83,7 @@
    if(!r.ok)cue(incoming);else if(r.spell==='attack')cue(r.shieldBroken?'break':'ink');else cue(r.spell);
    if(r.ok&&r.received){if(!impact('wound',.36,.65))tone(67,.36,.22,.15,'sine',39);}
   },
+  domain(stage){if(stage==='enter')cue('charge');else if(stage==='active')cue('storm');},
   async previewImpact(name){if(!impactNames.has(name))return;unlock();if(ctx?.state==='suspended')try{await ctx.resume();}catch{return;}stopEffects();cue(name);}
  };
  for(const [id,k]of [['battleMusic','music'],['battleSfx','effects']])get(id).addEventListener('click',()=>{unlock();if(id==='battleMusic'&&get('battleAudioStatus').textContent){prefs.music=true;get('battleAudioStatus').textContent='';}else prefs[k]=!prefs[k];save();if(!prefs.effects)stopEffects();sync();if(k==='effects'&&prefs.effects)cue('defend');});

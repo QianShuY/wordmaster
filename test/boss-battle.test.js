@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const B=require('../shared/boss-battle');
 const pool=Array.from({length:12},(_,i)=>({id:i+1,answer:'word'+i,meaning:'释义'+i,pos:'n.',choices:['释义'+i,'另一项','其他项','干扰项']}));
-function ready(){const game=B.create(pool,'db-a');assert.equal(game.start(),false);assert.equal(game.teach('wrong'),false);assert.equal(game.teach(' i refuse TO accept this ending! '),true);game.start();return game;}
+function ready(){const initial=B.create(pool,'db-a').snapshot();const game=B.create(pool,'db-a',{...initial,version:1,bossHp:120});assert.equal(game.start(),false);assert.equal(game.teach('wrong'),false);assert.equal(game.teach(' i refuse TO accept this ending! '),true);game.start();return game;}
 test('three spells have distinct costs; shield breaks and repeated answers cannot deal duplicate damage',()=>{
  const g=ready();g.choose('attack');const q=g.question;g.answer(q.answer);assert.equal(g.state.bossHp,102);assert.equal(g.state.shield,false);assert.equal(g.state.hp,91);assert.equal(g.answer(q.answer),null);assert.equal(g.state.bossHp,102);
  g.next();assert.equal(g.intent,'seal');assert.equal(g.state.shield,true);g.choose('defend');assert.equal(g.question.mode,'meaning');g.answer(g.question.meaning);assert.equal(g.state.hp,91);assert.equal(g.state.bossHp,90);

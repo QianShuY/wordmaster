@@ -10,7 +10,10 @@ function victory(session){const game=Battle.create(session.pool,session.initial.
  act('teach',Battle.DECLARATION);act('start');
  while(game.state.phase!=='won'){
   if(game.state.phase==='feedback'){act('next');continue;}
-  if(game.state.phase==='choose')act('choose','attack');
+  if(game.state.phase==='stormIntro'){act('elapseDomain',Math.min(1000,game.state.domain.introMs));continue;}
+  if(game.state.phase==='fallen'){act('revive',Battle.DECLARATION);continue;}
+  if(game.state.phase==='choose')act('choose',game.state.hp<50&&game.state.heals?'heal':'attack');
+  if(game.state.phase==='stormIntro')continue;
   const q=game.question;act('answer',q.mode==='meaning'?q.meaning:q.answer,false);
  }
  return events;
@@ -30,6 +33,15 @@ test('server replays fixed battle; rejected transcripts never grant endings; fir
  assert.equal(JSON.stringify(db.prepare('SELECT * FROM progress').all()),before);
  assert.equal(db.prepare('SELECT COUNT(*) n FROM review_log').get().n,0);assert.equal(db.prepare('SELECT COUNT(*) n FROM user_cards').get().n,0);
  assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');assert.deepEqual(db.prepare('PRAGMA foreign_key_check').all(),[]);
+});
+test('domain transcript rejects forged clocks and premature answers; legacy sessions can still finish',()=>{
+ const service=createChapterEnding(db,{state:()=>({bossAvailable:true})},()=>pool,()=> 'isolated-db');
+ const session=service.start(),events=victory(session),at=events.findIndex(e=>e.action==='elapseDomain');assert.ok(at>0);
+ for(const ms of [-1,0,1001,0.5,'1000']){const bad=structuredClone(events);bad[at].args=[ms];assert.throws(()=>service.finish(session.id,bad),/无效/);}
+ const skipped=events.filter(e=>e.action!=='elapseDomain');assert.throws(()=>service.finish(session.id,skipped),/顺序/);
+ const old=service.start();old.initial={...old.initial,version:1,bossHp:120};delete old.initial.domain;db.prepare('UPDATE boss_sessions SET initial_json=? WHERE id=?').run(JSON.stringify(old.initial),old.id);
+ assert.equal(service.finish(old.id,victory(old)).ok,true);
+ assert.equal(service.finish(session.id,events).ok,true);
 });
 test('ending API withholds story until clear, route gates sessions, formal first clear appears as 14/14',async t=>{
  db.exec('DELETE FROM adventure_endings; DELETE FROM boss_sessions');
