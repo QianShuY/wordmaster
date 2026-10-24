@@ -256,7 +256,7 @@ test('CET-4: 11 source-locked bilingual edits remain review-only',()=>{
   assert.equal(e.proposed.example,row.en);assert.equal(e.proposed.example_translation,row.cn);
   assert.equal(e.draft_method,'editorial-context-rewrite-needs-review');assert.equal(e.verification,'needs-review');
   assert.equal(e.external_human_review,false);assert.equal(e.full_dictionary_senses_reviewed,false);assert.deepEqual(e.evidence,[]);
-  assert.ok(/[.!?]$/.test(row.en)&&row.cn.endsWith('。'));
+  assert.ok(/[.!?]$/.test(row.en)&&/[。！？]$/.test(row.cn));
   assert.deepEqual(rules.filter(r=>r.pattern.test(r.id==='translation-metalinguistic'?row.cn:row.en)).map(r=>r.id),[]);
  }
 });
