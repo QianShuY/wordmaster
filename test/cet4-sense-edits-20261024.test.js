@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,97);
- assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","lively","resume"]);
+ assert.equal(edits.length,109);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","lively","loosen","lower","lumber","lump","magic","maintenance","manly","marine","marriage","marvelous","mate","melt","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -392,4 +392,81 @@ test('CET4 J/K/L targeted sense corrections match source meanings and preserve s
  }
  assert.equal(byWord.get('kilometer').before_translation,byWord.get('kilometer').translation);
  assert.equal(byWord.get('license').before_translation,byWord.get('license').translation);
+});
+
+
+test('CET4 L/M source-locked corrections retain natural bilingual senses and target words',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "maintenance": [
+    "The machine needs regular maintenance to run safely.",
+    "机器需要定期维护才能安全运行。",
+    "维修、保养（名词）"
+  ],
+  "magic": [
+    "The children were amazed by the magic on stage.",
+    "孩子们对舞台上的魔术表演感到惊叹。",
+    "魔术、戏法（名词）"
+  ],
+  "loosen": [
+    "He loosened the knot so the rope could be untied.",
+    "他把绳结弄松，以便解开绳子。",
+    "使松开（及物动词）"
+  ],
+  "lumber": [
+    "The carpenter selected dry lumber for the new shelves.",
+    "木匠挑选了干燥的木料来制作新架子。",
+    "木材（名词）"
+  ],
+  "lump": [
+    "She dropped a lump of sugar into her tea.",
+    "她往茶里放了一块方糖。",
+    "块（名词）"
+  ],
+  "manly": [
+    "He spoke in a calm, manly voice.",
+    "他说话时声音沉稳，带着男子气概。",
+    "有男子气概的（形容词）"
+  ],
+  "marvelous": [
+    "We had a marvelous view of the mountains from the window.",
+    "从窗户望出去，群山景色美极了。",
+    "极好的、了不起的（形容词）"
+  ],
+  "marine": [
+    "Marine animals are affected by plastic pollution.",
+    "海洋动物受到塑料污染的影响。",
+    "海洋的（形容词）"
+  ],
+  "marriage": [
+    "Their marriage has lasted more than twenty years.",
+    "他们的婚姻已经持续了二十多年。",
+    "婚姻（名词）"
+  ],
+  "melt": [
+    "The snow began to melt when the sun came out.",
+    "太阳出来后，积雪开始融化。",
+    "融化（不及物动词）"
+  ],
+  "mate": [
+    "My mate helped me carry the heavy boxes.",
+    "我的伙伴帮我搬那些沉重的箱子。",
+    "伙伴（名词，英式口语）"
+  ],
+  "lower": [
+    "She lowered the blinds to block the afternoon sun.",
+    "她放下百叶窗，挡住午后的阳光。",
+    "放下、降低（及物动词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+ }
+ assert.doesNotMatch(byWord.get('maintenance').before_text,/maintenance/i);
+ assert.doesNotMatch(byWord.get('magic').before_text,/\bmagic\b/i);
 });
