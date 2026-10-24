@@ -170,3 +170,10 @@
 - 只更改 59 行的 `proposed.example`、`proposed.example_translation` 和 `draft_method`，新增 `test/abc-tem-018-natural-59.test.js` 锁定完整句对、源行号/源原文、义项、输入 SHA 及 100 行的身份与审核状态。所有 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 均不变。
 - `tem-018/creator` 源释义疑似与 headword 不符，`cripple` 含过时伤残称谓，`creole` 含身份/语言双义，`crucify` 含敏感历史语境，均保留待独立核查，不为凑数修改。其他剩余条目继续逐义筛选。
 - 本轮所有例句仍是 **needs-review** 候选，不代表独立词典审核或已进入正式词库；未修改 `main`、`app/seed`、SQLite、学习进度、Windows/Android 正式包，未自动合并/发布。新提交 CI 以对应 Actions 最终结果为准。
+
+## 第 21 轮：TEM-018 遗留 + TEM-019 逐义例句改写（2026-10-24）
+
+- 开始时开发分支 HEAD 为 `1dbaa4178db30bed42b157eebbd039bd17df0a09`，先读本接力文档及 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 历史质量快照；TEM-009 首批 `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应 Actions `39959184869`、上一轮 TEM-018 的 `1dbaa4178db30bed42b157eebbd039bd17df0a09` 对应 Actions `40043797101` 均已核实为 **completed/success**。该质量快照不是当前全量未改写数量。
+- 逐项核对 `identity.source_raw`、`selected_sense.pos/meaning`，仅从 `offline-context-first-draft` 中选取 TEM-018 **19 对**和 TEM-019 **40 对**，共 **59 对**明显机械或中文硬译的句子。例：`cremate` 使用按遗愿火化遗体的适当语境；`crux` 使用问题症结；`culminate` 用 `culminate in`；`curtail` 明确缩减户外活动；`cynical` 表示对承诺持怀疑态度。未重复改写已经编辑过的词条。
+- 仅更改两份 `docs/model-task-results/worker-A/tem-01{8,9}/result.json` 中 59 行的 `proposed.example`、`proposed.example_translation`、`draft_method`，新增 `test/abc-tem-018-019-natural-59.test.js` 锁定中英句对、源行号、原文、词性义项、任务输入 SHA、全部行身份/原字段及审核状态。所有 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 保持不变。
+- `tem-018/creator` 的源释义疑似错误、`creole` 身份与语言多义、`cripple` 过时称谓、`crucify` 历史语境，仍保留待审；TEM-019 其余草稿待逐义挑选。此次仅是 **needs-review** 候选，不是独立词典审校或正式词库发布；未改动 `main`、`app/seed`、SQLite、学习进度或 Windows/Android 安装包，也不合并发布。新提交 CI 以对应 Actions 最终状态为准。
