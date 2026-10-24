@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,133);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organize","resume"]);
+ assert.equal(edits.length,143);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","perform","physical","piano","powerful","practise","resume"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -626,4 +626,73 @@ test('CET4 N/O source-locked corrections match original senses and natural bilin
  assert.equal(byWord.get('nod').pos,'vt.');
  assert.equal(byWord.get('operate').pos,'vi.');
  assert.equal(byWord.get('organize').pos,'vt.');
+});
+
+
+test('CET4 O/P edits match source-locked senses, translations and POS',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "organic": [
+    "Organic matter from fallen leaves enriches the soil.",
+    "落叶形成的有机物质能使土壤更加肥沃。",
+    "生物来源的有机物质（形容词）"
+  ],
+  "pacific": [
+    "The Pacific is the largest ocean on Earth.",
+    "太平洋是地球上最大的海洋。",
+    "太平洋（专有名词）"
+  ],
+  "pack": [
+    "Fans packed the stadium for the final.",
+    "决赛时，球迷们挤满了体育场。",
+    "挤满（及物动词）"
+  ],
+  "pardon": [
+    "The governor granted the prisoner a pardon.",
+    "州长赦免了这名囚犯。",
+    "赦免（名词）"
+  ],
+  "pant": [
+    "With a tired pant, she sat down after the race.",
+    "比赛结束后，她喘着气坐了下来。",
+    "喘息（名词）"
+  ],
+  "perform": [
+    "The choir will perform a new song at the festival.",
+    "合唱团将在节庆活动上演唱一首新歌。",
+    "演出、表演（及物动词）"
+  ],
+  "physical": [
+    "The students measured the physical properties of the metal.",
+    "学生们测量了这种金属的物理性质。",
+    "物理的（形容词）"
+  ],
+  "piano": [
+    "He plays the piano every evening.",
+    "他每天晚上都弹钢琴。",
+    "钢琴（名词）"
+  ],
+  "powerful": [
+    "The powerful engine pulled the train up the hill.",
+    "强劲的发动机把火车牵引上了山坡。",
+    "强有力的（形容词）"
+  ],
+  "practise": [
+    "She practises scales on the piano every morning.",
+    "她每天早上都在钢琴上练习音阶。",
+    "练习（及物动词，英式拼写）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+ }
+ assert.equal(byWord.get('pant').pos,'n.');
+ assert.equal(byWord.get('perform').pos,'vt.');
+ assert.equal(byWord.get('pack').pos,'vt.');
+ assert.equal(byWord.get('physical').pos,'a.');
 });
