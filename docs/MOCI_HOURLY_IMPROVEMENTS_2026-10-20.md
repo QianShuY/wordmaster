@@ -185,3 +185,10 @@
 - 仅更改 `docs/model-task-results/worker-A/tem-019/result.json` 的 32 行和 `tem-020/result.json` 的 24 行中 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-019-020-natural-56.test.js` 锁定 56 对完整句对、源行号、源原文、选定义项、任务 SHA，以及两批 200 行的源身份、原字段和审核状态。保持 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 不变。
 - `tem-019/deadweight` 涉及航运载重术语与原释义“静止重量，净重”的歧义；`tem-020/decease` 属少见/古旧用法，`decency` 原释义含疑似错字“合家”，`decidedly` 的原义项与现代常见副词义存在疑点，均保留待独立来源审查，不为凑数改写。
 - 以上均为 **needs-review** 编辑候选，不是独立词典审核或正式词库更新；未改动 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并/发布。本轮新提交的 CI 以对应 GitHub Actions 最终结论为准。
+
+## 第 23 轮：TEM-020 遗留 + TEM-021 逐义自然例句（2026-10-24）
+
+- 写入基线 HEAD：`665f49ce230c27f698e4904db13ac3292b49a917`。先读取本接力文档与 `docs/ABC_QUALITY_PROGRESS_2026-10-18.md` 历史快照；已通过 Actions API 核实 TEM-009 首批 57 对 commit `efc88f30c60d3e883904d0dea1111df9507e3fd5` 对应运行 `39959184869`、上轮 `665f49ce230c27f698e4904db13ac3292b49a917` 对应运行 `40053675787` 均为 `completed/success`。历史快照计数不当作实时剩余量。当前分支 HEAD 与上轮提交一致，未发现其他 Agent 新提交。
+- 仅挑选未改写的 `offline-context-first-draft`，逐条核对 `identity.source_raw`、`selected_sense.pos/meaning` 和原中英句：TEM-020 **48 对**、TEM-021 **10 对**，合计 **58 对**。TEM-009 尚余的 6 条已由前轮确认具有具体语境，不重复改写。代表修复：`decompose`（落叶分解）、`decorum`（辩论中的礼节）、`deduce`（由脚印推断）、`defuse`（缓和争执）、`delude`（自欺欺人）、`delve`（深入查阅财务记录）。
+- 仅更改 `docs/model-task-results/worker-A/tem-020/result.json`、`docs/model-task-results/worker-A/tem-021/result.json` 中选定行的 `proposed.example`、`proposed.example_translation`、`draft_method`；新增 `test/abc-tem-020-021-natural-58.test.js` 锁定完整英中句、源行号/原文、选定义项、输入任务 SHA，以及两批全部行的原始身份、原字段、证据和审核状态。程序化回滚三类允许字段后与原 JSON 全量比较一致，确认 `input_sha256`、`identity`、`original`、`selected_sense`、`evidence=[]`、`needs-review`、`external_human_review=false` 未变。
+- `tem-020/decease` 属古旧用法，`decency` 源释义疑似错字，`decidedly` 原义项有偏差，`decry` 词性可能错误，`degenerate` 有多词性歧义，暂不强行改写；其余未处理候选继续逐义筛选。以上仍为 **needs-review** 编辑候选，不是外部词典独立审校或正式词库发布；未动 `main`、`app/seed`、SQLite、学习进度、Windows/Android 安装包，不自动合并或发布。新提交 CI 必须以 GitHub Actions 完成状态为准。
