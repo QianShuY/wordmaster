@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,8);
- assert.deepEqual(edits.map(x=>x.word).sort(),['accordingly','approximate','arrival','atom','boast','bow','brass','resume']);
+ assert.equal(edits.length,14);
+ assert.deepEqual(edits.map(x=>x.word).sort(),['accordingly','approximate','arrival','atom','atomic','bloom','boast','bow','brass','brown','bulb','color','comparative','resume']);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -33,4 +33,14 @@ test('phonetic conflicts are flagged without changing older checked CET4 binding
  assert.deepEqual(audit.unresolved.map(x=>x.word).sort(),['desert','entrance','sow']);
  const desert=words.find(x=>x.word==='desert');
  assert.deepEqual(reviewedExample(desert),{text:'The travellers crossed the desert with an experienced guide.',translation:'旅人们在一位经验丰富的向导带领下穿过沙漠。'});
+});
+
+test('CET4 noun examples, comparative collocation and nuclear science wording stay corrected',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ assert.match(byWord.get('bloom').text,/in full bloom/);
+ assert.match(byWord.get('brown').text,/chose brown/);
+ assert.match(byWord.get('bulb').text,/light bulb/);
+ assert.match(byWord.get('atomic').text,/nuclei/);
+ assert.match(byWord.get('color').text,/color of the walls/);
+ assert.match(byWord.get('comparative').text,/comparative study/);
 });
