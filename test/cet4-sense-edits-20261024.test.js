@@ -1956,6 +1956,6 @@ test('CET4 slow/separate source POS and lemma checks keep frozen candidate draft
   assert.equal(item.full_dictionary_senses_reviewed,false);
   assert.deepEqual(reviewedExample(source),{text:en,translation:zh},word);
  }
- assert.doesNotMatch(packs.find(x=>x.word==='slow').text,/\\bslow\\b/i);
- assert.match(edits.find(x=>x.word==='slow').text,/\\bslow\\b/i);
+ assert.doesNotMatch(packs.find(x=>x.word==='slow').text,/\bslow\b/i);
+ assert.match(edits.find(x=>x.word==='slow').text,/\bslow\b/i);
 });
