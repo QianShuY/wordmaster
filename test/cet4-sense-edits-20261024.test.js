@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,153);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","resume"]);
+ assert.equal(edits.length,168);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -764,4 +764,99 @@ test('CET4 P/Q editorial corrections retain exact source senses, POS and bilingu
  assert.equal(byWord.get('quicken').pos,'vt.');
  assert.equal(byWord.get('quote').pos,'vt.');
  assert.equal(byWord.get('publication').pos,'n.');
+});
+
+
+test('CET4 R/S editorial fixes keep exact source POS, single senses and bilingual alignment',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "rapid": [
+    "The city experienced rapid growth over the past decade.",
+    "过去十年，这座城市发展迅速。",
+    "快速的（形容词）"
+  ],
+  "reading": [
+    "She enjoys reading before going to bed.",
+    "她喜欢睡前阅读。",
+    "阅读（名词）"
+  ],
+  "receiver": [
+    "The receiver signed for the parcel at the door.",
+    "收件人在门口签收了包裹。",
+    "收件人（名词）"
+  ],
+  "refusal": [
+    "Her refusal to sign the contract surprised everyone.",
+    "她拒绝签署合同让所有人感到意外。",
+    "拒绝（名词）"
+  ],
+  "reliance": [
+    "She placed great reliance on her team's judgment.",
+    "她非常信赖团队的判断。",
+    "信赖（名词）"
+  ],
+  "relax": [
+    "The warm bath relaxed his tense muscles.",
+    "热水澡使他紧绷的肌肉放松下来。",
+    "使松弛（及物动词）"
+  ],
+  "render": [
+    "The power failure rendered the lift unusable.",
+    "停电使电梯无法使用。",
+    "使得（及物动词）"
+  ],
+  "representative": [
+    "The survey used a representative sample of local households.",
+    "这项调查使用了当地家庭的代表性样本。",
+    "代表性的（形容词）"
+  ],
+  "resident": [
+    "The resident population has grown steadily over the past decade.",
+    "过去十年，这里的常住人口稳步增长。",
+    "常住的（形容词）"
+  ],
+  "resign": [
+    "She resigned her position to care for her family.",
+    "她辞去职务，以便照顾家人。",
+    "放弃职位（及物动词）"
+  ],
+  "rotate": [
+    "The wheels rotate slowly when the machine starts.",
+    "机器启动时，轮子缓慢旋转。",
+    "旋转（不及物动词）"
+  ],
+  "rot": [
+    "Constant moisture can rot the wooden beams.",
+    "持续受潮会使木梁腐烂。",
+    "使腐烂（及物动词）"
+  ],
+  "reward": [
+    "She received a reward for returning the lost wallet.",
+    "她因归还丢失的钱包而获得了一笔酬谢。",
+    "报酬、酬谢（名词）"
+  ],
+  "sadly": [
+    "She spoke sadly about losing her childhood home.",
+    "她悲伤地谈起失去童年故居的事。",
+    "悲伤地（副词）"
+  ],
+  "ruler": [
+    "She used a ruler to measure the width of the page.",
+    "她用直尺测量纸张的宽度。",
+    "直尺（名词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+ }
+ for(const word of ['rapid','representative','resident'])assert.equal(byWord.get(word).pos,'a.');
+ for(const word of ['relax','render','resign','rot'])assert.equal(byWord.get(word).pos,'vt.');
+ assert.equal(byWord.get('rotate').pos,'vi.');
+ assert.equal(byWord.get('sadly').pos,'ad.');
 });
