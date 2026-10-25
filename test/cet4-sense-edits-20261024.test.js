@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,183);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","taste","terror","text","thrill","tire","treat","trial","tube","tune","twin"]);
+ assert.equal(edits.length,193);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","spare","still","suffer","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upset","utility"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -954,4 +954,73 @@ test('CET4 S/T editorial fixes preserve source identity, POS and bilingual targe
  assert.equal(byWord.get('tire').pos,'vi.');
  for(const word of ['score','terror','text','thrill','trial','tube','tune'])assert.equal(byWord.get(word).pos,'n.');
  assert.equal(byWord.get('twin').pos,'a.');
+});
+
+
+test('CET4 S/T/U candidate sense fixes preserve source binding and natural bilingual wording',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "spare": [
+    "She keeps a spare key in her bag.",
+    "她在包里放着一把备用钥匙。",
+    "备用的（形容词）"
+  ],
+  "still": [
+    "The water in the pond was perfectly still.",
+    "池塘里的水一动不动。",
+    "静止的（形容词）"
+  ],
+  "suffer": [
+    "The village suffered severe damage during the storm.",
+    "暴风雨期间，这个村庄遭受了严重损失。",
+    "遭受损失（及物动词）"
+  ],
+  "tough": [
+    "The tough climber continued despite the freezing wind.",
+    "这位坚韧的登山者顶着刺骨寒风继续前进。",
+    "坚韧的（形容词）"
+  ],
+  "tiny": [
+    "A tiny spider crawled across the window.",
+    "一只极小的蜘蛛爬过窗户。",
+    "极小的（形容词）"
+  ],
+  "tongue": [
+    "She burned her tongue on the hot soup.",
+    "她喝热汤时烫伤了舌头。",
+    "舌头（名词）"
+  ],
+  "uncover": [
+    "She uncovered the pot to check the soup.",
+    "她揭开锅盖查看汤煮得怎么样。",
+    "揭开盖子（及物动词）"
+  ],
+  "universal": [
+    "The desire for safety is universal.",
+    "对安全的渴望是普遍存在的。",
+    "普遍的（形容词）"
+  ],
+  "upset": [
+    "The dog upset a bowl of water on the floor.",
+    "狗打翻了地板上的一碗水。",
+    "打翻（及物动词）"
+  ],
+  "utility": [
+    "The utility of the new tool became clear during the repair.",
+    "维修过程中，这件新工具的实用价值显现了出来。",
+    "实用价值（名词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+ }
+ for(const word of ['spare','still','tough','tiny','universal'])assert.match(byWord.get(word).pos,/^(a\.|vt\.)/);
+ for(const word of ['suffer','uncover','upset'])assert.equal(byWord.get(word).pos,'vt.');
+ for(const word of ['tongue','utility'])assert.equal(byWord.get(word).pos,'n.');
 });
