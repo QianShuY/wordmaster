@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,168);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly"]);
+ assert.equal(edits.length,183);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","taste","terror","text","thrill","tire","treat","trial","tube","tune","twin"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -859,4 +859,99 @@ test('CET4 R/S editorial fixes keep exact source POS, single senses and bilingua
  for(const word of ['relax','render','resign','rot'])assert.equal(byWord.get(word).pos,'vt.');
  assert.equal(byWord.get('rotate').pos,'vi.');
  assert.equal(byWord.get('sadly').pos,'ad.');
+});
+
+
+test('CET4 S/T editorial fixes preserve source identity, POS and bilingual target senses',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "scare": [
+    "The sudden noise scared the children.",
+    "突然的响声吓到了孩子们。",
+    "惊吓（及物动词）"
+  ],
+  "score": [
+    "Her score on the quiz was the highest in the class.",
+    "她在这次小测中的成绩是全班最高的。",
+    "成绩（名词）"
+  ],
+  "search": [
+    "The rescue team searched the forest for the missing hikers.",
+    "救援队在森林里搜寻失踪的徒步者。",
+    "搜寻（及物动词）"
+  ],
+  "shave": [
+    "He shaved his beard before the interview.",
+    "他在面试前刮了胡子。",
+    "刮胡子（及物动词）"
+  ],
+  "shoot": [
+    "The archer shot an arrow at the target.",
+    "弓箭手朝靶子射出了一支箭。",
+    "发射（及物动词）"
+  ],
+  "taste": [
+    "She tasted the soup before adding salt.",
+    "她加盐前尝了尝汤。",
+    "尝（及物动词）"
+  ],
+  "terror": [
+    "The sudden explosion filled the crowd with terror.",
+    "突如其来的爆炸让人群陷入恐惧。",
+    "惊恐（名词）"
+  ],
+  "text": [
+    "The students read the text aloud in class.",
+    "学生们在课堂上大声朗读课文。",
+    "课文（名词）"
+  ],
+  "thrill": [
+    "A thrill ran through her when she heard the good news.",
+    "听到好消息时，她感到一阵激动。",
+    "一阵激动（名词）"
+  ],
+  "tire": [
+    "The hikers began to tire after several hours on the trail.",
+    "走了几个小时的山路后，徒步者们开始感到疲倦。",
+    "疲劳（不及物动词）"
+  ],
+  "trial": [
+    "The clinical trial involved 200 volunteers.",
+    "这项临床试验有200名志愿者参加。",
+    "试验（名词）"
+  ],
+  "treat": [
+    "The staff treated every visitor with respect.",
+    "工作人员以尊重的态度对待每位来访者。",
+    "对待（及物动词）"
+  ],
+  "tube": [
+    "The scientist poured the liquid into a glass tube.",
+    "科学家把液体倒进一根玻璃管。",
+    "管（名词）"
+  ],
+  "tune": [
+    "She hummed a familiar tune while cooking.",
+    "她做饭时哼着一支熟悉的曲子。",
+    "曲调（名词）"
+  ],
+  "twin": [
+    "Her twin brother studies at the same university.",
+    "她的孪生兄弟也在同一所大学读书。",
+    "孪生的（形容词）"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+ }
+ for(const word of ['scare','search','shave','shoot','taste','treat'])assert.equal(byWord.get(word).pos,'vt.');
+ assert.equal(byWord.get('tire').pos,'vi.');
+ for(const word of ['score','terror','text','thrill','trial','tube','tune'])assert.equal(byWord.get(word).pos,'n.');
+ assert.equal(byWord.get('twin').pos,'a.');
 });
