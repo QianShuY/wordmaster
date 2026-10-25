@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,263);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crack","crow","crust","dairy","dissolve","drain","drill","drum","each","echo","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","extra","faith","fast","fate","fear","feel","fellow","female","fish","form","fourth","free","front","further","gas","gauge","general","giant","glare","glass","glide","glitter","glow","gold","goodness","graduate","grasp","grave","green","groan","group","guard","guess","halt","hammer","hand","handle","harbour","hard","harm","harsh","harvest","have","head","hear","heat","help","herd","herself","high","hire","hit","home","honey","hook","hope","horizon","horn","hostess","hour","house","household","human","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","register","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shift","shoot","solid","spare","still","stress","strip","suffer","sustain","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
+ assert.equal(edits.length,271);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crack","crow","crust","dairy","dissolve","drain","drill","drum","each","echo","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","extra","faith","fast","fate","fear","feel","fellow","female","fish","fly","form","fourth","free","front","further","gas","gauge","general","giant","glare","glass","glide","glitter","glow","gold","goodness","graduate","grasp","grave","green","groan","group","grow","guard","guess","halt","hammer","hand","handle","harbour","hard","harm","harsh","harvest","hatch","have","head","hear","heat","help","herd","herself","high","himself","hire","his","hit","home","honey","hook","hope","horizon","horn","hostess","hot","hour","house","household","human","hurry","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","interior","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","register","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shift","shoot","solid","spare","still","stress","strip","suffer","sustain","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -1537,6 +1537,69 @@ test('CET4 repeated-lemma candidate repairs use one source-matched sense and ret
   assert.equal(originalCandidate.review_status,'unverified-candidate');
   assert.equal(originalCandidate.text,item.before_text);
   assert.equal(originalCandidate.translation,item.before_translation);
+  assert.deepEqual(reviewedExample(words.find(x=>x.word===word)),{text:item.text,translation:item.translation},word);
+ }
+});
+
+
+test('CET4 high-risk candidate sentences keep one source-locked POS and immutable originals',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+  "fly": [
+    "苍蝇（名词）",
+    "A fly landed on the window.",
+    "一只苍蝇落在了窗户上。"
+  ],
+  "grow": [
+    "生长（不及物动词）",
+    "The seedlings grew quickly in the greenhouse.",
+    "幼苗在温室里长得很快。"
+  ],
+  "hatch": [
+    "孵出（及物动词）",
+    "The farmer hatched the eggs in an incubator.",
+    "农夫用孵化器孵化了这些蛋。"
+  ],
+  "himself": [
+    "他亲自（反身代词）",
+    "He repaired the bicycle himself.",
+    "他亲自修好了自行车。"
+  ],
+  "his": [
+    "他的东西（代词）",
+    "The blue coat is his.",
+    "那件蓝色外套是他的。"
+  ],
+  "hot": [
+    "热的（形容词）",
+    "The metal handle was too hot to touch.",
+    "金属把手太烫，无法触摸。"
+  ],
+  "hurry": [
+    "赶紧（不及物动词）",
+    "We hurried to the station before the last train left.",
+    "我们赶在末班火车开走前匆忙赶到了车站。"
+  ],
+  "interior": [
+    "内部的（形容词）",
+    "The interior walls were painted white.",
+    "内墙被漆成了白色。"
+  ]
+};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.selected_sense,item.text,item.translation],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.notEqual(item.translation,item.before_translation,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.review_scope,'single-source-sense-only');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+  const candidate=packs.find(x=>x.word===word&&x.source_file==='cet4.txt');
+  assert.equal(candidate.review_status,'unverified-candidate');
+  assert.equal(candidate.text,item.before_text);
+  assert.equal(candidate.translation,item.before_translation);
   assert.deepEqual(reviewedExample(words.find(x=>x.word===word)),{text:item.text,translation:item.translation},word);
  }
 });
