@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,193);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","spare","still","suffer","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upset","utility"]);
+ assert.equal(edits.length,203);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","spare","still","suffer","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waste"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -1023,4 +1023,71 @@ test('CET4 S/T/U candidate sense fixes preserve source binding and natural bilin
  for(const word of ['spare','still','tough','tiny','universal'])assert.match(byWord.get(word).pos,/^(a\.|vt\.)/);
  for(const word of ['suffer','uncover','upset'])assert.equal(byWord.get(word).pos,'vt.');
  for(const word of ['tongue','utility'])assert.equal(byWord.get(word).pos,'n.');
+});
+
+test('CET4 U/V/W editorial fixes match source primary POS and preserve bilingual candidate provenance',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+   "upon": [
+     "A small bird landed upon the fence.",
+     "一只小鸟落在篱笆上。",
+     "在……上（介词）"
+   ],
+   "vacuum": [
+     "The scientists created a vacuum inside the chamber.",
+     "科学家们在密闭容器内制造了真空。",
+     "真空（名词）"
+   ],
+   "value": [
+     "The painting has great historical value.",
+     "这幅画具有很高的历史价值。",
+     "价值（名词）"
+   ],
+   "vary": [
+     "The chef varies the menu according to the season.",
+     "厨师根据季节调整菜单。",
+     "改变（及物动词）"
+   ],
+   "vehicle": [
+     "The electric vehicle can travel 300 kilometers on one charge.",
+     "这辆电动车充一次电可以行驶三百公里。",
+     "机动车辆（名词）"
+   ],
+   "version": [
+     "The witness gave a different version of the accident.",
+     "证人对这起事故给出了不同的说法。",
+     "说法（名词）"
+   ],
+   "veteran": [
+     "The veteran shared stories from his years in the army.",
+     "那位退伍军人讲述了自己在军队服役时的经历。",
+     "老兵（名词）"
+   ],
+   "virtually": [
+     "The town was virtually deserted after the evacuation.",
+     "疏散之后，这座小镇实际上已近乎空无一人。",
+     "实际上（副词）"
+   ],
+   "vital": [
+     "The nurse checked the patient's vital signs.",
+     "护士检查了病人的生命体征。",
+     "生命的（形容词，生命体征）"
+   ],
+   "waste": [
+     "The factory reduced its waste by recycling materials.",
+     "工厂通过回收材料减少了废弃物。",
+     "废物（名词）"
+   ]
+ };
+ const pos={"upon":"prep.","vacuum":"n.","value":"n.","vary":"vt.","vehicle":"n.","version":"n.","veteran":"n.","virtually":"ad.","vital":"a.","waste":"n."};
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
+  assert.equal(item.pos,pos[word],word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+ }
 });
