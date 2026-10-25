@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,233);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","class","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drive","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","form","free","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","register","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shift","shoot","solid","spare","still","stress","strip","suffer","sustain","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
+ assert.equal(edits.length,231);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","form","free","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","register","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shift","shoot","solid","spare","still","stress","strip","suffer","sustain","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -1246,25 +1246,10 @@ test('CET4 W/Y/Z second pass keeps literal source senses and idiomatic bilingual
 });
 
 
-test('CET4 high-risk cross-sense pass aligns ten words with literal source POS and translations',()=>{
+
+test('CET4 cross-sense pass aligns eight new words and preserves pre-existing reviewed class/drive corrections',()=>{
  const byWord=new Map(edits.map(x=>[x.word,x]));
  const expected={
-  "class": [
-    "Our class won the school debate competition.",
-    "我们班赢得了校内辩论赛。",
-    "班级（名词）",
-    "n.",
-    688,
-    "class [klɑːs] n.班，班级；阶级"
-  ],
-  "drive": [
-    "She drove the delivery van along a quiet road.",
-    "她驾驶送货车沿着一条安静的道路行驶。",
-    "驾驶车辆（及物动词）",
-    "vt.",
-    1187,
-    "drive [draiv] vt.驾驶；打入；驱"
-  ],
   "free": [
     "I am free to help you this afternoon.",
     "我今天下午有空帮你。",
@@ -1336,8 +1321,13 @@ test('CET4 high-risk cross-sense pass aligns ten words with literal source POS a
   assert.deepEqual([item.text,item.translation,item.selected_sense,item.pos,item.source_line,item.source_raw],values,word);
   assert.notEqual(item.text,item.before_text,word);
   assert.notEqual(item.translation,item.before_translation,word);
+  assert.deepEqual(reviewedExample(words.find(x=>x.word===word)),{text:item.text,translation:item.translation},word);
   assert.equal(item.review_status,'editorial-source-sense-checked');
   assert.equal(item.external_human_review,false);
   assert.equal(item.full_dictionary_senses_reviewed,false);
  }
+ assert.equal(byWord.has('class'),false);
+ assert.equal(byWord.has('drive'),false);
+ assert.deepEqual(reviewedExample(words.find(x=>x.word==='class')),{text:'Our English class starts at nine tomorrow.',translation:'我们明天的英语课九点开始。'});
+ assert.deepEqual(reviewedExample(words.find(x=>x.word==='drive')),{text:'She learned to drive on the quiet roads near her home.',translation:'她在家附近安静的道路上学会了开车。'});
 });
