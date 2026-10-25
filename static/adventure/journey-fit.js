@@ -1,6 +1,6 @@
 'use strict';
 (()=>{
- const map=document.querySelector('.world-map'),plane=document.querySelector('.world-plane');
+ const map=document.querySelector('.world-map'),plane=document.querySelector('.world-plane'),workspace=document.querySelector('.atlas-workspace');
  if(!map||!plane)return;
  let frame=0,last='';
  function fit(){
@@ -9,13 +9,14 @@
   const [width,height=1]=getComputedStyle(plane).aspectRatio.split('/').map(Number);
   const ratio=width>0&&height>0?width/height:1.5;
   const documentTop=map.getBoundingClientRect().top+window.scrollY;
-  const available=Math.max(160,(window.visualViewport?.height||innerHeight)-documentTop-28);
+  const available=Math.max(120,workspace?workspace.clientHeight-10:(window.visualViewport?.height||innerHeight)-documentTop-28);
   const next=Math.floor(available*ratio)+'px';
   if(next!==last){map.style.setProperty('--map-fit-width',next);last=next;}
  }
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(fit);};
  const observer=new ResizeObserver(schedule);
- for(const element of document.querySelectorAll('.folio-header,.campaign-heading,.travel-toolbar,.journey-score,#previewControls'))observer.observe(element);
+ for(const element of document.querySelectorAll('.atlas-workspace,.atlas-toolbar,.folio-header,.campaign-heading,#previewControls'))observer.observe(element);
+ document.addEventListener('moci-map-layout-change',schedule);
  window.addEventListener('resize',schedule);window.visualViewport?.addEventListener('resize',schedule);
  window.addEventListener('pageshow',schedule);
  window.addEventListener('pagehide',()=>{if(frame)cancelAnimationFrame(frame);frame=0;});
