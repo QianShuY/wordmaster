@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,203);
- assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","spare","still","suffer","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waste"]);
+ assert.equal(edits.length,216);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["Mister","accordingly","approximate","arrival","atom","atomic","bloom","boast","bow","brass","brown","bulb","color","comparative","conquest","convenience","crust","dairy","dissolve","drain","drill","drum","effective","either","elementary","end","endure","engage","entry","establishment","everything","evolve","excess","excursion","exercise","faith","fast","fate","fear","feel","fellow","female","gas","gauge","general","giant","glare","glass","glide","glitter","goodness","graduate","grasp","grave","halt","hammer","hand","handle","harbour","hard","harsh","hear","heat","herd","hire","honey","hook","horizon","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","pen","perform","physical","piano","potential","powerful","practise","pretty","psychological","publication","punishment","pursue","pursuit","quicken","quote","rapid","reading","receiver","refusal","relax","reliance","render","representative","resident","resign","resume","reward","rot","rotate","ruler","sadly","scare","score","search","shave","shoot","spare","still","suffer","taste","terror","text","thrill","tiny","tire","tongue","tough","treat","trial","tube","tune","twin","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","veteran","virtually","vital","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","work","worry","worthless","wreck"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -1086,6 +1086,101 @@ test('CET4 U/V/W editorial fixes match source primary POS and preserve bilingual
   assert.deepEqual([item.text,item.translation,item.selected_sense],values,word);
   assert.equal(item.pos,pos[word],word);
   assert.notEqual(item.text,item.before_text,word);
+  assert.equal(item.review_status,'editorial-source-sense-checked');
+  assert.equal(item.external_human_review,false);
+  assert.equal(item.full_dictionary_senses_reviewed,false);
+ }
+});
+
+
+test('CET4 W/X/Y/Z editorial corrections retain source-locked primary senses and bilingual meaning',()=>{
+ const byWord=new Map(edits.map(x=>[x.word,x]));
+ const expected={
+   "waken": [
+     "She wakened to the sound of birds singing.",
+     "她在鸟儿的歌声中醒来。",
+     "醒来（不及物动词）",
+     "vi."
+   ],
+   "weaken": [
+     "The long drought weakened the trees.",
+     "长期干旱使树木变得衰弱。",
+     "削弱（及物动词）",
+     "vt."
+   ],
+   "water": [
+     "The water in the glass was still cold.",
+     "杯子里的水仍然很凉。",
+     "水（名词）",
+     "n."
+   ],
+   "whirl": [
+     "The wind whirled the dry leaves across the yard.",
+     "风把枯叶吹得在院子里打转。",
+     "使回旋（及物动词）",
+     "vt."
+   ],
+   "win": [
+     "Our team won despite the heavy rain.",
+     "尽管下着大雨，我们队还是赢了。",
+     "获胜（不及物动词）",
+     "vi."
+   ],
+   "winter": [
+     "The lake freezes over every winter.",
+     "每年冬天湖面都会结冰。",
+     "冬天（名词）",
+     "n."
+   ],
+   "work": [
+     "Her work requires careful attention to detail.",
+     "她的工作需要十分注重细节。",
+     "工作（名词）",
+     "n."
+   ],
+   "worry": [
+     "The sudden silence worried the parents.",
+     "突然的寂静让父母感到担忧。",
+     "使烦恼（及物动词）",
+     "vt."
+   ],
+   "wreck": [
+     "Divers explored the wreck of the old ship.",
+     "潜水员探查了那艘旧船的残骸。",
+     "残骸（名词）",
+     "n."
+   ],
+   "westward": [
+     "The westward route crosses the mountains.",
+     "向西的路线穿过群山。",
+     "向西的（形容词）",
+     "a."
+   ],
+   "worthless": [
+     "The expired tickets were worthless at the gate.",
+     "这些过期门票在入口处已经毫无用处。",
+     "无价值的、无用的（形容词）",
+     "a."
+   ],
+   "welfare": [
+     "The new policy aims to improve children's welfare.",
+     "新政策旨在改善儿童的福祉。",
+     "幸福、福利（名词）",
+     "n."
+   ],
+   "way": [
+     "Can you show me the way to the station?",
+     "你能告诉我去车站的路吗？",
+     "路、路线（名词）",
+     "n."
+   ]
+ };
+ for(const [word,values] of Object.entries(expected)){
+  const item=byWord.get(word);
+  assert.ok(item,word);
+  assert.deepEqual([item.text,item.translation,item.selected_sense,item.pos],values,word);
+  assert.notEqual(item.text,item.before_text,word);
+  assert.notEqual(item.translation,item.before_translation,word);
   assert.equal(item.review_status,'editorial-source-sense-checked');
   assert.equal(item.external_human_review,false);
   assert.equal(item.full_dictionary_senses_reviewed,false);
