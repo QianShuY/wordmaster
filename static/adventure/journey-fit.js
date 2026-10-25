@@ -5,17 +5,17 @@
  let frame=0,last='';
  function fit(){
   frame=0;
-  if(innerWidth<=760){map.style.removeProperty('--map-fit-width');for(const key of ['--atlas-content-width','--atlas-map-height'])main?.style.removeProperty(key);last='';return;}
+  if(innerWidth<=760){map.style.removeProperty('--map-fit-width');for(const key of ['--atlas-content-width','--atlas-map-height']){main?.style.removeProperty(key);document.body.style.removeProperty(key);}last='';return;}
   const [width,height=1]=getComputedStyle(plane).aspectRatio.split('/').map(Number);
   const ratio=width>0&&height>0?width/height:1.5;
   const style=getComputedStyle(main),row=document.querySelector('.atlas-topline'),footer=document.querySelector('.atlas-bottom'),preview=document.getElementById('previewControls');
   const previewHeight=preview&&!preview.hidden?preview.getBoundingClientRect().height:0;
   const availableHeight=Math.max(120,main.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)-row.getBoundingClientRect().height-footer.getBoundingClientRect().height-previewHeight-parseFloat(style.rowGap)*(previewHeight?3:2));
-  const sidebar=document.querySelector('.atlas-sidebar'),asideWidth=sidebar.getBoundingClientRect().width,gap=parseFloat(getComputedStyle(workspace).columnGap);
-  const availableWidth=main.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-asideWidth-gap;
+  const sidebar=document.querySelector('.atlas-sidebar'),asideWidth=sidebar.getBoundingClientRect().width,railWidth=document.querySelector('.atlas-quick-actions').getBoundingClientRect().width,gap=parseFloat(getComputedStyle(workspace).columnGap);
+  const availableWidth=main.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-asideWidth-railWidth-gap*2;
   const mapWidth=Math.max(120,Math.floor(Math.min(availableHeight*ratio,availableWidth))),mapHeight=mapWidth/ratio;
-  const next=mapWidth+':'+asideWidth+':'+gap;
-  if(next!==last){map.style.setProperty('--map-fit-width',mapWidth+'px');main.style.setProperty('--atlas-content-width',(mapWidth+asideWidth+gap)+'px');main.style.setProperty('--atlas-map-height',mapHeight+'px');last=next;}
+  const next=mapWidth+':'+asideWidth+':'+railWidth+':'+gap;
+  if(next!==last){map.style.setProperty('--map-fit-width',mapWidth+'px');const contentWidth=mapWidth+asideWidth+railWidth+gap*2;for(const element of [main,document.body]){element.style.setProperty('--atlas-content-width',contentWidth+'px');element.style.setProperty('--atlas-map-height',mapHeight+'px');}last=next;}
  }
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(fit);};
  const observer=new ResizeObserver(schedule);

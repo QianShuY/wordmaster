@@ -18,7 +18,7 @@
   }
   frame=requestAnimationFrame(step);
  }
- function paint(){button.setAttribute('aria-pressed',String(enabled));button.textContent=enabled?'♫ 旅途配乐 · 暂停':'♫ 旅途配乐 · 播放';}
+ function paint(){button.setAttribute('aria-pressed',String(enabled));window.MociAtlasUI.actionLabel(button,enabled?'旅途配乐 · 暂停':'旅途配乐 · 播放');}
  button.addEventListener('click',async()=>{
   const id=++request;
   if(enabled){enabled=false;paint();fade(0);return;}
@@ -27,7 +27,7 @@
    await track.play();
    if(id!==request)return;
    enabled=true;paint();fade(target());
-  }catch{enabled=false;paint();button.textContent='配乐未能播放 · 点击重试';}
+  }catch{enabled=false;paint();window.MociAtlasUI.actionLabel(button,'配乐未能播放 · 点击重试');}
   finally{button.disabled=false;}
  });
  volume.addEventListener('input',()=>{output.textContent=volume.value+'%';if(enabled)fade(target());});
