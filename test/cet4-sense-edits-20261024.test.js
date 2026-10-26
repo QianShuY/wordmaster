@@ -7,8 +7,8 @@ const audit=require('../docs/model-quality-patches/cet4-source-phonetic-audit-20
 const packs=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const words=V.buildBook(V.CATALOG.find(x=>x.file==='cet4.txt')).words;
 test('CET4 editorial sense edits are source locked and leave model-worker candidates untouched',()=>{
- assert.equal(edits.length,383);
- assert.deepEqual(edits.map(x=>x.word).sort(),["French","German","Greek","Mister","Russian","accordingly","approximate","arrival","atom","atomic","balance","bargain","bark","beloved","besides","bike","blast","blaze","bloom","blossom","boast","bolt","bow","brake","brass","breed","bronze","brood","brown","bubble","bulb","cathedral","cement","centre","coil","color","comparative","compel","competent","conquest","consent","convenience","crack","cripple","crow","crust","dairy","damage","darling","dash","deal","debate","derive","descend","despair","dial","dialog","discharge","dissolve","divorce","do","dot","downward","drain","dread","drill","drum","dye","each","echo","effective","either","elementary","end","endure","engage","entry","escape","establishment","everything","evolve","excess","excursion","exercise","explosive","extra","faith","fall","fast","fate","fear","feel","fellow","female","field","file","fish","fit","flare","flash","fly","follow","fool","form","fourth","free","front","further","garage","garbage","gas","gasp","gate","gauge","general","giant","give","glare","glass","glide","glitter","glory","glow","gold","goodness","grade","graduate","grasp","grave","green","groan","group","grow","guard","guess","guide","halt","hammer","hand","handle","harbour","hard","harden","hardware","harm","harness","harsh","harvest","hasten","hatch","have","head","hear","heat","help","her","herd","heroic","herself","hide","high","himself","hire","his","hit","hold","home","honey","hook","hope","horizon","horn","hostess","hot","hour","house","household","housewife","how","human","hurry","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","interior","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marry","marvelous","mate","maximum","mechanically","medium","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","peculiar","pen","perform","physical","piano","plain","potential","pour","powerful","practise","president","pretty","privilege","prospect","psychological","publication","punishment","pursue","pursuit","quicken","quote","range","rapid","reading","receiver","refer","refusal","register","relax","release","reliance","render","representative","resident","resign","resistant","restraint","resume","reverse","reward","rot","rotate","ruler","sadly","satisfaction","scare","score","search","separate","service","setting","shady","shave","shift","shoot","shriek","singular","skim","slow","smile","solid","south","spare","split","sprinkle","still","stress","strike","strip","stuff","submerge","succeed","suck","suffer","surprise","sustain","tailor","taste","terror","text","thirst","thrill","tiny","tire","tongue","tough","treat","trial","trifle","troublesome","trust","tube","tune","twin","ugly","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","very","veteran","virtually","vital","vote","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
+ assert.equal(edits.length,388);
+ assert.deepEqual(edits.map(x=>x.word).sort(),["French","German","Greek","Mister","Roman","Russian","accordingly","approximate","arrival","atom","atomic","balance","bargain","bark","beloved","besides","bike","blast","blaze","bloom","blossom","boast","bolt","bow","brake","brass","breed","bronze","brood","brown","bubble","bulb","carrier","cathedral","cement","centre","coil","color","comparative","compel","competent","conquest","consent","convenience","crack","cripple","crow","crust","dairy","damage","darling","dash","deal","debate","derive","descend","despair","dial","dialog","discharge","dissolve","divorce","do","dot","downward","drain","dread","drill","drum","dye","each","echo","effective","either","elementary","end","endure","engage","entry","escape","establishment","everything","evolve","excess","excursion","exercise","explosive","extra","faith","fall","fast","fate","fear","feel","fellow","female","field","file","fish","fit","flare","flash","fly","follow","fool","form","fourth","free","front","further","garage","garbage","gas","gasp","gate","gauge","general","giant","give","glare","glass","glide","glitter","glory","glow","gold","goodness","governor","grade","graduate","grasp","grave","green","groan","group","grow","guard","guess","guide","halt","hammer","hand","handle","harbour","hard","harden","hardware","harm","harness","harsh","harvest","hasten","hatch","have","head","hear","heat","help","her","herd","heroic","herself","hide","high","himself","hire","his","hit","hold","home","honey","hook","hope","horizon","horn","hostess","hot","hour","house","household","housewife","how","human","hurry","ice","image","imaginary","imagination","implication","import","in","incline","increase","influence","instant","institution","insult","intellectual","intelligent","interest","interior","inward","issue","junior","keep","kilometer","lazy","librarian","license","lighten","likewise","limb","link","liter","lively","loosen","lower","lumber","lump","magic","mail","maintain","maintenance","manly","manner","march","marine","marriage","marry","marvelous","mate","maximum","mechanically","medium","meeting","melt","merchant","mercury","molecule","mount","mutter","naturally","neat","necessity","noble","nod","none","operate","oral","orderly","organic","organize","pacific","pack","pant","pardon","peculiar","pen","perform","physical","piano","plain","potential","pour","powerful","practise","president","pretty","privilege","prospect","psychological","publication","punishment","pursue","pursuit","quicken","quote","range","rapid","reading","receiver","refer","refusal","register","relax","release","reliance","render","representative","resident","resign","resistant","restraint","resume","reverse","reward","rider","rot","rotate","ruler","sadly","satisfaction","scare","score","search","separate","service","setting","shady","shave","shift","shoot","shriek","singular","skim","slow","smile","solid","south","spare","split","sprinkle","still","stress","strike","strip","stuff","submerge","succeed","suck","suffer","surprise","sustain","tailor","taste","terror","text","thirst","thrill","tiny","tire","tongue","tough","treat","trial","trifle","troublesome","trust","tube","tune","twin","ugly","uncover","universal","upon","upset","utility","vacuum","value","vary","vehicle","version","very","veteran","virtually","vital","vote","waken","waste","water","way","weaken","welfare","westward","whirl","win","winter","withdraw","within","wood","wool","work","worry","worth","worthless","wreck","yes","zealous"]);
  for(const item of edits){
   assert.equal(item.source_file,'cet4.txt');
   assert.equal(item.review_status,'editorial-source-sense-checked');
@@ -2539,6 +2539,53 @@ test('CET4 batch twelve repairs source POS, semantic scope and publisher colloca
     "买卖（名词）",
     "The used bike was a good deal at fifty dollars.",
     "那辆二手自行车只卖五十美元，是笔划算的买卖。"
+  ]
+};
+ for(const [word,[sense,en,zh]] of Object.entries(expected)){
+  const entry=edits.find(x=>x.word===word);
+  const source=words.find(x=>x.word===word&&x.source_file==='cet4.txt');
+  const draft=packs.find(x=>x.word===word&&x.source_file==='cet4.txt');
+  assert.ok(entry&&source&&draft,word);
+  for(const field of ['source_file','source_line','source_raw','word','headword','homograph','pos','meaning'])assert.deepEqual(entry[field],source[field],word+' '+field);
+  assert.deepEqual([entry.selected_sense,entry.text,entry.translation],[sense,en,zh],word);
+  assert.deepEqual([entry.before_text,entry.before_translation],[draft.text,draft.translation],word);
+  assert.equal(draft.review_status,'unverified-candidate',word);
+  assert.equal(entry.review_status,'editorial-source-sense-checked',word);
+  assert.equal(entry.review_scope,'single-source-sense-only',word);
+  assert.equal(entry.external_human_review,false,word);
+  assert.equal(entry.full_dictionary_senses_reviewed,false,word);
+  assert.deepEqual(reviewedExample(source),{text:en,translation:zh},word);
+  assert.equal(reviewedExample({...source,source_raw:'changed source'}),null,word+' source lock');
+ }
+});
+
+
+test('CET4 batch thirteen repairs transport, government, meeting and Roman senses without altering original candidates',()=>{
+ const expected={
+  "carrier": [
+    "运载工具（名词，货运船）",
+    "The cargo carrier sailed into the harbour at dawn.",
+    "黎明时，那艘货运船驶入了港口。"
+  ],
+  "governor": [
+    "州长（名词）",
+    "The state governor announced a new transport plan.",
+    "州长宣布了一项新的交通规划。"
+  ],
+  "meeting": [
+    "会见，会面（名词）",
+    "Their first meeting took place at the railway station.",
+    "他们第一次见面是在火车站。"
+  ],
+  "Roman": [
+    "古罗马人（名词复数）",
+    "The Romans built roads throughout the empire.",
+    "古罗马人在帝国各地修建道路。"
+  ],
+  "rider": [
+    "骑马的人（名词）",
+    "The rider put on a helmet before mounting the horse.",
+    "骑手上马前戴上了头盔。"
   ]
 };
  for(const [word,[sense,en,zh]] of Object.entries(expected)){
