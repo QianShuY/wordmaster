@@ -10,15 +10,13 @@
   const ratio=width>0&&height>0?width/height:1.5;
   const style=getComputedStyle(main),row=document.querySelector('.atlas-topline'),footer=document.querySelector('.atlas-bottom'),preview=document.getElementById('previewControls');
   const previewHeight=preview&&!preview.hidden?preview.getBoundingClientRect().height:0;
-  const study=document.querySelector('.atlas-study-tile'),encounter=document.getElementById('stageEncounter'),workspaceGap=parseFloat(getComputedStyle(workspace).rowGap);
-  const encounterHeight=getComputedStyle(encounter).position==='absolute'?0:encounter.getBoundingClientRect().height;
-  const bottomHeight=Math.max(study.getBoundingClientRect().height,encounterHeight);
-  const availableHeight=Math.max(120,main.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)-row.getBoundingClientRect().height-footer.getBoundingClientRect().height-previewHeight-parseFloat(style.rowGap)*(previewHeight?3:2)-bottomHeight-workspaceGap);
+  // The study controls belong to the side column, not the map's height budget.
+  const availableHeight=Math.max(120,main.clientHeight-parseFloat(style.paddingTop)-parseFloat(style.paddingBottom)-row.getBoundingClientRect().height-footer.getBoundingClientRect().height-previewHeight-parseFloat(style.rowGap)*(previewHeight?3:2));
   const sidebar=document.querySelector('.atlas-sidebar'),asideWidth=sidebar.getBoundingClientRect().width,railWidth=document.querySelector('.atlas-quick-actions').getBoundingClientRect().width,gap=parseFloat(getComputedStyle(workspace).columnGap);
   const availableWidth=main.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-asideWidth-railWidth-gap*2;
   const mapWidth=Math.max(120,Math.floor(Math.min(availableHeight*ratio,availableWidth))),mapHeight=mapWidth/ratio;
-  const next=mapWidth+':'+asideWidth+':'+railWidth+':'+gap+':'+bottomHeight;
-  if(next!==last){map.style.setProperty('--map-fit-width',mapWidth+'px');const contentWidth=mapWidth+asideWidth+railWidth+gap*2;for(const element of [main,document.body]){element.style.setProperty('--atlas-content-width',contentWidth+'px');element.style.setProperty('--atlas-map-height',mapHeight+'px');element.style.setProperty('--atlas-workspace-height',(mapHeight+workspaceGap+bottomHeight)+'px');}last=next;}
+  const next=mapWidth+':'+asideWidth+':'+railWidth+':'+gap;
+  if(next!==last){map.style.setProperty('--map-fit-width',mapWidth+'px');const contentWidth=mapWidth+asideWidth+railWidth+gap*2;for(const element of [main,document.body]){element.style.setProperty('--atlas-content-width',contentWidth+'px');element.style.setProperty('--atlas-map-height',mapHeight+'px');element.style.setProperty('--atlas-workspace-height',mapHeight+'px');}last=next;}
  }
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(fit);};
  const observer=new ResizeObserver(schedule);
