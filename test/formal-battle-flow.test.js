@@ -1,0 +1,48 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),{once}=require('node:events');
+const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-formal-flow-'));process.env.WORDMASTER_DB_PATH=path.join(dir,'isolated.db');
+const {app,db}=require('../app/main'),{seedFormalBattle,play}=require('./fixtures/formal-battle');
+
+test('real HTTP formal flow freezes a broad source roster, resumes, survives storm failure and grants one immutable ending',async t=>{
+ const server=app.listen(0,'127.0.0.1');await once(server,'listening');
+ t.after(async()=>{server.close();await once(server,'close');db.close();fs.rmSync(dir,{recursive:true,force:true});});
+ const base=`http://127.0.0.1:${server.address().port}`;
+ const get=async p=>{const response=await fetch(base+p);assert.equal(response.status,200);return response.json();};
+ const post=async(p,body)=>{const response=await fetch(base+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});return {status:response.status,data:await response.json()};};
+ assert.equal((await post('/api/adventure/boss/sessions')).status,409);
+ seedFormalBattle(db);assert.equal((await get('/api/adventure/campaign')).bossAvailable,true);
+ const roster=await get('/api/adventure/pool');assert.equal(roster.available,180);
+ assert.ok(roster.words.some(w=>w.id<30));assert.ok(roster.words.some(w=>w.id>=181));
+ for(let id=61;id<=120;id++)assert.ok(roster.words.some(w=>w.id===id));
+ const created=await post('/api/adventure/boss/sessions');assert.equal(created.status,201);
+ const session=created.data;assert.equal(session.pool.length,180);assert.equal(session.initial.version,3);
+ assert.deepEqual((await get('/api/adventure/boss/sessions/'+session.id)).pool,session.pool);
+ const preserved=()=>JSON.stringify(['progress','review_log','user_cards','recall_cycles','adventure_days'].map(table=>db.prepare('SELECT * FROM '+table+' ORDER BY rowid').all()));
+ const before=preserved(),fight=play(session,{failFirstStorm:true});
+ assert.ok(fight.metrics.distinct>=40);assert.ok(fight.metrics.spelling>fight.metrics.meaning);
+ assert.deepEqual(fight.metrics.tiers,[6,8]);assert.equal(fight.metrics.partialRestored,true);assert.equal(fight.metrics.domainRestored,true);assert.equal(fight.metrics.timedOut,true);
+ // The learned roster can change after the server freezes a fight. Only new fights are gated.
+ db.exec('UPDATE words SET source_file=NULL');assert.equal((await get('/api/adventure/pool')).available,0);
+ assert.equal((await post('/api/adventure/boss/sessions')).status,409);
+ assert.equal((await get('/api/adventure/boss/sessions/'+session.id)).pool.length,180);
+ const finish='/api/adventure/boss/sessions/'+session.id+'/finish';
+ assert.equal((await post(finish,{events:fight.events.slice(0,4)})).status,409);
+ assert.equal((await get('/api/adventure/ending')).ending,null);
+ const results=await Promise.all([post(finish,{events:fight.events}),post(finish,{events:fight.events})]);
+ assert.ok(results.every(r=>r.status===200));assert.equal(results.filter(r=>r.data.duplicate).length,1);
+ const first=results.find(r=>!r.data.duplicate).data;assert.equal(first.firstClear,true);
+ assert.equal((await get('/api/adventure/campaign')).completed,14);
+ assert.equal((await get('/api/adventure/campaign')).chapterCleared,true);
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM adventure_endings').get().n,1);
+ assert.equal((await post(finish,{events:[...fight.events,{action:'next',args:[]}]})).status,409);
+ db.exec("UPDATE words SET source_file='cet6.txt'");
+ const repeat=(await post('/api/adventure/boss/sessions')).data,recovered=play(repeat,{revive:true});
+ assert.equal(recovered.metrics.revived,true);assert.ok(recovered.metrics.distinct>=40);
+ const second=await post('/api/adventure/boss/sessions/'+repeat.id+'/finish',{events:recovered.events});
+ assert.equal(second.status,200);assert.equal(second.data.firstClear,false);
+ for(let i=0;i<3;i++)assert.deepEqual((await get('/api/adventure/ending')).ending,first.ending);
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM adventure_endings').get().n,1);assert.equal(preserved(),before);
+ assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');assert.deepEqual(db.prepare('PRAGMA foreign_key_check').all(),[]);
+ t.diagnostic(JSON.stringify({sourceWords:240,frozenPool:180,stormFailure:fight.metrics,revivalFight:recovered.metrics}));
+});
