@@ -2383,9 +2383,10 @@ const Study = {
       && (this.todayFlow.stage === 'spelling' || (['review','review-spelling'].includes(this.todayFlow.stage) && !this.todayFlow.learn.length && (this.todayFlow.stage === 'review-spelling' || !Domain.spellingWords(this.todayFlow.review).length)))) {
       try {
         const travel = await api('/api/adventure/campaign/complete-day', { method:'POST', body:{book_id:this.bookId} });
+        if(travel.ok&&!travel.duplicate)window.MociCampaignArrival?.queue(travel.stage);
         if (this.runToken !== finishToken || $('#studyDone').classList.contains('hidden')) return;
         $('#adventureDayClear')?.remove();
-        if(travel.ok)$('#desktopDoneJourney').insertAdjacentHTML('beforeend', `<p id="adventureDayClear">今日旅程 · 第 ${travel.stage} 关已通过。<a href="/adventure/journey.html">展开旅行地图 →</a></p>`);
+        if(travel.ok)$('#desktopDoneJourney').insertAdjacentHTML('beforeend', `<p id="adventureDayClear">今日旅程 · 第 ${travel.stage} 关已通过。<a href="/adventure/journey.html">${travel.duplicate?'回到旅行地图':'看看今天抵达的地方'} →</a></p>`);
       } catch(error) { console.info('旅程校验未通过或暂未保存：',error.message); }
     }
     // 完成一轮学习后引导抽卡
