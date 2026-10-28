@@ -1,0 +1,123 @@
+{
+  "release": "D:\\工作区\\wordmaster\\output\\releases\\verify-20261028-final\\WordMaster-2026-10-28.1-preview",
+  "manifest_files": 854,
+  "actual_windows_exe_tested": true,
+  "headless_launcher_only": true,
+  "real_database_unchanged": true,
+  "results": [
+    {
+      "scenario": "fresh-install-and-double-launch",
+      "first": {
+        "words": 26268,
+        "progress": 0,
+        "schema": 13
+      },
+      "reused": true,
+      "concurrent_launch_reused": true,
+      "default_port_already_serving": false,
+      "selected_port": 3456,
+      "ready_ms": 2941.123,
+      "repeat_ready_ms": 114.47289999999975,
+      "pages": [
+        "/",
+        "/adventure/index.html",
+        "/adventure/journey.html",
+        "/adventure/camp.html",
+        "/adventure/battle.html",
+        "/adventure/ending.html"
+      ]
+    },
+    {
+      "scenario": "existing-database-upgrade-and-reopen",
+      "source_schema": 13,
+      "reconstructed_schema11_in_disposable_copy": false,
+      "all_existing_rows_unchanged": true,
+      "migration": {
+        "from_schema": 13,
+        "to_schema": 13,
+        "existing_tables_checked": 18,
+        "existing_rows_unchanged": true,
+        "new_tables_empty": []
+      },
+      "integrity": {
+        "integrity_check": "ok"
+      },
+      "foreign_keys": [],
+      "ready_ms": 689.2929999999997,
+      "reopen_ready_ms": 692.6869000000006
+    },
+    {
+      "scenario": "reviewed-content-upgrade-and-reopen",
+      "reverted_reviewed_rows_only": 7,
+      "production_database_untouched": true,
+      "contentMigration": {
+        "schema": 13,
+        "reviewed_word_ids": [
+          49545,
+          53290,
+          53336,
+          53444,
+          53567,
+          54541,
+          54566
+        ],
+        "reviewed_build_ids": [
+          2,
+          3
+        ],
+        "all_other_rows_unchanged": true,
+        "all_table_structures_unchanged": true
+      },
+      "counts": {
+        "examples": 7,
+        "meanings": 4,
+        "phonetics": 2,
+        "parts_of_speech": 6
+      },
+      "one_consistent_backup_and_receipt": true,
+      "reopen_no_changes": true,
+      "ready_ms": 1415.1034,
+      "reopen_ready_ms": 914.8320999999996
+    }
+  ],
+  "remaining": [
+    "Long-duration use and animation measurements",
+    "Gaokao replacement and full-book language review",
+    "Default-browser interactive desktop acceptance"
+  ],
+  "browser_visual_acceptance": {
+    "client_date": "2026-10-28",
+    "method": "CUA in-app browser connected to the actual EXE from the extracted ZIP",
+    "database": "isolated online backup copy",
+    "origin": "localhost isolated from the original 127.0.0.1 browser checkpoint storage",
+    "views": [
+      "Today",
+      "Books",
+      "Learning statistics",
+      "Cards",
+      "Today learning ten-word batch without submitting an answer",
+      "Journey map"
+    ],
+    "viewport": [
+      1280,
+      720
+    ],
+    "map_size": [
+      797,
+      531
+    ],
+    "page_height": 720,
+    "map_daily_goal": {
+      "review": 36,
+      "new_words": 10
+    },
+    "browser_console_errors": [],
+    "screenshot": "output/refinement/windows-map-preview-20261028.png"
+  },
+  "archive": {
+    "filename": "WordMaster-2026-10-28.1-preview.zip",
+    "bytes": 100974867,
+    "sha256": "8049f39eeb0a1f992aad657f6458cc0235f634dd3fc9ffcf9c43f471ad48a725",
+    "extracted_exe_checked": true
+  }
+}

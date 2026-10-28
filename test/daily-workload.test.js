@@ -18,6 +18,11 @@ test('78 due words become a stable 26-word daily goal, ten at a time; real recal
  const before=JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all());
  const preview=(await get('/api/books')).find(b=>b.id===1).workload;
  assert.equal(preview.review_target,26);assert.equal(preview.frozen,false);assert.equal(preview.new_target,10);assert.equal(db.prepare('SELECT COUNT(*) n FROM desktop_daily_workload').get().n,0);
+ const mapPreview=(await get('/api/adventure/campaign')).books.find(b=>b.id===1);
+ assert.equal(mapPreview.todayPlan.review,preview.review_remaining);assert.equal(mapPreview.todayPlan.newTarget,preview.new_target);assert.equal(mapPreview.todayPlan.frozen,false);assert.equal(mapPreview.ready,false);
+ assert.equal((await post('/api/adventure/campaign/complete-day',{book_id:1})).status,409);
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM desktop_daily_workload').get().n,0,'map preview and a rejected claim never freeze a daily plan');
+ assert.equal(JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all()),before);
  let payload=await get('/api/desktop/books/1/today');const manifest=payload.workload.review_ids;
  assert.equal(manifest.length,26);assert.ok(manifest.includes(1));assert.equal(payload.review.length,10);assert.equal(payload.review_has_more,true);assert.equal(payload.workload.deferred_total,52);
  assert.ok(manifest.every(id=>id<79));assert.equal(JSON.stringify(db.prepare('SELECT * FROM progress ORDER BY word_id').all()),before);

@@ -14,7 +14,9 @@ const {unfinishedWords}=require('./unfinished-learning');
 const WordMemory = require('./word-memory').createWordMemory(db);
 const VocabularyHistory = require('./vocabulary-history').create(db);
 const DailyWorkload = require('./daily-workload').createDailyWorkload(db);
-const Campaign = require('./campaign').createCampaign(db,planFor,(book,plan)=>DailyWorkload.saved(book.id)?DailyWorkload.get(book,plan):null);
+const Campaign = require('./campaign').createCampaign(db,planFor,
+  (book,plan)=>DailyWorkload.saved(book.id)?DailyWorkload.get(book,plan):null,
+  (book,plan)=>DailyWorkload.get(book,plan));
 const publicCardCopy = require('../static/cards/card-copy.json');
 const hiddenCardCopy = require('./seed/card-copy.hidden.json');
 function adventurePool(){

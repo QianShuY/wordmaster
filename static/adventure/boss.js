@@ -56,7 +56,7 @@
   document.addEventListener('keydown',event=>{if(event.key==='Escape'){manuallyPaused=true;syncPause();}});
   function syncReduced(){scene.classList.toggle('reduced-motion',reduced.matches);pauseButton.textContent=manuallyPaused?'继续动态':'暂停动态';}
   reduced.addEventListener('change',syncReduced);
-  const assets=[document.querySelector('.guardian'),...['mist-bridge-v1.png','warden-lantern-v1.png','warden-shield-v1.png','warden-storm-v1.png','shield-ink-impact-v1.png','torn-page.svg','lantern-brush.svg'].map(file=>{const image=new Image();image.src='assets/'+file;return image;})];
+  const assets=[document.querySelector('.guardian'),...['mist-bridge-v1.webp','warden-lantern-v1.webp','warden-shield-v1.webp','warden-storm-v1.webp','shield-ink-impact-v1.webp','torn-page.svg','lantern-brush.svg'].map(file=>{const image=new Image();image.src='assets/'+file;return image;})];
   assets.forEach(image=>{image.addEventListener('error',()=>{document.getElementById('assetError').hidden=false;});if(image.complete&&image.naturalWidth===0)document.getElementById('assetError').hidden=false;});
   render(false);syncReduced();syncPause();
 })();

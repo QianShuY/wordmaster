@@ -1,4 +1,4 @@
-﻿param([string]$Version = '2026-10-22.1-preview', [switch]$SkipZip)
+﻿param([string]$Version = '2026-10-28.1-preview', [switch]$SkipZip)
 $ErrorActionPreference = 'Stop'
 if ($Version -notmatch '^[a-zA-Z0-9][a-zA-Z0-9.-]{0,60}$') { throw 'Invalid release folder version' }
 $repoRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
@@ -15,6 +15,19 @@ foreach ($folder in @('app','shared','static','node_modules','runtime')) {
     Copy-Item -LiteralPath (Join-Path $repoRoot $folder) -Destination (Join-Path $staging $folder) -Recurse
 }
 foreach ($file in @('package.json','package-lock.json')) { Copy-Item -LiteralPath (Join-Path $repoRoot $file) -Destination $staging }
+# Source PNGs remain in the repository. Ship their display WebP instead,
+# only when no runtime HTML/CSS/JS still refers to the PNG filename.
+$runtimeText = (@(Get-ChildItem -LiteralPath (Join-Path $staging 'static'),(Join-Path $staging 'shared') -File -Recurse |
+    Where-Object { $_.Extension -in @('.html','.css','.js') } | ForEach-Object { [IO.File]::ReadAllText($_.FullName) }) -join "`n")
+$omittedSourceArt = @()
+$stagingPrefix = [IO.Path]::GetFullPath($staging).TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
+foreach ($png in @(Get-ChildItem -LiteralPath (Join-Path $staging 'static\adventure\assets') -Filter '*.png' -File)) {
+    if ((Test-Path -LiteralPath ([IO.Path]::ChangeExtension($png.FullName, '.webp'))) -and -not $runtimeText.Contains($png.Name)) {
+        if (-not $png.FullName.StartsWith($stagingPrefix, [StringComparison]::OrdinalIgnoreCase)) { throw 'Source artwork exclusion escaped staging' }
+        $omittedSourceArt += $png.FullName.Substring($stagingPrefix.Length).Replace('\','/')
+        Remove-Item -LiteralPath $png.FullName
+    }
+}
 $launcher = Join-Path $staging 'WordMaster.exe'
 & $compiler /nologo /target:winexe /platform:x64 /optimize+ /reference:System.Windows.Forms.dll /reference:System.Web.Extensions.dll "/out:$launcher" (Join-Path $repoRoot 'windows\WordMasterLauncher.cs')
 if ($LASTEXITCODE -ne 0) { throw 'Launcher compilation failed; staging retained for diagnostics' }
@@ -29,7 +42,8 @@ $notes = @'
 应用通过系统默认浏览器打开；关掉浏览器后本地服务仍运行，重新打开不会重复启动。
 迁移到新目录会改变本地端口/浏览器存储位置；学习数据在数据库中，浏览器未提交的题目与断点不保证迁移。
 
-本版包含六级 2272 个词条的双语例句、6 条词性冲突修订、复习任务均衡分配和每组最多 10 词的词义→拼写流程，以及旅行与咒语的 Boss 配乐、打击音效和结局演出。
+本版包含每日抵达行路与拾笺手账、完整地图、正式 Boss 多词施法与六词/八词残页领域、配乐及章节结局。修复词库变化后正式战斗的续战问题；插画保持原尺寸并减小文件体积，避免预载重复 PNG。
+学习沿用六级 2272 条双语例句、复习均衡分配、每组最多 10 词的词义→拼写流程与未完成巩固续接。未清空任何已有学习记录。
 这是预览包：高考词库尚未正式替换中考，其他词库的逐条语言审校、长时间体验验收仍在进行。六级例句覆盖完整不代表所有义项和音标均完成独立人工审校。
 不要删除原目录 data/。升级现有安装时保留 data/，不要覆盖学习数据库；关闭原服务后再更新程序文件。
 已有内置词库会在成功备份后增量应用核对过的修订；手动修改和历史词库保持原样。备份放在个人数据库所在目录的 backups/ 中。
@@ -40,7 +54,7 @@ $notes = @'
 $files = @(Get-ChildItem -LiteralPath $staging -File -Recurse | Sort-Object FullName | ForEach-Object {
     [ordered]@{ path=$_.FullName.Substring($staging.Length+1).Replace('\','/'); bytes=$_.Length; sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant() }
 })
-$manifest = [ordered]@{ format=1; version=$Version; candidate=$true; platform='windows-x64'; personal_data_included=$false; files=$files }
+$manifest = [ordered]@{ format=1; version=$Version; candidate=$true; platform='windows-x64'; personal_data_included=$false; omitted_source_art=$omittedSourceArt; files=$files }
 [IO.File]::WriteAllText((Join-Path $staging 'release-manifest.json'), ($manifest | ConvertTo-Json -Depth 6), [Text.UTF8Encoding]::new($false))
 $releasePrefix = [IO.Path]::GetFullPath($releaseRoot).TrimEnd([IO.Path]::DirectorySeparatorChar) + [IO.Path]::DirectorySeparatorChar
 $stagingAbs = [IO.Path]::GetFullPath($staging)

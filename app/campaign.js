@@ -1,6 +1,6 @@
 'use strict';
 const Domain=require('../shared/domain');
-function createCampaign(db,planFor,workloadFor=()=>null){
+function createCampaign(db,planFor,workloadFor=()=>null,previewWorkloadFor=()=>null){
  const day=()=>db.prepare("SELECT date('now','localtime') day").get().day;
  function eligibility(book){
   const today=day(),plan=planFor(book),workload=workloadFor(book,plan);
@@ -19,7 +19,10 @@ function createCampaign(db,planFor,workloadFor=()=>null){
   const selectedUnresolved=plannedIds?[...last.values()].filter(l=>(plannedIds.has(l.word_id)||fresh.some(w=>w.id===l.word_id))&&!good(l)).length:unresolved;
   const dueRemaining=workload?workload.review_remaining:due;
   const ready=selectedPending===0&&successes.length>0&&dueRemaining===0&&fresh.length>=quota&&pending===0&&selectedUnresolved===0;
-  return {id:book.id,name:book.name,ready,newDone:fresh.length,newTarget:quota,pending,due:dueRemaining,unresolved:selectedUnresolved,recallPending:selectedPending,deferred:workload?.deferred_total||0,reason:selectedPending?'本日这组词还需完成词义与拼写回忆':ready?'今日均衡计划已完成，可通过一关':!successes.length?'先完成今天的学习计划':pending?'新词还需完成选择与拼写巩固':dueRemaining?'还有今日复习待完成':selectedUnresolved?'还有待强化的词需要回忆':'今日新词安排尚未完成'};
+  // A projected count is presentation only. Preserve the saved-plan/legacy
+  // eligibility rules when claiming, including records from earlier versions.
+  const display=workload||previewWorkloadFor(book,plan);
+  return {id:book.id,name:book.name,ready,newDone:fresh.length,newTarget:quota,pending,due:dueRemaining,unresolved:selectedUnresolved,recallPending:selectedPending,deferred:workload?.deferred_total||0,...(display?{todayPlan:{review:display.review_remaining,newTarget:display.new_target,frozen:display.frozen}}:{}),reason:selectedPending?'本日这组词还需完成词义与拼写回忆':ready?'今日均衡计划已完成，可通过一关':!successes.length?'先完成今天的学习计划':pending?'新词还需完成选择与拼写巩固':dueRemaining?'还有今日复习待完成':selectedUnresolved?'还有待强化的词需要回忆':'今日新词安排尚未完成'};
  }
  function state(){const days=db.prepare('SELECT day,stage_no,book_id,book_name FROM adventure_days ORDER BY stage_no').all(),today=day();return {today,completed:days.length,current:Math.min(14,days.length+1),todayCleared:days.some(d=>d.day===today),bossAvailable:days.length>=13&&days.at(-1).day<today,days,books:db.prepare('SELECT * FROM wordbooks b WHERE NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id) ORDER BY is_builtin DESC,id').all().map(eligibility)};}
  function claim(bookId){
