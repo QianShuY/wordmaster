@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 
-const VERSION = '2026-10-28.2';
+const VERSION = '2026-10-28.3';
 const CATALOG = [
   { name: '中考核心词汇', file: 'zhongkao.txt', label: '中考词表' },
   { name: '四级核心词汇', file: 'cet4.txt', label: '四级词表' },
@@ -15,6 +15,7 @@ const CATALOG = [
 // Desktop learning publishes the independent Gaokao preview instead of Zhongkao.
 const GAOKAO = {name:'高考核心词汇',file:'gaokao-preview.json',label:'高考学习预览词表'};
 const DESKTOP_CATALOG = [GAOKAO,...CATALOG.slice(1)];
+const CONTENT_CATALOG = [...CATALOG,GAOKAO];
 const POS = '(?:vt|vi|adj|adv|prep|conj|pron|art|num|interj|int|aux|abbr|modal|n|v|a|ad)\\.';
 const LINE = new RegExp(`^(.+?)\\s+(?:\\[([^\\]]+)\\]\\s*(?:[（(]pl\\s+[^)）]+[)）]\\s*)?)?(${POS}(?:\\s*[/&]\\s*${POS})*)\\s*(.+)$`, 'i');
 
@@ -170,4 +171,4 @@ function parseImportLine(line) {
   return match ? { word: match[1].trim(), phonetic: '', pos: '', meaning: match[2].trim() } : null;
 }
 
-module.exports = { VERSION, CATALOG, DESKTOP_CATALOG, GAOKAO, parseSourceLine, buildBook, parseImportLine, splitFields };
+module.exports = { VERSION, CATALOG, DESKTOP_CATALOG, CONTENT_CATALOG, GAOKAO, parseSourceLine, buildBook, parseImportLine, splitFields };

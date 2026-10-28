@@ -9,7 +9,7 @@ const assert=(ok,message)=>{if(!ok)throw new Error(message);};
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function main(){
  if(process.platform!=='win32')throw new Error('This acceptance requires Windows and the actual EXE');
- const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-10-28.2-preview'));
+ const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-10-28.3-preview'));
  const manifest=JSON.parse(fs.readFileSync(path.join(release,'release-manifest.json'),'utf8'));
  for(const f of manifest.files){
   assert(!/\.(db|sqlite|sqlite3)(-|$)/i.test(f.path),'Database in manifest');

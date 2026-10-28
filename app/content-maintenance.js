@@ -22,7 +22,7 @@ function improve(db, { apply = false, verify, bookIds } = {}) {
   db.exec(apply ? 'BEGIN IMMEDIATE' : 'BEGIN');
   try {
     const before = protectedDigest(db);
-    for (const spec of V.CATALOG) {
+    for (const spec of V.CONTENT_CATALOG) {
       const built = V.buildBook(spec);
       const book = db.prepare('SELECT b.id,v.source_sha256 FROM wordbooks b LEFT JOIN vocabulary_builds v ON v.book_id=b.id WHERE b.is_builtin=1 AND b.name=?').get(spec.name);
       if (!book) { results.push({ book: spec.name, skipped: 'not-installed' }); continue; }
