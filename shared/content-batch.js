@@ -12,6 +12,11 @@ const commonI = require('../app/seed/examples-common-i-reviewed-20261015.json');
 const numbered = require('../app/seed/examples-numbered-reviewed-20261015.json');
 const webReviewed = require('../app/seed/examples-cet6-reviewed-20261021.json');
 const cet6Complete = require('../app/seed/examples-cet6-complete-reviewed-20261021.json');
+// Source-bound coverage-first candidate pairs for CET4, graduate exam, and TEM.
+// Previously reviewed seed bindings always win; these are still unverified candidates.
+const npeeProvisional=Array.from({length:6},(_,i)=>require('../app/seed/examples-npee-coverage-part-'+String(i+1).padStart(2,'0')+'.json').examples).flat();
+const temProvisional=Array.from({length:10},(_,i)=>require('../app/seed/examples-tem-coverage-part-'+String(i+1).padStart(2,'0')+'.json').examples).flat();
+const pendingBindings=new Map([...npeeProvisional,...temProvisional].map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
 // Source-locked CET-4 coverage candidates; existing checked bindings take precedence.
 const cet4Provisional=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const provisionalBindings=new Map(cet4Provisional.map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
@@ -24,7 +29,7 @@ function reviewedExample(word) {
   const lexical=require('./lexical-corrections').lexicalExample(word);if(lexical)return lexical;
   const corrected=require('./content-corrections').correctedExample(word);if(corrected)return corrected;
   const key=word.source_file+String.fromCharCode(0)+word.word;
-  for(const item of [bindings.get(key),senseEditBindings.get(key),provisionalBindings.get(key)]){
+  for(const item of [bindings.get(key),senseEditBindings.get(key),provisionalBindings.get(key),pendingBindings.get(key)]){
     if(item && matchesSenseIdentity(item,word)
       && (item.source_line===undefined||item.source_line===word.source_line)
       && item.pos===word.pos && item.meaning===word.meaning && item.source_raw===word.source_raw
