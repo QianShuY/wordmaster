@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 
-const VERSION = '2026-10-28.1';
+const VERSION = '2026-10-28.2';
 const CATALOG = [
   { name: '中考核心词汇', file: 'zhongkao.txt', label: '中考词表' },
   { name: '四级核心词汇', file: 'cet4.txt', label: '四级词表' },

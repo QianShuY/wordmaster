@@ -17,6 +17,10 @@ const cet6Complete = require('../app/seed/examples-cet6-complete-reviewed-202610
 const npeeProvisional=Array.from({length:6},(_,i)=>require('../app/seed/examples-npee-coverage-part-'+String(i+1).padStart(2,'0')+'.json').examples).flat();
 const temProvisional=Array.from({length:10},(_,i)=>require('../app/seed/examples-tem-coverage-part-'+String(i+1).padStart(2,'0')+'.json').examples).flat();
 const pendingBindings=new Map([...npeeProvisional,...temProvisional].map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
+// Standalone Zhongkao source identities; neither Gaokao PDFs nor another book
+// can overwrite a distinct source line, sense or existing reviewed example.
+const zhongkaoCoverage=[1,2,3,4].flatMap(n=>require('../app/seed/examples-zhongkao-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
+const zhongkaoBindings=new Map(zhongkaoCoverage.map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
 // Source-locked CET-4 coverage candidates; existing checked bindings take precedence.
 const cet4Provisional=[1,2,3,4,5].flatMap(n=>require('../app/seed/examples-cet4-coverage-part-'+String(n).padStart(2,'0')+'.json').examples);
 const provisionalBindings=new Map(cet4Provisional.map(item=>[item.source_file+String.fromCharCode(0)+item.word,item]));
@@ -29,7 +33,7 @@ function reviewedExample(word) {
   const lexical=require('./lexical-corrections').lexicalExample(word);if(lexical)return lexical;
   const corrected=require('./content-corrections').correctedExample(word);if(corrected)return corrected;
   const key=word.source_file+String.fromCharCode(0)+word.word;
-  for(const item of [bindings.get(key),senseEditBindings.get(key),provisionalBindings.get(key),pendingBindings.get(key)]){
+  for(const item of [bindings.get(key),senseEditBindings.get(key),provisionalBindings.get(key),pendingBindings.get(key),zhongkaoBindings.get(key)]){
     if(item && matchesSenseIdentity(item,word)
       && (item.source_line===undefined||item.source_line===word.source_line)
       && item.pos===word.pos && item.meaning===word.meaning && item.source_raw===word.source_raw
