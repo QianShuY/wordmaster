@@ -1,0 +1,114 @@
+{
+  "release": "D:\\工作区\\wordmaster\\output\\releases\\verify-gaokao-20261028\\WordMaster-2026-10-28.2-preview",
+  "manifest_files": 856,
+  "actual_windows_exe_tested": true,
+  "headless_launcher_only": true,
+  "real_database_unchanged": true,
+  "results": [
+    {
+      "scenario": "fresh-install-and-double-launch",
+      "first": {
+        "words": 27666,
+        "progress": 0,
+        "schema": 13
+      },
+      "reused": true,
+      "concurrent_launch_reused": true,
+      "default_port_already_serving": true,
+      "selected_port": 3457,
+      "ready_ms": 3133.2974000000004,
+      "repeat_ready_ms": 112.40610000000015,
+      "pages": [
+        "/",
+        "/adventure/index.html",
+        "/adventure/journey.html",
+        "/adventure/camp.html",
+        "/adventure/battle.html",
+        "/adventure/ending.html"
+      ]
+    },
+    {
+      "scenario": "existing-database-upgrade-and-reopen",
+      "source_schema": 13,
+      "reconstructed_schema11_in_disposable_copy": false,
+      "reviewed_content_normalized_in_disposable_copy_before_exe": true,
+      "all_pre_publication_rows_unchanged": true,
+      "gaokao_replacement_by_actual_exe": {
+        "old_ids": [
+          1
+        ],
+        "new_id": 9
+      },
+      "migration": {
+        "from_schema": 13,
+        "to_schema": 13,
+        "existing_tables_checked": 18,
+        "existing_rows_unchanged": true,
+        "new_tables_empty": []
+      },
+      "integrity": {
+        "integrity_check": "ok"
+      },
+      "foreign_keys": [],
+      "ready_ms": 1430.3829000000005,
+      "reopen_ready_ms": 680.2525999999998
+    },
+    {
+      "scenario": "reviewed-content-upgrade-and-reopen",
+      "reverted_reviewed_rows_only": 7,
+      "production_database_untouched": true,
+      "contentMigration": {
+        "schema": 13,
+        "reviewed_word_ids": [
+          49545,
+          53290,
+          53336,
+          53444,
+          53567,
+          54541,
+          54566
+        ],
+        "reviewed_build_ids": [
+          2,
+          3
+        ],
+        "all_other_rows_unchanged": true,
+        "all_table_structures_unchanged": true
+      },
+      "counts": {
+        "examples": 7,
+        "meanings": 4,
+        "phonetics": 2,
+        "parts_of_speech": 6
+      },
+      "one_consistent_backup_and_receipt": true,
+      "reopen_no_changes": true,
+      "ready_ms": 1652.5044000000016,
+      "reopen_ready_ms": 679.1537000000008
+    }
+  ],
+  "remaining": [
+    "Long-duration use and animation measurements",
+    "Full-book language review (long-term)",
+    "Default-browser interactive desktop acceptance"
+  ],
+  "browser_visual_acceptance": {
+    "completed": true,
+    "actual_zip_exe": true,
+    "isolated_copy": true,
+    "pages": [
+      "books",
+      "study/9/learn",
+      "today"
+    ],
+    "confirmed": [
+      "Gaokao 3111 entries",
+      "review status disclosed",
+      "Zhongkao 1713 history readable",
+      "ten-word learning with bilingual example",
+      "CET6 plan remains selected"
+    ],
+    "answers_submitted": 0,
+    "screenshot": "output/refinement/gaokao-library-20261028.png"
+  }
+}

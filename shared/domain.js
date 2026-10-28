@@ -95,7 +95,7 @@
 
   function sampleWordPresentation(word, book) {
     if (word && book?.is_builtin && word.source_file && isSpellableWord(word.headword,word.answer_policy)) {
-      const structured=['zhongkao.txt','cet4.txt','cet6.txt','npee.txt','tem.txt'].includes(word.source_file)
+        const structured=['zhongkao.txt','cet4.txt','cet6.txt','npee.txt','tem.txt','gaokao-preview.json'].includes(word.source_file)
         ? structureMeaning(word.pos,word.meaning) : {};
       return {
         ...structured,

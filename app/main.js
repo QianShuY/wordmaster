@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('node:path');
 const fs = require('node:fs');
 const os = require('node:os');
-const { db, seed, parseImportLine, getDatabaseInstanceId } = require('./db');
+const { db, seed, installBookContent, parseImportLine, getDatabaseInstanceId } = require('./db');
 const Domain = require('../shared/domain');
 const LearningContext = require('../shared/learning-context');
 const DesktopJourney = require('./desktop-journey');
@@ -255,6 +255,7 @@ app.get('/api/books', (req, res) => {
     if (build) {
       const audit = JSON.parse(build.audit_json);
       b.quality = { version: build.content_version, source: audit.file, pending: audit.excluded,
+        content_status:audit.content_status||null,quality_counts:audit.quality_counts||null,
         unique_headwords: audit.unique_headwords,
         examples: db.prepare("SELECT COUNT(*) n FROM words WHERE book_id=? AND trim(example)<>'' AND trim(example_translation)<>''").get(b.id).n };
     }
@@ -937,8 +938,10 @@ async function refreshContentUpdate(){
   if(contentUpdatePromise)return contentUpdatePromise;
   contentUpdatePromise=(async()=>{
   try{
-    const update=await require('./content-upgrade').upgradeContent(db,{databasePath:path.resolve(process.env.WORDMASTER_DB_PATH||path.join(__dirname,'../data/wordmaster.db'))});
-    app.locals.contentUpgrade={status:update.status,version:update.version,counts:update.counts,editedRowsPreserved:update.edited_rows_preserved||0,skippedBooks:update.skipped?.length||0,receiptSaved:update.receipt_saved??null};
+    const databasePath=path.resolve(process.env.WORDMASTER_DB_PATH||path.join(__dirname,'../data/wordmaster.db'));
+    const replacement=await require('./gaokao-replacement').replaceZhongkao(db,{databasePath,install:installBookContent});
+    const update=await require('./content-upgrade').upgradeContent(db,{databasePath});
+    app.locals.contentUpgrade={status:update.status,version:update.version,counts:update.counts,editedRowsPreserved:update.edited_rows_preserved||0,skippedBooks:update.skipped?.length||0,receiptSaved:update.receipt_saved??null,gaokaoReplacement:replacement.status};
   }catch(error){
     app.locals.contentUpgrade={status:'failed',version:require('./vocabulary').VERSION,originalContentRetained:true};
     console.error('[content] 词库内容更新未完成，继续使用原有内容。',error.message);

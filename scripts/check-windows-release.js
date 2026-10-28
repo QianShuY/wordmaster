@@ -9,7 +9,7 @@ const assert=(ok,message)=>{if(!ok)throw new Error(message);};
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function main(){
  if(process.platform!=='win32')throw new Error('This acceptance requires Windows and the actual EXE');
- const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-10-28.1-preview'));
+ const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-10-28.2-preview'));
  const manifest=JSON.parse(fs.readFileSync(path.join(release,'release-manifest.json'),'utf8'));
  for(const f of manifest.files){
   assert(!/\.(db|sqlite|sqlite3)(-|$)/i.test(f.path),'Database in manifest');
@@ -49,7 +49,7 @@ async function main(){
   const firstDb=new DatabaseSync(freshDb,{readOnly:true});
   const first={words:firstDb.prepare('SELECT COUNT(*) n FROM words').get().n,progress:firstDb.prepare('SELECT COUNT(*) n FROM progress').get().n,schema:firstDb.prepare('SELECT schema_version FROM schema_meta').get().schema_version};firstDb.close();
   const vocabulary=require(path.join(release,'app/vocabulary'));
-  const expectedWords=vocabulary.CATALOG.reduce((n,spec)=>n+vocabulary.buildBook(spec,path.join(release,'app/seed')).words.length,0);
+  const expectedWords=(vocabulary.DESKTOP_CATALOG||vocabulary.CATALOG).reduce((n,spec)=>n+vocabulary.buildBook(spec,path.join(release,'app/seed')).words.length,0);
   assert(first.words===expectedWords&&first.progress===0&&first.schema===13,'Fresh package contains unexpected content, study data or schema');
   await stop(fresh);results.push({scenario:'fresh-install-and-double-launch',first,reused:true,concurrent_launch_reused:true,
    default_port_already_serving:defaultPortReachable,selected_port:fresh.port,ready_ms:fresh.ready_ms,repeat_ready_ms:reused.ready_ms,pages});
@@ -65,16 +65,25 @@ async function main(){
   }
   prepared.close();
   const original=new DatabaseSync(copyDb,{readOnly:true}),before=snapshot(original);original.close();
+  // Verify schemas separately, then normalize previously shipped content only
+  // in the copy. The actual EXE must perform the new book publication itself.
+  await run(path.join(release,'runtime/node.exe'),['-e',"const {db}=require('./app/db');db.close();"],{cwd:release,windowsHide:true,env:{...process.env,WORDMASTER_DB_PATH:copyDb}});
+  const schemaDb=new DatabaseSync(copyDb,{readOnly:true}),migration=verifyUpgrade(before,snapshot(schemaDb));schemaDb.close();
+  await run(path.join(release,'runtime/node.exe'),['-e',"const {db}=require('./app/db');require('./app/content-upgrade').upgradeContent(db,{databasePath:process.env.WORDMASTER_DB_PATH}).then(()=>db.close()).catch(e=>{console.error(e);process.exitCode=1;});"],{cwd:release,windowsHide:true,env:{...process.env,WORDMASTER_DB_PATH:copyDb}});
+  const publication=require(path.join(release,'app/gaokao-replacement')),baselineDb=new DatabaseSync(copyDb,{readOnly:true}),publicationBefore=publication.snapshot(baselineDb);
+  const oldIds=baselineDb.prepare("SELECT b.id FROM wordbooks b WHERE b.name='中考核心词汇' AND b.is_builtin=1 AND NOT EXISTS(SELECT 1 FROM book_history h WHERE h.book_id=b.id)").all().map(b=>b.id);baselineDb.close();
   const upgraded=await launch(copyDb);
   const checked=new DatabaseSync(copyDb,{readOnly:true});const after=snapshot(checked),afterDigest=digest(checked);
-  const migration=verifyUpgrade(before,after);
+  const gaokao=checked.prepare("SELECT id FROM wordbooks WHERE name='高考核心词汇' AND is_builtin=1").get();
+  publication.verifyPreserved(checked,publicationBefore,gaokao.id,oldIds);
+  for(const id of oldIds)assert(checked.prepare('SELECT replacement_book_id FROM book_history WHERE book_id=?').get(id)?.replacement_book_id===gaokao.id,'Missing historical replacement');
   const integrity=checked.prepare('PRAGMA integrity_check').get(),fk=checked.prepare('PRAGMA foreign_key_check').all();checked.close();
   assert(integrity.integrity_check==='ok'&&!fk.length,'Upgraded copy failed integrity');await stop(upgraded);
   const reopened=await launch(copyDb),again=new DatabaseSync(copyDb,{readOnly:true});const reopenedDigest=digest(again);again.close();assert(reopenedDigest===afterDigest,'Reopen changed migrated rows');await stop(reopened);
-  results.push({scenario:'existing-database-upgrade-and-reopen',source_schema:sourceSchema,reconstructed_schema11_in_disposable_copy:reconstructedSchema11,all_existing_rows_unchanged:true,migration,integrity,foreign_keys:fk,ready_ms:upgraded.ready_ms,reopen_ready_ms:reopened.ready_ms});
+  results.push({scenario:'existing-database-upgrade-and-reopen',source_schema:sourceSchema,reconstructed_schema11_in_disposable_copy:reconstructedSchema11,reviewed_content_normalized_in_disposable_copy_before_exe:true,all_pre_publication_rows_unchanged:true,gaokao_replacement_by_actual_exe:{old_ids:oldIds,new_id:gaokao.id},migration,integrity,foreign_keys:fk,ready_ms:upgraded.ready_ms,reopen_ready_ms:reopened.ready_ms});
   // This is separate from the schema-only gate. Only this reviewed row and its
   // build stamp may change; learning, plans, collections and all other rows stay exact.
-  const agedDb=path.join(dir,'旧内容 学习 副本.db');await backup(live,agedDb);
+  const agedDb=path.join(dir,'旧内容 学习 副本.db'),normalized=new DatabaseSync(copyDb,{readOnly:true});await backup(normalized,agedDb);normalized.close();
   const aged=new DatabaseSync(agedDb),spec=vocabulary.CATALOG.find(s=>s.file==='cet4.txt'),built=vocabulary.buildBook(spec,path.join(release,'app/seed'));
   const target=aged.prepare("SELECT w.* FROM words w JOIN wordbooks b ON b.id=w.book_id WHERE b.name=? AND b.is_builtin=1 AND w.word='duration'").get(spec.name),updatedWord=built.words.find(w=>w.word==='duration'),reviewed=require(path.join(release,'shared/content-batch')).reviewedExample(updatedWord);
   assert(target&&reviewed,'Reviewed aged-content fixture missing');const raw=vocabulary.parseSourceLine(target.source_raw).entry;
@@ -97,7 +106,7 @@ async function main(){
   results.push({scenario:'reviewed-content-upgrade-and-reopen',reverted_reviewed_rows_only:7,production_database_untouched:true,contentMigration,counts:contentRuntime.contentUpgrade.counts,one_consistent_backup_and_receipt:true,reopen_no_changes:true,ready_ms:contentRun.ready_ms,reopen_ready_ms:contentReopen.ready_ms});
   assert(digest(live)===liveBefore,'Live database differs from start; inspect concurrent user activity');
   const report={release,manifest_files:manifest.files.length,actual_windows_exe_tested:true,headless_launcher_only:true,
-   real_database_unchanged:true,results,remaining:['Current package browser visual acceptance','Long-duration use and animation measurements','Gaokao replacement and full-book language review','Default-browser interactive desktop acceptance']};
+   real_database_unchanged:true,results,remaining:['Current package browser visual acceptance','Long-duration use and animation measurements','Full-book language review (long-term)','Default-browser interactive desktop acceptance']};
   assert(/^[a-zA-Z0-9][a-zA-Z0-9.-]{0,60}$/.test(manifest.version),'Unsafe report version');
   fs.writeFileSync(path.join(root,'docs','WINDOWS_RELEASE_CHECK_'+manifest.version+'.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));
  }finally{

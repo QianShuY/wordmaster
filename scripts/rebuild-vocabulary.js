@@ -6,7 +6,7 @@ if (!process.argv.includes('--apply-reset')) {
 } else {
   const { randomUUID } = require('node:crypto');
   const { db, installBookContent } = require('../app/db');
-  const { CATALOG } = require('../app/vocabulary');
+  const { DESKTOP_CATALOG:CATALOG } = require('../app/vocabulary');
   const before = {
     customWords: db.prepare('SELECT COUNT(*) n FROM words w JOIN wordbooks b ON b.id=w.book_id WHERE b.is_builtin=0').get().n,
     cards: db.prepare('SELECT COUNT(*) n FROM user_cards').get().n,

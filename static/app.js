@@ -897,7 +897,7 @@ const Home = {
         <span class="book-badge ${b.is_builtin ? 'builtin' : ''}">${b.is_builtin ? '内置' : '自建'}</span>
         <h3 class="book-name">${esc(b.name)}</h3>
         <p class="book-desc">${esc(b.description) || ' '}</p>
-        ${!IS_ANDROID_APP && b.quality ? `<details class="journal-quality"><summary>词表范围与内容说明</summary><p>版本 ${esc(b.quality.version)} · 来源 ${esc(b.quality.source)}<br>不同词头 ${b.quality.unique_headwords} 个；待核验 ${b.quality.pending} 行已隔离。<br>已配双语例句 ${b.quality.examples} 条。结构校验不等于全量语言审校，也不代表官方完整考纲。</p></details>` : ''}
+        ${!IS_ANDROID_APP && b.quality ? `<details class="journal-quality"><summary>词表范围与内容说明</summary><p>版本 ${esc(b.quality.version)} · 不同词头 ${b.quality.unique_headwords} 个。<br>${b.quality.content_status ? `学习预览：选定义项已审稿 ${Number(b.quality.quality_counts?.selected_sense_reviewed)||0} 条，其余内容持续完善。` : `待核验 ${b.quality.pending} 行已隔离。`}<br>已配双语例句 ${b.quality.examples} 条。结构校验不等于全量语言审校，也不代表官方完整考纲。</p></details>` : ''}
         <div class="book-meta">
           <div class="ring">
             <svg width="64" height="64">

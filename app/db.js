@@ -303,10 +303,16 @@ function installBookContent(bookId, spec) {
   for (const w of words) {
     const candidate = !w.homograph && examples[w.headword];
     const ex = w.reviewed_example || reviewedExample(w) || (candidate && Domain.normalizePartOfSpeech(w.pos) === candidate.pos ? candidate : null);
-    insert.run(bookId, w.word, w.phonetic, w.pos, w.meaning, w.headword, w.homograph, w.source_file, w.source_line, w.source_raw, ex?.text || '', ex?.translation || '');
+    const result=insert.run(bookId, w.word, w.phonetic, w.pos, w.meaning, w.headword, w.homograph, w.source_file, w.source_line, w.source_raw, ex?.text || '', ex?.translation || '');
+    if(w.answer_policy){
+      const row=db.prepare('SELECT * FROM words WHERE id=?').get(Number(result.lastInsertRowid));
+      db.prepare('INSERT INTO word_answer_policies VALUES(?,?,?)').run(row.id,JSON.stringify(w.answer_policy),require('./vocabulary-history').contentHash(row));
+    }
   }
   db.prepare('UPDATE wordbooks SET description = ? WHERE id = ?').run(
-    `${spec.label} · 收录 ${words.length} 条经结构校验的源词条；待核验 ${report.excluded} 行。版本 ${Vocabulary.VERSION}。不等同官方完整考纲。`, bookId);
+    spec.file===Vocabulary.GAOKAO.file
+      ? `高考学习预览 · ${words.length} 个教学单元；释义、音标与例句持续完善。不等同官方完整考纲。`
+      : `${spec.label} · 收录 ${words.length} 条经结构校验的源词条；待核验 ${report.excluded} 行。版本 ${Vocabulary.VERSION}。不等同官方完整考纲。`, bookId);
   db.prepare(`INSERT OR REPLACE INTO vocabulary_builds (book_id, content_version, source_sha256, audit_json) VALUES (?, ?, ?, ?)`)
     .run(bookId, Vocabulary.VERSION, report.sha256, JSON.stringify(report));
   return report;
@@ -327,7 +333,12 @@ function seed({ legacyAndroid = false } = {}) {
         if (++count >= limits[index]) break;
       }
     }
-  } else for (const spec of Vocabulary.CATALOG) seedBook(spec);
+  } else for (const spec of Vocabulary.DESKTOP_CATALOG) {
+    // Existing Zhongkao installations transition only after an online backup,
+    // inside the replacement transaction, not during ordinary content seeding.
+    if(spec.file===Vocabulary.GAOKAO.file&&db.prepare("SELECT 1 FROM wordbooks WHERE name='中考核心词汇' AND is_builtin=1").get())continue;
+    seedBook(spec);
+  }
   seedCards();
 }
 

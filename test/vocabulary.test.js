@@ -81,7 +81,7 @@ test('explicit rebuild resets test learning, preserves custom words/cards, and i
     assert.equal(db.prepare("SELECT COUNT(*) n FROM words WHERE TRIM(word)='' OR TRIM(meaning)=''").get().n, 0);
     assert.equal(db.prepare('SELECT COUNT(*) n FROM vocabulary_builds').get().n, 5);
     assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check, 'ok');
-    const expected = CATALOG.reduce((n, spec) => n + buildBook(spec).words.length, 1);
+    const expected = require('../app/vocabulary').DESKTOP_CATALOG.reduce((n, spec) => n + buildBook(spec).words.length, 1);
     assert.equal(db.prepare('SELECT COUNT(*) n FROM words').get().n, expected);
     db.close();
   }

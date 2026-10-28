@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
 
-const VERSION = '2026-10-24.1';
+const VERSION = '2026-10-28.2';
 const CATALOG = [
   { name: '中考核心词汇', file: 'zhongkao.txt', label: '中考词表' },
   { name: '四级核心词汇', file: 'cet4.txt', label: '四级词表' },
@@ -11,6 +11,10 @@ const CATALOG = [
   { name: '考研大纲词汇', file: 'npee.txt', label: '考研词表' },
   { name: '英语专四专八词汇', file: 'tem.txt', label: '专四专八词表' },
 ];
+// Keep the original source catalog for historical audits and frozen Android G1.
+// Desktop learning publishes the independent Gaokao preview instead of Zhongkao.
+const GAOKAO = {name:'高考核心词汇',file:'gaokao-preview.json',label:'高考学习预览词表'};
+const DESKTOP_CATALOG = [GAOKAO,...CATALOG.slice(1)];
 const POS = '(?:vt|vi|adj|adv|prep|conj|pron|art|num|interj|int|aux|abbr|modal|n|v|a|ad)\\.';
 const LINE = new RegExp(`^(.+?)\\s+(?:\\[([^\\]]+)\\]\\s*(?:[（(]pl\\s+[^)）]+[)）]\\s*)?)?(${POS}(?:\\s*[/&]\\s*${POS})*)\\s*(.+)$`, 'i');
 
@@ -48,6 +52,20 @@ function parseSourceLine(raw, { correctKnownErrors = true } = {}) {
 
 function buildBook(spec, seedDir = path.join(__dirname, 'seed')) {
   const raw = fs.readFileSync(path.join(seedDir, spec.file), 'utf8');
+  if(spec.file===GAOKAO.file){
+    const data=JSON.parse(raw),Policy=require('../shared/answer-policy');
+    if(data.entries.length!==3111||new Set(data.entries.map(e=>e.headword)).size!==3111)throw Error('Invalid Gaokao preview scope');
+    const words=data.entries.map(e=>{
+      if(!e.meaning||!e.example||!e.example_translation||!Policy.bound(e.answer_policy,e.headword))throw Error('Invalid Gaokao teaching entry');
+      return {word:e.headword,headword:e.headword,homograph:null,pos:e.pos,meaning:e.meaning,phonetic:e.phonetic,
+        source_file:spec.file,source_line:e.pdf_page,source_raw:e.source_entry,
+        reviewed_example:{text:e.example,translation:e.example_translation},answer_policy:e.answer_policy};
+    });
+    return {words,report:{name:spec.name,file:spec.file,version:VERSION,sha256:createHash('sha256').update(raw).digest('hex'),
+      nonempty:words.length,headings:0,accepted:words.length,duplicates:0,excluded:0,corrected:0,issues:[],
+      unique_headwords:words.length,letters:[...new Set(words.map(w=>w.headword[0].toUpperCase()))].sort().join(''),
+      content_status:data.status,quality_counts:data.counts,source_entries:data.source_entries,count_note:data.count_note}};
+  }
   const report = { name: spec.name, file: spec.file, version: VERSION,
     sha256: createHash('sha256').update(raw).digest('hex'), nonempty: 0,
     headings: 0, accepted: 0, duplicates: 0, excluded: 0, corrected: 0, issues: [] };
@@ -152,4 +170,4 @@ function parseImportLine(line) {
   return match ? { word: match[1].trim(), phonetic: '', pos: '', meaning: match[2].trim() } : null;
 }
 
-module.exports = { VERSION, CATALOG, parseSourceLine, buildBook, parseImportLine, splitFields };
+module.exports = { VERSION, CATALOG, DESKTOP_CATALOG, GAOKAO, parseSourceLine, buildBook, parseImportLine, splitFields };
