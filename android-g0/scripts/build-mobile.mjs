@@ -47,7 +47,8 @@ try{
  if(!process.argv.includes('--seed-only')){
  fs.mkdirSync(dist,{recursive:true});fs.cpSync(path.join(root,'mobile'),dist,{recursive:true});
  fs.copyFileSync(path.join(root,'node_modules/@capacitor/core/dist/capacitor.js'),path.join(dist,'capacitor.js'));
- fs.mkdirSync(path.join(dist,'shared'),{recursive:true});for(const f of ['answer-policy.js','domain.js'])fs.copyFileSync(path.join(project,'shared',f),path.join(dist,'shared',f));
+ fs.mkdirSync(path.join(dist,'shared'),{recursive:true});for(const f of ['answer-policy.js','domain.js','campaign-route.js','campaign-map.js','campaign-clues.js'])fs.copyFileSync(path.join(project,'shared',f),path.join(dist,'shared',f));
+ fs.copyFileSync(path.join(project,'static/adventure/assets/mist-campaign-map-v4-dusk.webp'),path.join(dist,'journey-map.webp'));
  fs.mkdirSync(path.join(dist,'cards'),{recursive:true});for(const c of cards)fs.copyFileSync(path.join(project,'static/cards/original',c.palette+'.webp'),path.join(dist,'cards',c.palette+'.webp'));
  fs.writeFileSync(path.join(dist,'seed-info.json'),JSON.stringify(manifest));
  }

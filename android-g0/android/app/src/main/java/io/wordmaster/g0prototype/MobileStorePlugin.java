@@ -75,8 +75,21 @@ public class MobileStorePlugin extends Plugin {
     }
     @PluginMethod public void speak(PluginCall call){getActivity().runOnUiThread(()->{
         String text=call.getString("text","");if(text.length()>150){call.reject("朗读文本过长");return;}
-        if(speech==null){speech=new TextToSpeech(getContext(),status->{speechReady=status==TextToSpeech.SUCCESS;if(speechReady){int language=speech.setLanguage(Locale.UK);speechReady=language!=TextToSpeech.LANG_MISSING_DATA&&language!=TextToSpeech.LANG_NOT_SUPPORTED;if(speechReady){android.speech.tts.Voice selected=null;Set<android.speech.tts.Voice> voices=speech.getVoices();if(voices!=null)for(android.speech.tts.Voice v:voices)if("en".equals(v.getLocale().getLanguage())&&!v.isNetworkConnectionRequired()){selected=v;if("GB".equals(v.getLocale().getCountry()))break;}speechReady=selected!=null;if(selected!=null)speech.setVoice(selected);}}if(speechReady){speech.setSpeechRate(.85f);speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word");call.resolve();}else call.reject("未找到英语离线语音，请在系统设置中安装英语离线语音包。");});}
-        else if(speechReady){speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word");call.resolve();}else call.reject("英语语音尚未就绪，可稍后再试。");
+        if(speech==null){speech=new TextToSpeech(getContext(),status->{
+            speechReady=false;
+            if(status==TextToSpeech.SUCCESS){
+                android.speech.tts.Voice selected=null;Set<android.speech.tts.Voice> voices=speech.getVoices();
+                if(voices!=null)for(android.speech.tts.Voice voice:voices){
+                    if("en".equals(voice.getLocale().getLanguage())&&!voice.isNetworkConnectionRequired()){
+                        selected=voice;if("GB".equals(voice.getLocale().getCountry()))break;
+                    }
+                }
+                speechReady=selected!=null&&speech.setVoice(selected)==TextToSpeech.SUCCESS;
+            }
+            if(speechReady){speech.setSpeechRate(.85f);int result=speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word");if(result==TextToSpeech.ERROR)call.reject("朗读未能开始，请重试");else call.resolve();}
+            else call.reject("未找到英语离线语音，请在系统设置中安装英语离线语音包。");
+        });}
+        else if(speechReady){if(speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word")==TextToSpeech.ERROR)call.reject("朗读未能开始，请重试");else call.resolve();}else call.reject("英语语音尚未就绪，可稍后再试。");
     });}
     @PluginMethod public void exit(PluginCall call){getActivity().runOnUiThread(()->{call.resolve();getActivity().finish();});}
     @Override protected void handleOnPause(){if(speech!=null)speech.stop();}
