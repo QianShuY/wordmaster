@@ -1,0 +1,125 @@
+(function(root,factory){const api=factory(typeof module==='object'?require('../../shared/domain'):root.WordMasterDomain);if(typeof module==='object')module.exports=api;else root.MociMobile=api;})(typeof globalThis!=='undefined'?globalThis:this,function(D){
+ 'use strict';
+ const clone=x=>JSON.parse(JSON.stringify(x)),uuid=()=>{if(globalThis.crypto.randomUUID)return globalThis.crypto.randomUUID();return Array.from(globalThis.crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');},text=v=>typeof v==='string'?v:'',tables=['wordbooks','words','progress','review_log','mobile_sessions','mobile_settings','user_cards','card_draws'];
+ const stamp=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}:${String(d.getSeconds()).padStart(2,'0')}`;
+ const split=(keys,type)=>Array.from({length:Math.ceil(keys.length/10)},(_,i)=>({type,keys:keys.slice(i*10,i*10+10),round:0}));
+ function cycle(prior,mode,correct){const s=clone(prior||{meaning:{streak:0,errors:0},spelling:{streak:0,errors:0},complete:false});if(s.complete)return s;const p=s[mode];if(correct)p.streak++;else{p.streak=0;p.errors++;}s.complete=['meaning','spelling'].every(k=>s[k].streak>=(s[k].errors?2:1));return s;}
+ function workload(due,newTarget){return {review:Math.min(30,Math.ceil(due/3)),newTarget:due>90?0:due>newTarget*2?Math.min(10,newTarget):newTarget};}
+ function create(adapter,{clock=()=>new Date(),random=Math.random,makeId=uuid}={}){
+  let tail=Promise.resolve(),revision=null;
+  const exclusive=fn=>(...args)=>{const task=tail.then(async()=>{revision=null;return fn(...args);});tail=task.catch(()=>{});return task;};
+  async function rows(sql,args=[]){const r=await adapter.query({sql,args});if(revision!==null&&r.revision!==revision)throw Error('数据已在另一操作中更新，请重新打开任务。');revision=r.revision;return r.rows;}
+  const one=async(sql,args)=>(await rows(sql,args))[0]||null;
+  const now=()=>stamp(clock()),day=()=>now().slice(0,10),statement=(sql,args=[])=>({sql,args});
+  async function commit(statements,{id=makeId(),backup=false}={}){if(revision===null)await rows('SELECT value FROM native_meta WHERE key=\'revision\'');const result=await adapter.commit({requestId:id,expectedRevision:revision,statements,backup});revision=result.revision;return result;}
+  const settings=async()=>Object.fromEntries((await rows('SELECT * FROM mobile_settings')).map(s=>[s.key,s.value]));
+  const getBook=async key=>{const b=await one('SELECT * FROM wordbooks WHERE book_key=?',[key]);if(!b||b.archived)throw Error('这本词库只供历史查看，请选择当前词库。');return b;};
+  const getSession=async key=>{const r=await one('SELECT state_json FROM mobile_sessions WHERE book_key=?',[key]);return r?JSON.parse(r.state_json):null;};
+  const saveState=s=>[statement('INSERT OR IGNORE INTO mobile_sessions(book_key,session_id,state_json,updated_at) VALUES(?,?,?,?)',[s.book,s.id,JSON.stringify(s),now()]),statement('UPDATE mobile_sessions SET session_id=?,state_json=?,updated_at=? WHERE book_key=?',[s.id,JSON.stringify(s),now(),s.book])];
+  async function word(key){const w=await one('SELECT w.*,p.correct,p.wrong,p.streak,p.review_level,p.first_studied,p.next_due,p.last_review FROM words w LEFT JOIN progress p USING(word_key) WHERE w.word_key=?',[key]);if(!w)throw Error('词条不存在，请重新打开任务');w.answer_word=w.headword||w.word;if(w.policy_json){try{const policy=JSON.parse(w.policy_json);if(D.isSpellableWord(w.answer_word,policy))w.answer_policy=policy;}catch{}}return w;}
+  async function books(){return rows(`SELECT b.*,(SELECT COUNT(*) FROM words w WHERE w.book_key=b.book_key AND w.retired=0) word_count,
+   (SELECT COUNT(*) FROM words w JOIN progress p USING(word_key) WHERE w.book_key=b.book_key AND p.first_studied IS NOT NULL) learned,
+   (SELECT COUNT(*) FROM words w JOIN progress p USING(word_key) WHERE w.book_key=b.book_key AND w.retired=0 AND p.next_due<=?) due,
+   (SELECT COUNT(*) FROM words w JOIN progress p USING(word_key) WHERE w.book_key=b.book_key AND substr(p.first_studied,1,10)=?) new_today
+   FROM wordbooks b ORDER BY b.archived,b.is_builtin DESC,b.sort_order,b.book_key`,[now(),day()]);}
+  async function overview(){const list=await books(),prefs=await settings(),selected=list.find(b=>!b.archived&&b.book_key===prefs.selected_book)||list.find(b=>!b.archived&&b.plan_active)||list.find(b=>!b.archived);const sessions=await rows('SELECT book_key,state_json FROM mobile_sessions');
+   for(const b of list){const saved=sessions.find(s=>s.book_key===b.book_key);b.session=saved?JSON.parse(saved.state_json):null;b.workload=workload(b.due,Math.max(0,b.daily_new-b.new_today));}
+   const stats=await one('SELECT COUNT(*) answers,COALESCE(SUM(correct),0) correct,COUNT(DISTINCT CASE WHEN local_day=? AND correct=1 THEN word_key END) today_words FROM review_log',[day()]);
+   return {books:list,selected:selected?.book_key||null,stats,day:day(),settings:prefs};
+  }
+  async function packet(s){if(!s)return null;const b=await one('SELECT name FROM wordbooks WHERE book_key=?',[s.book]);const view={...s,bookName:b?.name};if(s.finished||s.intermission)return view;
+   const group=s.groups[s.group],key=group.keys[s.index];view.word=await word(key);const alternatives=await rows('SELECT DISTINCT meaning FROM words WHERE retired=0 AND book_key=? AND meaning<>? ORDER BY RANDOM() LIMIT 3',[s.book,view.word.meaning]);
+   if(alternatives.length<3){const extra=await rows('SELECT DISTINCT meaning FROM words WHERE retired=0 AND meaning<>? ORDER BY RANDOM() LIMIT 8',[view.word.meaning]);for(const e of extra)if(!alternatives.some(a=>a.meaning===e.meaning)&&alternatives.length<3)alternatives.push(e);}
+   view.choices=[view.word.meaning,...alternatives.map(a=>a.meaning)];for(let i=view.choices.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[view.choices[i],view.choices[j]]=[view.choices[j],view.choices[i]];}return view;
+  }
+  async function current(book){return packet(await getSession(book));}
+  async function start(book){const b=await getBook(book),saved=await getSession(book);if(saved&&(!saved.finished||saved.day===day()&&!saved.resumeOnly))return packet(saved);
+   const due=await rows('SELECT w.word_key FROM words w JOIN progress p USING(word_key) WHERE w.book_key=? AND w.retired=0 AND p.next_due<=? ORDER BY p.next_due,w.word_key LIMIT 4000',[book,now()]);
+   const learnedToday=(await one('SELECT COUNT(*) n FROM progress p JOIN words w USING(word_key) WHERE w.book_key=? AND substr(p.first_studied,1,10)=?',[book,day()])).n;
+   const allocation=workload(due.length,Math.max(0,b.daily_new-learnedToday));const reviews=due.slice(0,allocation.review).map(w=>w.word_key);
+   const fresh=(await rows('SELECT w.word_key FROM words w LEFT JOIN progress p USING(word_key) WHERE w.book_key=? AND w.retired=0 AND p.word_key IS NULL ORDER BY RANDOM() LIMIT ?',[book,allocation.newTarget])).map(w=>w.word_key);
+   const groups=[...split(reviews,'review'),...split(fresh,'new')],s={version:1,id:makeId(),book,day:day(),groups,group:0,index:0,stage:groups[0]?.type==='new'?'learn':'meaning',cycles:{},feedback:null,draft:'',finished:!groups.length,intermission:false,total:reviews.length+fresh.length,reviewCount:reviews.length,newCount:fresh.length,completed:0};
+   await commit(saveState(s));return packet(s);
+  }
+  async function action(book,type,data={}){const s=await getSession(book);if(!s||s.finished)throw Error('当前任务已结束，请返回今日');if(type==='answer'&&s.feedback?.requestId===data.requestId)return packet(s);if(data.sessionId!==s.id||data.group!==s.group||data.index!==s.index||data.stage!==s.stage)throw Error('题目已更新，请重新打开任务');
+   const statements=[],group=s.groups[s.group];
+   if(type==='draft'){if(s.feedback||s.stage!=='spelling')return packet(s);s.draft=text(data.value).slice(0,150);}
+   else if(type==='continueGroup'){if(!s.intermission)throw Error('当前不在组间休息');s.intermission=false;}
+   else if(type==='next'){
+    if(!s.feedback&&s.stage!=='learn')throw Error('请先作答');s.feedback=null;s.draft='';s.index++;
+    if(s.index>=group.keys.length){s.index=0;if(s.stage==='learn')s.stage='meaning';else if(s.stage==='meaning')s.stage='spelling';else{
+     const pending=group.keys.filter(k=>!s.cycles[k]?.complete);if(pending.length)s.groups.splice(s.group+1,0,{type:'review',keys:pending,round:group.round+1});
+     s.completed=Object.values(s.cycles).filter(c=>c.complete).length;s.group++;s.finished=s.group>=s.groups.length;s.intermission=!s.finished;s.stage=s.groups[s.group]?.type==='new'?'learn':'meaning';
+    }}
+   }else if(type==='answer'){
+    if(s.feedback||s.intermission||!['meaning','spelling'].includes(s.stage))throw Error('请先继续当前题目');
+    data.requestId=data.requestId||makeId();const w=await word(group.keys[s.index]),prior=s.cycles[w.word_key],answer=text(data.value).slice(0,2000),correct=!data.skip&&D.judgeAnswer(s.stage,answer,w);
+    if(!data.skip&&!answer.trim())throw Error('先写下答案，或选择「记不起来」');
+    const state=cycle(prior,s.stage,Boolean(correct));s.cycles[w.word_key]=state;s.completed=Object.values(s.cycles).filter(c=>c.complete).length;
+    const beforeComplete=Boolean(prior?.complete),newlyComplete=!beforeComplete&&state.complete;
+    let due=w.next_due,level=w.review_level||0,streak=w.streak||0;
+    if(!correct){const d=new Date(clock());d.setMinutes(d.getMinutes()+10);due=stamp(d);level=0;streak=0;}
+    else if(newlyComplete){const schedule=D.recallSchedule(w,true,clock());level=schedule.level;streak++;if(schedule.preserveDue)due=schedule.preserveDue;else{const d=new Date(clock());d.setDate(d.getDate()+Number(schedule.modifier.match(/\d+/)[0]));due=stamp(d);}}
+    const outcome=correct?(state[s.stage].errors?'retry_correct':'first_correct'):(data.skip?'abandoned':'wrong');
+    statements.push(statement('INSERT INTO review_log(event_id,word_key,correct,is_new,ts,local_day,timezone_id,mode,outcome,session_id,payload) VALUES(?,?,?,?,?,?,?,?,?,?,?)',[data.requestId,w.word_key,correct?1:0,w.first_studied?0:1,now(),day(),Intl.DateTimeFormat().resolvedOptions().timeZone,s.stage,outcome,s.id,JSON.stringify({answer,skip:!!data.skip})]));
+    statements.push(statement('INSERT OR IGNORE INTO progress(word_key,first_studied) VALUES(?,?)',[w.word_key,now()]));
+    statements.push(statement('UPDATE progress SET correct=correct+?,wrong=wrong+?,streak=?,review_level=?,last_review=?,next_due=?,first_studied=COALESCE(first_studied,?) WHERE word_key=?',[correct?1:0,correct?0:1,streak,level,now(),due,now(),w.word_key]));
+    s.feedback={requestId:data.requestId,correct:Boolean(correct),answer:w.answer_word,meaning:w.meaning,example:w.example,translation:w.example_translation,completed:newlyComplete,outcome};s.draft='';
+   }else throw Error('不支持的学习操作');
+   statements.push(...saveState(s));await commit(statements,{id:data.requestId||makeId()});return packet(s);
+  }
+  async function setPreference(key,value){if(!['selected_book','sound'].includes(key))throw Error('无效设置');await rows('SELECT key FROM mobile_settings WHERE key=?',[key]);await commit([statement('INSERT OR REPLACE INTO mobile_settings(key,value) VALUES(?,?)',[key,String(value)])]);return true;}
+  async function setPlan(book,dailyNew){await getBook(book);if(!Number.isInteger(dailyNew)||dailyNew<1||dailyNew>60)throw Error('每日新词量应为 1–60');await commit([statement('UPDATE wordbooks SET daily_new=?,plan_active=1,target_date=NULL WHERE book_key=?',[dailyNew,book])]);return true;}
+  async function listWords(book,{filter='all',search='',offset=0}={}){if(!['all','learned','mistakes'].includes(filter)||!Number.isInteger(offset)||offset<0)throw Error('无效筛选');const predicate=filter==='learned'?'AND p.first_studied IS NOT NULL':filter==='mistakes'?'AND p.wrong>0 AND p.streak<3':'';const args=[book,text(search).slice(0,100)];
+   const base=`FROM words w LEFT JOIN progress p USING(word_key) WHERE w.book_key=? AND instr(lower(w.word),lower(?))>0 ${predicate}`;
+   const count=(await one('SELECT COUNT(*) n '+base,args)).n;const items=await rows('SELECT w.*,p.first_studied,p.correct,p.wrong,p.streak,p.next_due '+base+' ORDER BY w.word COLLATE NOCASE,w.word_key LIMIT 40 OFFSET ?',[...args,offset]);return {count,items};
+  }
+  async function stats(){return {daily:await rows('SELECT local_day day,COUNT(*) answers,COUNT(DISTINCT word_key) words,SUM(correct) correct FROM review_log GROUP BY local_day ORDER BY day DESC LIMIT 30'),totals:await one('SELECT COUNT(*) answers,COALESCE(SUM(correct),0) correct,COUNT(DISTINCT word_key) words FROM review_log'),books:await books()};}
+  async function cards(){const items=await rows('SELECT c.*,u.earned_at FROM cards c LEFT JOIN user_cards u ON u.card_id=c.id ORDER BY c.hidden,c.id');const earned=(await one('SELECT COUNT(DISTINCT word_key) n FROM review_log WHERE correct=1 AND local_day=?',[day()])).n;const drawn=Boolean(await one('SELECT day FROM card_draws WHERE day=?',[day()]));return {items,earned,drawn};}
+  async function drawCard(){const c=await cards();if(c.drawn)throw Error('今天已经收过一张卡了');if(c.earned<10)throw Error('今天答对十个不同单词后，可收下今日留影');const pool=c.items.filter(c=>!c.hidden&&!c.earned_at),weights={N:50,R:30,SR:15,UR:5};let picked=null;if(pool.length){let r=random()*pool.reduce((n,c)=>n+weights[c.rarity],0);picked=pool.find(c=>(r-=weights[c.rarity])<0)||pool[pool.length-1];}
+   const statements=[statement('INSERT INTO card_draws VALUES(?,?,?)',[day(),picked?.id||null,now()])];if(picked){statements.push(statement('INSERT INTO user_cards VALUES(?,?)',[picked.id,now()]));const owned=c.items.filter(c=>!c.hidden&&c.earned_at).length+1;for(const extra of c.items.filter(c=>c.hidden&&!c.earned_at&&c.unlock_at<=owned))statements.push(statement('INSERT INTO user_cards VALUES(?,?)',[extra.id,now()]));}await commit(statements);return picked;
+  }
+  async function exportData(){const data={kind:'mobile',schema:1,createdAt:now(),tables:{}};for(const name of tables){let offset=0,all=[];while(true){const page=await rows(`SELECT * FROM ${name} ORDER BY rowid LIMIT 3000 OFFSET ?`,[offset]);all.push(...page);if(page.length<3000)break;offset+=3000;}data.tables[name]=all;}return data;}
+  async function restoreMobile(payload){validateMobile(payload);const statements=[];for(const name of [...tables].reverse())statements.push(statement('DELETE FROM '+name));for(const name of tables)for(const row of payload.tables[name]){const columns=Object.keys(row);statements.push(statement(`INSERT INTO ${name}(${columns.join(',')}) VALUES(${columns.map(()=>'?').join(',')})`,columns.map(k=>row[k])));}await commit(statements,{backup:true});return overview();}
+  async function importDesktop(data){validateDesktop(data);const statements=['progress','review_log','mobile_sessions','user_cards','card_draws'].map(t=>statement('DELETE FROM '+t));
+   const existingBooks=new Map((await rows('SELECT * FROM wordbooks')).map(b=>[b.book_key,b]));const existing=[];for(let offset=0;;offset+=3000){const batch=await rows('SELECT * FROM words ORDER BY rowid LIMIT 3000 OFFSET ?',[offset]);existing.push(...batch);if(batch.length<3000)break;}
+   const lookup=new Map(existing.map(w=>[JSON.stringify([w.book_key,w.word,w.source_file,w.source_raw]),w])),byKey=new Map(existing.map(w=>[w.word_key,w])),unique=new Set(existing.map(w=>JSON.stringify([w.book_key,w.word]))),mapping=new Map(),bookMap=new Map();
+   for(const b of data.books){const builtin=existingBooks.has(b.key)&&b.key.startsWith('builtin:');const key=builtin?b.key:b.key==='builtin:zhongkao'?b.key:`desktop:${data.identity}:book:${b.key}`;bookMap.set(b.key,key);
+    statements.push(statement('INSERT OR IGNORE INTO wordbooks(book_key,name,description,is_builtin,daily_new,target_date,plan_active,archived,sort_order) VALUES(?,?,?,?,?,?,?,?,?)',[key,b.name,b.description||'',builtin?1:0,b.daily_new,b.target_date,b.plan_active,b.archived,existingBooks.size+bookMap.size]));
+    statements.push(statement('UPDATE wordbooks SET daily_new=?,target_date=?,plan_active=? WHERE book_key=?',[b.daily_new,b.target_date,b.plan_active,key]));
+   }
+   for(const w of data.words){let target=byKey.get(w.key)||lookup.get(JSON.stringify([bookMap.get(w.book_key),w.word,w.source_file,w.source_raw]));if(target){mapping.set(w.key,{key:target.word_key,book:target.book_key,archived:!!existingBooks.get(target.book_key)?.archived});const fields={headword:w.headword,homograph:w.homograph,phonetic:w.phonetic,pos:w.pos,meaning:w.meaning,example:w.example||target.example,example_translation:w.example?w.example_translation:target.example_translation,policy_json:w.policy_json};if(Object.entries(fields).some(([k,v])=>v!==target[k]))statements.push(statement('UPDATE words SET headword=?,homograph=?,phonetic=?,pos=?,meaning=?,example=?,example_translation=?,policy_json=?,edited=1 WHERE word_key=?',[...Object.values(fields),target.word_key]));continue;}
+    let key=bookMap.get(w.book_key),archived=data.books.find(b=>b.key===w.book_key).archived;
+    if(unique.has(JSON.stringify([key,w.word]))){const history='desktop-history:'+key;statements.push(statement('INSERT OR IGNORE INTO wordbooks(book_key,name,description,archived) VALUES(?,?,?,1)',[history,(existingBooks.get(key)?.name||'电脑词袋')+' · 旧条目','保留来源不同的电脑词条与学习记录']));key=history;archived=1;}
+    unique.add(JSON.stringify([key,w.word]));mapping.set(w.key,{key:w.key,book:key,archived:!!archived});
+    statements.push(statement('INSERT OR IGNORE INTO words(word_key,book_key,word,headword,homograph,phonetic,pos,meaning,example,example_translation,policy_json,source_file,source_line,source_raw,edited) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)',[w.key,key,w.word,w.headword,w.homograph,w.phonetic,w.pos,w.meaning,w.example,w.example_translation,w.policy_json,w.source_file,w.source_line,w.source_raw]));
+   }
+   for(const p of data.progress){const mapped=mapping.get(p.word_key);statements.push(statement('INSERT INTO progress(word_key,correct,wrong,streak,review_level,last_review,next_due,first_studied) VALUES(?,?,?,?,?,?,?,?)',[mapped.key,p.correct,p.wrong,p.streak,p.review_level,p.last_review,p.next_due,p.first_studied]));}
+   for(const e of data.events)statements.push(statement('INSERT INTO review_log VALUES(?,?,?,?,?,?,?,?,?,?,?)',[e.event_id,mapping.get(e.word_key)?.key||e.word_key,e.correct,e.is_new,e.ts,e.local_day,e.timezone_id,e.mode,e.outcome,e.session_id,e.payload]));
+   const catalog=new Map((await rows('SELECT id,palette FROM cards')).map(c=>[c.palette,c.id]));
+   for(const c of data.collected){if(catalog.has(c.palette))statements.push(statement('INSERT INTO user_cards VALUES(?,?)',[catalog.get(c.palette),c.earned_at]));}
+   for(const d of data.draws){if(!d.palette||catalog.has(d.palette))statements.push(statement('INSERT INTO card_draws VALUES(?,?,?)',[d.day,d.palette?catalog.get(d.palette):null,d.created_at]));}
+   const pendingByBook=new Map();for(const p of data.pending){const mapped=mapping.get(p.word_key);if(!mapped||mapped.archived)continue;if(!pendingByBook.has(mapped.book))pendingByBook.set(mapped.book,[]);pendingByBook.get(mapped.book).push({...p,key:mapped.key});}
+   for(const [book,pending] of pendingByBook){const groups=split(pending.map(p=>p.key),'review'),cycles=Object.fromEntries(pending.map(p=>[p.key,p.state||{meaning:{streak:p.meaning_passed?1:0,errors:0},spelling:{streak:0,errors:0},complete:false}]));const state={version:1,id:makeId(),book,day:day(),groups,group:0,index:0,stage:groups[0].keys.every(k=>cycles[k].meaning.streak>=(cycles[k].meaning.errors?2:1))?'spelling':'meaning',cycles,feedback:null,draft:'',finished:false,intermission:false,total:pending.length,reviewCount:pending.length,newCount:0,completed:0,resumeOnly:true};statements.push(...saveState(state));}
+   await commit(statements,{backup:true});return overview();
+  }
+  return {overview:exclusive(overview),start:exclusive(start),current:exclusive(current),action:exclusive(action),setPreference:exclusive(setPreference),setPlan:exclusive(setPlan),listWords:exclusive(listWords),stats:exclusive(stats),cards:exclusive(cards),drawCard:exclusive(drawCard),exportData:exclusive(exportData),restoreMobile:exclusive(restoreMobile),importDesktop:exclusive(importDesktop),_adapter:adapter};
+ }
+ const columns={wordbooks:['book_key','name','description','is_builtin','daily_new','target_date','plan_active','archived','sort_order'],words:['word_key','book_key','word','headword','homograph','phonetic','pos','meaning','example','example_translation','policy_json','source_file','source_line','source_raw','legacy_sha256','retired','edited'],progress:['word_key','correct','wrong','streak','review_level','last_review','next_due','first_studied'],review_log:['event_id','word_key','correct','is_new','ts','local_day','timezone_id','mode','outcome','session_id','payload'],mobile_sessions:['book_key','session_id','state_json','updated_at'],mobile_settings:['key','value'],user_cards:['card_id','earned_at'],card_draws:['day','card_id','created_at']};
+ function validateMobile(data){if(data?.kind!=='mobile'||data.schema!==1||!data.tables||Object.keys(data.tables).sort().join()!==[...tables].sort().join())throw Error('不支持此备份版本');for(const name of tables){const rows=data.tables[name];if(!Array.isArray(rows)||rows.length>200000)throw Error('备份表格式无效');for(const row of rows){if(!row||Object.keys(row).sort().join()!==[...columns[name]].sort().join()||Object.values(row).some(v=>v!==null&&!['string','number'].includes(typeof v)))throw Error('备份字段无效：'+name);}}
+  const books=new Set(data.tables.wordbooks.map(b=>b.book_key)),words=new Set(data.tables.words.map(w=>w.word_key));if(books.size!==data.tables.wordbooks.length||words.size!==data.tables.words.length||data.tables.words.some(w=>!books.has(w.book_key)||!w.word||!w.meaning)||data.tables.progress.some(p=>!words.has(p.word_key)||p.correct<0||p.wrong<0||p.review_level<0||p.review_level>6))throw Error('备份词库引用或计数无效');
+  for(const s of data.tables.mobile_sessions){let state;try{state=JSON.parse(s.state_json);}catch{throw Error('学习断点损坏');}if(!books.has(s.book_key)||state.book!==s.book_key||state.id!==s.session_id||state.version!==1||!Array.isArray(state.groups)||state.groups.some(g=>!Array.isArray(g.keys)||g.keys.length>10||g.keys.some(k=>!words.has(k))))throw Error('学习断点引用无效');}
+  return data;
+ }
+ async function envelope(data,crypto=globalThis.crypto){const payload=JSON.stringify(data),bytes=new TextEncoder().encode(payload),hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),n=>n.toString(16).padStart(2,'0')).join('');return JSON.stringify({format:'moci-transfer',version:1,sha256:hash,payload});}
+ async function openEnvelope(text,crypto=globalThis.crypto){if(typeof text!=='string'||text.length>64*1024*1024)throw Error('文件过大');let box;try{box=JSON.parse(text);}catch{throw Error('不是有效的备份文件');}if(box.format!=='moci-transfer'||box.version!==1||typeof box.payload!=='string')throw Error('不支持此备份版本');const checked=JSON.parse(await envelope(JSON.parse(box.payload),crypto));if(checked.payload!==box.payload||checked.sha256!==box.sha256)throw Error('备份校验失败，文件可能不完整');const data=JSON.parse(box.payload);if(data.kind==='mobile')validateMobile(data);else if(data.kind!=='desktop'||data.schema!==1)throw Error('不支持此迁移文件');return data;}
+ function validateDesktop(d){if(d?.kind!=='desktop'||d.schema!==1||typeof d.identity!=='string'||!/^[A-Za-z0-9_-]{8,100}$/.test(d.identity))throw Error('无效的电脑迁移文件');for(const k of ['books','words','progress','events','pending','collected','draws'])if(!Array.isArray(d[k])||d[k].length>200000)throw Error('电脑迁移表无效');const books=new Set(d.books.map(b=>b.key)),words=new Set(d.words.map(w=>w.key));if(books.size!==d.books.length||words.size!==d.words.length)throw Error('迁移文件含重复身份');
+  for(const b of d.books)if(!b.key||!b.name||!Number.isInteger(b.daily_new)||b.daily_new<1||b.daily_new>10000||![0,1].includes(b.archived)||![0,1].includes(b.plan_active)||b.target_date!==null&&!/^\d{4}-\d{2}-\d{2}$/.test(b.target_date))throw Error('电脑学习计划无效');
+  for(const w of d.words)if(!books.has(w.book_key)||!w.key||!w.word||!w.meaning||typeof w.word!=='string'||typeof w.meaning!=='string'||['phonetic','pos','example','example_translation','policy_json'].some(k=>typeof w[k]!=='string'))throw Error('电脑词条引用或内容无效');
+  for(const p of d.progress)if(!words.has(p.word_key)||['correct','wrong','streak','review_level'].some(k=>!Number.isSafeInteger(p[k])||p[k]<0)||p.review_level>6)throw Error('电脑学习进度无效');
+  if(new Set(d.progress.map(p=>p.word_key)).size!==d.progress.length||new Set(d.events.map(e=>e.event_id)).size!==d.events.length)throw Error('学习记录身份重复');
+  for(const e of d.events)if(!e.event_id||!e.word_key||![0,1].includes(e.correct)||![0,1].includes(e.is_new)||!/^\d{4}-\d{2}-\d{2}/.test(e.ts)||typeof e.session_id!=='string')throw Error('电脑答题记录无效');
+  for(const p of d.pending)if(!words.has(p.word_key)||!books.has(p.book_key)||p.state&&(!p.state.meaning||!p.state.spelling||p.state.complete!==false))throw Error('未完成巩固记录无效');return d;
+ }
+ return {create,cycle,workload,stamp,makeId:uuid,validateMobile,validateDesktop,envelope,openEnvelope};
+});

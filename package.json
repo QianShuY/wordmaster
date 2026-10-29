@@ -4,6 +4,7 @@
   "description": "英语默写背单词应用",
   "main": "app/main.js",
   "scripts": {
+    "pretest": "node android-g0/scripts/build-mobile.mjs --seed-only",
     "start": "node app/main.js",
     "test": "node --test test/*.test.js android-g0/test/*.test.mjs android-g0/test/*.test.js",
     "audit:vocabulary": "node scripts/audit-vocabulary.js",

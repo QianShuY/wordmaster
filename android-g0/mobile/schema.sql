@@ -1,0 +1,17 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE wordbooks(book_key TEXT PRIMARY KEY,name TEXT NOT NULL,description TEXT NOT NULL DEFAULT '',is_builtin INTEGER NOT NULL DEFAULT 0,daily_new INTEGER NOT NULL DEFAULT 15,target_date TEXT,plan_active INTEGER NOT NULL DEFAULT 0,archived INTEGER NOT NULL DEFAULT 0,sort_order INTEGER NOT NULL DEFAULT 0);
+CREATE TABLE words(word_key TEXT PRIMARY KEY,book_key TEXT NOT NULL REFERENCES wordbooks(book_key),word TEXT NOT NULL,headword TEXT,homograph INTEGER,phonetic TEXT NOT NULL DEFAULT '',pos TEXT NOT NULL DEFAULT '',meaning TEXT NOT NULL,example TEXT NOT NULL DEFAULT '',example_translation TEXT NOT NULL DEFAULT '',policy_json TEXT NOT NULL DEFAULT '',source_file TEXT,source_line INTEGER,source_raw TEXT,legacy_sha256 TEXT,retired INTEGER NOT NULL DEFAULT 0,edited INTEGER NOT NULL DEFAULT 0,UNIQUE(book_key,word));
+CREATE TABLE progress(word_key TEXT PRIMARY KEY REFERENCES words(word_key),correct INTEGER NOT NULL DEFAULT 0,wrong INTEGER NOT NULL DEFAULT 0,streak INTEGER NOT NULL DEFAULT 0,review_level INTEGER NOT NULL DEFAULT 0,last_review TEXT,next_due TEXT,first_studied TEXT);
+CREATE TABLE review_log(event_id TEXT PRIMARY KEY,word_key TEXT NOT NULL,correct INTEGER NOT NULL,is_new INTEGER NOT NULL DEFAULT 0,ts TEXT NOT NULL,local_day TEXT NOT NULL,timezone_id TEXT NOT NULL,mode TEXT NOT NULL,outcome TEXT NOT NULL,session_id TEXT NOT NULL,payload TEXT NOT NULL DEFAULT '');
+CREATE TABLE mobile_sessions(book_key TEXT PRIMARY KEY REFERENCES wordbooks(book_key),session_id TEXT NOT NULL,state_json TEXT NOT NULL,updated_at TEXT NOT NULL);
+CREATE TABLE mobile_settings(key TEXT PRIMARY KEY,value TEXT NOT NULL);
+CREATE TABLE cards(id INTEGER PRIMARY KEY,title TEXT NOT NULL,category TEXT NOT NULL,rarity TEXT NOT NULL,palette TEXT NOT NULL UNIQUE,flavor TEXT NOT NULL DEFAULT '',hidden INTEGER NOT NULL DEFAULT 0,unlock_at INTEGER NOT NULL DEFAULT 0,asset_path TEXT NOT NULL);
+CREATE TABLE user_cards(card_id INTEGER PRIMARY KEY REFERENCES cards(id),earned_at TEXT NOT NULL);
+CREATE TABLE card_draws(day TEXT PRIMARY KEY,card_id INTEGER REFERENCES cards(id),created_at TEXT NOT NULL);
+CREATE TABLE native_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);
+CREATE TABLE native_requests(request_id TEXT PRIMARY KEY,payload_sha256 TEXT NOT NULL,response_json TEXT NOT NULL);
+CREATE INDEX words_book ON words(book_key,retired,word COLLATE NOCASE);
+CREATE INDEX progress_due ON progress(next_due);
+CREATE INDEX log_day ON review_log(local_day,word_key);
+INSERT INTO native_meta VALUES('revision','0');
+PRAGMA user_version=1;

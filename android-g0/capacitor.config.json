@@ -1,5 +1,6 @@
 {
   "appId": "io.wordmaster.g0prototype",
   "appName": "墨词 WordMaster",
-  "webDir": "dist"
+  "webDir": "mobile-dist",
+  "plugins": { "SystemBars": { "style": "LIGHT", "insetsHandling": "css" } }
 }

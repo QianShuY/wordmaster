@@ -8,7 +8,8 @@
     "build:web": "node scripts/build-web.mjs",
     "test": "npm run seed:android && node --test",
     "android:add": "cap add android",
-    "android:sync": "npm run build:web && cap sync android",
+    "build:mobile": "node scripts/build-mobile.mjs",
+    "android:sync": "npm run build:mobile && cap sync android",
     "android:open": "cap open android"
   },
   "dependencies": {

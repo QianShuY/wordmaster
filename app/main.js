@@ -34,6 +34,10 @@ app.use(express.json());
 app.use(VocabularyHistory.guard);
 app.use('/shared', express.static(path.join(__dirname, '..', 'shared')));
 app.use(express.static(path.join(__dirname, '..', 'static')));
+app.get('/api/desktop/mobile-export',(_req,res)=>{
+ const file=require('./mobile-transfer').mobileExport(db);
+ res.set({'Content-Type':'application/json; charset=utf-8','Content-Disposition':'attachment; filename="moci-mobile-transfer.json"','Cache-Control':'no-store'}).send(file);
+});
 app.get('/api/desktop/runtime',(_req,res)=>{
  const info=require('./runtime-info').runtimeInfo(db);if(app.locals.contentUpgrade)info.contentUpgrade=app.locals.contentUpgrade;
  res.set('Cache-Control','no-store').json(info);
