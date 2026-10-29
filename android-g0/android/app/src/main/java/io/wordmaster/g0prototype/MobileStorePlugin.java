@@ -75,22 +75,25 @@ public class MobileStorePlugin extends Plugin {
     }
     @PluginMethod public void speak(PluginCall call){getActivity().runOnUiThread(()->{
         String text=call.getString("text","");if(text.length()>150){call.reject("朗读文本过长");return;}
+        if(speech!=null&&!speechReady){speech.shutdown();speech=null;}
         if(speech==null){speech=new TextToSpeech(getContext(),status->{
             speechReady=false;
             if(status==TextToSpeech.SUCCESS){
-                android.speech.tts.Voice selected=null;Set<android.speech.tts.Voice> voices=speech.getVoices();
+                android.speech.tts.Voice selected=null;int best=-1;Set<android.speech.tts.Voice> voices=speech.getVoices();
                 if(voices!=null)for(android.speech.tts.Voice voice:voices){
-                    if("en".equals(voice.getLocale().getLanguage())&&!voice.isNetworkConnectionRequired()){
-                        selected=voice;if("GB".equals(voice.getLocale().getCountry()))break;
+                    if("en".equals(voice.getLocale().getLanguage())){
+                        int score=(voice.isNetworkConnectionRequired()?0:20)+("GB".equals(voice.getLocale().getCountry())?5:0);if(score>best){selected=voice;best=score;}
                     }
                 }
-                speechReady=selected!=null&&speech.setVoice(selected)==TextToSpeech.SUCCESS;
+                speechReady=selected!=null?speech.setVoice(selected)==TextToSpeech.SUCCESS:speech.setLanguage(Locale.US)>=0;
+                speech.setAudioAttributes(new android.media.AudioAttributes.Builder().setUsage(android.media.AudioAttributes.USAGE_MEDIA).setContentType(android.media.AudioAttributes.CONTENT_TYPE_SPEECH).build());
             }
             if(speechReady){speech.setSpeechRate(.85f);int result=speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word");if(result==TextToSpeech.ERROR)call.reject("朗读未能开始，请重试");else call.resolve();}
-            else call.reject("未找到英语离线语音，请在系统设置中安装英语离线语音包。");
+            else call.reject("手机当前语音引擎没有可用的英语声音。请选择支持英语的引擎，或下载英语离线语音包。");
         });}
         else if(speechReady){if(speech.speak(text,TextToSpeech.QUEUE_FLUSH,null,"moci-word")==TextToSpeech.ERROR)call.reject("朗读未能开始，请重试");else call.resolve();}else call.reject("英语语音尚未就绪，可稍后再试。");
     });}
+    @PluginMethod public void openSpeechSettings(PluginCall call){getActivity().runOnUiThread(()->{try{if(speech!=null){speech.stop();speech.shutdown();speech=null;speechReady=false;}Intent intent=new Intent("com.android.settings.TTS_SETTINGS");try{getActivity().startActivity(intent);}catch(android.content.ActivityNotFoundException missing){getActivity().startActivity(new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS));}call.resolve();}catch(Exception error){call.reject("请在系统设置中搜索文字转语音或 TTS，选择支持英语的语音引擎。");}});}
     @PluginMethod public void exit(PluginCall call){getActivity().runOnUiThread(()->{call.resolve();getActivity().finish();});}
     @Override protected void handleOnPause(){if(speech!=null)speech.stop();}
 
