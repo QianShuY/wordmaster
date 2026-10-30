@@ -1,0 +1,145 @@
+/* The pocket journal: paper for study, ink and brass for the journey. */
+:root{--paper:#f5f2e9;--card:#fffdf6;--ink:#253d34;--green:#2b4d3f;--muted:#737c6a;--line:#dbded0;--gold:#ac8b4e}
+body{background:var(--paper)}
+.page{padding-inline:22px}
+.brand{padding-bottom:16px;margin-bottom:25px;border-bottom:1px solid #8d9c7c33}
+.monogram{font:26px/1.2 serif;padding:5px 7px;border-radius:3px}
+.brand small{font-size:9px;letter-spacing:.14em;color:#7e8675}
+.brand .date{font-size:11px;color:#858976}
+.eyebrow{font-size:9px;letter-spacing:.18em;color:#7c856f}
+.hero-title{font-size:31px;line-height:1.35;letter-spacing:.025em;margin-bottom:14px}
+.sub{line-height:1.8}
+.primary,.secondary,.danger{border-radius:8px;font-size:14px}
+.primary{box-shadow:inset 0 1px #ffffff12}
+.secondary{background:#fffdf540}
+.book-select{margin-top:13px!important;margin-bottom:20px!important;border-color:#9ca78c55}
+.book-select span{font-size:13px}
+.book-select small{font-size:10px}
+.home-intro h1{font-size:36px;line-height:1.4}
+.round-action{border:0;background:#e7eadf;border-radius:9px;width:43px;height:43px;min-height:43px}
+.daily-card{padding:22px;border-radius:12px;border-color:#d2d9c7;box-shadow:0 4px 18px #304b3410;background:linear-gradient(140deg,#fffef8,#f5f6ec)}
+.daily-card h2{font-size:25px;line-height:1.5;margin:17px 0 9px;letter-spacing:.025em}
+.daily-card .sub{font-size:12px;color:#7b836d}
+.pill{font-size:9px;border-radius:3px;padding:4px 6px;letter-spacing:.04em;background:#e8eddf}
+.lesson-counts{display:grid;grid-template-columns:1fr 1px 1fr;gap:22px;margin:22px 0}
+.lesson-counts>div{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.lesson-counts strong{font:46px/1 Georgia;color:#36533c}
+.lesson-counts span{font-size:11px;letter-spacing:.07em}
+.lesson-counts i{height:41px;align-self:center}
+.daily-card .primary{min-height:52px;letter-spacing:.07em}
+.home-shortcuts{gap:12px;margin:17px 0 22px}
+.home-shortcuts button{background:transparent;border:1px solid #cbd3bf;border-radius:8px;min-height:75px;padding:13px 10px}
+.home-shortcuts b{font-size:12px}
+.home-shortcuts small{font-size:10px}
+.home-shortcuts svg{width:19px;color:#7f916d}
+.journey-teaser{background:linear-gradient(90deg,#122a29ed,#122a2960),url('journey-map.png') center 59%/cover;border-radius:9px;min-height:170px;padding:20px;border:1px solid #2b4130}
+.journey-teaser h2{font-size:28px;letter-spacing:.08em;margin:10px 0}
+.journey-teaser .eyebrow{font-size:9px;letter-spacing:.12em;color:#cbb984}
+.journey-teaser p{font-size:11px;line-height:1.7}
+.teaser-arrow{font-size:10px;margin-top:16px;color:#e0c797}
+.footer-note{font-size:12px;line-height:1.8;margin-top:23px;color:#8b917f}
+#nav{background:#f8f6edf5;border-color:#d4dacb;padding-inline:9px}
+#nav button{font-size:10px;letter-spacing:.05em;gap:0}
+#nav button svg{width:22px;height:22px;stroke-width:1.45}
+#nav button[aria-current=page] svg{background:#2b4d3f;stroke:#f4edda;box-shadow:0 0 0 7px #2b4d3f;border-radius:4px}
+#nav button[aria-current=page]{color:#2b4d3f}
+.word-row{padding:17px 1px;border-color:#d8dece}
+.word-row b{font:26px/1.25 Georgia;color:#2d453b}
+.word-row small{font-size:12px;line-height:1.65;margin-top:5px;color:#77816d}
+.word-row .word-status{font:10px sans-serif;color:#889679}
+.filters{gap:7px;padding-bottom:5px}
+.filters button{border-radius:5px;font-size:11px;min-height:43px;padding-inline:10px}
+.search input{border-radius:6px;background:#fffef8}
+.search .secondary{border-radius:6px;font-size:12px}
+.list-toolbar{font-size:11px;letter-spacing:.03em}
+.study{padding-inline:20px}
+.study-head{padding-bottom:6px;border-bottom:1px solid #c9d3bd66}
+.study-head .sub{font-size:10px;color:#939c87}
+.study-head .tag{background:none;font-size:16px;padding-inline:3px}
+.study-progress{height:2px;margin-bottom:19px}
+.study-stage{font-size:10px;margin:0 1px 15px;color:#859278}
+.study-stage b{font-size:13px}
+.phase-track{justify-content:flex-start;padding-bottom:12px;border-bottom:1px solid #d9ddce;margin:0 0 7px;gap:15px;font-size:11px}
+.phase-track span.active{padding-bottom:0;border:0;color:#2c4d3a}
+.phase-track span.active:before{content:'';display:inline-block;width:5px;height:5px;margin-right:6px;vertical-align:2px;border-radius:50%;background:#a88c4d}
+.study-sheet{border:0;box-shadow:none;background:transparent;border-radius:0;padding:18px 1px 12px}
+.study-sheet .word{font-size:clamp(36px,11.5vw,56px);letter-spacing:-.025em;margin:17px 0 13px;text-align:center;color:#263d31}
+.study-sheet .phonetic{justify-content:center;color:#8b927e;font-size:16px;margin-bottom:19px}
+.study-sheet>.tag{font-size:12px;border-radius:4px;border:0;background:#e6ebdc;color:#657c59;padding:5px 10px}
+.study-sheet>.definition{font-size:22px;line-height:1.75;margin:19px 0 23px}
+.study-sheet .example{border-top:1px solid #b9c9a655;padding-top:17px;margin-top:20px}
+.study-sheet .example .english{font:20px/1.65 Georgia;color:#435b47}
+.study-sheet .example .translation{font-size:12px;line-height:1.8;color:#818b75}
+.study-sheet .choice{background:#fffdf7;border-radius:7px;border-color:#d2dbc6;font-size:14px;line-height:1.7;padding:13px}
+.study-sheet .choice em{font:italic 17px Georgia;color:#9c9b80;margin-top:2px}
+.study-sheet .spell-input{border-radius:7px;border-color:#8ea180;background:#fffef8;font:29px/1.2 Georgia;min-height:65px;box-shadow:0 2px 8px #314d3210}
+.study-sheet .spell-input:focus{outline:1px solid #8a9d73;outline-offset:3px}
+.study-sheet .spell-input::placeholder{font:13px sans-serif;color:#a1ac93}
+.study-sheet:has(#spellForm)>.definition{max-height:25svh;overflow:auto}
+.study-actions{padding-top:6px;margin-top:15px}
+.study-actions .primary{min-height:52px}
+.study-actions .sub{font-size:10px;color:#8c967e}
+.spell-tools{margin-top:6px}
+.spell-tools button{font-size:12px;padding-inline:0}
+.feedback{background:#e7eddf80;border-radius:7px;padding:18px}
+.feedback.wrong{background:#eee6da80}
+.feedback h2{font-size:34px}
+.recall-prompt{padding:23px 0 17px}
+.recall-prompt p{font-size:14px;line-height:1.9;color:#6f7c65}
+.recall-prompt .secondary{margin-top:14px;background:#edf0e4;min-height:48px}
+.context-fold{margin-top:17px}
+.context-fold summary{font-size:11px}
+.trail{gap:6px;margin-top:13px}
+.trail span{height:3px}
+.task{border-radius:10px;box-shadow:none;background:#2b4b3d}
+.task h2{font-size:25px}
+.card-grid{gap:15px}
+.collectible{border-radius:5px;border:1px solid #d6d5c6;box-shadow:0 4px 12px #293a2412}
+.collectible .caption{font-size:15px}
+.link-row{padding:18px 0;border-color:#d9decf}
+.link-row b{font-size:14px;font-weight:500}
+.link-row small{font-size:11px;line-height:1.7;color:#858e79}
+.link-row>svg{width:20px;color:#81916f}
+.small-metrics{background:#e8ecdf60;border-block:1px solid #d7dec9;padding:18px 4px;border-radius:0}
+.small-metrics b{font-size:29px}
+.small-metrics small{font-size:10px;line-height:1.5}
+dialog{border-radius:13px;border:1px solid #c7d1b9;background:#faf8ef;box-shadow:0 20px 70px #11251944}
+dialog h2{font-size:25px}
+.keyboard-open .study-sheet{padding:12px 1px}
+.keyboard-open .study-sheet>.definition{font-size:19px;line-height:1.6;margin:7px 0 13px;max-height:20svh}
+.keyboard-open .study-actions{position:sticky;bottom:0;background:var(--paper);padding:7px 0 3px}
+/* The atlas reads as a chapter plate, with a compact action at its foot. */
+.journey-atlas{padding-inline:14px;gap:11px;background:#102624}
+.atlas-header{min-height:66px;padding-inline:2px}
+.atlas-header small{font-size:9px;color:#9fae96;letter-spacing:.15em}
+.atlas-header h1{font-size:28px;letter-spacing:.11em;margin-top:6px}
+.atlas-progress{font-size:10px;color:#9eaf96;align-self:center}
+.atlas-progress strong{font-size:29px;color:#ddc993}
+.atlas-route-ticks{display:flex;gap:4px;margin-top:11px}
+.atlas-route-ticks i{width:8px;height:2px;background:#74866a45}
+.atlas-route-ticks i.done{background:#c2b77b}
+.atlas-route-ticks i.next{background:#e3ca89;width:13px}
+.atlas-viewport{border-radius:3px;border-color:#9f95604d;box-shadow:0 4px 20px #0002}
+.map-pin.current span{filter:drop-shadow(0 2px 2px #061d16);transform:translateY(-7px)}
+.map-pin.current span svg{width:25px;height:31px;fill:none;stroke:#ebd69e;stroke-width:1.3}
+.map-pin.current .flag-cloth{fill:#d4b877}
+.map-pin.current:after{content:'';position:absolute;bottom:7px;left:17px;width:7px;height:4px;border:1px solid #e3ce92;border-radius:50%;background:#1a3325;pointer-events:none}
+.atlas-tools{gap:0;border-block:1px solid #8b9d6c33;padding-block:1px}
+.atlas-tools button{border:0;background:none;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:3px;min-height:44px;font-size:10px;color:#c4c9ab}
+.atlas-tools svg{width:16px;height:16px;stroke-width:1.3;color:#bba679;flex-shrink:0}
+.atlas-drawer{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 12px;padding:13px 2px 3px;background:none;border:0;border-radius:0;max-height:31svh;overflow:auto}
+.atlas-drawer details{min-width:0}
+.atlas-drawer summary{padding-right:15px;min-height:42px}
+.atlas-drawer summary small{font-size:9px;letter-spacing:.09em;color:#91a383}
+.atlas-drawer summary>span{top:13px;font-size:11px;color:#b4bf9c}
+.atlas-drawer h2{font-size:24px;margin:6px 0 0;line-height:1.3;color:#e6ddc2}
+.atlas-drawer>.primary{width:auto;min-width:112px;min-height:46px;padding:11px 17px;font-size:12px;border-radius:5px;background:#c9b27b;color:#19322c}
+.atlas-drawer:has(details[open]){grid-template-columns:1fr}
+.atlas-drawer:has(details[open])>.primary{width:100%}
+.atlas-drawer p{font-size:12px;line-height:1.8}
+.atlas-drawer>.route-rest{grid-column:1/-1;background:#203b31;font-size:11px;padding:10px}
+body[data-view=journey] #nav{background:#102624f5;border-color:#8b9d6c33}
+body[data-view=journey] #nav button[aria-current=page] svg{background:#b6a06c;stroke:#142b24;box-shadow:0 0 0 7px #b6a06c}
+@media(max-width:360px){.page{padding-inline:18px}.daily-card{padding:19px}.daily-card h2{font-size:23px}.lesson-counts{gap:18px}.lesson-counts strong{font-size:42px}.study{padding-inline:17px}.study-sheet>.definition{font-size:20px}.atlas-tools button{font-size:9px;gap:4px}.atlas-tools svg{width:15px}.atlas-drawer>.primary{min-width:105px;padding-inline:12px}.atlas-drawer h2{font-size:22px}}
+@media(max-height:650px){.atlas-header{min-height:58px}.atlas-header h1{font-size:25px}.atlas-route-ticks{margin-top:7px}.atlas-drawer{padding-top:6px}.atlas-drawer h2{font-size:21px}.journey-atlas{gap:8px}}
+@media(max-height:520px){.study-sheet .word{margin:6px 0;font-size:34px}.study-content .phase-track{margin-bottom:2px}.focus-study .study-sheet{padding:10px 1px}.focus-study .study-sheet>.definition{font-size:17px;margin:5px 0 9px}.focus-study .study-sheet .spell-input{min-height:52px}.study-stage{margin-bottom:7px}}

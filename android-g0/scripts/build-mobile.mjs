@@ -51,7 +51,7 @@ try{
  fs.copyFileSync(path.join(project,'static/adventure/assets/mist-campaign-map-v4-dusk.png'),path.join(dist,'journey-map.png'));
  fs.rmSync(path.join(dist,'journey-map.webp'),{force:true});
  fs.mkdirSync(path.join(dist,'cards'),{recursive:true});for(const c of cards)fs.copyFileSync(path.join(project,'static/cards/original',c.palette+'.webp'),path.join(dist,'cards',c.palette+'.webp'));
- fs.mkdirSync(path.join(dist,'media'),{recursive:true});for(const asset of ['mist-bridge-v1.webp','warden-lantern-v1.webp','warden-shield-v1.webp','warden-storm-v1.webp','first-light-on-the-road.wav','letters-at-the-mist-bridge.wav','mist-bridge-tension.wav','mist-bridge-last-stand.wav','beyond-the-mist-v1.wav',...['ink','break','defend','wound','storm'].map(n=>'impact-'+n+'-v1.wav')])fs.copyFileSync(path.join(project,'static/adventure/assets',asset),path.join(dist,'media',asset));
+ fs.mkdirSync(path.join(dist,'media'),{recursive:true});for(const asset of ['mist-bridge-v1.webp','warden-lantern-v1.webp','warden-shield-v1.webp','warden-storm-v1.webp','lantern-brush.svg','torn-page.svg','shield-ink-impact-v1.webp','impact-sweep-v1.wav','impact-slam-v1.wav','first-light-on-the-road.wav','letters-at-the-mist-bridge.wav','mist-bridge-tension.wav','mist-bridge-last-stand.wav','beyond-the-mist-v1.wav',...['ink','break','defend','wound','storm'].map(n=>'impact-'+n+'-v1.wav')])fs.copyFileSync(path.join(project,'static/adventure/assets',asset),path.join(dist,'media',asset));
  fs.writeFileSync(path.join(dist,'seed-info.json'),JSON.stringify(manifest));
  }
  console.log(JSON.stringify(manifest));
