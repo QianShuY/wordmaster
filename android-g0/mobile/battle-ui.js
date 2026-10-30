@@ -17,7 +17,21 @@ async function renderBattle(){if(tab!=='battle')return;if(!battleView)battleView
  MobileSound.scope();MobileSound.paint();startBattleClock();
 }
 function startBattleClock(){clearInterval(battleTimer);if(!battleView?.snapshot.domain)return;battleLast=performance.now();battleTimer=setInterval(async()=>{if(tab!=='battle'||document.hidden||busy||battleSaving){battleLast=performance.now();return;}battleSaving=true;const elapsed=Math.min(1000,Math.max(1,Math.round(performance.now()-battleLast)));battleLast=performance.now();try{const before=battleView.snapshot.phase,epoch=battleEpoch;const updated=await service.battleAction('tick',{ms:elapsed,preview:battleView.preview});if(epoch!==battleEpoch||tab!=='battle')return;battleView=updated;if(before!==battleView.snapshot.phase||!battleView.snapshot.domain)renderBattle();else if($('#domainClock'))$('#domainClock').textContent=Math.ceil(battleView.snapshot.domain.remainingMs/1000)+' 秒';}catch(e){clearInterval(battleTimer);toast(e.message);}finally{battleSaving=false;}},1000);}
-async function battleCommand(type,data={}){clearTimeout(battleDraftTimer);if(type!=='draft')$('#battleInput')?.blur();const before=battleView?.snapshot; if(type==='answer')battlePending=battlePending||{...data,requestId:data.requestId||MociMobile.makeId()};battleView=await service.battleAction(type,{...(battlePending||data),preview:battleView.preview});battlePending=null;if(type==='answer'){const result=battleView.outcome;if(result?.ok)MobileSound.effect(battleView.snapshot.result?.shieldBroken?'break':'hit');else MobileSound.effect('hurt');}if(before?.phase!=='stormIntro'&&battleView.snapshot.phase==='stormIntro')MobileSound.effect('storm');await renderBattle();if(type==='answer'&&battleView.snapshot.phase==='question')$('#battleInput')?.focus({preventScroll:true});}
+async function battleCommand(type,data={}){
+ clearTimeout(battleDraftTimer);if(type!=='draft')$('#battleInput')?.blur();
+ // Resolve an uncertain prior answer before accepting any new action. A known
+ // validation failure must never freeze an empty/old answer into later clicks.
+ if(battlePending){const saved=await service.battle(battleView.preview);if(!saved)throw Error('战斗尚未就绪，请返回后重新进入');battleView=saved;if(saved.lastRequest===battlePending.requestId){battleView=await service.battleAction('answer',{...battlePending,preview:saved.preview});battlePending=null;await renderBattle();return;}battlePending=null;}
+ if(type==='answer'&&!data.skip&&!String(data.value||'').trim())throw Error('先写下答案，或选择记不起来');
+ const before=battleView?.snapshot,request=type==='answer'?{...data,requestId:data.requestId||MociMobile.makeId()}:data;
+ if(type==='answer')battlePending=request;
+ try{battleView=await service.battleAction(type,{...request,preview:battleView.preview});}
+ catch(error){if(type==='answer'){try{const saved=await service.battle(battleView.preview);if(saved?.lastRequest!==request.requestId)battlePending=null;}catch{/* Keep only an uncertain write for reconciliation on the next click. */}}throw error;}
+ battlePending=null;
+ if(type==='answer'){const result=battleView.outcome;if(result?.ok)MobileSound.effect(battleView.snapshot.result?.shieldBroken?'break':'hit');else MobileSound.effect('hurt');}
+ if(before?.phase!=='stormIntro'&&battleView.snapshot.phase==='stormIntro')MobileSound.effect('storm');
+ await renderBattle();if(type==='answer'&&battleView.snapshot.phase==='question')$('#battleInput')?.focus({preventScroll:true});
+}
 async function flushBattleDraft(){clearTimeout(battleDraftTimer);const input=$('#battleInput');if(input&&battleView?.snapshot.phase==='question')await service.battleAction('draft',{value:input.value,preview:battleView.preview});}
 async function exitBattle(){battleEpoch++;clearInterval(battleTimer);await flushBattleDraft();battleView=null;battlePending=null;MobileSound.pause();location.hash='journey';}
 document.addEventListener('input',e=>{if(e.target.id!=='battleInput'||battleView?.snapshot.phase!=='question')return;battleView.draft=e.target.value;clearTimeout(battleDraftTimer);battleDraftTimer=setTimeout(()=>flushBattleDraft().catch(e=>toast(e.message)),180);});
