@@ -1,0 +1,68 @@
+/* A small writing desk: bone-white keys in the journal, aged brass in battle. */
+#wordKeyboard[hidden]{display:none!important}
+#wordKeyboard{--key-paper:#fffef8;--key-ink:#314c3c;--key-border:#bfcab6;--key-bed:#e9eddf;position:fixed;z-index:10;bottom:0;left:0;right:0;padding:0 7px var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px));background:var(--key-bed);color:var(--key-ink);border-top:1px solid var(--key-border);box-shadow:0 -8px 30px #14241c0d;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.word-keyboard-inner{width:min(100%,580px);margin:auto;padding-bottom:7px}
+.word-keyboard-top{display:flex;align-items:center;gap:10px;height:35px;padding:0 3px}
+.word-keyboard-top>span{flex:1;font:12px serif;letter-spacing:.12em;color:#718469}
+.word-keyboard-top i{font:12px Georgia;color:#a6aa8e;margin:0 5px}
+#wordKeyboard .word-keyboard-top button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:35px;padding:0 7px;font-size:10px;background:none;border:0;box-shadow:none}
+.word-keyboard-top svg{width:16px;height:16px}
+.word-keyboard-top small{font-size:10px}
+.word-key-row{display:flex;justify-content:center;gap:4px;margin-bottom:6px}
+.word-key-row.middle{padding-inline:4.8%}
+.word-key-row.lower{padding-left:9.6%}
+#wordKeyboard .word-key-row button{flex:1;min-width:0;min-height:44px;height:44px;border:1px solid var(--key-border);border-radius:5px;padding:0;background:var(--key-paper);color:var(--key-ink);box-shadow:0 2px 0 #aab69f66;font:20px/1 Georgia;transition:background-color .08s}
+#wordKeyboard .word-key-row button:active{background:#d3ddc8;transform:translateY(1px);box-shadow:none}
+#wordKeyboard .word-key-row button svg{width:21px;height:21px;vertical-align:middle}
+#wordKeyboard .word-key-row .key-delete{flex:1.45;background:#dce4d2}
+#wordKeyboard .utilities{margin-bottom:0}
+#wordKeyboard .utilities button{font-size:18px;background:#e0e6d7}
+#wordKeyboard .utilities .key-space{flex:2.5;font:11px sans-serif;letter-spacing:.2em;background:var(--key-paper)}
+#wordKeyboard .utilities .key-submit{flex:2.4;font:13px serif;background:#34533f;color:#fffae9;border-color:#34533f;white-space:nowrap}
+.use-word-keyboard{width:100%;min-height:36px;font-size:11px;text-decoration:underline;text-underline-offset:4px;color:var(--muted)}
+.word-answer{position:relative}
+.word-answer-ink{display:none}
+.custom-answer>input{color:transparent!important;caret-color:transparent}
+.custom-answer>input::placeholder{color:transparent!important}
+.custom-answer>.word-answer-ink{display:flex;align-items:center;position:absolute;inset:1px 11px;overflow:hidden;pointer-events:none;color:#314c3c;white-space:pre}
+.word-answer-line{display:block;flex-shrink:0;min-width:100%;text-align:center}
+.word-caret{display:inline-block;height:1em;vertical-align:-.12em;border-left:1.5px solid #8f9d65;animation:word-caret 1.1s step-end infinite}
+.word-selection{font:inherit;font-style:normal;background:#b8cc9e80}
+.focus-battle .custom-answer>.word-answer-ink{color:#eddbac}
+.focus-battle .word-caret{border-color:#d3b575}
+@keyframes word-caret{50%{opacity:0}}
+.word-keyboard-open #notice{bottom:calc(var(--word-keyboard-height) + 12px)}
+.word-keyboard-open .study{height:var(--visible-height,100dvh);min-height:0;padding-bottom:calc(var(--word-keyboard-height) + 7px);overflow:hidden}
+.word-keyboard-open .study-content{display:flex;flex-direction:column;min-height:0}
+.word-keyboard-open .study-sheet:has(#spellForm){display:flex;flex-direction:column;flex:1;min-height:0;padding-block:8px}
+.word-keyboard-open .study-sheet:has(#spellForm)>.definition{flex:1;min-height:32px;max-height:none;margin:8px 0 12px;overflow:auto;font-size:20px}
+.word-keyboard-open .study-sheet>.tag{align-self:flex-start}
+.word-keyboard-open .study-sheet .spell-input{min-height:56px;padding:10px;font-size:28px}
+.word-keyboard-open .study-sheet .study-actions{margin:0;padding:0}
+.word-keyboard-open #spellForm .study-actions>.primary,.word-keyboard-open .trail,.word-keyboard-open .spell-tools button:first-child{display:none}
+.word-keyboard-open .spell-tools{justify-content:flex-end;margin-top:0}
+.word-keyboard-open .spell-tools button{min-height:34px}
+.word-keyboard-open #draftStatus{font-size:9px;margin:0}
+.word-keyboard-open .study-stage{margin-bottom:9px}
+.word-keyboard-open .study-progress{margin-bottom:10px}
+.word-keyboard-open .phase-track{margin:0 0 5px}
+.focus-battle.word-keyboard-open #wordKeyboard{--key-paper:#203a38;--key-ink:#ead9b1;--key-border:#667860;--key-bed:#0c2023;box-shadow:0 -12px 25px #03121655}
+.focus-battle .word-keyboard-top>span{color:#a79c7b}
+.focus-battle #wordKeyboard .utilities button,.focus-battle #wordKeyboard .word-key-row .key-delete{background:#2c4139}
+.focus-battle #wordKeyboard .utilities .key-space{background:#203a38}
+.focus-battle #wordKeyboard .utilities .key-submit{background:#c8ad75;color:#132c2a;border-color:#c8ad75}
+.focus-battle #wordKeyboard .word-key-row button:active{background:#4b6151}
+.focus-battle.word-keyboard-open .battle-panel:has(#battleForm[data-kind=answer]){bottom:calc(var(--word-keyboard-height) + 33px);max-height:calc(var(--visible-height,100dvh) - var(--word-keyboard-height) - 165px);padding:11px 13px}
+.focus-battle.word-keyboard-open .battle-player{bottom:calc(var(--word-keyboard-height) + 8px)}
+.word-keyboard-open #battleForm[data-kind=answer]>.primary,.word-keyboard-open .battle-input-tools button:first-child{display:none}
+.word-keyboard-open .battle-input-tools{justify-content:flex-end;margin-bottom:0}
+.word-keyboard-open .battle-panel .battle-input-tools button{min-height:30px!important}
+.word-keyboard-open .battle-objective{display:none}
+.word-keyboard-open .battle-panel .battle-definition{font-size:18px;max-height:14svh}
+.word-keyboard-open .battle-panel .spell-input{margin-block:6px}
+.word-keyboard-open .realm-mast{top:22%;opacity:.6}
+.word-keyboard-open .realm-mast p{display:none}
+@media(max-height:720px){.focus-battle.word-keyboard-open .battle-figure{top:-11%;height:88svh}}
+@media(max-height:650px){.word-keyboard-open .study-head{min-height:38px}.word-keyboard-open .study-head button{min-height:38px}.word-keyboard-open .study-stage{display:none}.word-keyboard-open .study-progress{margin:4px 0 8px}.word-keyboard-open .study-sheet:has(#spellForm)>.definition{font-size:18px;line-height:1.6}.word-keyboard-open .realm-mast{top:21%;opacity:.3}.word-keyboard-open .realm-mast .realm-seals{display:none}}
+@media(max-height:540px){#wordKeyboard .word-key-row button{height:36px;min-height:36px}.word-key-row{margin-bottom:4px}.word-keyboard-top{height:29px}#wordKeyboard .word-keyboard-top button{min-height:29px}.word-keyboard-open .study-content{overflow:auto}.word-keyboard-open .study-sheet:has(#spellForm)>.definition{max-height:65px;flex:none}.word-keyboard-open .phase-track,.word-keyboard-open .study-progress{display:none}.word-keyboard-open .study-sheet .spell-input{min-height:44px;font-size:23px}.word-keyboard-open #draftStatus{display:none}.focus-battle.word-keyboard-open .battle-panel:has(#battleForm[data-kind=answer]){max-height:calc(var(--visible-height,100dvh) - var(--word-keyboard-height) - 100px);bottom:calc(var(--word-keyboard-height) + 25px)}.word-keyboard-open .battle-question-head{font-size:9px}.word-keyboard-open .battle-question-head strong{font-size:17px}.word-keyboard-open .battle-panel .battle-definition{font-size:16px;max-height:40px}.word-keyboard-open .battle-panel .spell-input{min-height:40px}.word-keyboard-open .battle-hp{margin-top:0}.word-keyboard-open .battle-shield{display:none}}
+@media(prefers-reduced-motion:reduce){#wordKeyboard button{transition:none}.word-caret{animation:none}}
