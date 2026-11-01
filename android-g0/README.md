@@ -1,6 +1,6 @@
 # WordMaster Android G0 Prototype
 
-**Current Android mobile version:** see [MOBILE.md](MOBILE.md) for the 1.4.1 offline app, migration, build instructions and verified limitations. The prototype instructions below describe the preserved legacy implementation; `android:sync` now builds the current mobile app.
+**Current Android mobile version:** see [MOBILE.md](MOBILE.md) for the 1.4.2 offline app, migration, build instructions and verified limitations. The prototype instructions below describe the preserved legacy implementation; `android:sync` now builds the current mobile app.
 
 This is an isolated Capacitor prototype for the G0 local-storage slice. It does not import the production database or call the desktop Express server.
 
