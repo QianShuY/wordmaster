@@ -11,10 +11,11 @@ function fixture(reduced=false){
 }
 test('route fade never clones or measures old screens, and repeated questions have no entry animation',()=>{
  const f=fixture();f.motion.paint('first');assert.equal(f.app.html,'first');
- f.route('study');f.motion.paint('answer');assert.equal(f.app.html,'answer');assert.equal(f.cancelled(),1);
- assert.equal(f.animations.length,2);assert.ok(f.animations.every(a=>a.frames[0].opacity>=.9&&!a.frames[0].translate));
- f.motion.paint('next question');assert.equal(f.animations.length,2);assert.equal(f.app.html,'next question');
- f.route('mine');f.motion.paint('settings');f.doc.hidden=true;f.events.visibilitychange();assert.equal(f.cancelled(),3);
+ assert.equal(f.animations.length,0); // The pager owns main-tab movement.
+ f.route('study');f.motion.paint('answer');assert.equal(f.app.html,'answer');
+ assert.equal(f.animations.length,1);assert.ok(f.animations.every(a=>a.frames[0].opacity>=.9&&!a.frames[0].translate));
+ f.motion.paint('next question');assert.equal(f.animations.length,1);assert.equal(f.app.html,'next question');
+ f.route('mine');f.motion.paint('settings');f.doc.hidden=true;f.events.visibilitychange();assert.equal(f.cancelled(),1);
 });
 test('reduced motion replaces content without ghosts or animations',()=>{
  const f=fixture(true);f.motion.paint('answer');assert.equal(f.app.html,'answer');assert.equal(f.animations.length,0);

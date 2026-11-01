@@ -12,3 +12,11 @@
 @media(max-height:650px){.word-keyboard-open .study-sheet:has(#spellForm)>.definition{max-height:16svh;margin:8px 0 13px}}
 @media(max-height:540px){.word-keyboard-open .study-sheet:has(#spellForm){flex-shrink:0}.word-keyboard-open .study-sheet:has(#spellForm)>.definition{max-height:65px}}
 @media(prefers-reduced-motion:reduce){#sheet::backdrop{animation:none}}
+
+/* Horizontal gestures belong to the five main tabs; the map keeps its own pan. */
+body{overflow-x:hidden}
+body[data-view=today] #app,body[data-view=words] #app,body[data-view=cards] #app,body[data-view=mine] #app{touch-action:pan-y}
+.atlas-header,.atlas-tools,.atlas-drawer,#nav{touch-action:pan-y}
+.swipe-dragging #app{will-change:transform;user-select:none;-webkit-user-select:none}
+#nav button[data-swipe-target]{color:var(--green);background:#dfe8d770}
+body[data-view=journey] #nav button[data-swipe-target]{background:#d9c18a22;color:#eedcae}
