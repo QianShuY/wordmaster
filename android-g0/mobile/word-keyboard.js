@@ -82,9 +82,7 @@
   });
   if(win.ResizeObserver)new win.ResizeObserver(measure).observe(host);
   win.addEventListener?.('resize',sync);
-  // Observe only route content replacement, never countdown/text/FX changes:
-  // those must not move the caret or steal focus during an answer.
-  if(win.MutationObserver)new win.MutationObserver(()=>sync()).observe(doc.getElementById('app'),{childList:true});
+  // The shared screen painter calls sync exactly once after replacing content.
   sync();return {sync};
  }
  const api={edit,install};if(typeof module==='object'&&module.exports)module.exports=api;else root.MociWordKeyboard=api;

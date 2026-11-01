@@ -6,11 +6,9 @@
 .word-keyboard-open .study-sheet:has(#spellForm){padding-top:14px}
 .feedback h2{margin-top:0}
 .feedback.wrong h2{color:#995d43}
-.motion-ghost,.motion-ghost *{pointer-events:none!important;animation:none!important;transition:none!important}
 /* One owner for page motion, without the earlier CSS entry replay. */
 .page{animation:none}
-#sheet::backdrop{animation:sheet-shade-in .2s ease both}
-@keyframes sheet-shade-in{from{background:#12251c00}to{background:#12251c80}}
+#sheet::backdrop{animation:none}
 @media(max-height:650px){.word-keyboard-open .study-sheet:has(#spellForm)>.definition{max-height:16svh;margin:8px 0 13px}}
 @media(max-height:540px){.word-keyboard-open .study-sheet:has(#spellForm){flex-shrink:0}.word-keyboard-open .study-sheet:has(#spellForm)>.definition{max-height:65px}}
 @media(prefers-reduced-motion:reduce){#sheet::backdrop{animation:none}}
