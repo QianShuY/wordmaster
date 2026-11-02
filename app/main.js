@@ -31,6 +31,8 @@ const ChapterEnding=require('./chapter-ending').createChapterEnding(db,Campaign,
 
 const app = express();
 app.use(express.json());
+require('./desktop-theme').install(app);
+require('./english-training').install(app,db);
 app.use(VocabularyHistory.guard);
 app.use('/shared', express.static(path.join(__dirname, '..', 'shared')));
 app.use(express.static(path.join(__dirname, '..', 'static')));

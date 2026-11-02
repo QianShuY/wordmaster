@@ -25,3 +25,8 @@ android-g0/android/local.properties
 *.zip
 *.bak
 /android-g0/mobile-dist/
+
+# Reproducible desktop training build; includes offline listening media.
+/static/practice/
+/static/.practice-build-*/
+/static/.practice-previous-*/

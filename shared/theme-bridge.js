@@ -12,7 +12,8 @@
   if(/^\d{1,3}%\s+\d{1,3}%$/.test(theme.position||''))root.style.setProperty('--theme-header-position',theme.position);
   root.classList.add('has-card-theme');
  }
- function save(theme){try{if(theme)localStorage.setItem(key,JSON.stringify(theme));else localStorage.removeItem(key);}catch{}}
+ let pending=Promise.resolve();
+ function save(theme){pending=pending.catch(()=>{}).then(()=>fetch('/api/desktop/theme',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({theme})})).catch(()=>{});try{if(theme)localStorage.setItem(key,JSON.stringify(theme));else localStorage.removeItem(key);}catch{}}
  function restore(){try{apply(JSON.parse(localStorage.getItem(key)||'null'));}catch{}}
  window.MociThemeBridge={save,restore};
  if(location.pathname.startsWith('/adventure/'))restore();

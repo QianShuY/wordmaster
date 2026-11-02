@@ -6,6 +6,7 @@
   "scripts": {
     "pretest": "node android-g0/scripts/build-mobile.mjs --seed-only",
     "start": "node app/main.js",
+    "build:training": "node scripts/build-english-training.js",
     "test": "node --test test/*.test.js android-g0/test/*.test.mjs android-g0/test/*.test.js",
     "audit:vocabulary": "node scripts/audit-vocabulary.js",
     "audit:content": "node scripts/content-quality.js",
