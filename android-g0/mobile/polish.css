@@ -14,7 +14,8 @@
 @media(prefers-reduced-motion:reduce){#sheet::backdrop{animation:none}}
 
 /* Horizontal gestures belong to the five main tabs; the map keeps its own pan. */
-body{overflow-x:hidden}
+html,body{overflow-x:hidden}
+body[data-view=today],body[data-view=words],body[data-view=cards],body[data-view=mine]{touch-action:pan-y}
 body[data-view=today] #app,body[data-view=words] #app,body[data-view=cards] #app,body[data-view=mine] #app{touch-action:pan-y}
 .atlas-header,.atlas-tools,.atlas-drawer,#nav{touch-action:pan-y}
 .swipe-dragging #app{will-change:transform;user-select:none;-webkit-user-select:none}
