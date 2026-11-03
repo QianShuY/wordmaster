@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="journal.css">
 <link rel="stylesheet" href="learning-refinement.css">
 <link rel="stylesheet" href="study-notebook.css"><link rel="stylesheet" href="/adventure/portal.css"><link rel="stylesheet" href="/adventure/arrival-letter.css">
+<link rel="stylesheet" href="/shared/desktop-shell.css">
 </head>
 <body>
 <div class="grain"></div>
@@ -31,7 +32,7 @@
 </div>
 
 <!-- ============ 顶部导航 ============ -->
-<header class="topbar">
+<header class="topbar moci-desktop-shell">
   <a class="brand" href="#/">
     <span class="brand-mark"><img src="logo.png" alt="墨词"></span>
     <span class="brand-text">墨词<em>WordMaster</em></span>
@@ -419,9 +420,9 @@
   <section id="view-cards" class="view hidden">
     <div class="cards-hero" id="cardsNormalHero">
       <div class="cards-hero-copy">
-        <p class="hero-kicker">COLLECTION · 每日完成学习可抽取一张</p>
+        <p class="hero-kicker"><span>COLLECTION</span><span>每日学习，收藏一张风景</span></p>
         <h1 class="hero-title">墨藏集</h1>
-        <p class="hero-sub" id="cardsProgress"></p>
+        <div class="hero-sub cards-progress-summary" id="cardsProgress" aria-label="收藏与领取进度"></div>
         <p class="journal-reward-rule">当天答对 10 个不同词条，可领取一张卡牌。错后答对也计入，同一词条只计一次，可跨词库累计。</p>
       </div>
       <div class="cards-hero-art" aria-hidden="true">

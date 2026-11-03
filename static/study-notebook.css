@@ -176,18 +176,4 @@
 
 @media(max-width:760px) { .journal-desktop #view-study .desktop-study-journey { width:100%; } }
 
-/* Card wallpaper continues through the navigation as a distinct illustrated band. */
-.journal-desktop.has-card-theme .topbar{
-  background-color:var(--theme-deep);
-  background-image:linear-gradient(90deg,#101c1ad9,#101c1a8c 35%,#101c1aa6 70%,#101c1ad9),var(--theme-art);
-  background-size:cover;background-position:center,var(--theme-header-position,50% 50%);
-  border-bottom:1px solid #f1dfad55;box-shadow:0 4px 16px #14201b24;
-}
-.journal-desktop.has-card-theme .topbar .brand{color:#fff8e7;text-shadow:0 1px 5px #0009}
-.journal-desktop.has-card-theme .topbar .brand-text em{color:#eee4cbd9}
-.journal-desktop.has-card-theme .topbar-nav a{color:#f8f1e2;text-shadow:0 1px 4px #000b}
-.journal-desktop.has-card-theme .topbar-nav a:hover{background:#fff2cb1f;color:#fff9eb}
-.journal-desktop.has-card-theme .topbar-nav a.active{color:#ffe4a4}
-.journal-desktop.has-card-theme .topbar-nav a.active::after{background:#ffe4a4}
-.journal-desktop.has-card-theme .topbar-stats{color:#f6ebd4;text-shadow:0 1px 4px #000b}
-.journal-desktop.has-card-theme .topbar-stats b{color:#fff9e8}
+/* Desktop navigation wallpaper is shared with the training app in desktop-shell.css. */

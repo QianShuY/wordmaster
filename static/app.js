@@ -272,6 +272,14 @@ function route() {
 }
 
 window.addEventListener('hashchange', route);
+if (!IS_ANDROID_APP) document.querySelector('.topbar-nav').addEventListener('click', event => {
+  const link = event.target.closest('a');
+  if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button > 0) return;
+  const target = new URL(link.href, location.href);
+  if (target.origin === location.origin && target.pathname === location.pathname) {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }
+});
 window.addEventListener('androidback', () => {
   const activeElement = document.activeElement;
   if (activeElement?.matches?.('input, textarea, select, [contenteditable="true"]')) {
@@ -784,7 +792,13 @@ const Home = {
     try{
       const books=await api('/api/books/history');
       if(version!==routeVersion||!books.length)return;
-      host.innerHTML=`<h2>曾经读过的词袋</h2><p>历史只读资料保留原词条、手改内容及学习记录；不会自动转成新词库的熟练度。</p>${books.map(book=>`<p><a href="#/book/${Number(book.id)}">${esc(book.name)} · ${Number(book.word_count)} 词 · 只读查看 →</a></p>`).join('')}`;
+      host.innerHTML=`<details class="book-history-details">
+        <summary><span>历史资料 <small>${books.length} 本词袋</small></span><span class="book-history-toggle" aria-hidden="true"></span></summary>
+        <div class="book-history-body">
+          <p>更换词表前的词条与学习记录保留在这里，可随时查阅。</p>
+          <div class="book-history-list">${books.map(book=>`<a class="book-history-row" href="#/book/${Number(book.id)}"><span><strong>${esc(book.name)}</strong><small><span class="numeric">${Number(book.word_count)}</span> 词 · 原学习记录已保留</small></span><span class="book-history-badge">只读资料</span></a>`).join('')}</div>
+        </div>
+      </details>`;
       host.classList.remove('hidden');
     }catch{ /* An older running service may not yet expose history. */ }
   },
@@ -3600,7 +3614,7 @@ const Journal = {
     }
     root.classList.toggle('has-card-theme', Boolean(values));
     if (values) {
-      root.style.setProperty('--theme-art', `url("cards/original/${this.themeCard.palette}.webp")`);
+      root.style.setProperty('--theme-art', `url("/cards/original/${this.themeCard.palette}.webp")`);
       root.style.setProperty('--theme-header-position', Cards.cardFocus(this.themeCard));
     } else {
       root.style.removeProperty('--theme-art');
@@ -3773,10 +3787,17 @@ const Cards = {
     const next = data.cards.filter(c => c.hidden && !c.owned).sort((a, b) => a.unlock_at - b.unlock_at)[0];
     const rewardWords = data.reward_words ?? data.today_answered;
     const drawsRemaining = Math.max(0, data.draw_target - rewardWords);
-    $('#cardsProgress').textContent =
-      `已收集 ${ownedNormal} / ${totalNormal} 张` +
-      (next ? ` · 集满 ${next.unlock_at} 张可解锁隐藏卡（还差 ${Math.max(0, next.unlock_at - ownedNormal)} 张）` : ' · 隐藏卡已全部解锁') +
-      ` · ${IS_ANDROID_APP ? '今日作答' : '今日有效词'} ${rewardWords}/${data.draw_target}${data.drawn_today ? '，今日已领取' : drawsRemaining ? `，还差 ${drawsRemaining} ${IS_ANDROID_APP ? '次' : '词'}可领` : '，今日可领取'}`;
+    if (IS_ANDROID_APP) {
+      $('#cardsProgress').textContent = `已收集 ${ownedNormal} / ${totalNormal} 张` +
+        (next ? ` · 集满 ${next.unlock_at} 张可解锁隐藏卡（还差 ${Math.max(0, next.unlock_at - ownedNormal)} 张）` : ' · 隐藏卡已全部解锁') +
+        ` · 今日作答 ${rewardWords}/${data.draw_target}${data.drawn_today ? '，今日已领取' : drawsRemaining ? `，还差 ${drawsRemaining} 次可领` : '，今日可领取'}`;
+    } else {
+      const hiddenRemaining = next ? Math.max(0, next.unlock_at - ownedNormal) : 0;
+      $('#cardsProgress').innerHTML = `
+        <div class="cards-collection-metric"><span>已收集</span><strong class="numeric">${ownedNormal}<small> / ${totalNormal}</small></strong><p>普通卡牌</p></div>
+        <div class="cards-collection-metric"><span>下一张隐藏卡</span><strong>${next ? `还差 <b class="numeric">${hiddenRemaining}</b> 张` : '已全部解锁'}</strong><p>${next ? `集满 ${next.unlock_at} 张普通卡解锁` : '每一次积累，都已留下印记'}</p></div>
+        <div class="cards-collection-metric"><span>今日进度</span><strong class="numeric">${rewardWords}<small> / ${data.draw_target}</small></strong><p>${data.drawn_today ? '今日卡牌已领取' : drawsRemaining ? `再答对 ${drawsRemaining} 个不同词条` : '今日卡牌可以领取'}</p></div>`;
+    }
     const canDraw = !preview && !data.drawn_today && rewardWords >= data.draw_target;
     $('#drawCardBtn').disabled = !canDraw;
     const drawLabel = preview
