@@ -56,10 +56,17 @@
 .journal-desktop.has-card-theme .hub-plan-status { color:var(--theme-deep); background:var(--theme-wash); border-color:var(--theme-line); }
 .journal-desktop.has-card-theme .hub-action { background: var(--theme-deep); border-color: var(--theme-deep); }
 .journal-desktop.has-card-theme .hub-action .hub-eyebrow { color:#fff; opacity:.85; }
-.journal-desktop.has-card-theme .cards-hero .cards-progress-summary {
+.journal-desktop.has-card-theme .cards-hero :is(.cards-progress-summary, .journal-reward-rule) {
   border: 1px solid var(--theme-line);
-  border-radius: 4px;
   background: var(--theme-paper);
+}
+.journal-desktop.has-card-theme .cards-hero .cards-progress-summary { margin-bottom: 0; border-radius: 4px 4px 0 0; }
+.journal-desktop.has-card-theme .cards-hero .journal-reward-rule {
+  max-width: 720px;
+  margin: 0 auto 16px;
+  padding: 10px 16px;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
 }
 @media(max-width:720px) {
   .journal-desktop.has-card-theme .hub-heading { flex-direction:column; align-items:flex-start; gap:12px; margin:8px 0 16px; padding:8px 0 10px; }

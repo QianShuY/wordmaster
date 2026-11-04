@@ -157,20 +157,27 @@
 :root.has-card-theme:not(.cet-embedded) .cet-app::before {
   content: "";
   position: fixed;
-  inset: 0 0 auto auto;
-  width: min(57vw, 1050px);
-  height: clamp(360px, 76vh, 700px);
+  inset: 0;
   pointer-events: none;
   background: var(--theme-art) var(--theme-header-position, 50% 50%) / cover no-repeat;
-  mask-image: linear-gradient(to right, transparent 16%, #0002 26%, #000b 50%, #000 68%),
-              linear-gradient(to bottom, #000 50%, transparent 100%);
+  /* Align the left fade with the edge of the centered reading area. */
+  --moci-wall-light: linear-gradient(90deg,
+    #000e calc(50% - 675px), #0004 max(12px, calc(50% - 590px)),
+    #0003 35%, #0006 62%, #000a 84%, #000e 100%);
+  mask-image: var(--moci-wall-light), linear-gradient(#000 60%, #000a);
   mask-composite: intersect;
   opacity: 1;
 }
 :root.journal-desktop.has-card-theme body::before { z-index: -1; }
+:root.has-card-theme .cet-home-main :is(.cet-area-nav button, .cet-migration-note, .cet-hero-description) {
+  color: var(--theme-ink);
+}
+:root.has-card-theme .cet-area-nav button[aria-current] { color: var(--theme-deep); }
 @media (max-width: 760px) {
   :root.journal-desktop.has-card-theme body::before,
-  :root.has-card-theme:not(.cet-embedded) .cet-app::before { opacity: .66; }
+  :root.has-card-theme:not(.cet-embedded) .cet-app::before {
+    --moci-wall-light: linear-gradient(90deg, #0005, #0003 27%, #0003 64%, #0006);
+  }
 }
 :root:not(.is-android-app).has-card-theme .moci-desktop-shell {
   background-color: var(--theme-deep);
