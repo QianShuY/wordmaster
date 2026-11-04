@@ -187,7 +187,35 @@ function choiceMeaningMarkup(choice, word) {
 /* ============================================================
    路由
    ============================================================ */
-const views = { adventure: $('#view-adventure'), home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards') };
+const views = { adventure: $('#view-adventure'), home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards'), practice: $('#view-practice') };
+let trainingFrame;
+let trainingLoadTimeout;
+
+function prepareTraining() {
+  if (trainingFrame) return;
+  trainingFrame = document.createElement('iframe');
+  trainingFrame.id = 'trainingFrame';
+  trainingFrame.title = '英语训练';
+  trainingFrame.dataset.active = 'false';
+  trainingFrame.src = '/practice/?embedded=1';
+  views.practice.append(trainingFrame);
+  trainingLoadTimeout = setTimeout(() => {
+    $('#trainingLoading p').textContent = '训练内容暂未打开，可以从独立页进入。';
+  }, 8000);
+}
+
+if (!IS_ANDROID_APP) {
+  window.addEventListener('message', event => {
+    if (event.origin !== location.origin || event.source !== trainingFrame?.contentWindow ||
+        event.data?.type !== 'moci:practice-ready') return;
+    clearTimeout(trainingLoadTimeout);
+    trainingFrame.dataset.ready = 'true';
+    $('#trainingLoading').classList.add('hidden');
+  });
+  const trainingLink = $('.topbar-nav [data-nav="practice"]');
+  trainingLink.addEventListener('pointerenter', prepareTraining, { once: true });
+  trainingLink.addEventListener('focus', prepareTraining, { once: true });
+}
 const DESKTOP_FOCUS_KEY = 'wordmaster_desktop_focus';
 function syncDesktopFocus(viewName) {
   const enabled = !IS_ANDROID_APP && viewName === 'study' && localStorage.getItem(DESKTOP_FOCUS_KEY) === '1';
@@ -219,6 +247,8 @@ function show(name, navName = name) {
   views[name].classList.remove('hidden');
   document.body.classList.toggle('is-studying', name === 'study');
   document.body.classList.toggle('is-stats', name === 'stats');
+  document.body.classList.toggle('is-practice', name === 'practice');
+  if (trainingFrame) trainingFrame.dataset.active = String(name === 'practice');
   document.querySelectorAll('[data-nav]').forEach(a => {
     const active = a.dataset.nav === navName;
     a.classList.toggle('active', active);
@@ -263,6 +293,12 @@ function route() {
       Number.isSafeInteger(wordId) && wordId > 0 ? wordId : null);
   }
   else if (hash === '#/adventure') { show('adventure'); window.MociAdventurePortal.enter(); api('/api/stats').then(s=>Home.renderStats(s)).catch(()=>{}); }
+  else if (!IS_ANDROID_APP && hash === '#/practice') {
+    prepareTraining();
+    show('practice');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    if (!$('#topStats').hasChildNodes()) api('/api/stats').then(s => Home.renderStats(s)).catch(() => {});
+  }
   else if (hash === '#/stats') Stats.render();
   else if (hash === '#/cards') Cards.render();
   else if (hash === '#/cards-preview') Cards.render(true);
@@ -275,6 +311,11 @@ window.addEventListener('hashchange', route);
 if (!IS_ANDROID_APP) document.querySelector('.topbar-nav').addEventListener('click', event => {
   const link = event.target.closest('a');
   if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button > 0) return;
+  if (link.dataset.nav === 'practice') {
+    event.preventDefault();
+    location.hash = '#/practice';
+    return;
+  }
   const target = new URL(link.href, location.href);
   if (target.origin === location.origin && target.pathname === location.pathname) {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
@@ -748,7 +789,7 @@ const Home = {
     show('home', section === 'books' ? 'books' : 'today');
     $('#todaySection').classList.toggle('hidden', section === 'books');
     $('#booksSection').classList.toggle('hidden', section !== 'books');
-    showPageLoading('正在准备今日学习…');
+    if (IS_ANDROID_APP || !this.stats) showPageLoading('正在准备今日学习…');
     try {
       const [books, stats, mistakes, identity] = await Promise.all([
         api('/api/books'), api('/api/stats'), IS_ANDROID_APP ? api('/api/mistakes') : api('/api/desktop/mistakes/count'),

@@ -177,3 +177,40 @@
 @media(max-width:760px) { .journal-desktop #view-study .desktop-study-journey { width:100%; } }
 
 /* Desktop navigation wallpaper is shared with the training app in desktop-shell.css. */
+
+/* The training document scrolls inside the persistent desktop shell. */
+.journal-desktop body.is-practice {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+.journal-desktop body.is-practice > #app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  padding: 0;
+}
+.journal-desktop body.is-practice .bottom-nav { display: none; }
+#view-practice { flex: 1; min-height: 0; animation: none; }
+#trainingFrame { display: block; width: 100%; height: 100%; border: 0; }
+#trainingFrame:not([data-ready="true"]) { visibility: hidden; }
+.training-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.training-loading a { color: var(--pine); text-underline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  .journal-desktop :is(#view-home, #view-stats, #view-cards, #view-adventure),
+  #trainingFrame[data-active="true"][data-ready="true"] { animation: desktop-page-enter 150ms ease-out both; }
+  @keyframes desktop-page-enter { from { opacity: .78; } to { opacity: 1; } }
+}
