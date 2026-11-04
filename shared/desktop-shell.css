@@ -149,13 +149,37 @@
   color: inherit;
   font: 600 20px/1.2 var(--numeric-font);
 }
+:root:not(.is-android-app).has-card-theme {
+  --moci-desk-paper: color-mix(in srgb, var(--theme-paper) 80%, var(--theme-ground));
+  --moci-nav-tint: color-mix(in srgb, color-mix(in srgb, var(--theme-deep) 65%, #141211) 77%, transparent);
+}
+:root.journal-desktop.has-card-theme body::before,
+:root.has-card-theme:not(.cet-embedded) .cet-app::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto auto;
+  width: min(57vw, 1050px);
+  height: clamp(360px, 76vh, 700px);
+  pointer-events: none;
+  background: var(--theme-art) var(--theme-header-position, 50% 50%) / cover no-repeat;
+  mask-image: linear-gradient(to right, transparent 16%, #0002 26%, #000b 50%, #000 68%),
+              linear-gradient(to bottom, #000 50%, transparent 100%);
+  mask-composite: intersect;
+  opacity: 1;
+}
+:root.journal-desktop.has-card-theme body::before { z-index: -1; }
+@media (max-width: 760px) {
+  :root.journal-desktop.has-card-theme body::before,
+  :root.has-card-theme:not(.cet-embedded) .cet-app::before { opacity: .66; }
+}
 :root:not(.is-android-app).has-card-theme .moci-desktop-shell {
   background-color: var(--theme-deep);
-  background-image: linear-gradient(90deg, #101c1ad9, #101c1a8c 35%, #101c1aa6 70%, #101c1ad9), var(--theme-art);
+  background-image: linear-gradient(var(--moci-nav-tint), var(--moci-nav-tint)), var(--theme-art);
   background-size: cover;
   background-position: center, var(--theme-header-position, 50% 50%);
-  border-bottom-color: #f1dfad55;
-  box-shadow: 0 4px 16px #14201b24;
+  border-bottom-color: #e6c89966;
+  box-shadow: none;
+  backdrop-filter: none;
   color: #fff8e7;
 }
 :root:not(.is-android-app).has-card-theme .moci-desktop-shell .brand { text-shadow: 0 1px 5px #0009; }
@@ -179,4 +203,10 @@
   :root:not(.is-android-app) .moci-desktop-shell .topbar-stats { display: none; }
   :root:not(.is-android-app) .moci-desktop-shell .topbar-nav { justify-content: flex-start; overflow-x: auto; }
   :root:not(.is-android-app) .moci-desktop-shell .topbar-nav a { font-size: 13px; padding-inline: 10px; }
+  :root:not(.is-android-app).has-card-theme .moci-desktop-shell .topbar-nav {
+    gap: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #d0bba088 transparent;
+  }
+  :root:not(.is-android-app).has-card-theme .moci-desktop-shell .topbar-nav a { padding-inline: 8px; }
 }
