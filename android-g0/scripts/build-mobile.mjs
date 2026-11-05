@@ -47,7 +47,9 @@ try{
  if(!process.argv.includes('--seed-only')){
  fs.mkdirSync(dist,{recursive:true});fs.cpSync(path.join(root,'mobile'),dist,{recursive:true});
  fs.copyFileSync(path.join(root,'node_modules/@capacitor/core/dist/capacitor.js'),path.join(dist,'capacitor.js'));
- fs.mkdirSync(path.join(dist,'shared'),{recursive:true});for(const f of ['answer-policy.js','domain.js','campaign-route.js','campaign-map.js','campaign-clues.js','boss-battle.js'])fs.copyFileSync(path.join(project,'shared',f),path.join(dist,'shared',f));
+ fs.mkdirSync(path.join(dist,'shared'),{recursive:true});for(const f of ['answer-policy.js','domain.js','journal.js','campaign-route.js','campaign-map.js','campaign-clues.js','boss-battle.js'])fs.copyFileSync(path.join(project,'shared',f),path.join(dist,'shared',f));
+ fs.copyFileSync(path.join(project,'static/logo.png'),path.join(dist,'logo.png'));
+ fs.copyFileSync(path.join(project,'static/cards/themes.json'),path.join(dist,'themes.json'));
  fs.copyFileSync(path.join(project,'static/adventure/assets/mist-campaign-map-v4-dusk.png'),path.join(dist,'journey-map.png'));
  fs.rmSync(path.join(dist,'journey-map.webp'),{force:true});
  fs.mkdirSync(path.join(dist,'cards'),{recursive:true});for(const c of cards)fs.copyFileSync(path.join(project,'static/cards/original',c.palette+'.webp'),path.join(dist,'cards',c.palette+'.webp'));

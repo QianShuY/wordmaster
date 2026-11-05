@@ -5,6 +5,20 @@ const seed=path.resolve(__dirname,'../android/app/src/main/assets/mobile-seed.db
 function fixture(t){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'moci-mobile-test-')),file=path.join(dir,'copy.db');fs.copyFileSync(seed,file);const db=new DatabaseSync(file);db.exec('PRAGMA foreign_keys=ON');const store=adapter(db);let time=new Date('2026-10-28T12:00:00');const service=()=>M.create(store,{clock:()=>time,random:()=>.3,makeId:randomUUID});t.after(()=>{db.close();fs.rmSync(dir,{recursive:true,force:true,maxRetries:5,retryDelay:100});});return {db,store,service,advance:ms=>{time=new Date(time.getTime()+ms);}};}
 const data=(s,extra={})=>({sessionId:s.id,group:s.group,index:s.index,stage:s.stage,requestId:randomUUID(),...extra});
 async function step(service,s,type,extra){return service.action(s.book,type,data(s,extra));}
+test('a collected desktop palette can be selected, reopened and reset on mobile', async t=>{
+ const f=fixture(t),service=f.service();
+ assert.equal((await service.overview()).themeCard,null);
+ await assert.rejects(service.setPreference('journal_theme','library'),/收藏/);
+ f.db.prepare('INSERT INTO user_cards SELECT id, ? FROM cards WHERE palette=?').run('2026-10-28','library');
+ await service.setPreference('journal_theme','library');
+ const {themeCard}=await f.service().overview();
+ assert.equal(themeCard.palette,'library');
+ assert.equal(themeCard.asset_path,'cards/library.webp');
+ f.db.exec('DELETE FROM user_cards');
+ assert.equal((await service.overview()).themeCard,null);
+ await service.setPreference('journal_theme','');
+ assert.equal((await f.service().overview()).themeCard,null);
+});
 test('mobile seed contains latest five books, full bilingual pairs, no personal data and preserved source spelling metadata',t=>{const {db}=fixture(t);assert.equal(db.prepare('SELECT COUNT(*) n FROM words').get().n,27666);assert.equal(db.prepare("SELECT COUNT(*) n FROM words WHERE example='' OR example_translation=''").get().n,0);for(const table of ['progress','review_log','mobile_sessions','user_cards','card_draws'])assert.equal(db.prepare('SELECT COUNT(*) n FROM '+table).get().n,0);assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0);const numbered=db.prepare('SELECT * FROM words WHERE homograph=1 LIMIT 1').get();assert.notEqual(numbered.word,numbered.headword);assert.equal(db.prepare("SELECT COUNT(*) n FROM wordbooks WHERE book_key='builtin:zhongkao'").get().n,0);});
 test('balanced review is frozen in groups of ten; spelling, partial drafts and old tasks survive a later day and process reload',async t=>{const f=fixture(t),book='builtin:cet6',words=f.db.prepare('SELECT * FROM words WHERE book_key=? ORDER BY word_key LIMIT 78').all(book);for(const w of words)f.db.prepare("INSERT INTO progress(word_key,correct,first_studied,next_due) VALUES(?,2,'2026-10-20','2026-10-27 10:00:00')").run(w.word_key);f.db.prepare('UPDATE wordbooks SET daily_new=20 WHERE book_key=?').run(book);
  let service=f.service(),s=await service.start(book);assert.equal(s.reviewCount,26);assert.equal(s.newCount,10);assert.equal(s.groups[0].keys.length,10);const keys=s.groups[0].keys.slice();for(let i=0;i<10;i++){assert.equal(s.stage,'meaning');s=await step(service,s,'answer',{value:s.word.meaning});s=await step(service,s,'next');}

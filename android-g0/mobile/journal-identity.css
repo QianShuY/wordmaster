@@ -1,0 +1,156 @@
+/* The desktop journal's palette, adapted to one column and touch controls. */
+:root {
+  --paper: var(--theme-ground, #ede8da);
+  --card: var(--theme-paper, #fffdf6);
+  --ink: var(--theme-ink, #211d18);
+  --muted: var(--theme-muted, #62594c);
+  --line: var(--theme-line, #d4cbb8);
+  --green: var(--theme-deep, #304e40);
+  --journal-accent: var(--theme-accent, #9e402e);
+  --journal-wash: var(--theme-wash, #f0e9dc);
+  --journal-light: #fff8e7;
+  --journal-serif: Georgia, "Noto Serif CJK SC", "Songti SC", "SimSun", serif;
+  --journal-numerals: "Segoe UI", Roboto, system-ui, sans-serif;
+}
+
+h1, h2, h3, .serif { font-family: var(--journal-serif); }
+.brand-mark {
+  display: inline-block;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 6px 2px;
+  background: #211d18;
+  box-shadow: 2px 2px var(--journal-accent);
+}
+.brand-mark img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.page .brand { gap: 12px; margin-bottom: 24px; padding: 0 0 14px; border-color: var(--line); }
+.brand-name { font: 700 19px/1.2 var(--journal-serif); letter-spacing: .03em; }
+.brand-name em { margin-left: 4px; font-size: 11px; color: var(--muted); font-weight: 400; letter-spacing: .08em; }
+.brand .date { font: 11px/1.5 var(--journal-numerals); color: var(--muted); white-space: nowrap; }
+.has-card-theme .page .brand {
+  padding: 12px;
+  border-bottom-color: #d5ba8766;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #17130fdf, #17130f9c), var(--mobile-theme-art) center / cover no-repeat, var(--green);
+  color: var(--journal-light);
+}
+.has-card-theme .brand :is(.brand-name em, .date) { color: var(--journal-light); }
+.eyebrow { color: var(--journal-accent); letter-spacing: .13em; font-size: 10px; }
+.hero-title, .home-intro h1 { font: 500 clamp(28px, 8vw, 38px)/1.35 var(--journal-serif); letter-spacing: .025em; }
+.home-intro h1 { margin-top: 7px; }
+.round-action { background: var(--card); color: var(--green); border: 1px solid var(--line); border-radius: 4px; }
+.book-select, .word-row, .link-row { border-color: var(--line); }
+.word-row b, .word-row small, .word-row .word-status, .link-row small { color: var(--muted); }
+.word-row b { color: var(--ink); font-family: var(--journal-serif); }
+.word-row .word-status { color: var(--green); }
+
+.primary, .secondary, .danger { border-radius: 4px; }
+.secondary { background: var(--card); }
+.daily-card, .page .task {
+  padding: clamp(17px, 5vw, 24px);
+  color: var(--journal-light);
+  background: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #382f2710;
+}
+.page .task::after { content: none; }
+.daily-card .eyebrow, .daily-card .sub, .page .task .eyebrow { color: #fff3d8; }
+.daily-card h2 { font-size: clamp(22px, 6.4vw, 28px); margin: 13px 0 7px; line-height: 1.45; }
+.daily-top .pill { border: 1px solid #fff7e647; border-radius: 3px; background: #fff7e618; color: var(--journal-light); }
+.lesson-counts { gap: 17px; margin: 17px 0; padding: 13px 0; border-block: 1px solid #fff7e638; }
+.lesson-counts i { background: #fff7e638; }
+.lesson-counts strong { font: 600 32px/1.1 var(--journal-numerals); color: var(--journal-light); font-variant-numeric: tabular-nums; }
+.lesson-counts span { color: #fff3d8; letter-spacing: 0; }
+.daily-meter { background: #fff7e638; }
+.daily-meter span { background: #e7c782; }
+.daily-card .primary, .page .task .primary { background: var(--card); color: var(--green); }
+.home-shortcuts button { background: var(--card); border-color: var(--line); border-radius: 4px; }
+.home-shortcuts svg { color: var(--journal-accent); }
+.journey-teaser { border-radius: 4px; }
+.note, .small-metrics { background: var(--card); border-color: var(--line); }
+.small-metrics b { font: 600 25px/1.15 var(--journal-numerals); font-variant-numeric: tabular-nums; }
+.search input { background: var(--card); border-radius: 4px; }
+.calendar-day { background: var(--journal-wash); }
+.calendar-day.studied {
+  background: var(--green);
+  background: color-mix(in srgb, var(--green) calc(64% + var(--intensity) * 36%), var(--journal-wash));
+}
+.bars > div { background: var(--green); }
+.collectible { border-color: var(--line); border-radius: 4px; }
+.locked-card { background: var(--journal-wash); }
+#sheet { background: var(--card); border-color: var(--line); border-radius: 6px; }
+.card-detail-art { width: 100%; max-height: 44dvh; object-fit: contain; display: block; margin-bottom: 14px; }
+.current-theme-note { padding-left: 10px; border-left: 2px solid var(--journal-accent); }
+
+/* Keep the mobile tabs; use the same underline as the desktop navigation. */
+#nav { background: var(--card); border-color: var(--line); }
+#nav button { position: relative; color: var(--muted); border-radius: 0; font-size: 11px; }
+#nav button[aria-current=page] { color: var(--journal-accent); font-weight: 600; }
+#nav button[aria-current=page] svg { background: none; box-shadow: none; stroke: currentColor; }
+#nav button[aria-current=page]::after {
+  content: "";
+  position: absolute;
+  inset: auto calc(50% - 10px) 0;
+  height: 2px;
+  background: currentColor;
+}
+#nav button[data-swipe-target] { color: var(--journal-accent); background: var(--journal-wash); }
+body[data-view=journey] #nav { background: #102624; }
+body[data-view=journey] #nav button { color: #c4c9ab; }
+body[data-view=journey] #nav button[aria-current=page] { color: #eedcae; }
+body[data-view=journey] #nav button[aria-current=page] svg { background: none; box-shadow: none; stroke: currentColor; }
+
+.study-head, .phase-track { border-color: var(--line); }
+.study-book { font: 600 15px/1.4 var(--journal-serif); }
+.study-head .sub, .study-stage { color: var(--muted); }
+.study-head .tag, .study-stage b { color: var(--green); font-family: var(--journal-numerals); font-variant-numeric: tabular-nums; }
+.study-progress, .trail span { background: var(--line); }
+.study-progress span, .trail span.done { background: var(--journal-accent); }
+.phase-track { gap: 16px; padding-bottom: 0; margin-bottom: 12px; }
+.phase-track span { padding: 0 0 8px; color: var(--muted); }
+.phase-track span.active { padding-bottom: 6px; border-bottom: 2px solid var(--journal-accent); color: var(--journal-accent); }
+.phase-track span.active::before { content: none; }
+.study-sheet {
+  padding-inline: 15px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 3px 0 #302a2510;
+}
+.study-sheet .word { color: var(--ink); font-weight: 700; }
+.study-sheet .phonetic, .study-sheet .example .translation { color: var(--muted); }
+.study-sheet > .tag { background: var(--journal-wash); color: var(--green); }
+.study-sheet .example { border-color: var(--line); }
+.study-sheet .example .english { color: var(--ink); }
+.study-sheet .choice, .study-sheet .spell-input { background: var(--card); border-color: var(--line); border-radius: 4px; }
+.study-sheet .choice em, .spell-tools button:first-child { color: var(--journal-accent); }
+.study-sheet .spell-input:focus { outline-color: var(--journal-accent); }
+.study-sheet .spell-input::placeholder, .study-actions .sub, .recall-prompt p { color: var(--muted); }
+.recall-prompt .secondary { background: var(--journal-wash); }
+.feedback { background: var(--journal-wash); border-color: var(--line); border-left-color: var(--green); border-radius: 4px; }
+.feedback.wrong { background: #f3e7dc; border-left-color: #ad7556; }
+
+body:not(.focus-battle) #wordKeyboard {
+  --key-paper: var(--card);
+  --key-ink: var(--ink);
+  --key-border: var(--line);
+  --key-bed: var(--journal-wash);
+}
+body:not(.focus-battle) .word-keyboard-top > span { color: var(--muted); }
+body:not(.focus-battle) #wordKeyboard .utilities button, body:not(.focus-battle) #wordKeyboard .word-key-row .key-delete { background: var(--paper); }
+body:not(.focus-battle) #wordKeyboard .utilities .key-space { background: var(--card); }
+body:not(.focus-battle) #wordKeyboard .utilities .key-submit { background: var(--green); border-color: var(--green); color: var(--journal-light); }
+body:not(.focus-battle) .custom-answer > .word-answer-ink { color: var(--ink); }
+body:not(.focus-battle) .word-caret { border-color: var(--journal-accent); }
+.word-keyboard-open .study-sheet { padding-inline: 12px; }
+@media (max-width: 360px) {
+  .brand-name em { display: block; margin: 3px 0 0; }
+  .lesson-counts { gap: 11px; }
+}
+@media (max-height: 520px) {
+  .focus-study .study-sheet { padding-inline: 9px; }
+}

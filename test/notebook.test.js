@@ -32,7 +32,7 @@ test('only owned cards can apply a complete theme and classic reset removes all 
   assert.equal(props.size,0);
   journal.applyTheme({palette:'library',owned:true});
   assert.equal(props.get('--theme-accent'),themes.library.accent);
-  assert.equal(props.get('--theme-art'),'url("cards/original/library.webp")');
+  assert.equal(props.get('--theme-art'),'url("/cards/original/library.webp")');
   assert.equal(classes.has('has-card-theme'),true);
   assert.equal(props.get('--theme-header-position'),'50% 40%');
   assert.equal(snapshots.at(-1).palette,'library');

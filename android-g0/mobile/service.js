@@ -27,7 +27,8 @@
   async function overview(){const list=await books(),prefs=await settings(),selected=list.find(b=>!b.archived&&b.book_key===prefs.selected_book)||list.find(b=>!b.archived&&b.plan_active)||list.find(b=>!b.archived);const sessions=await rows('SELECT book_key,state_json FROM mobile_sessions');
    for(const b of list){const saved=sessions.find(s=>s.book_key===b.book_key);b.session=saved?JSON.parse(saved.state_json):null;b.workload=workload(b.due,Math.max(0,b.daily_new-b.new_today));}
    const stats=await one('SELECT COUNT(*) answers,COALESCE(SUM(correct),0) correct,COUNT(DISTINCT CASE WHEN local_day=? AND correct=1 THEN word_key END) today_words FROM review_log',[day()]);
-   return {books:list,selected:selected?.book_key||null,stats,day:day(),settings:prefs};
+   const themeCard=await ownedThemeCard(prefs.journal_theme);
+   return {books:list,selected:selected?.book_key||null,stats,day:day(),settings:prefs,themeCard};
   }
   async function packet(s){if(!s)return null;const b=await one('SELECT name FROM wordbooks WHERE book_key=?',[s.book]);const view={...s,bookName:b?.name};if(s.finished||s.intermission)return view;
    const group=s.groups[s.group],key=group.keys[s.index];view.word=await word(key);if(s.stage!=='meaning'||s.feedback)return view;const alternatives=await rows('SELECT DISTINCT meaning FROM words WHERE retired=0 AND book_key=? AND meaning<>? ORDER BY RANDOM() LIMIT 3',[s.book,view.word.meaning]);
@@ -70,7 +71,16 @@
    }else throw Error('不支持的学习操作');
    statements.push(...saveState(s));await commit(statements,{id:data.requestId||makeId()});return type==='draft'?s:packet(s);
   }
-  async function setPreference(key,value){if(!['selected_book','sound'].includes(key))throw Error('无效设置');await rows('SELECT key FROM mobile_settings WHERE key=?',[key]);await commit([statement('INSERT OR REPLACE INTO mobile_settings(key,value) VALUES(?,?)',[key,String(value)])]);return true;}
+  async function ownedThemeCard(palette){
+   if(!palette)return null;
+   return (await one('SELECT c.palette,c.title,c.hidden,c.asset_path FROM cards c JOIN user_cards u ON u.card_id=c.id WHERE c.palette=?',[palette]))||null;
+  }
+  async function setPreference(key,value){
+   if(!['selected_book','sound','journal_theme'].includes(key))throw Error('无效设置');
+   if(key==='journal_theme'&&value!==''&&!await ownedThemeCard(value))throw Error('先收藏这张卡牌，再使用它的主题');
+   await rows('SELECT key FROM mobile_settings WHERE key=?',[key]);
+   await commit([statement('INSERT OR REPLACE INTO mobile_settings(key,value) VALUES(?,?)',[key,String(value)])]);return true;
+  }
   async function setPlan(book,dailyNew){await getBook(book);if(!Number.isInteger(dailyNew)||dailyNew<1||dailyNew>60)throw Error('每日新词量应为 1–60');await commit([statement('UPDATE wordbooks SET daily_new=?,plan_active=1,target_date=NULL WHERE book_key=?',[dailyNew,book])]);return true;}
   async function listWords(book,{filter='all',search='',offset=0}={}){if(!['all','learned','mistakes','pending'].includes(filter)||!Number.isInteger(offset)||offset<0)throw Error('无效筛选');const predicate=filter==='learned'?'AND p.first_studied IS NOT NULL':filter==='mistakes'?'AND p.wrong>0 AND p.streak<3':'';const args=[book,text(search).slice(0,100)];let pendingPredicate='';if(filter==='pending'){const saved=await getSession(book),keys=saved&&!saved.finished?[...new Set(saved.groups.flatMap(g=>g.keys))].filter(k=>!saved.cycles[k]?.complete):[];pendingPredicate=keys.length?' AND w.word_key IN ('+keys.map(()=>'?').join(',')+')':' AND 0';args.push(...keys);}
    const base=`FROM words w LEFT JOIN progress p USING(word_key) WHERE w.book_key=? AND instr(lower(w.word),lower(?))>0 ${predicate}${pendingPredicate}`;
