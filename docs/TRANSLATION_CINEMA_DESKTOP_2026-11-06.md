@@ -1,0 +1,15 @@
+# 桌面逐句翻译与电影院接入记录
+
+英语训练源仓库提交：`250537836d17aa6cffed1fca0bf3a297bc55caeb`，分支 `feat/cet-standard-listening-v3-20261015`。
+
+构建：`runtime/node.exe scripts/build-english-training.js D:/cet6-practice`。
+
+本地入口：墨词「英语训练」中的「电影院」；独立预览为 `/practice/?view=cinema`。阅读/听力题组与写作要求提供逐句翻译，文章划选工具条新增翻译。使用现有训练生词收藏 API，不改变熟练度或原题作答。
+
+电影院支持本地视频与 SRT/VTT、双语字幕、单句循环、句末暂停、原生字幕轨、台词摘录、生词收藏及位置恢复。视频不上传，重启页面后需要重新选择同一文件；本次页面内切换训练模块保留 File。字幕与摘录进入英语训练自己的导出备份。
+
+验收：训练 76 项测试通过，墨词 456 项测试通过，TypeScript / Vite 构建通过。Windows Edge 在独立 49411 服务与空白数据库实测字幕、暂停继续、循环、切页停音、真实翻译、生词入库和备份恢复。用户的正式学习数据库未用于写入验收。
+
+详细说明与限制见训练仓库的 [使用与验收文档](https://github.com/QianShuY/cet6-practice/blob/250537836d17aa6cffed1fca0bf3a297bc55caeb/docs/TRANSLATION_CINEMA_2026-11-06.md)。MyMemory 免费翻译有每日额度；其他视频编码需实机验证，当前不含自动转写、视频转码或剧集内容。
+
+本次更新源代码与本地网页构建，没有覆盖 `2026-11-06.1-rc` 安装 ZIP，没有创建公开 Release。重新打包前应从上述训练提交重建，并再次执行 Windows 包验收。
