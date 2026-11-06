@@ -97,11 +97,11 @@
 .journal-desktop body.is-practice > .journal-theme-control { display: none; }
 .journal-desktop body.is-practice .topbar-stats { visibility: hidden; }
 .journal-desktop body.is-practice > #app { padding: 18px 28px 22px; }
-.journal-desktop body.is-practice #view-practice { width: 100%; max-width: 1440px; margin-inline: auto; min-height: 0; }
-.journal-desktop body.is-practice #trainingFrame { border-radius: 14px; }
+.journal-desktop body.is-practice :is(#view-practice, #view-cinema) { width: 100%; max-width: 1440px; margin-inline: auto; min-height: 0; }
+.journal-desktop body.is-practice :is(#trainingFrame, #cinemaFrame) { border-radius: 14px; }
 @media (max-width: 720px) {
   .journal-desktop body.is-practice > #app { padding: 10px 10px 12px; }
-  .journal-desktop body.is-practice #trainingFrame { border-radius: 10px; }
+  .journal-desktop body.is-practice :is(#trainingFrame, #cinemaFrame) { border-radius: 10px; }
 }
 .journal-desktop :is(button, a, input, select, summary):focus-visible { outline-color: var(--theme-accent); }
 @media (min-width: 721px) {

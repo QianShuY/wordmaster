@@ -1,5 +1,9 @@
 # 桌面逐句翻译与电影院接入记录
 
+## 独立模块更新
+
+电影院已加入墨词主导航，使用独立路由 `/#/cinema` 和持久化的 `cinemaFrame`，与英语训练分别保存页面状态。影片在切换模块时暂停，回来保留已选择的视频与位置。独立页面提供「观影记录」导入导出，移除试卷导航与训练统计。训练源更新到 `6ab8db9`；入口按需加载 CinemaApp，不加载包含试卷数据的 App 模块。535 项测试通过，独立 Edge 实测导航选中状态、模块加载、切页停音及视频保留。既有 Windows 安装 ZIP 尚未重新打包。
+
 英语训练源仓库提交：`250537836d17aa6cffed1fca0bf3a297bc55caeb`，分支 `feat/cet-standard-listening-v3-20261015`。
 
 构建：`runtime/node.exe scripts/build-english-training.js D:/cet6-practice`。

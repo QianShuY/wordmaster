@@ -187,9 +187,24 @@ function choiceMeaningMarkup(choice, word) {
 /* ============================================================
    路由
    ============================================================ */
-const views = { adventure: $('#view-adventure'), home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards'), practice: $('#view-practice') };
+const views = { adventure: $('#view-adventure'), home: $('#view-home'), study: $('#view-study'), manage: $('#view-manage'), mistakes: $('#view-mistakes'), stats: $('#view-stats'), cards: $('#view-cards'), practice: $('#view-practice'), cinema: $('#view-cinema') };
 let trainingFrame;
 let trainingLoadTimeout;
+let cinemaFrame;
+let cinemaLoadTimeout;
+
+function prepareCinema() {
+  if (cinemaFrame) return;
+  cinemaFrame = document.createElement('iframe');
+  cinemaFrame.id = 'cinemaFrame';
+  cinemaFrame.title = '电影院';
+  cinemaFrame.dataset.active = 'false';
+  cinemaFrame.src = '/practice/?view=cinema&embedded=1';
+  views.cinema.append(cinemaFrame);
+  cinemaLoadTimeout = setTimeout(() => {
+    $('#cinemaLoading p').textContent = '放映室暂未打开，可以从独立页进入。';
+  }, 8000);
+}
 
 function prepareTraining() {
   if (trainingFrame) return;
@@ -206,6 +221,12 @@ function prepareTraining() {
 
 if (!IS_ANDROID_APP) {
   window.addEventListener('message', event => {
+    if (event.origin === location.origin && event.source === cinemaFrame?.contentWindow && event.data?.type === 'moci:cinema-ready') {
+      clearTimeout(cinemaLoadTimeout);
+      cinemaFrame.dataset.ready = 'true';
+      $('#cinemaLoading').classList.add('hidden');
+      return;
+    }
     if (event.origin !== location.origin || event.source !== trainingFrame?.contentWindow ||
         event.data?.type !== 'moci:practice-ready') return;
     clearTimeout(trainingLoadTimeout);
@@ -215,6 +236,9 @@ if (!IS_ANDROID_APP) {
   const trainingLink = $('.topbar-nav [data-nav="practice"]');
   trainingLink.addEventListener('pointerenter', prepareTraining, { once: true });
   trainingLink.addEventListener('focus', prepareTraining, { once: true });
+  const cinemaLink = $('.topbar-nav [data-nav="cinema"]');
+  cinemaLink.addEventListener('pointerenter', prepareCinema, { once: true });
+  cinemaLink.addEventListener('focus', prepareCinema, { once: true });
 }
 const DESKTOP_FOCUS_KEY = 'wordmaster_desktop_focus';
 function syncDesktopFocus(viewName) {
@@ -247,8 +271,10 @@ function show(name, navName = name) {
   views[name].classList.remove('hidden');
   document.body.classList.toggle('is-studying', name === 'study');
   document.body.classList.toggle('is-stats', name === 'stats');
-  document.body.classList.toggle('is-practice', name === 'practice');
+  document.body.classList.toggle('is-practice', name === 'practice' || name === 'cinema');
+  document.body.classList.toggle('is-cinema', name === 'cinema');
   if (trainingFrame) trainingFrame.dataset.active = String(name === 'practice');
+  if (cinemaFrame) cinemaFrame.dataset.active = String(name === 'cinema');
   document.querySelectorAll('[data-nav]').forEach(a => {
     const active = a.dataset.nav === navName;
     a.classList.toggle('active', active);
@@ -298,6 +324,11 @@ function route() {
     show('practice');
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     if (!$('#topStats').hasChildNodes()) api('/api/stats').then(s => Home.renderStats(s)).catch(() => {});
+  }
+  else if (!IS_ANDROID_APP && hash === '#/cinema') {
+    prepareCinema();
+    show('cinema');
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }
   else if (hash === '#/stats') Stats.render();
   else if (hash === '#/cards') Cards.render();
