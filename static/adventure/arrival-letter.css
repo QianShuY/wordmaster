@@ -18,3 +18,62 @@
 @media(prefers-reduced-motion:reduce){.sealed-envelope{transition:none}.letter-pages{animation:none}}
 
 .arrival-letter{margin:auto;inset:0;height:fit-content}.sealed-envelope:focus-visible{outline:2px solid #9c7845;outline-offset:5px}.arrival-letter:focus{outline:none}
+
+/* A letter from the road: scenic cover beside a quiet sheet of paper. */
+.arrival-letter { width:min(940px,calc(100% - 40px)); max-width:none; max-height:calc(100dvh - 48px); overflow:hidden; border:1px solid #d4c8ae; border-radius:16px; background:#faf7ef; color:#393c32; box-shadow:0 32px 110px #071b2866; }
+.arrival-letter::backdrop { background:#102725bd; backdrop-filter:blur(10px); }
+.letter-shell { display:grid; grid-template-columns:270px minmax(0,1fr); }
+.letter-landscape { position:relative; min-height:560px; padding:32px 28px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; color:#f3edda; background:linear-gradient(180deg,#102c3599,transparent 45%,#102c35ed),url('assets/mist-campaign-map-v4-dusk.webp') 25% 55%/cover; }
+.letter-landscape::after { content:''; position:absolute; inset:12px; border:1px solid #eee0b52e; border-radius:7px; pointer-events:none; }
+.letter-edition { font:9px/1.6 var(--sans); letter-spacing:.18em; color:#e9dfc3; }
+.letter-landscape>div { margin-top:auto; padding-top:130px; position:relative; z-index:1; }
+.letter-chapter { font:11px var(--sans); letter-spacing:.12em; color:#d5c59d; }
+.letter-landscape h3 { font:30px/1.6 var(--serif); font-weight:400; letter-spacing:.07em; margin:15px 0; }
+.letter-landscape p { font:12px/1.9 var(--sans); color:#dce2d5; margin:0; }
+.letter-postmark { align-self:flex-start; margin-top:28px; border:1px solid #dcc49280; border-radius:50%; width:72px; height:72px; display:flex; flex-direction:column; align-items:center; justify-content:center; font:14px/1.6 var(--serif); color:#e5d3a9; transform:rotate(-12deg); }
+.letter-postmark small { font:9px/1.6 var(--sans); letter-spacing:.06em; }
+.letter-arrival { position:relative; padding:42px 42px 26px; text-align:left; min-width:0; max-height:calc(100dvh - 48px); overflow-y:auto; scrollbar-width:thin; background:linear-gradient(90deg,#e9e2d64d,transparent 18px),#faf7ef; box-shadow:none; }
+.letter-close { position:absolute; right:18px; top:16px; display:grid; place-items:center; width:34px; height:34px; border:1px solid #ded7c9; border-radius:50%; color:#6e7167; background:transparent; font:23px/1 var(--sans); cursor:pointer; }
+.letter-close:hover { background:#ece8de; }
+.letter-kicker { font:10px/1.6 var(--sans); letter-spacing:.2em; color:#8b7451; }
+.arrival-letter h2 { color:#35463c; font:30px/1.5 var(--serif); letter-spacing:.04em; margin:13px 0 12px; }
+.letter-invitation { color:#7b7d71; font:12px/1.8 var(--sans); margin:0 0 30px; }
+.sealed-envelope { height:240px; margin:16px 0 0; border:1px solid #d0bfa0; border-radius:5px; background:linear-gradient(135deg,#eee2c8,#f8eed6 60%,#e7d5b3); box-shadow:0 12px 22px #4f452919,inset 0 0 0 5px #fff7e630; transform:rotate(-2deg); }
+.sealed-envelope:hover { transform:rotate(0) translateY(-3px); }
+.sealed-envelope::before { background:#c4ae8440; }
+.sealed-envelope::after { background:linear-gradient(#f1e6cd,#e8d8b9); }
+.envelope-fold { background:linear-gradient(#f7edd7,#e5d2ae); filter:drop-shadow(0 2px 1px #7c613c20); }
+.wax-seal { width:54px; height:54px; left:calc(50% - 27px); top:calc(56% - 27px); border-width:4px; font-size:25px; }
+.envelope-address { font-size:14px; letter-spacing:.08em; bottom:47px; color:#736249; }
+.seal-hint { bottom:18px; font:11px var(--sans); letter-spacing:.12em; }
+.letter-return { display:table; margin:30px auto 0; padding:8px 0; color:#7a7d70; font:12px var(--sans); border-color:#d4cdbd; }
+.letter-open .letter-invitation { display:none; }
+.letter-open .letter-arrival { padding-top:34px; }
+.letter-pages { border-top:1px solid #ded6c5; margin-top:22px; padding-top:24px; }
+.letter-pages p { font:15px/2 var(--serif); color:#596052; margin-bottom:16px; text-align:justify; }
+.letter-pages strong { color:#344d3c; font-weight:600; }
+.letter-pages .letter-salutation { font-size:18px; color:#4c604c; letter-spacing:.06em; text-align:left; }
+.letter-pages .letter-signature { color:#6e735f; font-size:14px; margin:24px 0; text-align:right; }
+.accept-letter { width:100%; border:1px solid #3d5947; border-radius:8px; background:#3d5947; color:#f8f4e7; font:14px var(--sans); min-height:48px; padding:13px 20px; margin-top:28px; }
+.arrival-letter :is(button,a):focus-visible { outline:2px solid #53765d; outline-offset:4px; }
+@media(max-width:700px) {
+ .arrival-letter { width:calc(100% - 24px); max-height:calc(100dvh - 24px); overflow:auto; border-radius:13px; }
+ .letter-shell { grid-template-columns:1fr; }
+ .letter-landscape { min-height:140px; height:140px; padding:22px; background-position:40% 58%; }
+ .letter-landscape>div { padding:0; margin:8px 0 0; }
+ .letter-landscape h3 { font-size:22px; line-height:1.4; margin:4px 0; }
+ .letter-landscape h3 br { display:none; }
+ .letter-landscape p,.letter-postmark,.letter-chapter { display:none; }
+ .letter-arrival { padding:26px 24px 22px; max-height:none; overflow:visible; }
+ .arrival-letter h2 { font-size:24px; margin:12px 0 9px; }
+ .letter-close { top:12px; right:12px; width:28px; height:28px; font-size:20px; }
+ .letter-kicker { font-size:9px; letter-spacing:.1em; }
+ .letter-invitation { font-size:11px; margin-bottom:22px; }
+ .sealed-envelope { height:205px; }
+ .envelope-address { font-size:11px; letter-spacing:0; }
+ .letter-pages p { font-size:14px; line-height:2; }
+ .letter-open .letter-landscape { height:100px; min-height:100px; }
+ .letter-open .letter-landscape>div { display:none; }
+ .letter-open .letter-arrival { padding-top:26px; }
+}
+@media(prefers-reduced-motion:reduce) { .sealed-envelope:hover { transform:rotate(-2deg); } }

@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="learning-refinement.css">
 <link rel="stylesheet" href="study-notebook.css"><link rel="stylesheet" href="/adventure/portal.css"><link rel="stylesheet" href="/adventure/arrival-letter.css">
 <link rel="stylesheet" href="/shared/desktop-shell.css">
+<link rel="stylesheet" href="theme-layout.css">
+<link rel="stylesheet" href="/adventure/adventure-polish.css">
 </head>
 <body>
 <div class="grain"></div>
@@ -612,9 +614,10 @@ ambitious 有雄心的</pre>
 </div>
 
 <dialog id="arrivalLetter" class="arrival-letter" aria-labelledby="letterTitle">
- <div class="letter-arrival"><span class="letter-kicker">一封由远方捎来的信</span><h2 id="letterTitle">致尚未启程的旅人</h2><button class="sealed-envelope" id="breakSeal" type="button" aria-label="拆开蜡封，阅读来信"><span class="envelope-fold"></span><span class="envelope-address">呈予 · 愿记住古老言辞之人</span><span class="wax-seal" aria-hidden="true">M</span><span class="seal-hint">轻触蜡封 · 启信</span></button>
+ <div class="letter-shell"><aside class="letter-landscape" aria-hidden="true"><span class="letter-edition">MOCI / LETTERS FROM AFAR</span><div><span class="letter-chapter">第一章 · 雾桥来信</span><h3>远方有信，<br>等你启程。</h3><p>沿着记住的词，<br>走向尚未抵达的地方。</p></div><span class="letter-postmark">旧邮路<br><small>第 001 封</small></span></aside>
+ <div class="letter-arrival"><button class="letter-close" id="closeArrivalLetter" type="button" aria-label="暂时合上来信">×</button><span class="letter-kicker">一封由远方捎来的信</span><h2 id="letterTitle">致尚未启程的旅人</h2><p class="letter-invitation">旧邮路的守信人，托人带来了这封信。</p><button class="sealed-envelope" id="breakSeal" type="button" aria-label="拆开蜡封，阅读来信"><span class="envelope-fold"></span><span class="envelope-address">呈予 · 愿记住古老言辞之人</span><span class="wax-seal" aria-hidden="true">M</span><span class="seal-hint">轻触蜡封 · 启信 →</span></button>
  <div id="letterPages" class="letter-pages" hidden><p class="letter-salutation">愿星辰照拂汝之行路。</p><p>远方的雾桥久无人至，旧邮路亦渐没于荒草。今将此卷手账托付于汝：愿汝携所学之言，循路而行，寻那封尚未写完的回信。</p><p>此途不求疾驰。<strong>每日读毕新词，温习旧知，再以择义与默写验其所记；当日学课既成，路便向前一程。</strong>若有一日歇脚，已行之路亦不会消逝。</p><p>沿途或有残笺、旧印与营火间的耳语。勿急问雾中为何物；待汝走得够远，散落的线索自会相逢。</p><p>倦时，可赴渡火营地重温言辞。待抵关隘，汝所记住的英语，便是应答未知的咒语。</p><p class="letter-signature">愿汝言有所记，行有所获。<br><span>—— 旧邮路的守信人</span></p><button id="acceptLetter" class="accept-letter" type="button">收好来信，启程 →</button></div>
- <a class="letter-return" href="/#/">暂归今日手账</a></div></dialog>
+ <a class="letter-return" href="/#/">暂归今日手账</a></div></div></dialog>
 <div class="toast hidden" id="toast"></div>
 
 <script src="/shared/json-request.js"></script>

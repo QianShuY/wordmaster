@@ -1,0 +1,170 @@
+/* One travel edition: existing chapter art and theme palettes, shared surfaces. */
+:is(.campaign-page,.camp-page,.ending-page,.guardian-page) {
+  --travel-paper:var(--theme-paper,#fffdf6); --travel-wash:var(--theme-wash,#edeedf);
+  --travel-ink:var(--theme-ink,#293d33); --travel-muted:var(--theme-muted,#697363);
+  --travel-line:var(--theme-line,#d5cbb9); --travel-accent:var(--theme-accent,#3d5c4b);
+  --travel-deep:var(--theme-deep,#2c443a);
+  color:var(--travel-ink);
+}
+:is(.campaign-page,.camp-page,.ending-page,.guardian-page) :is(button,a,input,select,summary):focus-visible {
+  outline:2px solid var(--travel-accent); outline-offset:4px;
+}
+:is(.camp-page,.ending-page,.guardian-page) .folio-header {
+  height:72px; max-width:none; padding-inline:clamp(20px,4vw,56px);
+  background-color:var(--travel-paper); color:var(--travel-ink);
+}
+:is(.camp-page,.ending-page,.guardian-page).has-card-theme .folio-header { color:var(--travel-ink); }
+.has-card-theme :is(.camp-page,.ending-page,.guardian-page) .folio-header { color:#fff3d9; }
+:is(.camp-page,.ending-page,.guardian-page) main { max-width:1280px; padding-inline:32px; }
+:is(.camp-page,.ending-page,.guardian-page) .chapter-heading { margin:24px 0 16px; color:var(--travel-muted); }
+:is(.camp-page,.ending-page,.guardian-page) footer { color:var(--travel-muted); border-color:var(--travel-line); font-size:12px; }
+
+/* Chapter cover and three distinct destinations. */
+.journal-desktop main:has(#view-adventure:not(.hidden)) { max-width:1280px; padding-top:24px; }
+.journal-desktop body:has(#view-adventure:not(.hidden)) > .journal-theme-control { display:none; }
+#view-adventure .departure { min-height:440px; border-radius:18px; border-color:#c4ab7555; box-shadow:0 16px 40px #152c2924; }
+#view-adventure .departure-copy { padding:44px 42px; width:59%; }
+#view-adventure .departure h1 { font-size:clamp(36px,3.8vw,54px); letter-spacing:.1em; margin-bottom:20px; }
+#view-adventure .departure-line { font-size:23px; line-height:1.6; margin-bottom:16px; }
+#view-adventure .departure-description { font-size:13px; color:#d2d9cd; }
+#view-adventure .departure-art { object-position:65% 52%; }
+#view-adventure .depart-button { border-radius:8px; min-height:48px; font-size:14px; }
+#view-adventure .departure-footnote { letter-spacing:.08em; font-size:11px; }
+#view-adventure .map-caption { right:30px; bottom:28px; font-size:20px; }
+#view-adventure .travel-ledger { margin-top:18px; padding:24px 28px; border:1px solid var(--theme-line); border-radius:14px; background:var(--theme-paper); gap:24px; }
+#view-adventure .travel-ledger h2 { font-size:23px; margin-bottom:7px; }
+#view-adventure .travel-ledger p:last-child { font-size:12px; }
+#view-adventure .ledger-progress { width:30%; }
+#view-adventure .ledger-progress>span:first-child { color:var(--theme-accent); font-family:var(--numeric-font); }
+#view-adventure .ledger-track { height:5px; border-radius:4px; overflow:hidden; background:var(--theme-wash); }
+#view-adventure .portal-paths { gap:18px; margin-top:22px; }
+#view-adventure .path-card { border-radius:14px; padding:24px; overflow:hidden; min-width:0; text-align:left; display:flex; flex-direction:column; }
+#view-adventure .path-card::before { content:''; display:block; height:112px; margin:-24px -24px 22px; background-size:cover; background-position:center; }
+#view-adventure .chapter-card::before { background-image:url('assets/mist-campaign-map-v4-dusk.webp'); background-position:40% 65%; }
+#view-adventure .camp-card::before { background-image:url('assets/river-camp-v1.webp'); background-position:70% 55%; }
+#view-adventure .clue-card::before { background-image:linear-gradient(90deg,#1c302c33,#1c302c11),url('assets/mist-bridge-v1.webp'); background-position:center 55%; }
+#view-adventure .path-card h2 { margin:12px 0; font-size:24px; }
+#view-adventure .path-card p { margin-bottom:20px; }
+#view-adventure .path-link { margin-top:auto; font-size:12px; }
+#view-adventure .next-chapter { border-top:1px solid var(--theme-line); margin-top:28px; }
+#view-adventure .clue-journal { border-radius:14px; }
+
+/* Atlas: preserve the fitted map and node coordinates, clarify its controls. */
+body.campaign-page,html.has-card-theme body.campaign-page {
+  --atlas-ink:var(--travel-ink); --atlas-muted:var(--travel-muted);
+  --atlas-accent:var(--travel-accent); --atlas-line:var(--travel-line);
+}
+.campaign-page .folio-header .wordmark { font-size:24px; }
+.campaign-page .folio-header .wordmark span,.campaign-page .folio-header .edition { color:var(--travel-muted); }
+.campaign-page .atlas-navigation { border-radius:10px; background:var(--travel-paper); border-color:var(--travel-line); }
+.campaign-page .atlas-nav-item { border-radius:7px; color:var(--travel-muted); }
+.campaign-page .atlas-nav-item span { max-width:80px; opacity:1; margin-left:8px; }
+.campaign-page .atlas-nav-item[aria-pressed=true] { color:#fff9e9; }
+.campaign-page .atlas-quick-actions { border-radius:12px; border:1px solid var(--travel-line); background:var(--travel-paper); }
+.campaign-page .world-map { border:0; border-radius:14px; box-shadow:inset 0 0 0 1px var(--travel-line),0 12px 30px #14292318; }
+.campaign-page .stage-drawer { border-radius:12px; background:var(--travel-deep); color:var(--travel-paper); }
+.campaign-page .stage-drawer .drawer-lore { border-radius:12px; background:var(--travel-deep); color:var(--travel-paper); }
+.campaign-page .stage-drawer .drawer-lore h2 { color:var(--travel-paper); }
+.campaign-page .stage-drawer h2 { font-size:28px; }
+.campaign-page .stage-drawer :is(p,span) { color:color-mix(in srgb,var(--travel-paper) 85%,transparent); }
+.campaign-page :is(.atlas-study-tile,.atlas-recent-note,.stage-encounter,.map-clue-journal,.route-book) {
+  background:var(--travel-paper); border:1px solid var(--travel-line); border-radius:12px;
+}
+.campaign-page .atlas-study-tile select { background:var(--travel-wash); color:var(--travel-ink); border:1px solid var(--travel-line); border-radius:7px; min-height:40px; }
+.campaign-page .journey-primary { background:var(--travel-accent); border-radius:8px; min-height:44px; }
+.campaign-page :is(.atlas-recent-note h3,.stage-encounter h3) { color:var(--travel-ink); }
+.campaign-page .atlas-topline { padding-block:6px; }
+
+/* Camp: a scene above a real, readable practice desk. */
+.camp-page .camp-scene { height:340px; border-radius:16px; box-shadow:0 10px 30px #132e2b20; }
+.camp-page .camp-copy { top:38px; left:36px; }
+.camp-page .camp-copy h1 { font-size:38px; line-height:1.5; margin:15px 0; }
+.camp-page .camp-copy>span { font-size:13px; }
+.camp-page .camp-location { bottom:24px; right:28px; }
+.camp-page .camp-notebook { margin-top:26px; }
+.camp-page .camp-desk-heading h2 { font-size:24px; color:var(--travel-ink); text-wrap:balance; }
+.camp-page .camp-desk-heading>p { color:var(--travel-muted); }
+.camp-page .camp-layout { grid-template-columns:240px minmax(0,1fr); gap:22px; }
+.camp-page .camp-menu { align-self:start; padding:8px; background:var(--travel-paper); border:1px solid var(--travel-line); border-radius:12px; }
+.camp-page .camp-menu>button { border:0; border-radius:8px; padding:18px 14px; color:var(--travel-ink); }
+.camp-page .camp-menu>button[aria-pressed=true] { background:var(--travel-wash); box-shadow:inset 3px 0 var(--travel-accent); }
+.camp-page .camp-menu>button:hover { background:var(--travel-wash); }
+.camp-page .camp-menu :is(small,span),.camp-page .camp-route-note p { color:var(--travel-muted); }
+.camp-page .camp-route-note { padding:16px 14px; border-top:1px solid var(--travel-line); margin-top:8px; }
+.camp-page .camp-route-note a { color:var(--travel-accent); }
+.camp-page .camp-practice { padding:26px 30px; background:var(--travel-paper); border:1px solid var(--travel-line); border-radius:12px; }
+.camp-page :is(.camp-word,.camp-meaning,.camp-practice h3) { color:var(--travel-ink); }
+.camp-page .camp-word { font-size:44px; }
+.camp-page .camp-practice :is(p,label),.camp-page .camp-pos { color:var(--travel-muted); }
+.camp-page :is(.spell-tabs button,.pouch-filter button,.camp-options button,.camp-practice input) { border-radius:7px; border-color:var(--travel-line); color:var(--travel-ink); background:var(--travel-paper); }
+.camp-page :is(.spell-tabs,.pouch-filter) button[aria-pressed=true],.camp-page .camp-primary { background:var(--travel-accent); border-color:var(--travel-accent); color:var(--travel-paper); border-radius:7px; }
+.camp-page .camp-primary { min-height:46px; font-size:13px; }
+.camp-page .camp-options button:hover,.camp-page .declaration-paper { background:var(--travel-wash); color:var(--travel-ink); }
+.camp-page .camp-quiet { color:var(--travel-accent); }
+.camp-page .camp-footnote { color:var(--travel-muted); font-size:12px; }
+
+/* The battle stays cinematic; the action panel must not cover the health HUD. */
+.battle-page.first-person .spell-desk { border-radius:12px; box-shadow:0 16px 50px #0007; }
+.battle-page.first-person .spell-desk :is(input,select,.primary-action,.spell-choice,.declaration) { border-radius:7px; }
+.battle-page.first-person .spell-desk .desk-top { font-size:11px; }
+.battle-page.first-person .spell-desk p { font-size:13px; line-height:1.8; }
+.battle-page.first-person .spell-desk .declaration { font:20px/1.6 Georgia,serif; }
+.battle-page.first-person .spell-desk .primary-action { min-height:44px; font-size:13px; }
+.battle-page.first-person .spell-choice span { font-size:12px; }
+.battle-page.first-person .battle-hud>div:first-child {
+  left:28px; top:88px; bottom:auto; width:180px; padding:12px 14px;
+  background:#0b2029d9; border:1px solid #bda87552; border-radius:10px;
+}
+.battle-page.first-person .battle-hud>div:first-child::before { display:none; }
+.battle-page.first-person .chapter-heading { display:none; }
+.battle-page.first-person[data-battle-phase=camp] .spell-desk { left:28px; bottom:28px; width:370px; max-height:calc(100dvh - 205px); min-width:0; }
+.battle-page.first-person .battle-settings[open]>.settings-content { border-radius:10px; }
+.battle-page.first-person .battle-journal { border-radius:10px; }
+.guardian-page .encounter { border-radius:16px; }
+.guardian-page :is(.move-card,.mechanic-card,.battle-entry) { border-radius:10px; }
+.ending-page :is(.ending-scene,.ending-letter,.ending-receipt,.ending-locked) { border-radius:16px; }
+.ending-page .folio-header,.has-card-theme .ending-page .folio-header { background:var(--travel-deep); color:var(--travel-paper); }
+
+@media(max-width:900px) {
+  .campaign-page .atlas-nav-item span { max-width:0; opacity:0; margin-left:0; }
+  .campaign-page .atlas-nav-item[aria-pressed=true] span { max-width:80px; opacity:1; margin-left:8px; }
+  .camp-page .camp-layout { grid-template-columns:200px minmax(0,1fr); }
+}
+@media(max-width:760px) {
+  :is(.camp-page,.ending-page,.guardian-page) main { padding-inline:16px; }
+  :is(.camp-page,.ending-page,.guardian-page) .folio-header { height:64px; padding-inline:16px; gap:12px; }
+  :is(.camp-page,.ending-page,.guardian-page) .wordmark span { display:none; }
+  #view-adventure .departure { min-height:450px; }
+  #view-adventure .departure-copy { width:100%; padding:30px 24px 85px; }
+  #view-adventure .departure h1 { font-size:34px; }
+  #view-adventure .departure-line { font-size:21px; }
+  #view-adventure .departure-shade { background:linear-gradient(90deg,#132a2ef0,#182d30b8 60%,#182b3066); }
+  #view-adventure .map-caption { bottom:22px; font-size:17px; }
+  #view-adventure .travel-ledger { padding:20px; gap:16px; }
+  #view-adventure .travel-ledger h2 { font-size:20px; }
+  #view-adventure .ledger-progress { width:30%; }
+  #view-adventure .portal-paths { grid-template-columns:1fr; }
+  #view-adventure .path-card::before { height:130px; }
+  .camp-page .camp-scene { height:330px; }
+  .camp-page .camp-copy { left:24px; top:28px; }
+  .camp-page .camp-copy h1 { font-size:30px; }
+  .camp-page .camp-copy>span { font-size:12px; }
+  .camp-page .camp-desk-heading { align-items:flex-start; flex-direction:column; gap:6px; }
+  .camp-page .camp-desk-heading h2 { font-size:22px; }
+  .camp-page .camp-layout { grid-template-columns:1fr; }
+  .camp-page .camp-menu { display:grid; grid-template-columns:1fr 1fr; }
+  .camp-page .camp-menu>button { width:auto; min-width:0; padding:14px 10px; }
+  .camp-page .camp-menu strong { font-size:17px; }
+  .camp-page .camp-route-note { grid-column:1/-1; }
+  .camp-page .camp-practice { padding:22px; }
+}
+@media(max-width:700px) {
+  .battle-page.first-person .battle-hud>div:first-child { top:192px; left:14px; width:110px; padding:8px; font-size:9px; }
+  .battle-page.first-person .battle-hud>div:first-child strong { font-size:10px; }
+  .battle-page.first-person .battle-hud>p { width:90%; text-align:center; }
+  .battle-page.first-person[data-battle-phase=camp] .spell-desk { left:12px; right:12px; bottom:48px; width:auto; max-height:52dvh; }
+  .battle-page.first-person .spell-desk p { font-size:12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  #view-adventure .path-card:hover,#view-adventure .depart-button:hover { transform:none; }
+}

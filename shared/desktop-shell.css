@@ -123,13 +123,14 @@
 :root:not(.is-android-app) .moci-desktop-shell .topbar-nav a:is(.active, [aria-current="page"]) {
   color: var(--vermilion, var(--cet-vermilion, #c2402a));
   font-weight: 500;
+  background: color-mix(in srgb, currentColor 8%, transparent);
 }
 :root:not(.is-android-app) .moci-desktop-shell .topbar-nav a:is(.active, [aria-current="page"])::after {
   content: "";
   position: absolute;
-  right: 14px;
+  right: calc(50% - 8px);
   bottom: 2px;
-  left: 14px;
+  left: calc(50% - 8px);
   height: 2px;
   border-radius: 2px;
   background: currentColor;
@@ -177,6 +178,7 @@
   :root:not(.is-android-app) .moci-desktop-shell { padding-inline: 18px; gap: 8px; }
   :root:not(.is-android-app) .moci-desktop-shell .brand-text em,
   :root:not(.is-android-app) .moci-desktop-shell .topbar-stats { display: none; }
-  :root:not(.is-android-app) .moci-desktop-shell .topbar-nav { justify-content: flex-start; overflow-x: auto; }
+  :root:not(.is-android-app) .moci-desktop-shell .topbar-nav { justify-content: flex-start; overflow-x: auto; scrollbar-width: none; }
+  :root:not(.is-android-app) .moci-desktop-shell .topbar-nav::-webkit-scrollbar { display: none; }
   :root:not(.is-android-app) .moci-desktop-shell .topbar-nav a { font-size: 13px; padding-inline: 10px; }
 }
