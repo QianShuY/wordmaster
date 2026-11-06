@@ -9,8 +9,9 @@ const assert=(ok,message)=>{if(!ok)throw new Error(message);};
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 async function main(){
  if(process.platform!=='win32')throw new Error('This acceptance requires Windows and the actual EXE');
- const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-10-28.3-preview'));
+ const release=path.resolve(process.argv[2]||path.join(root,'output/releases/WordMaster-2026-11-06.1-rc'));
  const manifest=JSON.parse(fs.readFileSync(path.join(release,'release-manifest.json'),'utf8'));
+ assert(manifest.files.some(f=>f.path==='static/practice/index.html'),'Release is missing English training');
  for(const f of manifest.files){
   assert(!/\.(db|sqlite|sqlite3)(-|$)/i.test(f.path),'Database in manifest');
   const target=path.resolve(release,f.path);assert(target.startsWith(release+path.sep),'Manifest path escaped release');
@@ -43,8 +44,19 @@ async function main(){
   assert(fresh&&concurrentReuse&&fresh.port===concurrentReuse.port,'Concurrent first launch duplicated or failed');
   assert(!defaultPortReachable||fresh.port!==3456,'Occupied default port was incorrectly reused');
   const reused=await launch(freshDb);assert(reused.reused&&reused.port===fresh.port&&reused.processId===0,'Repeated launch started another process');
-  const pages=['/','/adventure/index.html','/adventure/journey.html','/adventure/camp.html','/adventure/battle.html','/adventure/ending.html'];
+  const pages=['/','/practice/','/practice/?embedded=1','/adventure/index.html','/adventure/journey.html','/adventure/camp.html','/adventure/battle.html','/adventure/ending.html'];
   for(const url of pages)await get(fresh.port,url);
+  const trainingFiles=manifest.files.filter(f=>f.path.startsWith('static/practice/'));
+  for(const file of trainingFiles){
+   const url='http://127.0.0.1:'+fresh.port+'/'+file.path.slice('static/'.length);
+   const response=await fetch(url,{method:'HEAD'});
+   assert(response.ok&&Number(response.headers.get('content-length'))===file.bytes,'Packaged training resource missing or truncated: '+file.path);
+  }
+  const audio=trainingFiles.find(f=>f.path.endsWith('.mp3'));
+  assert(audio,'Release is missing offline training audio');
+  const partial=await fetch('http://127.0.0.1:'+fresh.port+'/'+audio.path.slice('static/'.length),{headers:{Range:'bytes=0-127'}});
+  assert(partial.status===206&&(await partial.arrayBuffer()).byteLength===128,'Offline audio seeking failed');
+  results.push({scenario:'packaged-english-training',checked_files:trainingFiles.length,audio_range_request:true});
   for(const url of ['/api/books','/api/adventure/campaign','/api/adventure/ending','/api/adventure/pool','/api/desktop/runtime'])await (await get(fresh.port,url)).json();
   const firstDb=new DatabaseSync(freshDb,{readOnly:true});
   const first={words:firstDb.prepare('SELECT COUNT(*) n FROM words').get().n,progress:firstDb.prepare('SELECT COUNT(*) n FROM progress').get().n,schema:firstDb.prepare('SELECT schema_version FROM schema_meta').get().schema_version};firstDb.close();
