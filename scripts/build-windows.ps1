@@ -8,6 +8,9 @@ if (Test-Path -LiteralPath $destination) { throw "Release directory already exis
 $compiler = Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
 if (-not (Test-Path -LiteralPath $compiler)) { throw 'Windows .NET Framework C# compiler is unavailable' }
 if (-not (Test-Path -LiteralPath (Join-Path $repoRoot 'runtime\LICENSE'))) { throw 'Bundled Node license missing: runtime/LICENSE' }
+foreach ($component in @('aria2c.exe','ffmpeg.exe','ffprobe.exe','aria2-COPYING','aria2-LICENSE.OpenSSL','components.json')) {
+    if (-not (Test-Path -LiteralPath (Join-Path $repoRoot ('runtime\cinema\'+$component)))) { throw 'Cinema runtime incomplete. Run scripts/setup-cinema-runtime.ps1 before building a full Windows release.' }
+}
 $trainingRoot = Join-Path $repoRoot 'static\practice'
 foreach ($required in @('index.html','practice-manifest.json')) {
     if (-not (Test-Path -LiteralPath (Join-Path $trainingRoot $required) -PathType Leaf)) {

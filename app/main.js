@@ -33,6 +33,8 @@ const app = express();
 app.use(express.json());
 require('./desktop-theme').install(app);
 require('./english-training').install(app,db);
+app.locals.cinemaBt=require('./cinema-bt').install(app);
+process.once('exit',()=>app.locals.cinemaBt.close());
 app.use(VocabularyHistory.guard);
 app.use('/shared', express.static(path.join(__dirname, '..', 'shared')));
 app.use(express.static(path.join(__dirname, '..', 'static')));
@@ -962,6 +964,7 @@ async function startDesktopServer({port=process.env.PORT||3456,host=process.env.
   return new Promise((resolve,reject)=>{
     const server=app.listen(port,host,()=>{console.log(`WordMaster 已启动: http://${host}:${server.address().port}`);resolve(server);});
     server.once('error',reject);
+    server.once('close',()=>app.locals.cinemaBt.close());
   });
 }
 if (require.main === module) startDesktopServer().catch(error=>{console.error('WordMaster 启动失败:',error.message);process.exitCode=1;});
