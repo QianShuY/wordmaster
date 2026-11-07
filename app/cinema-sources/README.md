@@ -28,3 +28,5 @@ These are bounded transfer probes, **not full-episode playback/audio/subtitle ac
 Rejected in this comparison: Stranger Things GalaxyTV 720p (`fc43a8dbe2c723ffd857d13f4cd513a93f251c2e`) did not finish a verified piece in 93 seconds; Shameless DeeJayAhmed 720p (`5786602bdd84e7ed79b0939546ef231d14b25932`) transferred no data in 93 seconds. Shameless retains the prior RARBG source because the tested alternative was not better.
 
 Ignored local measurement reports: `output/cinema-native/alternatives-1794054161905/report.json` and `output/cinema-native/alternatives-1794054372040/report.json`.
+
+Subsequent first-episode header inspection of the new Stranger Things source confirmed HEVC video, tagged English AAC audio, and an English PGS image-subtitle track only. It has **no embedded Chinese or machine-readable text subtitle track** in that inspected episode. The catalogue explicitly requires a separate bilingual SRT for sentence learning; the existing application will report `needs-subtitles` rather than pretending these subtitles are ready. Evidence: `output/cinema-native/alternatives-1794054372040/38fae5f9185583d407bd7044d0a98f63813f8224/tracks.json`.
