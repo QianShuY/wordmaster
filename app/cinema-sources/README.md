@@ -30,3 +30,26 @@ Rejected in this comparison: Stranger Things GalaxyTV 720p (`fc43a8dbe2c723ffd85
 Ignored local measurement reports: `output/cinema-native/alternatives-1794054161905/report.json` and `output/cinema-native/alternatives-1794054372040/report.json`.
 
 Subsequent first-episode header inspection of the new Stranger Things source confirmed HEVC video, tagged English AAC audio, and an English PGS image-subtitle track only. It has **no embedded Chinese or machine-readable text subtitle track** in that inspected episode. The catalogue explicitly requires a separate bilingual SRT for sentence learning; the existing application will report `needs-subtitles` rather than pretending these subtitles are ready. Evidence: `output/cinema-native/alternatives-1794054372040/38fae5f9185583d407bd7044d0a98f63813f8224/tracks.json`.
+
+## Additional series, 2026-11-07
+
+Existing three catalogue entries were retained unchanged. Added Young Sheldon season one:
+
+- Hash `4f3906d4a010b9000f1e719cf1a1d57d913c8180`; source https://www.cilixiong.org/drama/3506.html.
+- `Young.Sheldon.S01.1080p.BluRay.x265-RARBG`, 22 episodes. First episode: 357,237,079 bytes (about 341 MiB).
+- Isolated first-episode probe: 16 MiB verified in 20 seconds, peak 2,222,854 bytes/s, up to 45 connections. Probe was capped at approximately 2 MiB/s and stopped; this is not a full-download acceptance or a speed guarantee.
+- First-episode stream header: HEVC video and tagged English AAC audio. No embedded subtitles. Torrent metadata includes separate English SRT files but no confirmed Chinese subtitles; current one-video download pipeline does not automatically ingest those sidecars. Catalogue explicitly says bilingual subtitles must be added separately.
+- Evidence: `output/cinema-native/alternatives-1794055654056/report.json` and the per-hash `tracks.json`.
+
+Rejected candidates in the same pass (short local probes, not claims that a torrent is globally dead):
+
+| Candidate | Hash | Outcome |
+| --- | --- | --- |
+| Friends S01 720p sujaidr | 1df3b55a3c4ff2cc1de22012ca18c548afcecf8e | 93 seconds, no transfer |
+| Friends S01 1080p TENEIGHTY | 8976e87d0ad5e0fe9daa31929b6dc99bfbeaf9c8 | 92 seconds, no transfer |
+| Friends S01 alternate metadata | f46d913b5531ed55ad0b905fd75839b964961906 | 93 seconds, no transfer |
+| Modern Family S01 x265 RARBG | 1780c52f41bd08c4f3cee797be274676f25b51bb | 93 seconds, roughly 24 KiB/s after a brief 157 KiB/s peak; no verified piece |
+| The Big Bang Theory S01 CiNEFiLE | 355708456d2823e55368fc02fa46b7b6814150a0 | 92 seconds, no transfer |
+| Reacher S01 x265 RARBG | f3e764cf53104f4bdfcc6a6388d6b0c698c57fa0 | 93 seconds, no transfer |
+
+All probes used isolated output directories, left the user's download queue untouched and stopped their engines on completion. Only the successful candidate was added to the application cache.
