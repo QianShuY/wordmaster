@@ -10,7 +10,7 @@ function createManager({directory,engine=createEngine(path.join(directory,'engin
  const readyDir=id=>path.join(folder(id),'ready');
  const storageName=file=>`media-${String(file.index).padStart(4,'0')}${path.extname(file.name).toLowerCase().slice(0,16)}`;
  function save(){if(loadError)throw Error(loadError);fs.mkdirSync(root,{recursive:true});fs.writeFileSync(index+'.tmp',JSON.stringify([...jobs.values()]));fs.renameSync(index+'.tmp',index);}
- try{if(fs.existsSync(index)){const rows=JSON.parse(fs.readFileSync(index,'utf8'));if(!Array.isArray(rows)||rows.length>500)throw Error('Invalid records');for(const row of rows){folder(row.id);normalizeMagnet(row.magnet);if(!['resolving','selecting','downloading','processing','queued','ready','needs-subtitles','paused','error'].includes(row.state))throw Error('Invalid state');if(['resolving','downloading','processing','queued'].includes(row.state)){row.state='paused';row.message='上次任务已暂停，点击继续';}delete row.gid;jobs.set(row.id,row);}}}catch{jobs.clear();loadError='影片下载记录无法读取，原文件已保留；其他学习功能不受影响。';}
+ try{if(fs.existsSync(index)){const rows=JSON.parse(fs.readFileSync(index,'utf8'));if(!Array.isArray(rows)||rows.length>500)throw Error('Invalid records');for(const row of rows){folder(row.id);normalizeMagnet(row.magnet);if(!['resolving','selecting','downloading','waiting','processing','queued','ready','needs-subtitles','paused','error'].includes(row.state))throw Error('Invalid state');if(['resolving','downloading','waiting','processing','queued'].includes(row.state)){row.state='paused';row.message='上次任务已暂停，点击继续';}delete row.gid;jobs.set(row.id,row);}}}catch{jobs.clear();loadError='影片下载记录无法读取，原文件已保留；其他学习功能不受影响。';}
  function view(job){return {id:job.id,title:job.title,state:job.state,message:job.message||'',bytes:job.bytes||0,received:job.received||0,speed:job.speed||0,connections:job.connections||0,progress:job.progress||0,files:job.files||[],selected:job.selected,updated:job.updated,bilingual:!!job.bilingual};}
  function list(){return [...jobs.values()].map(view).reverse();}
  function get(id){const job=jobs.get(id);if(!job)throw Error('找不到这项下载');return job;}
@@ -31,7 +31,7 @@ function createManager({directory,engine=createEngine(path.join(directory,'engin
   if(cached){fs.copyFileSync(torrentPath(cached),torrentPath(job));try{loadMetadata(job);return view(job);}catch(e){change(job,{state:'error',message:e.message});return view(job);}}
   await guarded(resume)(job.id);return view(job);
  }
- async function resume(id){const job=get(id);if(['ready','needs-subtitles','processing'].includes(job.state)||(['selecting','downloading','resolving'].includes(job.state)&&job.gid))return view(job);
+ async function resume(id){const job=get(id);if(['ready','needs-subtitles','processing'].includes(job.state)||(['selecting','downloading','waiting','resolving'].includes(job.state)&&job.gid))return view(job);
   try{await engine.start();
    if(fs.existsSync(torrentPath(job))){const meta=parseTorrent(fs.readFileSync(torrentPath(job)),job.hash,{allowLocalWebSeeds});job.files=meta.videos;job.allFiles=meta.files;
     if(!job.selected){change(job,{state:'selecting',message:'请选择要下载的一集'});return view(job);}
@@ -53,26 +53,27 @@ function createManager({directory,engine=createEngine(path.join(directory,'engin
  async function tick(){if(checking||closed)return;checking=true;try{for(const job of jobs.values()){
    if(actions.has(job.id))continue;
    if(job.state==='queued'){processJob(job);continue;}
-   if(!job.gid||!['resolving','downloading'].includes(job.state))continue;
+   if(!job.gid||!['resolving','downloading','waiting'].includes(job.state))continue;
    actions.add(job.id);
    try{
-    const gid=job.gid,current=await status(job);if(job.gid!==gid||!['resolving','downloading'].includes(job.state))continue;job.connections=Number(current.connections)||0;job.speed=Number(current.downloadSpeed)||0;
+    const gid=job.gid,current=await status(job);if(job.gid!==gid||!['resolving','downloading','waiting'].includes(job.state))continue;job.connections=Number(current.connections)||0;job.speed=Number(current.downloadSpeed)||0;
     if(job.state==='resolving'&&fs.existsSync(torrentPath(job))){await removeGid(job);if(job.state==='resolving')loadMetadata(job);continue;}
     if(current.status==='error'||current.status==='removed'){await removeGid(job);change(job,{state:'error',speed:0,message:current.errorMessage||'资源下载中断，可以重试'});continue;}
-    if(job.state==='downloading'){
+    if(['downloading','waiting'].includes(job.state)){
      const f=current.files?.find(f=>Number(f.index)===job.selected);job.received=Number(f?.completedLength)||0;
      if(current.status==='complete'){
-      const selected=job.files.find(f=>f.index===job.selected);if(job.received!==selected.bytes)throw Error('影片下载尚未完整');const file=inputFile(job);if(fs.statSync(file).size!==selected.bytes)throw Error('影片文件大小不符');await removeGid(job);if(job.state!=='downloading')continue;change(job,{state:'queued',speed:0,message:'下载完成，等待整理'});processJob(job);continue;
+      const selected=job.files.find(f=>f.index===job.selected);if(job.received!==selected.bytes)throw Error('影片下载尚未完整');const file=inputFile(job);if(fs.statSync(file).size!==selected.bytes)throw Error('影片文件大小不符');await removeGid(job);if(!['downloading','waiting'].includes(job.state))continue;change(job,{state:'queued',speed:0,message:'下载完成，等待整理'});processJob(job);continue;
      }
-     job.message=job.received>=job.bytes?'文件已接收，正在校验':job.connections?'正在下载所选影片':'暂未连接到资源，正在继续寻找';
+     job.state=current.status==='waiting'?'waiting':'downloading';
+     job.message=job.state==='waiting'?'正在排队，前面的下载结束或暂停后开始':job.received>=job.bytes?'文件已接收，正在校验':job.speed>0?(job.received===0?'正在接收首个分块，校验完成后更新进度':'正在下载所选影片'):job.connections?'已连接资源，等待传输数据':'暂未连接到资源，正在继续寻找';
     }job.updated=Date.now();save();
    }catch(e){await removeGid(job);change(job,{state:'error',speed:0,message:e.message});}finally{actions.delete(job.id);}
   }}finally{checking=false;}}
- async function erase(id){const job=get(id);if(['resolving','downloading','processing','queued'].includes(job.state)||controllers.has(id))throw Error('请先暂停并等待处理停止，再删除');await removeGid(job);const dir=folder(id);fs.rmSync(dir,{recursive:true,force:true});jobs.delete(id);save();}
+ async function erase(id){const job=get(id);if(['resolving','downloading','waiting','processing','queued'].includes(job.state)||controllers.has(id))throw Error('请先暂停并等待处理停止，再删除');await removeGid(job);const dir=folder(id);fs.rmSync(dir,{recursive:true,force:true});jobs.delete(id);save();}
  function captions(id){const job=get(id);if(!['ready','needs-subtitles'].includes(job.state))throw Error('影片尚未准备好');const file=path.join(readyDir(id),'captions.json');return {id,title:job.title,cues:JSON.parse(fs.readFileSync(file,'utf8')),videoUrl:`/api/cinema/bt/jobs/${id}/video?v=${job.updated}`,videoKey:'desktop-bt:'+id,bilingual:job.bilingual};}
  function setSubtitles(id,raw){const job=get(id);if(!['ready','needs-subtitles','error'].includes(job.state)||!fs.existsSync(path.join(readyDir(id),'playback.mp4')))throw Error('请先完成影片下载和音轨整理');if(typeof raw!=='string'||Buffer.byteLength(raw)>2*1024*1024)throw Error('字幕文件过大');const cues=cuesFromSrt(raw);fs.writeFileSync(path.join(readyDir(id),'captions.json'),JSON.stringify(cues));const bilingual=cues.some(c=>c.text)&&cues.some(c=>c.translation);change(job,{state:bilingual?'ready':'needs-subtitles',bilingual,message:bilingual?'双语字幕已添加':'字幕已添加，可以观看；可继续补充双语字幕'});return view(job);}
  function videoPath(id){get(id);return path.join(readyDir(id),'playback.mp4');}
- function close(){closed=true;clearInterval(timer);for(const c of controllers.values())c.abort();for(const job of jobs.values())if(['resolving','downloading','processing','queued'].includes(job.state))Object.assign(job,{state:'paused',speed:0,message:'已随软件关闭而暂停'});if(jobs.size)save();engine.close();}
+ function close(){closed=true;clearInterval(timer);for(const c of controllers.values())c.abort();for(const job of jobs.values())if(['resolving','downloading','waiting','processing','queued'].includes(job.state))Object.assign(job,{state:'paused',speed:0,message:'已随软件关闭而暂停'});if(jobs.size)save();engine.close();}
  const guarded=fn=>async(id,...args)=>{while(actions.has(id)){if(closed)throw Error('下载服务已关闭');await new Promise(r=>setTimeout(r,20));}if(closed)throw Error('下载服务已关闭');actions.add(id);try{return await fn(id,...args);}finally{actions.delete(id);}};
  return {list,add,resume:guarded(resume),select:guarded(select),pause:guarded(pause),erase:guarded(erase),tick,captions,setSubtitles,videoPath,close,folder,issue:()=>loadError};
 }

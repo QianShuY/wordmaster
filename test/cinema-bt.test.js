@@ -4,6 +4,23 @@ const {createManager,install}=require('../app/cinema-bt'),{chooseTracks,cuesFrom
 function enc(v){if(Buffer.isBuffer(v))return Buffer.concat([Buffer.from(v.length+':'),v]);if(typeof v==='string')return enc(Buffer.from(v));if(typeof v==='number')return Buffer.from('i'+v+'e');if(Array.isArray(v))return Buffer.concat([Buffer.from('l'),...v.map(enc),Buffer.from('e')]);return Buffer.concat([Buffer.from('d'),...Object.keys(v).sort().flatMap(k=>[enc(k),enc(v[k])]),Buffer.from('e')]);}
 const info={name:'season',files:[{length:4,path:['episode.mkv']},{length:1,path:['note.txt']}],'piece length':16384,pieces:Buffer.alloc(20)},torrent=enc({info}),hash=crypto.createHash('sha1').update(enc(info)).digest('hex');
 const fake=()=>{const calls=[];let complete=false;return {calls,start:async()=>{},close:()=>{},done:()=>{complete=true;},rpc:async(method,args)=>{calls.push([method,args]);if(method==='addUri')return 'meta';if(method==='addTorrent')return 'film';if(method==='tellStatus')return {status:complete?'complete':'active',connections:'0',downloadSpeed:'0',files:[{index:'1',completedLength:complete?'4':'0'}]};return 'OK';}};};
+test('download waiting is distinct from preparation queue and resumes without duplicate downloads',async()=>{
+ const directory=fs.mkdtempSync(path.join(os.tmpdir(),'moci-bt-wait-')),engine=fake();let phase='waiting',prepared=0,speed='0',connections='0';
+ const original=engine.rpc;engine.rpc=async(method,args)=>method==='tellStatus'?{status:phase,connections,downloadSpeed:speed,files:[{index:'1',completedLength:'0'}]}:original(method,args);
+ const manager=createManager({directory,engine,pollMs:60000,prepare:async()=>{prepared++;}});
+ try{
+  const job=await manager.add(`magnet:?xt=urn:btih:${hash}`);
+  fs.writeFileSync(path.join(manager.folder(job.id),hash+'.torrent'),torrent);await manager.tick();await manager.select(job.id,1);await manager.tick();
+  assert.equal(manager.list()[0].state,'waiting');assert.match(manager.list()[0].message,/排队/);assert.equal(prepared,0);
+  await manager.resume(job.id);assert.equal(engine.calls.filter(c=>c[0]==='addTorrent').length,1);
+  phase='active';await manager.tick();assert.equal(manager.list()[0].state,'downloading');assert.match(manager.list()[0].message,/连接/);
+  speed='24000';connections='3';await manager.tick();assert.match(manager.list()[0].message,/首个分块/);
+  speed='0';await manager.tick();assert.match(manager.list()[0].message,/等待传输/);
+  phase='waiting';await manager.tick();await manager.pause(job.id);assert.equal(manager.list()[0].state,'paused');
+  await manager.resume(job.id);await manager.tick();manager.close();
+  const restored=createManager({directory,engine:fake()});try{assert.equal(restored.list()[0].state,'paused');}finally{restored.close();}
+ }finally{manager.close();fs.rmSync(directory,{recursive:true,force:true});}
+});
 test('metadata does not start the season; selection, progress, pause and automatic preparation are explicit',async()=>{
  const directory=fs.mkdtempSync(path.join(os.tmpdir(),'moci-bt-')),engine=fake();let prepared=0;
  const manager=createManager({directory,engine,pollMs:60000,prepare:async(file,dir)=>{prepared++;assert.equal(fs.readFileSync(file,'utf8'),'data');assert.notEqual(path.dirname(file),dir,'generated files must never replace torrent originals');fs.writeFileSync(path.join(dir,'playback.mp4'),'movie');fs.writeFileSync(path.join(dir,'captions.json'),'[]');return {bilingual:true,message:'ready'};}});
